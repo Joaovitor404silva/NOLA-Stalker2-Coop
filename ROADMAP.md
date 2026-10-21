@@ -11,7 +11,6 @@ Host and join from the main menu, Steam or IP, up to 5 players, a shared world w
 - A test of swapping host and joiner roles with a joiner's own save.
 - A fix for NPC copy parking.
 - Proper 3, 4 and 5 player live tests.
-- A real two-owner Steam test.
 - Keep weapon upgrades on restored items.
 - Shared trader stock.
 
