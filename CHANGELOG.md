@@ -2,6 +2,11 @@
 
 [← Back to the overview](README.md)
 
+## v1.1.1 (2026-10-21)
+
+### Fixed
+- **Crash about 10 seconds after launch on a fresh install** ("Fatal Error! Crashdump written to ... ue4ss"): the UE4SS settings file in the package had no engine version. The package now sets it, and the installer also fixes an existing settings file (#4).
+
 ## v1.1 (2026-10-21)
 
 ### Fixed

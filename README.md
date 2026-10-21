@@ -2,7 +2,7 @@
 
 **Co-op for S.T.A.L.K.E.R. 2: Heart of Chornobyl. Walk the Zone with friends, in the same world, each with your own character.**
 
-> Status: **v1.1** (see the [Changelog](CHANGELOG.md)). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
+> Status: **v1.1.1** (see the [Changelog](CHANGELOG.md)). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
 >
 > Download: [Download: Nexus link]
 > Nexus Page: https://www.nexusmods.com/stalker2heartofchornobyl/mods/3050
