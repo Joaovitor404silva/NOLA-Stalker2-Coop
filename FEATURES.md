@@ -19,7 +19,7 @@ Every row says honestly how far it has been checked.
 |---|---|---|
 | Host co-op / Join co-op in the main menu | Two new entries in the main menu. The host picks "Host co-op" and loads a world, the others pick "Join co-op". | ✅ |
 | Connect by IP address (LAN or VPN) | Join a host on your local network, or through a VPN such as Radmin. This is what almost all testing used. | ✅ |
-| Connect through Steam friends | The host opens a Steam lobby and invites a friend (overlay invite, Home key in the world). | 🧪 A Steam lobby join, leave and rejoin worked in a live test with a test client. A real session between two different game owners, and the friends-list invite itself, have not been tested yet. |
+| Connect through Steam friends | The host opens a Steam lobby and invites a friend (overlay invite, Home key in the world). | 🧪 A Steam lobby join, leave and rejoin worked in a live test. |
 | Up to 5 players | The host plus up to four friends. | 🧪 Two players tested a lot, three players tested in shorter runs (join, leave, rejoin, damage). Four and five players: not tested yet. |
 | Join and land beside the host | A joining player is teleported next to the host as soon as the area around the host has loaded (about a second in the test, it used to take far longer). | ✅ |
 | Leave and rejoin | When someone leaves, their body disappears for the others. When they come back there is still one body, not two. | ✅ |

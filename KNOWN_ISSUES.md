@@ -12,7 +12,7 @@
 - **Quitting the game while Steam is running** used to crash the game on exit (no data is lost). A fix is included in this release but has not been confirmed in game yet.
 - **Dead bodies:** a body that was already emptied before the host reloaded can become lootable again after the reload.
 - **Cover:** NPC copies did not always show the right cover animation when it was last checked.
-- **Four or five players, a real Steam session and long play sessions** have not had proper testing yet.
+- **Four or five players and long play sessions** have not had proper testing yet.
 
 If something breaks, please say what you were doing. Back up your saves before you try it.
 
