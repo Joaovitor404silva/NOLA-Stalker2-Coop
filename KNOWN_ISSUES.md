@@ -3,7 +3,11 @@
 [← Back to the overview](README.md)
 
 - **Items a joiner picked up after the host's last save** come back as fresh items without their upgrades when the host reloads.
-- **Weapon upgrades** have not been verified after a join or reload.
+- **Weapon upgrades** now carry over when items are put into a box or dropped (v1.1), but have not been verified after a join or reload.
+- **NPC animations** on a joiner's screen sometimes reset (planned for v1.2).
+- **Enemy deaths** on a joiner's screen sometimes play the anomaly death animation (planned for v1.2).
+- **Compass:** nearby enemies get no direction marker on the compass (planned for v1.2).
+- **Enemy animations** on a joiner's screen sometimes stutter or skip a frame (planned for v1.2).
 - **One huge hit** (for example a grenade at close range) can kill a joiner outright, without the downed state.
 - **The host going silent** is not tested in game, so what a joiner sees then may not be right yet.
 - **Mutants:** copies of mutants on a joiner's PC can look slightly off, for example feet still moving a moment after the mutant has stopped.

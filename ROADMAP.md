@@ -2,8 +2,14 @@
 
 [← Back to the overview](README.md)
 
-## V1 (now: release candidate 1)
+## V1 (released: v1.0, now v1.1)
 Host and join from the main menu, Steam or IP, up to 5 players, a shared world with host-run NPCs, shared drops, bodies, locks and quest items, a story that follows the host, your own character kept, downed and revive, friendly fire, loading together, three languages.
+
+## V1.2 (next)
+- NPC animations on joiners no longer reset.
+- The right death animation for enemies on joiners (not the anomaly death).
+- Enemy direction markers on the compass.
+- Smooth enemy animations on joiners (no stutter or skipped frames).
 
 ## V2 (planned)
 - The joiner is placed beside the host before the world loads, so there is no jump at all.

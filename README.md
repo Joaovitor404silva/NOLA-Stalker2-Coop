@@ -2,7 +2,7 @@
 
 **Co-op for S.T.A.L.K.E.R. 2: Heart of Chornobyl. Walk the Zone with friends, in the same world, each with your own character.**
 
-> Status: **V1 release candidate 1** (1.0-rc1). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
+> Status: **v1.1** (see the [Changelog](CHANGELOG.md)). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
 >
 > Download: [Download: Nexus link]
 > Nexus Page: https://www.nexusmods.com/stalker2heartofchornobyl/mods/3050
@@ -32,6 +32,7 @@ NOLA is a non-commercial hobby project. It is not made, endorsed or supported by
 |---|---|
 | [Features](FEATURES.md) | Every feature, grouped by area, with how well it is tested |
 | [Known issues](KNOWN_ISSUES.md) | What is broken or not checked yet |
+| [Changelog](CHANGELOG.md) | What changed in each version |
 | [Roadmap](ROADMAP.md) | What is in V1, what is planned for V2, and ideas |
 | [Install and play](INSTALL.md) | Requirements and a quick start |
 | [Settings](FLAGS.md) | What each setting does and how to turn features off |
@@ -49,7 +50,7 @@ Found something broken? [Open an issue](https://github.com/Joaovitor404silva/NOL
 - **What happened**, and what you expected to happen.
 - **How to make it happen again**, step by step if you can.
 - **Who was hosting**, how many players were in, and whether you used **Steam** or **LAN / IP**.
-- Your **NOLA version** (for example 1.0-rc1) and your **game build** (Steam → right-click the game → Properties → Updates).
+- Your **NOLA version** (for example v1.1) and your **game build** (Steam → right-click the game → Properties → Updates).
 - The **UE4SS.log** from **every player**. It's in `Stalker2\Binaries\Win64\ue4ss\` inside the game folder. Drag the file into the issue.
 - A **screenshot or short video** if it's something you can see.
 
