@@ -78,3 +78,5 @@ NOLA's texts are in English, Portuguese and Spanish. Want to add your language? 
 
 ### 💬 Be kind
 Be friendly and patient, in issues and anywhere else. We're all here because we love the Zone. Nobody gets left behind. 🙂
+
+[![made with universal-modder](https://raw.githubusercontent.com/rehan-remade/universal-modder/main/docs/media/made-with-dark.svg)](https://github.com/rehan-remade/universal-modder)
