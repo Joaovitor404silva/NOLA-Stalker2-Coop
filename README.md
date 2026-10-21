@@ -5,6 +5,7 @@
 > Status: **V1 release candidate 1** (1.0-rc1). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
 >
 > Download: [Download: Nexus link]
+> Nexus Page: https://www.nexusmods.com/stalker2heartofchornobyl/mods/3050
 
 ---
 
