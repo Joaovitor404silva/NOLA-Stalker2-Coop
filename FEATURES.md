@@ -86,6 +86,7 @@ Every row says honestly how far it has been checked.
 | Friendly fire | Players can hurt each other, in both directions (host to joiner and joiner to host). On in V1. | ✅ |
 | Downed, bleed-out and revive | At low health you drop to the ground with the camera low and no weapon in your hands, and you bleed out in about 30 seconds. A teammate stands close and holds F with a medkit to get you up, and the medkit's healing is applied to you. | ✅ |
 | Everybody down means game over | If all players are downed or dead, it is game over and the game reloads, like in the stock game. | ✅ |
+| Real cause on the death screen | A co-op death shows the real cause of death (or the game's default text) instead of always "shot". New in v1.2.0. | ✅ |
 
 ## Loading and sessions
 

@@ -81,3 +81,7 @@ While a partner has a stash open, their character crouches and searches for as l
 | Standing by the stash | Crouched while it is open |
 |---|---|
 | ![Standing](10_stash-crouch_standing.jpg) | ![Crouched](10_stash-crouch_after.jpg) |
+
+## Death screen
+
+A co-op death now shows the real cause of death (or the game's default text) instead of always "shot". This fix has no screenshot.
