@@ -13,6 +13,9 @@ This update is about how your friends look and move in your game: the other play
 - **Connection drops:** a joiner no longer hangs on the loading screen when the host loads. A joiner's game is saved when they leave, and their own worn gear is restored when they join again, so they don't come back holding items they never looted.
 - **Death screen:** a co-op death shows the real cause (or the game's default text) instead of always "shot".
 
+### New
+- **Friends on the compass:** each other player shows as a marker on your HUD compass at any distance, and it follows them as they move.
+
 ### Your partner's character
 - **Aiming and lowering the weapon:** rifles and pistols are held up in the aiming pose; pressing H lowers the weapon into the relaxed pose. In a safe zone the weapon is hidden, as it is for you.
 - **Shooting:** each shot plays the game's own fire animation for that weapon, on the body and on the gun. The Mosin shows its bolt cycle.

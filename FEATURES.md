@@ -67,6 +67,7 @@ Every row says honestly how far it has been checked.
 
 | Feature | What it does | Status |
 |---|---|---|
+| Friends on the compass | Each other player shows as a marker on your HUD compass at any distance and follows them. | ✅ |
 | Aim, lower, safe zones | Aiming pose for rifles and pistols, H lowers the weapon, weapon hidden in safe zones. | ✅ |
 | Shooting | The game's own fire animation per weapon, on body and gun; the Mosin cycles its bolt. | ✅ |
 | Reloads | Rifles, shotguns, SVD, PKP and pistols reload with the weapon in the hands. | ✅ |
