@@ -61,7 +61,7 @@ Every row says honestly how far it has been checked.
 | Each player keeps their own character | A joiner keeps their own gear, condition, attachments, quick slots and health. The host's world is merged with the joiner's character when they join. | ✅ |
 | Co-op has its own save slots | Co-op games are saved in a separate place, so your normal solo saves are not touched. The co-op slots start empty. | ✅ |
 | Weapon upgrades | Weapon upgrades on your items after a join or reload. | 🔧 Not verified. See Known issues. |
-| Worn gear on rejoin | A joiner's own worn gear comes back when they join again. | 🔧 Checked offline only, not yet in a live session. |
+| Worn gear on rejoin | A joiner's game, with their worn gear, is saved when they exit or disconnect, so it comes back when they join again. | ✅ |
 
 ## Your partner's character (v1.2)
 

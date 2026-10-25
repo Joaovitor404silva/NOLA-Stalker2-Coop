@@ -25,7 +25,8 @@ This update is about how your friends look and move in your game: the other play
 ### Known limits
 - No crouch-walk animation: the game has none for other characters, so a crouched partner slides along with still legs.
 - Throwing the bolt uses the rifle grenade-throw motion.
-- Not yet tested in a live session: a grenade throw seen on the partner, and the worn-gear restore on rejoin.
+- Not yet tested in a live session: a grenade throw seen on the partner.
+- Movement smoothing over the Steam relay is in this build, but the remaining delay there was not measured (testing used LAN).
 - Four and five player sessions are still lightly tested.
 
 ## v1.1 (2026-10-21)
