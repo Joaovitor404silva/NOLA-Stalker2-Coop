@@ -2,7 +2,7 @@
 
 [← Back to the overview](README.md)
 
-## V1 (released: v1.0, now v1.1)
+## V1 (released: v1.0, now v1.2.0)
 Host and join from the main menu, Steam or IP, up to 5 players, a shared world with host-run NPCs, shared drops, bodies, locks and quest items, a story that follows the host, your own character kept, downed and revive, friendly fire, loading together, three languages.
 
 ## V1.2 (next)

@@ -61,6 +61,19 @@ Every row says honestly how far it has been checked.
 | Each player keeps their own character | A joiner keeps their own gear, condition, attachments, quick slots and health. The host's world is merged with the joiner's character when they join. | ✅ |
 | Co-op has its own save slots | Co-op games are saved in a separate place, so your normal solo saves are not touched. The co-op slots start empty. | ✅ |
 | Weapon upgrades | Weapon upgrades on your items after a join or reload. | 🔧 Not verified. See Known issues. |
+| Worn gear on rejoin | A joiner's own worn gear comes back when they join again. | 🔧 Checked offline only, not yet in a live session. |
+
+## Your partner's character (v1.2)
+
+| Feature | What it does | Status |
+|---|---|---|
+| Aim, lower, safe zones | Aiming pose for rifles and pistols, H lowers the weapon, weapon hidden in safe zones. | ✅ |
+| Shooting | The game's own fire animation per weapon, on body and gun; the Mosin cycles its bolt. | ✅ |
+| Reloads | Rifles, shotguns, SVD, PKP and pistols reload with the weapon in the hands. | ✅ |
+| Pistol, knife, bolt, detector | Proper grips; detector in the left hand, bolt in the right. | ✅ |
+| Movement | Lean, crouch transitions, vaulting, ladder climbing, feet planted when standing still. | ✅ No crouch-walk animation (the game has none for other characters). |
+| Stashes and bodies | Crouches and searches for as long as a stash is open; body search animation. | ✅ |
+| Grenade throw on the partner | The throw motion seen on the partner. | 🔧 Not yet tested in a live session. |
 
 ## Combat and survival
 
