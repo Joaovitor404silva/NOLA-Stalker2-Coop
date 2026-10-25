@@ -35,8 +35,8 @@ Every row says honestly how far it has been checked.
 | NPC copies stop staring at dead targets | NPC copies on a joiner's PC no longer keep aiming at a body that is already dead. | ✅ Verified in game logs. |
 | Mutants move and attack in step | Mutant speed, attack animations and the bloodsucker's cloak follow the host. | 🧪 Bloodsucker speed and the attack and cloak timing matched the host in measurements. Other mutant types, and how it looks, were not fully checked. |
 | Time and weather follow the host | The joiner sees the same time of day and sky as the host. | 🧪 Worked in a live test on an earlier build. |
-| Sleep together, no pause, emissions together | Sleeping needs everybody, one player cannot pause the game, emissions run for all. | 🧪 Checked on earlier test builds. Not re-checked on this release candidate. |
-| Doors, levers, breakable objects, anomalies | State changes made by one player are copied to the others. | 🧪 Checked on earlier test builds. Not re-checked on this release candidate. |
+| Sleep together, no pause, emissions together | Sleeping needs everybody, one player cannot pause the game, emissions run for all. | 🧪 Checked on earlier test builds. Not re-checked in v1.2.0. |
+| Doors, levers, breakable objects, anomalies | State changes made by one player are copied to the others. | 🧪 Checked on earlier test builds. Not re-checked in v1.2.0. |
 | Padlocks and locked doors | A padlock one player breaks is broken for the other too, and the door behind it is no longer "locked" for them. | ✅ |
 | Dropped items | An item one player drops lies on the ground for everybody, at the same place. Whoever picks it up first gets it, and it is gone for the others. | ✅ The case where two players grab it in the same instant was only tested offline. |
 | Dead bodies and loot | One body per death, in the same place for everybody. Loot it from any player. A looted body stays where it is, with nothing left to take. | ✅ |

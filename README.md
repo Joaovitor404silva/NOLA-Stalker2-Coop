@@ -33,7 +33,7 @@ NOLA is a non-commercial hobby project. It is not made, endorsed or supported by
 | [Features](FEATURES.md) | Every feature, grouped by area, with how well it is tested |
 | [Known issues](KNOWN_ISSUES.md) | What is broken or not checked yet |
 | [Changelog](CHANGELOG.md) | What changed in each version |
-| [Roadmap](ROADMAP.md) | What is in V1, what is planned for V2, and ideas |
+| [Roadmap](ROADMAP.md) | What is released, what is next, what is planned for V2, and ideas |
 | [Install and play](INSTALL.md) | Requirements and a quick start |
 | [Settings](FLAGS.md) | What each setting does and how to turn features off |
 | [FAQ](FAQ.md) | Common questions |

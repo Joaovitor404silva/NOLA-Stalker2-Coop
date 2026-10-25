@@ -25,6 +25,9 @@ This update is about how your friends look and move in your game: the other play
 - **Standing still:** feet stay planted. Before, the legs kept shifting as if the ground height was changing.
 - **Stashes and bodies:** a partner who opens a stash crouches and searches for as long as it is open, then stands up when it closes. Searching a body plays the search animation.
 
+### Screenshots
+Before and after shots of the partner fixes are in the [v1.2.0 folder](v1.2.0/README.md).
+
 ### Known limits
 - No crouch-walk animation: the game has none for other characters, so a crouched partner slides along with still legs.
 - Throwing the bolt uses the rifle grenade-throw motion.
