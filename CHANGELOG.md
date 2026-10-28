@@ -2,6 +2,15 @@
 
 [← Back to the overview](README.md)
 
+## v1.2.1 (2026-10-28)
+
+This update makes NOLA work on the new STALKER 2 game patch (Update 2.1, Steam build 26123434). With v1.2.0 on the new patch the co-op entries were missing from the main menu. Every player must install the same version, and v1.2.1 needs the new game patch.
+
+### Fixed
+- **Game patch support:** every game address the mod uses was moved to the new patch, so all co-op features turn on again, including corpse sync and container loot sync.
+- **UE4SS start crash ([issue #7](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/7)):** the two UE4SS signature files (`GUObjectArray.lua`, `ProcessLocalScriptFunction.lua`) were updated for the new patch. You no longer need to set `HookProcessLocalScriptFunction = 0`.
+- **Quest sync:** the quest sync data was rebuilt from the new patch, so the quest steps the patch changed or added stay in sync between players.
+
 ## v1.2.0 (2026-10-25)
 
 This update is about how your friends look and move in your game: the other players' characters now use far more of the game's own animations. It also fixes the problems reported in [issue #6](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/6). Every player must install the same version.

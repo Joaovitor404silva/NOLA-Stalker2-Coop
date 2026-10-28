@@ -15,7 +15,7 @@ NOLA ships its own copy of UE4SS. If you already use UE4SS mods, your own settin
 Only the Steam build was used for development and testing.
 
 **Is V1 final?**
-V1 is out: v1.0, v1.1 and v1.2.0 have been released. What comes next is in the [Roadmap](ROADMAP.md).
+V1 is out: v1.0, v1.1, v1.2.0 and v1.2.1 have been released. What comes next is in the [Roadmap](ROADMAP.md).
 
 ---
 
