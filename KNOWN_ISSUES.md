@@ -2,6 +2,8 @@
 
 [← Back to the overview](README.md)
 
+- **Game patch:** v1.2.1 needs the STALKER 2 patch Update 2.1 (Steam build 26123434). On older game builds use v1.2.0; on newer builds the co-op entries may be missing until NOLA is updated.
+
 - **Items a joiner picked up after the host's last save** come back as fresh items without their upgrades when the host reloads.
 - **Weapon upgrades** now carry over when items are put into a box or dropped (v1.1), but have not been verified after a join or reload.
 - **NPC animations** on a joiner's screen sometimes reset (not fixed yet).
