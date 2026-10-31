@@ -2,6 +2,51 @@
 
 [← Back to the overview](README.md)
 
+## v1.3.0 (2026-10-31)
+
+This update is about the enemies, mutants and bodies a joiner sees, and about not losing things. It also fixes parts of [issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16). The game build stays Update 2.1 (Steam build 26123434). Every player must install the same version.
+
+### Fixed
+#### Your character, saves and items
+- **Rejoin keeps money and items:** A joiner who leaves and joins again now keeps their money and items on saves made by game patch 2.1. Before, every 2.1 save fell back to a basic restore that lost them. ([issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16))
+- **Items dropped by a joiner:** If the host loads an older save from before it picked up a joiner's drop, the drop comes back on the ground instead of being lost. Taking two stacked drops at once, or holding F to use one from the ground, now gives the right count. ([issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16))
+
+#### Loading and cutscenes
+- **Host load freeze:** Loading a save on the host no longer hangs on a stuck loading step. The press-any-button screen after a load now closes by itself in about 30 seconds (it used to wait for a key, and joiners could be let into a frozen world).
+- **Esc menu in cutscenes:** Opening the Esc menu during a cutscene no longer freezes the host's game time.
+
+#### Enemies and mutants on a joiner's screen
+- **Every nearby enemy is there:** A joiner now sees every enemy and mutant the host has near each player. Before, only the 8 nearest were sent: in a live check 7 of 15 bandits were missing, now none. ([issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16))
+- **Enemy health and death:** An enemy's health follows the host, and it dies right after the host's copy dies. Deaths now play the normal death instead of the burn animation. ([issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16))
+- **Bloodsuckers:** A bloodsucker that is cloaked for the host is cloaked for the joiner too, and visible when the host sees it. ([issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16))
+- **Enemy shots:** Joiners now see the bullets of enemies shooting, not only the muzzle flash.
+- **Hits:** When a joiner shoots an enemy it flinches and bleeds like it does for the host.
+- **Double enemies:** A real enemy and its copy no longer stand in the same place after a reload or a late stream-in.
+- **No more rubber band:** Enemies that move on a joiner's screen are no longer pulled back to an old spot by the game.
+- **Enemies around a far joiner:** When a joiner is far from the host, for example in a village, the enemies and NPCs around the joiner now appear for the joiner.
+- **Leftover props:** Props left behind by a finished NPC action are removed on joiners.
+
+#### Dead bodies
+- **Missing corpses:** Bodies that were already lying near a player are now sent to every joiner. Before, some never showed up.
+- **Corpses far away:** A body the game removed while a joiner was far away comes back when the joiner returns, in the same place and pose as the host's body.
+
+#### Looks and animation
+- **Floating weapons:** The weapon of a hidden NPC no longer floats in the air on a joiner's screen.
+- **Enemy looks:** Vests, coats, mutant skins and other look parts now match the host's, and blood and damage marks on a body are copied.
+- **Cover:** Enemies in cover keep the cover animation instead of standing up in the middle of it. Not perfect yet, see known issues.
+- **Legs:** Walking and running enemies and dogs move their legs in step with the body more often. Fast running can still slide a little.
+
+#### Story and missions
+- **Host-only mission objects:** A joiner can no longer touch a mission object that the host's story runs (for example the scanner in the first mission). A short HUD text says why. The object's state (hidden, on, broken) is sent from the host to every joiner.
+- **Trigger areas:** A joiner who stands inside a quest trigger area now counts for the host's quest, and the host stays inside while any joiner is in it.
+
+### Also in this build
+These changes are in v1.3.0 but were not checked in a live session yet:
+- Story quests are run only by the host. Joiners get their effects, dialogs and events from the host.
+- Enemy copies on a joiner's screen are neutral to everything, so they no longer fight each other or the local townsfolk.
+- A wounded enemy on the host also lies wounded on the joiner, and gets up when the host's one does.
+- The bar cutscene in the first story part waits for the host's dialog before the joiner moves on.
+
 ## v1.2.1 (2026-10-28)
 
 This update makes NOLA work on the new STALKER 2 game patch (Update 2.1, Steam build 26123434). With v1.2.0 on the new patch the co-op entries were missing from the main menu. Every player must install the same version, and v1.2.1 needs the new game patch.
