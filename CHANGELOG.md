@@ -2,6 +2,20 @@
 
 [← Back to the overview](README.md)
 
+## v1.3.1 (2026-11-01)
+
+Fixes [issue #18](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/18) and lost loot, and makes IP play easier for groups. Same game build as v1.3.0 (Update 2.1, Steam build 26123434). Every player must install the same version.
+
+### Fixed
+- **Joiner always hungry and sleepy:** when the joiner's game clock was ahead of the host's, the clock sync set it back, the game counted a whole day passing, and hunger and sleepiness filled up again right after eating or sleeping. The sync no longer moves the clock back. ([issue #18](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/18))
+- **Items next to a picked-up item vanished:** picking up one item could hide an identical item lying close to it, for every player. Now only the item you took is removed. Fix by Sternab.
+
+### New
+- **IP play with several PCs:** the installer asks for the IP address of every PC that may host, separated by commas. Every player can type the same list, their own address included. Join co-op tries each address until a host answers; Host co-op ignores the list. See `netpeer` in [Flags](FLAGS.md).
+
+### Removed
+- The `devdlc` developer switch. NOLA never touches DLC ownership: every player needs their own copy of the game and of every DLC the host uses.
+
 ## v1.3.0 (2026-10-31)
 
 This update is about the enemies, mutants and bodies a joiner sees, and about not losing things. It also fixes parts of [issue #16](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/16). The game build stays Update 2.1 (Steam build 26123434). Every player must install the same version.

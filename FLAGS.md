@@ -33,7 +33,7 @@ For this to work, `hostcfg` must stay on (see "Don't change" below).
 | Setting | Default | What it does | What happens if you turn it off |
 |---|---|---|---|
 | `net` | `steam` | How the PCs connect: `steam` (Steam friends) or `ip` (LAN, or a VPN such as Radmin). The installer writes this line for you. | Not an on/off switch. Change it to `ip` to play by IP address, or back to `steam` for Steam friends. |
-| `netpeer` | your answer in the installer | IP play only: the IP address of the other PC, for example `192.168.1.20`. A joiner needs it to find the host. Not used with Steam. The installer writes this line for you. | Not an on/off switch. Type the address of the PC you want to join. |
+| `netpeer` | your answer in the installer | IP play only: the IP addresses of the PCs that may host, separated by commas, for example `192.168.0.10,192.168.0.11,26.1.2.3`. Join co-op tries each one until a host answers; Host co-op ignores it, so every player can use the same list. Not used with Steam. The installer writes this line for you. | Not an on/off switch. One address works too. |
 | `maxclients` | `4` | How many other players the host accepts. The host plus 4 joiners is 5 players in total. | Use a smaller number for a smaller session. For example `2` means the host plus 2 friends. 4 is the most. |
 | `steaminvite` | `1` | Steam only: when you start hosting, the Steam invite window opens by itself so you can pick friends. | You open the invite window yourself by pressing **Home** in the world. |
 | `steamjoin` | `1` | Steam only: "Join co-op" looks for your Steam friends' hosted games. | "Join co-op" no longer finds Steam hosts. Leave this on if you use Steam. |
