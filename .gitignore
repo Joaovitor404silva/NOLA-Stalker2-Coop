@@ -29,3 +29,4 @@ cppbuild/OutputRel/
 tests/flight/out/
 cppbuild/OutFast/
 tests/fuzz/out/
+!modwork/tools/worlddiff/fixtures/*.log

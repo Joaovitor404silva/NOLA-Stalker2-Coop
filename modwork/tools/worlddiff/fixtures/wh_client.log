@@ -1,0 +1,11 @@
+[12:00:00.000] NOLA WH 1760000001200 role=client t=90 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:01.000] NOLA WH 1760000011200 role=client t=100 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:02.000] NOLA WH 1760000021200 role=client t=110 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:03.000] NOLA WH 1760000031200 role=client t=120 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:04.000] NOLA WH 1760000041200 role=client t=130 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:05.000] NOLA WH 1760000051200 role=client t=140 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:05.500] NOLA INV unpaired_visible_npc first=140 key=u555 cls=BP_AI_Human_C uid=555 x=100 y=200
+[12:00:06.000] NOLA WH 1760000061200 role=client t=150 npc=22222222/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:07.000] NOLA WH 1760000071200 role=client t=160 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:08.000] NOLA WH 1760000081200 role=client t=170 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
+[12:00:09.000] NOLA WH 1760000091200 role=client t=180 npc=11111111/5 quest=aaaaaaaa/40 taken=33333333/2 lock=44444444/1 broken=811c9dc5/0 qg=811c9dc5/0
