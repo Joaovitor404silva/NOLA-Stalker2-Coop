@@ -1,0 +1,43 @@
+h LOG NOLA idrop: 318 meshes, 586 items in the drop table
+h LOG NOLA idrop: inventory widget state 2 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c1 LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+h LOG NOLA idrop: drop seen Medkit x1 mesh SM_cns_healthbox_03 at 5100,100,0
+h LOG NOLA idrop: drop seen Medkit x1 mesh SM_cns_healthbox_03 at 5100,100,0
+h LOG NOLA idrop: drop seen Medkit x1 mesh SM_cns_healthbox_03 at 5100,100,0
+h LOG NOLA idrop: registry +0.0.1 owner=0 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 (total 1)
+h LOG NOLA idrop: registry +0.0.2 owner=0 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 (total 2)
+c1 STUB spawnitem Medkit 5100 100 30
+c1 LOG NOLA idrop: mirror of 0.0.2 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_healthbox_03) 0 cm from the spot
+c1 STUB spawnitem Medkit 5100 100 30
+c1 LOG NOLA idrop: mirror of 0.0.1 bound to BP_StaticItemContainer_C_s2 (mesh SM_cns_healthbox_03) 0 cm from the spot
+h LOG NOLA idrop: registry +0.0.3 owner=0 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 (total 3)
+c1 STUB spawnitem Medkit 5100 100 30
+c1 LOG NOLA idrop: mirror of 0.0.3 bound to BP_StaticItemContainer_C_s3 (mesh SM_cns_healthbox_03) 0 cm from the spot
+MARK t=dropped
+c1 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=3 loc=3 claims=0 pre=0 registered=0 spawned=3 took=0 lost=0 fixed=0 mc: pid=1 views=1 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c1 LOG NOLA idrop: 0.0.2 picked up here, asking the host (claim 1)
+h LOG NOLA idrop: 0.0.2 taken by pid 1 (first to ask wins)
+h STUB hide drop1 1
+h LOG NOLA idrop: 0.0.2 is gone from the registry, local copy hidden
+c1 LOG NOLA idrop: 0.0.2 verdict from the host: mine
+c1 LOG NOLA idrop: 0.0.1 picked up here, asking the host (claim 2)
+h LOG NOLA idrop: 0.0.1 taken by pid 1 (first to ask wins)
+h STUB hide drop2 1
+h LOG NOLA idrop: 0.0.1 is gone from the registry, local copy hidden
+c1 LOG NOLA idrop: 0.0.1 verdict from the host: mine
+c1 LOG NOLA idrop: 0.0.3 picked up here, asking the host (claim 3)
+h LOG NOLA idrop: 0.0.3 taken by pid 1 (first to ask wins)
+h STUB hide drop3 1
+h LOG NOLA idrop: 0.0.3 is gone from the registry, local copy hidden
+c1 LOG NOLA idrop: 0.0.3 verdict from the host: mine
+c1 LOG NOLA idrop: grouped 0.0.2,0.0.1,0.0.3 (3 claims, 3 x Medkit, base 0, now 3)
+c1 LOG NOLA idrop: 0.0.2 got exactly 3
+MARK t=group
+c1 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=0 loc=0 claims=3 pre=0 registered=0 spawned=3 took=3 lost=0 fixed=0 mc: pid=1 views=1 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+h HIDDEN drop1 1
+h HIDDEN drop2 1
+h HIDDEN drop3 1
+c1 HIDDEN BP_StaticItemContainer_C_s1 0
+c1 HIDDEN BP_StaticItemContainer_C_s2 0
+c1 HIDDEN BP_StaticItemContainer_C_s3 0

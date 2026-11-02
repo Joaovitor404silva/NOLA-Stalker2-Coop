@@ -1,0 +1,55 @@
+CMD role host
+CMD pawn 1
+CMD peer up 1 0
+CMD t 100
+CMD s2q E E01_MQ01_OnSignalReceived
+LOG NOLA qev: tabela carregada (1612 nos de evento)
+LOG NOLA qev: o grafo do host disparou E01_MQ01_OnSignalReceived (OnSignalReceived, missao E01_MQ01)
+CMD run 2
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+LOG NOLA qitem: 564 itens de missao, 465 nos ItemAdd pulados no cliente, 178 recipientes/corpos com item de missao
+OUT #QD:h,-,0,-,0;
+OUT #QD:h,-,0,-,0;
+CMD t 160
+CMD part QD c,-,0;E01_MQ01_OnSignalReceived:21
+CMD run 3
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou E01_MQ01_OnSignalReceived (missao E01_MQ01) ha 21 s e o host nao
+STUB aa XEndQuestNodeBySID E01_MQ01_OnSignalReceived
+LOG NOLA qdiv: reparado: o host repetiu o passo do cliente E01_MQ01_OnSignalReceived (missao E01_MQ01, 21 s atras) -> XEndQuestNodeBySID ok 
+LOG NOLA qdiv 30s: repaired (host repetiu 1, cliente voltou 0 no total)
+OUT #QD:h,-,0,-,1;
+LOG NOLA lead: inventario base lido (564 itens de missao); a partir de agora cada item pego vai em copia ao outro
+OUT #QD:h,-,0,-,1;
+OUT #QD:h,-,0,-,1;
+CMD t 200
+CMD part QD c,-,0;S2QDIVTEST_C1:25|S2QDIVTEST_C2:24|S2QDIVTEST_C3:1
+CMD run 3
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou S2QDIVTEST_C1 (missao S2QDIVTEST) ha 25 s e o host nao
+LOG NOLA qdiv: o host vence (N14) em S2QDIVTEST_C1 (missao S2QDIVTEST; teste S1): o cliente volta ao estado do host (ordem #1)
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou S2QDIVTEST_C2 (missao S2QDIVTEST) ha 24 s e o host nao
+LOG NOLA qdiv: o host vence (N14) em S2QDIVTEST_C2 (missao S2QDIVTEST; teste S1): o cliente volta ao estado do host (ordem #2)
+LOG NOLA qdiv 30s: repaired (host repetiu 1, cliente voltou 2 no total)
+OUT #QD:h,-,2,S2QDIVTEST_C2,1;
+OUT #QD:h,-,2,S2QDIVTEST_C2,1;
+OUT #QD:h,-,2,S2QDIVTEST_C2,1;
+CMD t 222
+CMD part QD c,-,0;S2QDIVTEST_C1:47|S2QDIVTEST_C2:46|S2QDIVTEST_C3:23
+CMD run 3
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou S2QDIVTEST_C3 (missao S2QDIVTEST) ha 23 s e o host nao
+LOG NOLA qdiv: o host vence (N14) em S2QDIVTEST_C3 (missao S2QDIVTEST; teste S1): o cliente volta ao estado do host (ordem #3)
+OUT #QD:h,-,3,S2QDIVTEST_C3,1;
+OUT #QD:h,-,3,S2QDIVTEST_C3,1;
+OUT #QD:h,-,3,S2QDIVTEST_C3,1;
+CMD t 230
+CMD part QD c,-,1;S2QDIVTEST_C4:22
+CMD run 3
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou S2QDIVTEST_C4 (missao S2QDIVTEST) ha 22 s e o host nao
+LOG NOLA qdiv: o host vence (N14) em S2QDIVTEST_C4 (missao S2QDIVTEST; teste S1): o cliente volta ao estado do host (ordem #4)
+LOG NOLA qdiv 30s: repaired (host repetiu 1, cliente voltou 4 no total)
+OUT #QD:h,-,4,S2QDIVTEST_C4,1;
+OUT #QD:h,-,4,S2QDIVTEST_C4,1;
+OUT #QD:h,-,4,S2QDIVTEST_C4,1;
+CMD out
+OUT #QD:h,-,4,S2QDIVTEST_C4,1;
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qdiv rn=4 rep=1 roll=4 qcatch ok=0 miss=0 defer=0 own=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=0 force=0 rel=0 ref=0 mir=0 err=0 defer=0 dup=0 held=0

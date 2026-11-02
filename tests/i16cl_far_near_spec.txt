@@ -1,0 +1,7 @@
+spec i16cl_far_near
+note i16cl phase 1 (runs AFTER scene i16cl_back on B and scene i16cl_dog on A, so the CRIADA and morreu lines are already written before this spec anchors; the checks here are states that stay true afterwards). The client B stands 4.5 m from the host A, the host spawned and killed one blind dog 6 m away. B has one dead copy (mortas>=1 in the 10 s client line), the host lists the corpse row (corpos_listados>=1), the natlegs line shows natfar=1 raio_morto=4500, no desiste. Old DLL: same lines here (the bug shows in the next two phases).
+mark
+expect B NOLA natnpc 10 s \(cliente\): host=\d+ copias=\d+ \(vivas=\d+ mortas=[1-9]\d* within 20
+expect A i16cl natfar=1 corpos_listados=[1-9]\d* corpo_mais_velho=\d+ s within 20
+expect B natlostfix=1 perdido_nulo=\d+ perdido_pool=\d+ modelo_destruido=\d+ desistiu=0 perdas_max_uid=\d+ \| natfar=1 raio_morto=4500 fora_do_raio=\d+ perdas_longe=\d+ refeitas_ao_voltar=\d+ within 20
+expect_not B desiste desta uid during 5

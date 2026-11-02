@@ -1,0 +1,43 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5 and main.lua md5=76717baf
+not applied
+
+s2core.lua:698
+-function S2L.lrApply(ST)
++function S2L.lrApply(ST)
++    if S2L.cpp("travel") then return end
+
+s2core.lua:9352
+-function S2L.tpfTick(ST)
++function S2L.tpfTick(ST)
++    if S2L.cpp("travel") then return end
+
+s2core.lua:9629
+-function S2L.ftTick(ST)
++function S2L.ftTick(ST)
++    if S2L.cpp("travel") then return end
+
+s2core.lua:9728
+-function S2L.cfollowTick(ST)
++function S2L.cfollowTick(ST)
++    if S2L.cpp("travel") then return end
+
+s2core.lua:911
+-local function cineTick(ST)
++local function cineTick(ST)
++    if S2L.cpp("travel") then return end
+
+s2core.lua:1790
+-                        if FL.cjoin == 1 and S2L.mqSid(sid) then local G = cjG(); if G then pcall(CJ.m.cjOnRemoteCause, CJ.st, sid, G) end end
++                        if FL.cjoin == 1 and not S2L.cpp("travel") and S2L.mqSid(sid) then local G = cjG(); if G then pcall(CJ.m.cjOnRemoteCause, CJ.st, sid, G) end end
+
+s2core.lua:1899
+-            if FL.cjoin == 1 and S2L.mqSid(sid) then local G = cjG(); if G then pcall(CJ.m.cjOnRemoteCause, CJ.st, sid, G) end end
++            if FL.cjoin == 1 and not S2L.cpp("travel") and S2L.mqSid(sid) then local G = cjG(); if G then pcall(CJ.m.cjOnRemoteCause, CJ.st, sid, G) end end
+
+s2core.lua:3857
+-        if FL.cjoin == 1 and S2L.mqSid(sid) then local G = cjG(); if G then pcall(CJ.m.cjBeforeStart, CJ.st, sid, G) end end
++        if FL.cjoin == 1 and not S2L.cpp("travel") and S2L.mqSid(sid) then local G = cjG(); if G then pcall(CJ.m.cjBeforeStart, CJ.st, sid, G) end end
+
+main.lua:3598
+-                        if st == "FORA" and ROLE == "client" then
++                        if st == "FORA" and ROLE == "client" and not (S2_cpp and S2_cpp("travel")) then

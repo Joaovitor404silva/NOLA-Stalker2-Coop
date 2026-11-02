@@ -1,0 +1,23 @@
+role client
+flag dmgin 1
+me 100 1 0 0 0
+t 0
+do dmgIn
+t 1
+x1 D 1,10.0
+do dmgIn
+t 4
+x1 D 1,10.0|2,30.0
+do dmgIn
+t 4.1
+x1 D 2,30.0|3,250.0
+do dmgIn
+hp me
+t 4.2
+x1 D 3,250.0|4,5.0
+do dmgIn
+t 10.5
+x1 D =
+do dmgIn
+t 20.6
+do dmgIn

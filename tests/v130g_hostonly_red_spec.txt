@@ -1,0 +1,7 @@
+spec v130g_hostonly_red
+note Red = the same DLL with qhostonly 0, qobjsync 0, qdivmute 0. The human presses F (tap) on the scanner as the client B within 20 s of the manual line. Expected old numbers (dev1 47cf55e 16:01:34): B "pupanim: acao local iaN de toque em BP_TopazScanner_Prologue_C" and "qev: o grafo do cliente disparou E01_MQ01_ScanerDialogDelay_OnInteractEvent_1 -> #QN c", A "qn: origem c E01_MQ01_ScanerDialogDelay_OnInteractEvent_1", no objstate line on either side, no bloqueados line above 0. If B has no prompt at all (its bEnabled was false live at 23:10 without qobjsync), the manual step cannot be done and the missing pupanim line is the red result for the prompt as well.
+expect_not A NOLA objstate BP_TopazScanner_Prologue_C during 10
+expect_not B NOLA objstate BP_TopazScanner_Prologue_C during 3
+manual m1 B looks at the scanner prompt and taps F once (short press), within 20 s
+expect A NOLA qn: origem c E01_MQ01_ScanerDialogDelay_OnInteractEvent within 120
+expect_not B NOLA qhostonly: toque do cliente during 3

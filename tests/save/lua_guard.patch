@@ -1,0 +1,31 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5
+not applied
+
+s2core.lua:1041
+-local function joinTick(ST)
++local function joinTick(ST)
++    if S2L.cpp("save") then return end
+
+s2core.lua:1665
+-local function kitTick(ST)
++local function kitTick(ST)
++    if S2L.cpp("save") then return end
+
+s2core.lua:4297
+-local function csTick(ST)
++local function csTick(ST)
++    if S2L.cpp("save") then return end
+
+s2core.lua:4425
+-local function questIn(ST)
++local function questIn(ST)
++    if S2L.cpp("save") then return end
+
+s2core.lua:4721
+-function S2L.n7Tick(ST)                                 -- tick100, right after csTick
++function S2L.n7Tick(ST)
++    if S2L.cpp("save") then return end
+
+#N (csOut) needs no Lua edit: X0 own_tag "N" strips Lua's #N while cpp_save=1.
+S2L.n7B / n7Rw / n7Follow / n7Idle / qlSettled are called from M7 Lua only; with cpp_quest=1 they come from C++ (cpp_save requires cpp_quest).
+cpTick (6055) and ndTick (6163) are DELETE and stay off by flags (cpersist=0, nodeath=0).

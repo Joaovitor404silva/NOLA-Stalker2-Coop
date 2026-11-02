@@ -1,0 +1,32 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); levanta em 20 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL me ForceSetHP 30
+LOG NOLA LIFE: movimento fica com o congelamento da cinematica (cineRestore libera)
+LOG NOLA LIFE: DE PE (tempo) depois de 29.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=30.0 alive=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #2 (hp 10.0 <= 15); levanta em 20 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL me ForceSetHP 30
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 29.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=30.0 alive=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #3 (hp 10.0 <= 15); levanta em 20 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+LOG NOLA LIFE: movimento fica com o congelamento da cinematica (cineRestore libera)
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (lifeguard desligado): efeito Nola_DownedBlock retirado ok=true

@@ -1,0 +1,20 @@
+role host
+pawn 1
+t 5
+pos 0 0 0
+views 3
+vpeer 0 up 1
+vpeer 1 up 1
+vpeer 2 up 1
+vpart 0 QN c,1,E02_MQ03_Technical_Pin_0_CondTrigger
+vpart 1 QN c,1,E02_MQ03_Technical_Pin_0_CondTrigger
+run 1
+t 6
+run 1
+vpart 0 QN c,1,E02_MQ03_Technical_Pin_0_CondTrigger|x,2,E02_MQ03_Technical_Pin_0_CondTrigger
+run 1
+t 7
+vpeer 1 down 0
+run 1
+t 8
+run 1

@@ -1,0 +1,26 @@
+# QS1 qdmir=0 qdroll1=0 keep the old behaviour: the 39 s old client fire is a divergence and every client step gets its own rollback order
+role host
+flag trigjoin 1
+flag qdmir 0
+flag qdroll1 0
+flag lead 1
+flag qsync 1
+pawn 1
+peer up 1 0
+t 100
+s2q E E01_MQ01_OnSignalReceived
+run 2
+t 160
+part QD c,-,0;E01_MQ01_OnSignalReceived:21
+run 3
+t 200
+part QD c,-,0;S2QDIVTEST_C1:25|S2QDIVTEST_C2:24|S2QDIVTEST_C3:1
+run 3
+t 222
+part QD c,-,0;S2QDIVTEST_C1:47|S2QDIVTEST_C2:46|S2QDIVTEST_C3:23
+run 3
+t 230
+part QD c,-,1;S2QDIVTEST_C4:22
+run 3
+out
+status

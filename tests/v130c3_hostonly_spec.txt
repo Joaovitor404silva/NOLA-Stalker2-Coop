@@ -1,0 +1,7 @@
+spec v130c3_hostonly
+note Part 1. Save scanner_20261030_host: both players in the E01_MQ01 cave next to BP_TopazScanner_Prologue_C (CaveScanningPoint pending). The human presses F (a tap, under 0.3 s) on the scanner as the client B within 20 s of the manual line. Old build (dev1 47cf55e, client log 2026-10-30 16:01:34 and 18:37:02): B prints "pupanim: acao local iaN de toque em BP_TopazScanner_Prologue_C" then "qev: o grafo do cliente disparou E01_MQ01_ScanerDialogDelay_OnInteractEvent_1 ... -> #QN c" and A prints "qn: origem c E01_MQ01_ScanerDialogDelay_OnInteractEvent_1"; the 10 s counter does not exist (bloqueados absent). New build: B prints "qhostonly: toque do cliente em BP_TopazScanner_Prologue_C... bloqueado (missao E01_MQ01_ScanerDialogDelay)", the 10 s line reads bloqueados=1 avisos=1 or more, the HUD shows "Only the host can do mission objectives", and A prints no qn origem c line. Red = qhostonly 0 (same plan, flag 0): the old lines come back and bloqueados stays 0.
+manual m1 B looks at the scanner prompt and taps F once (short press), within 20 s
+expect B NOLA qhostonly: toque do cliente em BP_TopazScanner_Prologue_C\S+ bloqueado \(missao E01_MQ01_ScanerDialogDelay\) within 25
+expect B NOLA qhostonly 10 s: qhostonly=1 bloqueados=([1-9]|\d\d+) avisos=([1-9]|\d\d+) within 15
+expect_not B NOLA pupanim: acao local \S+ de toque em BP_TopazScanner_Prologue_C during 3
+expect_not A NOLA qn: origem c E01_MQ01_ScanerDialogDelay during 10

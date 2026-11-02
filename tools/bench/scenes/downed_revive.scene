@@ -1,0 +1,14 @@
+scene downed_revive
+note from v1_client_revive: the client goes down next to the host, the host gets 2 medkits, frames the downed client and revives it with F
+@C closeui
+@D closeui
+@C time 12:00
+@C tp peer+150
+@D hp 10
+@D wait log NOLA\sLIFE:\sCAIDO timeout=6
+@C give Medkit 2
+@C frame peer
+@C box peer
+@C shot downed key=peer all=1
+@C key F 150
+@D wait log NOLA\sLIFE:\sDE\sPE timeout=8

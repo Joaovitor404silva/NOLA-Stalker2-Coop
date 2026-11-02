@@ -1,0 +1,38 @@
+> role client
+> flag lead 1
+> flag ldclose 2
+> pawn 1000 442207.0 470552.0 0
+> peer h,4,1700000002,dlg,0,0,0
+> view on
+> interact 442057.0 470452.0 832.0
+> run 3000
+L 100 NOLA lead: dialogo aberto com o outro lado liderando (dlg #4): SEGURADO (respostas escondidas)
+L 100 NOLA lead: respostas escondidas (o outro lado lidera)
+A vis 1
+L 1000 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+A close
+L 2100 NOLA lead: dialogo segurado fechado (UIDialogClose) ok=true
+A close
+> view off
+> run 500
+L 3100 NOLA lead: dialogo fechado (held)
+> peer -
+> run 500
+> view on
+> run 300
+A vis 0
+L 4100 NOLA lead: respostas devolvidas (dialogo novo) ok=true
+L 4100 NOLA lead: trava #1 tomada (dlg em 442057,470452,832): este lado lidera, o outro segue
+O 4100 #LK:c,1,1700000004,dlg,442057,470452,832
+> state
+S mine=1 peer=0 owner=client
+> leaddlg
+R leaddlg 11
+> view off
+> run 2300
+L 5400 NOLA lead: trava #1 (dlg) solta: dialogo fechou (1.3 s)
+O 5400 -
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 00

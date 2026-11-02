@@ -1,0 +1,12 @@
+role client
+pawn 1
+t 5
+pos 404300 550600 713
+run 1
+t 6
+run 1
+t 7
+pos 0 0 0
+run 1
+t 8
+run 1

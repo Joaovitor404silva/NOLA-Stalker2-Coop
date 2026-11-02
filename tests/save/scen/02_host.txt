@@ -1,0 +1,40 @@
+role host
+flag n7 1
+flag qsync 1
+flag qrollback 1
+flag sxjoin 1
+flag wpkg 0
+t 1
+pawn 10
+kh 7
+gen 3
+tick
+out
+rbaddr 1
+qlok 1
+t 12
+tick
+out
+stamp STEAM=5:5;NULL=-
+t 15
+tick
+kh 9
+t 21
+tick
+out
+t 30
+pawn 11
+gen 4
+tick
+t 35
+rbcheck 1
+t 41
+tick
+rbcheck 0
+t 42
+tick
+out
+t 50
+pawn 0
+tick
+out

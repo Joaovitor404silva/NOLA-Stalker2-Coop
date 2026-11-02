@@ -1,0 +1,30 @@
+CMD role host
+CMD pawn 1
+CMD t 5
+CMD pos 0 0 0
+CMD views 3
+CMD vpeer 0 up 1
+CMD vpeer 1 up 1
+CMD vpeer 2 up 1
+CMD vpart 0 QN c,1,ANCQ01_OnTriggerEnterEvent_Roof
+CMD vpart 1 QN c,1,ANCQ01_OnTriggerEnterEvent_Roof
+CMD run 1
+LOG NOLA qev: tabela carregada (1612 nos de evento)
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+STUB trig 35EA13774575CF2337E7258DEDB14432 x
+LOG NOLA qn: origem c ANCQ01_OnTriggerEnterEvent_Roof seq=1 (pid 1) -> gatilho 35EA13774575CF2337E7258DEDB14432: o jogador do host entra pelo TriggerManager (sem teleporte, volta ao lugar real) r=1 fake
+LOG NOLA qn: origem c ANCQ01_OnTriggerEnterEvent_Roof seq=1 (pid 2): ja disparado ha 0.0 s (outro jogador ou repeticao): nada repetido
+OUT #QD:h,-,0,-,0;
+CMD vpart 2 QN c,7,ANCQ01_OnTriggerEnterEvent_Roof|c,8,SQ_FOO_1
+CMD run 1
+LOG NOLA qn: origem c ANCQ01_OnTriggerEnterEvent_Roof seq=7 (pid 3): ja disparado ha 1.0 s (outro jogador ou repeticao): nada repetido
+STUB aa XEndQuestNodeBySID SQ_FOO_1
+LOG NOLA qn: origem c SQ_FOO_1 seq=8 (pid 3) -> XEndQuestNodeBySID ok=true 
+OUT #QD:h,-,0,-,0;
+CMD vpart 1 QN c,1,ANCQ01_OnTriggerEnterEvent_Roof|c,2,SQ_FOO_1
+CMD run 1
+LOG NOLA qn: origem c SQ_FOO_1 seq=2 (pid 2): ja disparado ha 1.0 s (outro jogador ou repeticao): nada repetido
+OUT #QD:h,-,0,-,0;
+CMD vpart 1 QN c,3,SQ_BAR_1
+CMD run 1
+OUT #QD:h,-,0,-,0;

@@ -1,0 +1,20 @@
+PASS udp py->py settled in.json byte-equal to py->py frames seen 46/50, common 46, equal 46; latency out.json->in.json median 32.1 ms p95 43.4 ms; in.json updates 46
+PASS start line format (py) relay v2 listen=27901 peer=127.0.0.1:27902 dir=D:\modding\cpp\S2CoopPort\tests\net\out\udp\py_py\A
+PASS udp cpp->cpp settled in.json byte-equal to py->py frames seen 50/50, common 46, equal 46; latency out.json->in.json median 33.3 ms p95 47.0 ms; in.json updates 50
+PASS start line format (cpp) relay v2 listen=27901 peer=127.0.0.1:27902 dir=D:\modding\cpp\S2CoopPort\tests\net\out\udp\cpp_cpp\A
+PASS udp cpp->py settled in.json byte-equal to py->py frames seen 50/50, common 46, equal 46; latency out.json->in.json median 29.4 ms p95 43.4 ms; in.json updates 50
+PASS start line format (cpp) relay v2 listen=27901 peer=127.0.0.1:27902 dir=D:\modding\cpp\S2CoopPort\tests\net\out\udp\cpp_py\A
+PASS udp py->cpp settled in.json byte-equal to py->py frames seen 50/50, common 46, equal 46; latency out.json->in.json median 32.3 ms p95 44.1 ms; in.json updates 50
+PASS start line format (py) relay v2 listen=27901 peer=127.0.0.1:27902 dir=D:\modding\cpp\S2CoopPort\tests\net\out\udp\py_cpp\A
+PASS X0 glue mailbox mode (DLL side) against a real relay_v2.py: in.json on the Python side byte-equal frames 50, common 46, equal 46
+PASS X0 glue mailbox mode: x0_in text byte-equal to the in.json relay_v2.py writes frames 49, common 49, equal 49
+PASS X0 glue flag switch cpp_net 0->1->0->1 and netfiles toggle LOG S2NET relay in the DLL off (cpp_net=0): the bridge files go to an external relay_v2.py | LOG S2NET relay in the DLL started: role=host listen=27921 peer=127.0.0.1:27922 files=0 loop=20 ms | STATUS net on listen=27921 peer=127.0.0.1:27922 bound=1 files=0 sent=259 recv=49 in=49 stale=0 apps=0 npcs=0 rx_age=1.1 | LOG S2NET relay in the DLL off (cpp_net=0): the bridge files go to an external relay_v2.py | LOG S2NET relay in the DLL started: role=host listen=27921 peer=127.0.0.1:27922 files=1 loop=20 ms | OK file mode after restart | GLUE OK
+PASS loss 0.3 on py receiver frames seen 70/105, f monotonic True, stats: relay stats 10s: sent=96 (37596 B, max 399 B, over 1200 B: 0) recv=358 dropped_test=144 stale=0 in.json=96 send_err=0 bad_local=0 bad_peer=0 apps_cached=4 npcs=8
+PASS loss 0.3 on cpp receiver frames seen 71/105, f monotonic True, stats: relay stats 10s: sent=96 (36484 B, max 387 B, over 1200 B: 0) recv=362 dropped_test=144 stale=0 in.json=96 send_err=0 bad_local=0 bad_peer=0 apps_cached=4 npcs=7
+PASS reorder proxy 0-250 ms jitter into py receiver frames seen 83/105, f monotonic True, stats: relay stats 10s: sent=97 (38002 B, max 399 B, over 1200 B: 0) recv=498 dropped_test=0 stale=59 in.json=288 send_err=0 bad_local=0 bad_peer=0 apps_cached=4 npcs=8
+PASS reorder proxy 0-250 ms jitter into cpp receiver frames seen 86/105, f monotonic True, stats: relay stats 10s: sent=96 (36496 B, max 387 B, over 1200 B: 0) recv=496 dropped_test=0 stale=65 in.json=297 send_err=0 bad_local=0 bad_peer=0 apps_cached=4 npcs=8
+PASS stats line format py/cpp identical shape 
+PASS save transfer host=cpp client=cpp loss 0.2, host asked first (sx_req.txt) then pkg appears pkg byte-equal True in 6.3 s, sx_req.txt=b'4242\r\n', sx_in.prog=b'4242 273/273 done\r\n', 3 sx log lines
+PASS save transfer host=py client=cpp loss 0.2, host asked first (sx_req.txt) then pkg appears pkg byte-equal True in 3.97 s, sx_req.txt=b'4242\r\n', sx_in.prog=b'4242 273/273 done\r\n', 3 sx log lines
+PASS save transfer host=cpp client=py loss 0.2, host asked first (sx_req.txt) then pkg appears pkg byte-equal True in 6.21 s, sx_req.txt=b'4242\r\n', sx_in.prog=b'4242 273/273 done\r\n', 3 sx log lines
+RESULT PASS (0 fail)

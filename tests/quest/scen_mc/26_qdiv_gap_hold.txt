@@ -1,0 +1,26 @@
+# qdRoll: an order inside qdivgap of the last reload waits, a later one replaces it, one reload after the gap
+role client
+flag lead 1
+flag qsync 1
+flag qdivroll 1
+flag n7 1
+flag csave 1
+flag qrollback 1
+peer up 1 0
+pawn 1
+t 100
+followto load
+part QD h,-,1,SQX_1,2;
+run 1
+part QD h,-,2,SQX_2,2;
+run 1
+n7stage idle
+part QD h,-,3,SQX_3,2;
+run 2
+part QD h,-,4,SQX_4,2;
+run 2
+run 84
+run 4
+n7stage idle
+followto -
+run 3

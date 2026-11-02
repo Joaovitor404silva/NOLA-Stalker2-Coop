@@ -1,0 +1,6 @@
+spec i16cb_relist
+note i16cb relist (no-regression check): both players stand 63 m south of the eight dog corpses for 25 s and come back; the host keeps listing all eight (natfar=1 keeps dead rows while the body exists, measured corpos_listados=8 all the time away) and the client shows eight dead copies, no duplicate. The forget-on-leave rule itself is proven by the unit test t_deadall (FreshDead::left), because with natfar=1 a corpse row does not leave the list before the stock cleanup removes the body (>100 m).
+mark
+expect A i16cl natfar=1 corpos_listados=([8-9]|\d\d+) within 40
+expect B NOLA natnpc 10 s \(cliente\): host=\d+ copias=\d+ \(vivas=\d+ mortas=([8-9]|\d\d+) within 40
+expect_not B NOLA natnpc: DUPLICADA during 20

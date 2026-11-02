@@ -1,0 +1,32 @@
+nodes 3
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myinv Vodka 4
+@c1 vis 1
+@h vis 1
+run 1
+@c1 dropitem dropv Vodka 2 5100 100 0
+@h worlditem npcdrop Beer 5200 100 0
+run 3.5
+mark dropped
+@h dstat
+@c1 pickup dropv Vodka 2
+run 3
+mark owner-took-back
+@h hidden BP_StaticItemContainer_C_s1
+@c2 hidden BP_StaticItemContainer_C_s1
+@c1 dstat
+@h dstat
+@c1 vis 0
+@h vis 0
+run 8
+@c1 dropitem late Vodka 1 5110 100 0
+run 4
+mark closed-window
+@h dstat
+@c1 dstat

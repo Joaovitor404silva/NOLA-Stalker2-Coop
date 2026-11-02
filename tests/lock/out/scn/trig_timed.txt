@@ -1,0 +1,21 @@
+role host
+flag lead 1
+flag ldtrig 2
+pawn 1000 442207.0 470552.0 0
+trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+run 300
+state
+leaddlg
+trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+run 1500
+state
+leaddlg
+run 400
+state
+leaddlg
+trigenter ANCQ01_OnTriggerEnterEvent_BlindDogs 442057.0 470452.0 832.0
+state
+leaddlg
+trigenter NOT_A_TRIGGER 1 2 3
+state
+leaddlg

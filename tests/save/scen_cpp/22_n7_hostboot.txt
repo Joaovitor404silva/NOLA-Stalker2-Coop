@@ -1,0 +1,66 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 1
+flag n7eq 0
+flag qsync 1
+flag qrollback 1
+flag joinport 0
+flag kit 0
+flag n7early 1
+flag n7always 1
+flag leashown 1
+flag n7reboot 1
+t 1
+pawn 1000
+money 500
+peer up 1 1
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n3\tJ,q1,n1,go,s1\n
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav BBBBBBBBBBBBBBBBBBBBBBBB-two
+part B 5,3,c6ad219ea28b4,0,0,3,abc
+tick
+t 3
+part B 5,3,c6ad219ea28b4,0,1,3,abc
+tick
+t 22
+tick
+stamp STEAM=2:2;NULL=-
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav DDDDDDDDDDDDDDDDDDDDDDDDDDDD-one-saved
+t 24
+tick
+t 30
+tick
+t 31
+part J 4,J,q2,n2,go,s2|5,N,sid5
+tick
+nopart J
+t 33
+part J 6,J,q3,n3,go,s3
+tick
+nopart J
+t 35
+part B 5,6,c6ad219ea28b4,0,2,6,abc
+tick
+t 55
+tick
+stamp STEAM=3:3;NULL=-
+file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav EEEEEEEEEEEEEEEEEEEEEEEEEEEE-two-saved
+t 57
+tick
+t 63
+tick
+t 70
+peer up 2 1
+part B 5,6,c6ad219ea28b4,0,2,-1,abc
+tick
+t 71
+tick
+t 75
+part B 5,6,c6ad219ea28b4,0,2,3,abc
+tick
+t 80
+part B 5,7,c6ad219ea28b4,0,3,3,abc
+tick
+t 90
+tick

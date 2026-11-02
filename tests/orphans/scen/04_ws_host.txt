@@ -1,0 +1,84 @@
+role host
+flag wshot 1
+flag wsply 0
+flag wvoice 1
+flag wvface 1
+flag wvspk 1
+remote 1000 1000 0
+me 0 0 0
+asset AkAudioEvent /Game/_STALKER2/Audio/WwiseAudio/Events/Voiceover/Zalissya/VO_Bark/VO_123.VO_123
+asset AkAudioEvent /Game/_STALKER2/Audio/WwiseAudio/Events/Voiceover/Found/Elsewhere/VO_777.VO_777
+pawn Bandit_1 1500 1000 0 90 11 7
+weapon Bandit_1 SK_AK74 Muzzle
+face Bandit_1
+speaker Bandit_1
+pawn Bandit_2 1200 1400 0 0 12 7
+weapon Bandit_2 SK_Unknown -
+pawn Far_3 30000 0 0 0 13 7
+weapon Far_3 SK_AK74 -
+pawn Mutant_4 1000 900 0 0 14 8
+t 100
+shot Bandit_1
+shot Bandit_1
+shot Bandit_1
+shot Bandit_2
+shot Far_3
+shot Me
+step ws
+out ws
+t 100.2
+step ws
+out ws
+t 100.5
+step ws
+out ws
+t 100.9
+step ws
+out ws
+facemont Bandit_1 AnimSequence_x./Game/_STALKER2/Animations/CharacterHead/Zalissya/Bark/EN/AS_FAC_EN_VoiceA_123.AS_FAC_EN_VoiceA_123
+spkev Bandit_1 /Game/_STALKER2/Audio/WwiseAudio/Events/Voiceover/X/VO_9.VO_9
+t 101.1
+step ws
+t 101.4
+step ws
+out ws
+facemont Bandit_1 /Game/_STALKER2/Animations/CharacterHead/Zalissya/Bark/EN/AS_FAC_EN_VoiceA_123.AS_FAC_EN_VoiceA_123
+t 101.7
+step ws
+out ws
+spkev Bandit_1 /Game/_STALKER2/Audio/WwiseAudio/Events/Voiceover/X/VO_10.VO_10
+t 101.95
+step ws
+out ws
+montage Bandit_2 /Game/Anims/AM_Talk.AM_Talk
+animref Bandit_2 /Game/_STALKER2/Animations/CharacterHead/Found/Elsewhere/AS_FAC_UA_777.AS_FAC_UA_777
+t 102.2
+step ws
+out ws
+facemont Bandit_1 /Game/_STALKER2/Animations/CharacterHead/General/EN/AS_FAC_EN_555.AS_FAC_EN_555
+t 102.45
+step ws
+out ws
+montage Bandit_2 /Game/Anims/AM_Talk2.AM_Talk2
+animref Bandit_2 /Game/_STALKER2/Animations/CharacterHead/Q/Elsewhere/AS_FAC_UA_888.AS_FAC_UA_888
+t 104.5
+step ws
+out ws
+facemont Bandit_1 /Game/Other/AS_FAC_EN_1.AS_FAC_EN_1
+t 104.8
+step ws
+out ws
+t 105.1
+step ws
+out ws
+spkev Bandit_1 /Game/_STALKER2/Audio/WwiseAudio/Events/Weapons/X/VO_11.VO_11
+t 105.4
+step ws
+remote none
+shot Bandit_1
+t 106
+step ws
+t 110.5
+step ws
+t 111
+step ws

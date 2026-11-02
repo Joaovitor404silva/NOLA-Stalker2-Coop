@@ -1,0 +1,11 @@
+spec i16cb_reload2
+note i16cb reload, part 2, runs right after the supervisor hot-reloaded the DLL by hand on A and B (hotreload.ps1 -Dll <dll> -Sides A,B) with the eight dead copies lying on B. New DLL (nathotkeep=1): the old generation hands the eight dead copies over (B logs "NOLA nathot: 8 copias mortas da geracao anterior recebidas"), the host lists the corpses again (corpos_listados>=8), each dead row retakes its body without a spawn (retomadas_reload>=8), and 60 s later the natdead 10 s line still counts copias_mortas>=8 com_corpo>=8 sem_corpo=0 extras=0 (extras = dead actors inside the copy radius that are no tracked copy: a duplicate or an orphan), no DUPLICADA, nothing discarded. Old DLL: no nathot line, no natdead line, the old bodies stay as orphans and eight new copies are spawned and killed (s2dev B `npcs 1000 class=Blinddog` shows 16 hp=0 dogs instead of 8).
+mark
+expect B NOLA natdead 10 s \(cliente\): nathotkeep=1 natdeadkeep=1 copias_mortas=\d+ com_corpo=\d+ sem_corpo=\d+ corpos_mortos_no_raio=\d+ extras=\d+ raio=\d+ retomadas_reload=([1-9]|\d\d+) within 20
+expect A i16cl natfar=1 corpos_listados=([8-9]|\d\d+) within 40
+wait 60
+mark
+expect B NOLA natdead 10 s \(cliente\): nathotkeep=1 natdeadkeep=1 copias_mortas=([8-9]|\d\d+) com_corpo=([8-9]|\d\d+) sem_corpo=0 corpos_mortos_no_raio=\d+ extras=0 raio=\d+ retomadas_reload=([8-9]|\d\d+) descartadas_reload=0 invalidas_reload=0 within 20
+expect_not B NOLA natnpc: DUPLICADA during 20
+expect_not B NOLA natdead 10 s \(cliente\).*extras=[1-9] during 20
+expect_not B NOLA natnpc: copia de host uid=\d+ \(_\d+\) CRIADA \(spawn\) during 20

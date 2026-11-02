@@ -1,0 +1,8 @@
+# Artifact places (artsync=2). Stand near an artifact spawner; the place numbers are the line numbers of bridge\s2u_artspawn.tsv
+# (the client log prints "art2: ... lugar N" when you are close). Put that number instead of 1 2 3 below.
+# Expect: with the place listed, its artifact is hidden and has no prompt; with the list empty it is back.
+# Then take one yourself: the fake host prints "client #U: <seq>,A,<place>,x,1".
+15 places 1 2 3
+40 places
+30 key take an artifact on the client now, then press Enter
+5 end

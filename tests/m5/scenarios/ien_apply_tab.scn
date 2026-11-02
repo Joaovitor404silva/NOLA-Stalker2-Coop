@@ -1,0 +1,39 @@
+role client
+flag ien 1
+flag ientab 1
+flag ienanim 1
+flag ientoggle 1
+flag ienecho 10
+pawn 0 0 0
+obj LV1 BP_Lever_Vertical_C InteractableObject inter 1000 0 0
+prop LV1 bEnabled 0
+comp C1 LV1 SingleClickLeverDown 1
+comp C2 LV1 SingleClickLeverUp 0
+compprop LV1 SingleClickLeverDown C1
+compprop LV1 SingleClickLeverUp C2
+fn LV1 BndEvt__BP_Lever_Vertical_SingleClickLeverDown_K2Node_ComponentBoundEvent_1_InteractSignature__DelegateSignature toggle
+fn LV1 BndEvt__BP_Lever_Vertical_SingleClickLeverUp_K2Node_ComponentBoundEvent_2_InteractSignature__DelegateSignature noop
+obj LV2 BP_Lever_Vertical_C InteractableObject inter 1500 100 0
+prop LV2 bEnabled 0
+comp C3 LV2 SingleClickLeverDown 0
+comp C4 LV2 SingleClickLeverUp 1
+compprop LV2 SingleClickLeverDown C3
+compprop LV2 SingleClickLeverUp C4
+obj H1 BP_BunkerHatch_Valve_C InteractableObject inter 2000 0 0
+prop H1 bEnabled 0
+comp C5 H1 SingleClick 1
+compprop H1 SingleClick C5
+anim H1 SkeletalMesh
+obj U1 BP_Unknown_Thing_C InteractableObject inter 2200 0 0
+prop U1 bEnabled 1
+obj N1 BP_Padlock_Prototype_01_C InteractableObject inter 2300 0 0
+time 1
+tick
+time 2
+remote P 100,0,0;1|150,10,0;1|200,0,0;1|220,0,0;0|230,0,0;1
+tick
+time 3
+tick
+time 4
+remote P 100,0,0;0|150,10,0;0|200,0,0;0
+tick

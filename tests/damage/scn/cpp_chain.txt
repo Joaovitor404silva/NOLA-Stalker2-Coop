@@ -1,0 +1,58 @@
+role host
+me 100 1 0 0 0
+npc t Human 1500 0 0 5000 1
+npc a Human 1000 0 0 100 1
+npc b Human 1200 300 0 100 1
+set a focus t
+tgt t
+t 0
+do cadeia
+dseq 3 2
+dev 1 10 0
+dev 2 20 0
+dev 3 5 0
+do dmgStr
+t 10
+do cadeia
+flag natdmg 1
+nd send
+x1 L w,15,100
+nd send
+x1 L a,90,100
+cine 1
+flag cine 1
+nd send
+cine 0
+nd send
+nd sent 12.5
+dev 4 7 10
+dseq 4 2
+do dmgStr
+do listN
+t 20
+do cadeia
+role client
+flag natdmg 0
+flag dmgin 0
+t 21
+x1 D 5,1.0|7,2.0
+do dmgIn
+flag dmgin 1
+t 22
+x1 D 7,2.0|8,3.0
+do dmgIn
+flag natdmg 1
+t 22.1
+x1 D 9,1.0
+do dmgIn
+nd apply
+t 25.5
+nd apply
+nd applied 10 90 80
+set me hp 10
+flag lifeguard 1
+do lifeGuard
+nd apply
+t 30
+do cadeia
+hp me

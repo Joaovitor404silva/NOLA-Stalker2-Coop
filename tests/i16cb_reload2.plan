@@ -1,0 +1,8 @@
+out D:\modding\proofs\20261030_1700_i16cb_reload
+assert alive A
+assert alive B
+assert peer
+mark i16cb_reload_after
+run D:\modding\cpp\wt\i16cb\tests\i16cb_reload2_spec.txt
+wait 3
+shot i16cb_reload_after on=A,B cam=2.5

@@ -1,0 +1,50 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+h LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+h LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA itake: 1 recipientes em s2u_cont.tsv
+h LOG NOLA ptake: recipiente AB12 aberto; inventario anotado
+h LOG NOLA lscont: 1 recipientes em s2u_contk.tsv
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 0 (primeiro a pedir)
+h LOG NOLA TAKEN +lsc@AB12;A012Ax30,Bandagex2 (total 1)
+h LOG NOLA lootshare: lista comum do corpo AB12: A012Ax30,Bandagex2 (minha copia ja e igual)
+h LOG NOLA lscont: primeiro a abrir o recipiente AB12 (host): lista lida sem tirar nada: A012Ax30,Bandagex2
+h LOG NOLA lscont: AB12 igualado a lista comum na janela aberta (0 tiradas contadas; nada tirado do jogador, janela aberta): +[] -[]
+c1 LOG NOLA TAKEN +lsc@AB12;A012Ax30,Bandagex2 (total 1)
+c1 LOG NOLA lootshare: lista comum do corpo AB12: A012Ax30,Bandagex2 (minha copia sera igualada)
+MARK t=host-first-open
+h INV BP_Box_C_1 A012A*30 Bandage*2
+h INV BP_Stalker2Character_C_0
+h LOG NOLA LOCK_REL BP_Box_C@520,30,1
+h LOG NOLA TAKEN +ctake@AB12;h1001;A012Ax5 (total 2)
+h LOG NOLA ptake: tirado do recipiente AB12: A012Ax5
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 0 (1.5 s)
+c1 LOG NOLA TAKEN +ctake@AB12;h1001;A012Ax5 (total 2)
+c1 LOG NOLA lscont: 1 recipientes em s2u_contk.tsv
+MARK t=host-closed
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA itake: 1 recipientes em s2u_cont.tsv
+c1 LOG NOLA ptake: recipiente AB12 aberto; inventario anotado
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+c1 STUB nput A012A 15 BP_Box_C_1
+c1 STUB nput Bandage 2 BP_Box_C_1
+c1 STUB nput Medkit -1 BP_Box_C_1
+c1 STUB refresh
+c1 LOG NOLA lscont: AB12 igualado a lista comum na janela aberta (1 tiradas contadas; nada tirado do jogador, janela aberta): +[A012Ax15 Bandagex2] -[Medkitx1]
+MARK t=c1-open
+c1 INV BP_Box_C_1 A012A*25 Bandage*2
+c1 INV BP_Stalker2Character_C_0
+c1 LOG NOLA LOCK_REL BP_Box_C@520,30,1
+c1 LOG NOLA ptake: recipiente AB12 fechado sem tirar nada
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 1 (1.0 s)
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA ptake: recipiente AB12 aberto; inventario anotado
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+MARK t=c1-second-open
+c1 INV BP_Box_C_1 A012A*25 Bandage*2
+c1 LOG NOLA LOCK_REL BP_Box_C@520,30,1
+c1 LOG NOLA ptake: recipiente AB12 fechado sem tirar nada
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 1 (1.0 s)

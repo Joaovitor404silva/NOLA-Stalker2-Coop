@@ -1,0 +1,42 @@
+role client
+flag itake 1
+flag ground 0
+flag sstash 0
+t 0
+me 0 0 0
+send P A012A 3
+send C 0A1B 0A1B A
+send C 0A1B A045A 2
+send X a b c
+send P bad! 1
+out
+t 1
+out
+t 7
+out
+remove P A045A 1500
+tick
+tick
+part U 5,P,A012A,3|6,C,0A1B,A045A,2|7,C,0A1B,A045A,A|8,Z,a,b
+t 7.1
+tick
+tick
+aa 0
+t 7.2
+tick
+aa 1
+tick
+tick
+tick
+tick
+tick
+flag ionly1 0
+part U 9,C,0A1B,A045A,A
+t 7.3
+tick
+tick
+flag isame 1
+remove C 0A1B A045A 3
+tick
+flag icmax 2
+remove C 0A1B A045A 5

@@ -1,0 +1,32 @@
+# CS1 cown 0: the old fight on a chest: the ground claim (mc chao) turns the interaction back on while cbusy holds it, so another player can open the chest
+nodes 3
+@all flag locks 1
+@all flag contall 1
+@all flag ptake 1
+@all flag loot 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag taken 1
+@all flag takenown 1
+@all flag lockfirst 1
+@all flag mcitems 1
+@all flag cbusy 1
+@all flag ground 1
+@all me 5000 100 0
+@all cont BP_IntChestItemContainer_C 1 5200 300 10
+@all flag cown 0
+run 0.3
+@c1 open BP_IntChestItemContainer_C_1
+run 0.5
+mark c1-points
+@c1 open -
+run 0.3
+mark c1-looks-away
+@c1 open BP_IntChestItemContainer_C_1
+run 0.5
+mark c1-points-again
+@all mcout
+@c2 use BP_IntChestItemContainer_C_1
+@h use BP_IntChestItemContainer_C_1
+run 0.3
+mark others-try

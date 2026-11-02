@@ -1,0 +1,9 @@
+out D:\modding\proofs\20261030_1700_v130b_hostboot
+setflag B n7reboot 1
+assert alive A
+assert alive B
+assert peer
+mark v130b_before
+run D:\modding\cpp\wt\v130b\tests\v130b_hostboot_spec.txt
+wait 20
+s2dev B quest state => .

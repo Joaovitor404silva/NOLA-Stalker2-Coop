@@ -1,0 +1,25 @@
+# a client holding one Medkit loses the race for a mirror and uses the pick-up before the check: nothing is taken back, its own Medkit stays
+nodes 4
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myinv Medkit 1
+@c2 myinv Medkit 1
+@c1 vis 1
+run 1
+@c1 dropitem drop1 Medkit 1 5100 100 0
+run 3.5
+mark dropped
+@c3 pickup BP_StaticItemContainer_C_s1 Medkit 1
+run 0.05
+@c2 pickup BP_StaticItemContainer_C_s1 Medkit 1
+run 0.3
+@c2 myinv Medkit 1
+run 5
+mark race
+@c2 dstat
+@c3 dstat

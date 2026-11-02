@@ -1,0 +1,7 @@
+MARK t=25
+STUB spawn Nola_RemoteTarget 100 0 50
+LOG NOLA cloot 10 s (client): entradas=1 corpos=0 pedidos=1 prontos=0 largados=0 falhas=0 retiradas=0 aceitas=0 recusadas=0 recontagens=0 negados=0 copias=0 inertes=0 ms=0.0
+LOG NOLA cloot: nenhum corpo novo em 6 s para BP_AI_Human_C_7
+STUB destroy 77
+LOG NOLA cloot: 1 corpo(s) de saque de antes (save) deixados inertes; 1 destruidos (XDestroyModel)
+MARK t=39

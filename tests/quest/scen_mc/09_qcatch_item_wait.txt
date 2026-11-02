@@ -1,0 +1,64 @@
+# QI1 (b): the catch-up does not end an OnPlayerGetItemEvent node while this player still lacks the item (a qshare grant is on its way); it ends the other nodes, waits up to qcatchitem, ends it when the window runs out
+role client
+pawn 7
+t 100
+peer up 1
+tick1k
+t 125
+part QF 2;d417fc23:0|fd62ac10:0
+tick1k
+t 151
+part QF 2;d417fc23:26|fd62ac10:26
+tick1k
+t 156
+part QF 2;d417fc23:31|fd62ac10:31
+tick1k
+t 161
+part QF 2;d417fc23:36|fd62ac10:36
+tick1k
+t 166
+part QF 2;d417fc23:41|fd62ac10:41
+tick1k
+status
+inv CPrologArtifactSlug 1
+s2q L E01_MQ01_FindArt_Finish
+t 171
+part QF 2;d417fc23:46|fd62ac10:46
+tick1k
+t 176
+part QF 2;d417fc23:51|fd62ac10:51
+tick1k
+t 181
+part QF 2;d417fc23:56|fd62ac10:56
+tick1k
+t 186
+part QF 2;d417fc23:61|fd62ac10:61
+tick1k
+t 191
+part QF 2;d417fc23:66|fd62ac10:66
+tick1k
+t 196
+part QF 2;d417fc23:71|fd62ac10:71
+tick1k
+t 201
+part QF 2;d417fc23:76|fd62ac10:76
+tick1k
+t 206
+part QF 2;d417fc23:81|fd62ac10:81
+tick1k
+t 211
+part QF 2;d417fc23:86|fd62ac10:86
+tick1k
+t 216
+part QF 2;d417fc23:91|fd62ac10:91
+tick1k
+t 221
+part QF 2;d417fc23:96|fd62ac10:96
+tick1k
+t 226
+part QF 2;d417fc23:101|fd62ac10:101
+tick1k
+t 231
+part QF 2;d417fc23:106|fd62ac10:106
+tick1k
+status

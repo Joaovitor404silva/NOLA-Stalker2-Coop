@@ -1,0 +1,29 @@
+CMD role host
+CMD pawn 1
+CMD t 5
+CMD views 2
+CMD vpeer 0 up 1
+CMD vpeer 1 up 1
+CMD run 3
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+LOG NOLA qitem: 564 itens de missao, 465 nos ItemAdd pulados no cliente, 178 recipientes/corpos com item de missao
+OUT #QD:h,-,0,-,0;
+OUT #QD:h,-,0,-,0;
+OUT #QD:h,-,0,-,0;
+CMD vpart 0 QI 1,ANCQ01_VadaHvorostPDA,1
+CMD vpart 1 QI 1,ANCQ01_VadaHvorostPDA,1
+CMD run 2
+STUB createItem ANCQ01_VadaHvorostPDA 1
+LOG NOLA qimirror: o outro jogador tem ANCQ01_VadaHvorostPDA x1 (seq 1); eu tinha 0 -> +1 ok=true
+LOG NOLA qimirror: ANCQ01_VadaHvorostPDA x1 do pid 1 repassado aos outros clientes (seq 1)
+LOG NOLA qimirror: o outro jogador tem ANCQ01_VadaHvorostPDA x1 (seq 1); eu tinha 1 -> ja igual
+OUT #QD:h,-,0,-,0;#QI:1,ANCQ01_VadaHvorostPDA,1
+LOG NOLA qimirror: inventario base lido (564 itens de missao); a partir de agora a contagem de cada um e espelhada
+OUT #QD:h,-,0,-,0;#QI:1,ANCQ01_VadaHvorostPDA,1
+CMD vpart 0 QP 1,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt,1
+CMD vpart 1 QP 1,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt,1
+CMD run 2
+LOG NOLA qpick: origem c ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt pino 1 seq=1 (pid 1) recebido: espera 8 s pelo grafo do host
+LOG NOLA qpick: origem c ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt pino 1 seq=1 (pid 2) recebido: espera 8 s pelo grafo do host
+OUT #QD:h,-,0,-,0;#QI:1,ANCQ01_VadaHvorostPDA,1
+OUT #QD:h,-,0,-,0;#QI:1,ANCQ01_VadaHvorostPDA,1

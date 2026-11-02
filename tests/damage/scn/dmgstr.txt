@@ -1,0 +1,23 @@
+role host
+flag cine 1
+me 100 1 0 0 0
+dev 1 12.5 0
+dev 2 7.25 0.5
+dev 3 300 1.5
+t 1.9
+do dmgStr
+t 2.2
+do dmgStr
+do listN
+t 3.4
+do dmgStr
+do listN
+dev 4 5 3.4
+cine 1
+do dmgStr
+do listN
+cine 0
+flag cine 0
+dev 5 5 3.5
+cine 1
+do dmgStr

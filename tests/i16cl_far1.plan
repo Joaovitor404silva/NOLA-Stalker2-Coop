@@ -1,0 +1,25 @@
+out D:\modding\proofs\20261030_1500_i16cl_far1
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A natlostfix 1
+setflag B natlostfix 1
+setflag A natfar 1
+setflag B natfar 1
+setflag A natfardead 4500
+setflag B natfardead 4500
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+mark i16cl_near
+scene D:\modding\cpp\wt\i16cl\tests\i16cl_back.scene -On B
+scene D:\modding\cpp\wt\i16cl\tests\i16cl_dog.scene -On A
+run D:\modding\cpp\wt\i16cl\tests\i16cl_far_near_spec.txt
+mark i16cl_away
+scene D:\modding\cpp\wt\i16cl\tests\i16cl_away.scene -On B
+run D:\modding\cpp\wt\i16cl\tests\i16cl_far_away_spec.txt

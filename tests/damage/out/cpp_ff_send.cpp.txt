@@ -1,0 +1,26 @@
+CALL ff_bodies on v0:p1:tgt1 v0:p1:pup1
+LOG NOLA ff: corpos sob fogo amigo: PLAYER 1 (view 0: alvo boneco)
+OUT 
+LOG NOLA ff: acertei PLAYER 1 dano=30.00 armadura=5.00 perfuracao=0.80 sangra=0.50/0.25 osso=spine_02 tipo=6 fonte=3 (consumido no alvo, enviado #1)
+LOG NOLA ff: acertei PLAYER 1 dano=12.50 armadura=2.00 perfuracao=0.60 sangra=0.50/0.25 osso=head tipo=6 fonte=3 (consumido no alvo, enviado #2)
+OUT #FF:1,1,30,5,0.8,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,spine_02;2,1,12.5,2,0.6,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,head
+LOG NOLA ff: acertei PLAYER 1 dano=7.00 armadura=1.00 perfuracao=0.50 sangra=0.50/0.25 osso=hand_l tipo=2 fonte=5 (consumido no alvo, enviado #3)
+OUT #FF:1,1,30,5,0.8,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,spine_02;2,1,12.5,2,0.6,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,head;3,1,7,1,0.5,0.5,0.25,2,5,1,0,0,100.5,0,0,0,0,-0.75,hand_l
+LOG NOLA ff: acertei PLAYER 1 dano=4.00 armadura=1.00 perfuracao=0.50 sangra=0.50/0.25 osso=foot_l tipo=6 fonte=3 (consumido no boneco, enviado #4)
+OUT #FF:3,1,7,1,0.5,0.5,0.25,2,5,1,0,0,100.5,0,0,0,0,-0.75,hand_l;4,1,4,1,0.5,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,foot_l
+OUT #FF:4,1,4,1,0.5,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,foot_l
+OUT 
+CALL ff_bodies off v0:p1:tgt1 v0:p1:pup1
+OUT 
+CALL ff_bodies on v0:p1:tgt1 v0:p1:pup1
+OUT dmg rota=D alvo=sim seq_out=0 aplicados_total=0 caido=false tiros_out=0 ff=enviados 4 aplicados 0 recusados 0
+LOG NOLA ff 10 s: friendlyfire=1 ffscale=1.0 enviados=4 descartados_no_envio=2 boneco_junto_do_alvo=1 recebidos=0 aplicados=0 dano=0.0 hp_perdido=0.0 recusados=0 mal_formados=0
+CALL ff_bodies on v0:p1:tgt1 v0:p1:pup1 v1:p2:tgt2 v1:p2:pup2
+LOG NOLA ff: corpos sob fogo amigo: PLAYER 1 (view 0: alvo boneco) PLAYER 2 (view 1: alvo boneco)
+LOG NOLA ff: acertei PLAYER 2 dano=25.00 armadura=4.00 perfuracao=0.70 sangra=0.50/0.25 osso=spine_03 tipo=6 fonte=3 (consumido no alvo, enviado #5)
+LOG NOLA ff: acertei PLAYER 1 dano=9.00 armadura=1.00 perfuracao=0.40 sangra=0.50/0.25 osso=thigh_r tipo=6 fonte=3 (consumido no alvo, enviado #6)
+OUT #FF:5,2,25,4,0.7,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,spine_03;6,1,9,1,0.4,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,thigh_r
+CALL ff_bodies on v0:p0:tgt1 v0:p0:pup1 v1:p2:tgt2 v1:p2:pup2
+LOG NOLA ff: corpos sob fogo amigo: HOST (view 0: alvo boneco) PLAYER 2 (view 1: alvo boneco)
+LOG NOLA ff: acertei PLAYER 2 dano=18.00 armadura=3.00 perfuracao=0.60 sangra=0.50/0.25 osso=head tipo=6 fonte=3 (consumido no alvo, enviado #7)
+OUT #FF:5,2,25,4,0.7,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,spine_03;6,1,9,1,0.4,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,thigh_r;7,2,18,3,0.6,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,head

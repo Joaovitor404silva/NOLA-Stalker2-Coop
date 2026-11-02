@@ -1,0 +1,6 @@
+h STUB irm Medkit x1 BP_Stalker2Character_C_0
+h STUB uidrop 1
+h LOG NOLA idrop: devcmd dropped 1 of Medkit via OnSplitConfirmed
+h IDROPNOW idropnow: dropped 1 of 1 Medkit
+h LOG NOLA idrop: devcmd dropped 0 of Medkit via OnSplitConfirmed
+h IDROPNOW idropnow: dropped 0 of 1 Medkit

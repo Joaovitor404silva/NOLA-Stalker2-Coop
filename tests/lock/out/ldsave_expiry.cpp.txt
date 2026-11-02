@@ -1,0 +1,22 @@
+> role client
+> flag lead 1
+> flag ldblk 1
+> flag ldsavekeep 100
+> time 2000000
+> pawn 1000 442207.0 470552.0 0
+> ledger N 111 1699990000
+> ledger N 112 1700001900
+> ledger N 113 1700001999
+> ledger U 01C54CD64D96F4CEE43A00B763ECC498 1699999000
+> npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+> guid n1 555
+> peer h,5,1700000002,dlg,442057.0,470452.0,832.0
+> run 1100
+L 2001000 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 2001000 NOLA vend: 96 vendedores em s2u_vendor.lua
+A npc n1 active 0
+L 2001000 NOLA lead: 1 NPCs de historia sem interacao aqui (total 1): o outro lado lidera (dlg #5)
+> ledgerdump
+F 34
+F| N	555	1700002001
+F| N	113	1700001999

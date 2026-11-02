@@ -1,0 +1,41 @@
+role host
+flag doors 1
+flag doorfix 1
+views 4
+pawn 0 0 0
+obj D1 DoorView - door 500 0 0
+yaw D1 10
+obj D2 DoorView - door 700 0 0
+yaw D2 10
+time 1
+tick
+vremote 2 O 50,0,0;1
+time 2
+tick
+expect_new CALL D1.ForceOpenDoor()
+vremote 3 O 50,0,0;0|70,0,0;1
+time 3
+tick
+expect_new CALL D1.ForceCloseDoor()
+expect_new CALL D2.ForceOpenDoor()
+time 4
+tick
+expect_none CALL D1.Force
+expect_none CALL D2.Force
+time 5
+tick
+expect_none CALL D1.Force
+vremote 3 O -
+time 6
+tick
+expect_new CALL D1.ForceOpenDoor()
+time 7
+tick
+expect_none CALL D1.Force
+vremote 2 O -
+vremote 1 O 50,0,0;1
+vremote 0 O 50,0,0;0
+time 8
+tick
+expect_new CALL D1.ForceCloseDoor()
+expect_none CALL D1.ForceOpenDoor()

@@ -1,0 +1,28 @@
+# client follows the host: If substituted at once, a second If held until the host's next exit then forced, Random same pin passes, a dialog mid pin held, deferred while busy, forced once and never fired twice
+role client
+pawn 1
+t 100
+peer up 1
+tick
+part QB #QB:0;1:c9132e63:0:1:5;
+tick
+fire ANCQ03_If_Distance True fin
+fire ANCQ03_If_Distance False fin
+t 102
+part QB #QB:0;1:c9132e63:0:1:7|2:c9132e63:1:1:1;
+qbact ANCQ03_If_Distance
+tick
+part QB #QB:0;1:c9132e63:0:1:7|2:c9132e63:1:1:1|3:f4a5fcdc:2:1:0;
+tick
+fire BodyParts_Malahit_Random 2 fin
+fire bodyparts_malahit_random 0 fin
+fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 mid
+part QB #QB:0;1:c9132e63:0:1:7|2:c9132e63:1:1:1|3:f4a5fcdc:2:1:0|4:78f12c33:0:0:0;
+busy dialogo
+tick
+tick
+busy -
+tick
+tick
+fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 mid
+status

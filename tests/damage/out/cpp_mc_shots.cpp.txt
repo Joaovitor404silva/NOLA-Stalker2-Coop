@@ -1,0 +1,18 @@
+CALL a RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=1 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 100.0 -> 75.0 ok=true  de PLAYER 1
+CALL a RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=1 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 75.0 -> 50.0 ok=true  de PLAYER 2
+OUT a hp=50.0 alive=true
+OUT t1 hp=5000.0 alive=true
+OUT p1 hp=5000.0 alive=true
+CALL a RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=1 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 50.0 -> 25.0 ok=true  de PLAYER 2
+OUT a hp=25.0 alive=true
+OUT 
+OUT v0 #D:1,10.0
+OUT v1 #D:1,7.5|2,2.5
+OUT dmg rota=D alvo=sim seq_out=0 aplicados_total=0 caido=false tiros_out=0 eu=HOST fim_de_jogo=#0 | PLAYER 1 vida=? | PLAYER 2 vida=?
+OUT v1 false
+OUT v1 true
+OUT v1 nd_send_allowed=false
+OUT v0 nd_send_allowed=true

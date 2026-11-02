@@ -1,0 +1,12 @@
+# The host disappears; the client saves; the host comes back, hits the client, goes down, relaunches.
+# Expect: PEER SILENT after 5 s, then "XTriggerForcedAutoSave ok=true (o outro lado saiu)" and "jogo do cliente salvo"
+# (or "RECUSOU" and a retry if you are in a fight); PEER UP when the host is back; 10 HP lost; host shown as downed;
+# after "session": PEER SESSION #2 (o outro lado relancou) and the catch-up offered again.
+0 log sample_quest_log.txt
+60 silence 40
+45 say host back
+5 damage 10
+5 life w
+15 life a
+5 session
+40 end

@@ -1,0 +1,146 @@
+role host
+flag lifeguard 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+me 100 1 0 0 0
+set me uid 0
+x1 RV 0,0
+x1 L a,100,100
+t 0
+do lifeGuard
+do rvStr
+hit me 100
+t 0.1
+do lifeGuard
+do rvStr
+t 0.2
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+t 10
+do lifeGuard
+role client
+hit me 100
+t 10.1
+do lifeGuard
+do rvStr
+t 10.2
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+t 20
+do lifeGuard
+x1 RV 0,1
+t 21
+do lifeGuard
+hp me
+t 21.1
+do lifeGuard
+do rvStr
+t 21.2
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+role host
+t 30
+do lifeGuard
+x1 RV 0,2
+t 31
+do lifeGuard
+t 31.1
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+t 40
+do lifeGuard
+othergod 1
+x1 RV 0,3
+t 41
+do lifeGuard
+t 45
+do lifeGuard
+hp me
+othergod 0
+t 46
+do lifeGuard
+hp me
+t 46.1
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+role client
+t 50
+do lifeGuard
+set me hp 10
+t 50.1
+do lifeGuard
+godq
+t 80.2
+do lifeGuard
+hp me
+t 80.3
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+peer silent
+t 90
+do lifeGuard
+hit me 100
+t 90.1
+do lifeGuard
+do rvStr
+peer up
+newpawn
+set me alive 1
+set me hp 100
+flag bothdie 0
+t 100
+do lifeGuard
+hit me 100
+t 100.1
+do lifeGuard
+do rvStr
+x1 RV 0,4
+t 101
+do lifeGuard
+flag bothdie 1
+newpawn
+set me alive 1
+set me hp 100
+flag lifeguard 0
+t 110
+do lifeGuard
+hit me 100
+t 110.1
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+t 120
+do lifeGuard
+x1 RV 0,5
+t 121
+do lifeGuard
+hp me
+t 121.1
+do lifeGuard
+do rvStr
+newpawn
+t 130
+do lifeGuard
+do rvStr

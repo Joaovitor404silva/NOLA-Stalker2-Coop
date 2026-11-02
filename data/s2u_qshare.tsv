@@ -1,0 +1,2 @@
+sid	needed_by
+EchoE01	Condition,If,OnPlayerGetItemEvent

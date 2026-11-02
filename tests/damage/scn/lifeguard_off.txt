@@ -1,0 +1,16 @@
+role client
+flag downnoweap 0
+flag downgod 0
+flag downdie 0
+flag lifeguard 1
+flag downfreeze 1
+me 100 1 0 0 0
+t 0
+set me hp 4
+do lifeGuard
+t 1
+do lifeGuard
+flag lifeguard 0
+t 2
+do lifeGuard
+hp me

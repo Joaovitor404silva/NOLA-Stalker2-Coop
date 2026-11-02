@@ -1,0 +1,141 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 1
+flag n7eq 0
+flag qsync 1
+flag qrollback 1
+flag joinport 0
+flag kit 0
+flag n7early 1
+flag leashown 1
+t 1
+pawn 1000
+money 500
+inv A012A 30
+inv A545A 2
+peer up 1 1
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n3\tJ,q1,n1,go,s1\n
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav BBBBBBBBBBBBBBBBBBBBBBBB-two
+part B 5,3,c6ad219ea28b4,0,0,3,abc
+tick
+t 3
+part B 5,3,c6ad219ea28b4,0,1,3,abc
+tick
+t 22
+tick
+stamp STEAM=2:2;NULL=-
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav DDDDDDDDDDDDDDDDDDDDDDDDDDDD-one-saved
+t 24
+tick
+t 30
+tick
+t 31
+part J 4,J,q2,n2,go,s2|5,N,sid5
+tick
+nopart J
+t 33
+part B 5,5,c6ad219ea28b4,0,2,5,abc
+tick
+t 34
+part J 6,J,q3,n3,go,s3
+tick
+nopart J
+stamp STEAM=3:3;NULL=-
+part HLD 0,5,none
+part B 5,5,c6ad219ea28b4,1,2,5,abc
+tick
+t 52
+part HLD 1,5,AAAAAAAA000000000000000000000000
+tick
+t 53
+go 1,alldown
+tick
+t 54
+part HLD 2,5,22222222000000000000000000000000
+tick
+t 55
+pawn 2000
+tick
+rbdone
+t 56
+tick
+t 62
+tick
+t 63
+tick
+t 66
+tick
+t 67
+tick
+t 69
+tick
+t 70
+part B 5,6,c6ad219ea28b4,2,2,5,abc
+tick
+t 80
+tick
+t 90
+go 2,alldown
+part HLD 3,3,11111111000000000000000000000000
+tick
+t 91
+pawn 3000
+tick
+rbdone
+t 92
+tick
+t 98
+tick
+t 99
+tick
+t 102
+tick
+t 103
+tick
+t 106
+tick
+t 110
+part B 5,7,c6ad219ea28b4,3,2,5,abc
+tick
+pawn 4000
+tick
+rbdone
+t 120
+tick
+t 126
+tick
+t 127
+tick
+t 130
+tick
+t 131
+tick
+t 134
+tick
+t 200
+tick
+t 300
+tick
+t 310
+go 3,alldown
+loadok 0
+part HLD 4,5,22222222000000000000000000000000
+tick
+loadok 1
+t 320
+go 4,alldown
+part HLD 5,5,22222222000000000000000000000000
+tick
+t 600
+tick
+t 700
+part B 5,9,c6ad219ea28b4,4,2,5,abc
+tick
+role host
+kh 5
+hld
+hostload 33333333000000000000000000000000
+hld
+hld

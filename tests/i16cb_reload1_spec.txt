@@ -1,0 +1,6 @@
+spec i16cb_reload1
+note i16cb reload, part 1 (before the hand hot reload): scene i16cb_dogs8 killed eight dogs 4-11 m from the host with B 4.5 m from A, so B has eight dead copies (mortas>=8 in the natnpc 10 s client line) and the host lists eight corpses (corpos_listados>=8). Same on the old and the new DLL: this part only proves the baseline the reload test starts from. If B shows fewer than 8, stop: the reload test has no baseline.
+mark
+expect A i16cl natfar=1 corpos_listados=([8-9]|\d\d+) within 40
+expect B NOLA natnpc 10 s \(cliente\): host=\d+ copias=\d+ \(vivas=\d+ mortas=([8-9]|\d\d+) within 60
+expect_not B NOLA natnpc: DUPLICADA during 20

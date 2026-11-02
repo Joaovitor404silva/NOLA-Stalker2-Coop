@@ -1,0 +1,3 @@
+spec i16cb_deadall_setup
+note i16cb: the host drops a dead row at the scan that sees it dead (natdead -1 with natfar 0), so the six dogs killed by scene i16cb_dogs are never sent dead and reach FreshDead prev without a recent alive stamp. natdead is a cfg value, not a flags.txt flag, and plans have no cfg verb, so a spec step sets it.
+cfg A natdead -1

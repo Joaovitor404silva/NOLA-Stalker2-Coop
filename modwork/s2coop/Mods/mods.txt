@@ -1,0 +1,2 @@
+S2CoopAlife : 0
+S2CoopNative : 1

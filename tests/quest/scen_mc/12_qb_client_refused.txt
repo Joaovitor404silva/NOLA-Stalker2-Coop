@@ -1,0 +1,27 @@
+# client: a decisive answer is refused at the commit while the host is linked (one log line per phrase per 10 s, one screen notice per 4 s); other answers, solo play, qbgate=0 and qbranch=0 stay free
+role client
+pawn 1
+t 100
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+peer up 1
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+t 102
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+answer e03_sq01_dialog_vetosintrailer_easier_44985
+answer E03_SQ01_Dialog_VetosInTrailer_WaitForReply
+t 111
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+lang pt
+t 116
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+lang es
+t 120
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+lang en
+flag qbgate 0
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+flag qbgate 1
+flag qbranch 0
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+fire ANCQ03_If_Distance True fin
+status

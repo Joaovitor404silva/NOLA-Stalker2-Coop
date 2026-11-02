@@ -1,0 +1,25 @@
+role client
+pawn 100
+t 1
+pos 0 0 0
+run 2
+pos 430490 520620 1570
+run 2
+pos 430490 520620 9000
+run 2
+pos 430490 520620 1570
+run 2
+t 40
+pos 430490 520620 9000
+run 1
+pos 430490 520620 1570
+run 4
+flag qnkeep 0
+pos 410400 516600 602
+run 4
+flag qrelay 0
+pos 0 0 0
+t 200
+run 7
+pos 430610 520910 1210
+run 2

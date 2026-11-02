@@ -1,0 +1,12 @@
+> role host
+> flag lead 1
+> pawn 1000 664295.0 618840.0 287.0
+> view on
+> interact 664295.0 618840.0 287.0
+> run 500
+L 100 NOLA lead: trava #1 tomada (dlg em 664295,618840,287): este lado lidera, o outro segue
+O 100 #LK:h,1,1700000000,dlg,664295,618840,287
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 11

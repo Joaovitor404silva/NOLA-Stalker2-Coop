@@ -1,0 +1,60 @@
+h LOG NOLA stash: livro do host carregado, 0 operacoes
+c2 LOG NOLA itake: envio 1,P,A012A,2
+c2 RET true
+c3 LOG NOLA itake: envio 1,C,0A1B,A045A,1
+c3 RET true
+h LOG NOLA itake: envio 1,P,MedkitC,1
+h RET true
+h LOG NOLA itake: recebido do pid 2 seq=1 1,P,A012A,2 -> true (1 nos na fila)
+h LOG NOLA itake: recebido do pid 3 seq=1 1,C,0A1B,A045A,1 -> true (2 nos na fila)
+h STUB node S2U_P_A012A_2
+h STUB node S2U_C_0A1B_A045A_1
+h LOG NOLA itake: fila vazia
+c1 LOG NOLA itake: recebido seq=1 1,P,MedkitC,1 -> true (1 nos na fila)
+c1 STUB node S2U_P_MedkitC_1
+c1 LOG NOLA itake: fila vazia
+c2 LOG NOLA itake: recebido seq=1 1,P,MedkitC,1 -> true (1 nos na fila)
+c2 STUB node S2U_P_MedkitC_1
+c2 LOG NOLA itake: fila vazia
+c3 LOG NOLA itake: recebido seq=1 1,P,MedkitC,1 -> true (1 nos na fila)
+c3 STUB node S2U_P_MedkitC_1
+c3 LOG NOLA itake: fila vazia
+c1 LOG NOLA itake: recebido do pid 2 seq=1 2.0,1,P,A012A,2 -> true (1 nos na fila)
+c1 LOG NOLA itake: recebido do pid 3 seq=1 3.0,1,C,0A1B,A045A,1 -> true (2 nos na fila)
+c1 STUB node S2U_P_A012A_2
+c1 STUB node S2U_C_0A1B_A045A_1
+c1 LOG NOLA itake: fila vazia
+c2 LOG NOLA itake: recebido do pid 3 seq=1 3.0,1,C,0A1B,A045A,1 -> true (1 nos na fila)
+c2 STUB node S2U_C_0A1B_A045A_1
+c2 LOG NOLA itake: fila vazia
+c3 LOG NOLA itake: recebido do pid 2 seq=1 2.0,1,P,A012A,2 -> true (1 nos na fila)
+c3 STUB node S2U_P_A012A_2
+c3 LOG NOLA itake: fila vazia
+MARK t=sent
+h MCOUT #UR:2.0,1,P,A012A,2|3.0,1,C,0A1B,A045A,1|||#U:1,P,MedkitC,1
+MARK t=applied
+h STATUS items role=host taken=0 mine=0 run=0 itSent=14 itApplied=2 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= mc: pid=0 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=2 yIn=0 grIn=0 ur=2 yr=0 gr=0
+c1 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=3 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=1 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=2 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c2 STATUS items role=client taken=0 mine=0 run=0 itSent=13 itApplied=2 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=2 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=1 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c3 STATUS items role=client taken=0 mine=0 run=0 itSent=13 itApplied=2 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=3 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=1 yIn=0 grIn=0 ur=0 yr=0 gr=0
+LEAVE c3
+JOIN c3
+c3 LOG NOLA itake: recebido do pid 2 seq=1 2.0,1,P,A012A,2 -> true (1 nos na fila)
+c3 LOG NOLA itake: recebido seq=1 1,P,MedkitC,1 -> true (2 nos na fila)
+c3 STUB node S2U_P_A012A_2
+c3 STUB node S2U_P_MedkitC_1
+c3 LOG NOLA itake: fila vazia
+c3 LOG NOLA itake: envio 1,P,A012A,1
+c3 RET true
+h LOG NOLA itake: recebido do pid 3 seq=1 1,P,A012A,1 -> true (1 nos na fila)
+h STUB node S2U_P_A012A_1
+h LOG NOLA itake: fila vazia
+c1 LOG NOLA itake: recebido do pid 3 seq=1 3.1,1,P,A012A,1 -> true (1 nos na fila)
+c1 STUB node S2U_P_A012A_1
+c1 LOG NOLA itake: fila vazia
+c2 LOG NOLA itake: recebido do pid 3 seq=1 3.1,1,P,A012A,1 -> true (1 nos na fila)
+c2 STUB node S2U_P_A012A_1
+c2 LOG NOLA itake: fila vazia
+MARK t=rejoin
+c1 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=4 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=1 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=3 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c2 STATUS items role=client taken=0 mine=0 run=0 itSent=25 itApplied=3 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=2 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=2 yIn=0 grIn=0 ur=0 yr=0 gr=0

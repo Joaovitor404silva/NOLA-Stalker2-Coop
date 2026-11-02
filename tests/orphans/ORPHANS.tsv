@@ -1,0 +1,293 @@
+lua_file	lines	function	flag	A	B	rel_host	rel_client	owner	note
+s2core.lua	1-511	header: M.FLAGS, valid/bodyOk, inWorld/kz, onLoad	-	-	-	-	-	X0	
+s2core.lua	512-519	s2q console handler (RegisterConsoleCommandHandler)	-	-	-	-	-	M3b	ported: src/s2m_console.cpp (Mod::quest gate, UE4SS ProcessConsoleExec hook)
+s2core.lua	520-532	header tail	-	-	-	-	-	X0	
+s2core.lua	533-579	sender side: extra snapshot field "x1" (no quotes allowed inside)	pwrescan	1	1	d0	d0	X0	
+s2core.lua	580-609	x1 layout:  <weapon>#D:<seq>,<hp points>|...#L:<a|w|d>,<hp>,<maxhp>	x1c	d1	d1	d1	d1	X0	
+s2core.lua	610-724	b115leash: one leash owner (SIMPLIFY_REVIEW #7; flag leashown). Request	leashm	350	350	350	350	M10	
+s2core.lua	725-725	end b115leash	-	-	-	-	-	M10	
+s2core.lua	726-838	batch 12: #V = the host is in a cinematic / the host was teleported	leashm	350	350	350	350	M10	
+s2core.lua	839-972	DAMAGE IN: apply the other side's #D events to the local player	dmgfloor	d0	d0	d0	d0	M2	
+s2core.lua	973-1039	SESSION (batch 6, section 15)	peersilent	d10	d10	d10	d10	X0	
+s2core.lua	1040-1141	batch 31: dropped beside the host on every join (client)	leashm	350	350	350	350	M9	
+s2core.lua	1142-1207	batch 36: one weather for both worlds	wxfollow	d1	d1	d1	d1	M11	
+s2core.lua	1208-1310	LIFE GUARD (batch 6, section 18): downed instead of dead	downhp	15	15	15	15	M2	
+s2core.lua	1311-1322	core-16: loot a host corpse from the client (minimal slice). Messages i	-	-	-	-	-	M4	
+s2core.lua	1323-1375	core-19: taken list (persistent on the host). Keys: containers = lock i	-	-	-	-	-	M4	
+s2core.lua	1376-1506	b87qitem (flag qitem, default 0; user rule N2): QUEST ITEMS STAY WITH T	qitem	1	1	1	1	M7	
+s2core.lua	1507-1605	end b87qitem	lootreq	d0	d0	d0	d0	M7	
+s2core.lua	1606-1610	batch 53: doors. The host reports the doors near the player whose leaf	-	-	-	-	-	M5	
+s2core.lua	1611-1663	b71kf: cross-PC key match (flag keyfix). Keys are "<prefix><x>,<y>,<z>"	keyfix	d0	d0	d0	d0	M5	
+s2core.lua	1664-1700	batch 53: post-tutorial kit for the client, once per campaign (marker b	kit	d1	d1	d1	d1	M9	
+s2core.lua	1701-1727	batch 69: cutscene join (b68 cj68.lua; s2u_cine.lua). Whoever starts a	tpfloor	1	1	1	1	M10	
+s2core.lua	1728-1836	batch 55/56 (ported into the live core by batch 62, 2026-10-14: the cli	trigre	d30	d30	d30	d30	M7	
+s2core.lua	1837-2055	b129qdiv A (flag qdiv, default 1; §149 audit #3): the CLIENT's own ques	qdiv	d1	d1	d1	d1	M7	
+s2core.lua	2056-2134	end b129qdiv A	doorr	d2000	d2000	d2000	d2000	M7	
+s2core.lua	2135-2189	batch 58: destructible props (wooden barricades etc.). Measured 2026-10	dobjgen	1	1	1	1	DELETE	legacy dobjgen=0 path (b58-65), M5 lists it DELETE
+s2core.lua	2190-2517	b74world: GENERIC destructible mirror (flag dobjgen). Whole-game table	dobjgen	1	1	1	1	M5	
+s2core.lua	2518-2564	batch 59: interactable power/interaction state (levers, hatch valves, l	-	-	-	-	-	M5	
+s2core.lua	2565-2667	b71ia: interaction mirror (flag iamir). ia71.lua = pure logic (stub-tes	iamir	d0	d0	d0	d0	DELETE	iamir OFF everywhere, M5 DELETE
+s2core.lua	2668-2824	b91choice (flag choice, default 0; user rule N3 "story choices is alway	choice	1	1	1	1	M8	
+s2core.lua	2825-2981	end b91choice	resend	12	12	12	12	M8	
+s2core.lua	2982-3077	core-20: ground items (flag ground=1). Measured 2026-10-11: a world ite	ground	1	1	1	1	M4	
+s2core.lua	3078-3206	QUEST SYNC (batch 7)	qsync	1	1	1	1	M7	
+s2core.lua	3207-3256	b70dlg: DIALOG MIRROR (dm70.lua + s2u_dlg.lua from the bridge). Host	dmir	0	0	0	0	M8	dmir=0: only the DM.m.view glue is reached, owned by M8
+s2core.lua	3257-3293	b92lead (flag lead, default 0; user rule N14 "first starter leads": "bo	lead	1	1	1	1	M8	
+s2core.lua	3294-3306	b127softlock C (flag ldwatch, default 1): a DIALOG lock has no end time	ldwatch	d1	d1	d1	d1	M8	
+s2core.lua	3307-3380	end b127softlock C	lead	1	1	1	1	M8	
+s2core.lua	3381-3469	b109dlgblock (flags ldblk / mqpull, default 0; user 2026-10-15 "Block,	ldblk	1	1	1	1	M8	
+s2core.lua	3470-3470	end b109dlgblock	-	-	-	-	-	M8	
+s2core.lua	3471-3573	b129qdiv B (flag ldsave, default 1 = report; 2 = give back; 0 = off; §1	ldsave	d1	d1	d1	d1	M8	
+s2core.lua	3574-3715	end b129qdiv B	lead	1	1	1	1	M8	
+s2core.lua	3716-3716	end b92lead	-	-	-	-	-	M8	
+s2core.lua	3717-3845	b99qpick (flag qpick, default 0; user rule N14 "either player may take	qpick	1	1	1	1	M7	
+s2core.lua	3846-3923	end b99qpick	qcatchup	d60	d60	d60	d60	M7	
+s2core.lua	3924-4141	batch 9: item take-back. Messages in x1 (both directions):	icmax	d1000	d1000	d1000	d1000	M4	
+s2core.lua	4142-4175	batch 16 (2): host rollback -> client reload (#B)	qrbwindow	d300	d300	d300	d300	M7	
+s2core.lua	4176-4286	batch 46: a new co-op campaign record on the host (new game seen, or th	qrollback	1	1	1	1	M7	
+s2core.lua	4287-4295	batch 16 (3): a sleeping client is only told about it (its clock follow	-	-	-	-	-	M11	
+s2core.lua	4296-4456	batch 23: the client keeps its own save; the mod saves after applying h	csold	d0	d0	d0	d0	M9	
+s2core.lua	4457-4474	core-22: inventory snapshot of the LOCAL player (636 item SIDs, about 2	-	-	-	-	-	M4	
+s2core.lua	4475-4757	b97n7 (flag n7, default 0; user rule N7): HOST DEATH / HOST LOADS AN OL	n7	1	1	1	1	M9	
+s2core.lua	4758-4786	b97n7 part B (flag qimirror, default 0; needs lead=1): QUEST ITEM COUNT	qimirror	1	1	1	1	M7	
+s2core.lua	4787-4820	b127softlock A (flag qmload, default 1): a NEW LOCAL PAWN (death reload	qmload	d1	d1	d1	d1	M7	
+s2core.lua	4821-4881	end b127softlock A	qmset	d3	d3	d3	d3	M7	
+s2core.lua	4882-4882	end b97n7	-	-	-	-	-	M9	
+s2core.lua	4883-5019	b132qhold (flag qdrop, default 0; user 2026-10-15 "instead of the messa	qdrop	1	1	1	1	M7	
+s2core.lua	5020-5020	end b132qhold	-	-	-	-	-	M7	
+s2core.lua	5021-5256	b101n7save (flag n7sv, default 0; client only; needs n7=1, csave=1, qro	n7sv	1	1	d0	1	M9	
+s2core.lua	5257-5257	end b101n7save	-	-	-	-	-	M9	
+s2core.lua	5258-5360	b165 (flag csold, default 0 = ON; 1 = old behaviour): ONE CLIENT SAVE R	csold	d0	d0	d0	d0	M9	
+s2core.lua	5361-5361	end b165	-	-	-	-	-	M9	
+s2core.lua	5362-5469	b167 (flag sxjoin, default 0): JOIN = THE CLIENT LOADS A COPY OF THE HO	sxjoin	1	1	d0	d0	M9	
+s2core.lua	5470-5470	end b167	-	-	-	-	-	M9	
+s2core.lua	5471-5540	core-22 (a): quest rewards to the client (flag qreward=1). xrRazom mode	qreward	1	1	1	1	M7	
+s2core.lua	5541-5571	core-23: cutscene / dialog / teleport signal watcher (flag cinelog=1; r	cinelog	0	0	0	0	DELETE	cinelog=0 everywhere (dev)
+s2core.lua	5572-5604	core-22 (b): partial container take (flag ptake=1) for placed container	ptake	1	1	1	1	M4	
+s2core.lua	5605-5819	b90loot (flag lootshare, default 0; user rule N1 "both can loot, the it	lootshare	1	1	1	1	M4	
+s2core.lua	5820-5945	b93cont (flag lscont, default 0; needs lootshare=1; N1 stage 2, OFFLINE	lscont	1	1	1	1	M4	
+s2core.lua	5946-5946	end b93cont	-	-	-	-	-	M4	
+s2core.lua	5947-5947	end b90loot	-	-	-	-	-	M4	
+s2core.lua	5948-6147	batch 13 (1): client persistence	cpequip	d1	d1	d1	d1	M9	cpersist=0 everywhere; M9 owns the csave parts it calls
+s2core.lua	6148-6248	batch 13 (2): client death without a save load	nodeath	0	0	0	0	DELETE	nodeath=0 everywhere; M2/M9 leave the hooks empty
+s2core.lua	6249-6388	batch 14: emission sync (#E)	emsync	1	1	1	1	M11	
+s2core.lua	6389-6579	batch 17 (a): one stash shared by both players (#Y, #YL)	ssbox	1	1	1	1	M4	
+s2core.lua	6580-6633	batch 22: artsync=2 = each PC keeps its OWN artifact spawns; a place wh	artcool	d5400	d5400	d5400	d5400	M4	
+s2core.lua	6634-6742	batch 47: a hidden artifact must not be sensed either. Round 37: the cl	artmute	d1	d1	d1	d1	M4	
+s2core.lua	6743-6932	batch 18: artifact mirror (#A list, #AG gone, #AT client take)	artsync	2	2	2	2	DELETE	artsync=2 everywhere: apOut/apTick (M4) run, the artsync=1 mirror is dead
+s2core.lua	6933-7021	batch 17 (c): trader stock: what one player buys leaves the other PC's	tsync	0	0	0	0	DELETE	tsync=0 everywhere
+s2core.lua	7022-7261	batch 73: F10 dropped items (#DR, flag idrop), F12 player-triggered ano	anomsync	1	1	1	1	M5	idrop half OFF (idrop unset, default 0) DELETE; anomsync half M5
+s2core.lua	7045-7157	B73 dScan/dKnown/dropTick/dropOut (F10 dropped items #DR)	idrop	d0	d0	d0	d0	DELETE	idrop unset everywhere (default 0)
+s2core.lua	7262-7270	end batch 73	-	-	-	-	-	M5	
+s2core.lua	7271-7341	roadmap (e): container locks, minimal version	locktest	d0	d0	d0	d0	M4	
+s2core.lua	7342-7369	puppet body of the remote player (avatarmode=npcpuppet)	pupanimbp	1	1	1	1	M1	
+s2core.lua	7370-7492	b89pupmove (flag pupmove, default 0; needs pupanimbp=1). Measured 2026-	pupmove	2	2	2	2	M1	
+s2core.lua	7493-7522	b119pupanim (flag pupanim, default 0; needs pupmove 2/3 + pupanimbp=1).	pupanim	1	1	1	1	M1	
+s2core.lua	7523-7568	b123pupcrouch (flags pupfeet, pabh; default 0). User 2026-10-15 21:20:	pupfeet	1	1	1	1	M1	
+s2core.lua	7569-7670	end b123pupcrouch	pabh	d0	d0	d0	d0	M1	
+s2core.lua	7671-7787	end b119pupanim	pupfixmax	d3	d3	d3	d3	M1	
+s2core.lua	7788-7922	b83anim (flag pupanimfix, default 0). Measured 2026-10-14 22:27 (host):	pupanimfix	1	1	1	1	M1	
+s2core.lua	7923-7972	batch 44: bodies only in a stable world. Crash 2026-10-12 11:22:42 / 11	bodywait	d5	d5	d5	d5	M1	
+s2core.lua	7973-8061	batch 45: the puppet takes any live body of its own prototype. Round 37	pupadopt	d1	d1	d1	d1	M1	
+s2core.lua	8062-8165	core-21: FAR BODY. The NPC puppet is switched offline (pooled) by the A	avatar	1	1	1	1	M1	
+s2core.lua	8166-8273	b114smooth (flags nsmooth / nsuro / pupcmoff, default 0). User 2026-10-	nsmooth	1	1	1	1	M1	
+s2core.lua	8274-8365	b148pose (flags nsip / nsnoback, default 1; nscap default 250 -> 0). Us	nsip	d1	1	d1	d1	M1	
+s2core.lua	8366-8416	end b148pose (core)	nsyaw	d0	d0	d0	d0	M1	
+s2core.lua	8417-8652	b116b (flag rvder): the remote velocity for every body. main.lua builds	rvder	d1	d1	d1	d1	M1	
+s2core.lua	8653-8782	batch 49: the live probe's measurement: per-tick step of the puppet and	smooth	1	1	1	1	M1	
+s2core.lua	8783-8922	hidden AI target of the remote player (S2Coop_RemoteTarget): hostiles s	tgtwaitmax	d60	d60	d60	d60	M1	
+s2core.lua	8923-8974	core-24: at most ONE visible body per remote player. Measured 2026-10-1	pupretry	d1	d1	d1	d1	M1	
+s2core.lua	8975-9068	b78fix D3: vendors are never mirrored (flag vendmir, default 0; user 20	vendmir	1	1	1	1	M6	
+s2core.lua	9069-9141	b78fix D3b: a vendor talk on the CLIENT = its trade screen only (flag v	v	dnil	dnil	dnil	dnil	M8	
+s2core.lua	9142-9369	b108tpfloor (flag tpfloor, default 0): every "put me next to the other	tpfloor	1	1	1	1	M10	
+s2core.lua	9370-9370	end b108tpfloor	-	-	-	-	-	M10	
+s2core.lua	9371-9659	b100ft (flag ftfollow, default 0; user rule N6 "fast travel (guides): b	ftfollow	1	1	1	1	M10	
+s2core.lua	9660-9660	end b100ft	-	-	-	-	-	M10	
+s2core.lua	9661-9663	client leash (flag cfollow=1): the client steps toward the host, cfollo	cfollow	d0	0	d0	0	M10	
+s2core.lua	9664-9763	batch 59 probe (dev, flag iprobe=1): list the interactables near the lo	iprobe	0	0	0	0	DELETE	iprobe=0 everywhere (dev)
+s2core.lua	9764-9866	b173 natbr (flag natbroff, default 0): client natnpc tick right after t	natbroff	dnil	dnil	dnil	dnil	X0	
+s2core.lua	9867-10305	b102sleep (flag sleepsync, default 0; user rule N5 "Sleep: both must cl	sleepsync	1	1	1	1	M11	sleepsync + hostcfg
+s2core.lua	10306-10306	end b102sleep	-	-	-	-	-	M11	
+s2core.lua	10307-10510	b105ver (flag hostcfg, default 0; user rule N11 "Mod version and game s	hostcfg	1	1	1	1	M11	
+s2core.lua	10511-10511	end b105ver	-	-	-	-	-	M11	
+s2core.lua	10512-10622	roadmap (a): local A-Life off (flag alifeoff=1, meant for the CLIENT)	alifeoff	0	1	0	1	M6	
+s2core.lua	10623-10789	b135fixes (flags hidnpc / qdead / qfall, default 1): three whole-family	hidnpc	d1	d1	d1	d1	M6	
+s2core.lua	10790-10790	end b135fixes	-	-	-	-	-	M6	
+s2core.lua	10791-10807	b78fix D4: our own bodies take no interaction (flag tgtnoint, default 0	tgtnoint	1	1	1	1	M1	
+s2core.lua	10808-10813	b82orph: orphan sweep (flag orphsweep, default 0; 2 = dry run). Measure	orphsweep	1	1	1	1	M1	
+s2core.lua	10814-10986	b84alife: orphrm=3 removes an orphan of ours from the A-LIFE by its GUI	orphrm	3	3	3	3	M1	b84alife orphan removal M1; autoload is the 10973-10986 row
+s2core.lua	10973-10986	autoload	autoload	0	0	0	0	DELETE	autoload=0 everywhere
+s2core.lua	10987-11083	b85crash (flag abpguard, default 0). Host crash 22:46:47: AV 0x588 at e	abpguard	2	2	2	2	M1	
+s2core.lua	11084-11141	b86pupctl (flags pupnoreinit / pupnoai / emparkpup, default 0). S2Coop_	pupnoreinit	1	1	1	1	M1	
+s2core.lua	11142-11204	b134pupai (flag pupai, default 1). User 2026-10-15, both screens, near	pupai	d1	d1	d1	d1	M1	
+s2core.lua	11205-11235	end b134pupai	-	-	-	-	-	X0	tick1000 X0; the NOLA vivo heartbeat log is DELETE (dev)
+s2core.lua	11232-11233	NOLA vivo heartbeat log in tick1000	-	-	-	-	-	DELETE	dev heartbeat; X0 status lines replace it
+s2core.lua	11236-11286	b116motion (flag offtick): the visible-body limiter. An Agent's compone	offtick	60	60	60	60	M1	
+s2core.lua	11287-11413	b118fpscap (flag fpscap, default 0; user rule N16 2026-10-15 "the enemi	fpscap	1	1	1	1	DELETE	user 2026-10-17 "dont need more FPS limit"; fpscap=1 in A/B/RH/RC must be removed (W4) and X0_ORDER t1000_fcTickP removed
+s2core.lua	11414-11414	end b118fpscap	-	-	-	-	-	DELETE	
+s2core.lua	11415-11838	b122npcsync (flag npcsync, default 0; user 2026-10-15 20:35 "the npcs i	npcsync	1	1	1	1	M3b	deleted M1 2026-10-17: natnpc (src/s2n_nat.cpp) is the only NPC owner; natpark host uid list moved to natnpc #NN u record
+s2core.lua	11839-11839	end b122npcsync	-	-	-	-	-	M3b	deleted M1 2026-10-17: natnpc (src/s2n_nat.cpp) is the only NPC owner; natpark host uid list moved to natnpc #NN u record
+s2core.lua	11840-12207	b125npcmove (flag npsmove, default 1; needs npcsync=1 on both; npsmove	npsmove	d1	d1	d1	d1	M3b	deleted M1 2026-10-17: natnpc (src/s2n_nat.cpp) is the only NPC owner; natpark host uid list moved to natnpc #NN u record
+s2core.lua	12208-12208	end b125npcmove	-	-	-	-	-	M3b	deleted M1 2026-10-17: natnpc (src/s2n_nat.cpp) is the only NPC owner; natpark host uid list moved to natnpc #NN u record
+s2core.lua	12209-12242	b121aiwatch (flag aiwatch, default 0; HOST only: api.ROLE "host" and al	aiwatch	1	d0	1	d0	M3b	ported: src/s2m_aiwatch.cpp (aiwatch=1 in A and RH; M6 had it as DELETE)
+s2core.lua	12243-12243	end b121aiwatch	-	-	-	-	-	M3b	ported: src/s2m_aiwatch.cpp
+s2core.lua	12244-12313	b104rep (flag repsync, default 0; user rule N4 "faction reputation: the	repsync	1	d0	1	d0	M2	
+s2core.lua	12314-12314	end b104rep	-	-	-	-	-	M2	
+s2core.lua	12315-12363	b145aggro (flag repfoe, default 1; HOST; user 2026-10-15 21:00 "the hos	repfoe	d1	d1	d1	d1	M2	
+s2core.lua	12364-12364	end b145aggro	-	-	-	-	-	M2	
+s2core.lua	12365-12456	b177g17 (flags relfoe / relmir, default 0; HOST; V1 gate G17, rule N4).	relfoe	1	d0	d0	d0	M2	
+s2core.lua	12457-12457	end b177g17	-	-	-	-	-	M2	
+s2core.lua	12458-12577	b133head (flag headsafe, default 1; HOST, main.lua look=1). User 2026-1	headsafe	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+s2core.lua	12578-12578	end b133head	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+s2core.lua	12579-12705	b153offscreen (flags offanim / offvb, default 1; HOST only). User 2026-	offanim	dnil	dnil	dnil	dnil	M3	ported: src/s2n_nat.cpp host_offa (M1 2026-10-17)
+s2core.lua	12706-12706	end b153offscreen	-	-	-	-	-	M3	ported: src/s2n_nat.cpp host_offa (M1 2026-10-17)
+s2core.lua	12707-12832	b131combat (F4 combat sync; flags mslot / shotlag / tgtpark, default 1)	mslot	d1	d1	d1	d1	M2	
+s2core.lua	12833-12833	end b131combat	-	-	-	-	-	M2	
+s2core.lua	12834-12905	host: resolve a relayed shot (copy of main.lua v27 logic; the remote pl	cine	1	1	1	1	M2	
+s2core.lua	12906-12963	b88nopause (flag nopause, default 0). User rule N8 (2026-10-15): neithe	nopause	1	1	1	1	M11	nopause M11; M.hooks OnShotSoundStart 12948-12963 M2
+s2core.lua	12964-13287	b138loot (flag cloot, default 1, BOTH roles; user 2026-10-15 19:25 "the	cloot	1	1	1	1	M4	
+s2core.lua	13288-13657	end b140lootfix helpers	b164off	d0	d0	d0	d0	M4	
+s2core.lua	13658-13658	end b138loot	-	-	-	-	-	M4	
+s2core.lua	13659-13768	b144combat (flags wshot / wsfx / wvoice, default 1; user 2026-10-15 "th	wshot	d1	d1	d1	d1	M3b	ported: src/s2m_wshot.cpp (M1 moved from s2m_npcsync.cpp, fire hand-off removed, mirror fallback removed)
+s2core.lua	13769-13942	b146voice (flags wvface / wvspk / wvsw, default 1; user 2026-10-15 21:1	wvface	d1	d1	d1	d1	M3b	ported: src/s2m_wshot.cpp (M1 moved from s2m_npcsync.cpp, fire hand-off removed, mirror fallback removed)
+s2core.lua	13943-14129	end b146voice (host)	wshot	d1	d1	d1	d1	M3b	ported: src/s2m_wshot.cpp (M1 moved from s2m_npcsync.cpp, fire hand-off removed, mirror fallback removed)
+s2core.lua	14130-14130	end b144combat	-	-	-	-	-	M3b	ported: src/s2m_wshot.cpp (M1 moved from s2m_npcsync.cpp, fire hand-off removed, mirror fallback removed)
+s2core.lua	14131-14161	b128net (flags netrel / netlockkeep, default ON; P5 network tolerance:	netrel	d1	d1	d1	d1	X0	
+s2core.lua	14162-14247	b143perf (both roles): cheaper bridge ticks. ffc=1 / x1c=1 (default); 0	ffcttl	d1	d1	d1	d1	X0	
+s2core.lua	14248-14382	b149hitch (both roles; flags acache / acneg, mshys / msstay, default ON	acneg	d5	d5	d5	d5	X0	
+s2core.lua	14383-14405	end b149hitch (core)	-	-	-	-	-	X0	
+s2core.lua	14406-14544	end b143perf	netrel	d1	d1	d1	d1	X0	
+s2core.lua	14545-14547	end b128net	-	-	-	-	-	X0	
+main.lua	7-121	findBridge	debugkeys	0	0	0	0	X0	
+main.lua	122-130	RegisterKeyBind	keypoll	dnil	dnil	dnil	dnil	X0	
+main.lua	131-132	log	debugkeys	0	0	0	0	DELETE	
+main.lua	133-139	count	debugkeys	0	0	0	0	DELETE	
+main.lua	140-172	cmd	debugkeys	0	0	0	0	DELETE	
+main.lua	173-183	near	debugkeys	0	0	0	0	DELETE	
+main.lua	184-207	tele	debugkeys	0	0	0	0	DELETE	
+main.lua	208-447	netinfo	debugkeys	0	0	0	0	DELETE	
+main.lua	448-501	pawnSet	debugkeys	0	0	0	0	DELETE	
+main.lua	502-523	staleGen	-	-	-	-	-	X0	
+main.lua	524-527	profAdd	-	-	-	-	-	X0	
+main.lua	528-550	gameLoop	-	-	-	-	-	X0	
+main.lua	551-566	bonesOf	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	567-582	compList	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	583-604	lookDiag	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	605-622	matsOf	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	623-634	applyMats	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	635-699	scanLook	look	d1	1	d1	1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	700-776	shotDetectInit	shotdetect	1	1	1	1	M2	
+main.lua	777-784	weaponStats	-	-	-	-	-	M2	
+main.lua	785-806	shotEmitReal	shotdmg	d25	d25	d25	d25	M2	
+main.lua	807-813	shotOutStr	-	-	-	-	-	M2	
+main.lua	814-823	shotDetectPoll	-	-	-	-	-	M2	
+main.lua	824-836	nearestHuman	-	-	-	-	-	M2	
+main.lua	837-863	shotTestFire	shottest	d0	d0	d0	d0	M2	
+main.lua	864-918	shotResolve	-	-	-	-	-	M2	
+main.lua	919-961	npcDmgTest	npcdmg	d0	d0	d0	d0	M2	
+main.lua	962-973	P2.headSort	headfix	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	974-977	P2.tcopy	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	978-1010	P2.headWire	headfix	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1011-1028	P2.headPose	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1029-1038	P2.wpRel	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1039-1056	P2.wpApply	wpnhand	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1057-1070	P2.wpDiag	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1071-1076	P2.hash	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1077-1135	P2.readOne	scanage	d3	d3	d3	d3	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1136-1155	P2.appsOut	appsper	d2	d2	d2	d2	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1156-1166	P2.lookPut	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1167-1172	P2.lookGet	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1173-1180	P2.needOut	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1181-1226	P2.scanWork	scan	1	0	1	0	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1227-1245	scanNpcs	scanms	8	d3	8	d3	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1246-1260	newMirror	pslotn	d3	d3	d3	d3	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1261-1261	P2.psArm	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1262-1266	P2.psAny	mb	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1267-1278	P2.poseSet	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1279-1291	P2.psPose	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1292-1298	P2.psWork	mb	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1299-1310	P2.psRun	pslot	1	1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1311-1347	P2.psKick	pbn	d4	d4	d4	d4	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1348-1352	P2.qOf	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1353-1353	P2.nAx	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1354-1360	P2.rOf	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1361-1364	P2.qMul	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1365-1385	P2.pbParOf	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1386-1400	P2.pbParse	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1401-1439	P2.pbLoad	pbtmin	d0.08	d0.08	d0.08	d0.08	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1440-1478	P2.pbBlend	pb	d1	1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1479-1483	P2.poseDirect	pb	d1	1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1484-1504	P2.pbRank	pbn	d4	d4	d4	d4	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1505-1508	P2.pbDrop	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1509-1511	P2.pbFlush	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1512-1527	P2.pbMirror	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1528-1552	P2.pbStep	pbms	d1.5	d1.5	d1.5	d1.5	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1553-1563	P2.pbLog	pb	d1	1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1564-1586	P2.pbRun	pb	d1	1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1587-1605	P2.pbKick	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1606-1647	P2.poseNow	hipz	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1648-1660	P2.asset	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1661-1669	P2.assetKeep	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1670-1675	P2.assetFind	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1676-1681	P2.assetLoad	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1682-1687	P2.acHas	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1688-1698	P2.mbMats	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1699-1723	P2.mbJob	wpnskel	dnil	dnil	dnil	dnil	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1724-1735	P2.mbStill	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1736-1739	P2.mbKill	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1740-1755	P2.mbRetire	mbpark	d8	d8	d8	d8	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1756-1759	P2.mbShow	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1760-1766	P2.mbCancel	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1767-1811	P2.mbPre	mirrorspread	d0	0	d0	0	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1812-1931	P2.mbStep	mb	d1	d1	d1	d1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1932-1952	P2.mbDone	mirrorspread	d0	0	d0	0	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1953-1984	P2.mbWork	mbms	d4	d4	d4	d4	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	1985-2017	P2.mbEnd	mbhold	d15	d15	d15	d15	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	2018-2026	P2.mbHys	mbstay	d4	d4	d4	d4	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	2027-2032	P2.mbInc	-	-	-	-	-	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	2033-2196	applyMirrors	mirrors	d0	1	d0	1	M3	deleted M1 2026-10-17: mirror path, natnpc (src/s2n_nat.cpp) is the only NPC owner
+main.lua	2197-2215	groundBelow	-	-	-	-	-	X0	
+main.lua	2216-2280	safeTeleport	-	-	-	-	-	X0	
+main.lua	2281-2332	S2_loadFlags	pslotn	d3	d3	d3	d3	X0	
+main.lua	2333-2341	readVitals	-	-	-	-	-	X0	
+main.lua	2342-2342	jstr	-	-	-	-	-	X0	
+main.lua	2343-2345	jval	-	-	-	-	-	X0	
+main.lua	2346-2363	readGameTime	-	-	-	-	-	X0	
+main.lua	2364-2371	fastTime	-	-	-	-	-	X0	
+main.lua	2372-2380	S2_setGameTime	-	-	-	-	-	X0	
+main.lua	2381-2401	runLuaCmd	luacmd	1	1	0	0	X0	
+main.lua	2402-2690	writeState	-	-	-	-	-	X0	
+main.lua	2691-2748	autowalkTick	autowalk	0	0	0	0	DELETE	
+main.lua	2749-2762	passo	-	-	-	-	-	DELETE	
+main.lua	2763-2767	hbErr	-	-	-	-	-	DELETE	
+main.lua	2768-2776	heartbeat	avatarmode	npcpuppet	npcpuppet	npcpuppet	npcpuppet	DELETE	dev
+main.lua	2777-2780	normKey	-	-	-	-	-	DELETE	
+main.lua	2781-2811	animInit	-	-	-	-	-	DELETE	
+main.lua	2812-2829	animFill	anim	d0	d0	d0	d0	DELETE	
+main.lua	2830-2832	angDiff	-	-	-	-	-	DELETE	
+main.lua	2833-2883	godStep	playergod	0	0	0	0	DELETE	
+main.lua	2884-2884	npcMode	avatarmode	npcpuppet	npcpuppet	npcpuppet	npcpuppet	DELETE	
+main.lua	2885-2891	pupSeq	-	-	-	-	-	DELETE	
+main.lua	2892-2906	puppetAnim	-	-	-	-	-	DELETE	
+main.lua	2907-2912	puppetRestore	-	-	-	-	-	DELETE	
+main.lua	2913-3034	smoothStep	avatarmode	npcpuppet	npcpuppet	npcpuppet	npcpuppet	DELETE	
+main.lua	3035-3039	pavValid	-	-	-	-	-	DELETE	
+main.lua	3040-3051	capturePose	-	-	-	-	-	DELETE	
+main.lua	3052-3073	captureParts	-	-	-	-	-	DELETE	
+main.lua	3074-3117	captureSource	-	-	-	-	-	DELETE	
+main.lua	3118-3122	curRemote	avdebug	d0	d0	d0	d0	DELETE	
+main.lua	3123-3129	applyPoseTo	-	-	-	-	-	DELETE	
+main.lua	3130-3138	applyPose	-	-	-	-	-	DELETE	
+main.lua	3139-3159	forceVisible	-	-	-	-	-	DELETE	
+main.lua	3160-3183	diagPose	-	-	-	-	-	DELETE	
+main.lua	3184-3192	traceGroundQuiet	-	-	-	-	-	DELETE	
+main.lua	3193-3241	ensurePoseAvatar	-	-	-	-	-	DELETE	
+main.lua	3242-3285	poseStep	avdebug	d0	d0	d0	d0	DELETE	
+main.lua	3286-3298	startSmooth	hz	d10	d10	d10	d10	DELETE	
+main.lua	3299-3304	isPlayerPawn	-	-	-	-	-	DELETE	
+main.lua	3305-3321	setupAvatar	disablemove	d1	d1	d1	d1	DELETE	
+main.lua	3322-3374	ensureAvatar	maxdist	d7000	d7000	d7000	d7000	DELETE	
+main.lua	3375-3391	ensureHostProxy	-	-	-	-	-	DELETE	
+main.lua	3392-3401	S2_isLivePawn	-	-	-	-	-	X0	
+main.lua	3402-3408	S2_coreCall	-	-	-	-	-	X0	
+main.lua	3409-3957	S2_toggleBridge	-	-	-	-	-	X0	bridge loop; NUM test keys 3620-3770 inside it are DELETE

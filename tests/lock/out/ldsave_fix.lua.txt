@@ -1,0 +1,26 @@
+> role client
+> flag lead 1
+> flag ldsave 2
+> pawn 1000 442207.0 470552.0 0
+> ledger N 111 1699999900
+> ledger U 01C54CD64D96F4CEE43A00B763ECC498 1699999900
+> npc n1 5001 442057.0 470452.0 832.0 1 0 1 0 0
+> npc n2 5002 442157.0 470452.0 832.0 1 0 1 0 0
+> guid n1 111
+> guid n2 222
+> usable u1 01C54CD64D96F4CEE43A00B763ECC498 442057.0 470452.0 0 A:0,B:1
+> beds 3 1
+> bedprobe 1
+> run 9000
+A npc n1 active 1
+A use u1 A active 1
+L 9000 NOLA ldsave: pawn #1 +8 s: NPCs vivos 2, sem interacao e nao nossos 2 (no registro 1, devolvidos 1); usaveis sem interacao 1 (no registro 1, devolvidos 1); camas bloqueadas agora (nao contadas); registro N=0 U=0
+> ledgerdump
+F 0
+> pawn 2000 442207.0 470552.0 0
+> run 9000
+L 18000 NOLA ldsave: pawn #2 +8 s: NPCs vivos 2, sem interacao e nao nossos 1 (no registro 0, devolvidos 0); usaveis sem interacao 0 (no registro 0, devolvidos 0); camas bloqueadas agora (nao contadas); registro N=0 U=0
+> run 26000
+L 43000 NOLA ldsave: pawn #2 +33 s: NPCs vivos 2, sem interacao e nao nossos 1 (no registro 0, devolvidos 0); usaveis sem interacao 0 (no registro 0, devolvidos 0); camas bloqueadas agora (nao contadas); registro N=0 U=0
+> ledgerdump
+F 0

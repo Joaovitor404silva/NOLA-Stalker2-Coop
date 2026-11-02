@@ -1,0 +1,22 @@
+role host
+flag doors 1
+flag doorfix 1
+flag doorr 2000
+pawn 0 0 0
+obj D1 DoorView - door 500 0 0
+yaw D1 10
+obj D2 DoorView - door 5000 0 0
+yaw D2 10
+obj D3 DoorView - door 300 0 0
+time 1
+tick
+time 2
+setyaw D1 100
+setyaw D2 100
+tick
+time 3
+nopawn
+tick
+pawn 0 0 0
+time 4
+tick

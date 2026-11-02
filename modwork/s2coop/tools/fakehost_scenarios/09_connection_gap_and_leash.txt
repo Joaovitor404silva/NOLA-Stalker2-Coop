@@ -1,0 +1,14 @@
+# (a) A quest step made during a 4 s connection gap (needs core b27, qgap=1). (b) The leash.
+# Expect (a): the step is NOT applied at once; within about 25 s the client log says "o host tem N eventos e este mundo N-1:
+# catch-up pedido de novo", the fake host prints "the client loaded a save (#N ...)" and the step is applied once.
+# Expect (b): with the host 400 m away the client log says "COLEIRA FORA" and the client is teleported next to the host.
+# Die on the client before (b) and pick "load last save" to prove "death -> load -> back at the host".
+0 log sample_quest_log.txt 29
+40 silence 4
+0 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+45 say the step should be there now, applied once
+5 key optional: die on the client and pick "load last save"; press Enter when back in the world
+1 pos near 40000
+20 say the client should have been brought next to the host
+1 pos near 300
+10 end

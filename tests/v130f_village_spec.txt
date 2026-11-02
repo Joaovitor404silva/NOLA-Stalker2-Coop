@@ -1,0 +1,11 @@
+spec v130f_village
+note B is teleported into Zalissya (404034 546754 606, brief\live.md) and A stays 150 m away (tp A near B 15000). New DLL: the host far test (exe+0x221f7d8) keeps units near B online (unidades_mantidas>=1) and the online-set grid query (exe+0x704a76) runs once more around B (unidades_trazidas>=1), so within 60 s the host has village NPC actors (npcs_classe>=1 na_lista>=1) and B has copies (host>=1 copias>=1) although the host is beyond its own 100.7 m bubble. Old DLL: no alifemc token, npcs_classe=0 na_lista=0 and copias=0 until the host walks in (host.log 16:17:26 9/0/0 -> 16:17:46 27/25/31 only when the host closed to 50 m).
+tp B 404034 546754 700
+wait 30
+tp A near B 15000
+wait 10
+mark
+expect A NOLA corpsemc: .* alifemc=1 unidades_mantidas=([1-9]|\d\d+) passes_online=\d+ unidades_trazidas=([1-9]|\d\d+) centros=([1-9]|\d\d+) within 40
+expect A NOLA natnpc 10 s \(host\): npcs_classe=([1-9]|\d\d+) na_lista=([1-9]|\d\d+) within 60
+expect B NOLA natnpc 10 s \(cliente\): host=([1-9]|\d\d+) copias=([1-9]|\d\d+) within 70
+expect_not A NOLA alifemc: limite de agentes online during 60

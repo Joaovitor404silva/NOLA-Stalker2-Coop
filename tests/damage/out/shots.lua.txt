@@ -1,0 +1,20 @@
+CALL a RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=1 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 100.0 -> 75.0 ok=true 
+OUT a hp=75.0 alive=true
+CALL a RDS dmg=175.50 ap=0.50 uid=- bone=jnt_head type=6 src=2
+LOG SHOT(core) seq=2 hit=BP_AI_Human_C_a dist=10.0m altura=70 osso=jnt_head dano=175.5 hp 75.0 -> 0.0 ok=true 
+OUT a hp=0.0 alive=false
+LOG SHOT seq=3 hit=nenhum (testados=2)
+LOG SHOT seq=4 hit=nenhum (testados=2)
+CALL b RD dmg=12.50 bone=None
+LOG SHOT(core) seq=5 hit=BP_AI_Dog_C_b dist=20.0m altura=0 osso=None dano=12.5 hp 80.0 -> 67.5 ok=true 
+OUT b hp=67.5 alive=true
+LOG SHOT seq=6 hit=nenhum (testados=2)
+LOG SHOT seq=7 hit=nenhum (testados=2)
+CALL b RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=8 hit=BP_AI_Dog_C_b dist=20.0m altura=0 osso=None dano=25.0 hp 67.5 -> 42.5 ok=true 
+LOG SHOT seq=9 hit=nenhum (testados=2)
+OUT a hp=0.0 alive=false
+CALL d RDS dmg=2.10 ap=0.50 uid=- bone=jnt_l_leg type=6 src=2
+LOG SHOT(core) seq=11 hit=BP_AI_Human_C_d dist=10.0m altura=-30 osso=jnt_l_leg dano=2.1 hp 100.0 -> 97.9 ok=true 
+OUT d hp=97.9 alive=true

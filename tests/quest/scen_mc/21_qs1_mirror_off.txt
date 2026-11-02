@@ -1,0 +1,24 @@
+# QS1 qdmir=0 keeps the old behaviour: the catch-up fire is sent as a client step (#QN) and listed in the divergence digest
+role client
+flag qdroll1 1
+flag trigjoin 1
+flag qdmir 0
+pawn 7
+t 100
+peer up 1
+tick1k
+t 125
+part QF 1;537be987:0
+tick1k
+t 151
+part QF 1;537be987:26
+tick1k
+s2q E E01_MQ01_OnSignalReceived
+t 152
+part QF 1;537be987:27
+tick1k
+s2q E E01_MQ01_OnSignalReceived_9
+t 154
+tick1k
+out
+status

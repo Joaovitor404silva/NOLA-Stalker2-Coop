@@ -1,0 +1,29 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+CMD dlg E03_SQ01_Dialog_VetosInTrailer_Easier_44985 E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+CMD answer E03_SQ01_Dialog_VetosInTrailer_Easier_44985
+SCREEN s2m_session_qb 6 Only the host can choose this answer
+LOG NOLA qbranch: resposta E03_SQ01_Dialog_VetosInTrailer_Easier_44985 (dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer) recusada no cliente: so o host escolhe o caminho da missao
+RET answer false
+CMD busy dialogo
+CMD part QB #QB:0;;7:410d9ff6:1
+CMD tick
+STUB dlgPick E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289 aceita
+LOG NOLA qbranch: o host escolheu E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289 (dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer): a mesma resposta no dialogo deste cliente
+CMD tick
+CMD fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 fin
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1): saida E03_SQ01_Dialog_VetosInTrailer_4_44991 do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD part QB #QB:0;8:78f12c33:1:1:0;7:410d9ff6:1
+CMD qbact E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer
+CMD tick
+CMD busy -
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1): o host saiu por E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660; a saida E03_SQ01_Dialog_VetosInTrailer_4_44991 do cliente virou a do host
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=1 force=1 rel=0 ref=1 mir=1 err=0 defer=1 dup=0 held=0

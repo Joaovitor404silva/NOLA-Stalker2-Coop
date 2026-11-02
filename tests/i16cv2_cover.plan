@@ -1,0 +1,11 @@
+out D:\modding\proofs\20261030_1300_i16cv2_cover
+setflag A natmsecq 1
+setflag B natmsecq 1
+setflag A natmloop 1
+setflag B natmloop 1
+mark i16cv2
+run D:\modding\cpp\wt\i16cv2\tests\i16v2_r5_on1_spec.txt
+wait 60
+assert alive A
+assert alive B
+assert peer

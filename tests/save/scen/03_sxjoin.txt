@@ -1,0 +1,60 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 1
+flag qsync 1
+flag qrollback 1
+flag sxjoin 1
+flag joinport 0
+flag kit 0
+t 1
+pawn 1000
+money 650
+inv A012A 3
+inv A545A 1
+peer up 1 1
+file B/client_applied.txt #S2CA 1 aaaa1111\nW\taaaa1111\n4\tJ,x,y,z,s\n
+file saved/STEAM/SaveGames/Data/44444444444444444444444444444444.sav FFFFFFFFFFFFFFFFFFFFFFFFFFF-four
+part B 5,8,c6ad219ea28b4,0,0,8,abc
+sxsnap 1 SX1 4 650 A012A 0
+tick
+t 2
+tick
+t 3
+sxin none -
+tick
+t 4
+sxin ready 1024b
+tick
+t 5
+tick
+stamp STEAM=7:7;NULL=-
+t 6
+tick
+t 9
+tick
+file saved/STEAM/SaveGames/Data/33333333333333333333333333333333.sav GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG-host
+sxinstall 1 33333333333333333333333333333333 8 c6ad219ea28b4
+sxget installed SX1 650 A012A=3,A545A=1 QITEM1
+t 10
+tick
+t 11
+pawn 3000
+invclear
+inv A012A 1
+inv QITEM1 1
+money 100
+rbdone
+tick
+t 17
+tick
+t 18
+tick
+t 20
+tick
+t 21
+tick
+t 25
+tick
+t 30
+tick

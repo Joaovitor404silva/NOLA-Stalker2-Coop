@@ -1,0 +1,11 @@
+out D:\modding\proofs\20261030_1500_i16cl_far2
+setflag A natfar 1
+setflag B natfar 1
+setflag A natfardead 4500
+setflag B natfardead 4500
+assert alive A
+assert alive B
+assert peer
+mark i16cl_back
+run D:\modding\cpp\wt\i16cl\tests\i16cl_far_back_spec.txt
+mark i16cl_shots

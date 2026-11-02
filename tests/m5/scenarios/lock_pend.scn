@@ -1,0 +1,32 @@
+role client
+flag doors 1
+flag doorfix 1
+flag ien 1
+flag ienecho 10
+pawn 0 0 0
+time 1
+remote O 300,5,0;u
+remote P 300,0,0;b
+tick
+expect_new LOG NOLA doorlock: porta 300,5,0 nao encontrada neste PC (fica pendente ate carregar)
+expect_new LOG NOLA ien: quebrado 300,0,0 nao encontrado neste PC (fica pendente ate carregar)
+expect_status door.lpend=1 ien.bpend=1
+time 2
+remote O -
+remote P -
+tick
+expect_none pendente
+time 4
+obj PL3 BP_Padlock_Prototype_02_C InteractableObject inter 3000 0 0
+prop PL3 bEnabled 1
+prop PL3 bBroken 0
+obj D3 BP_DoorView_C DoorView door 3000 50 0
+yaw D3 10
+prop D3 bLocked 1
+tick
+expect_new CALL D3.UnlockDoor()
+expect_new CALL PL3.BndEvt__BP_Padlock_Prototype_01_DamageInteractable_K2Node_ComponentBoundEvent_0_OnDamageAccumulated__DelegateSignature()
+expect_status door.lpend=0 ien.bpend=0
+time 5
+tick
+expect_none OUT #O

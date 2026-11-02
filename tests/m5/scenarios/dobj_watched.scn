@@ -1,0 +1,36 @@
+role host
+flag dobj 1
+flag dobjgen 1
+flag dobjfast 0
+flag dobjsec 1
+flag dobjmiss 3
+flag dobjfx 0
+flag meshsafe 1
+flag dobjstat 1
+level LvlA
+gate k1 1
+pawn 0 0 0
+obj P6 BP_DestructibleObject_C DestructibleObject destr 800 0 0
+mesh P6 SM_gen_parcel_01_c_solid
+phase P6 1
+obj P4 BP_DestructibleObject_C DestructibleObject destr 600 0 0
+mesh P4 SM_ele_lamp_06
+phase P4 1
+time 1
+tick
+time 2
+tick
+mesh P6 SM_gen_parcel_01_c
+phase P6 2
+time 3
+tick
+time 4
+mesh P4 SM_ele_lamp_06_a
+tick
+time 5
+tick
+time 6
+mesh P4 null
+tick
+time 7
+tick

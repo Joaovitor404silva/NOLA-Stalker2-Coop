@@ -1,0 +1,34 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c2 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c3 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+c2 LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+h LOG NOLA mc bau: BP_IntChestItemContainer_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+h STUB inter BP_IntChestItemContainer_C_1 0
+h LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+c2 STUB inter BP_IntChestItemContainer_C_1 0
+c2 LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+c3 LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+c3 STUB inter BP_IntChestItemContainer_C_1 0
+c3 LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+MARK t=both-point
+h MCOUT #KH:1:BP_IntChestItemContainer_C@520,30,1|||
+c1 MCOUT |||
+c2 MCOUT |||
+c3 MCOUT |||
+c2 STUB no prompt on BP_IntChestItemContainer_C_1: cannot open
+c1 STUB window open BP_IntChestItemContainer_C_1
+h STUB no prompt on BP_IntChestItemContainer_C_1: cannot open
+c3 STUB no prompt on BP_IntChestItemContainer_C_1: cannot open
+c1 LOG NOLA LOCK_REQ BP_IntChestItemContainer_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_IntChestItemContainer_C@520,30,1
+c1 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+c1 LOG NOLA ptake: recipiente 8ADCB4662447265B aberto; inventario anotado
+c1 LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+c1 LOG NOLA lscont: recipiente 8ADCB4662447265B: vazio na leitura: sem lista
+MARK t=c1-window
+c1 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=BP_IntChestItemContainer_C@520,30,1 denies=0 grants=1 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=1 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c2 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=2 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0

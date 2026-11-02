@@ -1,0 +1,14 @@
+role client
+flag lead 1
+flag ldblk 1
+pawn 1000 442207.0 470552.0 0
+npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+peer h,5,1700000002,dlg,442057.0,470452.0,832.0
+run 1100
+flag ldblk 0
+run 1100
+npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+flag ldblk 1
+run 1100
+flag lead 0
+run 1100

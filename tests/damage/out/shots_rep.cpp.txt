@@ -1,0 +1,46 @@
+LOG NOLA rep: tiros do cliente em NPCs contam como do host (uid do host=1001)
+CALL a RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+LOG NOLA shotattr: acerto do cliente em nome do alvo uid=1001 (1)
+LOG NOLA rep: tiro do cliente em BP_AI_Human_C_a contado como do host (uid=1001): hp 100.0 -> 75.0 (1 acertos, 0 mortes)
+LOG SHOT(core) seq=1 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 100.0 -> 75.0 ok=true 
+CALL a RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+LOG NOLA shotattr: acerto do cliente em nome do alvo uid=1001 (2)
+LOG NOLA rep: tiro do cliente em BP_AI_Human_C_a contado como do host (uid=1001): hp 75.0 -> 50.0 (2 acertos, 0 mortes)
+CALL a RDS dmg=1.00 ap=0.00 uid=3005 bone=None type=6 src=2
+LOG NOLA rep: eco em nome do alvo do cliente (uid=3005) em BP_AI_Human_C_a: 1.0 dano (1 ecos)
+LOG SHOT(core) seq=2 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 75.0 -> 50.0 ok=true 
+CALL a RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+LOG NOLA shotattr: acerto do cliente em nome do alvo uid=1001 (3)
+LOG NOLA rep: tiro do cliente em BP_AI_Human_C_a contado como do host (uid=1001): hp 49.0 -> 24.0 (3 acertos, 0 mortes)
+LOG SHOT(core) seq=3 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 49.0 -> 24.0 ok=true 
+LOG NOLA repfoe: acerto do cliente em BP_AI_Dog_C_b (mutante) em nome do alvo uid=3005 (1: mutantes=1 humanos=0 calmos=2 finais=0)
+CALL b RDS dmg=25.00 ap=0.50 uid=3005 bone=None type=6 src=2
+LOG NOLA shotattr: acerto do cliente em nome do alvo uid=3005 (4)
+LOG SHOT(core) seq=4 hit=BP_AI_Dog_C_b dist=20.0m altura=0 osso=None dano=25.0 hp 60.0 -> 35.0 ok=true 
+LOG NOLA repfoe: acerto do cliente em BP_AI_Dog_C_b (mutante) em nome do alvo uid=3005 (2: mutantes=2 humanos=0 calmos=2 finais=0)
+CALL b RDS dmg=25.00 ap=0.50 uid=3005 bone=None type=6 src=2
+LOG NOLA shotattr: acerto do cliente em nome do alvo uid=3005 (5)
+LOG SHOT(core) seq=5 hit=BP_AI_Dog_C_b dist=20.0m altura=0 osso=None dano=25.0 hp 35.0 -> 10.0 ok=true 
+LOG NOLA repfoe: golpe final/hp ilegivel em BP_AI_Dog_C_b fica em nome do host (dano 25.0 hp 10.0, 1)
+CALL b RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+LOG NOLA rep: tiro do cliente em BP_AI_Dog_C_b contado como do host (uid=1001): hp 10.0 -> 0.0 MORTO (4 acertos, 1 mortes)
+LOG SHOT(core) seq=6 hit=BP_AI_Dog_C_b dist=20.0m altura=0 osso=None dano=25.0 hp 10.0 -> 0.0 ok=true 
+OUT b hp=0.0 alive=false
+LOG NOLA repfoe: acerto do cliente em BP_AI_Human_C_q (humano hostil) em nome do alvo uid=3005 (3: mutantes=2 humanos=1 calmos=2 finais=1)
+CALL q RDS dmg=25.00 ap=0.50 uid=3005 bone=None type=6 src=2
+LOG SHOT(core) seq=7 hit=BP_AI_Human_C_q dist=12.0m altura=0 osso=None dano=25.0 hp 100.0 -> 75.0 ok=true 
+LOG NOLA repfoe: golpe final/hp ilegivel em BP_AI_Human_C_a fica em nome do host (dano 25.0 hp 24.0, 2)
+CALL a RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+LOG NOLA rep: tiro do cliente em BP_AI_Human_C_a contado como do host (uid=1001): hp 24.0 -> 0.0 MORTO (5 acertos, 2 mortes)
+LOG SHOT(core) seq=8 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 24.0 -> 0.0 ok=true 
+LOG SHOT seq=9 hit=nenhum (testados=1)
+LOG NOLA repfoe: acerto do cliente em BP_AI_Human_C_q (humano hostil) em nome do alvo uid=3005 [so log] (4: mutantes=2 humanos=2 calmos=2 finais=2)
+CALL q RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+CALL q RDS dmg=1.00 ap=0.00 uid=3005 bone=None type=6 src=2
+LOG NOLA rep: eco em nome do alvo do cliente (uid=3005) em BP_AI_Human_C_q: 1.0 dano (2 ecos)
+LOG SHOT(core) seq=10 hit=BP_AI_Human_C_q dist=12.0m altura=0 osso=None dano=25.0 hp 75.0 -> 50.0 ok=true 
+LOG SHOT seq=11 hit=nenhum (testados=1)
+OUT a hp=10.0 alive=false
+CALL w RDS dmg=25.00 ap=0.50 uid=1001 bone=None type=6 src=2
+LOG NOLA rep: tiro do cliente em BP_AI_Human_C_w contado como do host (uid=1001): hp 10.0 -> 0.0 FERIDO (estado ferido do jogo; morre se levar outro tiro) (7 acertos, 3 mortes)
+LOG SHOT(core) seq=12 hit=BP_AI_Human_C_w dist=10.0m altura=0 osso=None dano=25.0 hp 10.0 -> 0.0 ok=true 

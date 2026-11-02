@@ -1,0 +1,44 @@
+CMD role client
+CMD pawn 7
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD busy dialogo
+CMD t 125
+CMD part QF 1;f3c1fd2f:0
+CMD tick1k
+CMD t 150
+CMD part QF 1;f3c1fd2f:25
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_Bunker_Finish [no do grafo atras: o outro lado chegou ha 25 s] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 160
+CMD part QF 1;f3c1fd2f:35
+CMD tick1k
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=0 miss=0 defer=1 own=0
+CMD busy -
+CMD t 161
+CMD part QF 1;f3c1fd2f:36
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD t 166
+CMD part QF 1;f3c1fd2f:41
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD t 171
+CMD part QF 1;f3c1fd2f:46
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD t 176
+CMD part QF 1;f3c1fd2f:51
+CMD tick1k
+LOG NOLA qcatch: o grafo do cliente estava atras em E01_MQ01_Bunker_Finish (missao E01_MQ01): o outro lado chegou ha 51 s; XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker em 3 rodada(s) -> nao alcancou: nenhum desses nos estava ativo aqui ou falta outra condicao
+CMD t 400
+CMD part QF 1;f3c1fd2f:275
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 401
+CMD part QF 1;f3c1fd2f:276
+CMD tick1k
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=0 miss=1 defer=1 own=0

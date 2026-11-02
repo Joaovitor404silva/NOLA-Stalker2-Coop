@@ -1,0 +1,153 @@
+# i16v2 cover r5: natmsec+natmre 1 vs 0, two windows each, both players kept alive. Run cov6.js FACE=300 VIS=1 mode all from mark cov6_start and split its samples by the marks.
+up -Dll D:\modding\cpp\wt\i16v2\cppbuild\OutFast\NolaNative\NolaNative.dll -Set joinmenu=0
+assert alive A
+assert alive B
+assert peer
+setflag A natmsec 1
+setflag B natmsec 1
+setflag A natmre 1
+setflag B natmre 1
+mark cov6_start
+mark r5_on1
+run D:\modding\cpp\wt\i16v2\tests\i16v2_r5_on1_spec.txt
+assert peer
+setflag A natmsec 0
+setflag B natmsec 0
+setflag A natmre 0
+setflag B natmre 0
+mark r5_off1
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+assert alive A
+assert alive B
+setflag A natmsec 1
+setflag B natmsec 1
+setflag A natmre 1
+setflag B natmre 1
+mark r5_on2
+run D:\modding\cpp\wt\i16v2\tests\i16v2_r5_on2_spec.txt
+assert peer
+setflag A natmsec 0
+setflag B natmsec 0
+setflag A natmre 0
+setflag B natmre 0
+mark r5_off2
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+s2dev A call pawn ForceSetHP 100
+s2dev B call pawn ForceSetHP 100
+wait 5
+assert alive A
+assert alive B
+setflag A natmsec 1
+setflag B natmsec 1
+setflag A natmre 1
+setflag B natmre 1
+mark restored

@@ -1,0 +1,5 @@
+# r30 A42 net: the client is brought to artifact place 4 (704921,592019), stays 60 s (the test confirms an artifact actor by luacmd), then the host moves 2 km away so the leash teleports the client away from the place.
+0 pos 704921 592019 380
+75 places
+0 pos 692262 557851 450
+45 end

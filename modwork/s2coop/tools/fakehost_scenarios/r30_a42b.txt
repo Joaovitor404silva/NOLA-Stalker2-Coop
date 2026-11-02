@@ -1,0 +1,5 @@
+# r30 A42 retry (net, real client, playergod+nodeath): the fake host stands 5 m from the confirmed artifact (706356,590892,189) for 35 s, then jumps 500 m (50000 cm) so the leash teleports the client away.
+# Expect: an `art2` sighting/state line while there, then `nao conta como pego` and no `#U ...,A,4`.
+0 pos 706356 590392 260
+45 pos 706356 640392 300
+40 end

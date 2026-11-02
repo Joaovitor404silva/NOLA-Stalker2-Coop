@@ -1,0 +1,39 @@
+# own load drops reaches from before the load, ignores peer reaches older than the load and waits qcatchsettle; qcatch=0 and an absent peer silence it
+role host
+pawn 1
+t 100
+peer up 1
+tick1k
+s2q L E01_MQ01_Bunker_Finish
+s2q L S2Q_NOT_IN_TABLE
+t 102
+tick1k
+qf
+pawn 0
+t 110
+tick1k
+pawn 2
+t 120
+tick1k
+qf
+part QF 1;d417fc23:60
+t 121
+tick1k
+part QF 2;d417fc23:61|61ad3253:0
+t 146
+part QF 2;d417fc23:86|61ad3253:25
+tick1k
+t 150
+part QF 2;d417fc23:90|61ad3253:29
+tick1k
+flag qcatch 0
+t 155
+part QF 2;d417fc23:95|61ad3253:34
+tick1k
+qf
+flag qcatch 1
+peer down 1
+t 160
+tick1k
+qf
+status

@@ -1,0 +1,71 @@
+CMD role client
+CMD pawn 7
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD t 125
+CMD part QF 1;b79db1c3:0
+CMD tick1k
+CMD t 151
+CMD part QF 1;b79db1c3:26
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: ANCQ103_P_ItemAdd_DocPDA_SQ103 [no do grafo atras: o outro lado chegou ha 26 s] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+STUB aa XStartQuestNodeBySID ANCQ103_P_ItemAdd_DocPDA_SQ103
+CMD s2q L ANCQ103_P_ItemAdd_DocPDA_SQ103
+CMD t 156
+CMD part QF 1;b79db1c3:31
+CMD tick1k
+LOG NOLA qcatch: o grafo do cliente estava atras em ANCQ103_P_ItemAdd_DocPDA_SQ103 (missao ANCQ103_P): o outro lado chegou ha 31 s; XEndQuestNodeBySID - em 0 rodada(s); ItemAdd iniciado com XStartQuestNodeBySID -> alcancou
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=1 miss=0 defer=0 own=1 add=1 item=0
+CMD t 200
+CMD part QF 2;b79db1c3:75|0f583b19:0
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 226
+CMD part QF 2;b79db1c3:101|0f583b19:26
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnSignalReceived_3
+CMD t 231
+CMD part QF 2;b79db1c3:106|0f583b19:31
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_ItemAdd_Scanner_1 [no do grafo atras: catch-up, rodada 1] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+STUB aa XEndQuestNodeBySID E01_MQ01_OnSignalReceived_3
+CMD t 236
+CMD part QF 2;b79db1c3:111|0f583b19:36
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnSignalReceived_3
+CMD t 241
+CMD part QF 2;b79db1c3:116|0f583b19:41
+CMD tick1k
+STUB aa XStartQuestNodeBySID E01_MQ01_ItemAdd_Scanner_1
+CMD s2q L E01_MQ01_ItemAdd_Scanner_1
+CMD t 246
+CMD part QF 2;b79db1c3:121|0f583b19:46
+CMD tick1k
+LOG NOLA qcatch: o grafo do cliente estava atras em E01_MQ01_ItemAdd_Scanner_1 (missao E01_MQ01): o outro lado chegou ha 46 s; XEndQuestNodeBySID E01_MQ01_OnSignalReceived_3 em 3 rodada(s); ItemAdd iniciado com XStartQuestNodeBySID -> alcancou
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=2 miss=0 defer=0 own=2 add=2 item=0
+CMD t 300
+CMD part QF 1;f3c1fd2f:0
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 326
+CMD part QF 1;f3c1fd2f:26
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD t 331
+CMD part QF 1;f3c1fd2f:31
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_Bunker_Finish [no do grafo atras: catch-up, rodada 1] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD t 336
+CMD part QF 1;f3c1fd2f:36
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD t 341
+CMD part QF 1;f3c1fd2f:41
+CMD tick1k
+LOG NOLA qcatch: o grafo do cliente estava atras em E01_MQ01_Bunker_Finish (missao E01_MQ01): o outro lado chegou ha 41 s; XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker em 3 rodada(s) -> nao alcancou: nenhum desses nos estava ativo aqui ou falta outra condicao
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=2 miss=1 defer=0 own=2 add=2 item=0

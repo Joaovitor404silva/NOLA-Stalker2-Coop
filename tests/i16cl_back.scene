@@ -1,0 +1,4 @@
+scene i16cl_back
+note i16cl: the client player comes back next to the host (4.5 m), inside natfardead, so the corpse copy is made again
+tp peer+450
+wait 2

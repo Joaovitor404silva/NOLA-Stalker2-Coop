@@ -1,0 +1,30 @@
+CALL build XSetEntityUnkillableByUID 9 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: vivo protegido Unkillable (lifegod: nenhum golpe mata, golpe letal = caido) uid=9 ok=true
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL ff_bodies on
+CALL me ff_apply dmg=10.00 arm=1.00 ap=0.50 bleed=0.00/0.00 bone=head bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 1 me acertou dano=10.00 armadura=1.00 perfuracao=0.50 osso=head tipo=6 fonte=3 hp 100.0 -> 90.0
+CALL me ff_apply dmg=8.00 arm=1.00 ap=0.50 bleed=0.00/0.00 bone=spine_01 bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 2 me acertou dano=8.00 armadura=1.00 perfuracao=0.50 osso=spine_01 tipo=6 fonte=3 hp 90.0 -> 82.0
+OUT me hp=82.0 alive=true
+CALL me ff_apply dmg=20.00 arm=5.00 ap=0.80 bleed=0.50/0.25 bone=head bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: HOST me acertou dano=20.00 armadura=5.00 perfuracao=0.80 osso=head tipo=6 fonte=3 hp 100.0 -> 80.0
+CALL me ff_apply dmg=15.00 arm=2.00 ap=0.60 bleed=0.00/0.00 bone=spine_03 bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 1 me acertou dano=15.00 armadura=2.00 perfuracao=0.60 osso=spine_03 tipo=6 fonte=3 hp 80.0 -> 65.0
+OUT me hp=65.0 alive=true
+OUT me hp=65.0 alive=true
+CALL me ff_apply dmg=70.00 arm=2.00 ap=0.60 bleed=0.00/0.00 bone=head bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 1 me acertou dano=70.00 armadura=2.00 perfuracao=0.60 osso=head tipo=6 fonte=3 hp 65.0 -> 0.0 (golpe letal: o lifeGuard deixa caido)
+OUT me hp=0.0 alive=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 0.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT #L:w,15,100
+LOG NOLA ff: golpe #3 de HOST recusado (caido) dano=20.00 osso=head
+OUT me hp=15.0 alive=true
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=true tiros_out=0 ff=enviados 0 aplicados 5 recusados 1 eu=PLAYER 2 fim_de_jogo=#0 | HOST vida=a | PLAYER 1 vida=a

@@ -1,0 +1,32 @@
+nodes 4
+@all flag locks 1
+@all flag contall 1
+@all flag ptake 1
+@all flag loot 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag taken 1
+@all flag takenown 1
+@all flag lockfirst 1
+@all flag mcitems 1
+@all flag cbusy 1
+@all flag ground 0
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+run 0.3
+@c1 use BP_Box_C_1
+run 0.5
+mark c1-open
+@h use BP_Box_C_1
+@c3 open BP_Box_C_1
+@c3 use BP_Box_C_1
+run 0.3
+mark others-blocked
+leave c1
+run 0.6
+mark c1-left
+@h mcout
+@c3 use BP_Box_C_1
+run 0.5
+mark c3-open
+@h mcout

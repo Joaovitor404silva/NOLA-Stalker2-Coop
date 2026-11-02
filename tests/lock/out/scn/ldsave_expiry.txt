@@ -1,0 +1,15 @@
+role client
+flag lead 1
+flag ldblk 1
+flag ldsavekeep 100
+time 2000000
+pawn 1000 442207.0 470552.0 0
+ledger N 111 1699990000
+ledger N 112 1700001900
+ledger N 113 1700001999
+ledger U 01C54CD64D96F4CEE43A00B763ECC498 1699999000
+npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+guid n1 555
+peer h,5,1700000002,dlg,442057.0,470452.0,832.0
+run 1100
+ledgerdump

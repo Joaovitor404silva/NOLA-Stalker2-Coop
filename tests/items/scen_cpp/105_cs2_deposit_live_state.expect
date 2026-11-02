@@ -1,0 +1,36 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+h LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+h LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+h LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 0 (primeiro a pedir)
+h LOG NOLA TAKEN +lsc@60E63E8B813B51B0;A012Ax30,GunAK74_STx1 (total 1)
+h LOG NOLA lootshare: lista comum do corpo 60E63E8B813B51B0: A012Ax30,GunAK74_STx1 (minha copia ja e igual)
+h LOG NOLA lscont: primeiro a abrir o recipiente 60E63E8B813B51B0 (host): lista lida sem tirar nada: A012Ax30,GunAK74_STx1
+h LOG NOLA lscont: 60E63E8B813B51B0 igualado a lista comum na janela aberta (0 tiradas contadas; nada tirado do jogador, janela aberta): +[] -[]
+c1 LOG NOLA TAKEN +lsc@60E63E8B813B51B0;A012Ax30,GunAK74_STx1 (total 1)
+c1 LOG NOLA lootshare: lista comum do corpo 60E63E8B813B51B0: A012Ax30,GunAK74_STx1 (minha copia sera igualada)
+MARK t=host-open
+h INSTS BP_Box_C_1 | A012A x30 | GunAK74_ST dur=0.6000
+h LOG NOLA TAKEN +cput@60E63E8B813B51B0;c777;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1~r17.Ammo_545x39 (total 2)
+h STUB iput GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1 ammo=17xAmmo_545x39 x1 BP_Box_C_1
+h LOG NOLA istate: 60E63E8B813B51B0: key cput@60E63E8B813B51B0;c7 applied with state: [+{GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1 ammo=17xAmmo_545x39}]
+h STUB refresh
+h LOG NOLA cdeposit: 60E63E8B813B51B0: chaves novas do outro jogador aplicadas na janela aberta: [+GunAK74_STx1]
+c1 LOG NOLA TAKEN +cput@60E63E8B813B51B0;c777;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1~r17.Ammo_545x39 (total 2)
+MARK t=put-in
+h INSTS BP_Box_C_1 | A012A x30 | GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1 ammo=17xAmmo_545x39 | GunAK74_ST dur=0.6000
+h LOG NOLA TAKEN +ctake@60E63E8B813B51B0;c778;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1~r17.Ammo_545x39 (total 3)
+h STUB irm GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1 ammo=17xAmmo_545x39 BP_Box_C_1
+h LOG NOLA istate: 60E63E8B813B51B0: key ctake@60E63E8B813B51B0;c applied with state: [-{GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1 ammo=17xAmmo_545x39}]
+h STUB refresh
+h LOG NOLA cdeposit: 60E63E8B813B51B0: chaves novas do outro jogador aplicadas na janela aberta: [-GunAK74_STx1]
+c1 LOG NOLA TAKEN +ctake@60E63E8B813B51B0;c778;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1~r17.Ammo_545x39 (total 3)
+MARK t=take-in
+h INSTS BP_Box_C_1 | A012A x30 | GunAK74_ST dur=0.6000
+h LOG NOLA LOCK_REL BP_Box_C@520,30,1
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 fechado sem tirar nada
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 0 (3.0 s)

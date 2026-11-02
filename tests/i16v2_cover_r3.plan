@@ -1,0 +1,15 @@
+# i16v2 cover r3: look stop slot fix + copies play the host montage rate and next sections (natmsec). Run C:\modding\s2harness\batch2\cov4.js with FACE=300 VIS=1 between the marks.
+up -Reuse -Dll D:\modding\cpp\wt\i16v2\cppbuild\OutFast\NolaNative\NolaNative.dll
+assert alive A
+assert alive B
+setflag A natmsec 1
+setflag B natmsec 1
+mark cov_msec_on_run_cov4_120_low
+wait 130
+setflag A natmsec 0
+setflag B natmsec 0
+mark cov_msec_off_run_cov4_60_low
+wait 70
+setflag A natmsec 1
+setflag B natmsec 1
+mark restored

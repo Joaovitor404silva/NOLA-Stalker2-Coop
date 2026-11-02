@@ -1,0 +1,6 @@
+OUT me hp=100.0 alive=true
+OUT me hp=100.0 alive=true
+CALL me RDS dmg=10.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=4 pedido=10.0 aplicado=10.0 hp 100.0 -> 90.0 ok=true 
+LOG NOLA dmgin 10s: aplicados=1 cortados_pelo_teto=0 ignorados morto=0 protecao=1 caido=0
+OUT me hp=90.0 alive=true

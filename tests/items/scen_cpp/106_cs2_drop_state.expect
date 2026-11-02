@@ -1,0 +1,25 @@
+h LOG NOLA idrop: 318 meshes, 586 items in the drop table
+h LOG NOLA idrop: inventory widget state 2 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c1 LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+h LOG NOLA istate: drop of GunAK74_ST state from the ground item: {GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=Scope_PSO ammo=17xAmmo_545x39}
+h LOG NOLA idrop: drop seen GunAK74_ST x1 mesh SM_AK74 at 5100,100,0
+h LOG NOLA idrop: registry +0.0.1 owner=0 GunAK74_ST x1 at 5100,100,0 SM_AK74 (total 1)
+h LOG NOLA istate: drop 0.0.1 carries state GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aScope_PSO~r17.Ammo_545x39
+c1 STUB ispawn GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=Scope_PSO ammo=17xAmmo_545x39 5100 100 30
+c1 LOG NOLA istate: drop mirror 0.0.1 spawned with its state: GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=Scope_PSO ammo=17xAmmo_545x39
+c1 LOG NOLA idrop: mirror of 0.0.1 bound to BP_StaticItemContainer_C_s1 (mesh SM_AK74) 0 cm from the spot
+MARK t=dropped
+h DSTAT items role=host taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= idrop: reg=1 loc=1 claims=0 pre=0 registered=1 spawned=0 took=0 lost=0 fixed=0 mc: pid=0 views=1 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c1 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=1 loc=1 claims=0 pre=0 registered=0 spawned=1 took=0 lost=0 fixed=0 mc: pid=1 views=1 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c1 INSTS BP_StaticItemContainer_C_s1 | GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=Scope_PSO ammo=17xAmmo_545x39
+c1 LOG NOLA idrop: 0.0.1 picked up here, asking the host (claim 1)
+h LOG NOLA idrop: 0.0.1 taken by pid 1 (first to ask wins)
+h STUB hide drop1 1
+h LOG NOLA idrop: 0.0.1 is gone from the registry, local copy hidden
+c1 LOG NOLA idrop: 0.0.1 verdict from the host: mine
+c1 LOG NOLA idrop: 0.0.1 got exactly 1
+MARK t=c1-took
+c1 INSTS me | GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=Scope_PSO ammo=17xAmmo_545x39 | GunAK74_ST dur=0.6000
+h INSTS me | GunAK74_ST dur=0.9000
+h HIDDEN drop1 1

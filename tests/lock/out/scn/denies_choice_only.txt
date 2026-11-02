@@ -1,0 +1,15 @@
+role host
+flag choice 1
+pawn 1000 442207.0 470552.0 0
+npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+ph 0061764645D2215D4A0E9B852B301CC8 n1
+usable u1 01C54CD64D96F4CEE43A00B763ECC498 442057.0 470452.0 0 A:1,B:1
+usable u2 FFFFFFFF000000010000000200000003 442057.0 470452.0 0 A:1
+shot n1
+trig ANCQ02_OnTriggerEnterEvent_Roof 7
+trig ANCQ01_OnTriggerEnterEvent_BlindDogs 8
+usedeny u1 11,22,33
+usedeny u2 44,55,66
+run 100
+state
+leaddlg

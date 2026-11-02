@@ -1,0 +1,23 @@
+# host: branch exits and decisive answers are recorded and sent as one #QB tag to every client (3 players); non-table nodes, unknown and empty pins pass unrecorded; answers stay free on the host
+role host
+pawn 1
+t 100
+peer up 1
+views 3
+vpeer 1 up 1
+vpeer 2 up 1
+fire ANCQ03_If_Distance True fin
+fire Not_A_Branch_Node True fin
+fire ANCQ03_If_Distance Maybe fin
+fire ANCQ03_If_Distance - fin
+fire ancq03_if_distance false fin
+t 103
+fire BodyParts_Malahit_Random 3 fin
+fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 mid
+answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+answer E03_SQ01_Dialog_VetosInTrailer_WaitForReply
+t 105
+qb
+t 1100
+qb
+status

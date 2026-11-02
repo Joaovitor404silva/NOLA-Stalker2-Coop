@@ -1,0 +1,9 @@
+spec i16cb_deadall
+note i16cb: runs right after the trigger (setflag A natfar 1, setflag A natfd 1; its first step puts cfg natdead back to 30). Before it the host had natfar 0 + natdead -1 + natfd 0 while scene i16cb_dogs killed six dogs 4-9 m from the host, so every dead row was dropped at the scan that saw it dead (never sent), the corpses sit in FreshDead prev with no alive stamp younger than 12 s, and the 12 s scene wait outlasts FreshDead aliveT 10 s. Old DLL: natfd 1 and natfar 1 do not list them (prev and aliveT block the old rule), so host corpos_listados stays below 6 and B mortas stays below 6; natdeadall and corpos_antigos do not exist. New DLL: natdeadall=1 lists the six 2 per scan (corpos_listados>=6, corpos_antigos>=6 within 40 s), B makes six dead copies one at a time (mortas>=6 within 90 s), no DUPLICADA, no desiste. The thresholds assume a baseline below 6 corpses near the host (the live run showed 1).
+mark
+cfg A natdead 30
+expect A i16cl natfar=1 corpos_listados=([6-9]|\d\d+) corpo_mais_velho=\d+ s natdeadall=1 corpos_antigos=([6-9]|\d\d+) within 40
+expect B NOLA natnpc: host uid=\d+ \(_\d+\) morreu no host -> copia morta within 60
+expect B NOLA natnpc 10 s \(cliente\): host=\d+ copias=\d+ \(vivas=\d+ mortas=([6-9]|\d\d+) within 90
+expect_not B NOLA natnpc: DUPLICADA during 60
+expect_not B desiste desta uid during 30

@@ -1,0 +1,28 @@
+out D:\modding\proofs\20261030_v130g_hostonly
+up -Reuse -Calm -Dll D:\modding\cpp\wt\v130g\cppbuild\OutFast\NolaNative\NolaNative.dll -Save C:\modding\s2harness\testsave\scanner_20261030_host
+setflag A downsecs 99999
+setflag B downsecs 99999
+setflag A bothdie 0
+setflag B bothdie 0
+setflag A bothdown 0
+setflag B bothdown 0
+setflag A devcmd 1
+setflag B devcmd 1
+setflag A qhostonly 1
+setflag B qhostonly 1
+setflag A qobjsync 1
+setflag B qobjsync 1
+setflag B qdivmute 1
+settime A 12
+settime B 12
+run calm
+assert alive A
+assert alive B
+assert peer
+assert noui B
+mark v130g_client_touch
+run D:\modding\cpp\wt\v130g\tests\v130g_hostonly_spec.txt
+mark v130g_host_touch
+run D:\modding\cpp\wt\v130g\tests\v130g_hostonly_host_spec.txt
+wait 3
+shot v130g_scanner on=A,B cam=2.5

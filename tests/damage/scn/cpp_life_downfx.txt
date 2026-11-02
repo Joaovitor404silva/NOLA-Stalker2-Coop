@@ -1,0 +1,125 @@
+# DV1: stock low-health screen effect while downed (downfx)
+role client
+flag downcam 0
+flag downhands 0
+flag downfx 1
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 0
+flag reviveitem 0
+flag bothdie 1
+me 100 1 0 0 0
+set me uid 0
+x1 RV 0,0
+x1 L a,100,100
+remote 5000 0 0 0
+t 0
+do lifeGuard
+# 1 stock effect already running: nothing applied
+lowhp 0.8
+set me hp 10
+t 1
+do lifeGuard
+t 2
+do lifeGuard
+t 3.6
+do lifeGuard
+remote 5000 0 0 32
+t 32
+do lifeGuard
+# 2 stock effect missing: applied, probed, removed on revive
+lowhp 0
+set me hp 10
+remote 5000 0 0 33
+t 33
+do lifeGuard
+t 35.6
+do lifeGuard
+lowhp 0.82
+t 38.2
+do lifeGuard
+remote 5000 0 0 64
+t 64
+do lifeGuard
+# 3 MID not there yet: applied; removed on death
+lowhp -1
+set me hp 10
+remote 5000 0 0 65
+t 65
+do lifeGuard
+t 67.6
+do lifeGuard
+set me alive 0
+t 68
+do lifeGuard
+# 4 removed on pawn change (load)
+newpawn
+set me alive 1
+set me hp 100
+remote 5000 0 0 69
+t 69
+do lifeGuard
+lowhp 0
+set me hp 10
+t 70
+do lifeGuard
+t 72.6
+do lifeGuard
+nopawn
+t 73
+do lifeGuard
+newpawn
+set me alive 1
+set me hp 100
+remote 5000 0 0 74
+t 74
+do lifeGuard
+# 5 removed on flag off
+set me hp 10
+t 75
+do lifeGuard
+t 77.6
+do lifeGuard
+flag downfx 0
+t 78
+do lifeGuard
+flag downfx 1
+set me hp 100
+remote 5000 0 0 110
+t 110
+do lifeGuard
+# 6 removed on session end
+set me hp 10
+remote 5000 0 0 111
+t 111
+do lifeGuard
+t 113.6
+do lifeGuard
+peer left
+t 114
+do lifeGuard
+peer up
+set me hp 100
+remote 5000 0 0 115
+t 115
+do lifeGuard
+# 7 removed on DLL unload
+set me hp 10
+t 116
+do lifeGuard
+t 118.6
+do lifeGuard
+unload
+# 8 flag off from the start: nothing
+flag downfx 0
+set me hp 100
+remote 5000 0 0 150
+t 150
+do lifeGuard
+set me hp 10
+t 151
+do lifeGuard
+t 154
+do lifeGuard
+hp me

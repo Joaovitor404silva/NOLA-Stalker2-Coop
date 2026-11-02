@@ -1,0 +1,22 @@
+role host
+pawn 1
+t 5
+pos 0 0 0
+views 3
+vpeer 0 up 1
+vpeer 1 up 1
+vpeer 2 up 1
+vpart 0 QN c,1,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist
+run 1
+t 6
+run 1
+t 8
+vpart 0 QN c,1,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist|x,2,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist
+run 1
+t 9
+vpeer 1 down 0
+run 1
+t 10
+flag qdist 0
+vpart 0 QN c,3,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist
+run 1

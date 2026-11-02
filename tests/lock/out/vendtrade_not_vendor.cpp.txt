@@ -1,0 +1,9 @@
+> role client
+> flag vendtrade 1
+> pawn 1000 442207.0 470552.0 0
+> view on
+> interact 442057.0 470452.0 832.0
+> run 600
+L 100 NOLA vend: 96 vendedores em s2u_vendor.lua
+> view off
+> run 300

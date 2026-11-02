@@ -1,0 +1,21 @@
+scene i16cb_dogs8
+note i16cb reload: god on the host (he gets shot in this save), eight frozen blind dogs 4-11 m away, killed after 3 s; the client next to the host (i16cl_back, 4.5 m) copies each one alive and kills the copy when the host row turns dead; the 8 s wait lets the last copy die before the plan goes on
+god 1
+spawn sid=Blinddog at=player+4 freeze=1 as=d1
+spawn sid=Blinddog at=player+5 freeze=1 as=d2
+spawn sid=Blinddog at=player+6 freeze=1 as=d3
+spawn sid=Blinddog at=player+7 freeze=1 as=d4
+spawn sid=Blinddog at=player+8 freeze=1 as=d5
+spawn sid=Blinddog at=player+9 freeze=1 as=d6
+spawn sid=Blinddog at=player+10 freeze=1 as=d7
+spawn sid=Blinddog at=player+11 freeze=1 as=d8
+wait 3
+kill $d1
+kill $d2
+kill $d3
+kill $d4
+kill $d5
+kill $d6
+kill $d7
+kill $d8
+wait 8

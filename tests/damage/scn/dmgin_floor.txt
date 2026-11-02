@@ -1,0 +1,19 @@
+role client
+flag dmgin 1
+flag dmgfloor 10
+flag dmgdown 10
+flag dmgmode 2
+me 100 1 0 0 0
+t 0
+do dmgIn
+t 3.5
+x1 D 1,95.0
+do dmgIn
+hp me
+t 4
+x1 D 1,95.0|2,20.0
+do dmgIn
+t 14
+x1 D 3,20.0
+do dmgIn
+hp me

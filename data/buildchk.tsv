@@ -1,0 +1,183 @@
+#exe	ts=2b1aeebf	textvs=7cae8c8	ver=5.5.4.0	build=26123434
+name	rva	at	src	pattern
+lshold.gate	389e3b8	389e3b8	manifest:lshold	56 48 83 EC 40 4C 89 C6 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 38 83 79 08 00 74 ?? 48 8B 09 48 85 C9 74 ?? 48 8B 06
+lshold.malloc	23cfda2	23cfda2	manifest:lshold	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 78 0F 29 74 24 60 89 D7 49 89 CE
+lshold.free	1fedb86	1fee3ae	manifest:lshold	56 57 48 83 EC 28 48 89 CE 85 D2 0F 84 ?? ?? ?? ?? 89 D7 48 63 C2 48 01 C0 48 8B 0D ?? ?? ?? ?? 48 85 C9 74 ?? 48 8B 11 4C 8B 4A 60 48 8D 15 ?? ?? ?? ?? 49 39 D1 0F 85 ?? ?? ?? ?? 48 8D 50 0F 48 3D F0 7F 00 00 77 ?? 48 C1 EA 04 48 8D 05 ?? ?? ?? ?? 0F B6 04 02 B9 32 00 00 00 29 C1 48 8D 05 ?? ?? ?? ?? 0F B7 04 48 48 D1 E8 39 F8 41 B8 FF FF FF 7F 44 0F 4D C0 44 3B 46 0C 74 ?? 44 89 46 0C 8B 56 08 C7 44 24 20 02 00 00 00 41 B9 02 00 00 00 48 89 F1 E8 ?? ?? ?? ?? 90 48 83 C4 28 5F 5E C3 48 89 D1 48 83 E1 F0 48 81 F9 F0 7F 00 00 76 ??
+ls.vf154	3679f5c	3679f5c	manifest:lsskip	56 48 83 EC 20 48 89 CE E8 ?? ?? ?? ?? 48 89 C1 E8 ?? ?? ?? ?? 84 C0 0F 84 ?? ?? ?? ??
+ls.press	3551ba6	3551ba6	manifest:lsskip	56 48 83 EC 20 48 89 CE E8 ?? ?? ?? ?? 48 89 C1 B2 01 E8 ?? ?? ?? ?? 48 8B 8E 00 03 00 00 48 8B 01 B2 01 FF 90 D8 02 00 00
+ls.flow	ff7408	ff7408	manifest:lsskip	48 8B 05 ?? ?? ?? ?? 48 8B 88 D8 01 00 00 E9 ?? ?? ?? ?? CC 56 48 83 EC 30 48
+menu.build	33319a4	33319a4	manifest:joinmenu	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 48 0F 29 74 24 30 48 89 D6 48 89 CB
+menu.weakget	20afdf6	20afdf6	manifest:joinmenu	8B 51 04 85 D2 74 ?? 8B 09 31 C0 85 C9 78 ?? 39 0D ?? ?? ?? ?? 7E ?? 44 0F B7 C1 48 8B 05 ?? ?? ?? ?? C1 E9 10 48 8B 04 C8 4F 8D 04 40 42 8D 0C C5 00 00 00 00 48 01 C1 74 ?? 42 39 54 C0 10 75 ?? 42 8B 44 C0 08 A9 00 00 20 10 75 ?? 48 8B 01 C3 31 C0 C3 41 57 41 56 41 55 41 54 56
+menu.setname	3331cf4	3331cf4	manifest:menurelabel	56 48 83 EC 20 48 8B 81 00 03 00 00 48 85 C0 74 ?? 48 89 CE 8B 48 08 0F BA E1 1E
+menu.flow	346b32e	346b32e	manifest:csexit	56 48 83 EC 20 48 89 CE 88 51 68 E8 ?? ?? ?? ?? 0F B6 05 ?? ?? ?? ?? 48 83 F8 09
+solo.cansave	e44e3c	e44e3c	manifest:rolesave	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC D8 00 00 00 44 0F 29 84 24 C0 00 00 00 0F 29 BC 24 B0 00 00 00 0F 29 B4 24 A0 00 00 00 48 8B 05 ?? ?? ?? ?? 48 31 E0 ?? ?? ?? ??
+solo.savetypes1	361bea0	361bea0	manifest:rolesave	56 57 53 48 83 EC 30 48 89 D6 48 89 CF 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 28 48 8B 1D ?? ?? ?? ?? 48 89 D9
+solo.savetypes2	6be8e5c	6be8e5c	manifest:rolesave	56 48 83 EC 20 48 89 CE 48 8B 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 84 C0 74 ??
+solo.autosave	3554b0a	3554b0a	manifest:rolesave	41 56 56 57 53 48 81 EC 88 00 00 00 0F 29 74 24 70 48 89 CE 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 68 F3 0F 10 B1 80 00 00 00
+solo.startnode	500f70	500f70	manifest:rolemute	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC 98 00 00 00 4C 89 C6 48 89 D7 49 89 CF
+sid.release	1ffefc6	1ffefc6	manifest:rolemute,items	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 48 85 D2 7E ?? 89 D6 48 89 CF
+csave.assign	21c034	21c034	manifest:coopsaves	56 57 53 48 83 EC 20 48 89 CE 48 39 D1 74 ?? 44 8B 46 0C 48 63 7A 08 48 8B 1A
+csave.reread	31ea550	31ea550	manifest:coopsaves	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 68 48 89 D6 48 89 CF 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 60 8B 91 48 01 00 00
+life.godoff	372f080	372f080	manifest:life_god	48 83 EC 28 83 3D ?? ?? ?? ?? FF 74 ?? E8 ?? ?? ?? ?? B9 FF FF FF 07 23 0D ?? ?? ?? ?? 81 F9 00 04 00 00 73 ?? 89 C9 48 69 C9 00 07 00 00 48 01 C1 48 83 C1 10 BA ?? 00 00 00 48 83 C4 28 E9 ?? ?? ?? ?? 48 8B 00 81 C1 00 FC FF FF 81 F9 FF 03 00 00 76 ?? EB ?? 48 83 C4 28 C3 CC 56 48 83 EC 40
+life.loadui	38ae099	38ae099	manifest:life_loadblock	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC D8 00 00 00 44 88 4C 24 26
+life.buttons	3330b02	3330b02	manifest:life_loadblock	56 57 53 48 83 EC 50 48 89 CE 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 48 48 8D 4C 24 30
+life.loadbegin	38ae8bc	38ae8bc	manifest:life_loadbegin	41 56 56 57 53 48 83 EC 48 4C 89 C6 48 89 CF 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 40 0F 10 02 0F 11 81 B0 01 00 00
+life.knock	3307254	3307254	manifest:life_knock	53 48 83 EC 20 89 D3 48 8B 41 08 88 50 2D 48 8B 09 E8 ?? ?? ?? ?? 48 8B 80 50 06 00 00
+life.weakobj	2602220	2602220	manifest:life_knock	8B 91 1C 04 00 00 85 D2 74 ?? 8B 89 18 04 00 00 31 C0 85 C9 78 ?? 39 0D ?? ?? ?? ??
+cgc.keep	d2352	d2352	manifest:clhostgc	41 57 41 56 56 57 55 53 48 81 EC D8 00 00 00 0F 29 BC 24 C0 00 00 00 0F 29 B4 24 B0 00 00 00 44 89 C6 48 89 D3
+cgcmc.mgr	d1fc4	d1fc4	manifest:corpsemc	48 83 EC 28 8B 05 ?? ?? ?? ?? 8B 0D ?? ?? ?? ?? 65 48 8B 14 25 58 00 00 00 48 8B 0C CA 3B 81 E8 00 00 00 7F 0C 48 8D 05 ?? ?? ?? ?? 48 83 C4 28 C3
+items.remove	35f488c	35f488c	manifest:items	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 78 44 88 4C 24 2B 48 89 D7 48 8B
+sid.handle	25a231a	25a231a	manifest:items,save	56 57 53 48 83 EC 40 48 89 CE 48 8B 05 ?? ?? ?? ?? ?? ?? ?? 48 89 44 24 38 48 8B 0A 48 89 4C
+sid.ref	259c49c	259c49c	manifest:items,save	56 57 53 48 83 EC 20 85 D2 7E ?? 89 D6 48 89 CF 48 8D 99 68 00 02 00 48 89 D9
+inv.count	6b07ee0	6b07ee0	manifest:invnull,save	56 57 48 83 EC 38 48 89 D6 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 30 31 FF 48 85 C9 74 ?? 48 8B 81 50 06 00 00 48 8B 88 78 06 00 00 48 85 C9 74 ?? E8 ?? ?? ?? ?? 48 89 C7 48 8D 0D ?? ?? ?? ??
+save.sum	68eb5ae	68eb5ae	manifest:save	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 78 48 89 D6 48 89 CB 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 70 8B 3A
+sid.fromstr	25db0e4	25db0e4	manifest:wpnsid,natgen	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC D8 00 00 00 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 ?? ?? ?? ?? 00 00 00 31 FF 48 85 D2 0F 84
+wpn.equip	3740bb1	3740bb1	manifest:wpnsid	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 48 4C 89 C6 89 D3 49 89 CF 48 8B ?? ?? ?? ??
+wpn.rec	25f9944	25f9944	manifest:wpnsid	56 48 83 EC 20 89 D6 8B 05 ?? ?? ?? ?? 8B 0D ?? ?? ?? ?? 65 48 8B 14 25 58 00 00 00 48 8B 0C CA 3B 81 E8 00 00 00 7F ??
+peer.preexit	56cca96	56cca96	manifest:peerbye	56 57 53 48 83 EC 20 48 89 CE 80 3D ?? ?? ?? ?? 04 72 ?? 48 8D 0D ?? ?? ?? ??
+ag.cmp1	aeea43	aeea43	manifest:aggrop	3B 05 ?? ?? ?? ?? 0F 84 ?? ?? ?? ?? 31 C0 F3 0F 10 46 70 31 C9 0F 2E 86 90 00 00 00
+ag.cmp2	aeec03	aeec03	manifest:aggrop	44 8B ?? ?? ?? ?? ?? 66 45 0F 57 FF 44 39 E7 74 ?? 66 45 0F 28 F8 E8 ?? ?? ?? ??
+ag.cmp3	aeece9	aeece9	manifest:aggrop	31 C0 44 39 E7 0F 94 C0 31 D2 3B ?? ?? ?? ?? ?? 0F 94 C2 0F 57 C9 F3 0F 5A 4C 95 58
+ag.t1	aeefbe	aeefbe	manifest:aggrop	4C 8B 3D ?? ?? ?? ?? 48 89 F1 E8 ?? ?? ?? ?? F2 41 0F 10 8F A0 00 00 00 F3 0F 58 05
+ag.t2	aeea4f	aeea4f	manifest:aggrop	31 C0 F3 0F 10 46 70 31 C9 0F 2E 86 90 00 00 00 48 8D 56 78 4C 8D 46 58
+ag.t3	aeec19	aeec19	manifest:aggrop	E8 ?? ?? ?? ?? ?? ?? 4E ?? ?? ?? ?? 44 8B 0E 44 8B 40 60 49 89 C1 49 83 C1 48
+ag.t4	aeecfc	aeecfc	manifest:aggrop	0F 57 C9 F3 0F 5A 4C 95 58 F2 0F 59 C8 F2 41 0F 5D C8 F2 41 0F 5F C9 F2
+bul.e87	e6c378	e6c378	manifest:natbullet	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC 98 01 00 00 44 0F 29 AC 24 80 01 00 00 44 0F 29 A4 24 70 01 00 00 44 0F 29 9C 24 60 01 00 00 44 0F 29 94 24 50 01 00 00 44 0F 29 8C 24 40 01 00 00 44 0F 29 84 24 30 01 00 00 0F 29 BC 24 20 01 00 00 0F 29 B4 24 10 01 00 00 4C 89 C7
+bul.v	e6c1c8	e6c1c8	manifest:natbullet	41 57 41 56 56 57 53 48 81 EC C0 00 00 00 0F 29 B4 24 B0 00 00 00 4D 89 C6 0F 28 F1 48 89 CB
+bul.p	b31106	b31106	manifest:natbullet	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC 38 04 00 00 44 0F 29 BC 24 20 04 00 00 44 0F 29 B4 24 10 04 00 00 44 0F 29 AC 24 00 04 00 00 44 0F 29 A4 24 F0 03 00 00 66 44 0F 29 9C 24 E0 03 00 00
+bul.pcall	b30cd0	b30cd0	manifest:natbullet	E8 ?? ?? ?? ?? 48 8D 9E F8 03 00 00 C6 44 24 20 00 48 89 F1 48 89 DA 45 31 C0
+bul.h	7613b2	7613b2	manifest:natbullet	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 58 48 89 D3 48 89 CE 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 50 48 8D B9 B0 00 00 00
+bul.i	b375f0	b375f0	manifest:natbullet	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC B8 02 00 00 0F 29 BC 24 A0 02 00 00 66 0F 29 B4 24 90 02 00 00
+bul.s	e6d378	e6d378	manifest:natbullet	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC A8 02 00 00 44 0F 29 84 24 90 02 00 00 0F 29 BC 24 80 02 00 00 0F 29
+dmg.entry	c4c814	c4c814	manifest:natdmg	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC 88 02 00 00 44 0F 29 AC 24 70 02 00 00
+dmg.build	6c4e86e	6c4e86e	manifest:natdmg	56 57 53 48 83 EC 20 48 89 CE F3 0F 10 42 10 8B 42 14 0F B7 7A 20 0F 10 0A
+dmg.dtor	25fcefa	25fcefa	manifest:natdmg	56 57 48 83 EC 28 48 89 CE 80 B9 80 00 00 00 00 0F 85 ?? ?? ?? ?? 8B 7E 30
+thr.writer	21c78c	21c78c	manifest:nathol	56 48 83 EC 20 48 89 CE 80 B9 AD 01 00 00 00 74 ?? C6 86 AD 01 00 00 00 80 BE AF 01 00 00 00 74 ?? C6 86 AF 01 00 00 00 80 BE 28 01 00 00 01 74 ?? 31 C0 88 86 AC 01 00 00 C6 86 AD 01 00 00 01 80 BE AF 01 00 00 ?? ?? ?? ??
+thr.second	49482e	49482e	manifest:nathol	56 48 83 EC 20 48 89 CE 80 B9 AF 01 00 00 00 74 ?? 80 BE AE 01 00 00 00
+thr.holster	c6055a	c6055a	manifest:nathol	56 48 83 EC 20 48 89 CE 8B 41 54 85 C0 0F 84 ?? ?? ?? ?? 8B 56 50 31 C9 85 D2 78 ?? 39 15 ?? ?? ?? ?? 7E ?? 44 0F B7 C2 48 8B 0D ?? ?? ?? ??
+gen.pick	854bbe	854bbe	manifest:natgen	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC B8 01 00 00 0F 29 BC 24 A0 01 00 00 0F 29 B4 24 90 01 00 00 48 89 54 24 60
+gen.redress	6898afe	6898afe	manifest:natgen	41 57 41 56 41 54 56 57 53 48 81 EC B8 00 00 00 48 89 D6 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 84 24 B0 00 00 00 48 8B 81 50 06 00 00
+gen.resize	989d88	989d88	manifest:natgen	56 57 48 83 EC 28 48 89 CE 85 D2 0F 84 ?? ?? ?? ?? 89 D7 48 63 C2 48 C1 E0 02 48 8B 0D ?? ?? ?? ?? ??
+mont.play	4d1476	4d1476	manifest:montnull	41 57 41 56 56 57 55 53 48 81 EC A8 00 00 00 44 0F 29 84 24 90 00 00 00 0F 29 BC 24 80 00 00 00 0F 29 74 24 70 44 89 CB 0F 28 F2 48 89 D6 48 89 CF 40 8A AC 24 08 01 00 00 F3 0F 10 BC 24 00 01 00 00 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 68 0F 57 C0 0F 29 44 24 40 C7 44 24 50 CD CC 4C 3E 31 C0 88 44 24 54 88 44 24 58 48 85 D2 74 ?? 4C 8B B6 C0 00 00 00 8A 05 ?? ?? ?? ?? 4D 85 F6 74 ?? 84 C0 0F 85 ?? ?? ?? ?? F3 44 0F 10 86 C8 00 00 00 44 8A BE E4 00 00 00 84 C0 0F 85 ?? ?? ?? ?? 4C 89 74 24 48 F3 44 0F 11 44 24 50 44 88 7C 24 54 8A 86 B8 00 00 00 88 44 24 58 4C 8D B6 78 01 00 00 49 8B 0E 48 89 4C 24 40 40 88 6C 24 30 F3 0F 11 7C 24 28 88 5C 24 20 4C 8D 44 24 40 48 89 F9 48 89 F2 0F 28 DE E8 ?? ?? ?? ??
+mont.attack	f31c40	f31c40	manifest:natnoatk	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC D8 00 00 00 89 D5 48 89 CB
+mont.stance	1e8b48	1e8b48	manifest:natstance	56 57 53 48 83 EC 30 48 89 CE 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 28 48 8B 09 8B 81 1C 04 00 00 85 C0 0F 84 ?? ?? ?? ?? 8B 91 18 04 00 00 31 C9 85 D2 78 ??
+mont.look	222e62	222e62	manifest:natlook	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC B8 03 00 00 48 89 D3 49 89 CE 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 84 24 B0 03 00 00 80 3A 03
+oodle.dec	20b8c87	20b8c87	manifest:wsplice	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 78 4C 89 CF 4D 89 C6 48 89 D6 48 89 CB 8B 05 ?? ?? ?? ??
+oodle.init	31be684	31be684	manifest:wsplice	48 83 EC 28 8B 05 ?? ?? ?? ?? 8B 0D ?? ?? ?? ?? 65 48 8B 14 25 58 00 00 00 48 8B 0C CA 3B 81 E8 00 00 00 7F ?? 48 83 C4 28 C3 48 8D 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 83 3D ?? ?? ?? ?? FF 75 ?? 48 8D 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8D 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8D 0D ?? ?? ?? ?? 48 83 C4 28 E9 ?? ?? ?? ?? CC 41
+oodle.enc	31be6ec	31be6ec	manifest:wsplice	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC C8 00 00 00 4D 89 C4 49 89 D7 0F B6 BC
+oodle.bound	2689f00	2689f00	manifest:wsplice	4C 8B C2 B8 00 3B 00 00 D3 E8 B9 18 00 00 00 A8 01 B8 12 01 00 00 0F 44 C8
+tut.getwidget	42e250	42e250	manifest:uitut	56 57 48 83 EC 28 89 D6 48 89 CF 48 8B 01 FF 90 38 03 00 00 84 C0 75 ??
+tut.iswidgetvisible	42b2ba	42b2ba	manifest:uitut	56 57 53 48 83 EC 20 8B 81 78 03 00 00 3B 81 A4 03 00 00 74 ?? 48 8D 81 A8 03 00 00
+tut.requestview	9b351a	9b351a	manifest:uitut	56 57 53 48 83 EC 50 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 48 8B 81 28 04 00 00
+tut.hidewidget	c07da0	c07da0	manifest:uitut	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 78 44 88 44 24 27 89 D7 48
+rel.get	6bbac9a	6bbac9a	manifest:relsync	56 57 53 48 83 EC 70 48 8B 05 ?? ?? ?? ?? 48 31 E0 48 89 44 24 68 83 FA EF
+rel.set	6b4fa86	6b4fa86	manifest:relsync	41 56 56 57 53 48 83 EC 58 0F 29 74 24 40 44 89 CE 44 89 C7 89 D3 E8 ?? ?? ?? ??
+ai.addmoveto	6bbadfa	6bbadfa	manifest:natnpc	41 57 41 56 56 57 53 48 81 EC 60 03 00 00 0F 29 B4 24 50 03 00 00 48 8B 05 ?? ?? ?? ??
+ai.feat	6bbb77c	6bbb77c	manifest:natnpc	48 8B 0D ?? ?? ?? ?? E9 ?? ?? ?? ?? 48 8B 0D ?? ?? ?? ?? E9 ?? ?? ?? ?? 56 57 53
+sid.pool	b10f588	6b07f1a	manifest:rolemute,items,save,natgen,wpnsid	48 8D 0D ?? ?? ?? ?? 48 89 F2 41 B0 01 E8 ?? ?? ?? ?? 48 8D 54 24 2C 89 02 48 89 F9 45 31 C0
+sid.pool.neg	b12f618	f89f3	manifest:rolemute	48 8D 0D ?? ?? ?? ?? 48 8D 15 ?? ?? ?? ?? 48 0F 48 D1 89 C1 C1 F9 1F 31 C1 8D 81 FF 03 00 00 85 C9 0F 49 C1 41 89 C0 41 81 E0 00 FC FF FF 44 29 C1 C1 F8 0A 48 98 48 8B 04 C2 48 63 C9 48 C1 E1 05 83 7C 08
+solo.slm	a2c8698	42b145	manifest:rolesave,coopsaves	48 8B 05 ?? ?? ?? ?? 80 B8 08 02 00 00 00 75 ??
+solo.asm	a2c86a0	2f1e609	manifest:rolesave	48 8B 0D ?? ?? ?? ?? 0F 57 C0 48 8D 54 24 20 0F 29 02 E8 ??
+csave.cm	a2c8690	341684	manifest:coopsaves	48 8B 0D ?? ?? ?? ?? B2 03 E8 ?? ?? ?? ?? 0F B7 88 46 01 00 00
+player.id	9eda140	aeea43	manifest:aggrop,natbullet,natdmg	3B 05 ?? ?? ?? ?? 0F 84 ?? ?? ?? ?? 31 C0 F3 0F 10 46 70
+bul.time	a2c85a8	110efc	manifest:natbullet	48 8B 05 ?? ?? ?? ?? F2 0F 5A 80 A0 00 00 00 F3 0F 11 41 18
+guobj.num	a0d49a4	9770	manifest:clhostgc,nathol	39 0D ?? ?? ?? ?? 0F 8E ?? ?? ?? ?? 0F B7 D1 4C 8B 05 ?? ?? ?? ?? C1 E9 10 49 8B 0C C8 48 8D 14 52 44 8D 04 D5 00 00 00 00 49 01 C8 0F 84 ?? ?? ?? ?? 39 44 D1 10 0F 85 ?? ?? ?? ?? 8B 44 D1 08 A9 00 00 20 10 75 ??
+guobj.chunks	a0d4990	977f	manifest:clhostgc,nathol	4C 8B 05 ?? ?? ?? ?? C1 E9 10 49 8B 0C C8 48 8D 14 52 44 8D 04 D5 00 00 00 00 49 01 C8 0F 84 ?? ?? ?? ?? 39 44 D1 10 0F 85 ?? ?? ?? ?? 8B 44 D1 08 A9 00 00 20 10 75 ??
+oodle.pool	9f928f8	31be6c3	manifest:wsplice	48 8D 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8D 0D ??
+menu.flowstate	b0f6590	5be558	manifest:csexit	8A 05 ?? ?? ?? ?? 84 C0 74 ?? B9 01 00 00 00 C4 E2 79 F7 C1
+lshold.loaddelegate	8eb3030	2fb28be	manifest:lshold	48 8D 05 ?? ?? ?? ?? 49 89 45 00 49 8D 4D 18 31 FF
+inv.off.comp	6b07eff	6b07eff	manifest:invnull,save,wpnsid,natdmg	48 8B 81 ?? ?? ?? ?? 48 8B 88 78 06 00 00 48 85 C9 74 ??
+inv.off.items	6b07f06	6b07f06	manifest:invnull,save,wpnsid	48 8B 88 ?? ?? ?? ?? 48 85 C9 74 ?? E8 ?? ?? ?? ??
+inv.off.ctr	ff1646	ff1646	manifest:items,save	48 8B 81 ?? ?? ?? ?? C3 41 57 41 56 41 55 41 54
+ldmgr.cleanup	361d26e	361d26e	manifest:ldmgr	48 83 EC 28 48 39 15 ?? ?? ?? ?? 75 09 80 3D ?? ?? ?? ?? 00 75 05 48 83 C4 28 C3 E8 ?? ?? ?? ?? 90 48 83 C4 28 E9 ?? ?? ?? ??
+s2m_cgcmc_x0	221f7d8	221f7d8	s2m_cgcmc_x0.cpp	56 57 53 48 83 EC 30 0F 29 74 24 20 0F 28 F1 48 89 CE 8B 05 C0 4F B3 08 8B 0D 86 6B CE 07 65 48
+s2m_cgcmc_x0	704a76	704a76	s2m_cgcmc_x0.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 68 0F 29 7C 24 50 0F 29 74 24 40 4C 89 CE 48 89 D7
+s2m_cgcmc_x0	8ff99d	8ff99d	s2m_cgcmc_x0.cpp	F3 0F 10 0D 8F ED 5D 09 E8 2E FE 91 01 84 C0 0F 85 A8 00 00 00 48 83 7F 20 00 74 43 48 8B 07 48
+s2m_cgcmc_x0	221f3e5	221f3e5	s2m_cgcmc_x0.cpp	8B 47 54 3B 05 4E AD CB 07 0F 87 4C 03 00 00 F3 0F 10 0D 38 F3 CB 07 48 89 F1 E8 D4 03 00 00 E9
+s2m_cgcmc_x0	7034df	7034df	s2m_cgcmc_x0.cpp	48 89 7B 08 48 89 73 10 4C 89 73 18 C6 43 20 00 48 8D 5C 24 50 0F 29 3B 4C 8D 4C 24 28 48 89 D9
+s2m_cgcmc_x0	703502	703502	s2m_cgcmc_x0.cpp	0F 28 D6 E8 6C 15 00 00 8B 43 08 85 C0 7E 59 31 DB BD 01 00 00 00 48 8B 54 24 50 48 63 CB 4C 8B
+s2m_cgcmc_x0	221f272	221f272	s2m_cgcmc_x0.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC C8 00 00 00 48 89 D6 48 89 CF 48 8B 05 2E A8 C6 07
+s2m_csave	33ab358	33ab358	s2m_csave.cpp	56 44 8B 89 48 01 00 00 45 85 C9 0F 8E 91 00 00 00 45 31 C0 31 C0 4C 8B 91 40 01 00 00 4C 89 C6
+s2m_items_x0	24efea0	24efea0	s2m_items_x0.cpp	48 63 A9 18 01 00 00 48 85 ED 0F 84 8A 03 00 00 4C 8B A9 10 01 00 00 48 C1 E5 04 4C 01 ED 48 8D
+s2m_items_x0	24eff06	24eff06	s2m_items_x0.cpp	4C 8D 3D 13 B2 25 08 81 FE 00 10 00 00 72 11 4D 8B 3F 81 C6 00 F0 FF FF 81 FE FF 0F 00 00 77 EF
+s2m_items_x0	24eff56	24eff56	s2m_items_x0.cpp	48 C1 E1 07 48 8D 04 C1 49 01 C7 49 83 C7 10 48 8D 05 82 53 40 04 49 39 C4 0F 85 EA 00 00 00 41
+s2m_items_x0	68f5304	68f5304	s2m_items_x0.cpp	44 8B 72 38 45 85 F6 7E 3A 48 8D 1D DC A2 83 04 48 89 D9 FF 15 23 1D 34 03 48 8D 05 64 A2 81 04
+s2m_items_x0	1fb59ea	1fb59ea	s2m_items_x0.cpp	8A 41 40 24 01 C3 F6 41 40 11 0F 95 C0 C3 56 57 48 83 EC 28 89 D7 48 89 CE 48 8D 05 16 F6 ED 06
+s2m_items_x0	4b74ea	4b74ea	s2m_items_x0.cpp	03 7C 11 54 48 83 C3 04 4C 39 F3 75 A3 48 8B 5C 24 28 E9 22 FF FF FF 48 89 D9 E8 7D 66 B3 01 E9
+s2m_items_x0	4b7315	4b7315	s2m_items_x0.cpp	48 8D 05 6C 82 C5 0A 44 89 F1 81 E1 FF 03 00 00 41 C1 EE 0A 4A 8B 04 F0 C1 E1 05 FF 44 08 10 48
+s2m_items_x0	259c4bc	259c4bc	s2m_items_x0.cpp	89 F0 25 FF 03 00 00 C1 EE 0A 48 8B 0C F7 C1 E0 05 FF 44 01 10 48 89 D9 48 83 C4 20 5B 5F 5E 48
+s2m_items_x0	6bc4908	6bc4908	s2m_items_x0.cpp	4C 8B 35 E9 3C 70 03 48 8D 0D 72 AC 54 04 48 89 F2 41 B0 01 E8 F9 D9 9D FB 4C 8D 7C 24 44 41 89
+s2m_items_x0	6bc4952	6bc4952	s2m_items_x0.cpp	E8 2D 0C 37 FC 48 89 D9 E8 C3 71 C8 F9 48 89 D9 E8 BF 83 EA F9 48 8B 0E 48 85 C9 74 05 E8 12 92
+s2m_items_x0	ec4464	ec4464	s2m_items_x0.cpp	48 89 D0 8B 49 08 89 0A C3 CC 48 8D 41 78 C3 CC 56 57 53 48 83 EC 20 48 89 D6 8B 99 B0 00 00 00
+s2m_items_x0	2ef5135	2ef5135	s2m_items_x0.cpp	48 8B 8E E0 06 00 00 48 85 C9 0F 84 F5 00 00 00 E8 6A D5 69 FD 84 C0 0F 84 E8 00 00 00 48 8B 86
+s2m_items_x0	2ef51a2	2ef51a2	s2m_items_x0.cpp	FF 90 70 05 00 00 84 DB 75 73 8A 96 D8 04 00 00 48 89 F1 E8 3A D1 69 FD 48 8B 0D 7F 34 3D 07 4C
+s2m_items_x0	2f35584	2f35584	s2m_items_x0.cpp	41 57 41 56 56 57 55 53 48 81 EC C8 00 00 00 0F 29 B4 24 B0 00 00 00 4C 89 CF 44 89 C5 48 89 D6
+s2m_items_x0	84bb22	84bb22	s2m_items_x0.cpp	41 57 41 56 41 54 56 57 55 53 48 83 EC 20 C6 81 38 01 00 00 01 4C 63 B1 18 01 00 00 4D 85 F6 0F
+s2m_items_x0	a6cd26	a6cd26	s2m_items_x0.cpp	56 48 83 EC 20 48 89 CE 80 B9 38 01 00 00 00 75 0E F3 0F 10 86 3C 01 00 00 48 83 C4 20 5E C3 48
+s2m_ixtap_x0	f8bce6	f8bce6	s2m_ixtap_x0.cpp	41 57 41 56 56 57 53 48 83 EC 40 48 8B 05 C8 DD EF 08 48 31 E0 48 89 44 24 38 48 8B 05 A1 C8 33
+s2m_ldmgr	6b306ea	6b306ea	s2m_ldmgr.cpp	48 83 EC 28 48 8B 0D 3B 5E 5C 04 E8 2A 0F 4C FA 48 89 C1 E8 74 80 F9 FE E8 B3 27 AD FB 48 89 C1
+s2m_ldmgr	6b30888	6b30888	s2m_ldmgr.cpp	56 57 53 48 83 EC 20 E8 62 29 A2 FC 48 85 C0 74 08 48 89 C1 E8 CB FD 0D 00 48 8B 0D F0 7C 79 03
+s2m_menu	33308e2	33308e2	s2m_menu.cpp	56 48 83 EC 20 48 8B 81 E0 02 00 00 48 85 C0 74 4A 8B 40 08 0F BA E0 1E 72 41 48 89 CE 48 8B 81
+s2m_pcompass	d05340	d05340	s2m_pcompass.cpp	41 57 41 56 56 57 55 53 48 83 EC 38 4C 89 CE 49 89 CF 48 8B 05 67 47 18 09 48 31 E0 48 89 44 24
+s2m_pcompass	d01d10	d01d10	s2m_pcompass.cpp	41 57 41 56 56 57 53 48 83 EC 30 48 8B 05 9E 7D 18 09 48 31 E0 48 89 44 24 28 44 8B B1 88 01 00
+s2m_qbranch	7a8b56	7a8b56	s2m_qbranch.cpp	41 57 41 56 41 54 56 57 55 53 48 83 EC 40 4C 89 C6 48 89 D7 48 89 CB 48 8B 05 4C 0F 6E 09 48 31
+s2m_qbranch	7aa720	7aa720	s2m_qbranch.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 68 4C 89 4C 24 38 4C 89 C7 48 89 D3 48 89 CE 48 8B
+s2m_qbranch	2ef4ad6	2ef4ad6	s2m_qbranch.cpp	56 57 48 83 EC 38 48 89 D6 48 8B 05 DA 4F F9 06 48 31 E0 48 89 44 24 30 48 8B B9 50 03 00 00 48
+s2m_qbranch	2f98a44	2f98a44	s2m_qbranch.cpp	56 57 53 48 83 EC 20 48 89 CE 4C 89 81 68 03 00 00 4C 89 89 70 03 00 00 48 89 91 78 03 00 00 41
+s2m_qbranch	235663c	235663c	s2m_qbranch.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC D8 00 00 00 44 89 CD 49 89 D6 49 89 CF 48 8B 05 61
+s2m_qbranch	7a9520	7a9520	s2m_qbranch.cpp	E8 FB 11 00 00 41 8B 55 00 48 8D 35 58 60 96 0A 48 89 F1 E8 8E 5A 85 01 31 DB 41 89 5D 00 8B 17
+s2m_qbranch	106184a	106184a	s2m_qbranch.cpp	E8 D1 8E 74 FF E9 93 FE FF FF 48 8D 4C 24 58 66 BA 5F 00 E8 D2 99 55 01 8B 16 48 8D 44 24 6C 89
+s2m_qbranch	1061e53	1061e53	s2m_qbranch.cpp	E8 C8 88 74 FF E9 99 F8 FF FF CC 8A 41 17 C3 56 48 83 EC 40 48 89 D6 48 8B 05 4F 7C E2 08 48 31
+s2m_qbranch	b92b86	b92b86	s2m_qbranch.cpp	56 8B 81 B0 00 00 00 3B 81 DC 00 00 00 0F 84 E6 00 00 00 4C 8B 02 48 8B 52 08 48 B8 6F 40 90 2F
+s2m_qbranch	2220860	2220860	s2m_qbranch.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 78 0F 29 7C 24 60 0F 29 74 24 50 4C 89 CB 4C 89 C6
+s2m_qbranch	2220a2e	2220a2e	s2m_qbranch.cpp	3B 05 0C 97 CB 07 0F 85 35 FF FF FF 8B AE C0 00 00 00 48 8D 05 31 EC F2 08 48 8D 1D 9A EB F0 08
+s2m_qbranch	2220942	2220942	s2m_qbranch.cpp	80 BE C4 00 00 00 00 0F 85 6A 01 00 00 48 8B 90 40 03 00 00 48 85 D2 0F 84 3B 03 00 00 48 89 F1
+s2m_qbranch	221fa8a	221fa8a	s2m_qbranch.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC E8 01 00 00 0F 29 B4 24 D0 01 00 00 48 89 D6 48 89
+s2m_qbranch	222053a	222053a	s2m_qbranch.cpp	41 57 41 56 41 54 56 57 55 53 48 81 EC A0 00 00 00 48 8B 05 6E 95 C6 07 48 31 E0 48 89 84 24 98
+s2m_qbranch	221fb0a	221fb0a	s2m_qbranch.cpp	F3 0F 10 82 2C 02 00 00 F3 0F 10 5A 28 F3 0F 10 62 2C F3 0F 5C D8 F3 0F 59 DB F3 0F 10 8A 30 02
+s2m_qbranch	221fd87	221fd87	s2m_qbranch.cpp	FF 80 D0 00 00 00 49 83 C5 10 49 39 ED 0F 85 33 FE FF FF 48 8B 84 24 B8 01 00 00 4C 63 B4 24 C0
+s2m_qbranch	221febe	221febe	s2m_qbranch.cpp	E8 9D 09 00 00 48 83 C3 10 4C 39 F3 0F 85 FD FE FF FF 8B 94 24 A8 00 00 00 48 8B 8C 24 A0 00 00
+s2m_qbranch	22206c6	22206c6	s2m_qbranch.cpp	8B 83 D0 00 00 00 8D 48 FF 89 8B D0 00 00 00 83 F8 01 7E 29 0F 57 C0 0F 11 06 48 8B 8C 24 98 00
+s2m_save_x0	6cad650	6cad650	s2m_save_x0.cpp	41 57 41 56 41 54 56 57 53 48 81 EC 98 00 00 00 48 89 CE 48 8B 05 56 C4 1D 03 48 31 E0 48 89 84
+s2m_save_x0	6cadd26	6cadd26	s2m_save_x0.cpp	41 57 41 56 41 54 56 57 55 53 48 81 EC 80 00 00 00 48 89 CE 48 8B 05 7F BD 1D 03 48 31 E0 48 89
+s2n_join	84a8d8	84a8d8	s2n_join.cpp	41 56 56 57 53 48 83 EC 38 48 89 D6 41 8D 40 FF 83 F8 0F 77 16 48 89 CF 44 89 C0 48 8D 04 40 8B
+s2n_join	340692a	340692a	s2n_join.cpp	41 57 41 56 41 54 56 57 55 53 48 83 EC 40 44 89 CB 44 89 C6 89 D5 48 89 CF 48 8B 05 76 31 A8 06
+s2n_nat	aee000	aee000	s2n_nat.cpp	84 24 B0 00 00 00 48 85 C0 74 04 F0 FF 40 08 48 8D 8C 24 50 01 00 00 4C 8D A4 24 A8 00 00 00 4C
+s2n_nat	239895c	239895c	s2n_nat.cpp	56 57 55 53 48 83 EC 28 B3 01 80 B9 18 02 00 00 01 77 0C 48 89 CE 80 B9 A8 00 00 00 01 75 0B 89
+s2n_nat	2397454	2397454	s2n_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC 08 05 00 00 0F 29 BC 24 F0 04 00 00 0F 29 B4 24 E0
+s2n_nat	53671c	53671c	s2n_nat.cpp	48 83 EC 38 48 8B 05 99 33 95 09 48 31 E0 48 89 44 24 30 48 89 54 24 28 48 8B 81 50 02 00 00 48
+s2n_nat	53677a	53677a	s2n_nat.cpp	56 57 53 48 83 EC 40 48 89 D6 48 8B 05 35 33 95 09 48 31 E0 48 89 44 24 38 48 89 54 24 30 48 8B
+s2n_nat	8ea172	8ea172	s2n_nat.cpp	56 57 53 48 83 EC 20 89 D3 48 89 CE 48 8B B9 68 06 00 00 80 BF E8 01 00 00 00 75 4D 0F B6 C3 83
+s2n_nat	237106c	237106c	s2n_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 B8 68 22 00 00 E8 DE 8E 3E 00 48 29 C4 66 44 0F 29 BC 24 50
+s2n_nat	2167e2a	2167e2a	s2n_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC D8 01 00 00 66 44 0F 29 9C 24 C0 01 00 00 66 44 0F
+s2n_nat	116bb94	116bb94	s2n_nat.cpp	80 89 44 05 00 00 20 C6 81 C8 12 00 00 01 31 FF 48 89 B9 00 10 00 00 BB FF FF FF FF 89 99 08 10
+s2n_nat	c60660	c60660	s2n_nat.cpp	41 56 56 57 55 53 48 83 EC 50 0F 29 74 24 40 44 89 CF 0F 28 F2 89 D5 48 89 CE 48 8B 05 3F 94 22
+s2n_nat	c60752	c60752	s2n_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC C8 00 00 00 0F 29 B4 24 B0 00 00 00 89 D5 44 89 CB
+s2n_nat	2372df5	2372df5	s2n_nat.cpp	80 B8 31 09 00 00 00 0F 84 B6 E4 FF FF 8A 88 30 09 00 00 FE C9 B0 01 80 F9 07 0F 87 A5 E4 FF FF
+s2n_nat	23712b8	23712b8	s2n_nat.cpp	31 C0 48 8B 4B 08 88 81 11 01 00 00 48 8B 03 48 8B 40 20 48 8B B0 98 00 00 00 48 85 F6 74 3C 48
+s2n_nat	21df6a	21df6a	s2n_nat.cpp	56 57 48 83 EC 48 0F 29 7C 24 30 0F 29 74 24 20 48 8B 79 28 48 85 FF 75 11 0F 28 74 24 20 0F 28
+s2n_nat	e939e2	e939e2	s2n_nat.cpp	41 57 41 56 41 54 56 57 53 48 81 EC 08 01 00 00 0F 29 BC 24 F0 00 00 00 0F 29 B4 24 E0 00 00 00
+s2x_istate_nat	650894	650894	s2x_istate_nat.cpp	56 57 53 48 83 EC 30 48 8B 05 1E 92 83 09 48 31 E0 48 89 44 24 28 8B 79 38 48 83 C1 38 48 8D 44
+s2x_istate_nat	650922	650922	s2x_istate_nat.cpp	56 57 53 48 83 EC 30 48 89 CE 48 8B 05 8D 91 83 09 48 31 E0 48 89 44 24 28 48 8D 41 38 8B 59 38
+s2x_istate_nat	c5a3a4	c5a3a4	s2x_istate_nat.cpp	41 56 56 57 53 48 83 EC 68 48 89 CE 48 8B 05 09 F7 22 09 48 31 E0 48 89 44 24 60 48 8D 41 38 8B
+s2x_istate_nat	22cc2f2	22cc2f2	s2x_istate_nat.cpp	56 57 53 48 83 EC 30 89 D6 48 8B 05 BE D7 BB 07 48 31 E0 48 89 44 24 28 8B 59 38 48 83 C1 38 48
+s2x_istate_nat	f73f18	f73f18	s2x_istate_nat.cpp	8A 41 41 24 02 D0 E8 C3 48 8B 81 40 10 00 00 0F B6 CA 48 0F A3 C8 0F 92 C0 C3 8A 81 44 01 00 00
+s2x_istate_nat	3491a6a	3491a6a	s2x_istate_nat.cpp	8A 41 41 00 D2 24 FD 08 D0 88 41 41 E9 F3 E4 42 FD CC 48 89 C8 48 89 11 C7 41 08 00 00 00 00 48
+s2x_istate_nat	4da52e	4da52e	s2x_istate_nat.cpp	48 8B 89 90 00 00 00 E9 00 00 00 00 56 48 83 EC 20 48 89 CE 80 39 00 75 0D 48 83 C6 08 48 89 F0
+s2x_istate_nat	2ead6c6	2ead6c6	s2x_istate_nat.cpp	8A 41 20 C3 41 57 41 56 56 57 53 48 83 EC 50 48 89 D3 48 89 CE 48 8B 05 DE C3 FD 06 48 31 E0 48
+s2x_istate_nat	1170dc4	1170dc4	s2x_istate_nat.cpp	E9 8B DE 3C FF CC 56 57 55 53 48 83 EC 28 48 89 D6 48 89 CF 83 BA B8 00 00 00 00 0F 85 8C 00 00
+s2x_istate_nat	25fac38	25fac38	s2x_istate_nat.cpp	56 57 53 48 83 EC 20 89 D7 48 8D 99 90 00 02 00 85 D2 48 0F 49 D9 48 8D B3 68 00 02 00 48 89 F1
+s2x_istate_nat	52e700	52e700	s2x_istate_nat.cpp	41 57 41 56 56 57 55 53 8B 41 08 3B 41 34 74 4A 48 8D 41 38 4C 8B 49 40 4D 85 C9 49 0F 45 C1 44
+s2x_istate_nat	2fbf2e2	2fbf2e2	s2x_istate_nat.cpp	41 56 56 57 53 48 83 EC 38 44 89 C3 48 89 D6 48 89 CF 48 8B 05 C5 A7 EC 06 48 31 E0 48 89 44 24
+s2x_istate_nat	2fbefca	2fbefca	s2x_istate_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 81 EC 98 00 00 00 48 89 D6 48 89 CF 48 8B 05 D6 AA EC 06
+s2x_istate_nat	347d2b4	347d2b4	s2x_istate_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 58 4C 89 C6 89 D7 49 89 CE 48 8B 05 ED C7 A0 06 48
+s2x_istate_nat	68e2a64	68e2a64	s2x_istate_nat.cpp	48 8D 81 38 02 00 00 C3 56 57 48 83 EC 28 48 89 D6 48 89 CF 48 81 C1 38 02 00 00 E8 6E 72 85 F9
+s2x_istate_nat	1fd523e	1fd523e	s2x_istate_nat.cpp	88 91 A8 02 00 00 C3 CC 89 91 E0 02 00 00 C3 CC 89 91 DC 02 00 00 C3 CC CC CC 8B 81 08 03 00 00
+s2x_istate_nat	1190294	1190294	s2x_istate_nat.cpp	56 57 55 53 48 83 EC 38 48 89 CE 48 8B 05 1A 98 CF 08 48 31 E0 48 89 44 24 30 44 8A 41 21 8A 91
+s2x_istate_nat	2dfbe74	2dfbe74	s2x_istate_nat.cpp	88 51 20 C3 48 83 C1 10 E9 DB 7E 8C FD CC 48 8D 41 24 48 39 D0 74 13 80 7A 04 00 74 0E F3 0F 10
+s2x_istate_nat	c5bd5e	c5bd5e	s2x_istate_nat.cpp	56 48 83 EC 20 48 89 CE 03 51 44 89 51 44 8B 41 48 39 C2 0F 4D D0 89 51 48 E8 24 87 87 FF 48 8B
+s2x_istate_nat	2222242	2222242	s2x_istate_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 58 48 89 D6 48 89 CD 48 8B 05 61 78 C6 07 48 31 E0
+s2x_istate_nat	35f49d7	35f49d7	s2x_istate_nat.cpp	89 6C 24 40 44 89 6C 24 44 C6 44 24 60 12 C7 44 24 68 2C 00 00 00 48 8B 4C 24 38 4C 89 FA E8 48
+s2x_istate_nat	2edf150	2edf150	s2x_istate_nat.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 58 4C 89 CE 4C 89 C7 48 89 D3 48 8B 05 50 A9 FA 06
+s2x_istate_nat	6b46058	6b46058	s2x_istate_nat.cpp	56 57 55 53 48 81 EC A8 00 00 00 4C 89 CB 48 89 D6 48 89 CF 48 8B 05 4D 3A 34 03 48 31 E0 48 89
+s2x_istate_nat	35e314	35e314	s2x_istate_nat.cpp	48 89 D0 48 8B 49 08 8B 49 08 89 0A C3 CC 56 48 83 EC 20 48 89 CE 31 D2 E8 23 00 00 00 F6 46 DC

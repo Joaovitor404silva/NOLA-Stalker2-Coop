@@ -1,0 +1,12 @@
+scene mutant_frame
+note from the LM1/LM2 bloodsucker shots: a frozen bloodsucker in daylight at 6 m, framed for a proof shot
+god 1
+time 12:00
+closeui
+require nohostile 3000 allow=Neutral
+spawn sid=Bloodsucker at=player+6 freeze=1 as=bs
+wait 2
+frame $bs
+box $bs
+@C shot bloodsucker key=$bs
+kill $bs

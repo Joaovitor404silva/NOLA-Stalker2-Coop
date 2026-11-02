@@ -1,0 +1,14 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5 (M.tick1000, lines 11206-11235)
+not applied
+
+-    pcall(S2L.orphSweep, ST)     -- b82orph
++    if not S2L.cpp("pop") then pcall(S2L.orphSweep, ST) end
+
+-    if beat % 2 == 0 then S2L.alifeTick(ST) end
++    if beat % 2 == 0 and not S2L.cpp("pop") then S2L.alifeTick(ST) end
+
+-    pcall(S2L.qfTick, ST)        -- b135fixes 3 (qfall)
++    if not S2L.cpp("pop") then pcall(S2L.qfTick, ST) end
+
+-    pcall(S2L.aiwTick, ST)       -- b121aiwatch (aiwatch)
+(deleted line: aiwatch is dev only, default 0)

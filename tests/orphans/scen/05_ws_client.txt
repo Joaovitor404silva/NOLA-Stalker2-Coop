@@ -1,0 +1,41 @@
+role client
+flag wsfx 2
+flag wsply 0
+flag wvoice 1
+flag wvsw 1
+cdo
+asset AkAudioEvent /Game/_STALKER2/Audio/WwiseAudio/Events/Weapons/AR/AK74/AK74_Fire/SFX_AK74_Oneshot.SFX_AK74_Oneshot
+asset NiagaraSystem /Game/_Stalker_2/VFX/Weapons/MuzzleTP/NS_MuzzleTP_AssaultR.NS_MuzzleTP_AssaultR
+asset NiagaraSystem /Game/_Stalker_2/VFX/Weapons/a_Trace/NS_Projectile_NPC_medium.NS_Projectile_NPC_medium
+asset AkAudioEvent /Game/_STALKER2/Audio/WwiseAudio/Events/Voiceover/X/VO_9.VO_9
+asset AkSwitchValue /Game/_STALKER2/Audio/WwiseAudio/Switches/Voiceover/Voice/Voice-A.Voice-A
+me 0 0 0
+pawn Mir_1 1500 1000 0 90 0 0
+weapon Mir_1 SK_AK74 Muzzle
+natactor Bandit_1 Mir_1
+pawn Nat_2 1600 1000 0 30 0 0
+natactor Bandit_2 Nat_2
+pawn Mir_3 1700 1000 0 10 0 0
+natactor Bandit_3 Mir_3
+t 100
+x1 1 50 #WS:1,Bandit_1,s,SK_AK74,3;2,Bandit_1,v,Voiceover/X/VO_9,65;3,Bandit_2,s,SK_Unknown,1;4,Ghost_9,s,SK_AK74,1
+step ws
+t 100.05
+step ws
+t 100.15
+step ws
+t 100.3
+x1 2 50.3 #WS:3,Bandit_2,s,SK_AK74,1;5,Bandit_1,v,Voiceover/X/VO_9,65;6,Bandit_3,v,Voiceover/X/VO_9,1;7,Bandit_3,v,Voiceover/X/VO_404,1
+step ws
+t 102
+x1 3 52 #WS:8,Bandit_1,v,/Game/_STALKER2/Audio/WwiseAudio/Events/Voiceover/X/VO_9.VO_9,66;9,Bandit_3,s,SK_AK74,4
+step ws
+t 105
+x1 4 55 #WS:1,Bandit_1,s,SK_AK74,1
+step ws
+flag wsfx 1
+t 105.5
+x1 5 55.5 #WS:2,Bandit_3,s,SK_AK74,2
+step ws
+t 111
+step ws

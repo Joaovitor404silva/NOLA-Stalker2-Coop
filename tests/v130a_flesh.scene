@@ -1,0 +1,5 @@
+scene v130a_flesh
+note v130a: one frozen flesh 5 m from the host, killed after 3 s; the client next to the host gets one copy killed at the host corpse
+spawn sid=Flesh at=player+5 freeze=1 as=f1
+wait 3
+kill $f1

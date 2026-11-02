@@ -1,0 +1,15 @@
+role client
+flag vendtrade 1
+pawn 1000 664295.0 618840.0 287.0
+hint 3
+view on
+interact 664295.0 618840.0 287.0
+run 400
+view off
+run 400
+view on
+run 400
+view off
+run 400
+interact none
+run 400

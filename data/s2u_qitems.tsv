@@ -1,0 +1,2116 @@
+k1	k2	k3	t	v
+sS	sANCQ01_VadaHvorostPDA		i	1
+sS	sANCQ04_LokotPDA		i	1
+sS	sANCQ06_VadyaPDA		i	1
+sS	sANCQ08_NoteToHomyak		i	1
+sS	sANCQ10_NoteMedic		i	1
+sS	sANCQ12_Note		i	1
+sS	sANCQ13_PDAVladAsnyj		i	1
+sS	sANCQ15_NoteRat		i	1
+sS	sANCQ16_PDALetyn		i	1
+sS	sANCQ17_AboutVaranPDA		i	1
+sS	sANCQ20_Lost_PDA		i	1
+sS	sANCQ21_MemoryDiary		i	1
+sS	sANCQ22_ClearSkyNote		i	1
+sS	sANCQ23_AtasPDA		i	1
+sS	sANCQ24_VenyaNotes		i	1
+sS	sANCQ_19_BanditDiary		i	1
+sS	sANC_18_IOUNote		i	1
+sS	sAlteredScarsToast		i	1
+sS	sAzimutControlRoomKey		i	1
+sS	sBasePDA		i	1
+sS	sBasePDA_Bandits		i	1
+sS	sBasePDA_Duty		i	1
+sS	sBasePDA_Freedom		i	1
+sS	sBasePDA_Mercs		i	1
+sS	sBasePDA_Military		i	1
+sS	sBasePDA_Monolith		i	1
+sS	sBasePDA_MonolithBroken		i	1
+sS	sBasePDA_Neutrals		i	1
+sS	sBasePDA_Spark		i	1
+sS	sBasePDA_Ward		i	1
+sS	sBlueprint_FaustPsyResist_Quest_1_1		i	1
+sS	sBordulinPDA		i	1
+sS	sBurnedForest_Mist_Key_DoorOld		i	1
+sS	sBurntForest_Cherevach_Key_Padlock		i	1
+sS	sBurntForest_Distribution_Key_DoorNew		i	1
+sS	sBurntForest_FairyTaleCamp_Key_DoorNew		i	1
+sS	sBurntForest_X15_Key_Chest		i	1
+sS	sCPrologArtifactSlug		i	1
+sS	sCementPlant_ConcreteForest_Key_DoorNew		i	1
+sS	sCementPlant_IslandNearKopachi_Key_DoorNew		i	1
+sS	sChemicalPlant_RailwayCloset_Key_DoorOld		i	1
+sS	sConcretePlantNoteCorpsePDA		i	1
+sS	sCordon_Brainwasher_Key_Padlock		i	1
+sS	sDLC00_PreOrder_Flashdrive_I		i	1
+sS	sDLC00_PreOrder_Flashdrive_II		i	1
+sS	sDLC00_PreOrder_Flashdrive_III		i	1
+sS	sDevatyjPDA		i	1
+sS	sDocPDA_SQ103		i	1
+sS	sDogmasterDairy		i	1
+sS	sDogmasterPDA		i	1
+sS	sDvupalovVodka		i	1
+sS	sE02_MQ02_BS_PDA		i	1
+sS	sE02_MQ03_RebraKey		i	1
+sS	sE02_MQ03_RebraPDA_MSOP		i	1
+sS	sE02_MQ03_RihterNorthKey		i	1
+sS	sE02_MQ03_VartaPDA		i	1
+sS	sE02_MQ03_VartaSensors		i	1
+sS	sE02_SQ01_HmuriyPDA		i	1
+sS	sE02_SQ01_RabinaPDA		i	1
+sS	sE02_SQ01_ZorikPDA		i	1
+sS	sE03_01_ChernozemPDA		i	1
+sS	sE03_02_OldTechDocs_X18		i	1
+sS	sE03_05_NestorNote		i	1
+sS	sE03_05_NestorPass		i	1
+sS	sE03_MQ01_GoshaMogilaPDA		i	1
+sS	sE03_MQ02_IskraPDA		i	1
+sS	sE03_MQ02_IsolatorKeys		i	1
+sS	sE03_MQ02_ZmeevikPDA		i	1
+sS	sE03_MQ04_Key		i	1
+sS	sE03_MQ05_BanditPDA		i	1
+sS	sE03_MQ05_MalojPDA		i	1
+sS	sE04_MQ02_BasementKey		i	1
+sS	sE04_MQ02_Recorder		i	1
+sS	sE04_NoteDubnyjToBrodyagaItem		i	1
+sS	sE04_Note_UnityNote		i	1
+sS	sE04_SQ01_LodochkaContainer		i	1
+sS	sE04_SQ01_PDAStalker		i	1
+sS	sE04_SQ02_KvaskaPDA		i	1
+sS	sE05_MQ01_EchoReport		i	1
+sS	sE05_MQ01_ShterevDiary		i	1
+sS	sE05_MQ01_ShterevPDA		i	1
+sS	sE05_MQ01_VartaSensors		i	1
+sS	sE05_MQ02_KalanchaMap		i	1
+sS	sE05_MQ02_ZveroboyPDA		i	1
+sS	sE05_MQ03_KalanchaDocuments		i	1
+sS	sE05_MQ03_KalanchaFlashDisk		i	1
+sS	sE05_MQ03_LebedevAudiolog		i	1
+sS	sE05_MQ03_NimbleDiary		i	1
+sS	sE05_MQ03_NimblePDA		i	1
+sS	sE05_SQ01_VartaPatrolRoute		i	1
+sS	sE05_SQ03_PDASavruk		i	1
+sS	sE05_SQ03_Parts		i	1
+sS	sE05_SQ04_GunParts		i	1
+sS	sE05_SQ04_LapaPDA		i	1
+sS	sE06_MQ01_AgathaNote		i	1
+sS	sE06_MQ01_Card		i	1
+sS	sE06_MQ01_CryptoKey		i	1
+sS	sE06_MQ01_ExperimentNote_Item		i	1
+sS	sE06_MQ01_ZombieNote_Item		i	1
+sS	sE06_MQ03_DalinData		i	1
+sS	sE07_EQ01_ZelenyjPDA		i	1
+sS	sE07_MQ01_Fuse		i	3
+sS	sE07_MQ01_HorsPDA		i	1
+sS	sE07_MQ01_SachokPDA		i	1
+sS	sE07_MQ01_SinajAudiolog		i	1
+sS	sE07_MQ01_SkiperPDA		i	1
+sS	sE07_MQ01_TihiyDocuments		i	1
+sS	sE07_MQ02_PripoyKey		i	1
+sS	sE07_MQ02_SyhinOffice_Item		i	1
+sS	sE07_MQ02_SyhinPDA_Item		i	1
+sS	sE07_MQ02_SyhinStash_Item		i	1
+sS	sE07_MQ03_ArchiveRecord		i	1
+sS	sE07_MQ03_ControlEmitter		i	1
+sS	sE07_MQ03_SciDictaphone1		i	1
+sS	sE07_MQ03_SciDictaphone2		i	1
+sS	sE07_MQ03_SciDictaphone3		i	1
+sS	sE07_PsyEmitter		i	2
+sS	sE07_SQ01_SurgeryKit		i	1
+sS	sE08_DvupolovRecorder_PrisonCell		i	1
+sS	sE08_EQ01_CollarBayun		i	1
+sS	sE08_EQ02_CollarSnork		i	1
+sS	sE08_EQ02_DenyaByvalyiPDA		i	1
+sS	sE08_EQ03_CollarBloodsucker		i	1
+sS	sE08_EQ03_KrikPDA		i	1
+sS	sE08_MQ01_ActivationInstruction		i	1
+sS	sE08_MQ01_Razumovskij_GoingMad		i	1
+sS	sE08_MQ03_CollarsTestsData		i	1
+sS	sE08_MQ03_ConrolRoomKey		i	1
+sS	sE08_MQ03_DvupaloDairy		i	1
+sS	sE08_MQ03_DvupalovRecorder_Mutants		i	1
+sS	sE08_MQ03_KeycardLabX5		i	1
+sS	sE08_MQ03_LetterForChubko		i	1
+sS	sE08_MQ03_ListWarning		i	1
+sS	sE08_MQ03_ReceptionNote		i	1
+sS	sE08_MQ03_SciArticle		i	1
+sS	sE08_MQ03_SherbaToDvupalov_Note		i	1
+sS	sE08_MQ03_StrelokPDA		i	1
+sS	sE08_MQ03_SuppressorDocs		i	1
+sS	sE08_MQ04_Explosives		i	1
+sS	sE08_MQ04_UndergroundKeycard		i	1
+sS	sE08_SQ01_KardanDvupalovFirstPDA		i	1
+sS	sE08_SQ01_KardanDvupalovSecondPDA		i	1
+sS	sE08_SQ01_KartezhnykPDA_Item		i	1
+sS	sE10_MQ01_SiviyPDA_Item		i	1
+sS	sE10_MQ01_TundraPDA_Item		i	1
+sS	sE10_MQ01_VolkodavPDA_Item		i	1
+sS	sE10_MQ01_YarlPDA_Item		i	1
+sS	sE10_MQ02_Monolith_Report		i	1
+sS	sE10_MQ02_OldPDA		i	1
+sS	sE10_MQ02_Regenerator		i	1
+sS	sE11_MQ01_Cartridge		i	1
+sS	sE11_MQ01_DarkHabar		i	1
+sS	sE11_MQ01_DeciphererX3		i	1
+sS	sE11_MQ01_StalkerOasisPDA		i	1
+sS	sE11_MQ01_Tracker		i	1
+sS	sE11_MQ02_3rdKaymanovDiary		i	1
+sS	sE11_MQ02_CodeToBunkerDoorNote		i	1
+sS	sE11_MQ02_InstAntNote		i	1
+sS	sE11_MQ02_KaymanovDiary		i	1
+sS	sE11_MQ02_KeyCardX15		i	1
+sS	sE11_MQ04_DoorKey		i	1
+sS	sE12_MO01_DuhToRihterItem		i	1
+sS	sE12_MO01_GroupsNoteItem		i	1
+sS	sE12_MO01_PDAOzerski		i	1
+sS	sE12_MO01_PhotoIskra		i	1
+sS	sE12_MQ01_DuhStashKey		i	1
+sS	sE12_MQ01_PDADuh		i	1
+sS	sE12_MQ01_SkanerMItem		i	1
+sS	sE14_MQ01_Coordinates_Item		i	1
+sS	sE14_MQ01_Helicopter_Item		i	1
+sS	sE14_MQ01_LaundromatDocs_Item		i	1
+sS	sE14_MQ01_Prometey_Spark_Item		i	1
+sS	sE14_MQ01_Prometey_Varta_Item		i	1
+sS	sE14_MQ01_SCAT7Flask_Item		i	1
+sS	sE14_MQ02_MobileBunkers		i	1
+sS	sE14_MQ02_Tunnels		i	1
+sS	sE15_MQ03_CartridgeItem		i	1
+sS	sE15_MQ03_ProjectYItem		i	1
+sS	sE16_AgentSFile_Atchive		i	1
+sS	sE16_AgentsFile_Atchive		i	1
+sS	sE16_MQ01_PDA_Scar		i	1
+sS	sE16_MQ03_CartridgeSkif		i	1
+sS	sE16_MQ03_KeyKard_Granite		i	1
+sS	sE16_MQ03_StrelokPDA		i	1
+sS	sEQ08_FreshBread		i	2
+sS	sEQ109_MarikTopotPDA		i	1
+sS	sEQ109_VitekLunaPDA		i	1
+sS	sEQ10_PastuhPDA		i	1
+sS	sEQ110_DokaPDA		i	1
+sS	sEQ110_HermitPDA		i	1
+sS	sEQ111_KorkaPDA		i	1
+sS	sEQ118_DeadIskraPDA		i	1
+sS	sEQ11_NortonPDA		i	1
+sS	sEQ13_FilimonPDA		i	1
+sS	sEQ13_MihaPDA		i	1
+sS	sEQ140_IluhaVorobejPDA		i	1
+sS	sEQ141_TurgaPDA		i	1
+sS	sEQ143_KolubPDA		i	1
+sS	sEQ144_ArtemPodvodnikPDA		i	1
+sS	sEQ144_GlazgoPDA		i	1
+sS	sEQ144_KucyjPDA		i	1
+sS	sEQ145KostaKonusNote		i	1
+sS	sEQ146_MonolithPDA		i	1
+sS	sEQ148_KeyFromControllerHall		i	1
+sS	sEQ148_KostasPDA		i	1
+sS	sEQ150_NoteOtshelnik		i	1
+sS	sEQ155_BromPDA		i	1
+sS	sEQ156_CaseBones		i	1
+sS	sEQ156_MorozPDA		i	1
+sS	sEQ161_kudravyjPDA		i	1
+sS	sEQ163_PripoyFuneralPaperNote		i	1
+sS	sEQ165_TrachukPDA		i	1
+sS	sEQ165_USBTrachuk		i	1
+sS	sEQ166_ValerianPDA		i	1
+sS	sEQ167_NoteOtshelnik		i	1
+sS	sEQ16_FaraPDA		i	1
+sS	sEQ26_EmptyFlashDrive		i	1
+sS	sEQ26_FlashDriveWithData		i	1
+sS	sEQ26_LevsaPDA		i	1
+sS	sEQ27_RafPDA		i	1
+sS	sEQ29_TradeNote_Physical		i	1
+sS	sEQ30_DobryakPDA		i	1
+sS	sEQ30_ReshkaPDA		i	1
+sS	sEQ30_TitunPDA		i	1
+sS	sEQ35_LegendAdvice		i	1
+sS	sEQ35_LehaLegendPDA		i	1
+sS	sEQ35_VolanNoteSheet		i	1
+sS	sEQ36_KucherPDA		i	1
+sS	sEQ37_GromNote		i	1
+sS	sEQ38_Instruction		i	1
+sS	sEQ38_ThanksNote		i	1
+sS	sEQ48_GiverPaper		i	1
+sS	sEQ51_TemaJetPDA		i	1
+sS	sEQ52_PuzirPDA		i	1
+sS	sEQ58_TimurMolcanovPDA		i	1
+sS	sEQ60_PDAVovchik		i	1
+sS	sEQ64_MakisPDA		i	1
+sS	sEQ65LosPDA		i	1
+sS	sEQ65PiavkaPDA		i	1
+sS	sEQ67UraKotPDA		i	1
+sS	sEQ68_KubrakPDA		i	1
+sS	sEQ70_DeadBodyPda		i	1
+sS	sEQ73_EdikBaskaPDA		i	1
+sS	sEQ74_JitnichenkoPDA		i	1
+sS	sEQ82_konserva		i	1
+sS	sEQ84_LotPDA		i	1
+sS	sEQ85_MelPDA		i	1
+sS	sEQ92_TunnelPDA		i	1
+sS	sElectrocollar		i	8
+sS	sFaustData		i	2
+sS	sFaustPDA		i	1
+sS	sGarbage_DetentionCenter_Key_Padlock		i	1
+sS	sGarbage_Hlynka_Key_Chest		i	1
+sS	sGarbage_X18DressRoom_Key_Chest		i	1
+sS	sGontaPDA		i	1
+sS	sGuitar		i	1
+sS	sHimzavod_Hub_Note_1Item		i	1
+sS	sHimzavod_Hub_Note_2Item		i	1
+sS	sIKAR_PikmanPDA		i	1
+sS	sIcon		i	1
+sS	sInductor		i	1
+sS	sJupiter_HlebZavod_Key_DoorNew		i	1
+sS	sKeshaPDA		i	1
+sS	sKozimkovPDA		i	1
+sS	sKuziaPDA		i	1
+sS	sLeshiyPDA		i	1
+sS	sMaksSubbotaPDA		i	1
+sS	sMalachite_X17_Key_DoorNew		i	1
+sS	sMalahitElevatorKey		i	1
+sS	sMalahit_Hub_NoteCV		i	1
+sS	sMalahit_KeyCard		i	1
+sS	sMalahit_PDADorojnuk		i	1
+sS	sMalahit_PDAKuprienko		i	1
+sS	sMuhaPDA		i	1
+sS	sNegodaPDA		i	1
+sS	sNestorHenchmanPDA_SQ103		i	1
+sS	sNestorPDA		i	1
+sS	sNestorUSB		i	1
+sS	sNoonBase_Hub_PancyrPDA		i	1
+sS	sNoonBase_Hub_RoslyPDA		i	1
+sS	sNoonBase_Hub_VectorPDA		i	1
+sS	sNoonBase_Hub_ZavhozPDA		i	1
+sS	sNote_Cemzavod_Note_Eger_Alensky		i	1
+sS	sNote_Cemzavod_Note_VoroninDecree		i	1
+sS	sNote_Cemzavod_Note_Zulus		i	1
+sS	sNote_Engergetik_Telegraf		i	1
+sS	sNote_Himzavod_Hub_Note_AgathaToKorsh		i	1
+sS	sNote_Himzavod_Hub_Note_LevaFan		i	1
+sS	sNote_Himzavod_Hub_Note_ScientistsWhining		i	1
+sS	sNote_IKAR_Hub_Note_BigLandChat		i	1
+sS	sNote_Ikar_Note_Batalov_Desperate		i	1
+sS	sNote_RookieVillage_Hub_Note_Agent		i	1
+sS	sNote_RookieVillage_Hub_Note_Oasis		i	1
+sS	sNote_Rostok_Hub_MessageNote		i	1
+sS	sNote_Shevchenko_Hub_BeardSpartacus		i	1
+sS	sNote_Shevchenko_Hub_RepairNote		i	1
+sS	sNote_YanovDeggyToNor		i	1
+sS	sNote_Zalesie_ConderPDANote		i	1
+sS	sPomorPDA		i	1
+sS	sPripoyPDA		i	1
+sS	sPripyatCafe_Key_Chest		i	1
+sS	sPripyat_Polesie_Key_DoorNew		i	1
+sS	sPripyat_Restoran_1_Key_DoorNew		i	1
+sS	sPripyat_Restoran_2_Key_Chest		i	1
+sS	sPripyat_Vysokopoverhivka_Teleport_Key_DoorNew		i	1
+sS	sProjectControllerDocs		i	1
+sS	sPromzonaArmyStorageKey		i	1
+sS	sPrypat_NoteItem1		i	1
+sS	sPrypat_NoteItem2		i	1
+sS	sQuestArtifactCrystalThorn		i	1
+sS	sQuestArtifactHeartofChornobyl		i	1
+sS	sQuestItem_Case_Blue		i	1
+sS	sQuestItem_Case_Diplomat		i	1
+sS	sQuestItem_Case_Mil		i	1
+sS	sQuestItem_Case_Nato		i	1
+sS	sQuestItem_Case_Sci		i	1
+sS	sQuestItem_Case_X11		i	1
+sS	sQuestItem_Collar_N1		i	1
+sS	sQuestItem_Collar_N2		i	1
+sS	sQuestItem_Collar_N3		i	1
+sS	sQuestItem_Folder_Blue		i	1
+sS	sQuestItem_Folder_Brown		i	1
+sS	sQuestItem_Folder_File		i	1
+sS	sQuestItem_Folder_Journal		i	1
+sS	sQuestItem_Folder_Scheme		i	1
+sS	sQuestItem_Folder_White		i	1
+sS	sQuestItem_Fuse_High		i	1
+sS	sQuestItem_Fuse_Low		i	1
+sS	sQuestItem_Fuse_Mid		i	1
+sS	sQuestItem_KeyCard_Blue		i	1
+sS	sQuestItem_KeyCard_Green		i	1
+sS	sQuestItem_KeyCard_Red		i	1
+sS	sQuestItem_KeyCard_Yellow		i	1
+sS	sQuestItem_Key_Chest		i	1
+sS	sQuestItem_Key_DoorNew		i	1
+sS	sQuestItem_Key_DoorOld		i	1
+sS	sQuestItem_Key_Padlock		i	1
+sS	sQuestItem_Note_A4		i	1
+sS	sQuestItem_Note_BrandNew		i	1
+sS	sQuestItem_Note_Burnt		i	1
+sS	sQuestItem_Note_Kaimanov		i	1
+sS	sQuestItem_Note_Notebook		i	1
+sS	sQuestItem_Note_Notepad		i	1
+sS	sQuestItem_Note_Ragged		i	1
+sS	sQuestItem_Notepad_Leather		i	1
+sS	sQuestItem_Notepad_Officer		i	1
+sS	sQuestItem_Notepad_OldDiary		i	1
+sS	sQuestItem_Notepad_Paper		i	1
+sS	sQuestItem_Recorder_Base		i	1
+sS	sQuestItem_Tubus		i	1
+sS	sQuestItem_USB_Damaged_Black		i	1
+sS	sQuestItem_USB_Damaged_Blue		i	1
+sS	sQuestItem_USB_Damaged_Burnt		i	1
+sS	sQuestItem_USB_Damaged_White		i	1
+sS	sQuestItem_USB_Modern_Black		i	1
+sS	sQuestItem_USB_Modern_Darkblue		i	1
+sS	sQuestItem_USB_Modern_White		i	1
+sS	sQuestItem_USB_Stalker_Big		i	1
+sS	sQuestItem_USB_Stalker_Blue		i	1
+sS	sQuestItem_USB_Stalker_Red		i	1
+sS	sQuestItem_USB_Upgrade		i	1
+sS	sRSQ01_NewbiePDA		i	1
+sS	sRSQ01_NewbiePDA2		i	1
+sS	sRSQ01_NewbiePDA3		i	1
+sS	sRSQ01_NewbiePDA4		i	1
+sS	sRSQ01_WarlockPackage		i	1
+sS	sRSQ04_C05_FuelCan		i	1
+sS	sRSQ04_C10_GlavarPDA		i	1
+sS	sRSQ05_C01_FlashDrive		i	1
+sS	sRSQ05_C03_Supplies		i	1
+sS	sRSQ05_C10_IItemPDA1		i	1
+sS	sRSQ05_C10_ItemNotes3		i	1
+sS	sRSQ05_C10_ItemNotes4		i	1
+sS	sRSQ05_C10_ItemPDA2		i	1
+sS	sRSQ06_C04_Goods		i	1
+sS	sRSQ07_C09_ContainerItem		i	1
+sS	sRSQ07_Item		i	1
+sS	sRSQ08_Item		i	1
+sS	sRSQ08_Item2		i	1
+sS	sRSQ09_Item		i	1
+sS	sRSQ10_Item		i	1
+sS	sRedForest_Leshyna_Key_DoorNew		i	1
+sS	sRichtersPlayer		i	1
+sS	sRookieVillage_MassandraPDA		i	1
+sS	sRookieVillage_WolfPDA		i	1
+sS	sRooseveltPDA		i	1
+sS	sRostokKeyForDoor01		i	1
+sS	sRostok_NoteAgreementItem		i	1
+sS	sRostok_NoteToShevchenkoItem		i	1
+sS	sRostok_NoteToSultanskItem		i	1
+sS	sRostok_PDAPolovin		i	1
+sS	sRostok_PDA_Doctor		i	1
+sS	sRostok_PDA_Lost		i	1
+sS	sRostok_YarikChillPDA		i	1
+sS	sSEQ01_BanditPDA		i	1
+sS	sSEQ02_StalkerPDA		i	1
+sS	sSEQ04_ScientistPDA		i	1
+sS	sSEQ05_StalkerPDA		i	1
+sS	sSEQ06_StalkerPDA		i	1
+sS	sSEQ08_StalkerPDA		i	1
+sS	sSEQ09_StalkerPDA		i	1
+sS	sSEQ10_StalkerPDA		i	1
+sS	sSQ01_ValenokPDA		i	1
+sS	sSQ02_PomorKey		i	1
+sS	sSQ04_SoloveiPDA		i	1
+sS	sSQ05_GuronsGoods		i	1
+sS	sSQ06_PDA_ZombieScientist		i	1
+sS	sSQ06_PsiLamp		i	1
+sS	sSQ06_PsiLampDestroyed		i	1
+sS	sSQ103_DeadDiggerPDA		i	1
+sS	sSQ103_DeaddropInstructions		i	1
+sS	sSQ103_Emitter		i	1
+sS	sSQ103_Key		i	1
+sS	sSQ103_KeyCardX18		i	1
+sS	sSQ103_KeyCardX18_Copy		i	1
+sS	sSQ103_MapNote		i	1
+sS	sSQ103_NestorMikheyevLetter		i	1
+sS	sSQ10_BunchOfKeysSPO		i	1
+sS	sSQ10_DubniyPDA		i	1
+sS	sSQ10_DubnyjPDANote		i	1
+sS	sSQ10_HogPDA		i	1
+sS	sSQ10_JumperPDA		i	1
+sS	sSQ10_SeverNoteDubniy		i	1
+sS	sSQ10_TihijMonolithStashNote		i	1
+sS	sSQ13_PDA_Budnik		i	1
+sS	sSQ13_Soul		i	1
+sS	sSQ18_KamysPDA		i	1
+sS	sSQ18_KamysPaperNote		i	1
+sS	sSQ47_DavidAkopan_PDA		i	1
+sS	sSQ47_LevaBorzoj_PDA		i	1
+sS	sSQ50_SultanSuitcase		i	1
+sS	sSQ86_SashkaBitokPDA		i	1
+sS	sSQ87_AdikPedalKey		i	1
+sS	sSQ87_AdikPedalPDA		i	1
+sS	sSQ87_ZenaGlybaPDA		i	1
+sS	sSQ87_ZenaGlybaPDA_Alternative		i	1
+sS	sSQ87_ZenaGlybaPDA_Alternative_SkifLeave		i	1
+sS	sSQ88_GrebenNote		i	1
+sS	sSQ88_KuvaldaDiary		i	1
+sS	sSQ88_MacekPDA		i	1
+sS	sSQ88_NimbleToBeardReport		i	1
+sS	sSQ89_ZhgutPDA		i	1
+sS	sSQ90_FreedomPDA		i	1
+sS	sSQ90_GribPDA		i	1
+sS	sSQ90_KeyFromTunnels		i	1
+sS	sSQ90_ParikPDA		i	1
+sS	sSQ90_PseudoGiantCollar		i	1
+sS	sSQ90_SefPDA		i	1
+sS	sSQ90_ToropygaPDA		i	1
+sS	sSQ92_MangustPDA		i	1
+sS	sSQ92_VolkovPDA		i	1
+sS	sScanner		i	1
+sS	sScanner_E05		i	1
+sS	sShahPDA		i	1
+sS	sShevchenko_Camp_BorodaPDA		i	1
+sS	sShevchenko_NoteBorodaItem		i	1
+sS	sShevchenko_NoteDiaryItem		i	1
+sS	sStalkerPDA_SQ103		i	1
+sS	sStrangePDA		i	1
+sS	sSultansk_Hub_PDADeadBody		i	1
+sS	sSultansk_NoteAgreementItem		i	1
+sS	sSultansk_NoteKalinaDebtItem		i	1
+sS	sSultansk_NoteKalinaItem		i	1
+sS	sSultansk_NoteKalinaListItem		i	1
+sS	sSultansk_NoteKalinaSituationItem		i	1
+sS	sSultansk_NotePartyItem		i	1
+sS	sSultansk_NoteZlotarItem		i	1
+sS	sSultansk_PDAChilik		i	1
+sS	sSultansk_PDAKalinaItem		i	1
+sS	sSultansk_PDARyhlyi		i	1
+sS	sSultansk_PDASultan		i	1
+sS	sSultansk_PDASych		i	1
+sS	sSuppressorDevice		i	1
+sS	sSwampNoteCorpsePDA		i	1
+sS	sTerricon_DrabadanPDA		i	1
+sS	sTerricon_GuronPDA		i	1
+sS	sTerricon_Hub_KisaPDA		i	1
+sS	sTerricon_Hub_MertvakPDA		i	1
+sS	sTerricon_Hub_ZoraPalitraPDA		i	1
+sS	sTerricon_KonderPDA		i	1
+sS	sTerricon_KukuhaPDA		i	1
+sS	sTerricon_NestorPDA		i	1
+sS	sTerricon_NoteListItem		i	1
+sS	sTerricon_PDAAboutFriend		i	1
+sS	sTerricon_SickStalkerPDA		i	1
+sS	sTerricon_SulcPDA		i	1
+sS	sVaranPDA		i	1
+sS	sVartaDogtag		i	1
+sS	sVartaPDA		i	1
+sS	sVortexDudePDA		i	1
+sS	sWildIsland_Trestle_Key_Padlock		i	1
+sS	sYanov_KostaBanduraPDA		i	1
+sS	sYanov_NoteHana		i	1
+sS	sYanov_NoteOrder		i	1
+sS	sYanov_Note_ToDoListItem		i	1
+sS	sYanov_PDA_Garpia		i	1
+sS	sYanov_PDA_Nor		i	1
+sS	sYanov_SenaDymPDA		i	1
+sS	sYantarArgarFactoryKeyForDoor01		i	1
+sS	sYantar_Agro_1_Key_DoorNew		i	1
+sS	sYantar_Agro_2_Key_Chest		i	1
+sS	sZalesie_BatyaPDA		i	1
+sS	sZalesie_HomakNote		i	1
+sS	sZalesie_HomakPDA		i	1
+sS	sZalesie_KoldunNote		i	1
+sS	sZalesie_KoldunPDA		i	1
+sS	sZalesie_LenaPDA		i	1
+sS	sZalesie_LinzaPDANoteItem		i	1
+sS	sZalesie_NoteFromNikolaich		i	1
+sS	sZhukovskyPDA		i	1
+sS	sZuzaPDA		i	1
+sS	sd1paritypack_ANCQ28_Cement_CivilDefCorner_Journal		i	1
+sS	sd1paritypack_ANCQ28_Cement_SniperNest_Journal		i	1
+sS	sd1paritypack_ANCQ28_CoolingTowers_Sniper_Journal		i	1
+sS	sd1paritypack_ANCQ28_Duga_PDA1		i	1
+sS	sd1paritypack_ANCQ28_Duga_PDA2		i	1
+sS	sd1paritypack_ANCQ28_Duga_PDA3		i	1
+sS	sd1paritypack_ANCQ28_FairytaleCamp_Page		i	1
+sS	sd1paritypack_ANCQ28_Malachite_ViktoriasDesk_Journal		i	1
+sS	sd1paritypack_ANCQ28_Pripyat_Energetyk_Page		i	1
+sS	sd1paritypack_ANCQ28_Pripyat_Ferris_Wheel_Page		i	1
+sS	sd1paritypack_ANCQ28_Pripyat_JournalistHouse_Page		i	1
+sS	sd1paritypack_ANCQ28_Pripyat_WhiteHouse_Page		i	1
+sS	sd1paritypack_ANCQ28_Pripyat_ZustrichCanteen_Page		i	1
+sS	sd1paritypack_ANCQ28_Rostok_ArnieOffice_Journal		i	1
+sS	sd1paritypack_ANCQ28_SlagHeap_Diggers_Reports		i	1
+sS	sd1paritypack_ANCQ28_WildIsland_Noontiders_Page		i	1
+sS	sd1paritypack_ANCQ28_Yaniv_Nors_Office_Journal		i	1
+sS	sd1paritypack_ANCQ28_Yaniv_Sniper_Journal		i	1
+sS	sd1paritypack_ANCQ28_Zaton_Sonya_Journal		i	1
+sS	skrivenko_flashdrive_05_05		i	1
+sS	skrivenko_full_flashdrive_05_05		i	1
+sS	snvgpack_ANCQ27_BanditPDA		i	1
+sS	snvgpack_supack_ACNQ_26_ScoutmasterFile		i	1
+sS	snvgpack_supack_ANCQ26_MedulinCCTV_FlashDrive		i	1
+sS	snvgpack_supack_Banzai_RostokRoom_Key		i	1
+sS	snvgpack_supack_Banzai_UnsentLetter		i	1
+sS	snvgpack_supack_KlucPDA		i	1
+sS	spsilamp_part_05_05		i	1
+sS	ssid_items_E02_SQ01_BanditPDA		i	1
+sS	ssupack_Banzai_RostokRoom_Key		i	1
+sS	ssupack_Banzai_UnsentLetter		i	1
+sS	ssupack_FairyTale_LostExpeditionKey		i	1
+sS	ssupack_FairyTale_VentKey		i	1
+sS	ssupack_SQ100_SkullWarningNote		i	1
+sS	ssupack_SQ95_Banzai_FlashDrive		i	1
+sS	ssupack_SQ95_KirkaPDA		i	1
+sS	ssupack_SQ96_C01_Clue1_PDA		i	1
+sS	ssupack_SQ96_C01_Clue2_PDA		i	1
+sS	ssupack_SQ96_C01_Clue3_PDA		i	1
+sS	ssupack_SQ96_C01_ToolKit1		i	1
+sS	ssupack_SQ96_C02_ToolKit2		i	1
+sS	ssupack_SQ96_C03_ToolKit3		i	1
+sS	ssupack_SQ97_Expedition_Notebook		i	1
+sS	ssupack_SQ97_GeneratorNote		i	1
+sS	ssupack_SQ97_PelengatorRoomNote		i	1
+sS	ssupack_SQ97_SanyaPDA		i	1
+sS	ssupack__SQ99_ShelmaStashKey		i	1
+sS	ssupack_an_upm_sever		i	1
+sS	ssupack_shelmanotes		i	1
+sS	ssupack_supack_SQ96_C03_DiggerNote_PDA		i	1
+sS	ssupack_vojatij_key		i	1
+sS	ssupack_vozmercform		i	1
+sS	ssupack_vozmercpda		i	1
+snorm	sE07_MQ01_SachokPDA		i	1
+snorm	sE16_AgentSFile_Atchive		i	1
+snorm	sEQ27_RafPDA		i	1
+snorm	sSQ10_DubnyjPDANote		i	1
+snorm	sVartaPDA		i	1
+spos	i1	i1	i	183445
+spos	i1	i2	i	674247
+spos	i1	i3	i	1069
+spos	i1	i4	s	010CD9BD45828AB2B6783E859C61721F
+spos	i1	i5	s	DeadBody
+spos	i1	i6	s	SQ88_MacekPDA
+spos	i2	i1	i	388604
+spos	i2	i2	i	438664
+spos	i2	i3	i	220
+spos	i2	i4	s	01BE0D174DABA58BA6FA8CB96EA19734
+spos	i2	i5	s	DeadBody
+spos	i2	i6	s	E03_05_NestorPass
+spos	i3	i1	i	656799
+spos	i3	i2	i	538592
+spos	i3	i3	i	598
+spos	i3	i4	s	01DFAD314CC02750EFCB2C81FC9A911E
+spos	i3	i5	s	DeadBody
+spos	i3	i6	s	SQ87_ZenaGlybaPDA,SQ87_ZenaGlybaPDA_Alternative_SkifLeave
+spos	i4	i1	i	276500
+spos	i4	i2	i	139700
+spos	i4	i3	i	737
+spos	i4	i4	s	04CB887A4CF7025C50453D9DCF5900F9
+spos	i4	i5	s	DeadBody
+spos	i4	i6	s	SEQ10_StalkerPDA
+spos	i5	i1	i	237932
+spos	i5	i2	i	132822
+spos	i5	i3	i	2222
+spos	i5	i4	s	0520478242F72EF8BCDC5088DF7F43C3
+spos	i5	i5	s	ItemContainer
+spos	i5	i6	s	d1paritypack_ANCQ28_Pripyat_Ferris_Wheel_Page
+spos	i6	i1	i	336044
+spos	i6	i2	i	602870
+spos	i6	i3	i	664
+spos	i6	i4	s	06FA06464829ACE48D0D6CBBD1962021
+spos	i6	i5	s	ItemContainer
+spos	i6	i6	s	EQ110_HermitPDA
+spos	i7	i1	i	136842
+spos	i7	i2	i	588025
+spos	i7	i3	i	1719
+spos	i7	i4	s	0853A5C14664688D78A370A0D9004581
+spos	i7	i5	s	DeadBody
+spos	i7	i6	s	FaustData,FaustPDA
+spos	i8	i1	i	224540
+spos	i8	i2	i	452190
+spos	i8	i3	i	-270
+spos	i8	i4	s	094B87494A488E1FE9DB6DBFA33CD657
+spos	i8	i5	s	DeadBody
+spos	i8	i6	s	EQ58_TimurMolcanovPDA
+spos	i9	i1	i	403889
+spos	i9	i2	i	630976
+spos	i9	i3	i	1193
+spos	i9	i4	s	0A993F4F479CB6E0E23AA296001512F1
+spos	i9	i5	s	ItemContainer
+spos	i9	i6	s	RSQ01_WarlockPackage
+spos	i10	i1	i	349118
+spos	i10	i2	i	498797
+spos	i10	i3	i	393
+spos	i10	i4	s	0C18CBB8410D93A7090FFABE81B0C55D
+spos	i10	i5	s	DeadBody
+spos	i10	i6	s	RSQ01_NewbiePDA
+spos	i11	i1	i	218720
+spos	i11	i2	i	521650
+spos	i11	i3	i	280
+spos	i11	i4	s	0C98305A44E1BBF7262B99B43FB93A55
+spos	i11	i5	s	DeadBody
+spos	i11	i6	s	EQ82_konserva
+spos	i12	i1	i	398540
+spos	i12	i2	i	450825
+spos	i12	i3	i	253
+spos	i12	i4	s	0CABBF6D4A36EC1F49C6CAB37ACB04CF
+spos	i12	i5	s	ItemContainer
+spos	i12	i6	s	RSQ04_C05_FuelCan
+spos	i13	i1	i	393529
+spos	i13	i2	i	389708
+spos	i13	i3	i	738
+spos	i13	i4	s	0D718FFA409C3BD04809D0B5DB90DF4B
+spos	i13	i5	s	DeadBody
+spos	i13	i6	s	Malahit_KeyCard
+spos	i14	i1	i	226500
+spos	i14	i2	i	302362
+spos	i14	i3	i	229
+spos	i14	i4	s	0D9A09A14A617EC7DC34B79969958ECF
+spos	i14	i5	s	ItemContainer
+spos	i14	i6	s	EQ150_NoteOtshelnik
+spos	i15	i1	i	279540
+spos	i15	i2	i	460430
+spos	i15	i3	i	220
+spos	i15	i4	s	0ED369764C2A0C35087F038B123D6695
+spos	i15	i5	s	ItemContainer
+spos	i15	i6	s	RSQ08_Item
+spos	i16	i1	i	255765
+spos	i16	i2	i	594705
+spos	i16	i3	i	816
+spos	i16	i4	s	0F14990D4A1979A296B1AC91AA2BCB92
+spos	i16	i5	s	DeadBody
+spos	i16	i6	s	supack_FairyTale_VentKey,supack_SQ97_Expedition_Notebook
+spos	i17	i1	i	430415
+spos	i17	i2	i	553733
+spos	i17	i3	i	71
+spos	i17	i4	s	1146E22348CADBD87EBF50A44F04BDFB
+spos	i17	i5	s	ItemContainer
+spos	i17	i6	s	E07_SQ01_SurgeryKit
+spos	i18	i1	i	409398
+spos	i18	i2	i	581567
+spos	i18	i3	i	451
+spos	i18	i4	s	119FDE5E48B3316D30FF749DDF2F97FF
+spos	i18	i5	s	ItemContainer
+spos	i18	i6	s	RSQ01_WarlockPackage
+spos	i19	i1	i	320040
+spos	i19	i2	i	410680
+spos	i19	i3	i	1344
+spos	i19	i4	s	130E2B6B4FA103CBB65CFFBE487E6B90
+spos	i19	i5	s	ItemContainer
+spos	i19	i6	s	RSQ08_Item
+spos	i20	i1	i	414834
+spos	i20	i2	i	460216
+spos	i20	i3	i	1317
+spos	i20	i4	s	1318E68D461E9FFA36694B992D2A6B0F
+spos	i20	i5	s	ItemContainer
+spos	i20	i6	s	SQ103_MapNote
+spos	i21	i1	i	395872
+spos	i21	i2	i	389057
+spos	i21	i3	i	775
+spos	i21	i4	s	1CAFD02A46DA16C252A7EB8FA55E7D39
+spos	i21	i5	s	DeadBody
+spos	i21	i6	s	Malahit_KeyCard
+spos	i22	i1	i	348953
+spos	i22	i2	i	523834
+spos	i22	i3	i	1103
+spos	i22	i4	s	1F5FAC6049F8F39B2913ABA145BB47C7
+spos	i22	i5	s	DeadBody
+spos	i22	i6	s	EQ70_DeadBodyPda
+spos	i23	i1	i	461238
+spos	i23	i2	i	510824
+spos	i23	i3	i	129
+spos	i23	i4	s	20F1964841B5E87A9EC9C491BED124AE
+spos	i23	i5	s	DeadBody
+spos	i23	i6	s	E04_SQ01_PDAStalker
+spos	i24	i1	i	470869
+spos	i24	i2	i	637502
+spos	i24	i3	i	-1215
+spos	i24	i4	s	2164D68144287F223DAEC099A3E2C657
+spos	i24	i5	s	ItemContainer
+spos	i24	i6	s	RSQ06_C04_Goods
+spos	i25	i1	i	432606
+spos	i25	i2	i	552868
+spos	i25	i3	i	136
+spos	i25	i4	s	21DE04AD4140F8346D19AB9EC78BF86C
+spos	i25	i5	s	DeadBody
+spos	i25	i6	s	EQ16_FaraPDA
+spos	i26	i1	i	370873
+spos	i26	i2	i	578515
+spos	i26	i3	i	1171
+spos	i26	i4	s	23877BF44769EC66079608829A91E441
+spos	i26	i5	s	ItemContainer
+spos	i26	i6	s	RSQ01_WarlockPackage
+spos	i27	i1	i	236019
+spos	i27	i2	i	447503
+spos	i27	i3	i	391
+spos	i27	i4	s	261F4AA44EEF5AB6D6EFEF944E724290
+spos	i27	i5	s	ItemContainer
+spos	i27	i6	s	supack_SQ96_C01_Clue3_PDA
+spos	i28	i1	i	337710
+spos	i28	i2	i	365680
+spos	i28	i3	i	1450
+spos	i28	i4	s	268173364C176EA3319A8AA63CD70774
+spos	i28	i5	s	ItemContainer
+spos	i28	i6	s	RSQ08_Item
+spos	i29	i1	i	334858
+spos	i29	i2	i	603402
+spos	i29	i3	i	516
+spos	i29	i4	s	2711E93E4E5D11CDB24B4EA71D67A36C
+spos	i29	i5	s	DeadBody
+spos	i29	i6	s	EQ110_DokaPDA
+spos	i30	i1	i	426925
+spos	i30	i2	i	476265
+spos	i30	i3	i	-2498
+spos	i30	i4	s	2B99BAFE446D2FC5BEDF3E92712AAA8C
+spos	i30	i5	s	ItemContainer
+spos	i30	i6	s	SQ103_Key
+spos	i31	i1	i	154854
+spos	i31	i2	i	534335
+spos	i31	i3	i	416
+spos	i31	i4	s	2CCCFC054C54E95B9035E0B53437C1C7
+spos	i31	i5	s	ItemContainer
+spos	i31	i6	s	RSQ09_Item
+spos	i32	i1	i	422242
+spos	i32	i2	i	402422
+spos	i32	i3	i	5606
+spos	i32	i4	s	2DC33D50428235D766EB79AAE10F4FDE
+spos	i32	i5	s	ItemContainer
+spos	i32	i6	s	NestorUSB
+spos	i33	i1	i	392174
+spos	i33	i2	i	387504
+spos	i33	i3	i	722
+spos	i33	i4	s	2E41D2A04EC89E79AB5ED1861263439C
+spos	i33	i5	s	DeadBody
+spos	i33	i6	s	Malahit_KeyCard
+spos	i34	i1	i	231303
+spos	i34	i2	i	496223
+spos	i34	i3	i	651
+spos	i34	i4	s	2E9EAEAE480BBF81EA4836AF8DF5C507
+spos	i34	i5	s	ItemContainer
+spos	i34	i6	s	SEQ09_StalkerPDA
+spos	i35	i1	i	434129
+spos	i35	i2	i	558118
+spos	i35	i3	i	214
+spos	i35	i4	s	2F20910D46EFCCF359016684B238E6EF
+spos	i35	i5	s	DeadBody
+spos	i35	i6	s	RSQ01_WarlockPackage
+spos	i36	i1	i	571888
+spos	i36	i2	i	560671
+spos	i36	i3	i	3043
+spos	i36	i4	s	2FCD6F82407051DA34BAD9BC086CA314
+spos	i36	i5	s	DeadBody
+spos	i36	i6	s	RSQ05_C10_ItemNotes3
+spos	i37	i1	i	377601
+spos	i37	i2	i	418544
+spos	i37	i3	i	241
+spos	i37	i4	s	320BDAFE4081DBA762AD788911FBF051
+spos	i37	i5	s	DeadBody
+spos	i37	i6	s	E08_EQ02_DenyaByvalyiPDA
+spos	i38	i1	i	233466
+spos	i38	i2	i	435947
+spos	i38	i3	i	373
+spos	i38	i4	s	329AAF0B408A813912A22C9C3901FBA6
+spos	i38	i5	s	ItemContainer
+spos	i38	i6	s	supack_SQ96_C01_Clue1_PDA
+spos	i39	i1	i	426532
+spos	i39	i2	i	617175
+spos	i39	i3	i	1565
+spos	i39	i4	s	3305FD0448F6DD07EBEB899A5218CA37
+spos	i39	i5	s	DeadBody
+spos	i39	i6	s	DevatyjPDA
+spos	i40	i1	i	516940
+spos	i40	i2	i	515640
+spos	i40	i3	i	930
+spos	i40	i4	s	353297C2450C74FDE9A1DCA1750BC792
+spos	i40	i5	s	ItemContainer
+spos	i40	i6	s	Inductor
+spos	i41	i1	i	188399
+spos	i41	i2	i	345323
+spos	i41	i3	i	503
+spos	i41	i4	s	3557C9D941FE188EC2023F854F855C66
+spos	i41	i5	s	DeadBody
+spos	i41	i6	s	SQ90_FreedomPDA,SQ90_KeyFromTunnels
+spos	i42	i1	i	390190
+spos	i42	i2	i	559130
+spos	i42	i3	i	1970
+spos	i42	i4	s	35C1C7CD4B32BD6547928B974292B841
+spos	i42	i5	s	DeadBody
+spos	i42	i6	s	E02_SQ01_RabinaPDA
+spos	i43	i1	i	732927
+spos	i43	i2	i	569638
+spos	i43	i3	i	741
+spos	i43	i4	s	3A6DA89E4AA2C76A7FEAE9ACAC27689E
+spos	i43	i5	s	ItemContainer
+spos	i43	i6	s	DogmasterPDA
+spos	i44	i1	i	430590
+spos	i44	i2	i	520270
+spos	i44	i3	i	1181
+spos	i44	i4	s	3ACE3E9E4E342EF7541BA09BA6E8997B
+spos	i44	i5	s	DeadBody
+spos	i44	i6	s	ANCQ01_VadaHvorostPDA
+spos	i45	i1	i	270495
+spos	i45	i2	i	144648
+spos	i45	i3	i	805
+spos	i45	i4	s	3D32FD52459F78DC1B5CB0B5FC804D95
+spos	i45	i5	s	DeadBody
+spos	i45	i6	s	E14_MQ01_Prometey_Spark_Item
+spos	i46	i1	i	498675
+spos	i46	i2	i	619741
+spos	i46	i3	i	-73
+spos	i46	i4	s	405015234909BDDA8D7F568AF4C9417E
+spos	i46	i5	s	ItemContainer
+spos	i46	i6	s	RSQ06_C04_Goods
+spos	i47	i1	i	487210
+spos	i47	i2	i	539550
+spos	i47	i3	i	103
+spos	i47	i4	s	42ECEBA3461E1C6A6C9BCB8B0CECE420
+spos	i47	i5	s	DeadBody
+spos	i47	i6	s	E07_MQ01_SachokPDA
+spos	i48	i1	i	470468
+spos	i48	i2	i	572766
+spos	i48	i3	i	675
+spos	i48	i4	s	4386297141E81D06FBBAB99D741A6C84
+spos	i48	i5	s	DeadBody
+spos	i48	i6	s	Sultansk_Hub_PDADeadBody
+spos	i49	i1	i	476270
+spos	i49	i2	i	429278
+spos	i49	i3	i	389
+spos	i49	i4	s	453ACEDB475319ECB5C4ACAE02AC1446
+spos	i49	i5	s	DeadBody
+spos	i49	i6	s	EQ51_TemaJetPDA
+spos	i50	i1	i	171090
+spos	i50	i2	i	647500
+spos	i50	i3	i	1630
+spos	i50	i4	s	464B80EA4E393DAF6DEC8B8563A4D8B0
+spos	i50	i5	s	DeadBody
+spos	i50	i6	s	EQ145KostaKonusNote,Malahit_KeyCard
+spos	i51	i1	i	231311
+spos	i51	i2	i	160268
+spos	i51	i3	i	1421
+spos	i51	i4	s	4B09106F4C1A71117C1A568D0D31FE1F
+spos	i51	i5	s	ItemContainer
+spos	i51	i6	s	d1paritypack_ANCQ28_Pripyat_Energetyk_Page
+spos	i52	i1	i	654844
+spos	i52	i2	i	542137
+spos	i52	i3	i	1358
+spos	i52	i4	s	4F5EDDD74CD3C0BB91080EABC3AF26E0
+spos	i52	i5	s	ItemContainer
+spos	i52	i6	s	SQ87_AdikPedalKey
+spos	i53	i1	i	467086
+spos	i53	i2	i	617919
+spos	i53	i3	i	-1385
+spos	i53	i4	s	527EB55B41EAB0910687748DBB870F1F
+spos	i53	i5	s	DeadBody
+spos	i53	i6	s	SQ89_ZhgutPDA
+spos	i54	i1	i	156308
+spos	i54	i2	i	299827
+spos	i54	i3	i	268
+spos	i54	i4	s	528A3A294BD94B79ECEB5F8ACDEE989E
+spos	i54	i5	s	ItemContainer
+spos	i54	i6	s	RSQ10_Item
+spos	i55	i1	i	147335
+spos	i55	i2	i	335636
+spos	i55	i3	i	727
+spos	i55	i4	s	53BCD75B4C8A471BD7CD7A87A8EBFC68
+spos	i55	i5	s	DeadBody
+spos	i55	i6	s	E12_MQ01_DuhStashKey,E12_MQ01_PDADuh
+spos	i56	i1	i	163562
+spos	i56	i2	i	277637
+spos	i56	i3	i	643
+spos	i56	i4	s	54A92291489B5E811A0EEDA98E5D71B0
+spos	i56	i5	s	ItemContainer
+spos	i56	i6	s	RSQ10_Item
+spos	i57	i1	i	264431
+spos	i57	i2	i	591377
+spos	i57	i3	i	893
+spos	i57	i4	s	58DF4F404E6E471E7D9A6986778B6EB0
+spos	i57	i5	s	ItemContainer
+spos	i57	i6	s	supack_shelmanotes
+spos	i58	i1	i	193854
+spos	i58	i2	i	669629
+spos	i58	i3	i	1069
+spos	i58	i4	s	5911313142AE6132A107469CA209891D
+spos	i58	i5	s	DeadBody
+spos	i58	i6	s	SQ88_GrebenNote
+spos	i59	i1	i	427954
+spos	i59	i2	i	541992
+spos	i59	i3	i	902
+spos	i59	i4	s	5ACB9A8A40C2B0A3183B59AECE84F104
+spos	i59	i5	s	ItemContainer
+spos	i59	i6	s	RSQ01_WarlockPackage
+spos	i60	i1	i	420385
+spos	i60	i2	i	482042
+spos	i60	i3	i	-2498
+spos	i60	i4	s	5B66BEF74992795DD71A77BE79F81D34
+spos	i60	i5	s	DeadBody
+spos	i60	i6	s	SQ103_DeadDiggerPDA,SQ103_KeyCardX18_Copy
+spos	i61	i1	i	274394
+spos	i61	i2	i	191072
+spos	i61	i3	i	230
+spos	i61	i4	s	62C2E4344D428311110E0CA24C80A92F
+spos	i61	i5	s	ItemContainer
+spos	i61	i6	s	d1paritypack_ANCQ28_Pripyat_JournalistHouse_Page
+spos	i62	i1	i	529671
+spos	i62	i2	i	394289
+spos	i62	i3	i	609
+spos	i62	i4	s	636DF67D4CAF713F796C0682238AE06A
+spos	i62	i5	s	ItemContainer
+spos	i62	i6	s	RSQ07_Item
+spos	i63	i1	i	285483
+spos	i63	i2	i	425072
+spos	i63	i3	i	325
+spos	i63	i4	s	642A0EE444A0884A0B3255829EB6FDF5
+spos	i63	i5	s	DeadBody
+spos	i63	i6	s	EQ11_NortonPDA
+spos	i64	i1	i	460123
+spos	i64	i2	i	625705
+spos	i64	i3	i	-1578
+spos	i64	i4	s	65EA40AC4EC3822C9E0BAC9771AE209F
+spos	i64	i5	s	ItemContainer
+spos	i64	i6	s	E11_MQ01_Tracker
+spos	i65	i1	i	270360
+spos	i65	i2	i	144849
+spos	i65	i3	i	805
+spos	i65	i4	s	66B6BB1F48F1076D43BA67865D92989E
+spos	i65	i5	s	DeadBody
+spos	i65	i6	s	E14_MQ01_Prometey_Varta_Item
+spos	i66	i1	i	363763
+spos	i66	i2	i	643665
+spos	i66	i3	i	662
+spos	i66	i4	s	6704D2334BFE011CB192A6837B50219B
+spos	i66	i5	s	DeadBody
+spos	i66	i6	s	RSQ01_NewbiePDA3
+spos	i67	i1	i	423786
+spos	i67	i2	i	479330
+spos	i67	i3	i	-1097
+spos	i67	i4	s	6FF052844C61DA5D3B48018469CAC4C2
+spos	i67	i5	s	DeadBody
+spos	i67	i6	s	E03_MQ02_IskraPDA
+spos	i68	i1	i	270587
+spos	i68	i2	i	253446
+spos	i68	i3	i	494
+spos	i68	i4	s	709307C443BB5126A70523B4B014B3AD
+spos	i68	i5	s	ItemContainer
+spos	i68	i6	s	RSQ10_Item
+spos	i69	i1	i	261173
+spos	i69	i2	i	334649
+spos	i69	i3	i	95
+spos	i69	i4	s	70AD27E44ABE88C9719A349645816F53
+spos	i69	i5	s	ItemContainer
+spos	i69	i6	s	supack_SQ95_Banzai_FlashDrive
+spos	i70	i1	i	690377
+spos	i70	i2	i	578844
+spos	i70	i3	i	133
+spos	i70	i4	s	70CDA9A943B50742B3C42F9470600115
+spos	i70	i5	s	DeadBody
+spos	i70	i6	s	RSQ05_C01_FlashDrive
+spos	i71	i1	i	413323
+spos	i71	i2	i	646021
+spos	i71	i3	i	905
+spos	i71	i4	s	713AE415403986630B91D78D8F996935
+spos	i71	i5	s	DeadBody
+spos	i71	i6	s	EQ64_MakisPDA
+spos	i72	i1	i	348705
+spos	i72	i2	i	445984
+spos	i72	i3	i	232
+spos	i72	i4	s	71801B204BAB20755DF510A5BB1E8862
+spos	i72	i5	s	ItemContainer
+spos	i72	i6	s	RSQ08_Item
+spos	i73	i1	i	265280
+spos	i73	i2	i	329120
+spos	i73	i3	i	556
+spos	i73	i4	s	724F567B415993944B13F1AF01906B06
+spos	i73	i5	s	ItemContainer
+spos	i73	i6	s	E10_MQ01_SiviyPDA_Item
+spos	i74	i1	i	515512
+spos	i74	i2	i	393262
+spos	i74	i3	i	-1310
+spos	i74	i4	s	727C5B654D041D1FFFF3889A1CFD8A68
+spos	i74	i5	s	DeadBody
+spos	i74	i6	s	SQ86_SashkaBitokPDA
+spos	i75	i1	i	442792
+spos	i75	i2	i	592809
+spos	i75	i3	i	2295
+spos	i75	i4	s	7363DC954C67FFA8F763BA8047A47882
+spos	i75	i5	s	ItemContainer
+spos	i75	i6	s	E07_MQ02_SyhinStash_Item
+spos	i76	i1	i	261723
+spos	i76	i2	i	284771
+spos	i76	i3	i	109
+spos	i76	i4	s	73AEF90C4DFABCFA2D61989026B71909
+spos	i76	i5	s	ItemContainer
+spos	i76	i6	s	RSQ10_Item
+spos	i77	i1	i	333341
+spos	i77	i2	i	447228
+spos	i77	i3	i	284
+spos	i77	i4	s	74CDCC3A448D00A75DB8EE99472FE5D2
+spos	i77	i5	s	DeadBody
+spos	i77	i6	s	EQ144_ArtemPodvodnikPDA
+spos	i78	i1	i	465071
+spos	i78	i2	i	629028
+spos	i78	i3	i	-871
+spos	i78	i4	s	74F53F4945BC7E40D3381DAC5417B6A8
+spos	i78	i5	s	ItemContainer
+spos	i78	i6	s	RSQ06_C04_Goods
+spos	i79	i1	i	656349
+spos	i79	i2	i	535730
+spos	i79	i3	i	561
+spos	i79	i4	s	7916C63C4EDAFE867B81AD8AE676EC50
+spos	i79	i5	s	DeadBody
+spos	i79	i6	s	EQ13_MihaPDA
+spos	i80	i1	i	548796
+spos	i80	i2	i	480830
+spos	i80	i3	i	188
+spos	i80	i4	s	7D30A926493B305FB9750AB68FE80AFD
+spos	i80	i5	s	DeadBody
+spos	i80	i6	s	EQ84_LotPDA
+spos	i81	i1	i	528890
+spos	i81	i2	i	462824
+spos	i81	i3	i	1577
+spos	i81	i4	s	7E74775A4C7CAAC67C912CBBE38D5C86
+spos	i81	i5	s	ItemContainer
+spos	i81	i6	s	SQ10_TihijMonolithStashNote
+spos	i82	i1	i	393513
+spos	i82	i2	i	386088
+spos	i82	i3	i	737
+spos	i82	i4	s	7F297715494ACB8499C588AF16459DB9
+spos	i82	i5	s	DeadBody
+spos	i82	i6	s	Malahit_KeyCard
+spos	i83	i1	i	305471
+spos	i83	i2	i	178770
+spos	i83	i3	i	715
+spos	i83	i4	s	813567F54D729D310AC666B49BDEE53E
+spos	i83	i5	s	ItemContainer
+spos	i83	i6	s	E14_MQ01_Helicopter_Item
+spos	i84	i1	i	407283
+spos	i84	i2	i	429717
+spos	i84	i3	i	432
+spos	i84	i4	s	81F604F54732FF112ABC3D8D3DE76DEF
+spos	i84	i5	s	DeadBody
+spos	i84	i6	s	EQ73_EdikBaskaPDA
+spos	i85	i1	i	220408
+spos	i85	i2	i	586984
+spos	i85	i3	i	454
+spos	i85	i4	s	833C263F42541B845E0CAD96EEAF2A6A
+spos	i85	i5	s	DeadBody
+spos	i85	i6	s	EQ111_KorkaPDA
+spos	i86	i1	i	543989
+spos	i86	i2	i	535866
+spos	i86	i3	i	130
+spos	i86	i4	s	835E381F4A1ECBBD3B1D20B10625968F
+spos	i86	i5	s	DeadBody
+spos	i86	i6	s	E04_MQ02_Recorder
+spos	i87	i1	i	391240
+spos	i87	i2	i	591630
+spos	i87	i3	i	-310
+spos	i87	i4	s	83BC7CE8488213A12A1AF099C590DC08
+spos	i87	i5	s	DeadBody
+spos	i87	i6	s	MaksSubbotaPDA
+spos	i88	i1	i	630470
+spos	i88	i2	i	532800
+spos	i88	i3	i	482
+spos	i88	i4	s	8516437B483C31FDE67C20A7DF3F1E09
+spos	i88	i5	s	DeadBody
+spos	i88	i6	s	RSQ05_C01_FlashDrive
+spos	i89	i1	i	228418
+spos	i89	i2	i	426610
+spos	i89	i3	i	294
+spos	i89	i4	s	87AF4E85451B8FE4395E759FDFE73C42
+spos	i89	i5	s	DeadBody
+spos	i89	i6	s	EQ143_KolubPDA
+spos	i90	i1	i	363966
+spos	i90	i2	i	456198
+spos	i90	i3	i	1265
+spos	i90	i4	s	889E4E7E46A698C60D3D7F8CFBBA7225
+spos	i90	i5	s	ItemContainer
+spos	i90	i6	s	EQ35_LegendAdvice
+spos	i91	i1	i	341761
+spos	i91	i2	i	522499
+spos	i91	i3	i	270
+spos	i91	i4	s	8902A62049527EBB7618F98C855253E6
+spos	i91	i5	s	ItemContainer
+spos	i91	i6	s	EQ38_Instruction,EQ38_ThanksNote
+spos	i92	i1	i	398584
+spos	i92	i2	i	389635
+spos	i92	i3	i	764
+spos	i92	i4	s	89145F5D42F65BFCCB1D029225665F3F
+spos	i92	i5	s	ItemContainer
+spos	i92	i6	s	RSQ04_C05_FuelCan
+spos	i93	i1	i	606650
+spos	i93	i2	i	582250
+spos	i93	i3	i	263
+spos	i93	i4	s	89B99360489E31D46C45B7AA8103ADBC
+spos	i93	i5	s	DeadBody
+spos	i93	i6	s	ANCQ23_AtasPDA
+spos	i94	i1	i	539977
+spos	i94	i2	i	532669
+spos	i94	i3	i	1612
+spos	i94	i4	s	8C794E524DE0B6A5A46852BA36773A60
+spos	i94	i5	s	DeadBody
+spos	i94	i6	s	E04_MQ02_BasementKey
+spos	i95	i1	i	550100
+spos	i95	i2	i	326990
+spos	i95	i3	i	100
+spos	i95	i4	s	8CAA0DD74110B8264B7541AD96CE68EE
+spos	i95	i5	s	DeadBody
+spos	i95	i6	s	EQ166_ValerianPDA
+spos	i96	i1	i	394587
+spos	i96	i2	i	389004
+spos	i96	i3	i	820
+spos	i96	i4	s	8DB205CA4FBFF84CC55261AD321A71A6
+spos	i96	i5	s	DeadBody
+spos	i96	i6	s	Malahit_KeyCard
+spos	i97	i1	i	571888
+spos	i97	i2	i	560671
+spos	i97	i3	i	3043
+spos	i97	i4	s	8EA8F3C7463CD0535E994E909FFD9203
+spos	i97	i5	s	DeadBody
+spos	i97	i6	s	RSQ05_C10_ItemNotes3
+spos	i98	i1	i	605156
+spos	i98	i2	i	558321
+spos	i98	i3	i	2407
+spos	i98	i4	s	8ECDD3F34D0C66648CC6D39E61F6276A
+spos	i98	i5	s	DeadBody
+spos	i98	i6	s	E05_MQ01_VartaSensors
+spos	i99	i1	i	336347
+spos	i99	i2	i	573118
+spos	i99	i3	i	785
+spos	i99	i4	s	8EFFA0304AB98308B5C1A19B71C65E95
+spos	i99	i5	s	ItemContainer
+spos	i99	i6	s	supack_vozmercform,supack_vozmercpda
+spos	i100	i1	i	468817
+spos	i100	i2	i	633803
+spos	i100	i3	i	-1161
+spos	i100	i4	s	8F774E9C4C8865E6FE357DA474304BB1
+spos	i100	i5	s	DeadBody
+spos	i100	i6	s	EQ65LosPDA
+spos	i101	i1	i	287400
+spos	i101	i2	i	428530
+spos	i101	i3	i	380
+spos	i101	i4	s	8F8239624505691016A67A9CABD2FA3F
+spos	i101	i5	s	ItemContainer
+spos	i101	i6	s	RSQ08_Item
+spos	i102	i1	i	98615
+spos	i102	i2	i	450344
+spos	i102	i3	i	1362
+spos	i102	i4	s	8FFE7CAA43AACDA2A87547ACB436B61B
+spos	i102	i5	s	ItemContainer
+spos	i102	i6	s	RSQ09_Item
+spos	i103	i1	i	343960
+spos	i103	i2	i	646179
+spos	i103	i3	i	657
+spos	i103	i4	s	91E9DC514420DD95BC53A7B19791749A
+spos	i103	i5	s	DeadBody
+spos	i103	i6	s	BasePDA_Military
+spos	i104	i1	i	260659
+spos	i104	i2	i	600720
+spos	i104	i3	i	497
+spos	i104	i4	s	923DE5D8457EE96760621EB104EB3F5F
+spos	i104	i5	s	DeadBody
+spos	i104	i6	s	supack_SQ100_SkullWarningNote
+spos	i105	i1	i	562410
+spos	i105	i2	i	509200
+spos	i105	i3	i	1170
+spos	i105	i4	s	9453F7494CB0A594848992BFC3693EBF
+spos	i105	i5	s	DeadBody
+spos	i105	i6	s	WildIsland_Trestle_Key_Padlock
+spos	i106	i1	i	626761
+spos	i106	i2	i	628804
+spos	i106	i3	i	1628
+spos	i106	i4	s	95442ED446A74DF874687FA4AF8DE322
+spos	i106	i5	s	ItemContainer
+spos	i106	i6	s	RSQ05_C10_IItemPDA1
+spos	i107	i1	i	629501
+spos	i107	i2	i	562196
+spos	i107	i3	i	-985
+spos	i107	i4	s	970082EF4318D563403EAC8A51F9F686
+spos	i107	i5	s	DeadBody
+spos	i107	i6	s	E05_MQ01_ShterevPDA
+spos	i108	i1	i	312797
+spos	i108	i2	i	377443
+spos	i108	i3	i	503
+spos	i108	i4	s	98793F4142D3B2F2874463B8FE03F370
+spos	i108	i5	s	ItemContainer
+spos	i108	i6	s	RSQ08_Item
+spos	i109	i1	i	192880
+spos	i109	i2	i	644197
+spos	i109	i3	i	275
+spos	i109	i4	s	98D445AA4FF83708C85F9DAF814B83E7
+spos	i109	i5	s	DeadBody
+spos	i109	i6	s	supack_supack_SQ96_C03_DiggerNote_PDA
+spos	i110	i1	i	570384
+spos	i110	i2	i	557747
+spos	i110	i3	i	2081
+spos	i110	i4	s	9ACD231948C737799A6922BFCAB40031
+spos	i110	i5	s	DeadBody
+spos	i110	i6	s	E05_SQ03_PDASavruk
+spos	i111	i1	i	418565
+spos	i111	i2	i	566566
+spos	i111	i3	i	-48
+spos	i111	i4	s	9ACF21974D6F55A08DFA0E88547098B6
+spos	i111	i5	s	DeadBody
+spos	i111	i6	s	E02_MQ03_RebraPDA_MSOP
+spos	i112	i1	i	450522
+spos	i112	i2	i	559526
+spos	i112	i3	i	756
+spos	i112	i4	s	9DD2DA044F3C56AC1FA84B8F86181EA4
+spos	i112	i5	s	ItemContainer
+spos	i112	i6	s	EQ29_TradeNote_Physical
+spos	i113	i1	i	370380
+spos	i113	i2	i	517770
+spos	i113	i3	i	120
+spos	i113	i4	s	A27441074958EC684144698A9B3C604B
+spos	i113	i5	s	DeadBody
+spos	i113	i6	s	ANCQ04_LokotPDA
+spos	i114	i1	i	145992
+spos	i114	i2	i	459908
+spos	i114	i3	i	1077
+spos	i114	i4	s	A2A68B344BA5AFFBF244748491A9BF1B
+spos	i114	i5	s	ItemContainer
+spos	i114	i6	s	RSQ09_Item
+spos	i115	i1	i	680666
+spos	i115	i2	i	553490
+spos	i115	i3	i	142
+spos	i115	i4	s	A33BF6154DD5B31B810993BF99C42062
+spos	i115	i5	s	DeadBody
+spos	i115	i6	s	RSQ05_C01_FlashDrive
+spos	i116	i1	i	432952
+spos	i116	i2	i	531045
+spos	i116	i3	i	85
+spos	i116	i4	s	A40069D84232934200A382BC3A543FC4
+spos	i116	i5	s	DeadBody
+spos	i116	i6	s	EQ52_PuzirPDA
+spos	i117	i1	i	209159
+spos	i117	i2	i	265529
+spos	i117	i3	i	1045
+spos	i117	i4	s	A59DC2314D9E8AF3EF329BABF92DEEB9
+spos	i117	i5	s	DeadBody
+spos	i117	i6	s	Yanov_SenaDymPDA
+spos	i118	i1	i	228672
+spos	i118	i2	i	448798
+spos	i118	i3	i	691
+spos	i118	i4	s	A7A903AB4E812AC38AF11E9C2B1BE716
+spos	i118	i5	s	ItemContainer
+spos	i118	i6	s	supack_SQ96_C01_Clue2_PDA
+spos	i119	i1	i	333561
+spos	i119	i2	i	449655
+spos	i119	i3	i	-305
+spos	i119	i4	s	A862547146BED25984D20F856B5F1B8D
+spos	i119	i5	s	DeadBody
+spos	i119	i6	s	EQ144_GlazgoPDA
+spos	i120	i1	i	322620
+spos	i120	i2	i	201340
+spos	i120	i3	i	370
+spos	i120	i4	s	AA11C6DE4D78F212E55E66ADFEB8BB59
+spos	i120	i5	s	DeadBody
+spos	i120	i6	s	EQ167_NoteOtshelnik
+spos	i121	i1	i	394960
+spos	i121	i2	i	388310
+spos	i121	i3	i	740
+spos	i121	i4	s	ABA6EB2E48AEE4B0E118989C54CC75B4
+spos	i121	i5	s	DeadBody
+spos	i121	i6	s	EQ74_JitnichenkoPDA
+spos	i122	i1	i	144599
+spos	i122	i2	i	342446
+spos	i122	i3	i	1100
+spos	i122	i4	s	ABA771294EFDD004E597D99F75B790E5
+spos	i122	i5	s	DeadBody
+spos	i122	i6	s	EQ118_DeadIskraPDA
+spos	i123	i1	i	239257
+spos	i123	i2	i	142638
+spos	i123	i3	i	-3932
+spos	i123	i4	s	AF7DB6DB47653B1CCBB11C9A686AA372
+spos	i123	i5	s	DeadBody
+spos	i123	i6	s	RichtersPlayer
+spos	i124	i1	i	603793
+spos	i124	i2	i	595005
+spos	i124	i3	i	2717
+spos	i124	i4	s	B13285AE44A21CAF2FD34B802E85D7B3
+spos	i124	i5	s	ItemContainer
+spos	i124	i6	s	E05_SQ01_VartaPatrolRoute
+spos	i125	i1	i	393200
+spos	i125	i2	i	433770
+spos	i125	i3	i	750
+spos	i125	i4	s	B2BBDD4D4A50BB6874FD32837A8F79AE
+spos	i125	i5	s	DeadBody
+spos	i125	i6	s	ANCQ16_PDALetyn
+spos	i126	i1	i	306373
+spos	i126	i2	i	637897
+spos	i126	i3	i	98
+spos	i126	i4	s	B4581F444A94941641C35BB30433AB01
+spos	i126	i5	s	DeadBody
+spos	i126	i6	s	EQ141_TurgaPDA
+spos	i127	i1	i	606290
+spos	i127	i2	i	581148
+spos	i127	i3	i	224
+spos	i127	i4	s	B73246874F11809E25D9809EB944DD22
+spos	i127	i5	s	ItemContainer
+spos	i127	i6	s	RSQ05_C10_ItemPDA2
+spos	i128	i1	i	724449
+spos	i128	i2	i	542601
+spos	i128	i3	i	989
+spos	i128	i4	s	B7FADA1C4F56978C74D311B13208726F
+spos	i128	i5	s	DeadBody
+spos	i128	i6	s	EQ155_BromPDA
+spos	i129	i1	i	397354
+spos	i129	i2	i	592257
+spos	i129	i3	i	-99
+spos	i129	i4	s	BA5125974F9CEB66819D87B0876D9CF0
+spos	i129	i5	s	ItemContainer
+spos	i129	i6	s	QuestItem_Fuse_Low
+spos	i130	i1	i	204790
+spos	i130	i2	i	549890
+spos	i130	i3	i	380
+spos	i130	i4	s	BAEC385243B424A04286D3905FF5C20F
+spos	i130	i5	s	DeadBody
+spos	i130	i6	s	EQ27_RafPDA
+spos	i131	i1	i	334028
+spos	i131	i2	i	372461
+spos	i131	i3	i	833
+spos	i131	i4	s	BB08D4C744ED4A9D8043BEAF8962DE21
+spos	i131	i5	s	ItemContainer
+spos	i131	i6	s	RSQ08_Item
+spos	i132	i1	i	499124
+spos	i132	i2	i	422264
+spos	i132	i3	i	763
+spos	i132	i4	s	BD75184D4997D60E828098951A16FD47
+spos	i132	i5	s	DeadBody
+spos	i132	i6	s	EQ37_GromNote
+spos	i133	i1	i	197852
+spos	i133	i2	i	360522
+spos	i133	i3	i	1851
+spos	i133	i4	s	BDAF159A416BD7D0978E26B54962CC0B
+spos	i133	i5	s	ItemContainer
+spos	i133	i6	s	nvgpack_supack_KlucPDA
+spos	i134	i1	i	460236
+spos	i134	i2	i	625063
+spos	i134	i3	i	-1594
+spos	i134	i4	s	C079F95D4DACE93D8968929C4B96A022
+spos	i134	i5	s	ItemContainer
+spos	i134	i6	s	EQ48_GiverPaper
+spos	i135	i1	i	256193
+spos	i135	i2	i	594507
+spos	i135	i3	i	820
+spos	i135	i4	s	C13E3D664A6FC7D5FEDEF383B0ADED70
+spos	i135	i5	s	DeadBody
+spos	i135	i6	s	supack_SQ97_SanyaPDA
+spos	i136	i1	i	296634
+spos	i136	i2	i	188517
+spos	i136	i3	i	291
+spos	i136	i4	s	C30ABDE748DC00AB0102D39C05D80A1F
+spos	i136	i5	s	ItemContainer
+spos	i136	i6	s	d1paritypack_ANCQ28_Pripyat_ZustrichCanteen_Page
+spos	i137	i1	i	738602
+spos	i137	i2	i	537471
+spos	i137	i3	i	164
+spos	i137	i4	s	C3375E954A1C2805E922F2B5281DF98A
+spos	i137	i5	s	DeadBody
+spos	i137	i6	s	SEQ04_ScientistPDA
+spos	i138	i1	i	531337
+spos	i138	i2	i	462176
+spos	i138	i3	i	3910
+spos	i138	i4	s	C56A02CC483ACA45289ADDB1FEC47FB4
+spos	i138	i5	s	DeadBody
+spos	i138	i6	s	SQ10_BunchOfKeysSPO
+spos	i139	i1	i	681019
+spos	i139	i2	i	641018
+spos	i139	i3	i	1786
+spos	i139	i4	s	C5A5EE8449B04A48C07EAABAED3DC011
+spos	i139	i5	s	DeadBody
+spos	i139	i6	s	SQ18_KamysPDA
+spos	i140	i1	i	423732
+spos	i140	i2	i	408759
+spos	i140	i3	i	4562
+spos	i140	i4	s	C72500BB4A0E82C28A86C98E93628714
+spos	i140	i5	s	ItemContainer
+spos	i140	i6	s	d1paritypack_ANCQ28_SlagHeap_Diggers_Reports
+spos	i141	i1	i	448973
+spos	i141	i2	i	406293
+spos	i141	i3	i	-701
+spos	i141	i4	s	C824A3A14F7425191972228FED6CDE6D
+spos	i141	i5	s	DeadBody
+spos	i141	i6	s	E03_MQ05_BanditPDA
+spos	i142	i1	i	225418
+spos	i142	i2	i	447381
+spos	i142	i3	i	576
+spos	i142	i4	s	C8A4E27442BF9BB63F0471BAF95E371F
+spos	i142	i5	s	ItemContainer
+spos	i142	i6	s	supack_SQ96_C02_ToolKit2
+spos	i143	i1	i	402912
+spos	i143	i2	i	519949
+spos	i143	i3	i	452
+spos	i143	i4	s	C8FFA0424D23FAEBCD3FFD9C529A9715
+spos	i143	i5	s	ItemContainer
+spos	i143	i6	s	RSQ01_WarlockPackage
+spos	i144	i1	i	410140
+spos	i144	i2	i	456059
+spos	i144	i3	i	211
+spos	i144	i4	s	C9F0CEAC40473D2F8C899D91AB63E3B3
+spos	i144	i5	s	DeadBody
+spos	i144	i6	s	StrangePDA
+spos	i145	i1	i	264166
+spos	i145	i2	i	560354
+spos	i145	i3	i	328
+spos	i145	i4	s	CA09E8F74645BA08927332971CC26295
+spos	i145	i5	s	DeadBody
+spos	i145	i6	s	EQ109_MarikTopotPDA
+spos	i146	i1	i	463319
+spos	i146	i2	i	368039
+spos	i146	i3	i	1056
+spos	i146	i4	s	CA1671D3435951E3160985BC7B25A9A6
+spos	i146	i5	s	ItemContainer
+spos	i146	i6	s	RSQ07_Item
+spos	i147	i1	i	253676
+spos	i147	i2	i	168461
+spos	i147	i3	i	3646
+spos	i147	i4	s	CD49448F4F015E78EF20678EF082CA84
+spos	i147	i5	s	ItemContainer
+spos	i147	i6	s	d1paritypack_ANCQ28_Pripyat_WhiteHouse_Page
+spos	i148	i1	i	424725
+spos	i148	i2	i	608692
+spos	i148	i3	i	967
+spos	i148	i4	s	CD9CF5EF402BBA5135FC2FAFCAF259F6
+spos	i148	i5	s	DeadBody
+spos	i148	i6	s	RSQ01_NewbiePDA2
+spos	i149	i1	i	333382
+spos	i149	i2	i	448829
+spos	i149	i3	i	-307
+spos	i149	i4	s	CDE3CE964B7C60DBA561BF8A1FFD89A0
+spos	i149	i5	s	DeadBody
+spos	i149	i6	s	EQ144_KucyjPDA
+spos	i150	i1	i	527181
+spos	i150	i2	i	329908
+spos	i150	i3	i	595
+spos	i150	i4	s	CEC86E4841E6EECECA610D84734935A9
+spos	i150	i5	s	DeadBody
+spos	i150	i6	s	SEQ08_StalkerPDA
+spos	i151	i1	i	409445
+spos	i151	i2	i	574045
+spos	i151	i3	i	1092
+spos	i151	i4	s	CF31DBF5418FC5D9D3C19C8637A84093
+spos	i151	i5	s	ItemContainer
+spos	i151	i6	s	EQ30_DobryakPDA,EQ30_ReshkaPDA,EQ30_TitunPDA
+spos	i152	i1	i	438863
+spos	i152	i2	i	592662
+spos	i152	i3	i	-14
+spos	i152	i4	s	D15A01FA4D1C2FC8E8606DA3349CD3A7
+spos	i152	i5	s	DeadBody
+spos	i152	i6	s	PripoyPDA
+spos	i153	i1	i	434129
+spos	i153	i2	i	558118
+spos	i153	i3	i	179
+spos	i153	i4	s	D53FF5CF463756BBBB4A91B116395CA4
+spos	i153	i5	s	DeadBody
+spos	i153	i6	s	RSQ01_WarlockPackage
+spos	i154	i1	i	348447
+spos	i154	i2	i	615940
+spos	i154	i3	i	939
+spos	i154	i4	s	D83DD1AE4949413C210500AF3DBE2149
+spos	i154	i5	s	DeadBody
+spos	i154	i6	s	EQ140_IluhaVorobejPDA
+spos	i155	i1	i	396330
+spos	i155	i2	i	388972
+spos	i155	i3	i	738
+spos	i155	i4	s	DB54CD5044352A3B3647C4BA721285DC
+spos	i155	i5	s	DeadBody
+spos	i155	i6	s	Malahit_KeyCard
+spos	i156	i1	i	175573
+spos	i156	i2	i	656829
+spos	i156	i3	i	711
+spos	i156	i4	s	DB88832B4B53327AB92E02A2BCA24AF5
+spos	i156	i5	s	DeadBody
+spos	i156	i6	s	SQ88_GrebenNote
+spos	i157	i1	i	512738
+spos	i157	i2	i	509658
+spos	i157	i3	i	1199
+spos	i157	i4	s	DCDDC105412502A22D89BFA9CABC83B2
+spos	i157	i5	s	DeadBody
+spos	i157	i6	s	EQ85_MelPDA
+spos	i158	i1	i	298780
+spos	i158	i2	i	480680
+spos	i158	i3	i	222
+spos	i158	i4	s	DDB18CF646373CF1E9F0768F86F48188
+spos	i158	i5	s	DeadBody
+spos	i158	i6	s	SQ92_VolkovPDA
+spos	i159	i1	i	194581
+spos	i159	i2	i	360704
+spos	i159	i3	i	1213
+spos	i159	i4	s	DF8F23524BC037EB138CCEA75DC885F8
+spos	i159	i5	s	DeadBody
+spos	i159	i6	s	nvgpack_ANCQ27_BanditPDA
+spos	i160	i1	i	408950
+spos	i160	i2	i	513700
+spos	i160	i3	i	402
+spos	i160	i4	s	E016BB8445651B2001B9D8A0CCB31CA4
+spos	i160	i5	s	DeadBody
+spos	i160	i6	s	LeshiyPDA
+spos	i161	i1	i	541437
+spos	i161	i2	i	402627
+spos	i161	i3	i	329
+spos	i161	i4	s	E03204C54A87F9194CDCD8BF054876AD
+spos	i161	i5	s	ItemContainer
+spos	i161	i6	s	RSQ07_Item
+spos	i162	i1	i	318711
+spos	i162	i2	i	550019
+spos	i162	i3	i	-285
+spos	i162	i4	s	E547600B477AD8FC147E48BEC8733386
+spos	i162	i5	s	DeadBody
+spos	i162	i6	s	SQ13_PDA_Budnik
+spos	i163	i1	i	533100
+spos	i163	i2	i	447310
+spos	i163	i3	i	665
+spos	i163	i4	s	E5C468774BBAE44512277EBD28434C57
+spos	i163	i5	s	DeadBody
+spos	i163	i6	s	ZhukovskyPDA
+spos	i164	i1	i	440280
+spos	i164	i2	i	469270
+spos	i164	i3	i	750
+spos	i164	i4	s	E9A5375B475CAF40EF87A6A6ECDDDC6E
+spos	i164	i5	s	DeadBody
+spos	i164	i6	s	SQ47_DavidAkopan_PDA
+spos	i165	i1	i	428752
+spos	i165	i2	i	450309
+spos	i165	i3	i	294
+spos	i165	i4	s	EC029E324E5C0D774F564F9CC42098AF
+spos	i165	i5	s	ItemContainer
+spos	i165	i6	s	RSQ04_C05_FuelCan
+spos	i166	i1	i	49266
+spos	i166	i2	i	432257
+spos	i166	i3	i	1098
+spos	i166	i4	s	EF7666FE4EB70175E7CC348364821C72
+spos	i166	i5	s	ItemContainer
+spos	i166	i6	s	RSQ09_Item
+spos	i167	i1	i	562548
+spos	i167	i2	i	600236
+spos	i167	i3	i	1828
+spos	i167	i4	s	F1B14D674732AA379021A1B25DB874BE
+spos	i167	i5	s	DeadBody
+spos	i167	i6	s	RSQ05_C10_ItemNotes4
+spos	i168	i1	i	248404
+spos	i168	i2	i	315445
+spos	i168	i3	i	122
+spos	i168	i4	s	F3A077DD48F86B0D32536A8952BD8F5E
+spos	i168	i5	s	DeadBody
+spos	i168	i6	s	E10_MQ01_TundraPDA_Item
+spos	i169	i1	i	172340
+spos	i169	i2	i	246010
+spos	i169	i3	i	520
+spos	i169	i4	s	F3CAE7F7456E16F76C6F7FA48176990C
+spos	i169	i5	s	DeadBody
+spos	i169	i6	s	SEQ05_StalkerPDA
+spos	i170	i1	i	366630
+spos	i170	i2	i	628246
+spos	i170	i3	i	105
+spos	i170	i4	s	F3CB385B417DAA0C4F09C189A6B885CB
+spos	i170	i5	s	DeadBody
+spos	i170	i6	s	NegodaPDA
+spos	i171	i1	i	424135
+spos	i171	i2	i	648260
+spos	i171	i3	i	1084
+spos	i171	i4	s	F65509CF483864B44E3DC48FE79B4CB2
+spos	i171	i5	s	ItemContainer
+spos	i171	i6	s	RSQ06_C04_Goods
+spos	i172	i1	i	386576
+spos	i172	i2	i	558594
+spos	i172	i3	i	1674
+spos	i172	i4	s	F6643B5041F9DE04550440B09D275230
+spos	i172	i5	s	ItemContainer
+spos	i172	i6	s	E07_SQ01_SurgeryKit
+spos	i173	i1	i	481481
+spos	i173	i2	i	421018
+spos	i173	i3	i	461
+spos	i173	i4	s	F66812BD4F4300A62877E4B8A16C8404
+spos	i173	i5	s	ItemContainer
+spos	i173	i6	s	RSQ07_Item
+spos	i174	i1	i	745660
+spos	i174	i2	i	575610
+spos	i174	i3	i	365
+spos	i174	i4	s	F77F3A514C850B19203B2CAE6C50305B
+spos	i174	i5	s	DeadBody
+spos	i174	i6	s	DogmasterDairy
+spos	i175	i1	i	411400
+spos	i175	i2	i	384860
+spos	i175	i3	i	1442
+spos	i175	i4	s	FBB0CE6E440935863EA517846956EDEF
+spos	i175	i5	s	DeadBody
+spos	i175	i6	s	ANCQ15_NoteRat
+spos	i176	i1	i	354340
+spos	i176	i2	i	474774
+spos	i176	i3	i	1107
+spos	i176	i4	s	FBE652DA4898907EDB2FD0A63A6B44F1
+spos	i176	i5	s	DeadBody
+spos	i176	i6	s	E03_01_ChernozemPDA
+spos	i177	i1	i	363246
+spos	i177	i2	i	498255
+spos	i177	i3	i	300
+spos	i177	i4	s	FC2B8660469D0B917CA5BFB8CF5FEF46
+spos	i177	i5	s	DeadBody
+spos	i177	i6	s	DvupalovVodka
+spos	i178	i1	i	359710
+spos	i178	i2	i	458940
+spos	i178	i3	i	785
+spos	i178	i4	s	FFACCCAB4810C3C83D5AFD8635CA9913
+spos	i178	i5	s	DeadBody
+spos	i178	i6	s	SEQ01_BanditPDA
+sskip	sANCQ01_ItemAdd_VadaHvorostPDA		i	1
+sskip	sANCQ02_ItemAdd_LeshiyPDA		i	1
+sskip	sANCQ02_ItemAdd_LeshiyPDA_1		i	1
+sskip	sANCQ02_ItemAdd_LeshiyPDA_2		i	1
+sskip	sANCQ04_ItemAdd_		i	1
+sskip	sANCQ07_ItemAdd_RyabinaPDA		i	1
+sskip	sANCQ103_ItemAdd_SQ103_MapNote		i	1
+sskip	sANCQ103_P_ItemAdd_DocPDA_SQ103		i	1
+sskip	sANCQ103_P_ItemAdd_SQ103_Emitter		i	1
+sskip	sANCQ15_ItemAdd_PDA		i	1
+sskip	sANCQ16_ItemAdd_ANCQ16_PDALetyn		i	1
+sskip	sANCQ23_ItemAdd_AtasPDA		i	1
+sskip	sANCQ25_P_ItemAdd_nvgpack_supack_Banzai_RostokRoom_Key		i	1
+sskip	sANCQ27_ItemAdd_nvgpack_ANCQ27_BanditPDA		i	1
+sskip	sANCQ27_ItemAdd_nvgpack_supack_KlucPDA		i	1
+sskip	sANCQ28_ItemAdd_d1paritypack_ANCQ28_Pripyat_Energetyk_Page		i	1
+sskip	sANCQ28_ItemAdd_d1paritypack_ANCQ28_Pripyat_Ferris_Wheel_Page		i	1
+sskip	sANCQ28_ItemAdd_d1paritypack_ANCQ28_Pripyat_JournalistHouse_Page		i	1
+sskip	sANCQ28_ItemAdd_d1paritypack_ANCQ28_Pripyat_WhiteHouse_Page		i	1
+sskip	sANCQ28_ItemAdd_d1paritypack_ANCQ28_Pripyat_ZustrichCanteen_Page		i	1
+sskip	sANCQ28_ItemAdd_d1paritypack_ANCQ28_SlagHeap_Diggers_Reports		i	1
+sskip	sArch_Bossfight_Faust_ItemAdd_FaustData		i	1
+sskip	sArch_Bossfight_Faust_ItemAdd_FaustPDA		i	1
+sskip	sE01_MQ01_ItemAdd_BasePDA_Military		i	1
+sskip	sE01_MQ01_ItemAdd_NegodaPDA		i	1
+sskip	sE01_MQ01_ItemAdd_Scanner		i	1
+sskip	sE01_MQ01_ItemAdd_Scanner_1		i	1
+sskip	sE01_MQ01_ItemAdd_Scanner_2		i	1
+sskip	sE02_MQ02_C02_ItemAdd_HaryaPDA		i	1
+sskip	sE02_MQ02_C03_ItemAdd_Kosoy_VartaSensors		i	1
+sskip	sE02_MQ02_C03_ItemAdd_VartaSensorsPlayer		i	1
+sskip	sE02_MQ02_ItemAdd_E02_MQ02_BS_PDA		i	1
+sskip	sE02_MQ02_ItemAdd_E02_MQ03_RebraPDA_MSOP		i	1
+sskip	sE02_MQ02_ItemAdd_E02_MQ03_VartaSensors		i	1
+sskip	sE02_MQ02_ItemAdd_VartaPDAPlayer_Debug		i	1
+sskip	sE02_MQ02_ItemAdd_VartaSencorsPlayer_Debug		i	1
+sskip	sE02_MQ03_C05_ItemAdd_E02_MQ03_RebraKey		i	1
+sskip	sE02_MQ03_C05_ItemAdd_E02_MQ03_RebraPDA_MSOP		i	1
+sskip	sE02_MQ03_C05_ItemAdd_PripoyPDA		i	1
+sskip	sE02_MQ03_C05_ItemAdd_RihterNorthKey		i	1
+sskip	sE02_SQ01_ItemAdd_BanditPDA		i	1
+sskip	sE02_SQ01_ItemAdd_E02_SQ01_HmuriyPDA		i	1
+sskip	sE02_SQ01_ItemAdd_ZorikPDA		i	1
+sskip	sE03_MQ01_ItemAdd_E03_01_ChernozemPDA		i	1
+sskip	sE03_MQ02_ItemAdd_E03_MQ02_IskraPDA		i	1
+sskip	sE03_MQ02_ItemAdd_E03_MQ02_IskraPDA_Updated		i	1
+sskip	sE03_MQ02_ItemAdd_ZmeevikPDA		i	1
+sskip	sE03_MQ05_C01_ItemAdd_E03_05_NestorPass		i	1
+sskip	sE03_MQ05_C01_ItemAdd_MaloiPDA		i	1
+sskip	sE03_MQ05_ItemAdd_BanditPDA		i	1
+sskip	sE03_MQ05_ItemAdd_BanditPDA_1		i	1
+sskip	sE03_MQ05_ItemAdd_E03_05_NestorPass		i	1
+sskip	sE03_MQ05_ItemAdd_NestorUSB		i	1
+sskip	sE03_MQ05_P_ItemAdd_E03_05_NestorPass_Fix		i	1
+sskip	sE03_MQ05_P_ItemAdd_NestorPass		i	1
+sskip	sE03_MQ06_DEBUG_PDA		i	1
+sskip	sE03_MQ06_ItemAdd_KorshVartaDogtag		i	1
+sskip	sE03_MQ06_ItemAdd_KorshVartaDogtag_1		i	1
+sskip	sE03_MQ06_ItemAdd_StrangePDA		i	1
+sskip	sE03_SQ01_C1_ItemAdd_DvupalovVodka		i	1
+sskip	sE03_SQ01_ItemAdd_DvupalovVodka		i	1
+sskip	sE03_SQ01_ItemAdd_DvupalovVodka_1		i	1
+sskip	sE03_SQ01_ItemAdd_DvupalovVodka_2		i	1
+sskip	sE03_SQ01_ItemAdd_E03_MQ01_GoshaMogilaPDA		i	1
+sskip	sE03_SQ01_ItemAdd_E03_MQ01_GoshaMogilaPDA_1		i	1
+sskip	sE04_MQ01_ItemAdd_Inductor		i	1
+sskip	sE04_MQ01_ItemAdd_StrangePDA		i	1
+sskip	sE04_MQ01_ItemAdd_StrangePDA_1		i	1
+sskip	sE04_MQ01_ItemAdd_StrangePDA_2		i	1
+sskip	sE04_MQ01_ItemAdd_StrangePDA_3		i	1
+sskip	sE04_MQ01_ItemAdd_VartaDogtag		i	1
+sskip	sE04_MQ02_ItemAdd_AzimutControlRoomKey		i	1
+sskip	sE04_MQ02_ItemAdd_E04_MQ02_BasementKey		i	1
+sskip	sE04_MQ02_ItemAdd_E04_MQ02_BasementKey_1		i	1
+sskip	sE04_MQ02_ItemAdd_E04_MQ02_Recorder		i	1
+sskip	sE04_MQ02_ItemAdd_Inductor		i	1
+sskip	sE04_MQ02_ItemAdd_StrangePDA		i	1
+sskip	sE04_MQ02_ItemAdd_VartaDogtag		i	1
+sskip	sE04_SQ01_ItemAdd_CiklopHasPDA		i	1
+sskip	sE04_SQ02_ItemAdd_KvaskaPDA		i	1
+sskip	sE05_MQ01_ItemAdd_E05_MQ01_VartaSensors		i	1
+sskip	sE05_MQ01_ItemAdd_E05_MQ01_VartaSensors_1		i	1
+sskip	sE05_MQ01_ItemAdd_VartaDogtag		i	1
+sskip	sE05_MQ02_ItemAdd_E05_MQ02_KalanchaMap		i	1
+sskip	sE05_MQ02_ItemAdd_E05_MQ02_KalanchaMap_1		i	1
+sskip	sE05_MQ02_ItemAdd_NimblePDA		i	1
+sskip	sE05_MQ02_ItemAdd_ZveroboyPDA		i	1
+sskip	sE05_MQ03_ItemAdd_Scanner		i	1
+sskip	sE05_MQ04_ItemAdd_Scanner_E05		i	1
+sskip	sE05_MQ04_ItemAdd_Token		i	1
+sskip	sE05_MQ05_ItemAdd_QuestItem_USB_Damaged_Blue		i	1
+sskip	sE05_MQ05_ItemAdd_krivenko_flashdrive_05_5		i	1
+sskip	sE05_MQ05_ItemAdd_krivenko_full_flashdrive_05_5		i	1
+sskip	sE05_SQ01_ItemAdd_VartaPatrolRoute		i	1
+sskip	sE05_SQ03_ItemAdd_VartaAudiolog		i	1
+sskip	sE05_SQ03_P_ItemAdd_VartaDogtag		i	1
+sskip	sE05_SQ03_P_ItemAdd_VartaDogtag_1		i	1
+sskip	sE05_SQ04_ItemAdd_E05_SQ04_LapaPDA		i	1
+sskip	sE05_SQ04_P_ItemAdd_VartaDogtag		i	1
+sskip	sE06_MQ01_C01_ItemAdd_CleanersKey_1		i	1
+sskip	sE06_MQ01_C01_ItemAdd_ZombieNote_Item		i	1
+sskip	sE06_MQ01_ItemAdd_E06_MQ01_CardToPenthouse		i	1
+sskip	sE06_MQ01_ItemAdd_Scanner_E05		i	1
+sskip	sE07_EQ01_ItemAdd_E07_EQ01_ZelenyjPDA		i	1
+sskip	sE07_MQ01_C01_ItemAdd_PlacDeadStalkerKPK		i	1
+sskip	sE07_MQ01_C02_ItemAdd_E07_PsyEmitter		i	1
+sskip	sE07_MQ01_C02_ItemAdd_PripoyKeyToPripoy		i	1
+sskip	sE07_MQ01_C02_ItemAdd_PripoyKey_ToSkif		i	1
+sskip	sE07_MQ01_C02_ItemAdd_SyhinPDA		i	1
+sskip	sE07_MQ01_C02_ItemAdd_SyhinStash_Item		i	1
+sskip	sE07_MQ01_ItemAdd_E07_MQ01_SkiperPDA		i	1
+sskip	sE07_MQ01_ItemAdd_E07_MQ01_SkiperPDA_1		i	1
+sskip	sE07_MQ01_ItemAdd_SkiperPDA		i	1
+sskip	sE07_MQ03_ItemAdd_E07_MQ03_ControlEmitter		i	1
+sskip	sE07_SQ01_ItemAdd_SurgeryMedkit_2		i	1
+sskip	sE07_SQ01_ItemAdd_SurgeryMedkit_3		i	1
+sskip	sE07_SQ01_ItemAdd_Zalesie_LenaPDA		i	1
+sskip	sE08_EQ02_ItemAdd_E08_EQ02_DenyaByvalyiPDA		i	1
+sskip	sE08_EQ03_ItemAdd_E08_EQ03_KrikPDA		i	1
+sskip	sE08_EQ03_ItemAdd_Electrocollar		i	1
+sskip	sE08_MQ01_ItemAdd_Electrocollar		i	1
+sskip	sE08_MQ01_ItemAdd_Malahit_KeyCard		i	1
+sskip	sE08_MQ01_ItemAdd_VartaDogtag		i	1
+sskip	sE08_MQ03_ItemAdd_Blueprint_FaustPsyResist_Quest_1_1		i	1
+sskip	sE08_MQ03_ItemAdd_E08_MQ03_KeycardLabX5		i	1
+sskip	sE08_MQ03_ItemAdd_E08_MQ03_SuppressorDocs		i	1
+sskip	sE08_MQ03_ItemAdd_Electrocollar		i	1
+sskip	sE08_MQ03_ItemAdd_Electrocollar_1		i	1
+sskip	sE08_SQ01_ItemAdd_Electrocollar		i	1
+sskip	sE08_SQ01_S2_ItemAdd_E08_SQ01_KartezhnykPDA_Item		i	1
+sskip	sE09_MQ01_ItemAdd_FaustData		i	1
+sskip	sE09_MQ01_ItemAdd_FaustData_1		i	1
+sskip	sE09_MQ01_ItemAdd_FaustData_2		i	1
+sskip	sE09_MQ01_ItemAdd_VartaDogtag		i	1
+sskip	sE10_MQ01_C01_ItemAdd_SiviyPDA_Item		i	1
+sskip	sE10_MQ01_C02_ItemAdd_HunterPDA		i	1
+sskip	sE10_MQ01_ItemAdd_VolkodavPDA		i	1
+sskip	sE10_MQ01_ItemAdd_YarlPDA		i	1
+sskip	sE11_MQ01_ItemAdd_E11_MQ01_Cartridge		i	1
+sskip	sE11_MQ01_ItemAdd_E11_MQ01_DeciphererX3		i	1
+sskip	sE11_MQ01_ItemAdd_E11_MQ01_DeciphererX3_1		i	1
+sskip	sE11_MQ01_ItemAdd_E11_MQ01_Tracker		i	1
+sskip	sE11_MQ02_ItemAdd_E11_MQ01_Cartridge		i	1
+sskip	sE11_MQ02_ItemAdd_E11_MQ01_Cartridge_1		i	1
+sskip	sE11_MQ03_CardYellow		i	1
+sskip	sE11_MQ03_ItemAdd_E11_MQ01_DeciphererX3		i	1
+sskip	sE11_MQ03_ItemAdd_E11_MQ01_DeciphererX3_Fix		i	1
+sskip	sE11_MQ03_ItemAdd_QuestItem_KeyCard_Yellow_SecondGuard		i	1
+sskip	sE11_MQ03_ItemAdd_VartaDogtag		i	1
+sskip	sE11_MQ04_ItemAdd_DoorKey		i	1
+sskip	sE12_MQ01_ItemAdd_E10_MQ02_Regenerator		i	1
+sskip	sE12_MQ01_ItemAdd_E12_MQ01_DuhStashKey		i	1
+sskip	sE12_MQ01_ItemAdd_E12_MQ01_DuhStashKey_1		i	1
+sskip	sE12_MQ01_ItemAdd_E12_MQ01_DuhStashKey_2		i	1
+sskip	sE12_MQ01_ItemAdd_E12_MQ01_PDADuh		i	1
+sskip	sE12_MQ01_ItemAdd_E12_MQ01_PDADuh_1		i	1
+sskip	sE14_MQ01_C02_ItemAdd_HelicopterNote		i	1
+sskip	sE14_MQ01_C03_ItemAdd_DeadSparkPDA		i	1
+sskip	sE14_MQ01_C03_ItemAdd_DeadVartaPDA		i	1
+sskip	sE14_MQ01_C05_ItemAdd_E14_MQ01_Coordinates_ItemToSparkBody		i	1
+sskip	sE14_MQ01_C05_ItemAdd_E14_MQ01_Coordinates_ItemToVartaBody		i	1
+sskip	sE14_MQ02_C01_ItemAdd_E14_MQ02_Tunnels		i	1
+sskip	sE14_MQ02_C01_ItemAdd_E14_MQ02_Tunnels_1		i	1
+sskip	sE14_MQ02_C02_ItemAdd_E14_MQ02_Tunnels		i	1
+sskip	sE14_MQ02_C02_ItemAdd_E14_MQ02_Tunnels_1		i	1
+sskip	sE14_MQ02_C03_ItemAdd_RichtersPlayer		i	1
+sskip	sE14_MQ02_C03_ItemAdd_RichtersPlayer_1		i	1
+sskip	sE14_MQ02_ItemAdd_E14_MQ01_Coordinates_Item		i	1
+sskip	sE14_MQ02_ItemAdd_E14_MQ01_SCAT7Flask_Item		i	1
+sskip	sE14_MQ02_ItemAdd_E14_MQ02_MobileBunkers		i	1
+sskip	sE14_MQ02_ItemAdd_FaustData		i	1
+sskip	sE14_MQ02_ItemAdd_FaustData_1		i	1
+sskip	sE14_MQ02_ItemAdd_RichtersPlayer		i	1
+sskip	sE14_MQ02_ItemAdd_RichtersPlayer_1		i	1
+sskip	sE16_Bossfight_Scar_ItemAdd_AlteredScarsToast		i	1
+sskip	sE16_Bossfight_Scar_ItemAdd_E16_MQ01_PDA_Scar		i	1
+sskip	sE16_Bossfight_Strelok_ItemAdd_QuestArtifactHeartofChornobyl		i	1
+sskip	sE16_MQ01_ItemAdd_GraniteKeycard		i	1
+sskip	sE16_MQ02_ItemAdd_E16_MQ03_KeyKard_Granite		i	1
+sskip	sE16_MQ03_ItemAdd_Cartridge		i	1
+sskip	sE16_MQ03_ItemAdd_KeyKard_Granite_1		i	1
+sskip	sE16_MQ03_ItemAdd_StrelokPDA		i	1
+sskip	sEQ08_ItemAdd_EQ08_FreshBread		i	1
+sskip	sEQ08_ItemAdd_EQ08_FreshBread_2_Toha		i	1
+sskip	sEQ08_ItemAdd_EQ08_FreshBread_3_D		i	1
+sskip	sEQ08_ItemAdd_EQ08_FreshBread_4_Krucenij		i	1
+sskip	sEQ08_ItemAdd_EQ08_FreshBread_Rulon		i	1
+sskip	sEQ08_ItemAdd_FreshBread		i	1
+sskip	sEQ109_PDAAddBanditLuna		i	1
+sskip	sEQ109_P_PDAAddDeadBody		i	1
+sskip	sEQ10_ItemAdd_EQ10_PastuhPDA		i	1
+sskip	sEQ110_P_ItemAdd_EQ110_DokaPDA		i	1
+sskip	sEQ110_P_ItemAdd_EQ110_HermitPDA		i	1
+sskip	sEQ111_ItemAdd_EQ111_KorkaPDA		i	1
+sskip	sEQ118_P_ItemAdd_IskraPDA		i	1
+sskip	sEQ11_ItemAdd_EQ11_NortonPDA		i	1
+sskip	sEQ139_P_ItemAdd_VartaDogtag		i	1
+sskip	sEQ13_ItemAdd_EQ13_FilimonPDA		i	1
+sskip	sEQ13_ItemAdd_MihaPDA		i	1
+sskip	sEQ140_C02_ItemAdd_EQ140_IluhaVorobejPDA		i	1
+sskip	sEQ140_ItemAdd_EQ140_IluhaVorobejPDA		i	1
+sskip	sEQ141_ItemAdd_EQ141_TurgaPDA		i	1
+sskip	sEQ143_KolubPDA		i	1
+sskip	sEQ144_P_ItemAdd_EQ144_ArtemPodvodnikPDA		i	1
+sskip	sEQ144_P_ItemAdd_EQ144_GlazgoPDA		i	1
+sskip	sEQ144_P_ItemAdd_EQ144_KucyjPDA		i	1
+sskip	sEQ145_ItemAdd_EQ145KostaKonusNote		i	1
+sskip	sEQ145_ItemAdd_EQ145KostaKonusNote_To_KostaSuhoi		i	1
+sskip	sEQ145_ItemAdd_Malahit_KeyCard		i	1
+sskip	sEQ145_ItemAdd_Malahit_KeyCard_To_KostaSuhoi		i	1
+sskip	sEQ145_P_ItemAdd_EQ145KostaKonusNote		i	1
+sskip	sEQ145_P_ItemAdd_Malahit_KeyCard		i	1
+sskip	sEQ148_ItemAdd_EQ148_KeyFromControllerHall		i	1
+sskip	sEQ148_ItemAdd_EQ148_KostasPDA		i	1
+sskip	sEQ14_P_ItemAdd_KuziaPDA		i	1
+sskip	sEQ150_ItemAdd_HermitNote		i	1
+sskip	sEQ152_P_ItemAdd_VartaDogtag		i	1
+sskip	sEQ155_ItemAdd_BromdPDA		i	1
+sskip	sEQ155_P_ItemAdd_CollarContoller		i	1
+sskip	sEQ156_ItemAdd_CaseBones		i	1
+sskip	sEQ156_ItemAdd_MorozPDA		i	1
+sskip	sEQ161_ItemAdd_Malahit_KeyCard_Attacker1		i	1
+sskip	sEQ161_ItemAdd_Malahit_KeyCard_Attacker2		i	1
+sskip	sEQ161_ItemAdd_Malahit_KeyCard_Attacker3		i	1
+sskip	sEQ161_ItemAdd_Malahit_KeyCard_Attacker4		i	1
+sskip	sEQ161_ItemAdd_Malahit_KeyCard_Attacker5		i	1
+sskip	sEQ161_ItemAdd_Malahit_KeyCard_Sniper		i	1
+sskip	sEQ161_P_ItemAdd_EQ161_KudravyjPDA		i	1
+sskip	sEQ161_P_ItemAdd_VartaDogtag		i	1
+sskip	sEQ165_ItemAdd_EQ165_TrachukPDA		i	1
+sskip	sEQ165_ItemAdd_EQ165_USBTrachuk		i	1
+sskip	sEQ165_ItemAdd_Malahit_KeyCard		i	1
+sskip	sEQ165_P_ItemAdd_VartaDogtag		i	1
+sskip	sEQ166_P_ItemAdd_EQ166_ValerianPDA		i	1
+sskip	sEQ166_P_ItemAdd_EQ166_ValerianPDA_1		i	1
+sskip	sEQ167_ItemAdd_EQ167_NoteOtshelnik		i	1
+sskip	sEQ16_ItemAdd_EQ16_FaraPDA		i	1
+sskip	sEQ16_P_ItemAdd_EQ16_FaraPDA		i	1
+sskip	sEQ20_P_ItemAdd_PDAPasaStep		i	1
+sskip	sEQ26_ItemAdd_EQ26_FlashDriveWithData		i	1
+sskip	sEQ26_ItemAdd_EmptyFlashDrive		i	1
+sskip	sEQ26_ItemAdd_LevsaPDA_To_LevsaZombie_1		i	1
+sskip	sEQ26_ItemAdd_Malahit_KeyCard_To_LevsaZombie		i	1
+sskip	sEQ26_ItemAdd_Malahit_KeyCard_To_ZombiePal_1		i	1
+sskip	sEQ26_ItemAdd_Malahit_KeyCard_To_ZombiePal_2		i	1
+sskip	sEQ27_ItemAdd_EQ27_RafPDA		i	1
+sskip	sEQ29_ItemAdd_ToContainer_Note		i	1
+sskip	sEQ30_P_ItemAdd_EQ30_DobryakPDA		i	1
+sskip	sEQ30_P_ItemAdd_EQ30_ReshkaPDA		i	1
+sskip	sEQ30_P_ItemAdd_EQ30_TitunPDA		i	1
+sskip	sEQ35_ItemAdd_EQ35_LehaLegendPDA		i	1
+sskip	sEQ35_P_ItemAdd_EQ35_LegendAdvice		i	1
+sskip	sEQ35_P_ItemAdd_EQ35_LegendAdvice_1		i	1
+sskip	sEQ35_P_ItemAdd_EQ35_LegendAdvice_2		i	1
+sskip	sEQ36_P_ItemAdd_EQ36_KucherPDA		i	1
+sskip	sEQ37_ItemAdd_GromNote		i	1
+sskip	sEQ37_P_ItemAdd_EQ37_GromNote		i	1
+sskip	sEQ38_P_ItemAdd_EQ38_Instruction		i	1
+sskip	sEQ38_P_ItemAdd_ThanksNote		i	1
+sskip	sEQ48_ItemAdd_EQ48_GiverPaper		i	1
+sskip	sEQ51_ItemAdd_EQ51_TemaJetPDA		i	1
+sskip	sEQ51_P_ItemAdd_EQ51_TemaJetPDA		i	1
+sskip	sEQ51_P_ItemAdd_EQ51_TemaJetPDA_1		i	1
+sskip	sEQ51_P_ItemAdd_ZhukovskyPDA		i	1
+sskip	sEQ52_ItemAdd_EQ52_PuzirPDA		i	1
+sskip	sEQ57_P_ItemAdd_BorodulinPDA		i	1
+sskip	sEQ58_ItemAdd_EQ58_TimurMolcanovPDA		i	1
+sskip	sEQ60_ItemAdd_EQ60_PDAVovchik		i	1
+sskip	sEQ62_ItemAdd_MuhaPDA		i	1
+sskip	sEQ64_ItemAdd_EQ64_MakisPDA		i	1
+sskip	sEQ65_ItemAdd_EQ65LosPDA		i	1
+sskip	sEQ65_ItemAdd_EQ65PiavkaPDA		i	1
+sskip	sEQ65_P_ItemAdd_EQ65PiavkaPDA		i	1
+sskip	sEQ67_P_ItemAdd_EQ67UraKotPDA		i	1
+sskip	sEQ68_ItemAdd_EQ68_KubrakPDA		i	1
+sskip	sEQ70_ItemAdd_PDAtoDeadBody		i	1
+sskip	sEQ73_ItemAdd_EQ73_EdikBaskaPDA		i	1
+sskip	sEQ74_ItemAdd_EQ74_JitnichenkoPDA		i	1
+sskip	sEQ74_ItemAdd_EQ74_JitnichenkoPDA_1		i	1
+sskip	sEQ74_ItemAdd_Malahit_KeyCard		i	1
+sskip	sEQ74_ItemAdd_Malahit_KeyCard_1		i	1
+sskip	sEQ74_ItemAdd_Malahit_KeyCard_2		i	1
+sskip	sEQ74_ItemAdd_Malahit_KeyCard_4		i	1
+sskip	sEQ74_ItemAdd_Malahit_KeyCard_5		i	1
+sskip	sEQ74_ItemAdd_Malahit_KeyCard_6		i	1
+sskip	sEQ79_ItemAdd_Key		i	1
+sskip	sEQ82_ItemAdd_EQ82_konserva		i	1
+sskip	sEQ82_ItemAdd_EQ82_konserva_1		i	1
+sskip	sEQ82_P_ItemAdd_EQ82_konserva		i	1
+sskip	sEQ82_P_ItemAdd_EQ82_konserva_1		i	1
+sskip	sEQ82_P_ItemAdd_EQ82_konserva_2		i	1
+sskip	sEQ84_ItemAdd_EQ84_LotPDA		i	1
+sskip	sEQ85_ItemAdd_EQ85_MelPDA		i	1
+sskip	sEQ85_ItemAdd_EQ85_MelPDA_1		i	1
+sskip	sGarbage_L_Depo_Camp_ItemAdd_ChernozemPDA		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_E03_MQ04_Key		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_StrangePDA		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_StrangePDA_1		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_VaranKey		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_VaranKey_1		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_VaranPDA		i	1
+sskip	sGarbage_L_Factory_Camp_ItemAdd_VaranPDA_1		i	1
+sskip	sGarbage_L_Svora_Camp_ItemAdd_ShahKPK_1		i	1
+sskip	sGarbage_L_Voentorg_Camp_ItemAdd_RooseveltKPK_1		i	1
+sskip	sRSQ01_C01_Item		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage_1		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage_2		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage_3		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage_4		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage_5		i	1
+sskip	sRSQ01_C01_ItemAdd_RSQ01_WarlockPackage_6		i	1
+sskip	sRSQ01_C06_ItemAdd_RSQ01_NewbiePDA		i	1
+sskip	sRSQ01_C06_ItemAdd_RSQ01_NewbiePDA2		i	1
+sskip	sRSQ01_C06_ItemAdd_RSQ01_NewbiePDA3		i	1
+sskip	sRSQ04_C05_ItemAdd_RSQ04_C05_FuelCan		i	1
+sskip	sRSQ04_C05_ItemAdd_RSQ04_C05_FuelCan_1		i	1
+sskip	sRSQ04_C05_ItemAdd_RSQ04_C05_FuelCan_2		i	1
+sskip	sRSQ04_C10_ItemAdd_RSQ04_C10_GlavarPDA		i	1
+sskip	sRSQ05_C01_ItemAdd_RSQ05_C01_FlashDrive		i	1
+sskip	sRSQ05_C01_ItemAdd_RSQ05_C01_FlashDrive_1		i	1
+sskip	sRSQ05_C01_ItemAdd_RSQ05_C01_FlashDrive_2		i	1
+sskip	sRSQ05_C10_ItemAdd_RSQ05_C10_IItemPDA1		i	1
+sskip	sRSQ05_C10_ItemAdd_RSQ05_C10_ItemNotes3		i	1
+sskip	sRSQ05_C10_ItemAdd_RSQ05_C10_ItemNotes3_1		i	1
+sskip	sRSQ05_C10_ItemAdd_RSQ05_C10_ItemNotes4		i	1
+sskip	sRSQ05_C10_ItemAdd_RSQ05_C10_ItemNotes4_1		i	1
+sskip	sRSQ05_C10_ItemAdd_RSQ05_C10_ItemPDA2		i	1
+sskip	sRSQ06_C05___B_B_ItemAdd_RSQ06_C04_Goods		i	1
+sskip	sRSQ06_C05___B_B_ItemAdd_RSQ06_C04_Goods_1		i	1
+sskip	sRSQ06_C05___B_B_ItemAdd_RSQ06_C04_Goods_2		i	1
+sskip	sRSQ06_C05___B_B_ItemAdd_RSQ06_C04_Goods_3		i	1
+sskip	sRSQ07_C05_B_B_ItemAdd_RSQ07_Item		i	1
+sskip	sRSQ07_C05_B_B_ItemAdd_RSQ07_Item_1		i	1
+sskip	sRSQ07_C05_B_B_ItemAdd_RSQ07_Item_2		i	1
+sskip	sRSQ07_C05_B_B_ItemAdd_RSQ07_Item_3		i	1
+sskip	sRSQ08_C04_B_B_ItemAdd_RSQ08_Item		i	1
+sskip	sRSQ08_C04_B_B_ItemAdd_RSQ08_Item_1		i	1
+sskip	sRSQ08_C04_B_B_ItemAdd_RSQ08_Item_2		i	1
+sskip	sRSQ08_C05_B_B_ItemAdd_RSQ08_Item		i	1
+sskip	sRSQ08_C05_B_B_ItemAdd_RSQ08_Item_1		i	1
+sskip	sRSQ08_C05_B_B_ItemAdd_RSQ08_Item_2		i	1
+sskip	sRSQ08_C05_B_B_ItemAdd_RSQ08_Item_3		i	1
+sskip	sRSQ09_C05_B_B_ItemAdd_RSQ09_Item		i	1
+sskip	sRSQ09_C05_B_B_ItemAdd_RSQ09_Item_1		i	1
+sskip	sRSQ09_C05_B_B_ItemAdd_RSQ09_Item_2		i	1
+sskip	sRSQ09_C05_B_B_ItemAdd_RSQ09_Item_3		i	1
+sskip	sRSQ10_C05_B_B_ItemAdd_RSQ10_Item		i	1
+sskip	sRSQ10_C05_B_B_ItemAdd_RSQ10_Item_1		i	1
+sskip	sRSQ10_C05_B_B_ItemAdd_RSQ10_Item_2		i	1
+sskip	sRSQ10_C05_B_B_ItemAdd_RSQ10_Item_3		i	1
+sskip	sSEQ01_ItemAdd_SEQ01_BanditPDA		i	1
+sskip	sSEQ02_ItemAdd_SEQ02_StalkerPDA		i	1
+sskip	sSEQ04_ItemAdd_SEQ04_ScientistPDA		i	1
+sskip	sSEQ05_ItemAdd_SEQ05_StalkerPDA		i	1
+sskip	sSEQ06_ItemAdd_SEQ06_StalkerPDA		i	1
+sskip	sSEQ08_ItemAdd_SEQ08_StalkerPDA		i	1
+sskip	sSEQ09_ItemAdd_SEQ09_StalkerPDA		i	1
+sskip	sSEQ10_ItemAdd_SEQ10_StalkerPDA		i	1
+sskip	sSQ01_P_ItemAdd_SQ01_ValenokPDA		i	1
+sskip	sSQ02_ItemAdd_SQ02_PomorKey		i	1
+sskip	sSQ03_ItemAdd_9thPDA		i	1
+sskip	sSQ03_OWL_ItemAdd_DevatyjPDA		i	1
+sskip	sSQ03_P_ItemAdd_FuseLow		i	1
+sskip	sSQ03_P_ItemAdd_SubbotaPDA		i	1
+sskip	sSQ03_P_ItemAdd_SubbotaPDA_1		i	1
+sskip	sSQ03_P_ItemAdd_SubbotaPDA_STD1_34230_Fix		i	1
+sskip	sSQ06_OWL_ItemAdd_SQ06_PDA_ZombieScientist		i	1
+sskip	sSQ06_OWL_ItemAdd_SQ06_PsiLamp		i	1
+sskip	sSQ06_OWL_ItemAdd_SQ06_PsiLampDestroyed		i	1
+sskip	sSQ100_P_ItemAdd_supack_SQ100_SkullWarningNote		i	1
+sskip	sSQ101_C01_ItemAdd_supack_vojatij_key		i	1
+sskip	sSQ101_C01_ItemAdd_supack_vojatij_key_1		i	1
+sskip	sSQ101_C01_ItemAdd_supack_vozmercform		i	1
+sskip	sSQ101_C01_ItemAdd_supack_vozmercpda		i	1
+sskip	sSQ101_C02_ItemAdd_supack_shelmanotes		i	1
+sskip	sSQ103_ItemAdd_DocPDA_SQ103		i	1
+sskip	sSQ103_ItemAdd_NestorHenchmanPDA_SQ103		i	1
+sskip	sSQ103_ItemAdd_SQ103_DeadDiggerPDA		i	1
+sskip	sSQ103_ItemAdd_SQ103_Emitter		i	1
+sskip	sSQ103_ItemAdd_SQ103_Emitter_1		i	1
+sskip	sSQ103_ItemAdd_SQ103_Key		i	1
+sskip	sSQ103_ItemAdd_SQ103_KeyCardX18_Copy		i	1
+sskip	sSQ103_P_ItemAdd_SQ103_KeyCardX18_Copy		i	1
+sskip	sSQ103_P_ItemAdd_SQ103_NestorMikheyevLetter		i	1
+sskip	sSQ10_C01_ItemAdd_BunchOfKeysSPO		i	1
+sskip	sSQ10_P_ItemAdd_SQ10_HogPDA		i	1
+sskip	sSQ10_P_ItemAdd_SQ10_JumperPDA		i	1
+sskip	sSQ10_P_ItemAdd_SQ10_TihijMonolithStashNote		i	1
+sskip	sSQ13_ItemAdd_ArtifactPlayer		i	1
+sskip	sSQ13_ItemAdd_SQ13_Soul_Scientist		i	1
+sskip	sSQ13_OWL_ItemAdd_SQ13_PDA_Budnik		i	1
+sskip	sSQ18_P_ItemAdd_SQ18_KamysPDA		i	1
+sskip	sSQ47_C01_ItemAdd_LevaBorzoj_ZaharStashPDA		i	1
+sskip	sSQ47_OWL_ItemAdd_SQ47_DavidAkopan_PDA		i	1
+sskip	sSQ47_OWL_ItemAdd_SQ47_DavidAkopan_PDA_1		i	1
+sskip	sSQ50_ItemAdd_SQ50_SultanSuitcase		i	1
+sskip	sSQ86_P_ItemAdd_SQ86_SashkaBitokPDA		i	1
+sskip	sSQ87_ItemAdd_EQ13_MihaPDA		i	1
+sskip	sSQ87_ItemAdd_SQ87_AdikPedalPDA		i	1
+sskip	sSQ87_ItemAdd_SQ87_ZenaGlybaPDA		i	1
+sskip	sSQ87_ItemAdd_ZenaGlybaPDA_Alternative_SkifLeave		i	1
+sskip	sSQ87_P_ItemAdd_SQ87_AdikPedalKey		i	1
+sskip	sSQ87_P_ItemAdd_SQ87_ZenaGlybaPDA		i	1
+sskip	sSQ87_P_ItemAdd_SQ87_ZenaGlybaPDA_1		i	1
+sskip	sSQ87_P_ItemAdd_SQ87_ZenaGlybaPDA_Alternative		i	1
+sskip	sSQ87_P_ItemAdd_SQ87_ZenaGlybaPDA_Alternative_SkifLeave		i	1
+sskip	sSQ88_C01_ItemAdd_SQ88_GrebenNote		i	1
+sskip	sSQ88_ItemAdd_SQ88_GrebenNote		i	1
+sskip	sSQ88_ItemAdd_SQ88_MacekPDA		i	1
+sskip	sSQ88_P_ItemAdd_SQ88_GrebenNote		i	1
+sskip	sSQ88_P_ItemAdd_SQ88_KuvaldaDiary		i	1
+sskip	sSQ88_P_ItemAdd_SQ88_MacekPDA		i	1
+sskip	sSQ89_ItemAdd_SQ89_ZhgutPDA		i	1
+sskip	sSQ89_ItemAdd_SQ89_ZhgutPDA_1		i	1
+sskip	sSQ89_ItemAdd_SQ89_ZhgutPDA_2		i	1
+sskip	sSQ90_ItemAdd_SQ90_FreedomPDA		i	1
+sskip	sSQ90_ItemAdd_SQ90_FreedomPDA_NotZazim		i	1
+sskip	sSQ90_ItemAdd_SQ90_GribPDA		i	1
+sskip	sSQ90_ItemAdd_SQ90_KeyFromTunnels		i	1
+sskip	sSQ90_ItemAdd_SQ90_KeyFromTunnels_NotZazim		i	1
+sskip	sSQ90_ItemAdd_SQ90_KeyFromTunnels_ToSkif		i	1
+sskip	sSQ90_ItemAdd_SQ90_ParikPDA		i	1
+sskip	sSQ90_ItemAdd_SQ90_SefPDA		i	1
+sskip	sSQ90_ItemAdd_SQ90_ToropygaPDA		i	1
+sskip	sSQ92_ItemAdd_Malahit_KeyCard		i	1
+sskip	sSQ92_ItemAdd_Malahit_KeyCard_1		i	1
+sskip	sSQ92_ItemAdd_SQ92_MangustPDA		i	1
+sskip	sSQ92_P_ItemAdd_SQ92_VolkovPDA		i	1
+sskip	sSQ93_P_ItemAdd_EQ156_CaseBones		i	1
+sskip	sSQ93_P_ItemAdd_EQ26_FlashDriveWithData		i	1
+sskip	sSQ93_P_ItemAdd_Malahit_KeyCard		i	1
+sskip	sSQ93_P_ItemAdd_Malahit_KeyCard_1		i	1
+sskip	sSQ93_P_ItemAdd_Malahit_KeyCard_2		i	1
+sskip	sSQ94_ItemAdd_DogmasterDairy		i	1
+sskip	sSQ94_ItemAdd_DogmasterPDA		i	1
+sskip	sSQ94_ItemAdd_ZuzaPDA		i	1
+sskip	sSQ95_ItemAdd_supack_SQ95_Banzai_FlashDrive		i	1
+sskip	sSQ95_ItemAdd_supack_SQ95_KirkaPDA		i	1
+sskip	sSQ96_C02_ItemAdd_supack_SQ96_C02_ToolKit2_1		i	1
+sskip	sSQ96_C03_ItemAdd_supack_SQ96_C03_ToolKit3		i	1
+sskip	sSQ96_C03_ItemAdd_supack_supack_SQ96_C03_DiggerNote_PDA		i	1
+sskip	sSQ96_P_ItemAdd_supack_SQ96_C01_Clue1_PDA		i	1
+sskip	sSQ96_P_ItemAdd_supack_SQ96_C01_Clue2_PDA		i	1
+sskip	sSQ96_P_ItemAdd_supack_SQ96_C01_Clue3_PDA		i	1
+sskip	sSQ96_P_ItemAdd_supack_SQ96_C02_ToolKit2		i	1
+sskip	sSQ97_ItemAdd_supack_FairyTale_LostExpeditionKey		i	1
+sskip	sSQ97_ItemAdd_supack_FairyTale_VentKey		i	1
+sskip	sSQ97_ItemAdd_supack_SQ97_Expedition_Notebook		i	1
+sskip	sSQ97_ItemAdd_supack_SQ97_SanyaPDA		i	1
+sskip	sSQ97_P_ItemAdd_supack_SQ96_C01_ToolKit1		i	1
+sskip	sSQ99_ItemAdd_supack__SQ99_ShelmaStashKey		i	1
+sskip	sSQ99_P_ItemAdd_supack_SQ95_KirkaPDA		i	1
+sskip	sSkadovsk_Hub_ItemAdd_Sultansk_Hub_PDADeadBody		i	1
+sskip	sSwamp_L_E05_MQ01_ItemAdd_E05_MQ01_ShterevDiary		i	1
+sskip	sSwamp_L_E05_MQ01_ItemAdd_E05_MQ01_ShterevPDA		i	1
+sskip	sSwamp_L_E05_MQ01_ItemAdd_KozimkovPDA		i	1
+sskip	sTestQuest_UI_UX_ItemAdd_BanditPDA		i	1
+sskip	sTestQuest_UI_UX_ItemAdd_E03_05_NestorNote		i	1
+sskip	sUI_QTC_ItemAdd_NestorUSB		i	1
+sskip	sUI_QTC_ItemAdd_QuestItem_USB_Damaged_White		i	1
+sskip	sUI_QTC_Quest_ItemAdd_QuestItem_USB_Damaged_Blue		i	1
+sskip	sUI_QTC_Quest_ItemAdd_QuestItem_USB_Modern_White		i	1
+sskip	sUI_QTC_TestCase6_main_ItemAdd_Scanner_E05		i	1
+sskip	sYanov_Hub_ItemAdd_Yanov_SenaDymPDA		i	1
+sstats	sadd_player		i	104
+sstats	sadd_target_unindexed		i	156
+sstats	sbasekit_excluded		i	1
+sstats	sbyfile		i	241
+sstats	sgd		i	3
+sstats	sguarded		i	564
+sstats	sneeded_not_guarded		i	134
+sstats	spos		i	178
+sstats	squestflag		i	316
+sstats	sskip		i	465
+sstats	sswitched		i	112
+sstats	sundef		i	5
+sv			i	1

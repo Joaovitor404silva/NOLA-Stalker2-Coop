@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.18)
+project(UE4SSNativeMods)
+add_compile_definitions(IMGUI_DEFINE_MATH_OPERATORS)
+add_subdirectory(D:/modding/cpp/RE-UE4SS ${CMAKE_BINARY_DIR}/RE-UE4SS)
+get_filename_component(S2_SRC "${CMAKE_CURRENT_SOURCE_DIR}/../src" ABSOLUTE)
+add_subdirectory(${S2_SRC} ${CMAKE_BINARY_DIR}/NolaNative)

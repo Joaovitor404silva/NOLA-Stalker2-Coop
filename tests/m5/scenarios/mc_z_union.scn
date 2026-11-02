@@ -1,0 +1,30 @@
+role host
+flag dobj 1
+flag dobjgen 1
+flag dobjfast 0
+flag dobjsec 1
+flag dobjfx 0
+flag meshsafe 1
+level LvlA
+gate k1 1
+views 4
+pawn 0 0 0
+obj P1 BP_DestructibleObject_C DestructibleObject destr 300 0 0
+mesh P1 SM_foo_potato_01_c
+obj P2 BP_DestructibleObject_C DestructibleObject destr 600 0 0
+mesh P2 SM_ele_lamp_06
+time 1
+tick
+vremote 1 Z 30,0,0
+vremote 3 Z 60,0,0
+time 2
+tick
+expect_new dobjgen: 30,0,0 ->
+expect_new dobjgen: 60,0,0 ->
+expect_status dobj.mine=2
+vremote 1 Z -
+vremote 3 Z -
+time 3
+tick
+expect_new OUT #Z:
+expect_status dobj.mine=2

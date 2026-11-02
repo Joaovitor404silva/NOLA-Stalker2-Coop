@@ -1,0 +1,43 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+CMD part QB #QB:0;1:c9132e63:0:1:5;
+CMD tick
+CMD fire ANCQ03_If_Distance True fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): o cliente ia sair por True; o host saiu por False: forcado o caminho do host
+RET fire 1 False
+CMD fire ANCQ03_If_Distance False fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): saida False do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD t 102
+CMD part QB #QB:0;1:c9132e63:0:1:7|2:c9132e63:1:1:1;
+CMD qbact ANCQ03_If_Distance
+CMD tick
+STUB qbForce ANCQ03_If_Distance True fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): o host saiu por True; a saida False do cliente virou a do host
+CMD part QB #QB:0;1:c9132e63:0:1:7|2:c9132e63:1:1:1|3:f4a5fcdc:2:1:0;
+CMD tick
+CMD fire BodyParts_Malahit_Random 2 fin
+RET fire 0 -
+CMD fire bodyparts_malahit_random 0 fin
+LOG NOLA qbranch: Random BodyParts_Malahit_Random (missao BodyParts_Malahit): saida 0 do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 mid
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1): saida E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD part QB #QB:0;1:c9132e63:0:1:7|2:c9132e63:1:1:1|3:f4a5fcdc:2:1:0|4:78f12c33:0:0:0;
+CMD busy dialogo
+CMD tick
+CMD tick
+CMD busy -
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 mid
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1): o host saiu por E03_SQ01_Dialog_VetosInTrailer_4_44991; a saida E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 do cliente virou a do host
+CMD tick
+CMD fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 mid
+RET fire 2 -
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qbranch nos=2897 respostas=1829 rec=0 ok=1 sub=1 hold=3 force=2 rel=0 ref=0 mir=0 err=0 defer=1 dup=1 held=1

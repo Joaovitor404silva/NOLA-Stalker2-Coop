@@ -1,0 +1,28 @@
+role host
+views 1 1 0 0
+flag lifeguard 1
+flag lifegod 1
+flag dmgspawn 0
+me 100 1 0 0 0
+set me uid 7
+vpeer 0 up - c1 1
+vremote 0 100 0 0 0 1
+vx1 0 L a,100,100
+t 0
+do lifeGuard
+godq
+vx1 0 FF 1,0,30,5,0.8,0.5,0.25,6,2,1,0,0,0,0,0,0,0,0,spine_02;2,0,45,0,1,0,0,6,11,1,0,0,0,0,0,0,0,0,head;3,0,40,10,1,0,0,6,4,1,0,0,0,0,0,0,0,0,spine_01
+do ff
+hp me
+flag friendlyfire 0
+vx1 0 FF 4,0,30,5,0.8,0.5,0.25,6,2,1,0,0,0,0,0,0,0,0,spine_02;5,0,45,0,1,0,0,6,11,1,0,0,0,0,0,0,0,0,head;6,0,40,10,1,0,0,6,4,1,0,0,0,0,0,0,0,0,spine_01
+do ff
+hp me
+flag friendlyfire 1
+flag ffscale 0.5
+vx1 0 FF 7,0,10,1,0.5,0,0,6,2,1,0,0,0,0,0,0,0,0,hand_r
+do ff
+hp me
+t 10
+do ff
+do statusStr

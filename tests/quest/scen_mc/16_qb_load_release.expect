@@ -1,0 +1,38 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+CMD fire ANCQ03_If_Distance True fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): saida True do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD fire E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars - fin
+LOG NOLA qbranch: infotopico E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars (missao E08_SQ01): saida (sem pino) do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD pawn 2
+CMD tick
+LOG NOLA qbranch: este jogo recarregou: 2 saida(s) segurada(s) descartada(s); as escolhas do host valem de novo
+CMD fire ANCQ03_If_Distance True fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): saida True do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD fire E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars - fin
+LOG NOLA qbranch: infotopico E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars (missao E08_SQ01): saida (sem pino) do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD qbact ANCQ03_If_Distance E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars
+CMD t 219
+CMD tick
+CMD t 221
+CMD tick
+STUB qbForce ANCQ03_If_Distance True fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): o host nao passou por este ramo em 121 s: saida True do cliente liberada
+CMD t 400
+CMD tick
+CMD peer down 0
+CMD tick
+STUB qbForce E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars - fin
+LOG NOLA qbranch: E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars: o host saiu: saida (sem pino) do cliente liberada
+CMD fire ANCQ03_If_Distance False fin
+RET fire 0 -
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=4 force=2 rel=2 ref=0 mir=0 err=0 defer=0 dup=0 held=0

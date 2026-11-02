@@ -1,0 +1,12 @@
+up -Reuse -Calm -Dll D:\modding\cpp\wt\v130f2\cppbuild\Output\NolaNative\Game__Shipping__Win64\NolaNative.dll
+out D:\modding\proofs\20261030_v130f2_village_red
+setflag A downsecs 99999
+setflag B downsecs 99999
+setflag A corpsemc 1
+setflag A alifemc 0
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+run D:\modding\cpp\wt\v130f2\tests\v130f2_village_spec.txt

@@ -1,0 +1,57 @@
+CALL build XSetEntityUnkillableByUID 5 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: vivo protegido Unkillable (lifegod: nenhum golpe mata, golpe letal = caido) uid=5 ok=true
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT god_held=true bit=true
+CALL ff_bodies on
+CALL me ff_apply dmg=30.00 arm=5.00 ap=0.80 bleed=0.50/0.25 bone=spine_02 bn=0 type=6 src=3 flags=1/0 v=100.5,-0.8
+LOG NOLA ff: HOST me acertou dano=30.00 armadura=5.00 perfuracao=0.80 osso=spine_02 tipo=6 fonte=3 hp 100.0 -> 70.0
+OUT me hp=70.0 alive=true
+OUT me hp=70.0 alive=true
+CALL me ff_apply dmg=20.00 arm=5.00 ap=0.80 bleed=0.50/0.25 bone=head bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: HOST me acertou dano=20.00 armadura=5.00 perfuracao=0.80 osso=head tipo=6 fonte=3 hp 70.0 -> 50.0
+OUT me hp=50.0 alive=true
+CALL me ff_apply dmg=500.00 arm=50.00 ap=1.00 bleed=0.00/0.00 bone=head bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: HOST me acertou dano=500.00 armadura=50.00 perfuracao=1.00 osso=head tipo=6 fonte=3 hp 50.0 -> 0.0 (golpe letal: o lifeGuard deixa caido)
+OUT me hp=0.0 alive=true
+OUT god_held=true bit=true
+LOG NOLA ff: golpe #5 de HOST recusado (morto) dano=20.00 osso=head
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 0.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT me hp=15.0 alive=true
+OUT #L:w,15,100
+LOG NOLA ff: golpe #6 de HOST recusado (caido) dano=20.00 osso=head
+OUT me hp=15.0 alive=true
+CALL me ForceSetHP 30
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado pelo outro jogador com F + medkit, pedido #1 a 100 cm) depois de 0.9 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=30.0 alive=true
+LOG NOLA ff: golpe #7 de HOST recusado (protecao) dano=20.00 osso=head
+OUT me hp=30.0 alive=true
+CALL me ff_apply dmg=20.00 arm=5.00 ap=0.80 bleed=0.50/0.25 bone=hand_r bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: HOST me acertou dano=20.00 armadura=5.00 perfuracao=0.80 osso=hand_r tipo=6 fonte=3 hp 30.0 -> 10.0 (golpe letal: o lifeGuard deixa caido)
+OUT me hp=10.0 alive=true
+CALL ff_bodies off
+LOG NOLA ff: golpe #9 de HOST recusado (friendlyfire 0) dano=20.00 osso=head
+OUT me hp=10.0 alive=true
+CALL ff_bodies on
+LOG NOLA ff: golpe de HOST nao aplicado (sem gancho nativo) dano=20.00 osso=head
+CALL me ff_apply dmg=5.00 arm=1.00 ap=0.50 bleed=0.00/0.00 bone=None bn=0 type=6 src=3 flags=1/0 v=0.0,0.0
+LOG NOLA ff: HOST me acertou dano=5.00 armadura=1.00 perfuracao=0.50 osso=None tipo=6 fonte=3 hp 100.0 -> 95.0
+OUT me hp=95.0 alive=true
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 5 false
+LOG NOLA LIFE: Unkillable uid=5 desligado (lifegod desligado) ok=true
+OUT god_held=false bit=false
+LOG NOLA ff: golpe #11 de HOST recusado (sem Unkillable (lifegod)) dano=5.00 osso=None
+OUT me hp=95.0 alive=true
+LOG NOLA ff 10 s: friendlyfire=1 ffscale=1.0 enviados=0 descartados_no_envio=0 boneco_junto_do_alvo=0 recebidos=11 aplicados=5 dano=575.0 hp_perdido=125.0 recusados=6 caido=1 friendlyfire 0=1 morto=1 protecao=1 sem Unkillable (lifegod)=1 sem gancho nativo=1 mal_formados=2
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0 ff=enviados 0 aplicados 5 recusados 6

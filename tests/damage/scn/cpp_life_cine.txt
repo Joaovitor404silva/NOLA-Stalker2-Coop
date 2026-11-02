@@ -1,0 +1,30 @@
+role client
+flag downsecs 20
+flag downgod 0
+flag downdie 0
+flag lifeguard 1
+flag downfreeze 1
+me 100 1 0 0 0
+t 0
+do lifeGuard
+set me hp 10
+t 1
+do lifeGuard
+cinefz 1
+t 30
+do lifeGuard
+hp me
+cinefz 0
+set me hp 10
+t 31
+do lifeGuard
+t 60
+do lifeGuard
+hp me
+set me hp 10
+t 61
+do lifeGuard
+cinefz 1
+flag lifeguard 0
+t 62
+do lifeGuard

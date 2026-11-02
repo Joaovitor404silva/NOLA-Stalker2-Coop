@@ -1,0 +1,99 @@
+CMD role host
+CMD flag n7 1
+CMD flag sxjoin 1
+CMD flag csave 1
+CMD flag qsync 1
+CMD t 1
+CMD pawn 1000
+CMD kh 3
+CMD gen 3
+CMD qlok 1
+CMD file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+CMD ticks 15 1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+LOG NOLA n7: host: pawn no mundo; passos no save carregado kh=3
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+CMD pawn 1001
+CMD gen 4
+CMD ticks 15 1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+LOG NOLA n7: host carregou um save (#1): geracao 4, kh=3
+STUB sxHost -1
+STUB sxHost -1
+STUB sxHost -1
+CMD sxhost recusado: o host precisa salvar
+CMD ticks 3 1
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB joinAutoSave
+LOG NOLA sxjoin: host: a client waits for the host save, but the host loaded a save and has not saved since: host join autosave #1 (XTriggerForcedAutoSave through the co-op save mask, ok=true)
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+CMD ticks 22 1
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB joinAutoSave
+LOG NOLA sxjoin: host: a client waits for the host save, but the host loaded a save and has not saved since: host join autosave #2 (XTriggerForcedAutoSave through the co-op save mask, ok=true)
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+CMD stamp STEAM=2:2;NULL=-
+CMD file saved/STEAM/SaveGames/Data/33333333333333333333333333333333.sav CCCCCCCCCCCCCCCCCCCCCCCC-auto
+CMD ticks 10 1
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+STUB sxHost -1 -> recusado: o host precisa salvar
+LOG NOLA n7: host salvou (#1): kh=3
+LOG NOLA wpkg: host save #1 (kh=3) NOT frozen: unsupported; clients get no world package for it
+STUB sxHost 3 -> recusado: o host precisa salvar
+STUB sxHost 3 -> recusado: o host precisa salvar
+STUB sxHost 3 -> recusado: o host precisa salvar
+STUB sxHost 3 -> recusado: o host precisa salvar
+CMD sxhost empacotado REQ
+CMD ticks 3 1
+STUB sxHost 3 -> empacotado REQ
+STUB sxHost 3 -> empacotado REQ
+STUB sxHost 3 -> empacotado REQ

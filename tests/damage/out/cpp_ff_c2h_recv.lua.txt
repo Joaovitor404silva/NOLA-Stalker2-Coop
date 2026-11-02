@@ -1,0 +1,25 @@
+CALL build XSetEntityUnkillableByUID 7 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: vivo protegido Unkillable (lifegod: nenhum golpe mata, golpe letal = caido) uid=7 ok=true
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT god_held=true bit=true
+CALL ff_bodies on
+CALL me ff_apply dmg=30.00 arm=5.00 ap=0.80 bleed=0.50/0.25 bone=spine_02 bn=0 type=6 src=2 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 1 me acertou dano=30.00 armadura=5.00 perfuracao=0.80 osso=spine_02 tipo=6 fonte=2 hp 100.0 -> 70.0
+CALL me ff_apply dmg=45.00 arm=0.00 ap=1.00 bleed=0.00/0.00 bone=head bn=0 type=6 src=11 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 1 me acertou dano=45.00 armadura=0.00 perfuracao=1.00 osso=head tipo=6 fonte=11 hp 70.0 -> 25.0
+CALL me ff_apply dmg=40.00 arm=10.00 ap=1.00 bleed=0.00/0.00 bone=spine_01 bn=0 type=6 src=4 flags=1/0 v=0.0,0.0
+LOG NOLA ff: PLAYER 1 me acertou dano=40.00 armadura=10.00 perfuracao=1.00 osso=spine_01 tipo=6 fonte=4 hp 25.0 -> 0.0 (golpe letal: o lifeGuard deixa caido)
+OUT me hp=0.0 alive=true
+CALL ff_bodies off
+LOG NOLA ff: golpe #4 de PLAYER 1 recusado (friendlyfire 0) dano=30.00 osso=spine_02
+LOG NOLA ff: golpe #5 de PLAYER 1 recusado (friendlyfire 0) dano=45.00 osso=head
+LOG NOLA ff: golpe #6 de PLAYER 1 recusado (friendlyfire 0) dano=40.00 osso=spine_01
+OUT me hp=0.0 alive=true
+CALL ff_bodies on
+LOG NOLA ff: golpe #7 de PLAYER 1 recusado (morto) dano=10.00 osso=hand_r
+OUT me hp=0.0 alive=true
+LOG NOLA ff 10 s: friendlyfire=1 ffscale=0.5 enviados=0 descartados_no_envio=0 boneco_junto_do_alvo=0 recebidos=7 aplicados=3 dano=115.0 hp_perdido=100.0 recusados=4 friendlyfire 0=3 morto=1 mal_formados=0
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0 ff=enviados 0 aplicados 3 recusados 4

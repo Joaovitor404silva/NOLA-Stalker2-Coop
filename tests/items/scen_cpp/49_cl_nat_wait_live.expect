@@ -1,0 +1,15 @@
+MARK t=waiting
+STUB inter BP_AI_Human_C_8 0
+STUB natown BP_AI_Human_C_8 1
+LOG NOLA persist: 0 itens de slot em s2u_equip.tsv, kit base vestido: 0
+LOG NOLA cloot: s2u_equip.tsv ausente ou vazio: pentes das armas nao previstos (clammo so acerta a municao solta)
+STUB create A012A 801 30
+LOG NOLA cloot: BP_AI_Human_C_7: o corpo nativo BP_AI_Human_C_8 (uid=801) vira o corpo de saque, sem corpo extra (clnat): tirados=0 criados=30 lista=A012A*30
+STUB inter BP_AI_Human_C_8 0
+STUB inter BP_AI_Human_C_8 0
+LOG NOLA cloot: corpo nativo de BP_AI_Human_C_7 pronto (BP_AI_Human_C_8) lista=A012A*30
+STUB inter BP_AI_Human_C_8 1
+STUB inter BP_AI_Human_C_8 1
+MARK t=adopted
+INV BP_AI_Human_C_8 A012A*30
+STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- cl: K=0 R=1 B=1 T=0 pend=-

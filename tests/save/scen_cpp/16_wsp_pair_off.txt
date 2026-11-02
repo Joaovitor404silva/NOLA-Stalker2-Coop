@@ -1,0 +1,48 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 1
+flag n7eq 0
+flag qsync 1
+flag qrollback 1
+flag joinport 0
+flag kit 0
+flag sxjoin 1
+flag wpkg 1
+flag wspair 0
+flag wsplice 1
+t 1
+pawn 1000
+money 500
+inv A012A 30
+peer up 1 1
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n3\tJ,q1,n1,go,s1\n
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav BBBBBBBBBBBBBBBBBBBBBBBB-two
+part B 5,3,c6ad219ea28b4,0,0,3,abc
+tick
+t 3
+part B 5,3,c6ad219ea28b4,0,1,3,abc
+tick
+ticks 20 1
+stamp STEAM=2:2;NULL=-
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav DDDDDDDDDDDDDDDDDDDDDDDDDDDD-one-saved
+ticks 8 1
+wsp run -
+wplast c6ad219ea28b4 3 1 1
+ticks 2 1
+wsp done spliced-1
+ticks 2 1
+part B 5,3,c6ad219ea28b4,0,2,3,abc
+tick
+ticks 32 1
+wsp none -
+wplast c6ad219ea28b4 3 2 2
+ticks 5 1
+wsp run -
+ticks 26 1
+stamp STEAM=3:3;NULL=-
+file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-two-saved
+ticks 8 1
+wsp done spliced-2
+ticks 3 1

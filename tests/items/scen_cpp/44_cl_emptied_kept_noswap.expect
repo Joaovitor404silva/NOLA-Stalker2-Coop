@@ -1,0 +1,33 @@
+STUB spawn Nola_RemoteTarget 100 0 50
+STUB inter BP_AI_Human_C_5001 0
+STUB create A012A 901 30
+LOG NOLA cloot: corpo de saque de BP_AI_Human_C_7 pronto uid=901 (BP_AI_Human_C_5001) lista=A012A*30
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+LOG NOLA cloot 10 s (client): entradas=1 corpos=1 pedidos=1 prontos=1 largados=0 falhas=0 retiradas=0 aceitas=0 recusadas=0 recontagens=0 negados=0 copias=0 inertes=0 ms=0.0 nativos=0 tirados=0 tirados_host=0 sumidos=0 guardados=1 removidos_host=0 gc=2 keep=1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+STUB inter BP_AI_Human_C_5001 1
+MARK t=live
+STUB inter BP_AI_Human_C_5001 0
+LOG NOLA cloot: corpo de saque de BP_AI_Human_C_7 fica como corpo vazio (sem interacao)
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+LOG NOLA cloot 10 s (client): entradas=1 corpos=0 pedidos=0 prontos=0 largados=1 falhas=0 retiradas=0 aceitas=0 recusadas=0 recontagens=0 negados=0 copias=0 inertes=0 ms=0.0 nativos=0 tirados=0 tirados_host=0 sumidos=0 guardados=1 removidos_host=0 gc=2 keep=1
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+STUB inter BP_AI_Human_C_5001 0
+MARK t=emptied
+HIDDEN BP_AI_Human_C_5001 0
+STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- cl: K=0 R=1 B=0 T=0 pend=-

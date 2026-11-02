@@ -1,0 +1,28 @@
+# client takes two host-dropped Medkit x1 mirrors 0.7 s apart: the second host take lands as the first claim is due, grouped (no add, no remove)
+nodes 2
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all nodeapply 1
+@all me 5000 100 0
+@h myinv Medkit 2
+@h vis 1
+run 1
+@h dropitem drop1 Medkit 1 5100 100 0
+run 0.4
+@h dropitem drop2 Medkit 1 5100 100 0
+run 3.5
+mark dropped
+@c1 dstat
+@c1 pickup BP_StaticItemContainer_C_s1 Medkit 1
+run 0.7
+@c1 pickup BP_StaticItemContainer_C_s2 Medkit 1
+run 4
+mark group
+@c1 dstat
+@h hidden drop1
+@h hidden drop2
+@c1 hidden BP_StaticItemContainer_C_s1
+@c1 hidden BP_StaticItemContainer_C_s2

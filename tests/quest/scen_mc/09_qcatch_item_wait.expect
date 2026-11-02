@@ -1,0 +1,71 @@
+CMD role client
+CMD pawn 7
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD t 125
+CMD part QF 2;d417fc23:0|fd62ac10:0
+CMD tick1k
+CMD t 151
+CMD part QF 2;d417fc23:26|fd62ac10:26
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_FindArt_Finish [no do grafo atras: o outro lado chegou ha 26 s], E01_MQ01_FindDetector_Finish [no do grafo atras: o outro lado chegou ha 26 s] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 156
+CMD part QF 2;d417fc23:31|fd62ac10:31
+CMD tick1k
+CMD t 161
+CMD part QF 2;d417fc23:36|fd62ac10:36
+CMD tick1k
+CMD t 166
+CMD part QF 2;d417fc23:41|fd62ac10:41
+CMD tick1k
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=0 miss=0 defer=0 own=0 add=0 item=1 cur=E01_MQ01_FindArt_Finish
+CMD inv CPrologArtifactSlug 1
+CMD s2q L E01_MQ01_FindArt_Finish
+CMD t 171
+CMD part QF 2;d417fc23:46|fd62ac10:46
+CMD tick1k
+LOG NOLA qcatch: o grafo do cliente estava atras em E01_MQ01_FindArt_Finish (missao E01_MQ01): o outro lado chegou ha 46 s; XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_CPrologArtifactSlug em 3 rodada(s); 1 no(s) de item esperaram o item chegar -> alcancou
+CMD t 176
+CMD part QF 2;d417fc23:51|fd62ac10:51
+CMD tick1k
+CMD t 181
+CMD part QF 2;d417fc23:56|fd62ac10:56
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_FindDetector_Finish [no do grafo atras: catch-up, rodada 1] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 186
+CMD part QF 2;d417fc23:61|fd62ac10:61
+CMD tick1k
+CMD t 191
+CMD part QF 2;d417fc23:66|fd62ac10:66
+CMD tick1k
+CMD t 196
+CMD part QF 2;d417fc23:71|fd62ac10:71
+CMD tick1k
+CMD t 201
+CMD part QF 2;d417fc23:76|fd62ac10:76
+CMD tick1k
+CMD t 206
+CMD part QF 2;d417fc23:81|fd62ac10:81
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_EchoE01
+CMD t 211
+CMD part QF 2;d417fc23:86|fd62ac10:86
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_FindDetector_Finish [no do grafo atras: catch-up, rodada 3] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+LOG NOLA qcatch: o grafo do cliente estava atras em E01_MQ01_FindDetector_Finish (missao E01_MQ01): o outro lado chegou ha 86 s; XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_EchoE01 em 3 rodada(s); 1 no(s) de item esperaram o item chegar -> nao alcancou: nenhum desses nos estava ativo aqui ou falta outra condicao
+CMD t 216
+CMD part QF 2;d417fc23:91|fd62ac10:91
+CMD tick1k
+CMD t 221
+CMD part QF 2;d417fc23:96|fd62ac10:96
+CMD tick1k
+CMD t 226
+CMD part QF 2;d417fc23:101|fd62ac10:101
+CMD tick1k
+CMD t 231
+CMD part QF 2;d417fc23:106|fd62ac10:106
+CMD tick1k
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=1 miss=1 defer=0 own=1 add=0 item=2

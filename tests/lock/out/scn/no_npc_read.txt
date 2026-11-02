@@ -1,0 +1,13 @@
+role host
+flag lead 1
+pawn 1000 442207.0 470552.0 0
+view on
+interact none
+run 1500
+run 1000
+state
+leaddlg
+view off
+run 300
+state
+leaddlg

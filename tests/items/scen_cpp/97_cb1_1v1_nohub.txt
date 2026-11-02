@@ -1,0 +1,30 @@
+role host
+mcworld 1
+flag locks 1
+flag contall 1
+flag ptake 1
+flag loot 1
+flag lootshare 1
+flag lscont 1
+flag taken 1
+flag lockfirst 1
+flag cbusy 1
+t 0
+me 5000 100 0
+cont BP_Box_C 1 5200 300 10
+part K BP_Box_C@520,30,1
+t 0.1
+tick
+t 0.2
+tick
+use BP_Box_C_1
+mark client-holds
+nopart K
+t 0.3
+tick
+t 2.5
+tick
+use BP_Box_C_1
+t 2.6
+tick
+mark host-opens

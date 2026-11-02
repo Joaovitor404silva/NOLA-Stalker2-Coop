@@ -1,0 +1,18 @@
+CALL ff_bodies off
+OUT 
+LOG NOLA ff: golpe #1 de PLAYER 1 recusado (sem sessao) dano=30.00 osso=head
+OUT me hp=100.0 alive=true
+CALL build XSetEntityUnkillableByUID 7 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: vivo protegido Unkillable (lifegod: nenhum golpe mata, golpe letal = caido) uid=7 ok=true
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL ff_bodies on v0:p1:tgt1
+LOG NOLA ff: corpos sob fogo amigo: PLAYER 1 (view 0: alvo)
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 7 false
+LOG NOLA LIFE: Unkillable uid=7 desligado (sem o outro jogador na sessao: morte normal do jogo) ok=true
+CALL ff_bodies off
+LOG NOLA ff: corpos sob fogo amigo: nenhum

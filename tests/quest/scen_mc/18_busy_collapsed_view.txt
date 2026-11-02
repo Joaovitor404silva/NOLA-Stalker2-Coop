@@ -1,0 +1,34 @@
+# a dialog widget that stays in the viewport collapsed after its dialog closed is not a dialog: a visible one defers the catch-up, and the deferral clears once it collapses
+role client
+pawn 7
+t 100
+peer up 1
+tick1k
+dlgview 11
+t 125
+part QF 1;f3c1fd2f:0
+tick1k
+t 150
+part QF 1;f3c1fd2f:25
+tick1k
+t 160
+part QF 1;f3c1fd2f:35
+tick1k
+status
+dlgview 10 00
+t 161
+part QF 1;f3c1fd2f:36
+tick1k
+t 166
+part QF 1;f3c1fd2f:41
+tick1k
+t 171
+part QF 1;f3c1fd2f:46
+tick1k
+t 176
+part QF 1;f3c1fd2f:51
+tick1k
+t 180
+part QF 1;f3c1fd2f:55
+tick1k
+status

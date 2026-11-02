@@ -1,0 +1,27 @@
+nodes 3
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myinv A545A 90
+@c1 vis 1
+run 1
+@c1 dropitem dropammo A545A 30 5120 80 0
+run 3.5
+mark dropped
+@h dstat
+@c2 dstat
+@c2 pickup BP_StaticItemContainer_C_s1 A545A 30
+run 3
+mark c2-took
+@h hidden BP_StaticItemContainer_C_s1
+@c1 hidden dropammo
+@c2 dstat
+@h dstat
+run 4
+mark settled
+@c1 hidden dropammo
+@h hidden BP_StaticItemContainer_C_s1

@@ -1,0 +1,22 @@
+role client
+flag ien 1
+flag ienhatch 1
+flag ienanim 1
+flag ientab 0
+flag ientoggle 1
+pawn 0 0 0
+obj H1 BP_BunkerHatch_Valve_C InteractableObject inter 2000 0 0
+prop H1 bEnabled 0
+anim H1 Hatch
+obj H2 BP_BunkerHatch_Valve_C InteractableObject inter 2100 0 0
+prop H2 bEnabled 1
+anim H2 Mesh
+obj H3 BP_BunkerHatch_Valve_C InteractableObject inter 2200 0 0
+prop H3 bEnabled 0
+time 1
+tick
+time 2
+remote P 200,0,0;1|210,0,0;0|220,0,0;1
+tick
+time 3
+tick

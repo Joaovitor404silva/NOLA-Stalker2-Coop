@@ -1,0 +1,24 @@
+role host
+flag n7 1
+flag sxjoin 1
+flag sxhsave 0
+flag csave 1
+flag qsync 1
+t 1
+pawn 1000
+kh 3
+gen 3
+qlok 1
+file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+ticks 15 1
+pawn 1001
+gen 4
+ticks 15 1
+sxhost recusado: o host precisa salvar
+ticks 3 1
+ticks 22 1
+stamp STEAM=2:2;NULL=-
+file saved/STEAM/SaveGames/Data/33333333333333333333333333333333.sav CCCCCCCCCCCCCCCCCCCCCCCC-auto
+ticks 10 1
+sxhost empacotado REQ
+ticks 3 1

@@ -1,0 +1,11 @@
+role host
+flag lead 1
+flag ldwatchs 3
+flag ldwatch 0
+pawn 1000 442207.0 470552.0 0
+view on
+interact 442057.0 470452.0 832.0
+run 400
+run 4000
+state
+leaddlg

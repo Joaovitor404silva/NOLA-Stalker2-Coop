@@ -1,0 +1,11 @@
+h LOG NOLA mc corpo: BP_AI_Human_C_9 dado ao pid 2 (primeiro a pedir)
+MARK t=both-claim
+h MCOUT #CLH:2:BP_AI_Human_C_9|||
+LEAVE c2
+h LOG NOLA mc corpo: BP_AI_Human_C_9 solto pelo pid 2 (0.4 s)
+h LOG NOLA mc corpo: BP_AI_Human_C_9 dado ao pid 3 (primeiro a pedir)
+MARK t=c2-left
+h MCOUT #CLH:3:BP_AI_Human_C_9|||
+h LOG NOLA mc corpo: BP_AI_Human_C_9 solto pelo pid 3 (0.6 s)
+MARK t=c3-closed
+h MCOUT |||

@@ -1,0 +1,56 @@
+# Installing and using NOLA
+
+Version: {{VERSION}}
+
+Every player does the same steps on their own PC. All PCs must have the same version of this package. NOLA takes up to five players: the host plus four friends.
+
+## 1. Install with install.bat
+1. Close the game.
+2. Unzip `NOLA-Auto.zip` and double-click `install.bat` in the unzipped folder. Keep the `files` folder next to it: that is what gets installed.
+3. The installer looks for the game in your Steam libraries. If it cannot find it, paste the full path of the `{{GAME_FOLDER}}` folder.
+4. Choose the connection:
+   - Steam friends (default, Enter): nothing else to type. No VPN, no port forwarding, no firewall rule.
+   - IP address: type the IP address of every PC that may host, separated by commas (LAN addresses, or VPN addresses such as the 26.x.x.x shown by Radmin VPN). All players can type the same list, their own address included. The installer adds a Windows firewall rule for the game program on the Private network profile.
+5. Confirm with y. The installer prints a line for each step and ends with `Done`. Press a key to close the window.
+
+The installer replaces nothing without a backup. Your saves are never touched. `install.bat` only starts the plain text script `nola_install.ps1`; open it in Notepad if you want to read every step.
+
+Windows and antivirus warnings:
+- Windows may ask once to allow PowerShell to make changes (administrator rights), and only when needed: when the game folder is protected, or for IP play, which adds a firewall rule. Steam games usually sit under Program Files, so expect the question there.
+- Some antivirus tools flag `dwmapi.dll` or the `ue4ss` folder. This is a common false positive for the UE4SS mod loader. Add an exception for the game folder, or install by hand with `NOLA-Manual.zip`.
+
+To install by hand instead, unzip `NOLA-Manual.zip` and follow `MANUAL_INSTALL.md` inside it.
+
+## 2. Host a game
+1. Start the game. The main menu shows Host co-op and Join co-op.
+2. Pick Host co-op, then load a world (Continue, Load or New Game).
+3. Wait in the world for your friends to join.
+4. Steam friends: press Home in the world to open the Steam invite window and invite your friends.
+5. IP address: your IP address (LAN or VPN) must be in the list the other players typed at install time (`netpeer`, see the settings below). Host co-op ignores your own list. The game listens on UDP {{HOST_PORT}} while you host.
+
+## 3. Join a game
+1. Start the game and pick Join co-op in the main menu. Do not load a world yourself: the host's world follows.
+2. Steam friends: accept the invite in Steam, or right-click the host in the Steam friends list and choose Join Game.
+3. IP address: Join co-op tries every address stored in `netpeer` (see the settings below) until a host answers. It uses UDP {{CLIENT_PORT}} while you join. The host must already be in the world.
+
+If the connection does not come up:
+- Steam: every player must be logged in to Steam, be a friend of the host, and have the Steam overlay enabled (Steam > Settings > In Game).
+- IP address: run `ping <other PC IP>` from each PC, and check that the network is set to Private in Windows and that the firewall rule `NOLA co-op UDP {{HOST_PORT}},{{CLIENT_PORT}}` exists.
+- Open `Stalker2\Binaries\Win64\ue4ss\UE4SS.log` in the game folder. The line `[NolaNative] loaded` shows the mod started, and the line `S2NET route:` shows whether the game uses `steam` or `ip`.
+
+## 4. Settings you can change
+The settings file is `{{BRIDGE}}\flags.txt`. It is a plain text file with one `key=value` line per setting, no spaces and no quotes. Close the game before editing it. These are the ones meant for players:
+
+| Key | Values | Default | What it does |
+|---|---|---|---|
+| `net` | `steam` or `ip` | `steam` | How the PCs connect. |
+| `netpeer` | one IP address, or several separated by commas | none | IP play only: the addresses of the PCs that may host, for example `192.168.0.10,192.168.0.11,26.1.2.3`. Join co-op tries every one; Host co-op ignores it, so every player can use the same list. Not used with Steam. |
+| `maxclients` | 1 to 4 | 4 | How many other players the host accepts (4 = five players in total). |
+| `qdrop` | 0 or 1 | 1 | 1 lets you drop a quest item by holding D in the inventory. 0 turns it off. |
+
+Every other line in `flags.txt` is a tuning value that the mod needs in this exact form; leave those alone. Running `install.bat` again rewrites `net` and `netpeer` from your answers.
+
+## 5. Uninstall
+Close the game and double-click `uninstall.bat` (in the same unzipped folder as `install.bat`). It restores every file it replaced from its backup, removes the NOLA files and the firewall rule. Your saves are not touched.
+
+If you installed by hand, follow section 9 of `MANUAL_INSTALL.md`.

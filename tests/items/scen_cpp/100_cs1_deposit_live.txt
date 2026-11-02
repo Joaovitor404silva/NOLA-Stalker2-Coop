@@ -1,0 +1,41 @@
+# CS1: a deposit key that arrives while the host has the box open goes into the open window at once; the host takes it, closes (no new deposit key), and the client's open shows the box without it
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag ptake 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag ground 0
+@all flag contall 1
+@h flag lockfirst 1
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@all ainv BP_Box_C_1 A012A 30
+@all flag cdeposit 1
+run 0.5
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-open
+inject c1 #T:cput@60E63E8B813B51B0;c777;Medkitx1
+run 0.5
+inject c1 -
+run 0.5
+mark key-in
+@h inv BP_Box_C_1
+@h take BP_Box_C_1 Medkit 1
+run 0.5
+@h vis 0
+@h open -
+run 4
+mark host-closed
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-open
+@c1 inv BP_Box_C_1
+@h mine
+@c1 vis 0
+@c1 open -
+run 1

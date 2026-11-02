@@ -1,0 +1,607 @@
+k1	k2	k3	t	v
+sn			i	96
+sprotos	sAllTechnicianNPC		s	technician
+sprotos	sAllTraderNPC		s	trader
+sprotos	sAzimutVartaAntonMarusin		s	technician
+sprotos	sBanditPonuryj		s	bartender
+sprotos	sBanditSyc		s	trader
+sprotos	sBarman		s	trader
+sprotos	sBartenderKuhol		s	trader
+sprotos	sBartender_Orest		s	trader
+sprotos	sBlendShapeTestCharacter		s	trader
+sprotos	sBoroda		s	trader
+sprotos	sConcretePlantBartender		s	trader
+sprotos	sConcretePlantTechnician		s	technician
+sprotos	sConcretePlantTrader		s	trader
+sprotos	sCorpusBison		s	trader
+sprotos	sCorpusGarpia		s	technician
+sprotos	sCorpusKostoprav		s	medic
+sprotos	sCorpusMedlak		s	technician
+sprotos	sDiggerKonder		s	technician
+sprotos	sDutyDoktorAlenskij		s	medic
+sprotos	sDutyGera		s	bartender
+sprotos	sDutyPraporsikKomissarov		s	trader
+sprotos	sDutySerzantHmaruk		s	technician
+sprotos	sFlameHudoznik		s	trader
+sprotos	sFlameLysyj		s	trader
+sprotos	sFlameStepsel		s	technician
+sprotos	sFlameStepsel_Pripyat		s	technician
+sprotos	sFreedomBereza		s	trader
+sprotos	sFreedomGanza		s	bartender
+sprotos	sGuiderNPC		s	trader
+sprotos	sHimzavodBartender		s	bartender
+sprotos	sHimzavodMedic		s	medic
+sprotos	sHimzavodTechnician		s	technician
+sprotos	sHimzavodTrader		s	trader
+sprotos	sHoghouseTrader		s	trader
+sprotos	sHors		s	technician
+sprotos	sHors_dead		s	technician
+sprotos	sIkarCampTrader		s	trader
+sprotos	sKardan		s	technician
+sprotos	sLesnik		s	technician
+sprotos	sLesnikBaseTrader		s	trader
+sprotos	sLocomotionNPC		s	trader
+sprotos	sMagnetMemoryPlantBartender		s	trader
+sprotos	sMagnetMemoryPlantTechnician		s	technician
+sprotos	sMagnetMemoryPlantTrader		s	trader
+sprotos	sMalachitTechnician		s	technician
+sprotos	sMalachitTrader		s	trader
+sprotos	sMedicNPC		s	trader
+sprotos	sNeutralArhipLisajnik		s	trader
+sprotos	sNeutralDadkaAr		s	technician
+sprotos	sNeutralDukat		s	trader
+sprotos	sNeutralGavaec		s	bartender
+sprotos	sNeutralHana		s	trader
+sprotos	sNeutralKirillAntonovic		s	medic
+sprotos	sNeutralKit		s	medic
+sprotos	sNeutralKosej		s	trader
+sprotos	sNeutralKovyraska		s	technician
+sprotos	sNeutralKuhol		s	trader
+sprotos	sNeutralLevaFan		s	trader
+sprotos	sNeutralMultik		s	technician
+sprotos	sNeutralNikolaic		s	medic
+sprotos	sNeutralOrest		s	trader
+sprotos	sNeutralPoplavok		s	bartender
+sprotos	sNeutralSemenyc		s	technician
+sprotos	sNoonBaseBartender		s	trader
+sprotos	sNoonBaseTrader		s	trader
+sprotos	sNoonFaustianFoma		s	medic
+sprotos	sNoonPovar		s	trader
+sprotos	sNoonTihij		s	trader
+sprotos	sRC_TraderNPC		s	trader
+sprotos	sRostokBartender		s	bartender
+sprotos	sRostokTechnician		s	technician
+sprotos	sRostokTrader1		s	trader
+sprotos	sRostokTrader2		s	trader
+sprotos	sRostokTrader3		s	trader
+sprotos	sRostokTrader4		s	trader
+sprotos	sSIRCAATechnician		s	technician
+sprotos	sSIRCAATrader		s	trader
+sprotos	sScientistSpica		s	medic
+sprotos	sScientistViktoriaDoroznuk		s	trader
+sprotos	sShevchenkoTrader		s	trader
+sprotos	sShipyardBartender		s	trader
+sprotos	sShipyardTechnician		s	technician
+sprotos	sShipyardTrader		s	trader
+sprotos	sSidorovich		s	trader
+sprotos	sSkadovskBartender		s	bartender
+sprotos	sSkadovskMedic		s	medic
+sprotos	sSkadovskTechnician		s	technician
+sprotos	sSkadovskTrader		s	trader
+sprotos	sSkier		s	trader
+sprotos	sSparkPifagor		s	bartender
+sprotos	sSparkWorkshopTechnician		s	technician
+sprotos	sSparkWorkshopTrader		s	trader
+sprotos	sStandartEugene		s	trader
+sprotos	sSvoraBartender		s	trader
+sprotos	sSvoraTrader		s	trader
+sprotos	sTechnicianNPC		s	technician
+sprotos	sTerriconBartender		s	bartender
+sprotos	sTerriconMedic		s	medic
+sprotos	sTerriconTraderGuron		s	trader
+sprotos	sTraderAtlas		s	trader
+sprotos	sTraderBahmach		s	trader
+sprotos	sTraderEugene		s	trader
+sprotos	sTraderJunker		s	trader
+sprotos	sTraderNPC		s	trader
+sprotos	sTraderSuska		s	trader
+sprotos	sTrader_ZalesieNPC		s	trader
+sprotos	sVartaEd		s	bartender
+sprotos	sVartaRadovojKirillGorskij		s	trader
+sprotos	sVartaSergeantBatalov		s	medic
+sprotos	sVartaSergeantVeremeev		s	technician
+sprotos	sVartaSerzEremeev		s	technician
+sprotos	sVartaSerzHoteev		s	trader
+sprotos	sVartaSerzHoteev_Pripyat		s	trader
+sprotos	sVartaSerzantIvajlov		s	technician
+sprotos	sVartaSerzantIvajlov_Pripyat		s	technician
+sprotos	sVartanikolajBurahovskij		s	medic
+sprotos	sVoentorgTrader		s	trader
+sprotos	sZalesieBartender		s	bartender
+sprotos	sZalesieMedic		s	medic
+sprotos	sZalesieTechnician		s	technician
+sprotos	sZalesieTrader		s	trader
+sprotos	stechnician_banzaj_0		s	technician
+sprotos	stechnician_banzaj_fourth_0		s	technician
+sprotos	strader_assistent_medulin_0		s	medic
+sprotos	strader_selma_0		s	trader
+srows	i1	i1	i	664295
+srows	i1	i2	i	618840
+srows	i1	i3	i	287
+srows	i1	i4	s	bartender
+srows	i1	i5	s	BanditPonuryj
+srows	i2	i1	i	194647
+srows	i2	i2	i	340896
+srows	i2	i3	i	521
+srows	i2	i4	s	bartender
+srows	i2	i5	s	DutyGera
+srows	i3	i1	i	498598
+srows	i3	i2	i	380367
+srows	i3	i3	i	871
+srows	i3	i4	s	bartender
+srows	i3	i5	s	DutyGera
+srows	i4	i1	i	320568
+srows	i4	i2	i	412136
+srows	i4	i3	i	358
+srows	i4	i4	s	bartender
+srows	i4	i5	s	FreedomGanza
+srows	i5	i1	i	309860
+srows	i5	i2	i	520780
+srows	i5	i3	i	350
+srows	i5	i4	s	bartender
+srows	i5	i5	s	HimzavodBartender
+srows	i6	i1	i	217000
+srows	i6	i2	i	269390
+srows	i6	i3	i	950
+srows	i6	i4	s	bartender
+srows	i6	i5	s	NeutralGavaec
+srows	i7	i1	i	644880
+srows	i7	i2	i	645630
+srows	i7	i3	i	210
+srows	i7	i4	s	bartender
+srows	i7	i5	s	NeutralPoplavok
+srows	i8	i1	i	321392
+srows	i8	i2	i	418473
+srows	i8	i3	i	-269
+srows	i8	i4	s	bartender
+srows	i8	i5	s	RostokBartender
+srows	i9	i1	i	194382
+srows	i9	i2	i	340900
+srows	i9	i3	i	521
+srows	i9	i4	s	bartender
+srows	i9	i5	s	RostokBartender
+srows	i10	i1	i	664370
+srows	i10	i2	i	618852
+srows	i10	i3	i	270
+srows	i10	i4	s	bartender
+srows	i10	i5	s	SkadovskBartender
+srows	i11	i1	i	104827
+srows	i11	i2	i	473612
+srows	i11	i3	i	321
+srows	i11	i4	s	bartender
+srows	i11	i5	s	SparkPifagor
+srows	i12	i1	i	419854
+srows	i12	i2	i	413034
+srows	i12	i3	i	2111
+srows	i12	i4	s	bartender
+srows	i12	i5	s	TerriconBartender
+srows	i13	i1	i	308870
+srows	i13	i2	i	520560
+srows	i13	i3	i	350
+srows	i13	i4	s	bartender
+srows	i13	i5	s	VartaEd
+srows	i14	i1	i	397453
+srows	i14	i2	i	545261
+srows	i14	i3	i	986
+srows	i14	i4	s	bartender
+srows	i14	i5	s	ZalesieBartender
+srows	i15	i1	i	404533
+srows	i15	i2	i	550670
+srows	i15	i3	i	679
+srows	i15	i4	s	bartender
+srows	i15	i5	s	ZalesieBartender
+srows	i16	i1	i	218090
+srows	i16	i2	i	269120
+srows	i16	i3	i	940
+srows	i16	i4	s	medic
+srows	i16	i5	s	CorpusKostoprav
+srows	i17	i1	i	494660
+srows	i17	i2	i	376662
+srows	i17	i3	i	865
+srows	i17	i4	s	medic
+srows	i17	i5	s	DutyDoktorAlenskij
+srows	i18	i1	i	311780
+srows	i18	i2	i	514560
+srows	i18	i3	i	330
+srows	i18	i4	s	medic
+srows	i18	i5	s	HimzavodMedic
+srows	i19	i1	i	320957
+srows	i19	i2	i	412772
+srows	i19	i3	i	359
+srows	i19	i4	s	medic
+srows	i19	i5	s	NeutralKirillAntonovic
+srows	i20	i1	i	449030
+srows	i20	i2	i	654620
+srows	i20	i3	i	-2310
+srows	i20	i4	s	medic
+srows	i20	i5	s	NeutralKit
+srows	i21	i1	i	399884
+srows	i21	i2	i	545618
+srows	i21	i3	i	897
+srows	i21	i4	s	medic
+srows	i21	i5	s	NeutralNikolaic
+srows	i22	i1	i	398109
+srows	i22	i2	i	550052
+srows	i22	i3	i	659
+srows	i22	i4	s	medic
+srows	i22	i5	s	NeutralNikolaic
+srows	i23	i1	i	399825
+srows	i23	i2	i	545663
+srows	i23	i3	i	1001
+srows	i23	i4	s	medic
+srows	i23	i5	s	NeutralNikolaic
+srows	i24	i1	i	365325
+srows	i24	i2	i	591438
+srows	i24	i3	i	334
+srows	i24	i4	s	medic
+srows	i24	i5	s	NoonFaustianFoma
+srows	i25	i1	i	535773
+srows	i25	i2	i	536311
+srows	i25	i3	i	4110
+srows	i25	i4	s	medic
+srows	i25	i5	s	NoonFaustianFoma
+srows	i26	i1	i	490506
+srows	i26	i2	i	519409
+srows	i26	i3	i	483
+srows	i26	i4	s	medic
+srows	i26	i5	s	NoonFaustianFoma
+srows	i27	i1	i	350156
+srows	i27	i2	i	187348
+srows	i27	i3	i	-757
+srows	i27	i4	s	medic
+srows	i27	i5	s	NoonFaustianFoma
+srows	i28	i1	i	107617
+srows	i28	i2	i	474022
+srows	i28	i3	i	321
+srows	i28	i4	s	medic
+srows	i28	i5	s	ScientistSpica
+srows	i29	i1	i	663400
+srows	i29	i2	i	618210
+srows	i29	i3	i	573
+srows	i29	i4	s	medic
+srows	i29	i5	s	SkadovskMedic
+srows	i30	i1	i	420333
+srows	i30	i2	i	409037
+srows	i30	i3	i	2112
+srows	i30	i4	s	medic
+srows	i30	i5	s	TerriconMedic
+srows	i31	i1	i	604200
+srows	i31	i2	i	594920
+srows	i31	i3	i	2816
+srows	i31	i4	s	medic
+srows	i31	i5	s	VartaSergeantBatalov
+srows	i32	i1	i	307410
+srows	i32	i2	i	515300
+srows	i32	i3	i	330
+srows	i32	i4	s	medic
+srows	i32	i5	s	VartanikolajBurahovskij
+srows	i33	i1	i	260040
+srows	i33	i2	i	598874
+srows	i33	i3	i	580
+srows	i33	i4	s	medic
+srows	i33	i5	s	trader_assistent_medulin_0
+srows	i34	i1	i	214080
+srows	i34	i2	i	270550
+srows	i34	i3	i	940
+srows	i34	i4	s	technician
+srows	i34	i5	s	CorpusGarpia
+srows	i35	i1	i	422410
+srows	i35	i2	i	414670
+srows	i35	i3	i	2220
+srows	i35	i4	s	technician
+srows	i35	i5	s	DiggerKonder
+srows	i36	i1	i	495418
+srows	i36	i2	i	374770
+srows	i36	i3	i	1258
+srows	i36	i4	s	technician
+srows	i36	i5	s	DutySerzantHmaruk
+srows	i37	i1	i	287069
+srows	i37	i2	i	439301
+srows	i37	i3	i	319
+srows	i37	i4	s	technician
+srows	i37	i5	s	FlameStepsel
+srows	i38	i1	i	739984
+srows	i38	i2	i	629576
+srows	i38	i3	i	4698
+srows	i38	i4	s	technician
+srows	i38	i5	s	FlameStepsel
+srows	i39	i1	i	420479
+srows	i39	i2	i	196983
+srows	i39	i3	i	-12
+srows	i39	i4	s	technician
+srows	i39	i5	s	FlameStepsel_Pripyat
+srows	i40	i1	i	240397
+srows	i40	i2	i	146757
+srows	i40	i3	i	-3381
+srows	i40	i4	s	technician
+srows	i40	i5	s	FlameStepsel_Pripyat
+srows	i41	i1	i	288585
+srows	i41	i2	i	163493
+srows	i41	i3	i	442
+srows	i41	i4	s	technician
+srows	i41	i5	s	FlameStepsel_Pripyat
+srows	i42	i1	i	316130
+srows	i42	i2	i	514470
+srows	i42	i3	i	330
+srows	i42	i4	s	technician
+srows	i42	i5	s	HimzavodTechnician
+srows	i43	i1	i	486364
+srows	i43	i2	i	515894
+srows	i43	i3	i	344
+srows	i43	i4	s	technician
+srows	i43	i5	s	Hors
+srows	i44	i1	i	635082
+srows	i44	i2	i	497356
+srows	i44	i3	i	1199
+srows	i44	i4	s	technician
+srows	i44	i5	s	Hors_dead
+srows	i45	i1	i	269187
+srows	i45	i2	i	508938
+srows	i45	i3	i	-224
+srows	i45	i4	s	technician
+srows	i45	i5	s	Kardan
+srows	i46	i1	i	197690
+srows	i46	i2	i	512566
+srows	i46	i3	i	804
+srows	i46	i4	s	technician
+srows	i46	i5	s	MagnetMemoryPlantTechnician
+srows	i47	i1	i	661768
+srows	i47	i2	i	618778
+srows	i47	i3	i	581
+srows	i47	i4	s	technician
+srows	i47	i5	s	NeutralKovyraska
+srows	i48	i1	i	446020
+srows	i48	i2	i	657430
+srows	i48	i3	i	-2340
+srows	i48	i4	s	technician
+srows	i48	i5	s	NeutralMultik
+srows	i49	i1	i	106069
+srows	i49	i2	i	472829
+srows	i49	i3	i	335
+srows	i49	i4	s	technician
+srows	i49	i5	s	NeutralSemenyc
+srows	i50	i1	i	318407
+srows	i50	i2	i	414819
+srows	i50	i3	i	344
+srows	i50	i4	s	technician
+srows	i50	i5	s	RostokTechnician
+srows	i51	i1	i	740422
+srows	i51	i2	i	631223
+srows	i51	i3	i	4698
+srows	i51	i4	s	technician
+srows	i51	i5	s	ShipyardTechnician
+srows	i52	i1	i	603660
+srows	i52	i2	i	595580
+srows	i52	i3	i	3110
+srows	i52	i4	s	technician
+srows	i52	i5	s	VartaSerzEremeev
+srows	i53	i1	i	307250
+srows	i53	i2	i	521850
+srows	i53	i3	i	330
+srows	i53	i4	s	technician
+srows	i53	i5	s	VartaSerzEremeev
+srows	i54	i1	i	411630
+srows	i54	i2	i	198650
+srows	i54	i3	i	-2030
+srows	i54	i4	s	technician
+srows	i54	i5	s	VartaSerzantIvajlov
+srows	i55	i1	i	307250
+srows	i55	i2	i	521720
+srows	i55	i3	i	330
+srows	i55	i4	s	technician
+srows	i55	i5	s	VartaSerzantIvajlov
+srows	i56	i1	i	256999
+srows	i56	i2	i	210934
+srows	i56	i3	i	452
+srows	i56	i4	s	technician
+srows	i56	i5	s	VartaSerzantIvajlov_Pripyat
+srows	i57	i1	i	240367
+srows	i57	i2	i	146787
+srows	i57	i3	i	-3381
+srows	i57	i4	s	technician
+srows	i57	i5	s	VartaSerzantIvajlov_Pripyat
+srows	i58	i1	i	399771
+srows	i58	i2	i	545495
+srows	i58	i3	i	897
+srows	i58	i4	s	technician
+srows	i58	i5	s	ZalesieTechnician
+srows	i59	i1	i	405897
+srows	i59	i2	i	547401
+srows	i59	i3	i	564
+srows	i59	i4	s	technician
+srows	i59	i5	s	ZalesieTechnician
+srows	i60	i1	i	258763
+srows	i60	i2	i	599525
+srows	i60	i3	i	610
+srows	i60	i4	s	technician
+srows	i60	i5	s	technician_banzaj_0
+srows	i61	i1	i	258763
+srows	i61	i2	i	599505
+srows	i61	i3	i	610
+srows	i61	i4	s	technician
+srows	i61	i5	s	technician_banzaj_fourth_0
+srows	i62	i1	i	107090
+srows	i62	i2	i	617740
+srows	i62	i3	i	650
+srows	i62	i4	s	trader
+srows	i62	i5	s	Bartender_Orest
+srows	i63	i1	i	680634
+srows	i63	i2	i	640353
+srows	i63	i3	i	2090
+srows	i63	i4	s	trader
+srows	i63	i5	s	Boroda
+srows	i64	i1	i	644053
+srows	i64	i2	i	646021
+srows	i64	i3	i	211
+srows	i64	i4	s	trader
+srows	i64	i5	s	Boroda
+srows	i65	i1	i	494779
+srows	i65	i2	i	376732
+srows	i65	i3	i	1189
+srows	i65	i4	s	trader
+srows	i65	i5	s	DutyPraporsikKomissarov
+srows	i66	i1	i	320096
+srows	i66	i2	i	415192
+srows	i66	i3	i	346
+srows	i66	i4	s	trader
+srows	i66	i5	s	FreedomBereza
+srows	i67	i1	i	316800
+srows	i67	i2	i	518050
+srows	i67	i3	i	310
+srows	i67	i4	s	trader
+srows	i67	i5	s	HimzavodTrader
+srows	i68	i1	i	240280
+srows	i68	i2	i	587600
+srows	i68	i3	i	400
+srows	i68	i4	s	trader
+srows	i68	i5	s	HoghouseTrader
+srows	i69	i1	i	607700
+srows	i69	i2	i	601200
+srows	i69	i3	i	2840
+srows	i69	i4	s	trader
+srows	i69	i5	s	IkarCampTrader
+srows	i70	i1	i	198273
+srows	i70	i2	i	515534
+srows	i70	i3	i	423
+srows	i70	i4	s	trader
+srows	i70	i5	s	MagnetMemoryPlantBartender
+srows	i71	i1	i	197248
+srows	i71	i2	i	512456
+srows	i71	i3	i	408
+srows	i71	i4	s	trader
+srows	i71	i5	s	MagnetMemoryPlantTrader
+srows	i72	i1	i	276616
+srows	i72	i2	i	331157
+srows	i72	i3	i	1015
+srows	i72	i4	s	trader
+srows	i72	i5	s	NeutralArhipLisajnik
+srows	i73	i1	i	214680
+srows	i73	i2	i	269410
+srows	i73	i3	i	950
+srows	i73	i4	s	trader
+srows	i73	i5	s	NeutralHana
+srows	i74	i1	i	319310
+srows	i74	i2	i	526070
+srows	i74	i3	i	620
+srows	i74	i4	s	trader
+srows	i74	i5	s	NeutralLevaFan
+srows	i75	i1	i	492530
+srows	i75	i2	i	549000
+srows	i75	i3	i	250
+srows	i75	i4	s	trader
+srows	i75	i5	s	NoonTihij
+srows	i76	i1	i	145323
+srows	i76	i2	i	485711
+srows	i76	i3	i	580
+srows	i76	i4	s	trader
+srows	i76	i5	s	ScientistViktoriaDoroznuk
+srows	i77	i1	i	107356
+srows	i77	i2	i	472994
+srows	i77	i3	i	316
+srows	i77	i4	s	trader
+srows	i77	i5	s	ScientistViktoriaDoroznuk
+srows	i78	i1	i	743490
+srows	i78	i2	i	634225
+srows	i78	i3	i	4782
+srows	i78	i4	s	trader
+srows	i78	i5	s	ShipyardBartender
+srows	i79	i1	i	741683
+srows	i79	i2	i	631118
+srows	i79	i3	i	4695
+srows	i79	i4	s	trader
+srows	i79	i5	s	ShipyardTrader
+srows	i80	i1	i	443589
+srows	i80	i2	i	654427
+srows	i80	i3	i	-3010
+srows	i80	i4	s	trader
+srows	i80	i5	s	Sidorovich
+srows	i81	i1	i	662460
+srows	i81	i2	i	618205
+srows	i81	i3	i	568
+srows	i81	i4	s	trader
+srows	i81	i5	s	SkadovskTrader
+srows	i82	i1	i	319335
+srows	i82	i2	i	415116
+srows	i82	i3	i	349
+srows	i82	i4	s	trader
+srows	i82	i5	s	StandartEugene
+srows	i83	i1	i	421474
+srows	i83	i2	i	411601
+srows	i83	i3	i	2113
+srows	i83	i4	s	trader
+srows	i83	i5	s	TerriconTraderGuron
+srows	i84	i1	i	321972
+srows	i84	i2	i	414399
+srows	i84	i3	i	346
+srows	i84	i4	s	trader
+srows	i84	i5	s	TraderJunker
+srows	i85	i1	i	46380
+srows	i85	i2	i	6960
+srows	i85	i3	i	95
+srows	i85	i4	s	trader
+srows	i85	i5	s	TraderNPC
+srows	i86	i1	i	46380
+srows	i86	i2	i	6715
+srows	i86	i3	i	95
+srows	i86	i4	s	trader
+srows	i86	i5	s	TraderNPC
+srows	i87	i1	i	10312
+srows	i87	i2	i	20960
+srows	i87	i3	i	107
+srows	i87	i4	s	trader
+srows	i87	i5	s	TraderNPC
+srows	i88	i1	i	10312
+srows	i88	i2	i	21125
+srows	i88	i3	i	107
+srows	i88	i4	s	trader
+srows	i88	i5	s	TraderNPC
+srows	i89	i1	i	420350
+srows	i89	i2	i	197006
+srows	i89	i3	i	-12
+srows	i89	i4	s	trader
+srows	i89	i5	s	TraderSuska
+srows	i90	i1	i	240235
+srows	i90	i2	i	146555
+srows	i90	i3	i	-3383
+srows	i90	i4	s	trader
+srows	i90	i5	s	TraderSuska
+srows	i91	i1	i	288627
+srows	i91	i2	i	163760
+srows	i91	i3	i	430
+srows	i91	i4	s	trader
+srows	i91	i5	s	TraderSuska
+srows	i92	i1	i	607632
+srows	i92	i2	i	600845
+srows	i92	i3	i	2878
+srows	i92	i4	s	trader
+srows	i92	i5	s	VartaSerzHoteev
+srows	i93	i1	i	257121
+srows	i93	i2	i	210515
+srows	i93	i3	i	432
+srows	i93	i4	s	trader
+srows	i93	i5	s	VartaSerzHoteev_Pripyat
+srows	i94	i1	i	240183
+srows	i94	i2	i	146552
+srows	i94	i3	i	-3376
+srows	i94	i4	s	trader
+srows	i94	i5	s	VartaSerzHoteev_Pripyat
+srows	i95	i1	i	428996
+srows	i95	i2	i	369330
+srows	i95	i3	i	1042
+srows	i95	i4	s	trader
+srows	i95	i5	s	VoentorgTrader
+srows	i96	i1	i	404250
+srows	i96	i2	i	547874
+srows	i96	i3	i	610
+srows	i96	i4	s	trader
+srows	i96	i5	s	ZalesieTrader

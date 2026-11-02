@@ -1,0 +1,34 @@
+# NOLA - No One Left Alone
+
+Version: {{VERSION}}
+
+NOLA is a co-op mod for S.T.A.L.K.E.R. 2: Heart of Chornobyl. Up to five players (the host plus four friends) share one world: the host runs the Zone, the other players join it and play next to the host with their own character.
+
+## What is in this package
+- `NOLA-Auto.zip`: the easy way. Unzip it and run `install.bat`. It is a short plain text script (`install.bat` starts `nola_install.ps1`, which you can open in Notepad to read every step), and the files it installs sit next to it in the `files` folder.
+- `NOLA-Manual.zip`: the same files for installing by hand, with step by step instructions inside (`MANUAL_INSTALL.md`).
+- `INSTALL.md`: how to install, host, join and uninstall.
+- `CHECKSUMS.txt` (inside both zips): the md5 checksum of every file.
+
+## Requirements
+- The Steam copy of S.T.A.L.K.E.R. 2: Heart of Chornobyl on Windows 10 or 11.
+- Every player installs the same version of NOLA. Mixed versions do not connect.
+- For play over Steam: every player is a Steam friend of the host. For play over an IP address: the PCs can reach each other on the same LAN or through a VPN.
+
+## Quick start
+1. Close the game. Unzip `NOLA-Auto.zip` on every PC and run `install.bat`. Pick Steam friends or IP address when asked.
+2. Start the game. The main menu shows two new entries, Host co-op and Join co-op.
+3. The host picks Host co-op and then loads a world (Continue, Load or New Game).
+4. The other players pick Join co-op. Over Steam, the host presses Home in the world to open the Steam invite window and each friend accepts the invite. Over an IP address, each joining player installed with the host's IP address, and Join co-op connects to it.
+
+Pick neither entry for a normal solo game: with NOLA installed the game plays as before.
+
+See `INSTALL.md` for the details, the settings you can change and how to uninstall.
+
+## Notes
+- Your saves are never modified by the installer. The host's world is what everybody plays; each player keeps their own character.
+- The installer keeps a backup of every file it replaces. Running `uninstall.bat` puts everything back.
+- NOLA ships its own copy of the UE4SS loader (`dwmapi.dll` and the `ue4ss` folder). If you already use UE4SS mods, your own `UE4SS-settings.ini` and `mods.txt` are kept and only the NOLA line is added.
+- Windows may ask once to allow PowerShell to make changes (administrator rights), and only when needed: when the game folder is protected, or for IP play, which adds a firewall rule.
+- Some antivirus tools flag `dwmapi.dll` or the `ue4ss` folder. This is a common false positive for the UE4SS mod loader. Add an exception for the game folder, or use the manual zip.
+- This is an unofficial fan mod. It is not made by or supported by the game's developer or publisher.

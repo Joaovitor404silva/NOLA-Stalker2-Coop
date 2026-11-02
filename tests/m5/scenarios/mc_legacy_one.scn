@@ -1,0 +1,18 @@
+role host
+flag doors 1
+flag doorfix 1
+views 4
+flag mcworld 0
+pawn 0 0 0
+obj D1 DoorView - door 500 0 0
+yaw D1 10
+time 1
+tick
+vremote 2 O 50,0,0;1
+time 2
+tick
+expect_none CALL D1.Force
+vremote 0 O 50,0,0;1
+time 3
+tick
+expect_new CALL D1.ForceOpenDoor()

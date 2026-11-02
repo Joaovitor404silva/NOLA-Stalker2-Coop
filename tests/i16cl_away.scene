@@ -1,0 +1,4 @@
+scene i16cl_away
+note i16cl: the client player goes about 150 m south of the save spot (walkable), beyond the stock 100 m immediate corpse drop, so its game destroys the corpse copy (80 m was not always enough)
+tp 649707,465329,1500
+wait 2

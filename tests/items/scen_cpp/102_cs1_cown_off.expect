@@ -1,0 +1,45 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c2 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+h LOG NOLA mc bau: BP_IntChestItemContainer_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+h STUB inter BP_IntChestItemContainer_C_1 0
+h LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+c2 LOG NOLA cbusy: class BP_IntChestItemContainer_C is a container
+c2 STUB inter BP_IntChestItemContainer_C_1 0
+c2 LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+MARK t=c1-points
+h LOG NOLA mc bau: BP_IntChestItemContainer_C@520,30,1 solto pelo pid 1 (0.5 s)
+h STUB inter BP_IntChestItemContainer_C_1 1
+h LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 free again (released by the host): interaction back on 1 components
+h LOG NOLA mc chao: BP_IntChestItemContainer_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h STUB inter BP_IntChestItemContainer_C_1 0
+h LOG NOLA mc chao: BP_IntChestItemContainer_C@520,30,1 na mao do pid 1: BP_IntChestItemContainer_C_1 sem interacao aqui (1 componentes)
+c2 STUB inter BP_IntChestItemContainer_C_1 1
+c2 LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 free again (released by the host): interaction back on 1 components
+c2 STUB inter BP_IntChestItemContainer_C_1 0
+c2 LOG NOLA mc chao: BP_IntChestItemContainer_C@520,30,1 na mao do pid 1: BP_IntChestItemContainer_C_1 sem interacao aqui (1 componentes)
+MARK t=c1-looks-away
+h LOG NOLA mc bau: BP_IntChestItemContainer_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h STUB inter BP_IntChestItemContainer_C_1 0
+h LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+h LOG NOLA mc chao: BP_IntChestItemContainer_C@520,30,1 solto pelo pid 1 (0.3 s)
+h STUB inter BP_IntChestItemContainer_C_1 1
+h LOG NOLA mc chao: BP_IntChestItemContainer_C@520,30,1 livre de novo: interacao de volta
+c2 STUB inter BP_IntChestItemContainer_C_1 0
+c2 LOG NOLA cbusy: BP_IntChestItemContainer_C@520,30,1 in use by pid 1: BP_IntChestItemContainer_C_1 interaction off here (1 components)
+c2 STUB inter BP_IntChestItemContainer_C_1 1
+c2 LOG NOLA mc chao: BP_IntChestItemContainer_C@520,30,1 livre de novo: interacao de volta
+MARK t=c1-points-again
+h MCOUT #KH:1:BP_IntChestItemContainer_C@520,30,1|||
+c1 MCOUT |||
+c2 MCOUT |||
+c2 STUB window open BP_IntChestItemContainer_C_1
+h STUB window open BP_IntChestItemContainer_C_1
+h STUB close
+h LOG NOLA LOCK_DENY BP_IntChestItemContainer_C@520,30,1 (em uso pelo outro jogador) janela fechada ok=true 
+c2 STUB close
+c2 LOG NOLA LOCK_DENY BP_IntChestItemContainer_C@520,30,1 (em uso pelo outro jogador) janela fechada ok=true 
+MARK t=others-try

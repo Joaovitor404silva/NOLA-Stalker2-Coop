@@ -1,0 +1,27 @@
+# idroprb 0: same load as 112, the old behaviour: nothing is restored
+nodes 2
+@all flag idrop 1
+@all flag idroprb 0
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all flag istate 1
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myst GunAK74_ST d3eb33333
+@c1 vis 1
+@h gs 100
+run 1
+@c1 dropitem dropv GunAK74_ST 1 5100 100 0
+run 3.5
+mark dropped
+@h gs 500
+@h pickupi BP_StaticItemContainer_C_s1
+run 3
+mark picked
+@h gs 300
+@h newworld
+run 8
+mark loaded
+@h dstat

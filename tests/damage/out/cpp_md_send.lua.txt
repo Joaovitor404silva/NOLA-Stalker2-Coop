@@ -1,0 +1,12 @@
+CALL md_cfg on
+LOG NOLA md: golpes corpo a corpo e explosivos do cliente em NPCs do host ligados
+OUT 
+LOG NOLA md: golpe meu em copia de NPC uid=3001 dano=40.00 armadura=5.00 perfuracao=0.50 sangra=0.00/0.00 osso=spine_02 tipo=6 fonte=11 (enviado ao host #1)
+LOG NOLA md: golpe meu em copia de NPC uid=3001 dano=22.50 armadura=2.00 perfuracao=0.50 sangra=0.00/0.00 osso=head tipo=6 fonte=4 (enviado ao host #2)
+OUT #MD:1,3001,40,5,0.5,0,0,6,11,1,0,0,0,0,0,0,0,0,spine_02;2,3001,22.5,2,0.5,0,0,6,4,1,0,0,0,0,0,0,0,0,head
+LOG NOLA md: golpe meu em copia de NPC uid=3002 dano=10.00 armadura=1.00 perfuracao=0.50 sangra=0.00/0.00 osso=hand_l tipo=6 fonte=12 (enviado ao host #3)
+OUT #MD:1,3001,40,5,0.5,0,0,6,11,1,0,0,0,0,0,0,0,0,spine_02;2,3001,22.5,2,0.5,0,0,6,4,1,0,0,0,0,0,0,0,0,head;3,3002,10,1,0.5,0,0,6,12,1,0,0,0,0,0,0,0,0,hand_l
+OUT 
+CALL md_cfg off
+LOG NOLA md: golpes corpo a corpo e explosivos do cliente em NPCs do host desligados
+OUT 

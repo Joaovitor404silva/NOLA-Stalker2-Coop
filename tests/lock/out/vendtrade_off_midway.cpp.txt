@@ -1,0 +1,13 @@
+> role client
+> flag vendtrade 1
+> pawn 1000 664295.0 618840.0 287.0
+> view on
+> interact 664295.0 618840.0 287.0
+> run 400
+L 100 NOLA vend: 96 vendedores em s2u_vendor.lua
+A vis 1
+A open Trade
+L 100 NOLA vendtrade: dialogo com bartender BanditPonuryj a 0 m (dica de troca visibilidade=0); respostas escondidas; UIDialogOpenTrade ok=true
+> flag vendtrade 0
+> run 400
+L 500 NOLA vendtrade: desligado no meio (vendtrade=0)

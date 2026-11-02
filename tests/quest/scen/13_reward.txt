@@ -1,0 +1,19 @@
+role host
+pawn 1
+t 1
+money 1000
+inv A012A 2
+run 10
+fin SQ_Q1
+money 1250
+inv A012A 5
+inv A045A 1
+run 5
+out
+fin SQ_Q2
+run 5
+role client
+money 10
+part W 1;SQ_Q1;250;A012Ax3,A045Ax1|2;SQ_Q2;0;|bad;x;1;|3;SQ_Q3;5;abx2x7 cdx1
+run 2
+run 31

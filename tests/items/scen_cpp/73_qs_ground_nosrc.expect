@@ -1,0 +1,36 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA qshare: 0 marcas lidas de qshare_mine.txt (arquivo novo: as chaves que ja estao no livro agora contam como antigas)
+h LOG NOLA qshare: inventario base lido (0 itens de missao, leitura nativa)
+c1 LOG NOLA qshare: 0 marcas lidas de qshare_mine.txt (arquivo novo: as chaves que ja estao no livro agora contam como antigas)
+c1 LOG NOLA qshare: inventario base lido (0 itens de missao, leitura nativa)
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h STUB inter it1 0
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 na mao do pid 1: it1 sem interacao aqui (1 componentes)
+c1 LOG NOLA GROUND_TAKE 1;5200,300,10;BP_ItemContainer_C;?
+h LOG NOLA TAKEN +item@5200,300,10;BP_ItemContainer_C;? (total 1)
+h STUB hide it1 1
+h LOG NOLA GROUND_GOT 1;5200,300,10;BP_ItemContainer_C;?: copia local it1 a 0 cm escondida
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 solto pelo pid 1 (0.5 s)
+h STUB inter it1 1
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 livre de novo: interacao de volta
+c1 LOG NOLA TAKEN +item@5200,300,10;BP_ItemContainer_C;? (total 1)
+c1 LOG NOLA qshare: item de missao pego aqui: EchoE01 x1 de g52,3,0 (agora 1); pedido ao host
+h LOG NOLA TAKEN +qg@g52,3,0;EchoE01;1;1;c1.1 (total 2)
+h LOG NOLA qshare: livro do host: EchoE01 x1 de g52,3,0 pego por c1 (pid 1): os outros jogadores recebem pela criacao do jogo
+h STUB create EchoE01 0 1
+h LOG NOLA qshare: EchoE01 x1 de g52,3,0 pego por c1: eu tinha 0 -> +1 pela criacao do jogo
+c1 LOG NOLA TAKEN +qg@g52,3,0;EchoE01;1;1;c1.1 (total 2)
+c1 LOG NOLA qshare: qg@g52,3,0;EchoE01;1;1;c1.1: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+MARK t=c1-picked-from-ground
+h MYQI EchoE01*1
+c1 MYQI EchoE01*1
+h HIDDEN it1 1
+h LOG NOLA qshare: ANCQ06_VadyaPDA +1 aqui sem fonte de saque (missao, dialogo, troca ou item que alguem largou): nao compartilhado aqui
+MARK t=host-got-item-without-source
+h MYQI ANCQ06_VadyaPDA*1 EchoE01*1
+c1 MYQI EchoE01*1
+c1 LOG NOLA qshare: EchoE01 +1 aqui sem fonte de saque (missao, dialogo, troca ou item que alguem largou): nao compartilhado aqui
+MARK t=host-dropped-c1-picked-it-up
+h MYQI ANCQ06_VadyaPDA*1
+c1 MYQI EchoE01*2
+X1 h #K:#X:qg@g52,3,0;EchoE01;1;1;c1.1|item@5200,300,10;BP_ItemContainer_C;?

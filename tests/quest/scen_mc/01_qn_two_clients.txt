@@ -1,0 +1,19 @@
+# two clients fire the same quest signal; host fires it once, dedup key pid:sid:seq
+role host
+pawn 1
+t 5
+pos 0 0 0
+views 3
+vpeer 0 up 1
+vpeer 1 up 1
+vpeer 2 up 1
+vpart 0 QN c,1,ANCQ01_OnTriggerEnterEvent_Roof
+vpart 1 QN c,1,ANCQ01_OnTriggerEnterEvent_Roof
+run 1
+vpart 2 QN c,7,ANCQ01_OnTriggerEnterEvent_Roof|c,8,SQ_FOO_1
+run 1
+vpart 1 QN c,1,ANCQ01_OnTriggerEnterEvent_Roof|c,2,SQ_FOO_1
+run 1
+flag mcquest 0
+vpart 1 QN c,3,SQ_BAR_1
+run 1

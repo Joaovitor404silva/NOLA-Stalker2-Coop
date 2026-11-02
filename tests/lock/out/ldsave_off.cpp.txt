@@ -1,0 +1,8 @@
+> role client
+> flag lead 1
+> flag ldsave 0
+> pawn 1000 442207.0 470552.0 0
+> npc n1 5001 442057.0 470452.0 832.0 1 0 1 0 0
+> run 9000
+> ledgerdump
+F 0

@@ -1,0 +1,49 @@
+role client
+flag csave 1
+flag n7 0
+flag qsync 1
+flag kit 1
+flag joinport 1
+flag leashown 1
+t 1
+pawn 100
+mm 0
+pos 0 0 0
+rpos 100000 0 0
+peer up 1 1
+inv A012A 4
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n2\tJ,q1,n1,go,s1\n
+file B/s2u_kit.tsv A918D\t85\nA012A 10\n  bad line\n
+tick
+t 5
+pos 99000 0 0
+tick
+t 14
+tick
+t 20
+pawn 101
+mm 0
+tick
+t 35
+tick
+t 40
+frozen 1
+tick
+t 41
+frozen 0
+peer silent 1 1
+tick
+t 42
+peer up 2 1
+rpos 500000 0 0
+pullok 0
+tick
+pullok 1
+t 43
+tick
+t 104
+tick
+t 165
+tick
+t 226
+tick

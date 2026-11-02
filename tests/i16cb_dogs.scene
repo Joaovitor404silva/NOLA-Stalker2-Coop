@@ -1,0 +1,17 @@
+scene i16cb_dogs
+note i16cb: god on the host, six frozen blind dogs 4-9 m away, killed after 3 s; the plan sets host natfar 0, natdead -1 and natfd 0 first so each dead row is dropped at the scan that sees it dead and never sent, and the 12 s wait outlasts FreshDead aliveT 10 s so the old rule cannot list the corpses through the alive path
+god 1
+spawn sid=Blinddog at=player+4 freeze=1 as=d1
+spawn sid=Blinddog at=player+5 freeze=1 as=d2
+spawn sid=Blinddog at=player+6 freeze=1 as=d3
+spawn sid=Blinddog at=player+7 freeze=1 as=d4
+spawn sid=Blinddog at=player+8 freeze=1 as=d5
+spawn sid=Blinddog at=player+9 freeze=1 as=d6
+wait 3
+kill $d1
+kill $d2
+kill $d3
+kill $d4
+kill $d5
+kill $d6
+wait 12

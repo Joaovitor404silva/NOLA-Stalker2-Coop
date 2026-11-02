@@ -1,0 +1,8 @@
+# A client load is not "the other side left" (core b32 or later).
+# Expect: after the load there is NO line "XTriggerForcedAutoSave ok=true (o outro lado saiu)" and no "RECUSOU" right after it;
+# the join teleport brings the client to the host. At the end the host really goes away: then ONE leave save is made.
+0 log sample_quest_log.txt
+60 key load the last save on the client now (menu > load, or die and "load last save"); press Enter when back in the world
+60 say check the client log: no "(o outro lado saiu)" line since the load
+1 silence 40
+45 end

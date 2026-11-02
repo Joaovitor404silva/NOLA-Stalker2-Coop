@@ -1,0 +1,47 @@
+role host
+views 3 4 1 0
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+me 100 1 0 0 0
+set me uid 0
+vpeer 0 up - c1 1
+vpeer 1 up - c2 1
+vpeer 2 up - c3 1
+vremote 0 300 0 0 0 1
+vremote 1 400 0 0 0 2
+vremote 2 500 0 0 0 3
+vx1 0 L a,100,100
+vx1 1 L a,100,100
+vx1 2 L a,100,100
+vx1 0 RV 0,0,0
+vx1 1 RV 0,0,0
+vx1 2 RV 0,0,0
+t 0
+do lifeGuard
+vx1 1 RV 0,1,0
+t 1
+do lifeGuard
+do goStr
+hp me
+t 1.1
+do lifeGuard
+do rvStr
+vx1 2 RV 0,1,0
+t 1.2
+do lifeGuard
+do goStr
+newpawn
+set me alive 1
+set me hp 100
+t 10
+do lifeGuard
+t 70
+do lifeGuard
+vx1 2 RV 0,2,0
+t 71
+do lifeGuard
+do goStr

@@ -1,0 +1,42 @@
+nodes 4
+@all flag locks 1
+@all flag taken 1
+@all flag takenown 1
+@all flag lockfirst 1
+@all flag mcitems 1
+@all flag ground 0
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+run 0.3
+@c3 open BP_Box_C_1
+@c3 vis 1
+@c2 open BP_Box_C_1
+@c2 vis 1
+run 0.5
+mark both-open
+@h mcout
+@c3 status
+@c2 status
+@h open BP_Box_C_1
+@h vis 1
+run 0.5
+mark host-denied
+@h status
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 0.5
+mark c1-denied
+@c1 vis 0
+@h vis 0
+run 0.3
+leave c2
+run 0.5
+mark c2-left
+@h mcout
+@c3 vis 0
+run 0.3
+@c3 vis 1
+run 0.6
+mark c3-reopen
+@h mcout
+@c3 status

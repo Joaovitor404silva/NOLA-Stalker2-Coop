@@ -1,0 +1,15 @@
+c1 LOG NOLA itake: envio 1,P,A012A,2
+c1 RET true
+h LOG NOLA itake: recebido do pid 1 seq=1 1,P,A012A,2 -> true (1 nos na fila)
+h STUB node S2U_P_A012A_2
+h LOG NOLA itake: fila vazia
+c2 LOG NOLA mc: eventos de itens de outros jogadores esperando o mundo abrir (H1): UR
+MARK t=sent-while-c2-held
+c2 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=2 views=2 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0 h1held=1 h1wait=1 h1done=0
+MARK t=window-expired
+c2 LOG NOLA mc: mundo aberto, 1 eventos de itens de outros jogadores aplicados agora
+c2 LOG NOLA itake: recebido do pid 1 seq=1 1.0,1,P,A012A,2 -> true (1 nos na fila)
+c2 STUB node S2U_P_A012A_2
+c2 LOG NOLA itake: fila vazia
+MARK t=c2-open
+c2 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=1 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=2 views=2 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=1 yIn=0 grIn=0 ur=0 yr=0 gr=0 h1held=0 h1wait=0 h1done=1

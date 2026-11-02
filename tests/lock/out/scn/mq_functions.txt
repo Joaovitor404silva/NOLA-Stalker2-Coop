@@ -1,0 +1,39 @@
+ismain E01_MQ01_Foo
+ismain C_E02_MQ10_Bar
+ismain E03_Boss1
+ismain C_E03_BossFinal
+ismain E04_Flashback_A
+ismain Arch_Bossfight_One
+ismain Arch_E01_Scene
+ismain E05_Duga
+ismain SQ02_X
+ismain E01_SQ_Foo
+ismain Arch_Other
+ismain
+mqflag 0 0 1
+time 1000
+mqseen SQ02_X
+mqflag 1 0 1
+mqseen E01_MQ03
+time 2000
+mqflag 1 0 1
+mqflag 1 0 1
+mqflag 0 0 0
+time 100000
+mqflag 1 1 0
+mqflag 1 0 0
+mqflag 0 0 0
+time 200000
+mqflag 1 0 0
+mqok 0
+mqok 1
+mqsid SQ02_X
+mqsid E01_MQ01
+flag mqpull 1
+mqok 0
+mqok 1
+mqsid SQ02_X
+mqsid E01_MQ01
+time 300000
+mqseen E01_MQ99
+mqflag 1 0 0

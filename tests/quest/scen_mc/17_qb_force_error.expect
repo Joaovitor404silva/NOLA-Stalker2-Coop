@@ -1,0 +1,37 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+CMD t 115
+CMD part QB #QB:0;6:78f12c33:1:1:2;
+CMD qberr 1
+CMD t 123
+CMD tick
+CMD t 128
+CMD tick
+CMD t 133
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+CMD t 138
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+CMD t 143
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1): a saida E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 do host nao foi forcada neste cliente em 3 tentativa(s): falhou
+CMD t 150
+CMD tick
+CMD qberr 0
+CMD fire ANCQ03_If_Distance True fin
+LOG NOLA qbranch: If ANCQ03_If_Distance (missao ANCQ03): saida True do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD qbact ANCQ03_If_Distance
+CMD tick
+STUB qbForce ANCQ03_If_Distance True fin
+LOG NOLA qbranch: ANCQ03_If_Distance: qbranch desligado: saida True do cliente liberada
+CMD fire ANCQ03_If_Distance False fin
+RET fire 0 -
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=1 force=1 rel=1 ref=0 mir=0 err=3 defer=0 dup=0 held=0

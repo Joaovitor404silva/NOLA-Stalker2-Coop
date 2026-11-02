@@ -1,0 +1,28 @@
+role client
+flag downnoweap 0
+flag downgod 0
+flag downdie 0
+flag lifeguard 1
+me 50 1 0 0 0
+t 0
+do lifeStr
+set me hp 33.6
+do lifeStr
+x1 L a,100,100
+do remoteDown
+x1 L w,15,100
+do remoteDown
+x1 L d,0,100
+do remoteDown
+x1 L 1,0,0
+do remoteDown
+x1 L z,abc,1
+do remoteDown
+x1 L -
+do remoteDown
+set me hp 10
+do lifeGuard
+do lifeStr
+set me alive 0
+set me hp 0
+do lifeStr

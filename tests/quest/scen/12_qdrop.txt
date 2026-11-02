@@ -1,0 +1,49 @@
+role client
+flag b164off 1
+flag qdrop 1
+pawn 100
+t 1
+inv ANCQ24_VenyaNotes 1
+run 1
+press
+run 1
+invopen 1
+hover 77
+press
+tick
+keyd 1
+ticks 4 0.1
+keyd 0
+ticks 2 0.1
+press
+keyd 1
+ticks 12 0.1
+ticks 3 0.1
+inv ANCQ24_VenyaNotes 0
+ticks 2 0.1
+keyd 0
+ticks 2 0.1
+inv ANCQ24_VenyaNotes 1
+press
+keyd 1
+ticks 12 0.1
+ticks 8 0.1
+keyd 0
+ticks 50 0.1
+press
+keyd 1
+ticks 12 0.1
+flag qdropfn 0
+hover 78
+ticks 3 0.1
+invopen 0
+ticks 2 0.1
+keyd 0
+ticks 2 0.1
+invopen 1
+hover 77
+press
+keyd 1
+ticks 12 0.1
+pawn 200
+ticks 2 0.1

@@ -1,0 +1,19 @@
+scene cb3_natfd
+note cb3: ten frozen bandits fill the natmax=8 list, then the two farthest are killed while off the list, so only natfd can list them
+god 1
+closeui
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+3 freeze=1 as=n1
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+4 freeze=1 as=n2
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+5 freeze=1 as=n3
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+6 freeze=1 as=n4
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+7 freeze=1 as=n5
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+8 freeze=1 as=n6
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+9 freeze=1 as=n7
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+10 freeze=1 as=n8
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+11 freeze=1 as=n9
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+12 freeze=1 as=n10
+kill $n10
+kill $n9
+wait census npc $n10 alive=false timeout=15
+wait census npc $n9 alive=false timeout=15
+wait 8

@@ -1,0 +1,13 @@
+# Catch-up on first join, then time and weather. Client: new game (or a save from before these steps), csave=1, in the world.
+# Expect in the client log: PEER SESSION ... papel=host; "catch-up aplicado: N eventos aplicados"; then a mod save
+# ("jogo do cliente salvo") and client_applied.txt with the same N. The journal shows the E01_MQ01 steps.
+# Then the host's clock jumps to noon and its weather to type 2: client log "sync gt (diferenca ...)" and "WEATHER: XSwitchToWeather(2)".
+0 say host joins with a quest log of 30 events
+0 log sample_quest_log.txt
+90 say check the client log for "catch-up aplicado" and "jogo do cliente salvo"
+1 time 43200
+1 weather 2
+70 say check the client log for "sync gt" and "WEATHER: XSwitchToWeather(2)"
+1 time client
+1 weather client
+5 end

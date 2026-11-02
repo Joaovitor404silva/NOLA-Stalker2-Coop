@@ -1,0 +1,23 @@
+# three-player hub: the host catches up to a node one client reached; the host's #QF then carries it for the other client
+role host
+pawn 1
+t 100
+views 3
+vpeer 0 up 1
+vpeer 1 up 1
+vpeer 2 up 1
+tick1k
+vpart 1 QF 1;f3c1fd2f:0
+vpart 2 QF 0;
+t 131
+tick1k
+t 156
+vpart 1 QF 1;f3c1fd2f:25
+tick1k
+s2q L E01_MQ01_Bunker_Finish
+t 157
+vpart 1 QF 1;f3c1fd2f:26
+tick1k
+t 159
+tick1k
+qf

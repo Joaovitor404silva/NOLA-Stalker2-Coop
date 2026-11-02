@@ -1,0 +1,47 @@
+# report 2 (mobile-lab stash): the first open reads the container natively, no take-all, no close; the second PC is equalized in place
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag ptake 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag ground 0
+@all file s2u_cont.tsv AB12\tx\tx\t5200\t300\t10
+@all file s2u_contk.tsv AB12\t5200\t300\t10\tx\tA012A,Bandage,Medkit
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@h ainv BP_Box_C_1 A012A 30
+@h ainv BP_Box_C_1 Bandage 2
+@c1 ainv BP_Box_C_1 A012A 10
+@c1 ainv BP_Box_C_1 Medkit 1
+run 0.5
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-first-open
+@h inv BP_Box_C_1
+@h inv BP_Stalker2Character_C_0
+@h take BP_Box_C_1 A012A 5
+run 0.5
+@h vis 0
+@h open -
+run 2
+mark host-closed
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-open
+@c1 inv BP_Box_C_1
+@c1 inv BP_Stalker2Character_C_0
+@c1 vis 0
+@c1 open -
+run 1
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-second-open
+@c1 inv BP_Box_C_1
+@c1 vis 0
+@c1 open -
+run 0.5

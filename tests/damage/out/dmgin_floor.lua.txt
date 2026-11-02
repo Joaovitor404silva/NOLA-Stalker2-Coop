@@ -1,0 +1,11 @@
+CALL me RD dmg=95.00 bone=None
+CALL me ForceSetHP 10
+LOG NOLA dmgin: CAIDO (hp 5.0 -> piso 10) por 10 s
+LOG NOLA dmgin: seq=1 pedido=95.0 aplicado=95.0 hp 100.0 -> 10.0 ok=true 
+OUT me hp=10.0 alive=true
+CALL me RD dmg=20.00 bone=None
+CALL me ForceSetHP 10
+LOG NOLA dmgin: CAIDO (hp 0.0 -> piso 10) por 10 s
+LOG NOLA dmgin: seq=3 pedido=20.0 aplicado=20.0 hp 10.0 -> 10.0 ok=true 
+LOG NOLA dmgin 10s: aplicados=2 cortados_pelo_teto=0 ignorados morto=0 protecao=0 caido=1
+OUT me hp=10.0 alive=false

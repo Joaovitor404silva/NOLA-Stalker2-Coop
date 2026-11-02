@@ -1,0 +1,42 @@
+role client
+flag taken 1
+flag ground 0
+flag sstash 0
+t 0
+me 0 0 0
+myinv A012A 5
+part C BP_AI_Human_C_7@300,0,0|BP_AI_Human_C_8@650,10,0|BP_AI_Human_C_9@900,0,0
+t 1
+tick
+key 1
+tick
+out
+key 0
+t 1.5
+tick
+latch
+t 2
+tick
+t 2.2
+tick
+out
+part C BP_AI_Human_C_9@900,0,0
+key 1
+t 3
+tick
+key 0
+part X corpse@3,0|corpse@6,0
+t 3.5
+tick
+part R 2;BP_AI_Human_C_7;A012Ax30|A045Ax2|bad
+t 4
+tick
+t 4.1
+tick
+t 5.1
+out
+t 6
+out
+flag lootreq 3
+t 6.5
+tick

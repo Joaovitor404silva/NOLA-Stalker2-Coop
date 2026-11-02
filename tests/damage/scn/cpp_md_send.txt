@@ -1,0 +1,28 @@
+role client
+views 1 1 0 1
+flag meleesync 1
+me 100 1 0 0 0
+set me uid 7
+vpeer 0 up - h 1
+vremote 0 100 0 0 0 1
+t 0
+do md
+do mdStr
+mdcap 3001 40 5 spine_02 6 11
+mdcap 3001 22.5 2 head 6 4
+t 0.1
+do md
+do mdStr
+t 0.6
+mdcap 3002 10 1 hand_l 6 12
+do md
+do mdStr
+t 1.7
+do md
+do mdStr
+flag meleesync 0
+t 2
+mdcap 3001 40 5 spine_02 6 11
+do md
+do mdStr
+flag meleesync 1

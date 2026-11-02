@@ -1,0 +1,33 @@
+# report 1, world pickup: a quest item picked up from the ground goes to the other player; an item that shows up with no loot source (dialogue, quest reward, trade, an item another player dropped) is not shared by qshare
+nodes 2
+@all flag ground 1
+@all flag taken 1
+@all flag locks 1
+@all flag loot 1
+@all flag itake 1
+@all flag qshare 1
+@all me 5000 100 0
+@all item it1 BP_ItemContainer_C 5200 300 10
+run 1
+@c1 open it1
+run 0.5
+@c1 pick it1
+@c1 myinv EchoE01 1
+@c1 open -
+run 3
+mark c1-picked-from-ground
+@h myqi
+@c1 myqi
+@h hidden it1
+@h myinv ANCQ06_VadyaPDA 1
+run 4
+mark host-got-item-without-source
+@h myqi
+@c1 myqi
+@h myinv EchoE01 0
+@c1 myinv EchoE01 2
+run 4
+mark host-dropped-c1-picked-it-up
+@h myqi
+@c1 myqi
+x1 h

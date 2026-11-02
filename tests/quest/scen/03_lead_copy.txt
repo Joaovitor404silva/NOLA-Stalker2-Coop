@@ -1,0 +1,18 @@
+role client
+flag lead 1
+pawn 100
+t 1
+inv ANCQ01_VadaHvorostPDA 1
+run 6
+out
+inv ANCQ04_LokotPDA 1
+run 2
+inv ANCQ04_LokotPDA 0
+run 2
+part QI 1,ANCQ06_VadyaPDA,2|2,NOPE,1
+run 2
+inv ANCQ04_LokotPDA 1
+run 2
+role host
+part QI 5,ANCQ01_VadaHvorostPDA,4
+run 8

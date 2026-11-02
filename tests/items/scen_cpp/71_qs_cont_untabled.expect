@@ -1,0 +1,66 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA qshare: 0 marcas lidas de qshare_mine.txt (arquivo novo: as chaves que ja estao no livro agora contam como antigas)
+h LOG NOLA qshare: inventario base lido (0 itens de missao, leitura nativa)
+c1 LOG NOLA qshare: 0 marcas lidas de qshare_mine.txt (arquivo novo: as chaves que ja estao no livro agora contam como antigas)
+c1 LOG NOLA qshare: inventario base lido (0 itens de missao, leitura nativa)
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+c1 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+c1 LOG NOLA qshare: item de missao pego aqui: ANCQ01_VadaHvorostPDA x2 de wBP_Box_C@520,30,1 (agora 2); pedido ao host
+c1 LOG NOLA qshare: item de missao pego aqui: EchoE01 x1 de wBP_Box_C@520,30,1 (agora 1); pedido ao host
+h LOG NOLA TAKEN +qg@wBP_Box_C@520,30,1;ANCQ01_VadaHvorostPDA;2;2;c1.1 (total 1)
+h LOG NOLA qshare: livro do host: ANCQ01_VadaHvorostPDA x2 de wBP_Box_C@520,30,1 pego por c1 (pid 1): os outros jogadores recebem pela criacao do jogo
+h LOG NOLA TAKEN +qg@wBP_Box_C@520,30,1;EchoE01;1;1;c1.1 (total 2)
+h LOG NOLA qshare: livro do host: EchoE01 x1 de wBP_Box_C@520,30,1 pego por c1 (pid 1): os outros jogadores recebem pela criacao do jogo
+h STUB create ANCQ01_VadaHvorostPDA 0 2
+h LOG NOLA qshare: ANCQ01_VadaHvorostPDA x2 de wBP_Box_C@520,30,1 pego por c1: eu tinha 0 -> +2 pela criacao do jogo
+h STUB create EchoE01 0 1
+h LOG NOLA qshare: EchoE01 x1 de wBP_Box_C@520,30,1 pego por c1: eu tinha 0 -> +1 pela criacao do jogo
+c1 LOG NOLA TAKEN +qg@wBP_Box_C@520,30,1;EchoE01;1;1;c1.1 (total 1)
+c1 LOG NOLA TAKEN +qg@wBP_Box_C@520,30,1;ANCQ01_VadaHvorostPDA;2;2;c1.1 (total 2)
+c1 LOG NOLA qshare: qg@wBP_Box_C@520,30,1;EchoE01;1;1;c1.1: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+c1 LOG NOLA qshare: qg@wBP_Box_C@520,30,1;ANCQ01_VadaHvorostPDA;2;2;c1.1: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+MARK t=c1-took
+c1 LOG NOLA LOCK_REL BP_Box_C@520,30,1
+c1 LOG NOLA TAKEN +BP_Box_C@520,30,1 (total 3)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 1 (1.5 s)
+h LOG NOLA TAKEN +BP_Box_C@520,30,1 (total 3)
+MARK t=granted
+h MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+c1 MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+h INV BP_Box_C_1 A012A*5 ANCQ01_VadaHvorostPDA*2 EchoE01*1
+h STUB close
+h LOG NOLA TAKEN_DENY BP_Box_C@520,30,1 (ja levado) janela fechada ok=true
+MARK t=host-opens-source
+h INV BP_Box_C_1 A012A*5 ANCQ01_VadaHvorostPDA*2 EchoE01*1
+h MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+MARK t=c1-rejoin
+RESTART c1
+c1 LOG NOLA qshare: 4 marcas lidas de qshare_mine.txt
+c1 LOG NOLA qshare: inventario base lido (2 itens de missao, leitura nativa)
+c1 LOG NOLA TAKEN +qg@wBP_Box_C@520,30,1;EchoE01;1;1;c1.1 (total 1)
+c1 LOG NOLA TAKEN +BP_Box_C@520,30,1 (total 2)
+c1 LOG NOLA TAKEN +qg@wBP_Box_C@520,30,1;ANCQ01_VadaHvorostPDA;2;2;c1.1 (total 3)
+c1 MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+h MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+MARK t=host-reload
+RESTART h
+h LOG NOLA TAKEN: 3 chaves lidas de taken.txt
+h LOG NOLA qshare: 2 marcas lidas de qshare_mine.txt
+h LOG NOLA qshare: inventario base lido (2 itens de missao, leitura nativa)
+h MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+c1 MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+MARK t=quest-used-it
+RESTART h
+h LOG NOLA TAKEN: 3 chaves lidas de taken.txt
+h LOG NOLA qshare: 2 marcas lidas de qshare_mine.txt
+h LOG NOLA qshare: inventario base lido (1 itens de missao, leitura nativa)
+h MYQI ANCQ01_VadaHvorostPDA*2
+MARK t=c1-level-change
+c1 LOG NOLA qshare: pawn novo (save carregado / morte / respawn): itens de missao relidos em 8 s; nada enviado
+c1 LOG NOLA qshare: inventario base lido (2 itens de missao, leitura nativa)
+c1 MYQI ANCQ01_VadaHvorostPDA*2 EchoE01*1
+h MYQI ANCQ01_VadaHvorostPDA*2
+X1 h #K:#X:BP_Box_C@520,30,1|qg@wBP_Box_C@520,30,1;ANCQ01_VadaHvorostPDA;2;2;c1.1|qg@wBP_Box_C@520,30,1;EchoE01;1;1;c1.1

@@ -1,0 +1,23 @@
+role host
+flag b164off 1
+flag qitem 1
+pawn 1
+t 5
+inv ANCQ06_VadyaPDA 1
+part QI 1,ANCQ01_VadaHvorostPDA,1|2,ANCQ06_VadyaPDA,3|3,NOPE_NOT_QUEST,1|bad
+run 2
+part QI 4,ANCQ01_VadaHvorostPDA,2
+run 1
+oinv 500 ANCQ04_LokotPDA 1
+oinv 500 A012A 5
+corpse 500 BP_AI_Human_C_1
+corpse 501 BP_AI_Human_C_2
+ishost BP_Box_C@18344.5,67424.7,106.9
+ishost BP_Box_C@1,2,3
+inter 500
+ishost BP_AI_Human_C_9
+ishost BP_AI_Human_C_9
+inter 0
+ishost BP_AI_Human_C_10
+t 100
+run 1

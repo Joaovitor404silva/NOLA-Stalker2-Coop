@@ -1,0 +1,8 @@
+spec m3_failover
+needs pair up with the failover DLL, joinmenu=0 (harness default)
+setflag B netpeer 10.9.9.9,127.0.0.1
+expect B "S2NET relay in the DLL started: role=client .*peer=10\.9\.9\.9:\d+ " within 15
+expect B "S2NET direct: no answer from 10\.9\.9\.9 in 20 s, trying 127\.0\.0\.1 \(2/2\)" within 150
+expect B "S2NET relay in the DLL started: role=client .*peer=127\.0\.0\.1:\d+ " within 10
+expect B "NOLA PEER UP \(#[2-9]\d*\)" within 25
+setflag B netpeer 127.0.0.1,10.9.9.9

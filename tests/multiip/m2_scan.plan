@@ -1,0 +1,7 @@
+out D:\modding\proofs\20261101_v131b_multiip
+assert alive A
+assert alive B
+setflag A devcmd 1
+setflag B devcmd 1
+setflag B nolabcast 0
+run D:\modding\cpp\wt\v131b\tests\multiip\m2_scan_spec.txt

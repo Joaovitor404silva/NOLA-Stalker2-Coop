@@ -1,0 +1,69 @@
+role client
+flag cloot 1
+flag bodysafe 1
+flag cllog 1
+flag clkeep 1
+fakespawn 1
+natstub 1
+mcworld 1
+t 0
+me 0 0 0
+npc 8 130 0 0 0
+npcuid 8 801
+npcinv 8 EcoMedkit 1
+natbody BP_AI_Human_C_7 BP_AI_Human_C_8 3
+part CL BP_AI_Human_C_7,100,0,0,0,1,0,EcoMedkit*1
+inter BP_AI_Human_C_8
+t 1
+tick
+t 2
+tick
+t 3
+tick
+t 4
+tick
+t 5
+tick
+t 6
+tick
+mark live
+inter BP_AI_Human_C_8
+press BP_AI_Human_C_8
+part CL BP_AI_Human_C_7,100,0,0,0,2,0,EcoMedkit*1.NegodaPDA*1
+t 7
+tick
+t 8
+tick
+t 9
+tick
+t 10
+tick
+t 11
+tick
+mark quest-item-listed
+inv BP_AI_Human_C_8
+inter BP_AI_Human_C_8
+press BP_AI_Human_C_8
+drag BP_AI_Human_C_8 1
+t 12
+tick
+mark dragging
+inter BP_AI_Human_C_8
+press BP_AI_Human_C_8
+drag BP_AI_Human_C_8 0
+t 13
+tick
+mark dropped
+inter BP_AI_Human_C_8
+press BP_AI_Human_C_8
+part CL BP_AI_Human_C_7,100,0,0,0,3,0,
+t 14
+tick
+t 15
+tick
+t 16
+tick
+mark emptied
+inter BP_AI_Human_C_8
+press BP_AI_Human_C_8
+status

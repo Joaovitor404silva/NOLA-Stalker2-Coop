@@ -1,0 +1,21 @@
+scene play_bunker
+note ab6: the bot plays E01_MQ01 from the live quest graph and the generated quest_goals table, no recording input; both players get the StrelokImmune Invulnerability effect (Unkillable+Unfocusable) and must stay above 50 hp
+@D closeui
+@D bot hpguard 100
+@D god 1
+@D bot immune on StrelokImmune 2000
+@D bot hpmin reset
+@C closeui
+@C bot hpguard 100
+@C god 1
+@C bot immune on StrelokImmune 2000
+@C time 12:00
+@C closeui
+@C bot hpmin reset
+@C bot quest
+@C bot play until=E01_MQ01_Bunker timeout=420
+@C bot quest
+@C bot hpmin 50
+@D bot hpmin 50
+@C bot immune
+@D bot immune

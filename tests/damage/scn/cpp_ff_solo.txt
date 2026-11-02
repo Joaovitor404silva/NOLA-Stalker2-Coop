@@ -1,0 +1,27 @@
+role host
+views 1 1 0 0
+flag lifeguard 1
+flag lifegod 1
+me 100 1 0 0 0
+set me uid 7
+npc tgt1 Target 100 0 0 120020 1
+tgt tgt1
+vpeer 0 none
+t 0
+do ff
+ffcap 0 1 30 5 0.8 spine_02
+do ff
+do ffStr
+vx1 0 FF 1,0,30,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+hp me
+vx1 0 FF -
+vpeer 0 up - c1 1
+vremote 0 100 0 0 0.1 1
+t 0.1
+do lifeGuard
+do ff
+vpeer 0 none
+t 0.2
+do lifeGuard
+do ff

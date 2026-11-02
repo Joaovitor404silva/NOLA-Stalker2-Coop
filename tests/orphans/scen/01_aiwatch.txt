@@ -1,0 +1,40 @@
+role host
+flag aiwatch 1
+mgr
+t 100
+step aiw
+me 500 500 0
+step aiw
+t 101
+step aiw
+t 111
+lock dialogo
+step aiw
+t 112
+step aiw
+lock -
+sleep 1
+t 113
+step aiw
+sleep 0
+t 114
+step aiw
+t 125
+step aiw
+flag aiwatchm 4161535
+flag aiwatchs 5
+t 131
+step aiw
+newme
+t 132
+step aiw
+flag alifeoff 1
+t 150
+step aiw
+flag alifeoff 0
+role client
+t 160
+step aiw
+role host
+t 170
+step aiw

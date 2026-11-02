@@ -1,0 +1,32 @@
+role client
+flag doors 1
+flag doorfix 1
+flag keyfix 1
+flag keytol 1
+pawn 0 0 0
+pawnid 7
+obj D1 DoorView - door 500 0 0
+yaw D1 10
+obj D2 DoorView - door 700 0 0
+yaw D2 20
+time 1
+remote O 50,0,0;1|70,0,1;0|99,9,9;1
+tick
+time 2
+tick
+time 3.5
+tick
+time 4
+setyaw D1 10
+tick
+time 5
+remote O 50,0,0;0|70,0,1;0|99,9,9;1
+tick
+time 6
+tick
+obj D3 DoorView - door 990 90 90
+yaw D3 0
+time 8
+tick
+time 10
+tick

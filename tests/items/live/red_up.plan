@@ -1,0 +1,5 @@
+out D:\modding\proofs\20261101_pr3_loot_red
+up -Reuse -Calm -Dll D:\modding\cpp\wt\v131b\cppbuild\Output\NolaNative\Game__Shipping__Win64\NolaNative.dll
+assert alive A
+assert alive B
+assert peer

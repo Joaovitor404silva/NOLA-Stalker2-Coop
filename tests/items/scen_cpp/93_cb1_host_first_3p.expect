@@ -1,0 +1,72 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c2 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c3 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+h STUB window open BP_Box_C_1
+c3 STUB window open BP_Crate_C_2
+h LOG NOLA cbusy: class BP_Box_C is a container
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 0 (primeiro a pedir)
+h LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+h LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+h LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+c3 LOG NOLA cbusy: class BP_Crate_C is a container
+c3 LOG NOLA LOCK_REQ BP_Crate_C@700,30,1
+c3 LOG NOLA LOCK_GRANT BP_Crate_C@700,30,1
+c3 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+c3 LOG NOLA ptake: recipiente BC8F031361701AFA aberto; inventario anotado
+c3 LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+h LOG NOLA mc bau: BP_Crate_C@700,30,1 dado ao pid 3 (primeiro a pedir)
+h LOG NOLA cbusy: class BP_Crate_C is a container
+h STUB inter BP_Crate_C_2 0
+h LOG NOLA cbusy: BP_Crate_C@700,30,1 in use by pid 3: BP_Crate_C_2 interaction off here (1 components)
+c1 LOG NOLA cbusy: class BP_Box_C is a container
+c1 STUB inter BP_Box_C_1 0
+c1 LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid 0: BP_Box_C_1 interaction off here (1 components)
+c2 LOG NOLA cbusy: class BP_Box_C is a container
+c2 STUB inter BP_Box_C_1 0
+c2 LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid 0: BP_Box_C_1 interaction off here (1 components)
+c3 LOG NOLA cbusy: class BP_Box_C is a container
+c3 STUB inter BP_Box_C_1 0
+c3 LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid 0: BP_Box_C_1 interaction off here (1 components)
+c1 LOG NOLA cbusy: class BP_Crate_C is a container
+c1 STUB inter BP_Crate_C_2 0
+c1 LOG NOLA cbusy: BP_Crate_C@700,30,1 in use by pid 3: BP_Crate_C_2 interaction off here (1 components)
+c2 LOG NOLA cbusy: class BP_Crate_C is a container
+c2 STUB inter BP_Crate_C_2 0
+c2 LOG NOLA cbusy: BP_Crate_C@700,30,1 in use by pid 3: BP_Crate_C_2 interaction off here (1 components)
+h LOG NOLA lscont: recipiente 60E63E8B813B51B0: vazio na leitura: sem lista
+c3 LOG NOLA lscont: recipiente BC8F031361701AFA: vazio na leitura: sem lista
+MARK t=host-and-c3-open
+c1 STUB no prompt on BP_Box_C_1: cannot open
+c2 STUB no prompt on BP_Box_C_1: cannot open
+c2 STUB no prompt on BP_Crate_C_2: cannot open
+MARK t=blocked
+h MCOUT #KH:0:BP_Box_C@520,30,1|3:BP_Crate_C@700,30,1|||
+h LOG NOLA LOCK_REL BP_Box_C@520,30,1
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 fechado sem tirar nada
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 0 (0.9 s)
+c1 STUB inter BP_Box_C_1 1
+c1 LOG NOLA cbusy: BP_Box_C@520,30,1 free again (released by the host): interaction back on 1 components
+c2 STUB inter BP_Box_C_1 1
+c2 LOG NOLA cbusy: BP_Box_C@520,30,1 free again (released by the host): interaction back on 1 components
+c3 STUB inter BP_Box_C_1 1
+c3 LOG NOLA cbusy: BP_Box_C@520,30,1 free again (released by the host): interaction back on 1 components
+c1 STUB window open BP_Box_C_1
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+c1 LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+c1 LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h STUB inter BP_Box_C_1 0
+h LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid 1: BP_Box_C_1 interaction off here (1 components)
+c2 STUB inter BP_Box_C_1 0
+c2 LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid 1: BP_Box_C_1 interaction off here (1 components)
+c3 STUB inter BP_Box_C_1 0
+c3 LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid 1: BP_Box_C_1 interaction off here (1 components)
+c1 LOG NOLA lscont: recipiente 60E63E8B813B51B0: vazio na leitura: sem lista
+MARK t=c1-gets-box
+h MCOUT #KH:3:BP_Crate_C@700,30,1|1:BP_Box_C@520,30,1|||

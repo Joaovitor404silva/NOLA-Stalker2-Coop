@@ -1,0 +1,34 @@
+role client
+flag qpick 1
+flag qsync 1
+t 1
+s2q D ANCQ03_SetDialog_ANCQ03_Comment_AboutMoney_1 1
+lead dlg
+run 1
+s2q D ANCQ03_SetDialog_ANCQ03_Comment_AboutMoney_1 2
+out
+lead none
+s2q D ANCQ03_SetDialog_ANCQ03_Comment_AboutMoney_1 1
+run 4
+s2q L ANCQ03_Technical_FirstPhrase
+s2q L ANCQ03_Technical_FirstPhrase
+apply N,ANCQ03_Technical_FirstPhrase
+apply N,ANCQ03_Technical_FirstPhrase
+apply N,ANCQ03_Technical_FirstPhrase
+run 10
+role host
+part QP 1,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt,1|2,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoney_1,2|3,NOPE_DIALOG,4|4,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoney_1,1
+s2q D ANCQ03_SetDialog_ANCQ03_Comment_AboutMoney_1 1
+run 2
+hostdlg 1
+run 9
+hostdlg 0
+run 2
+part QP 5,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt,1
+aa 0
+run 10
+aa 1
+run 2
+nopart QP
+t 300
+run 3

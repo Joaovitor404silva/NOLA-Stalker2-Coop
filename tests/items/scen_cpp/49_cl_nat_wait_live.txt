@@ -1,0 +1,34 @@
+role client
+flag cloot 1
+flag bodysafe 1
+flag cllog 1
+flag clkeep 1
+fakespawn 1
+natstub 1
+mcworld 1
+t 0
+me 0 0 0
+npc 8 130 0 0 1
+npcuid 8 801
+natbody BP_AI_Human_C_7 BP_AI_Human_C_8 2
+part CL BP_AI_Human_C_7,100,0,0,0,1,0,A012A*30
+t 1
+tick
+t 2
+tick
+mark waiting
+kill 8
+natbody BP_AI_Human_C_7 BP_AI_Human_C_8 3
+t 3
+tick
+t 4
+tick
+t 5
+tick
+t 6
+tick
+t 7
+tick
+mark adopted
+inv BP_AI_Human_C_8
+status

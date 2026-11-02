@@ -1,0 +1,4 @@
+scene gore_back
+note i16gr: client back next to the host
+tp peer+450
+wait 3

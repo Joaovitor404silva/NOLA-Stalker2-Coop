@@ -1,0 +1,11 @@
+# Live quest steps, then the client loads its save (death screen "load last save", or Continue).
+# Expect: each step applied once ("cliente seq=..."); a mod save about 60 s after the first step; after the load the fake host
+# prints "the client loaded a save" and the client log shows "catch-up aplicado: k eventos aplicados, ... ja aplicados antes"
+# with k = only the steps made after the loaded save.
+0 log sample_quest_log.txt 29
+45 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+70 say the save holding that step should be written by now (client log: jogo do cliente salvo)
+5 quest J,E01_MQ01,E01_MQ01_Bunker,Start,E01_MQ01_Bunker_Start
+5 key load the last save on the client now (die and pick "load last save", or menu > Continue); press Enter when back in the world
+40 say check: only the Bunker step was applied again
+1 end

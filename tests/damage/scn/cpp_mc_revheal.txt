@@ -1,0 +1,53 @@
+role client
+flag revwait 0
+views 3 3 0 2
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag reviveheal 1
+flag bothdie 1
+me 100 1 0 0 0
+set me uid 2
+vpeer 0 up - h 1
+vpeer 1 up - c1 1
+vpeer 2 up - c3 1
+vremote 0 5000 0 0 0
+vremote 1 200 0 0 0 1
+vremote 2 150 0 0 0 3
+vx1 0 L a,100,100
+vx1 1 L a,100,100
+vx1 2 L a,100,100
+vx1 0 RV 0,0,0
+vx1 1 RV 0,0,0
+vx1 2 RV 0,0,0
+t 0
+do lifeGuard
+set me hp 10
+t 1
+do lifeGuard
+vx1 1 RV 1,0,3,1
+vremote 1 200 0 0 2 1
+vremote 2 150 0 0 2 3
+t 2
+do lifeGuard
+hp me
+set me hp 10
+t 10
+do lifeGuard
+vx1 2 RV 1,0,2,3
+vremote 1 200 0 0 11 1
+vremote 2 150 0 0 11 3
+t 11
+do lifeGuard
+hp me
+set me hp 10
+t 20
+do lifeGuard
+vx1 1 RV 2,0,2,2
+vremote 1 200 0 0 21 1
+vremote 2 150 0 0 21 3
+t 21
+do lifeGuard
+hp me

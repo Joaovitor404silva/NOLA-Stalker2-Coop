@@ -1,0 +1,26 @@
+CALL md_cfg on
+LOG NOLA md: golpes corpo a corpo e explosivos do cliente em NPCs do host ligados
+CALL a md_apply dmg=40.00 arm=5.00 bone=spine_02 type=6 src=11 atk=-1
+LOG NOLA md: golpe de PLAYER 1 em BP_AI_Human_C_a uid=3001 fonte=11 tipo=6 dano=40.00 armadura=5.00 osso=spine_02 em nome de jogador do host hp 100.0 -> 60.0
+OUT a hp=60.0 alive=true
+OUT a hp=60.0 alive=true
+CALL b md_apply dmg=30.00 arm=5.00 bone=None type=6 src=4 atk=-1
+LOG NOLA md: golpe de PLAYER 1 em BP_AI_Human_C_b uid=3002 fonte=4 tipo=6 dano=30.00 armadura=5.00 osso=None em nome de jogador do host hp 100.0 -> 70.0
+LOG NOLA md: golpe de PLAYER 1 em uid=3003 recusado (npc morto) dano=10.00 fonte=11
+LOG NOLA md: golpe de PLAYER 1 em uid=3999 recusado (npc nao achado no host) dano=10.00 fonte=11
+OUT b hp=70.0 alive=true
+LOG NOLA md: golpe de PLAYER 1 em uid=3001 recusado (tiro ou sangramento) dano=20.00 fonte=2
+LOG NOLA md: golpe de PLAYER 1 em uid=3001 recusado (tiro ou sangramento) dano=5.00 fonte=19
+OUT a hp=60.0 alive=true
+CALL d md_apply dmg=150.00 arm=5.00 bone=head type=6 src=11 atk=-1
+LOG NOLA md: golpe de PLAYER 2 em BP_AI_Human_C_d uid=3004 fonte=11 tipo=6 dano=150.00 armadura=5.00 osso=head em nome de jogador do host hp 100.0 -> 0.0 MORTO
+OUT d hp=0.0 alive=false
+LOG NOLA md: golpe de PLAYER 1 em uid=3002 recusado (sem gancho nativo) dano=10.00 fonte=11
+CALL md_cfg off
+LOG NOLA md: golpes corpo a corpo e explosivos do cliente em NPCs do host desligados
+LOG NOLA md: golpe de PLAYER 1 em uid=3002 recusado (meleesync 0) dano=10.00 fonte=11
+OUT b hp=70.0 alive=true
+CALL md_cfg on
+LOG NOLA md: golpes corpo a corpo e explosivos do cliente em NPCs do host ligados
+LOG NOLA md 10 s: meleesync=1 enviados=0 descartados_no_envio=0 recebidos=9 aplicados=3 mortes=1 dano=220.0 hp_perdido=170.0 recusados=6 meleesync 0=1 npc morto=1 npc nao achado no host=1 sem gancho nativo=1 tiro ou sangramento=2 mal_formados=2
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0 eu=HOST fim_de_jogo=#0 | PLAYER 1 vida=? | PLAYER 2 vida=?

@@ -1,0 +1,77 @@
+CMD role client
+CMD flag csave 1
+CMD flag n7 1
+CMD flag n7sv 1
+CMD flag n7eq 0
+CMD flag qsync 1
+CMD flag qrollback 1
+CMD flag joinport 0
+CMD flag kit 0
+CMD flag sxjoin 1
+CMD flag wpkg 1
+CMD flag wsplice 1
+CMD t 1
+CMD pawn 1000
+CMD money 500
+CMD inv A012A 30
+CMD peer up 1 1
+CMD file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n3\tJ,q1,n1,go,s1\n
+CMD file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+CMD file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav BBBBBBBBBBBBBBBBBBBBBBBB-two
+CMD part B 5,3,c6ad219ea28b4,0,0,3,abc
+CMD tick
+LOG NOLA csave: save do cliente carregado; 3 eventos do host ja estao nele (client_applied.txt)
+LOG NOLA n7: host na sessao 1: cargas=0 saves=0 kh=3 geracao=5 pasta_de_saves=propria
+LOG NOLA n7boot: o save carregado do cliente casa com o do host (campanha c6ad219ea28b4, 3 passos, host 3)
+CMD t 3
+CMD part B 5,3,c6ad219ea28b4,0,1,3,abc
+CMD tick
+LOG NOLA csave1: host salvou (#1, kh=3, campanha c6ad219ea28b4): o cliente salva agora
+STUB sxWant REQ1
+LOG NOLA wpkg: asking the host for the world package of its save #1 (kh=3, campaign c6ad219ea28b4, request REQ1)
+CMD ticks 20 1
+STUB forcedAutoSave
+LOG NOLA csave: XTriggerForcedAutoSave ok=true 
+CMD stamp STEAM=2:2;NULL=-
+CMD file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav DDDDDDDDDDDDDDDDDDDDDDDDDDDD-one-saved
+CMD ticks 8 1
+LOG NOLA csave: jogo do cliente salvo (arquivo de saves mudou); 3 eventos do host registrados como contidos nele
+LOG NOLA csave1: save do cliente = par do save #1 do host (kh=3, campanha c6ad219ea28b4); o cliente tinha 3 passos aplicados
+LOG NOLA n7sv: save do cliente 11111111 guarda 3 passos do host (par #1, 1 guardados) em 0,0,0
+CMD wsp run -
+CMD wplast c6ad219ea28b4 3 1 1
+CMD ticks 2 1
+STUB wspStart 11111111111111111111111111111111 c6ad219ea28b4__REQ1.pkg own strip
+LOG NOLA wsplice: splicing the host world of save #1 (kh=3, wp_in\c6ad219ea28b4__REQ1.pkg) into client save 11111111 (pair #1)
+CMD wsp done spliced-1
+CMD ticks 2 1
+LOG NOLA wsplice: client save 11111111 (pair #1) now holds the host world of save #1 (kh=3) and this client's own character, 2.0 s: spliced-1
+CMD part B 5,3,c6ad219ea28b4,0,2,3,abc
+CMD tick
+LOG NOLA csave1: host salvou (#2, kh=3, campanha c6ad219ea28b4): o cliente salva agora
+LOG NOLA wpkg: host save #2 supersedes the pending world package of save #1
+STUB sxWant REQ2
+LOG NOLA wpkg: asking the host for the world package of its save #2 (kh=3, campaign c6ad219ea28b4, request REQ2)
+CMD ticks 32 1
+STUB forcedAutoSave
+LOG NOLA csave: XTriggerForcedAutoSave ok=true 
+LOG NOLA csave: o jogo RECUSOU salvar (tentativa 1; em combate?); nada registrado, nova tentativa em 20 s ou mais, depois de 15 s sem perder vida
+STUB forcedAutoSave
+CMD wsp none -
+CMD wplast c6ad219ea28b4 3 2 2
+CMD ticks 5 1
+CMD wsp run -
+CMD ticks 26 1
+LOG NOLA csave: o jogo RECUSOU salvar (tentativa 2; em combate?); nada registrado, nova tentativa em 20 s ou mais, depois de 15 s sem perder vida
+STUB forcedAutoSave
+CMD stamp STEAM=3:3;NULL=-
+CMD file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-two-saved
+CMD ticks 8 1
+LOG NOLA csave: jogo do cliente salvo (arquivo de saves mudou); 3 eventos do host registrados como contidos nele
+LOG NOLA csave1: save do cliente = par do save #2 do host (kh=3, campanha c6ad219ea28b4); o cliente tinha 3 passos aplicados
+LOG NOLA n7sv: save do cliente 22222222 guarda 3 passos do host (par #2, 2 guardados) em 0,0,0
+STUB wspStart 22222222222222222222222222222222 c6ad219ea28b4__REQ2.pkg own strip
+LOG NOLA wsplice: splicing the host world of save #2 (kh=3, wp_in\c6ad219ea28b4__REQ2.pkg) into client save 22222222 (pair #2)
+CMD wsp done spliced-2
+CMD ticks 3 1
+LOG NOLA wsplice: client save 22222222 (pair #2) now holds the host world of save #2 (kh=3) and this client's own character, 3.0 s: spliced-2

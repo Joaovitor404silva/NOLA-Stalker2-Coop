@@ -1,0 +1,14 @@
+scene corpse_loot
+note from bd1_corpse_keep: the host spawns one bandit next to itself, kills it, walks to the corpse and frames it for a loot test
+god 1
+time 12:00
+closeui
+require nohostile 3000 allow=Neutral
+spawn sid=GeneralNPC_Bandit_Stormtrooper at=player+4 freeze=1 as=npc
+kill $npc
+wait census npc $npc alive=false timeout=15
+wait 3
+tp $npc+150
+frame $npc
+box $npc
+bot iact

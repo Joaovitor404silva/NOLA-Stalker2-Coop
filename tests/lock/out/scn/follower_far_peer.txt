@@ -1,0 +1,20 @@
+role client
+flag lead 1
+flag ldclose 2
+pawn 1000 442207.0 470552.0 0
+peer h,4,1700000002,dlg,0,0,0
+view on
+interact 442057.0 470452.0 832.0
+run 3000
+view off
+run 500
+peer -
+run 500
+view on
+run 300
+state
+leaddlg
+view off
+run 2300
+state
+leaddlg

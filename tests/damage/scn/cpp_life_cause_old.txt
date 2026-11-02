@@ -1,0 +1,27 @@
+role client
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+flag downnoweap 1
+flag revnobag 1
+flag deathneutral 0
+me 100 1 0 0 0
+set me uid 0
+x1 RV 0,0
+x1 L a,100,100
+remote 5000 0 0 0
+t 0
+do lifeGuard
+set me hp 10
+t 1
+do lifeGuard
+remote 5000 0 0 20
+t 20
+do lifeGuard
+remote 5000 0 0 32
+t 32
+do lifeGuard
+hp me

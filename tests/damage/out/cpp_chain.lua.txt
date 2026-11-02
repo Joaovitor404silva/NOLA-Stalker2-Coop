@@ -1,0 +1,20 @@
+OUT #D:1,10.0|2,20.0|3,5.0
+LOG NOLA dmg cadeia 10s (host): rota=D alvo=sim foco_no_alvo=2 (max 1 em 2 leituras) eventos=3 ignorados=2 enviados=3 seq_max=3 rota_nd=0 nd_enviados=0 nd_dano=0.0
+OUT nd_send_allowed=true
+OUT nd_send_allowed=false
+OUT nd_send_allowed=false
+OUT nd_send_allowed=true
+OUT #D:4,7.0
+OUT n=1
+LOG NOLA dmg cadeia 10s (host): rota=natdmg alvo=sim foco_no_alvo=1 (max 1 em 1 leituras) eventos=1 ignorados=0 enviados=1 seq_max=4 rota_nd=1 nd_enviados=1 nd_dano=12.5
+LOG NOLA dmgin 10s: aplicados=0 cortados_pelo_teto=0 ignorados morto=0 protecao=2 caido=0
+OUT nd_apply_allowed=false
+OUT nd_apply_allowed=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT nd_apply_allowed=false
+LOG NOLA dmg cadeia 10s (cliente): rota=natdmg dmgin=1 recebidos=5 novos=4 perdidos=1 desligado=2 rota_nd=1 nd_aplicados=1 hp_perdido=10.0
+OUT me hp=15.0 alive=true

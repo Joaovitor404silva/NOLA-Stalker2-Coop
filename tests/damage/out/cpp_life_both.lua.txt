@@ -1,0 +1,94 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT #RV:0,0
+GAME hit me 100.0 -> hp=0.0 alive=false god=false
+LOG NOLA LIFE: MORRI (morte direta sem cair, hp 0.0): morte #1 mandada ao outro jogador; ele morre junto e os dois recomecam do ultimo save do host
+OUT #RV:0,1
+OUT #RV:0,1
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+GAME hit me 100.0 -> hp=0.0 alive=false god=false
+LOG NOLA LIFE: MORRI (morte direta sem cair, hp 0.0): morte #2 mandada ao outro jogador; ele morre junto e os dois recomecam do ultimo save do host
+CALL die_follow
+OUT #RV:0,2
+OUT #RV:0,2
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+LOG NOLA LIFE: o outro jogador morreu (#1): eu morro tambem (os dois recomecam do ultimo save do host)
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+OUT me hp=0.0 alive=false
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+CALL die_follow
+OUT #RV:0,2
+OUT #RV:0,2
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+LOG NOLA LIFE: o outro jogador morreu (#2): eu morro tambem (os dois recomecam do ultimo save do host)
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+OUT #RV:0,2
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+LOG NOLA LIFE: o outro jogador morreu (#3): eu morro tambem (os dois recomecam do ultimo save do host)
+LOG NOLA LIFE: morte junto com o outro jogador espera: a cinematica/emissao segura o Unkillable
+OUT me hp=100.0 alive=true
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+OUT me hp=0.0 alive=false
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+OUT #RV:0,2
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT god_held=true bit=true
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (tempo esgotado) ok=true
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: ninguem veio em 30.1 s: SANGROU ATE MORRER (ReceiveDamageStruct ok=true hp 15.0 -> 0.0 alive=false, tentativa 1)
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (morte): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=0.0 alive=false
+LOG NOLA LIFE: MORRI (sangrou ate morrer, hp 0.0): morte #3 mandada ao outro jogador; ele morre junto e os dois recomecam do ultimo save do host
+CALL die_follow
+LOG NOLA LIFE: MORREU ENQUANTO CAIDO (hp=0.0 alive=false, caido ha 30.2 s, ultimo sangramento=0.0)
+OUT #RV:0,3
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+GAME hit me 100.0 -> hp=0.0 alive=false god=false
+LOG NOLA LIFE: MORRI (morte direta sem cair) sem o outro jogador na sessao: nada mandado
+OUT #RV:0,3
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+GAME hit me 100.0 -> hp=0.0 alive=false god=false
+OUT #RV:0,3
+LOG NOLA LIFE: o outro jogador morreu (#4); bothdie=0: eu continuo vivo
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+GAME hit me 100.0 -> hp=0.0 alive=false god=false
+LOG NOLA LIFE: MORRI (morte direta sem cair, hp 0.0): morte #4 mandada ao outro jogador; ele morre junto e os dois recomecam do ultimo save do host
+CALL die_follow
+OUT #RV:0,4
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+LOG NOLA LIFE: o outro jogador morreu (#5): eu morro tambem (os dois recomecam do ultimo save do host)
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+OUT me hp=0.0 alive=false
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+CALL die_follow
+OUT #RV:0,4
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT #RV:0,4
