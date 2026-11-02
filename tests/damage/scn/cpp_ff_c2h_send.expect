@@ -1,0 +1,13 @@
+CALL ff_bodies on v0:p0:tgt1 v0:p0:pup1
+LOG NOLA ff: corpos sob fogo amigo: HOST (view 0: alvo boneco)
+LOG NOLA ff: acertei HOST dano=30.00 armadura=5.00 perfuracao=0.80 sangra=0.50/0.25 osso=spine_02 tipo=6 fonte=2 (consumido no alvo, enviado #1)
+LOG NOLA ff: acertei HOST dano=45.00 armadura=0.00 perfuracao=1.00 sangra=0.50/0.25 osso=head tipo=6 fonte=11 (consumido no alvo, enviado #2)
+LOG NOLA ff: acertei HOST dano=120.00 armadura=10.00 perfuracao=1.00 sangra=0.50/0.25 osso=spine_01 tipo=6 fonte=4 (consumido no alvo, enviado #3)
+OUT #FF:1,0,30,5,0.8,0.5,0.25,6,2,1,0,0,100.5,0,0,0,0,-0.75,spine_02;2,0,45,0,1,0.5,0.25,6,11,1,0,0,100.5,0,0,0,0,-0.75,head;3,0,120,10,1,0.5,0.25,6,4,1,0,0,100.5,0,0,0,0,-0.75,spine_01
+CALL ff_bodies off v0:p0:tgt1 v0:p0:pup1
+OUT #FF:1,0,30,5,0.8,0.5,0.25,6,2,1,0,0,100.5,0,0,0,0,-0.75,spine_02;2,0,45,0,1,0.5,0.25,6,11,1,0,0,100.5,0,0,0,0,-0.75,head;3,0,120,10,1,0.5,0.25,6,4,1,0,0,100.5,0,0,0,0,-0.75,spine_01
+CALL ff_bodies on v0:p0:tgt1 v0:p0:pup1
+LOG NOLA ff: acertei HOST dano=30.00 armadura=5.00 perfuracao=0.80 sangra=0.50/0.25 osso=spine_02 tipo=6 fonte=2 (consumido no alvo, enviado #4)
+OUT #FF:4,0,30,5,0.8,0.5,0.25,6,2,1,0,0,100.5,0,0,0,0,-0.75,spine_02
+LOG NOLA ff 10 s: friendlyfire=1 ffscale=1.0 enviados=4 descartados_no_envio=3 boneco_junto_do_alvo=0 recebidos=0 aplicados=0 dano=0.0 hp_perdido=0.0 recusados=0 mal_formados=0
+OUT dmg rota=D alvo=sim seq_out=0 aplicados_total=0 caido=false tiros_out=0 ff=enviados 4 aplicados 0 recusados 0

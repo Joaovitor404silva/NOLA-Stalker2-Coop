@@ -1,0 +1,69 @@
+CMD role host
+CMD pawn 1
+CMD t 2
+CMD gs 100
+CMD views 3
+CMD s2q J ANCQ01 - Start
+LOG NOLA quest: host 1,J,ANCQ01,-,Start,-
+CMD s2q J ANCQ01 Stage1 Start ANCQ01_SetJournal_1
+LOG NOLA quest: host 2,J,ANCQ01,Stage1,Start,ANCQ01_SetJournal_1
+CMD vpeer 0 up 1
+CMD vpart 0 N 3
+CMD vpeer 1 up 1
+CMD vpart 1 N 2
+CMD vrun 2
+LOG NOLA quest: id da campanha criado: c6553f1001234 (quest_log.id)
+OUT #J:1,J,ANCQ01,-,Start,-|2,J,ANCQ01,Stage1,Start,ANCQ01_SetJournal_1#B:0,2,c6553f1001234
+LOG NOLA quest: catch-up oferecido, 2 eventos em 1 pedacos
+VOUT 0 QD=#QD:h,-,0,-,0; S=#S:2,H64QL1~
+LOG NOLA quest: sessao nova do cliente (pid 2): catch-up de 2 eventos aberto por 60 s
+LOG NOLA quest: catch-up oferecido, 2 eventos em 1 pedacos (pid 2)
+VOUT 1 QD=#QD:h,-,0,-,0; S=#S:2,H64QL1~
+VOUT 2 QD=#QD:h,-,0,-,0; S=
+OUT #B:0,2,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=#S:2,H64QL1~
+VOUT 1 QD=#QD:h,-,0,-,0; S=#S:2,H64QL1~
+VOUT 2 QD=#QD:h,-,0,-,0; S=
+CMD t 200
+CMD vrun 1
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+OUT #B:0,2,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+VOUT 1 QD=#QD:h,-,0,-,0; S=
+VOUT 2 QD=#QD:h,-,0,-,0; S=
+CMD s2q J ANCQ02 - Start
+LOG NOLA quest: host 3,J,ANCQ02,-,Start,-
+CMD vpeer 2 up 1
+CMD vpart 2 N 0
+CMD vrun 2
+OUT #J:3,J,ANCQ02,-,Start,-#B:0,3,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+VOUT 1 QD=#QD:h,-,0,-,0; S=
+LOG NOLA quest: sessao nova do cliente (pid 3): catch-up de 3 eventos aberto por 60 s
+LOG NOLA quest: catch-up oferecido, 3 eventos em 1 pedacos (pid 3)
+VOUT 2 QD=#QD:h,-,0,-,0; S=#S:3,H83QL1~
+OUT #J:3,J,ANCQ02,-,Start,-#B:0,3,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+VOUT 1 QD=#QD:h,-,0,-,0; S=
+VOUT 2 QD=#QD:h,-,0,-,0; S=#S:3,H83QL1~
+CMD vpart 1 N 3
+CMD vrun 1
+OUT #B:0,3,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+LOG NOLA quest: o cliente (pid 2) carregou um save (#3); catch-up oferecido de novo
+LOG NOLA quest: catch-up oferecido, 3 eventos em 1 pedacos (pid 2)
+VOUT 1 QD=#QD:h,-,0,-,0; S=#S:3,H83QL1~
+VOUT 2 QD=#QD:h,-,0,-,0; S=#S:3,H83QL1~
+CMD vpeer 2 up 2
+CMD vrun 1
+OUT #B:0,3,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+VOUT 1 QD=#QD:h,-,0,-,0; S=#S:3,H83QL1~
+LOG NOLA quest: sessao nova do cliente (pid 3): catch-up de 3 eventos aberto por 60 s
+LOG NOLA quest: catch-up oferecido, 3 eventos em 1 pedacos (pid 3)
+VOUT 2 QD=#QD:h,-,0,-,0; S=#S:3,H83QL1~
+CMD vrun 1
+OUT #B:0,3,c6553f1001234
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+VOUT 1 QD=#QD:h,-,0,-,0; S=
+VOUT 2 QD=#QD:h,-,0,-,0; S=

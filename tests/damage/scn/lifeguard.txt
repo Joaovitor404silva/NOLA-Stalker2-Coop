@@ -1,0 +1,64 @@
+role client
+flag downnoweap 0
+flag downgod 0
+flag downdie 0
+flag lifeguard 1
+flag dmgin 1
+me 100 1 0 0 0
+set me bleed 2.5
+t 0
+do lifeGuard
+do dmgIn
+set me hp 12
+t 5
+do lifeGuard
+do lifeStr
+t 5.1
+x1 D 1,10.0
+do dmgIn
+set me hp 9
+set me bleed 1
+t 6
+do lifeGuard
+hp me
+remote 100 100 0 6
+x1 L a,100,100
+t 7
+do lifeGuard
+remote 100 100 0 8
+t 8.5
+do lifeGuard
+remote 100 100 0 9.5
+t 10.1
+do lifeGuard
+hp me
+do lifeStr
+t 11
+x1 D 1,10.0|2,10.0
+do dmgIn
+t 14
+x1 D 3,10.0
+do dmgIn
+hp me
+set me hp 5
+t 20
+do lifeGuard
+remote 900 900 0 20
+t 30
+do lifeGuard
+t 40
+do lifeGuard
+hp me
+set me hp 14
+t 50
+do lifeGuard
+set me hp 0
+set me alive 0
+t 52.5
+do lifeGuard
+t 53
+do lifeGuard
+flag lifeguard 0
+set me alive 1
+set me hp 3
+do lifeGuard

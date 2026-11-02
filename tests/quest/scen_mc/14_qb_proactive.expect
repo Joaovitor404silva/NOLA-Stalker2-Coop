@@ -1,0 +1,30 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+CMD t 115
+CMD part QB #QB:0;5:78f12c33:0:0:3|6:78f12c33:1:1:2;
+CMD tick
+CMD t 120
+CMD tick
+CMD t 123
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+CMD t 125
+CMD tick
+CMD t 128
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+CMD qbact E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer
+CMD t 130
+CMD tick
+CMD t 140
+CMD tick
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 fin
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1) ativo aqui; o host saiu por E03_SQ01_Dialog_VetosInTrailer_KiskHisAss_46660 ha 27 s: forcado neste cliente
+STUB qbForce E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 mid
+LOG NOLA qbranch: dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer (missao E03_SQ01_C1): saida intermediaria E03_SQ01_Dialog_VetosInTrailer_4_44991 do host disparada neste cliente
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=0 force=2 rel=0 ref=0 mir=0 err=0 defer=0 dup=0 held=0

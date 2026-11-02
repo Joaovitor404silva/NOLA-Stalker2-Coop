@@ -1,0 +1,9 @@
+spec v130b_hostboot
+note The host game is killed and relaunched while B stays in world (BRIEF B3, host.log:1633-1634, client.log:4751-4871). New DLL: after "host na sessao N" B logs the n7boot decision (match, or "carrego o save pareado"), so B is on the host world. Old DLL: "host na sessao N: cargas=0 saves=0 kh=nil" and no n7boot line in 90 s (client.log:4871).
+mark
+kill A
+launch A
+expect B NOLA PEER UP \(#\d+\) within 300
+expect B NOLA n7: host voltou em nova sessao \d+ com o cliente no mundo: decisao de boot rearmada within 60
+expect B NOLA n7boot: within 60
+expect_not B NOLA n7: host comecou outra campanha during 30

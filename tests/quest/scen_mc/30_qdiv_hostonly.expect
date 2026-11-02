@@ -1,0 +1,19 @@
+CMD role client
+CMD pawn 7
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD muted E01_MQ01
+CMD t 125
+CMD part QF 1;93c3b084:0
+CMD tick1k
+CMD t 150
+CMD part QF 1;93c3b084:25
+CMD tick1k
+LOG NOLA qdiv: E01_MQ01_ActivateAnomaly_ScannerAnomlay (missao E01_MQ01) e so do host (qmuteq): nao e divergencia
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+LOG NOLA qcatch: E01_MQ01_ActivateAnomaly_ScannerAnomlay (missao E01_MQ01) nao e alcancado no cliente: a missao so roda no host (qmuteq), o efeito chega pela copia _S2C
+CMD t 180
+CMD part QF 1;93c3b084:55
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado

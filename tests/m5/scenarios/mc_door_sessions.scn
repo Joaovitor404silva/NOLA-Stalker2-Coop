@@ -1,0 +1,23 @@
+role host
+flag doors 1
+flag doorfix 1
+views 3
+vsessions 0 1
+vsessions 1 1
+pawn 0 0 0
+obj D1 DoorView - door 500 0 0
+yaw D1 10
+time 1
+tick
+time 2
+setyaw D1 100
+tick
+expect_new OUT
+time 9
+tick
+expect_none OUT
+vsessions 2 1
+time 10
+tick
+expect_new door: sessao #3 do outro lado: 1 estado(s) de porta reenviados
+expect_new OUT

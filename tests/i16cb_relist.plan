@@ -1,0 +1,9 @@
+out D:\modding\proofs\20261030_1700_i16cb_reload
+assert alive A
+assert alive B
+scene D:\modding\cpp\wt\i16cb\tests\i16cb_away.scene -On A
+scene D:\modding\cpp\wt\i16cb\tests\i16cb_away.scene -On B
+wait 25
+scene D:\modding\cpp\wt\i16cb\tests\i16cb_back.scene -On A
+scene D:\modding\cpp\wt\i16cb\tests\i16cb_back.scene -On B
+run D:\modding\cpp\wt\i16cb\tests\i16cb_relist_spec.txt

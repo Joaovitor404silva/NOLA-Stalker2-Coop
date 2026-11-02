@@ -1,0 +1,25 @@
+CALL me ForceSetHP 15
+CALL me ForceSetBleeding 0.00
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 12.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+OUT #L:w,15,100
+CALL me ForceSetHP 15
+CALL me ForceSetBleeding 0.00
+OUT me hp=15.0 alive=true
+CALL me ForceSetHP 30
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado pelo outro jogador) depois de 5.1 s, hp=30
+OUT me hp=30.0 alive=true
+OUT #L:a,30,100
+LOG NOLA dmgin 10s: aplicados=0 cortados_pelo_teto=0 ignorados morto=0 protecao=2 caido=1
+CALL me RDS dmg=10.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=3 pedido=10.0 aplicado=10.0 hp 30.0 -> 20.0 ok=true 
+OUT me hp=20.0 alive=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #2 (hp 5.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+OUT me hp=15.0 alive=true
+CALL me ForceSetHP 15
+CALL me ForceSetHP 30
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 30.0 s, hp=30

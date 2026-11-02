@@ -1,0 +1,43 @@
+> role client
+> flag lead 1
+> flag ldblk 1
+> pawn 1000 664295.0 618240.0 287.0
+> npc n1 5001 666295.0 618840.0 287.0 1 1 1 0 0
+> npc n2 5002 666395.0 618840.0 287.0 0 1 1 0 0
+> npc n3 5003 664295.0 618840.0 287.0 1 1 1 0 0
+> npc n4 5004 754295.0 618840.0 287.0 1 1 1 0 0
+> npc n5 5005 666495.0 618840.0 287.0 1 1 1 1 0
+> npc n6 5006 666595.0 618840.0 287.0 1 0 1 0 0
+> npc n7 5007 666695.0 618840.0 287.0 1 1 0 0 0
+> npc n8 5008 666795.0 618840.0 287.0 1 1 1 0 0
+> guid n1 777
+> guid n6 888
+> guid n8 999
+> peer h,5,1700000002,dlg,442057.0,470452.0,832.0
+> run 2100
+L 1000 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 1000 NOLA vend: 96 vendedores em s2u_vendor.lua
+A npc n1 active 0
+A npc n8 active 0
+L 1000 NOLA lead: 2 NPCs de historia sem interacao aqui (total 2): o outro lado lidera (dlg #5)
+> state
+S mine=0 peer=1 owner=host
+> leaddlg
+R leaddlg 00
+> npcset n1 alive 0
+> run 1100
+A npc n1 active 1
+L 3000 NOLA lead: 1 NPCs bloqueados morreram: interacao de volta (corpo saqueavel)
+> run 1100
+> peer -
+> run 1100
+A npc n8 active 1
+L 5000 NOLA lead: NPCs de historia liberados (o outro lado soltou a trava): 1 com interacao de volta, 0 sumiram
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 00
+> ledgerdump
+F 34
+F| N	777	1700000001
+F| N	999	1700000001

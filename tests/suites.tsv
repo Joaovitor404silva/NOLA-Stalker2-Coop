@@ -1,0 +1,44 @@
+suite	group	weight	needs	steps	globs
+strip	par	60	D:\modding\offline\s1\port\oracle	bat strip/build_test.bat 30	
+steam	par	120	{repo}\cppbuild\Output\_deps\polyhook2-src	bat steam/build_test.bat ;; exe steam/out/steam_test.exe ;; exe steam/out/glue_steam_test.exe	
+savefile	par	150	D:\modding\offline\s1\reA\dec	bat savefile/build_test.bat
+savefile_be	par	40	D:\modding\offline\testsave\be_26123434	bat savefile/build_be.bat	src/s2m_savefile*;src/s2m_strip*;tests/savefile/*
+wsplice_be	par	40	D:\modding\offline\testsave\be_sav_26123434,D:\modding\tools\repak\oo2core_9_win64.dll	bat wsplice/build_be.bat	src/s2m_wsplice*;src/s2m_savefile*;src/s2m_strip*;src/s2m_oodle*;tests/wsplice/*
+strip_be	par	60	D:\modding\offline\testsave\be_26123434,D:\modding\offline\testsave\be_sav_26123434,D:\modding\tools\repak\oo2core_9_win64.dll	bat strip/build_be.bat	src/s2m_strip*;src/s2m_savefile*;src/s2m_wsplice*;tests/strip/*
+wsplice	par	150	D:\modding\offline\s1\reA\dec	bat wsplice/build_test.bat	
+net	par	60	{repo}\cppbuild\Output\_deps\polyhook2-src	bat net/build_test.bat ;; bat net/build_sxreq.bat ;; py net/parity.py	
+x0	par	40		bat x0/build_test.bat ;; exe x0/out/test_x0.exe ;; exe x0/out/test_rel.exe ;; py x0/parity.py	src/s2x_*;data/flags_x0.tsv;data/nola_runtime.tsv;data/flags_role_*.tsv;tools/gen_x0_data.py;tools/gen_x0_order.py;tests/run_tests.py;tests/suites.tsv;tests/baseline.tsv;cppbuild/*
+lock	par	30		bat lock/build_test.bat ;; bat lock/build_prod_check.bat ;; py lock/run_parity.py	
+damage	par	30		bat damage/build_test.bat ;; py damage/run_parity.py	data/revive_*.tsv;tools/gen_revive_heal.py;data/mc_tags.tsv;tools/gen_mc_tags.py
+items	par	30		bat items/build_test.bat ;; py items/parity.py ;; py items/run_scen_cpp.py	data/s2u_cont*.tsv;data/s2u_drop.tsv;data/loot_sids.tsv;tools/gen_drop_data.py
+istate	par	10		bat istate/build_test.bat	
+quest	par	30		bat quest/build_test.bat ;; py quest/parity.py ;; py quest/run_mc.py ;; py quest/qbranch_cov.py	data/s2u_q*;tools/gen_q*.py
+save	par	30		bat save/build_test.bat ;; bat save/build_join_api.bat ;; exe save/out/test_join_api.exe ;; py save/parity.py ;; py save/run_scen_cpp.py	
+bodies	par	30		bat bodies/build_test.bat ;; bat bodies/build_views.bat ;; bat bodies/build_wdwatch.bat ;; bat bodies/build_yaw.bat ;; exe bodies/out/test_yaw.exe ;; bat bodies/build_adapter.bat ;; bat bodies/build_pend.bat ;; exe bodies/out/test_pend.exe ;; bat bodies/build_wsock.bat ;; exe bodies/out/test_wsock.exe ;; bat bodies/build_ro.bat ;; exe bodies/out/test_ro.exe ;; bat bodies/build_cgcmc.bat ;; exe bodies/out/test_cgcmc.exe ;; py bodies/parity.py	
+m5	par	30	C:\Program Files (x86)\Steam\steamapps\common\S.T.A.L.K.E.R. 2 Heart of Chornobyl\ModWork\release\S2Coop\bridge	bat m5/run_all.bat	
+orphans	par	30		bat orphans/run_all.bat	
+menu	par	20		bat menu/build_test.bat	
+m11	par	20		bat m11/build_test.bat	
+pop	par	20		bat pop/build_test.bat ;; bat pop/build_adapter.bat	
+travel	par	20		bat travel/build.bat	
+ui	par	20		bat ui/build_test.bat	
+pid	par	15		bat pid/build_test.bat	
+lshold	par	15		bat lshold/build_test.bat	
+loadscreen	par	10		bat loadscreen/build_test.bat	
+title	par	10		bat title/build_test.bat	assets/*
+pcompass	par	10		bat pcompass/build_test.bat	src/s2m_pcompass*
+text	par	10		bat text/build_test.bat ;; py text/check.py	data/nola_texts.tsv;tools/gen_texts.py
+wpkg	par	15	{tests}\wpkg\fixtures\host_save.sav	bat wpkg/build_test.bat	
+nat	par	10		bat nat/build.bat	data/nat_classes.tsv;tools/gen_nat_classes.py;tools/patch_nat_api.py;src/s2n_dsdrop.h
+net_udp	excl	130	{repo}\cppbuild\Output\_deps\polyhook2-src	bat net/build_test.bat ;; py net/udp_test.py ;; py net/hub_world.py	
+strip_full	full	600	D:\modding\offline\s1\port\oracle	bat strip/build_test.bat	
+natlayer	par	120	{repo}\cppbuild\Output\Game__Shipping__Win64\lib\Unreal.lib	bat natlayer/build_test.bat	tools/patch_nat_api.py
+paknodes	par	15	C:\Program Files (x86)\Steam\steamapps\common\S.T.A.L.K.E.R. 2 Heart of Chornobyl\ModWork\s2coop\tools\check_pak_nodes.py,{repo}\modwork\s2coop\paksrc	py paknodes/check.py	
+flight	par	20		bat flight/build_test.bat ;; exe flight/out/test_fr.exe wrap.frd ;; py flight/check_fr.py	
+frrel	par	300	{repo}\cppbuild\Output\ue4ss_cache_key.txt	py flight/release_check.py	
+census	par	15		bat census/build_test.bat ;; py census/release_check.py ;; py census/worlddiff_test.py	
+fuzz	par	30		bat fuzz/build_test.bat	
+nbot	par	10		bat nbot/build_test.bat	
+buildchk	par	60	C:\Program Files (x86)\Steam\steamapps\common\S.T.A.L.K.E.R. 2 Heart of Chornobyl\Stalker2\Binaries\Win64\Stalker2-Win64-Shipping.exe	bat buildchk/build_test.bat ;; exe buildchk/out/test_buildchk.exe self ;; py buildchk/run.py	
+hot	par	10		bat hot/build_test.bat ;; py hot/coverage.py	src/*.cpp;src/*.h;src/*.inc;src/CMakeLists.txt
+worn	par	10		bat worn/build_test.bat	

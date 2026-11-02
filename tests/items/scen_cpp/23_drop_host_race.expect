@@ -1,0 +1,30 @@
+h LOG NOLA idrop: 318 meshes, 586 items in the drop table
+h LOG NOLA idrop: inventory widget state 2 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c1 LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c2 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c2 LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+h LOG NOLA idrop: drop seen Beer x2 mesh SM_cns_beer_c at 5050,100,0
+h LOG NOLA idrop: registry +0.0.1 owner=0 Beer x2 at 5050,100,0 SM_cns_beer_c (total 1)
+c1 STUB spawnitem Beer 5050 100 30
+c1 LOG NOLA idrop: mirror of 0.0.1 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_beer_c) 0 cm from the spot
+c2 STUB spawnitem Beer 5050 100 30
+c2 LOG NOLA idrop: mirror of 0.0.1 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_beer_c) 0 cm from the spot
+MARK t=dropped
+c1 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=1 loc=1 claims=0 pre=0 registered=0 spawned=1 took=0 lost=0 fixed=0 mc: pid=1 views=2 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c2 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=1 loc=1 claims=0 pre=0 registered=0 spawned=1 took=0 lost=0 fixed=0 mc: pid=2 views=2 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+h LOG NOLA idrop: 0.0.1 taken by the host
+c1 LOG NOLA idrop: 0.0.1 picked up here, asking the host (claim 1)
+h LOG NOLA idrop: pid 1 asked for 0.0.1 too late, pid 0 got it
+c1 LOG NOLA idrop: 0.0.1 verdict from the host: lost
+c2 STUB hide BP_StaticItemContainer_C_s1 1
+c2 LOG NOLA idrop: 0.0.1 is gone from the registry, local copy hidden
+h LOG NOLA idrop: 0.0.1 got exactly 2
+c1 LOG NOLA itake: local P Beer 1 nil -> true (1 nos na fila)
+c1 LOG NOLA idrop: 0.0.1 lost the race, 1 x Beer taken back
+c1 STUB node S2U_P_Beer_1
+c1 LOG NOLA itake: fila vazia
+MARK t=race-host-first
+h DSTAT items role=host taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= idrop: reg=0 loc=0 claims=1 pre=0 registered=1 spawned=0 took=1 lost=0 fixed=0 mc: pid=0 views=2 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c1 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=0 loc=0 claims=1 pre=0 registered=0 spawned=1 took=0 lost=1 fixed=0 mc: pid=1 views=2 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c2 HIDDEN BP_StaticItemContainer_C_s1 1

@@ -1,0 +1,61 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+h STUB inter it1 0
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 na mao do pid 1: it1 sem interacao aqui (1 componentes)
+c2 STUB inter it1 0
+c2 LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 na mao do pid 1: it1 sem interacao aqui (1 componentes)
+c3 STUB inter it1 0
+c3 LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 na mao do pid 1: it1 sem interacao aqui (1 componentes)
+MARK t=claim
+h MCOUT #GH:1:BP_ItemContainer_C@520,30,1|||
+c1 MCOUT #GC:BP_ItemContainer_C@520,30,1|||
+c2 MCOUT #GC:BP_ItemContainer_C@520,30,1|||
+c3 MCOUT |||
+c1 LOG NOLA GROUND_TAKE 1;5200,300,10;BP_ItemContainer_C;?
+h LOG NOLA TAKEN +item@5200,300,10;BP_ItemContainer_C;? (total 1)
+h STUB hide it1 1
+h LOG NOLA GROUND_GOT 1;5200,300,10;BP_ItemContainer_C;?: copia local it1 a 0 cm escondida
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 solto pelo pid 1 (0.5 s)
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 dado ao pid 2 (primeiro a pedir)
+c1 LOG NOLA TAKEN +item@5200,300,10;BP_ItemContainer_C;? (total 1)
+c2 LOG NOLA TAKEN +item@5200,300,10;BP_ItemContainer_C;? (total 1)
+c2 LOG NOLA GROUND_TAKE do jogador pid 1 (via host): 1;5200,300,10;BP_ItemContainer_C;?
+c2 STUB hide it1 1
+c2 LOG NOLA GROUND_GOT 1;5200,300,10;BP_ItemContainer_C;?: copia local it1 a 0 cm escondida
+c2 STUB inter it1 1
+c2 LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 livre de novo: interacao de volta
+c3 LOG NOLA TAKEN +item@5200,300,10;BP_ItemContainer_C;? (total 1)
+c3 LOG NOLA GROUND_TAKE do jogador pid 1 (via host): 1;5200,300,10;BP_ItemContainer_C;?
+c3 STUB hide it1 1
+c3 LOG NOLA GROUND_GOT 1;5200,300,10;BP_ItemContainer_C;?: copia local it1 a 0 cm escondida
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 solto pelo pid 2 (0.2 s)
+h STUB inter it1 1
+h LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 livre de novo: interacao de volta
+c3 STUB inter it1 1
+c3 LOG NOLA mc chao: BP_ItemContainer_C@520,30,1 livre de novo: interacao de volta
+MARK t=c1-took
+h HIDDEN it1 1
+c1 HIDDEN it1 0
+c2 HIDDEN it1 1
+c3 HIDDEN it1 1
+c2 LOG NOLA GROUND_TAKE 1;5200,300,10;BP_ItemContainer_C;?
+h LOG NOLA GROUND_DUP 1;5200,300,10;BP_ItemContainer_C;?: o pid 2 pegou o item que o pid 1 ja tinha pegado ha 1.0 s (primeiro vence; a copia do pid 2 nao tem como ser desfeita: o item no chao nao tem SID)
+MARK t=c2-dup
+h STATUS items role=host taken=1 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= mc: pid=0 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=1 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=1
+h LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 dado ao pid 2 (primeiro a pedir)
+h STUB inter it2 0
+h LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 na mao do pid 2: it2 sem interacao aqui (1 componentes)
+c1 STUB inter it2 0
+c1 LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 na mao do pid 2: it2 sem interacao aqui (1 componentes)
+c3 STUB inter it2 0
+c3 LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 na mao do pid 2: it2 sem interacao aqui (1 componentes)
+h MCOUT #GH:2:BP_ItemContainer_C@700,30,1#GR:1.0;1;5200,300,10;BP_ItemContainer_C;?|||
+h LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 solto pelo pid 2 (1.4 s)
+h STUB inter it2 1
+h LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 livre de novo: interacao de volta
+c1 STUB inter it2 1
+c1 LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 livre de novo: interacao de volta
+c3 STUB inter it2 1
+c3 LOG NOLA mc chao: BP_ItemContainer_C@700,30,1 livre de novo: interacao de volta
+h MCOUT |||
+c3 HIDDEN it2 0

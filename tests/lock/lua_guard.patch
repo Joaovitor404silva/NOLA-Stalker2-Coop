@@ -1,0 +1,20 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5 (M.tick100 lines 9829-9830, M.tick1000 lines 11213-11216)
+not applied
+
+-    pcall(S2L.vendTradeTick, ST)    -- b78fix D3b
++    if not S2L.cpp("lock") then pcall(S2L.vendTradeTick, ST) end
+
+-    pcall(S2L.ldTick, ST)    -- b92lead (lead)
++    if not S2L.cpp("lock") then pcall(S2L.ldTick, ST) end
+
+-    pcall(S2L.chUseTick, ST)     -- b91choice (N3)
++    if not S2L.cpp("lock") then pcall(S2L.chUseTick, ST) end
+
+-    pcall(S2L.ldBlkTick, ST)     -- b109dlgblock (ldblk)
++    if not S2L.cpp("lock") then pcall(S2L.ldBlkTick, ST) end
+
+-    pcall(S2L.lgTick, ST)        -- b129qdiv B (ldsave)
++    if not S2L.cpp("lock") then pcall(S2L.lgTick, ST) end
+
+(the LK tag: X0 own_tag(lock, "LK") strips the Lua S2L.ldOut part at s2core.lua 7268 while cpp_lock=1, no edit here)
+(callers that stay Lua until their module is ported: chShotDeny 12873 (M2), chTrigDeny 1784 and ldTrig 1818 (M7 trig), chUseDeny 2860 (M5), ldMine 757 and 1926, mqFlag 736 / mqOk 799-874 (M10 cine), mqSid 1790 / 1899 / 3857, mqSeen 3112, isMain: with cpp_lock=1 they must call s2m_lock:: instead of the Lua S2L.* copy)

@@ -1,0 +1,4 @@
+scene gore_away
+note i16gr: client far from the host
+tp 650386,472200,1500
+wait 3

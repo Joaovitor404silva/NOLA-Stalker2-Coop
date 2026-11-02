@@ -1,0 +1,26 @@
+nodes 4
+@all flag itake 1
+@all flag sstash 1
+@all flag ground 0
+@all flag locks 0
+@all flag mcitems 1
+@all me 5000 100 0
+run 0.3
+@c2 send P A012A 2
+@c3 send C 0A1B A045A 1
+@h send P MedkitC 1
+run 0.3
+mark sent
+@h mcout
+run 1
+mark applied
+@all status
+leave c3
+run 0.2
+join c3
+run 0.5
+@c3 send P A012A 1
+run 0.5
+mark rejoin
+@c1 status
+@c2 status

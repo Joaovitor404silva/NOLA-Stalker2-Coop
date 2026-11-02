@@ -1,0 +1,16 @@
+role client
+flag ien 1
+flag ienlamp 0
+flag ientab 1
+pawn 0 0 0
+obj LA1 BP_L_ele_lamp_02_a_C InteractableObject,BP_Light_Base_C lamp 1000 0 0
+prop LA1 bEnabled 0
+mainlight LA1 0
+time 1
+tick
+time 2
+remote P 100,0,0;1
+tick
+time 4
+remote P 100,0,0;0
+tick

@@ -1,0 +1,39 @@
+# report 1, dead body: both players loot their own copy of the same body at the same moment: first claim wins, nobody gets a second copy; a later pickup by the same player from the same body adds only the new count; a receiver who already has the item gets nothing
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag qshare 1
+@all flag ground 0
+@all me 5000 100 0
+@all npc 7 5200 300 10 0
+@all npcinv 7 EchoE01 1
+@all npcinv 7 ANCQ01_VadaHvorostPDA 1
+@all npcinv 7 ANCQ04_LokotPDA 3
+@h myinv ANCQ04_LokotPDA 1
+run 1
+@h open BP_AI_Human_C_7
+@h vis 1
+@c1 open BP_AI_Human_C_7
+@c1 vis 1
+run 0.5
+@h take BP_AI_Human_C_7 EchoE01 1
+@c1 take BP_AI_Human_C_7 EchoE01 1
+run 0.2
+mark both-took-echo
+@c1 take BP_AI_Human_C_7 ANCQ04_LokotPDA 1
+run 1
+@c1 take BP_AI_Human_C_7 ANCQ04_LokotPDA 2
+run 2
+mark c1-took-lokot-1-then-2
+@h vis 0
+@h open -
+@c1 vis 0
+@c1 open -
+run 3
+mark settled
+@h myqi
+@c1 myqi
+@h inv BP_AI_Human_C_7
+@c1 inv BP_AI_Human_C_7
+x1 h

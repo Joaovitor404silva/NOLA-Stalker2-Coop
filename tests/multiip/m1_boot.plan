@@ -1,0 +1,7 @@
+out D:\modding\proofs\20261101_v131b_multiip
+up -Calm -Dll D:\modding\cpp\wt\v131b\cppbuild\Output\NolaNative\Game__Shipping__Win64\NolaNative.dll -Save C:\modding\s2harness\testsave\master_20261018_host -Set netpeer=127.0.0.1,10.9.9.9
+setflag A devcmd 1
+setflag B devcmd 1
+assert alive A
+assert alive B
+assert peer

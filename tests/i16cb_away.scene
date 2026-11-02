@@ -1,0 +1,4 @@
+scene i16cb_away
+note i16cb relist: this player goes 63 m south of the dog corpses (outside the 45 m dead list radius plus hysteresis) so the host drops their rows
+tp 365788,587800,700
+wait 2

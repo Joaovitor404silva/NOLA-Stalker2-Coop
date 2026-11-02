@@ -1,0 +1,24 @@
+spec i16lk_look
+note i16lk look sync try 3 (w/i16lk, flags natlooksec 1, natmutlook 1, natgenmk 1). Check 1 counters: B starts with natgenmk 0, so the copies spawn without the attaches the client generator skipped (humanos_com_diferenca / convergindo > 0); after 25 s natgenmk 1 and the next apply creates them: partes_do_host>0 feitas>0 falhou=0 refeitas=0 in one window. Then the copies settle: com_diferenca=0 diferencas=0 humanos_com_diferenca=0. Then natlookre 1 (dev flag, default 0) makes every live client copy run apply_look once more while it already has its made parts: that window shows partes_do_host>0 feitas=0 refeitas=0 (partes_do_host counts host parts covered by a made part or still to make; refeitas counts a make for an actor+key made before; the old DLL dropped every made part in gen_apply before checking the generator picks and re-made them on each apply, so feitas>0 refeitas>0), the copies settle again and no later window shows feitas>0 or refeitas>0. convergindo= counts copies younger than 30 s; every copy older than 30 s with a difference counts in com_diferenca / humanos_com_diferenca. Old DLL: no refeitas= field, or feitas>0 in later windows.
+mark
+hp A 100
+hp B 100
+setflag B natgenmk 0
+spawn A Blinddog 3 near B 12
+spawn A GeneralNPC_Bandit_Stormtrooper 2 near B 15
+wait 25
+expect A NOLA natnpc 10 s \(host\).*i16lk natlooksec=1 natmutlook=1 looks_mutante=[1-9]\d* within 40
+mark
+setflag B natgenmk 1
+expect B NOLA natlook 10 s \(cliente\): i16lk natlooksec=1 secoes_set=\d+ secoes_dif=\d+ secoes_falhou=0 cpd_set=\d+ cpd_dif=\d+ cpd_falhou=0 partes_sem_gerador=\d+ natgenmk=1 partes_do_host=[1-9]\d* feitas=[1-9]\d* falhou=0 refeitas=0 within 60
+mark
+expect B NOLA natlook 10 s \(cliente\): i16lk natlooksec=1 .*natmutlook=1 mutantes=[1-9]\d* aplicados=\d+ com_diferenca=0 diferencas=0 \| humanos_com_diferenca=0 convergindo=\d+ within 90
+mark
+setflag B natlookre 1
+expect B NOLA natlookre: natlookre=1 copias=[1-9]\d* within 20
+expect B NOLA natlook 10 s \(cliente\): i16lk natlooksec=1 .*natgenmk=1 partes_do_host=[1-9]\d* feitas=0 falhou=0 refeitas=0 within 40
+mark
+expect_not B NOLA natlook 10 s \(cliente\).*feitas=[1-9]\d* falhou=\d+ refeitas=\d+ during 30
+expect_not B NOLA natlook 10 s \(cliente\).*refeitas=[1-9]\d* during 30
+expect_not B NOLA natlook 10 s \(cliente\).*com_diferenca=[1-9]\d* diferencas=[1-9]\d* \| humanos_com_diferenca=\d+ convergindo=\d+ during 30
+expect_not B NOLA natlook 10 s \(cliente\).*\| humanos_com_diferenca=[1-9]\d* convergindo=\d+ during 30

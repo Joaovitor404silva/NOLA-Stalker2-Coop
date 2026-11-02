@@ -1,0 +1,33 @@
+# the host drops two AK74 with distinct state 0.4 s apart; the client picks both up and keeps both with their own state, grouped (no add, no remove)
+nodes 2
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all flag istate 1
+@all nodeapply 1
+@all me 5000 100 0
+@h myst GunAK74_ST d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aScope_PSO~r17.Ammo_545x39
+@h myst GunAK74_ST d3f666666
+@h vis 1
+run 1
+@h dropi drop1 GunAK74_ST d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aScope_PSO~r17.Ammo_545x39 5100 100 0
+run 0.4
+@h dropi drop2 GunAK74_ST d3f666666 5100 100 0
+run 3.5
+mark dropped
+@h dstat
+@c1 dstat
+@c1 insts BP_StaticItemContainer_C_s1
+@c1 insts BP_StaticItemContainer_C_s2
+@c1 pickupi BP_StaticItemContainer_C_s1
+run 0.4
+@c1 pickupi BP_StaticItemContainer_C_s2
+run 4
+mark c1-took
+@c1 dstat
+@c1 insts me
+@h insts me
+@h hidden drop1
+@h hidden drop2

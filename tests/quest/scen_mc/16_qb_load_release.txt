@@ -1,0 +1,23 @@
+# load drops held exits; an If the host never ran is released to the client's own exit after qbhold; an infotopic waits for the host and is released when the host leaves; no host link = stock
+role client
+pawn 1
+t 100
+peer up 1
+tick
+fire ANCQ03_If_Distance True fin
+fire E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars - fin
+pawn 2
+tick
+fire ANCQ03_If_Distance True fin
+fire E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars - fin
+qbact ANCQ03_If_Distance E08_SQ01_OnInfotopicFinishEvent_E08_SQ01_Dialog_SherbaRepeatAboutCollars
+t 219
+tick
+t 221
+tick
+t 400
+tick
+peer down 0
+tick
+fire ANCQ03_If_Distance False fin
+status

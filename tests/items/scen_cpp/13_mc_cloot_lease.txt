@@ -1,0 +1,20 @@
+nodes 4
+@all flag cloot 1
+@all flag mcitems 1
+@all flag ground 0
+@all flag locks 0
+@all me 5000 100 0
+run 0.4
+inject c2 #CO:BP_AI_Human_C_9
+inject c3 #CO:BP_AI_Human_C_9
+run 0.5
+mark both-claim
+@h mcout
+leave c2
+run 0.5
+mark c2-left
+@h mcout
+inject c3 -
+run 0.5
+mark c3-closed
+@h mcout

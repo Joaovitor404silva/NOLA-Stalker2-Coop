@@ -1,0 +1,23 @@
+nodes 3
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all nodeapply 1
+@all me 5000 100 0
+@h myinv Beer 2
+@h vis 1
+run 1
+@h dropitem hostdrop Beer 2 5050 100 0
+run 3.5
+mark dropped
+@c1 dstat
+@c2 dstat
+@h pickup hostdrop Beer 2
+@c1 pickup BP_StaticItemContainer_C_s1 Beer 1
+run 4
+mark race-host-first
+@h dstat
+@c1 dstat
+@c2 hidden BP_StaticItemContainer_C_s1

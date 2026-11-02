@@ -1,0 +1,8 @@
+CALL a RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=1 hit=BP_AI_Human_C_a dist=10.0m altura=0 osso=None dano=25.0 hp 100.0 -> 75.0 ok=true 
+OUT a hp=75.0 alive=true
+OUT b hp=100.0 alive=true
+LOG SHOT seq=2 hit=nenhum (testados=2)
+CALL b RDS dmg=25.00 ap=0.50 uid=- bone=None type=6 src=2
+LOG SHOT(core) seq=3 hit=BP_AI_Human_C_b dist=10.0m altura=0 osso=None dano=25.0 hp 100.0 -> 75.0 ok=true 
+LOG SHOT seq=4 hit=nenhum (testados=3)

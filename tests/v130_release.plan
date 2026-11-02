@@ -1,0 +1,9 @@
+out D:\modding\proofs\20261031_v130_release
+up -Dll D:\modding\release\v1.3.0\payload\ue4ss\Mods\NolaNative\dlls\main.dll -Pak D:\modding\release\v1.3.0\payload\paks\zzzzzz_Nola_P.pak -Save C:\modding\s2harness\testsave\scanner_20261030_host
+assert alive A
+assert alive B
+assert peer
+wait 20
+assert alive A
+assert alive B
+shot v130_release on=A,B cam=2.5

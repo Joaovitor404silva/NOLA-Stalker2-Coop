@@ -1,0 +1,35 @@
+> role client
+> flag lead 1
+> pawn 1000 442207.0 470552.0 0
+> view on
+> interact 442057.0 470452.0 832.0
+> run 400
+L 100 NOLA lead: trava #1 tomada (dlg em 442057,470452,832): este lado lidera, o outro segue
+O 100 #LK:c,1,1700000000,dlg,442057,470452,832
+> state
+S mine=1 peer=0 owner=client
+> leaddlg
+R leaddlg 11
+> peer h,2,1700000001,dlg,442057.0,470452.0,832.0
+> run 300
+L 500 NOLA lead: empate: os dois tomaram a trava (cliente #1 dlg, host #2 dlg): o HOST vence, o cliente segue
+L 500 NOLA lead: dialogo aberto com o outro lado liderando (dlg #2): SEGURADO (respostas escondidas)
+L 500 NOLA lead: respostas escondidas (o outro lado lidera)
+A vis 1
+O 500 -
+> state
+S mine=0 peer=1 owner=host
+> leaddlg
+R leaddlg 01
+> run 1000
+L 1000 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+> peer -
+> run 300
+A vis 0
+L 1800 NOLA lead: respostas devolvidas (o outro lado soltou a trava) ok=true
+L 1900 NOLA lead: trava #2 tomada (dlg em 442057,470452,832): este lado lidera, o outro segue
+O 1900 #LK:c,2,1700000001,dlg,442057,470452,832
+> state
+S mine=1 peer=0 owner=client
+> leaddlg
+R leaddlg 11

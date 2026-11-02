@@ -1,0 +1,30 @@
+role host
+flag doors 1
+flag doorfix 1
+flag doorre 1
+sessions 1
+pawn 0 0 0
+obj D1 DoorView - door 500 0 0
+yaw D1 10
+obj D2 DoorView - door 800 100 0
+yaw D2 10
+time 1
+remote N lvlA
+tick
+time 2
+setyaw D1 100
+tick
+time 3
+tick
+time 12
+tick
+sessions 2
+time 13
+tick
+time 14
+tick
+remote N lvlB
+time 16
+tick
+time 17
+tick

@@ -1,0 +1,6 @@
+CALL me RDS dmg=30.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=2 pedido=30.0 aplicado=30.0 hp 100.0 -> 70.0 ok=true 
+CALL me RDS dmg=200.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=3 pedido=250.0 aplicado=200.0 hp 70.0 -> 0.0 ok=true 
+OUT me hp=0.0 alive=false
+LOG NOLA dmgin 10s: aplicados=2 cortados_pelo_teto=1 ignorados morto=1 protecao=1 caido=0

@@ -1,0 +1,6 @@
+# r30 A42 (core b33): the client is brought to artifact place 27 (414408,571957), stays 40 s, then the host is moved to the test spot 280 km... (about 2.8 km) away, so the leash teleports the client away from the place.
+# Expect: "art2: ... lugar 27" sightings near the place; after the teleport away: "artefato do lugar 27 sumiu, mas nao conta como pego (...)" and NO "art2: peguei um artefato no lugar 27" and NO "#U ...,A,27" from the client.
+0 pos 414408 571957 800
+40 places
+0 pos 692262 557851 400
+40 end

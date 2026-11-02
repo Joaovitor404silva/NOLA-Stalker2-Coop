@@ -1,0 +1,41 @@
+role host
+flag lead 1
+flag qsync 1
+peer up 1 0
+pawn 1
+t 100
+s2q J SQA - Start SQA_Node1
+run 3
+part QD c,-,0;SQA_OnTriggerEnter_1:30|SQB_X:5|S2QDIVTEST_R1:40|S2QDIVTEST_C2:40|SQC_Y:25
+run 3
+lead mine
+part QD c,-,0;SQD_Z:30
+run 2
+lead none
+run 30
+flag qdivroll 0
+part QD c,-,0;SQE_Q:30
+run 2
+nopart QD
+run 31
+role client
+flag qdivroll 1
+part QD h,-,1,SQX_1,2;SQY_2
+run 2
+part QD h,-,2,S2QDIVTEST_R1,2;
+run 2
+part QD h,-,3,SQX_9,2;
+run 2
+flag n7 1
+flag csave 1
+flag qrollback 1
+n7stage busy
+part QD h,-,4,SQX_10,2;
+run 3
+n7stage idle
+run 2
+pos 430490 520620 1570
+pawn 100
+run 4
+part B 1,5,cabc
+run 31

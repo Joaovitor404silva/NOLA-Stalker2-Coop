@@ -1,0 +1,98 @@
+role host
+flag cloot 1
+flag bodysafe 1
+flag cllog 1
+flag clnoint 1
+mcworld 1
+t 0
+remote 300 0
+me 0 0 0
+npc 7 100 0 0 0
+npcinv 7 A012A 30
+npcinv 7 Sausage 1
+t 1
+tick
+t 2
+tick
+t 3
+tick
+t 4
+tick
+t 5
+tick
+t 6
+tick
+t 7
+tick
+t 8
+tick
+t 9
+tick
+t 10
+tick
+t 11
+tick
+t 12
+tick
+t 13
+tick
+mark listed
+outcl
+gone BP_AI_Human_C_7
+t 14
+tick
+t 15
+tick
+t 16
+tick
+t 17
+tick
+mark gone
+outcl
+t 18
+tick
+t 19
+tick
+t 20
+tick
+t 21
+tick
+t 22
+tick
+t 23
+tick
+t 24
+tick
+t 25
+tick
+t 26
+tick
+t 27
+tick
+t 28
+tick
+t 29
+tick
+t 30
+tick
+t 31
+tick
+t 32
+tick
+t 33
+tick
+t 34
+tick
+t 35
+tick
+t 36
+tick
+t 37
+tick
+t 38
+tick
+t 39
+tick
+mark later
+outcl
+status

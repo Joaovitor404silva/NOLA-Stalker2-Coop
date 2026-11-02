@@ -1,0 +1,28 @@
+# a failing forced exit is retried qbtries times qbretry apart and then dropped with one log line; qbranch=0 releases the held exits to the client's own path
+role client
+pawn 1
+t 100
+peer up 1
+tick
+t 115
+part QB #QB:0;6:78f12c33:1:1:2;
+qberr 1
+t 123
+tick
+t 128
+tick
+t 133
+tick
+t 138
+tick
+t 143
+tick
+t 150
+tick
+qberr 0
+fire ANCQ03_If_Distance True fin
+qbact ANCQ03_If_Distance
+flag qbranch 0
+tick
+fire ANCQ03_If_Distance False fin
+status

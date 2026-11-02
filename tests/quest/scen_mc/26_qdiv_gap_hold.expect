@@ -1,0 +1,129 @@
+CMD role client
+CMD peer up 1 0
+CMD pawn 1
+CMD t 100
+CMD followto load
+CMD part QD h,-,1,SQX_1,2;
+CMD run 1
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+LOG NOLA qh: mundo novo no cliente: os ouvintes H recomecam do conjunto ativo do host
+LOG NOLA qitem: 564 itens de missao, 465 nos ItemAdd pulados no cliente, 178 recipientes/corpos com item de missao
+OUT #QD:c,-,1;
+CMD part QD h,-,2,SQX_2,2;
+CMD run 1
+LOG NOLA qdiv: o host venceu em SQX_2 (ordem #2): volto ao estado do host (save pareado + catch-up + meus itens)
+STUB n7Follow
+OUT #QD:c,-,1;
+CMD n7stage idle
+CMD part QD h,-,3,SQX_3,2;
+CMD run 2
+LOG NOLA qdiv: ordem #3 (SQX_3) chegou 1 s depois do ultimo retorno: espero 90 s e volto uma vez so
+OUT #QD:c,-,1;
+OUT #QD:c,-,3;
+CMD part QD h,-,4,SQX_4,2;
+CMD run 2
+LOG NOLA lead: inventario base lido (564 itens de missao); a partir de agora cada item pego vai em copia ao outro
+LOG NOLA qdiv: ordem #4 (SQX_4) chegou 3 s depois do ultimo retorno: espero 90 s e volto uma vez so
+OUT #QD:c,-,3;
+OUT #QD:c,-,3;
+CMD run 84
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+LOG NOLA qdiv 30s: diverged: retorno ao host pendente (SQX_4) (host repetiu 0, cliente voltou 3 no total)
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+LOG NOLA qdiv 30s: diverged: retorno ao host pendente (SQX_4) (host repetiu 0, cliente voltou 3 no total)
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+CMD run 4
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+LOG NOLA qdiv: o host venceu em SQX_4 (ordem #4): volto ao estado do host (save pareado + catch-up + meus itens)
+STUB n7Follow
+OUT #QD:c,-,4;
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 3 no total)
+OUT #QD:c,-,4;
+CMD n7stage idle
+CMD followto -
+CMD run 3
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;
+OUT #QD:c,-,4;

@@ -1,0 +1,2 @@
+corpse@1,0
+BP_AI_Human_C@10,0,0

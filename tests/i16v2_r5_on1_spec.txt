@@ -1,0 +1,54 @@
+spec r5_on1
+hp A 100
+hp B 100
+spawn A GeneralNPC_Bandit_Stormtrooper 6 near B 35
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+hp A 100
+hp B 100
+expect_not B mdiag espera=\d+ acabou=[1-9]\d* during 5
+expect A natmre=1 reenvios=[1-9]\d* within 25
+expect B natmsec=1 taxa=\d+ secoes=\d+ sec_dif=\d+ sec_falha=0 mdiag espera=\d+ acabou=0 curta=\d+ outra=\d+ atualizada=[1-9]\d* within 25

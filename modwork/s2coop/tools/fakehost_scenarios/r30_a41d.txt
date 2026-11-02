@@ -1,0 +1,7 @@
+# r30 A41 (core b33), clean case: the host is 3 m away and goes silent for 32 s; during the silence the test moves the CLIENT 400 m away (luacmd, hovering),
+# so the host's last position is 400 m from the client. b32: the leash pulls the client back to that position about 15 s after PEER SILENT.
+# Expect (b33): PEER SILENT, "coleira parada", NO "COLEIRA FORA", the client stays where the test put it; host back: "coleira em 350 m".
+0 pos near 300
+8 silence 32
+0 pos near 300
+12 end

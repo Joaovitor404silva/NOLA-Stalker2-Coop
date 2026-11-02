@@ -1,0 +1,20 @@
+> role host
+> flag lead 1
+> flag ldblk 1
+> pawn 1000 664295.0 618840.0 287.0
+> view on
+> interact 664295.0 618840.0 287.0
+> run 500
+L 100 NOLA vend: 96 vendedores em s2u_vendor.lua
+L 100 NOLA lead: dialogo com vendedor: livre, sem trava (vendtrade/ldblk)
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 01
+> view off
+> run 400
+L 600 NOLA lead: dialogo fechado (vend)
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 00

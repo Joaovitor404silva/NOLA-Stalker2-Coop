@@ -1,0 +1,19 @@
+nodes 3
+@all flag itake 1
+@all flag ground 0
+@all flag locks 0
+@all flag bodysafe 1
+@all flag mcitems 1
+@all me 5000 100 0
+@c2 worldopen 0
+run 0.3
+@c1 send P A012A 2
+run 1
+mark sent-while-c2-held
+@c2 status
+run 8
+mark window-expired
+@c2 worldopen 1
+run 0.5
+mark c2-open
+@c2 status

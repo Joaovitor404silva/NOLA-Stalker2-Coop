@@ -1,0 +1,19 @@
+# host answers while the client is in the same dialog: the client's own click is refused, the host's answer is picked in the client's dialog (even while busy), the client's dialog end waits and is forced to the host's exit after the dialog closes
+role client
+pawn 1
+t 100
+peer up 1
+tick
+dlg E03_SQ01_Dialog_VetosInTrailer_Easier_44985 E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+answer E03_SQ01_Dialog_VetosInTrailer_Easier_44985
+busy dialogo
+part QB #QB:0;;7:410d9ff6:1
+tick
+tick
+fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 fin
+part QB #QB:0;8:78f12c33:1:1:0;7:410d9ff6:1
+qbact E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer
+tick
+busy -
+tick
+status

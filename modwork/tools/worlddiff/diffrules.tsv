@@ -1,0 +1,20 @@
+family	rule	where	arg	severity	note
+npc	client_extra	alive=1,hidden=0,player=0,nola=0	4000	error	live NPC only on the client within 40 m of the host player (GH1 ghost)
+npc	client_extra	alive=0,hidden=0,player=0,nola=0	4000	error	corpse only on the client (CL1 loot twin, PL1 extra corpse)
+npc	host_missing	hidden=0,player=0,nola=0	3000	error	host NPC or corpse missing on the client within 30 m of the client player (CL1 invisible enemy)
+npc	field	hidden=0,player=0,nola=0	alive	error	alive on one side, dead on the other
+npc	field	alive=1,player=0,nola=0	hidden	warn	visible on one side only
+npc	pos	alive=1,hidden=0,player=0,nola=0	500	warn	NPC more than 5 m apart
+lock	field	-	locked	error	door lock state differs
+lock	client_extra	-	-	warn	lock seen only by the client
+door	field	-	open	warn	door open state differs
+broken	client_extra	-	-	error	padlock/destructible broken only on the client (PL1)
+broken	host_missing	-	-	error	padlock/destructible broken only on the host (PL1)
+quest	host_missing	-	-	error	quest node applied on the host, missing on the client (QX1, qdiv blind spot)
+quest	client_extra	-	-	error	quest node applied on the client only
+taken	client_extra	-	-	error	taken key on the client the host lacks (LI1 stale taken.txt, ST3 whole-container key)
+taken	host_missing	-	-	warn	taken key the client has not received
+ctake	field	-	items	error	per-container take ledger differs
+window	field	-	items	error	open loot window shows other items than the other side (ST3)
+qg	field	-	v	warn	quest-item grant ledger differs
+stash	field	-	n	warn	stash ledger count differs

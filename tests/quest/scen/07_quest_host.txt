@@ -1,0 +1,44 @@
+role host
+flag qsync 1
+flag qrollback 1
+pawn 1
+t 2
+gs 0
+s2q J ANCQ01 - Start
+s2q J ANCQ01 - Start
+gs 100
+run 1
+s2q J ANCQ01 Stage1 Start ANCQ01_SetJournal_1
+s2q G VarA Set true ANCQ01_SetGlobal_2
+s2q N ANCQ01_Node_3
+s2q W ANCQ01_World_4
+s2q X
+s2q bogus
+s2q J ANCQ01 Stage1 Start ANCQ01_SetJournal_1
+out
+t 50
+s2q J ANCQ01 Stage1 Start ANCQ01_SetJournal_1
+peer up 1 0
+run 2
+gs 120
+part N 3
+run 1
+part N 4
+run 1
+s2q J ANCQ01 - Finish
+money 500
+run 5
+gs 50
+run 16
+gs 400
+pawn 2
+run 14
+gs 20
+run 2
+flags campaign alpha
+run 2
+flags campaign beta
+run 1
+gs 30
+s2q G EQ101_X Set true EQ101_P_SetGlobalVariable_CA_Disable_EQ101_False_NewStart
+run 1

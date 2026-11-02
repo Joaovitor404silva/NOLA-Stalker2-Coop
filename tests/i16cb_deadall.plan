@@ -1,0 +1,26 @@
+out D:\modding\proofs\20261030_1600_i16cb_deadall
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A natfar 0
+setflag B natfar 1
+setflag B natfd 1
+setflag A natfd 0
+assert alive A
+assert alive B
+assert peer
+run D:\modding\cpp\wt\i16cb\tests\i16cb_deadall_setup_spec.txt
+settime A 12
+settime B 12
+mark i16cb_setup
+scene D:\modding\cpp\wt\i16cb\tests\i16cl_back.scene -On B
+scene D:\modding\cpp\wt\i16cb\tests\i16cb_dogs.scene -On A
+setflag A natfar 1
+setflag A natfd 1
+mark i16cb_listed
+run D:\modding\cpp\wt\i16cb\tests\i16cb_deadall_spec.txt
+wait 5
+shot i16cb_corpses on=A,B cam=2.5

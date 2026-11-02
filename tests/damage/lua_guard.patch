@@ -1,0 +1,33 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5 and main.lua md5=76717baf
+not applied
+
+s2core.lua:1260
+-local function lifeGuard(ST)
++local function lifeGuard(ST)
++    if S2L.cpp("damage") then return end
+
+s2core.lua:9821
+-    local okD, eD = pcall(dmgIn, ST)
++    local okD, eD = true, nil
++    if not S2L.cpp("damage") then okD, eD = pcall(dmgIn, ST) end
+
+s2core.lua:11227
+-    pcall(S2L.relMirTick, ST)    -- b177g17 (relmir)
++    if not S2L.cpp("damage") then pcall(S2L.relMirTick, ST) end
+
+s2core.lua:12950
+-    ["/Script/Stalker2.ItemAppearanceComponent:OnShotSoundStart"] = function(ST, self)
++    ["/Script/Stalker2.ItemAppearanceComponent:OnShotSoundStart"] = function(ST, self)
++        if S2L.cpp("damage") then return end
+
+main.lua:3459
+-                    if FL.shotdetect == 1 then
++                    if FL.shotdetect == 1 and not (S2_cpp and S2_cpp("damage")) then
+
+main.lua:3553 (block 3553-3561 holds only the host shot resolve)
+-                    if ROLE == "host" then
++                    if ROLE == "host" and not (S2_cpp and S2_cpp("damage")) then
+
+tags D, L: no Lua edit (X0 strips the Lua copy of an owned tag while the module is ported)
+top-level "shots" field (main.lua 3481 shotOutStr()): X0 splices own_tag "@shots" there when cpp_damage=1 (X0 need 2)
+tgtTick hp diff block 8882-8921: owned by M1 (s2m_bodies), not guarded here

@@ -1,0 +1,127 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: pawn novo: efeito Nola_ReviveNoBag retirado por garantia ok=true
+CALL rk XApplyEffectOnPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: parceiro caido ao alcance: efeito Nola_ReviveNoBag aplicado (F reanima e nao abre o inventario) ok=true
+LOG NOLA LIFE: itens de reanimar (Item.WoundedHeal): 3
+LOG NOLA LIFE: F perto do outro jogador caido (200 cm) sem medkit (3 tipos procurados): nada feito
+OUT #RV:0,0
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: inventario no F liberado (fora do contexto de reanimar, F solto): efeito Nola_ReviveNoBag retirado ok=true
+OUT #RV:0,0
+CALL itemRemove P Medkit 1 -> true
+LOG NOLA LIFE: REANIMAR: F perto do outro jogador caido (200 cm): 1 Medkit consumido (tinha 2), pedido #1 enviado
+CALL rk XApplyEffectOnPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: parceiro caido ao alcance: efeito Nola_ReviveNoBag aplicado (F reanima e nao abre o inventario) ok=true
+OUT #RV:1,0
+OUT inv Medkit=1
+OUT #RV:1,0
+OUT inv Medkit=1
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: inventario no F liberado (fora do contexto de reanimar, F solto): efeito Nola_ReviveNoBag retirado ok=true
+CALL itemRemove P EcoMedkit 1 -> true
+LOG NOLA LIFE: REANIMAR: F perto do outro jogador caido (150 cm): 1 EcoMedkit consumido (tinha 1), pedido #2 enviado
+CALL rk XApplyEffectOnPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: parceiro caido ao alcance: efeito Nola_ReviveNoBag aplicado (F reanima e nao abre o inventario) ok=true
+OUT #RV:2,0
+OUT inv EcoMedkit=0
+CALL itemRemove P ArmyMedkit 1 -> false
+LOG NOLA LIFE: F perto do outro jogador caido: ArmyMedkit nao pode ser consumido (ItemRemove recusado): nada enviado
+OUT #RV:2,0
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: inventario no F liberado (fora do contexto de reanimar, F solto): efeito Nola_ReviveNoBag retirado ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado pelo outro jogador com F + medkit, pedido #1 a 100 cm) depois de 1.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=30.0 alive=true
+OUT god_held=false bit=false
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #2 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+LOG NOLA LIFE: pedido de reanimacao #2 recusado: outro jogador a 2000 cm (max 450), estado a
+OUT me hp=15.0 alive=true
+OUT god_held=true bit=true
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado pelo outro jogador com F + medkit, pedido #3 a 250 cm) depois de 2.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=30.0 alive=true
+OUT god_held=false bit=false
+LOG NOLA LIFE: pedido de reanimacao #4 ignorado: nao estou caido
+OUT me hp=30.0 alive=true
+LOG NOLA LIFE: o outro jogador morreu (#1): eu morro tambem (os dois recomecam do ultimo save do host)
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+OUT me hp=0.0 alive=false
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+CALL die_follow
+OUT me hp=0.0 alive=false
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+LOG NOLA LIFE: o outro jogador morreu (#2): eu morro tambem (os dois recomecam do ultimo save do host)
+LOG NOLA LIFE: morte junto com o outro jogador espera: a cinematica/emissao segura o Unkillable
+OUT me hp=100.0 alive=true
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+CALL die_follow
+OUT me hp=0.0 alive=false
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #3 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT god_held=true bit=true
+LOG NOLA LIFE: o outro jogador morreu (#3): eu morro tambem (os dois recomecam do ultimo save do host)
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (o outro jogador morreu) ok=true
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 15.0 -> 0.0 alive=false, tentativa 1)
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (morte): efeito Nola_DownedBlock retirado ok=true
+LOG NOLA LIFE: MORRI pela morte do outro jogador (#RV recebido): nada mandado de volta
+CALL die_follow
+LOG NOLA LIFE: MORREU ENQUANTO CAIDO (hp=0.0 alive=false, caido ha 1.1 s, ultimo sangramento=0.0)
+OUT me hp=0.0 alive=false
+OUT god_held=false bit=false
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+LOG NOLA LIFE: o outro jogador morreu (#4); bothdie=0: eu continuo vivo
+OUT me hp=100.0 alive=true
+LOG NOLA LIFE: o outro jogador morreu (#1): eu morro tambem (os dois recomecam do ultimo save do host)
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: MORTE JUNTO com o outro jogador (ReceiveDamageStruct ok=true hp 100.0 -> 0.0 alive=false, tentativa 1)
+OUT me hp=0.0 alive=false

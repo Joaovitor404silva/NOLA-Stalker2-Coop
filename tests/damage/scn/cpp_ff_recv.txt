@@ -1,0 +1,84 @@
+role client
+flag revwait 0
+views 1 1 0 1
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+flag lifegod 1
+flag bothdown 1
+flag downsecs 30
+flag dmgspawn 3
+me 100 1 0 0 0
+set me uid 5
+vpeer 0 up - h 1
+vremote 0 100 0 0 0
+vx1 0 L a,100,100
+vx1 0 RV 0,0
+t 0
+do lifeGuard
+godq
+vx1 0 FF 1,1,30,5,0.8,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,spine_02;2,0,40,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head;bad,1,2
+do ff
+hp me
+do ff
+hp me
+flag ffscale 0.5
+vx1 0 FF 1,1,30,5,0.8,0.5,0.25,6,3,1,0,0,100.5,0,0,0,0,-0.75,spine_02;3,1,40,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+hp me
+flag ffscale 1.0
+vx1 0 FF 4,1,500,50,1,0,0,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+hp me
+godq
+vx1 0 FF 5,1,20,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+t 0.1
+do lifeGuard
+hp me
+do lifeStr
+vx1 0 FF 6,1,20,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+hp me
+remote 100 0 0 1
+vremote 0 100 0 0 1
+vx1 0 RV 1,0
+t 1
+do lifeGuard
+hp me
+vx1 0 FF 7,1,20,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+hp me
+vremote 0 100 0 0 4.5
+remote 100 0 0 4.5
+t 4.5
+vx1 0 FF 8,1,20,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,hand_r
+do ff
+hp me
+flag friendlyfire 0
+vx1 0 FF 9,1,20,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+hp me
+flag friendlyfire 1
+ffhook 0
+vx1 0 FF 10,1,20,5,0.8,0.5,0.25,6,3,1,0,0,0,0,0,0,0,0,head
+do ff
+ffhook 1
+set me hp 100
+vpeer 0 up - h 2
+vx1 0 FF 1,1,5,1,0.5,0,0,6,3,1,0,0,0,0,0,0,0,0,None
+do ff
+hp me
+flag lifegod 0
+t 4.6
+do lifeGuard
+godq
+vx1 0 FF 11,1,5,1,0.5,0,0,6,3,1,0,0,0,0,0,0,0,0,None
+do ff
+hp me
+t 10
+do ff
+do statusStr

@@ -1,0 +1,23 @@
+role client
+flag dmgin 0
+me 100 1 0 0 0
+t 0
+do dmgIn
+t 5
+x1 D 1,10.0
+do dmgIn
+hp me
+role host
+flag dmgin 1
+t 6
+x1 D 2,10.0
+do dmgIn
+hp me
+flag dmgtest 1
+t 9
+x1 D 3,10.0
+do dmgIn
+t 12
+x1 D 4,10.0
+do dmgIn
+hp me

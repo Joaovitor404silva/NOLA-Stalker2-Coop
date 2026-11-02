@@ -1,0 +1,28 @@
+out D:\modding\proofs\20261030_1215_i16gr_gore
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A natlooksec 1
+setflag B natlooksec 1
+setflag A natmutlook 1
+setflag B natmutlook 1
+setflag A natmidsc 1
+setflag B natmidsc 1
+setflag A natlookre 0
+setflag B natlookre 0
+run calm
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+scene D:\modding\cpp\wt\i16gr\tests\i16gr_away.scene -On B
+scene D:\modding\cpp\wt\i16gr\tests\i16gr_gore.scene -On A
+scene D:\modding\cpp\wt\i16gr\tests\i16gr_back.scene -On B
+mark i16gr_counters
+run D:\modding\cpp\wt\i16gr\tests\i16gr_gore_spec.txt
+mark i16gr_shots
+?shot corpse_dog key=host:$d on=A,B cam=2.5

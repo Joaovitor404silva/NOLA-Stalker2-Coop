@@ -1,0 +1,34 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: pawn novo: efeito Nola_ReviveNoBag retirado por garantia ok=true
+OUT #RV:0,0,0
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0 eu=PLAYER 2 fim_de_jogo=#0 | HOST vida=a | PLAYER 1 vida=a | PLAYER 3 vida=a
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 2 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=2 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT #L:w,15,100
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 2 false
+LOG NOLA LIFE: Unkillable uid=2 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado por PLAYER 3 com F + medkit, pedido #1 a 150 cm) depois de 0.9 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT #L:a,30,100
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0 eu=PLAYER 2 fim_de_jogo=#0 | HOST vida=a | PLAYER 1 vida=a | PLAYER 3 vida=a
+CALL rk XApplyEffectOnPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: parceiro caido ao alcance: efeito Nola_ReviveNoBag aplicado (F reanima e nao abre o inventario) ok=true
+LOG NOLA LIFE: itens de reanimar (Item.WoundedHeal): 3
+CALL itemRemove P Medkit 1 -> true
+LOG NOLA LIFE: REANIMAR: F perto de PLAYER 3 caido (150 cm): 1 Medkit consumido (tinha 1), pedido #1 para pid 3 enviado
+OUT #RV:1,0,3
+OUT inv Medkit=0

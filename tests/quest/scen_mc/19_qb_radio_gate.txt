@@ -1,0 +1,18 @@
+# the Pripoy radio dialog: the client's own answer is refused, the host's answer arrives in the stripped QB part and is picked in the client's dialog; Herman's exit is held and then forced to the host's exit from the same stripped part
+role client
+pawn 1
+t 100
+peer up 1
+tick
+dlg E01_MQ01_Dialog_Pripoy_in_Bunker_skif_interested_43517 E01_MQ01_Dialog_Pripoy_in_Bunker_skif_knows_36652
+answer E01_MQ01_Dialog_Pripoy_in_Bunker_skif_knows_36652
+part QB 0;;4:1253a2db:2
+tick
+dlg -
+fire E01_MQ01_SetDialog_Pripoy_in_Bunker E01_MQ01_Dialog_Pripoy_in_Bunker_skif_interested_36657 fin
+fire E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector E01_MQ01_Dialog_Herman_ArtOrDetector_E01_MQ01_Dialog_Herman_ArtOrDetector_yesDetector_65671_2 fin
+qbact E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector
+t 110
+part QB 0;5:b64f8131:3:1:4;4:1253a2db:12
+tick
+status

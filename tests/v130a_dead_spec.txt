@@ -1,0 +1,5 @@
+spec v130a_dead_near
+note the host flesh $f1 dies next to the client. New DLL: the client dead copy lies within its body length of the host pelvis (dist_corpo_host <= tol in the 3 s line) or is re-made there (natdeadpos line, refeitas_corpo>=1); the proof shot shows both corpses at the same spot. Old DLL: no dist_corpo_host token in the 3 s line.
+mark
+expect B NOLA natdead: copia host uid=\d+ .* 3 s apos a morte: .* dist_corpo_host=\d+ tol=\d+ within 30
+expect B NOLA natdead 10 s \(cliente\): .* copias_mortas=([1-9]|\d\d+) com_corpo=([1-9]|\d\d+) within 40

@@ -1,0 +1,50 @@
+# ST3: no bridge table on disk (release), the embedded s2u_cont.tsv/s2u_contk.tsv give the box its table sid; client first, then host: window stays open and shows the rest
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag ptake 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag ground 0
+@all flag contall 1
+@h flag lockfirst 1
+@all res s2u_cont.tsv AB12\tItemContainer\tx\t5200\t300\t10
+@all res s2u_contk.tsv AB12\t5200\t300\t10\tx\tA012A,Bandage,Medkit
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@h ainv BP_Box_C_1 A012A 30
+@h ainv BP_Box_C_1 Bandage 2
+@c1 ainv BP_Box_C_1 A012A 30
+@c1 ainv BP_Box_C_1 Bandage 2
+run 0.5
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+@c1 take BP_Box_C_1 A012A 30
+run 0.5
+@c1 vis 0
+@c1 open -
+run 4
+mark c1-took-all-ammo
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-open
+@h inv BP_Box_C_1
+@h inv BP_Stalker2Character_C_0
+@h take BP_Box_C_1 Bandage 2
+run 0.5
+@h vis 0
+@h open -
+run 4
+mark host-took-rest
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-reopen
+@c1 inv BP_Box_C_1
+@c1 inv BP_Stalker2Character_C_0
+@c1 vis 0
+@c1 open -
+run 1

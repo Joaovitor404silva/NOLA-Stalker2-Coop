@@ -1,0 +1,16 @@
+spec v130f2_village
+note A goes 150 m east of Zalissya (419034 546754) first and B into the village (404034 546754) 20 s later, so the client's cine follow (s2m_travel.cpp:530-553, a host teleport pulls B to the host within 3 s) cannot move B out of the village as it did at 17:19:08 and 17:39:21. Counts both builds print, read in steady state after this mark. alifemc=1 (17:18:45 run, A 610 m away): host npcs_classe=45 na_lista=43, B host=43 copias=42. alifemc=0 / old DLL (brief B7 16:17:26, host 50-60 m away): 9/0/0; 17:39:40 (nobody in the village): 2/0/0.
+tp A 419034 546754 706
+wait 20
+mark
+tp B 404034 546754 700
+wait 30
+expect_not B NOLA (cine: host a|tpfloor: coleira) during 1
+mark
+expect A NOLA natnpc 10 s \(host\): npcs_classe=\d+ na_lista=\d+ within 15
+expect B NOLA natnpc 10 s \(cliente\): host=\d+ copias=\d+ within 15
+expect A NOLA natnpc 10 s \(host\): npcs_classe=\d\d+ na_lista=\d\d+ within 25
+expect B NOLA natnpc 10 s \(cliente\): host=\d\d+ copias=\d\d+ within 25
+expect A NOLA corpsemc: jogadores remotos=1 .* alifemc=1 .* centros=1 within 35
+expect_not B NOLA (cine: host a|tpfloor: coleira) during 5
+expect_not A NOLA alifemc: limite de agentes online during 5

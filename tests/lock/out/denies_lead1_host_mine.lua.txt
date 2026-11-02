@@ -1,0 +1,61 @@
+> role host
+> flag lead 1
+> flag choice 1
+> pawn 1000 442207.0 470552.0 0
+> npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+> ph 0061764645D2215D4A0E9B852B301CC8 n1
+> usable u1 01C54CD64D96F4CEE43A00B763ECC498 442057.0 470452.0 0 A:1,B:1
+> trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+L 0 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 0 NOLA lead: trava #1 tomada (trig em 442057,470452,832): este lado lidera, o outro segue
+> shot n1
+L 0 NOLA lead: tiro em NPC de historia 0061764645D2215D4A0E9B852B301CC8 do cliente NAO aplicado: o host lidera (trava #1 trig) [1]
+R shot 1
+> shot n1
+R shot 1
+> trig ANCQ02_OnTriggerEnterEvent_Roof 7
+L 0 NOLA lead: gatilho ANCQ02_OnTriggerEnterEvent_Roof seq=7 do cliente NAO aplicado: o host lidera (trava #1 trig) [3]
+R trig 1
+> trig ANCQ01_OnTriggerEnterEvent_BlindDogs 8
+L 0 NOLA lead: gatilho ANCQ01_OnTriggerEnterEvent_BlindDogs seq=8 do cliente NAO aplicado: o host lidera (trava #1 trig) [4]
+R trig 1
+> trig NOT_A_TRIGGER 9
+R trig 0
+> usedeny u1 11,22,33
+L 0 NOLA lead: uso 11,22,33 do cliente NAO aplicado: o host lidera (trava #1 trig) [5]
+R use 1
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 00
+> run 4000
+O 100 #LK:h,1,1700000000,trig,442057,470452,832
+L 3100 NOLA lead: trava #1 (trig) solta: tempo (3.1 s)
+O 3100 -
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 00
+> shot n1
+L 4000 NOLA lead: tiro do cliente em NPC de historia 0061764645D2215D4A0E9B852B301CC8 aplicado: o cliente lidera 3 s (o host segue)
+R shot 0
+> state
+S mine=0 peer=1 owner=client
+> leaddlg
+R leaddlg 00
+> run 300
+> state
+S mine=0 peer=1 owner=client
+> leaddlg
+R leaddlg 00
+> run 3200
+A use u1 A active 0
+A use u1 B active 0
+L 5000 NOLA choice: 44206,47045,0 (guid 01C54CD64D96F4CEE43A00B763ECC498) bloqueado no cliente: 2 prompts desligados, so o host usa (N3) [1]
+A use u1 A active 1
+A use u1 B active 1
+L 7000 NOLA lead: o outro lado soltou a trava: 2 prompts devolvidos (0 objetos longe ficam para depois)
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 00

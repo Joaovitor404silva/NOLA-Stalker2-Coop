@@ -1,0 +1,13 @@
+OUT #L:a,50,100
+OUT #L:a,34,100
+OUT false
+OUT true
+OUT true
+OUT false
+OUT false
+OUT false
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+OUT #L:w,15,100
+OUT #L:d,0,100

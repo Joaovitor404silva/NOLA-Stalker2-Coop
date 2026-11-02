@@ -1,0 +1,33 @@
+# host graph waits on item events the client already passed: catch-up in reach order, one line each, confirmed by the own L node, never repeated
+role host
+pawn 1
+inv EchoE01 1
+inv CPrologArtifactSlug 1
+t 100
+peer up 1
+tick1k
+t 125
+part QF 2;fd62ac10:17|d417fc23:21
+tick1k
+t 130
+part QF 2;fd62ac10:22|d417fc23:26
+tick1k
+s2q L E01_MQ01_FindDetector_Finish
+t 131
+part QF 2;fd62ac10:23|d417fc23:27
+tick1k
+t 132
+part QF 2;fd62ac10:24|d417fc23:28
+tick1k
+t 133
+part QF 2;fd62ac10:25|d417fc23:29
+tick1k
+s2q L E01_MQ01_FindArt_Finish
+t 134
+part QF 2;fd62ac10:26|d417fc23:30
+tick1k
+qf
+t 300
+part QF 2;fd62ac10:192|d417fc23:196
+tick1k
+status

@@ -1,0 +1,40 @@
+CMD role host
+CMD pawn 1
+CMD t 5
+CMD pos 0 0 0
+CMD views 3
+CMD vpeer 0 up 1
+CMD vpeer 1 up 1
+CMD vpeer 2 up 1
+CMD vpart 0 QN c,1,E02_MQ03_Technical_Pin_0_CondTrigger
+CMD vpart 1 QN c,1,E02_MQ03_Technical_Pin_0_CondTrigger
+CMD run 1
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+LOG NOLA qcond: E02_MQ03_Technical_Pin_0_CondTrigger: cliente (pid 1) entrou, 1 dentro
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+LOG NOLA qcond: E02_MQ03_Technical_Pin_0_CondTrigger: o jogador do host fica dentro do gatilho 8B9D906B48385876AADC63B7E441CD0F enquanto houver cliente dentro r=1 fake
+LOG NOLA qcond: E02_MQ03_Technical_Pin_0_CondTrigger: cliente (pid 2) entrou, 2 dentro
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+OUT #QD:h,-,0,-,0;
+CMD t 6
+CMD run 1
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+OUT #QD:h,-,0,-,0;
+CMD vpart 0 QN c,1,E02_MQ03_Technical_Pin_0_CondTrigger|x,2,E02_MQ03_Technical_Pin_0_CondTrigger
+CMD run 1
+LOG NOLA qcond: E02_MQ03_Technical_Pin_0_CondTrigger: cliente (pid 1) saiu, 1 dentro
+STUB trig 8B9D906B48385876AADC63B7E441CD0F hold
+OUT #QD:h,-,0,-,0;
+CMD t 7
+CMD vpeer 1 down 0
+CMD run 1
+LOG NOLA qcond: E02_MQ03_Technical_Pin_0_CondTrigger: cliente (pid 2) desconectou, 0 dentro
+STUB trig 8B9D906B48385876AADC63B7E441CD0F leave
+LOG NOLA qcond: E02_MQ03_Technical_Pin_0_CondTrigger: ninguem dentro (cliente desconectou): o jogador do host sai do gatilho 8B9D906B48385876AADC63B7E441CD0F r=1 fake
+OUT #QD:h,-,0,-,0;
+CMD t 8
+CMD run 1
+OUT #QD:h,-,0,-,0;

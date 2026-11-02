@@ -1,0 +1,26 @@
+CMD role host
+CMD pawn 1
+CMD t 100
+CMD views 3
+CMD vpeer 0 up 1
+CMD vpeer 1 up 1
+CMD vpeer 2 up 1
+CMD tick1k
+CMD vpart 1 QF 1;f3c1fd2f:0
+CMD vpart 2 QF 0;
+CMD t 131
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 156
+CMD vpart 1 QF 1;f3c1fd2f:25
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker
+CMD s2q L E01_MQ01_Bunker_Finish
+CMD t 157
+CMD vpart 1 QF 1;f3c1fd2f:26
+CMD tick1k
+LOG NOLA qcatch: o grafo do host estava atras em E01_MQ01_Bunker_Finish (missao E01_MQ01): o outro lado (pid 2) chegou ha 26 s; XEndQuestNodeBySID E01_MQ01_OnTriggerEnterEvent_InsideBunker em 1 rodada(s) -> alcancou
+CMD t 159
+CMD tick1k
+CMD qf
+QF #QF:1;f3c1fd2f:3

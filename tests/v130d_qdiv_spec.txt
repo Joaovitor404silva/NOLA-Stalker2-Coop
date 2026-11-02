@@ -1,0 +1,6 @@
+spec v130d_qdiv
+note After the host advanced E01_MQ01 (host-only on the client, qmuteq) the client must not list its nodes as divergence. New DLL: client "qdiv 30s: in-sync" within 70 s and no "diverged: E01_MQ01". Old DLL: "diverged: E01_MQ01_ActivateAnomaly_ScannerAnomlay [no do grafo atras" every 30 s (client.log:6944).
+mark
+expect B NOLA qdiv: E01_MQ01\S* \(missao E01_MQ01\) e so do host within 70
+expect_not B NOLA qdiv 30s: diverged: E01_MQ01 during 70
+expect A NOLA qdiv 30s: in-sync within 70

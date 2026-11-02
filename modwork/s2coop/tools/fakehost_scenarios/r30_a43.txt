@@ -1,0 +1,5 @@
+# r30 A43 (core b33): a live step 20 s into the session, then the test loads the client's last save (luacmd XLoadLastSave) within 60 s of the session start, while the host's 29-event offer is still open.
+# Expect (b33): "catch-up antigo (29 eventos, o host ja tem 30)" or an equal-size offer; NO "eventos adiante", the step applied once (no second "cliente seq=30 ... ->").
+0 log sample_quest_log.txt 29
+20 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+90 end

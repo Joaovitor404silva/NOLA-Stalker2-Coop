@@ -1,0 +1,27 @@
+# late joiner: a third client with a new session gets its own catch-up window; the others are untouched
+role host
+flag qsync 1
+flag qrollback 1
+pawn 1
+t 2
+gs 100
+views 3
+s2q J ANCQ01 - Start
+s2q J ANCQ01 Stage1 Start ANCQ01_SetJournal_1
+vpeer 0 up 1
+vpart 0 N 3
+vpeer 1 up 1
+vpart 1 N 2
+vrun 2
+t 200
+vrun 1
+s2q J ANCQ02 - Start
+vpeer 2 up 1
+vpart 2 N 0
+vrun 2
+vpart 1 N 3
+vrun 1
+vpeer 2 up 2
+vrun 1
+flag mcquest 0
+vrun 1

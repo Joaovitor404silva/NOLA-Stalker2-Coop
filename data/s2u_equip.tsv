@@ -1,0 +1,367 @@
+AArtifactWeirdBall	artifact		
+AArtifactWeirdBolt	artifact		
+AArtifactWeirdFlower	artifact		
+AArtifactWeirdKettle	artifact		
+AArtifactWeirdNut	artifact		
+AArtifactWeirdWater	artifact		
+Anomaly_Scientific_Armor	armor		
+Anomaly_Scientific_Armor_PSY_preinstalled	armor		
+BattleExoskeleton_Varta_Armor	armor		
+Battle_Dolg_Armor	armor		
+Battle_Dolg_End_Armor	armor		
+Battle_Military_Helmet	armor		
+Battle_Monolith_Armor	armor		
+Battle_Spark_Armor	armor		
+Battle_Svoboda_Armor	armor		
+Battle_Varta_Armor	armor		
+Bear	detector		
+Binoculars_01	binoculars		
+Binoculars_02	binoculars		
+Binoculars_03	binoculars		
+CArtifactBouncyBall	artifact		
+CArtifactBouncyBall_Fake	artifact		
+CArtifactBubble	artifact		
+CArtifactBubble_Fake	artifact		
+CArtifactBun	artifact		
+CArtifactBun_Fake	artifact		
+CArtifactBung	artifact		
+CArtifactBung_Fake	artifact		
+CArtifactChunkMeat	artifact		
+CArtifactChunkMeat_Fake	artifact		
+CArtifactCottonWool	artifact		
+CArtifactCottonWool_Fake	artifact		
+CArtifactCrystalThorn	artifact		
+CArtifactCrystalThorn_Fake	artifact		
+CArtifactDevilsMushroom	artifact		
+CArtifactDevilsMushroom_Fake	artifact		
+CArtifactEchinus	artifact		
+CArtifactEchinus_Fake	artifact		
+CArtifactKryptonite	artifact		
+CArtifactKryptonite_Fake	artifact		
+CArtifactLiquidStone	artifact		
+CArtifactLiquidStone_Fake	artifact		
+CArtifactMica	artifact		
+CArtifactMica_Fake	artifact		
+CArtifactPellicle	artifact		
+CArtifactPellicle_Fake	artifact		
+CArtifactPlasticine	artifact		
+CArtifactPlasticine_Fake	artifact		
+CArtifactRosin	artifact		
+CArtifactRosin_Fake	artifact		
+CArtifactSlime	artifact		
+CArtifactSlime_Fake	artifact		
+CArtifactSlug	artifact		
+CArtifactSlug_Fake	artifact		
+CArtifactThorn	artifact		
+CArtifactThorn_Fake	artifact		
+CPrologArtifactSlug	artifact		
+Default_Military_Armor	armor		
+EArtifactAtom	artifact		
+EArtifactAtom_Fake	artifact		
+EArtifactBattery	artifact		
+EArtifactBattery_Fake	artifact		
+EArtifactChocolate	artifact		
+EArtifactChocolate_Fake	artifact		
+EArtifactCloud	artifact		
+EArtifactCloud_Fake	artifact		
+EArtifactCrystalGlass	artifact		
+EArtifactCrystalGlass_Fake	artifact		
+EArtifactDope	artifact		
+EArtifactDope_Fake	artifact		
+EArtifactDummy	artifact		
+EArtifactDummy_Fake	artifact		
+EArtifactFlash	artifact		
+EArtifactFlash_Fake	artifact		
+EArtifactJellyFish	artifact		
+EArtifactJellyFish_Fake	artifact		
+EArtifactMoonlight	artifact		
+EArtifactMoonlight_Fake	artifact		
+EArtifactRazor	artifact		
+EArtifactRazor_Fake	artifact		
+EArtifactSnowflake	artifact		
+EArtifactSnowflake_Fake	artifact		
+EArtifactSoul	artifact		
+EArtifactSoul_Fake	artifact		
+EArtifactSparkler	artifact		
+EArtifactSparkler_Fake	artifact		
+EArtifactThunderHedgehog	artifact		
+EArtifactThunderHedgehog_Fake	artifact		
+EArtifactTow	artifact		
+EArtifactTow_Fake	artifact		
+EArtifactWorm	artifact		
+EArtifactWorm_Fake	artifact		
+EN_BuckLaunch_Data	weapon	A012D	4
+Echo	detector		
+Exoskeleton_Dolg_Armor	armor		
+Exoskeleton_Mercenaries_Armor	armor		
+Exoskeleton_Monolith_Armor	armor		
+Exoskeleton_Neutral_Armor	armor		
+Exoskeleton_Svoboda_Armor	armor		
+FArtifactBakedBolts	artifact		
+FArtifactBakedBolts_Fake	artifact		
+FArtifactBurntHunk	artifact		
+FArtifactBurntHunk_Fake	artifact		
+FArtifactCandle	artifact		
+FArtifactCandle_Fake	artifact		
+FArtifactCore	artifact		
+FArtifactCore_Fake	artifact		
+FArtifactCrystal	artifact		
+FArtifactCrystal_Fake	artifact		
+FArtifactDeadSponge	artifact		
+FArtifactDeadSponge_Fake	artifact		
+FArtifactDrops	artifact		
+FArtifactDrops_Fake	artifact		
+FArtifactEye	artifact		
+FArtifactEye_Fake	artifact		
+FArtifactFireBall	artifact		
+FArtifactFireBall_Fake	artifact		
+FArtifactFireworks	artifact		
+FArtifactFireworks_Fake	artifact		
+FArtifactGlass	artifact		
+FArtifactGlass_Fake	artifact		
+FArtifactHellishHedgehog	artifact		
+FArtifactHellishHedgehog_Fake	artifact		
+FArtifactMomsBeads	artifact		
+FArtifactMomsBeads_Fake	artifact		
+FArtifactPlasma	artifact		
+FArtifactPlasma_Fake	artifact		
+FArtifactResin	artifact		
+FArtifactResin_Fake	artifact		
+FArtifactRingOmnipotence	artifact		
+FArtifactRingOmnipotence_Fake	artifact		
+FArtifactSteak	artifact		
+FArtifactSteak_Fake	artifact		
+GArtifactBloodStone	artifact		
+GArtifactBloodStone_Fake	artifact		
+GArtifactBud	artifact		
+GArtifactBud_Fake	artifact		
+GArtifactCompass	artifact		
+GArtifactCompass_Fake	artifact		
+GArtifactGoldFish	artifact		
+GArtifactGoldFish_Fake	artifact		
+GArtifactGraphiteBlock	artifact		
+GArtifactGraphiteBlock_Fake	artifact		
+GArtifactGravy	artifact		
+GArtifactGravy_Fake	artifact		
+GArtifactHedgehog	artifact		
+GArtifactHedgehog_Fake	artifact		
+GArtifactLandSlug	artifact		
+GArtifactLandSlug_Fake	artifact		
+GArtifactNightStar	artifact		
+GArtifactNightStar_Fake	artifact		
+GArtifactPlane	artifact		
+GArtifactPlane_Fake	artifact		
+GArtifactRubiksCube	artifact		
+GArtifactRubiksCube_Fake	artifact		
+GArtifactSplitStone	artifact		
+GArtifactSplitStone_Fake	artifact		
+GArtifactSponge	artifact		
+GArtifactSponge_Fake	artifact		
+GArtifactSpring	artifact		
+GArtifactSpring_Fake	artifact		
+GArtifactStoneDrop	artifact		
+GArtifactStoneDrop_Fake	artifact		
+GArtifactTrunk	artifact		
+GArtifactTrunk_Fake	artifact		
+GArtifactWrenched	artifact		
+GArtifactWrenched_Fake	artifact		
+Gilka	detector		
+GuardGunAK74_ST	weapon	A545D	30
+GuardGunAKU_PP	weapon	A545D	30
+GuardGunAPB_HG	weapon	A918D	18
+GuardGunBucket_PP	weapon	A918D	20
+GuardGunD12_SG	weapon	A012D	8
+GuardGunDnipro_ST	weapon	A545D	30
+GuardGunFora_ST	weapon	A545D	30
+GuardGunG37_ST	weapon	A556D	30
+GuardGunGP3A_DMR	weapon	A762NATOD	20
+GuardGunGrim_ST	weapon	A939D	20
+GuardGunGvintar_ST	weapon	A939D	10
+GuardGunIntegral_PP	weapon	A919D	20
+GuardGunKharod_ST	weapon	A556D	30
+GuardGunLavina_ST	weapon	A939D	20
+GuardGunM10_HG	weapon	A045D	30
+GuardGunM16_ST	weapon	A556D	30
+GuardGunM701_SP	weapon	A762NATOD	5
+GuardGunM860_SG	weapon	A012D	6
+GuardGunMark_SP	weapon	A762NATOD	10
+GuardGunObrez_SG	weapon	A012D	2
+GuardGunPKP_MG	weapon	A762SniperD	150
+GuardGunPM_HG	weapon	A918D	8
+GuardGunRam2_SG	weapon	A012D	14
+GuardGunRhino_HG	weapon	A939D	6
+GuardGunSKP_DMR	weapon	A762SniperD	10
+GuardGunSPSA_SG	weapon	A012D	8
+GuardGunSVDM_SP	weapon	A762SniperD	10
+GuardGunSVU_SP	weapon	A762SniperD	10
+GuardGunTOZ_SG	weapon	A012D	2
+GuardGunUDP_HG	weapon	A045D	15
+GuardGunViper_PP	weapon	A919D	30
+GuardGunZubr_PP	weapon	A919D	50
+GunAK74_Korshunov_ST	weapon	A545D	30
+GunAK74_Phantom_ST	weapon	A545D	30
+GunAK74_ST	weapon	A545D	30
+GunAK74_Strelok_ST	weapon	A545D	30
+GunAKU_PP	weapon	A545D	30
+GunAPB_HG	weapon	A918D	18
+GunArevPrecise_AR	weapon	A556D	30
+GunArev_ST	weapon	A556D	30
+GunBucket_PP	weapon	A918D	20
+GunD12_SG	weapon	A012D	8
+GunDnipro_ST	weapon	A545D	30
+GunFora230_PP	weapon	A919D	20
+GunFora_ST	weapon	A545D	30
+GunG37V2_ST	weapon	A556D	30
+GunG37_ST	weapon	A556D	30
+GunGP3A_DMR	weapon	A762NATOD	20
+GunGauss_SP	weapon	AGA	10
+GunGauss_Scar_SP	weapon	AGA	99
+GunGonta_SP	weapon	A762SniperD	5
+GunGrim_ST	weapon	A939D	20
+GunGvintar_ST	weapon	A939D	10
+GunIntegral_PP	weapon	A919D	20
+GunKharod_ST	weapon	A556D	30
+GunKora_HG	weapon	A045D	7
+GunLavina_ST	weapon	A939D	20
+GunM10_HG	weapon	A045D	30
+GunM16_ST	weapon	A556D	30
+GunM701_SP	weapon	A762NATOD	5
+GunM860_SG	weapon	A012D	6
+GunMark_SP	weapon	A762NATOD	10
+GunNightStalker_HG	weapon	A919D	12
+GunObrez_SG	weapon	A012D	2
+GunPKP_Korshunov_MG	weapon	A545D	300
+GunPKP_MG	weapon	A762SniperD	150
+GunPM_HG	weapon	A918D	8
+GunPM_PDA_Tutorial_HG	weapon	A918D	8
+GunRam2_SG	weapon	A012D	14
+GunRhino_HG	weapon	A939D	6
+GunRpg7_GL	weapon	APG7V	1
+GunSKP_DMR	weapon	A762SniperD	10
+GunSPSA_SG	weapon	A012D	8
+GunSVDM_SP	weapon	A762SniperD	10
+GunSVU_SP	weapon	A762SniperD	10
+GunSVU_Sniper_Duga_SP	weapon	A762SniperD	10
+GunTOZ_Gonta	weapon	A012D	2
+GunTOZ_SG	weapon	A012D	2
+GunThreeLine_SP	weapon	A762SniperD	5
+GunUDP_HG	weapon	A045D	15
+GunViper_PP	weapon	A919D	30
+GunZubr_PP	weapon	A919D	50
+Gun_Cavalier_SR	weapon	A762NATOD	5
+Gun_Combatant_AR	weapon	A545D	30
+Gun_Deadeye_HG	weapon	A045D	15
+Gun_Decider_AR	weapon	A545D	30
+Gun_Drowned_AR	weapon	A545D	30
+Gun_Encourage_HG	weapon	A918D	18
+Gun_GStreet_HG	weapon	A045D	40
+Gun_Krivenko_HG	weapon	A919D	15
+Gun_Lummox_AR	weapon	A545D	30
+Gun_Lynx_SR	weapon	A762SniperD	10
+Gun_Merc_AR	weapon	A939D	10
+Gun_Partner_SR	weapon	A762NATOD	10
+Gun_Predator_SG	weapon	A012D	8
+Gun_ProjectY_HG	weapon	A918D	8
+Gun_Rail_SG	weapon	A012D	2
+Gun_RatKiller_SMG	weapon	A918D	50
+Gun_S15_AR	weapon	A545D	20
+Gun_SOFMOD_AR	weapon	A556D	30
+Gun_Shakh_SMG	weapon	A919D	40
+Gun_Sharpshooter_AR	weapon	A556D	30
+Gun_Silence_SMG	weapon	A545D	30
+Gun_SkifGun_HG	weapon	A918D	8
+Gun_Sledgehammer_SG	weapon	A012D	8
+Gun_Sotnyk_AR	weapon	A545D	30
+Gun_Spitfire_SMG	weapon	A545D	40
+Gun_Spitter_SMG	weapon	A918D	20
+Gun_Star_HG	weapon	A918D	8
+Gun_Tank_MG	weapon	A762SniperD	500
+Gun_Texas_SG	weapon	A012D	14
+Gun_Trophy_AR	weapon	A939D	20
+Gun_Unknown_AR	weapon	A556D	30
+Gun_Whip_SR	weapon	A762SniperD	10
+Heavy2_Military_Armor	armor		
+HeavyAnomaly_Monolith_Armor	armor		
+HeavyAnomaly_Scientific_Armor	armor		
+HeavyAnomaly_Spark_Armor	armor		
+HeavyBattle_Spark_Armor	armor		
+HeavyExoskeleton_Dolg_Armor	armor		
+HeavyExoskeleton_Monolith_Armor	armor		
+HeavyExoskeleton_Svoboda_Armor	armor		
+Heavy_Dolg_Armor	armor		
+Heavy_Duty_Helmet	armor		
+Heavy_Mercenaries_Armor	armor		
+Heavy_Military_Helmet	armor		
+Heavy_Svoboda_Armor	armor		
+Heavy_Svoboda_Helmet	armor		
+Heavy_Varta_Helmet	armor		
+Jacket_Bandit_Armor	armor		
+Jemmy_Neutral_Armor	armor		
+Light_Bandit_Helmet	armor		
+Light_Duty_Helmet	armor		
+Light_Mercenaries_Armor	armor		
+Light_Mercenaries_Helmet	armor		
+Light_Military_Helmet	armor		
+Light_Neutral_Helmet	armor		
+MeleeShovel	weapon	A918D	0
+MeleeStub	weapon	A918D	0
+Middle_Bandit_Armor	armor		
+NPC_Agata_Armor	armor		
+NPC_Anomaly_Spark_Armor	armor		
+NPC_Barmen_Armor	armor		
+NPC_Battle_Noon_Armor	armor		
+NPC_Batya_Armor	armor		
+NPC_Cloak_Heavy_Military_Armor	armor		
+NPC_Cloak_Heavy_Neutral_Armor	armor		
+NPC_Dalin_Armor	armor		
+NPC_Dekhtyarev_Armor	armor		
+NPC_Exoskeleton_Coprs_Armor	armor		
+NPC_Exoskeleton_Noon_Armor	armor		
+NPC_Faust_Armor	armor		
+NPC_Heavy2_Coprs_Armor	armor		
+NPC_Heavy3Exoskeleton_Coprs_Armor	armor		
+NPC_Heavy3_Corps_Armor	armor		
+NPC_HeavyAnomaly_Noon_Armor	armor		
+NPC_HeavyExoskeleton_Mercenaries_Armor	armor		
+NPC_HeavyExoskeleton_Noon_Armor	armor		
+NPC_HeavyExoskeleton_Spark_Armor	armor		
+NPC_Heavy_Corps_Armor	armor		
+NPC_Heavy_Military_Armor	armor		
+NPC_Kaymanov_Armor	armor		
+NPC_Korshunov_Armor	armor		
+NPC_Korshunov_Armor_2	armor		
+NPC_Richter_Armor	armor		
+NPC_Sci_Armor	armor		
+NPC_Sel_Armor	armor		
+NPC_Sel_Neutral_Armor	armor		
+NPC_Shram_Armor	armor		
+NPC_Sidorovich_Armor	armor		
+NPC_SkinCloak_Bandit_Armor	armor		
+NPC_Spark_Armor	armor		
+NPC_Tec_Armor	armor		
+NPC_Tyotya_Armor	armor		
+NVG_Gen1	nvg		
+NVG_Gen2	nvg		
+NVG_Gen3	nvg		
+NVG_Gen3_WP	nvg		
+NVG_NPC_Gen1	nvg		
+NVG_NPC_Gen2	nvg		
+NVG_NPC_Gen3	nvg		
+Nasos_Neutral_Armor	armor		
+Newbee_Neutral_Armor	armor		
+PArtifactBrain	artifact		
+PArtifactBrain_Fake	artifact		
+PQuestArtifactScraper	artifact		
+PQuestArtifactScraper_Fake	artifact		
+Rook_Dolg_Armor	armor		
+Rook_Svoboda_Armor	armor		
+SEVA_Dolg_Armor	armor		
+SEVA_Neutral_Armor	armor		
+SEVA_Spark_Armor	armor		
+SEVA_Svoboda_Armor	armor		
+SciSEVA_Scientific_Armor	armor		
+SkinJacket_Bandit_Armor	armor		
+UA_GLaunch_Weapon_Data_En	weapon	AHEDP	1
+UA_GLaunch_Weapon_Data_Ru	weapon	AVOG	1
+Veles	detector		
+Zorya_Neutral_Armor	armor		

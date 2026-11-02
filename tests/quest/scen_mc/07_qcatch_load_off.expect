@@ -1,0 +1,44 @@
+CMD role host
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD s2q L E01_MQ01_Bunker_Finish
+CMD s2q L S2Q_NOT_IN_TABLE
+CMD t 102
+CMD tick1k
+CMD qf
+QF #QF:1;f3c1fd2f:2
+CMD pawn 0
+CMD t 110
+CMD tick1k
+CMD pawn 2
+CMD t 120
+CMD tick1k
+CMD qf
+QF #QF:0;
+CMD part QF 1;d417fc23:60
+CMD t 121
+CMD tick1k
+CMD part QF 2;d417fc23:61|61ad3253:0
+CMD t 146
+CMD part QF 2;d417fc23:86|61ad3253:25
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD t 150
+CMD part QF 2;d417fc23:90|61ad3253:29
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_EquipArt_Finish_Pin_0
+STUB aa XEndQuestNodeBySID E01_MQ01_EquipArt_Finish_Pin_2
+CMD t 155
+CMD part QF 2;d417fc23:95|61ad3253:34
+CMD tick1k
+CMD qf
+QF 
+CMD peer down 1
+CMD t 160
+CMD tick1k
+CMD qf
+QF 
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=0 miss=0 defer=0 own=0

@@ -1,0 +1,33 @@
+role client
+flag ien 1
+flag ientoggle 1
+flag ienprompt 1
+flag ienecho 10
+pawn 0 0 0
+obj LV1 BP_Lever_Vertical_C InteractableObject inter 1000 0 0
+prop LV1 bEnabled 0
+comp C1 LV1 SingleClickLeverDown 1
+comp C2 LV1 SingleClickLeverUp 1
+obj LV2 BP_Lever_Horizontal_C InteractableObject inter 1500 100 0
+prop LV2 bEnabled 0
+obj LV3 BP_Lever_Horizontal_C InteractableObject inter 1700 100 0
+prop LV3 bEnabled 1
+time 1
+tick
+time 2
+remote P 100,0,0;1;m01|150,10,0;1|170,10,0;0|999,9,9;1
+tick
+time 3
+tick
+time 4
+tick
+time 5
+remote P 100,0,0;0;m10|150,10,0;0
+tick
+time 13
+remote P 100,0,0;1|150,10,0;1
+tick
+time 14
+tick
+time 16
+tick

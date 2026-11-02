@@ -1,0 +1,6 @@
+scene v130a_back
+note v130a: the client player comes back next to the host (4.5 m), the corpse copy must be made again at the host corpse
+tp peer+5000
+wait 6
+tp peer+450
+wait 2

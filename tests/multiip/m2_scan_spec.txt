@@ -1,0 +1,14 @@
+spec m2_scan
+needs pair up with the v131b DLL, devcmd 1 on B, B nolabcast 0, C:\nola_inst\D\nola_lasthost.txt moved aside
+setflag B netpeer 127.0.0.1,10.9.9.9
+expect B "S2NET relay in the DLL started: role=client .*peer=127\.0\.0\.1:\d+ " within 20
+expect B "relay stats 10s: sent=[1-9]\d* .*send_err=0 " within 25
+setflag B netpeer 10.9.9.9
+wait 8
+dev B nola scan
+expect B "NOLA NOLA scan UDP \d+: 0 host" within 15
+setflag B netpeer 10.9.9.9,127.0.0.1
+wait 8
+dev B nola scan
+expect B "NOLA NOLA scan UDP \d+: [1-9]\d* host\(s\) .*@127\.0\.0\.1:" within 15
+setflag B netpeer 127.0.0.1

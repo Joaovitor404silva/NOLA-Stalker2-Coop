@@ -1,0 +1,41 @@
+file s2u_cont.tsv 0A1B2C\tx\ty\t1230\t570\t0\nzz\tbad\nFF00\ta\tb\t9000\t0\t0\n
+role host
+flag taken 1
+flag ground 0
+flag sstash 0
+t 0
+me 0 0 0
+myinv A012A 5
+cont BP_Box_C 1 1234 567 0
+cont BP_Box_C 2 20000 0 0
+t 1
+tick
+vis 1
+open BP_Box_C_1
+t 1.1
+tick
+myinv A012A 35
+myinv A045A 2
+vis 0
+t 2.2
+tick
+out
+vis 1
+t 2.3
+tick
+vis 0
+t 2.4
+tick
+open BP_Box_C_2
+vis 1
+t 2.5
+tick
+vis 0
+t 2.6
+tick
+part T ctake@0A1B2C;c1001;A012Ax3,A045Ax1|ctake@FF00;c7;A012Ax1
+t 3.5
+tick
+t 4.6
+tick
+out

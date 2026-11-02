@@ -1,0 +1,95 @@
+LOG S2CORE peer: GameEngine::PreExit bytes differ (new exe?): no BYE on exit, the other side uses the peerleft timeout
+LOG S2NET relay dormant (joinmenu=1): solo game until the main menu entry NOLA starts co-op
+LOG S2NET steam: Steam co-op service on (lobbies, invites, Join Game; LAN co-op stays on too)
+LOG S2NET steam: started: role=host relay 127.0.0.1:57582 <-> 127.0.0.1:57583 <-> Steam P2P, waiting up to 60 s for Steam
+PASS Home key and steam command registered, defaults net=steam 
+PASS boot: relay dormant (solo until the menu), Steam service waits for the game's steam_api64 steam waiting_for_steam self=0 lobby=0 peer=0() members=0 max=0 multi=0 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=0
+PASS fake steam_api64 loaded 
+LOG S2NET steam: steam_api64.dll is loaded
+LOG S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+LOG S2NET steam: ready: user HostGuy (76561198000000001), app 480, role host, overlay on
+PASS Steam service ready at the main menu, no lobby yet (role chosen in the menu) steam waiting_for_steam self=0 lobby=0 peer=0() members=0 max=0 multi=0 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=0
+LOG S2NET NOLA: co-op host started
+LOG S2NET relay in the DLL started: role=host listen=57582 peer=127.0.0.9:7778 files=0 loop=20 ms
+LOG relay v2 listen=57582 peer=127.0.0.9:7778 dir=D:\modding\cpp\wt\st1\tests\steam\out\glue\
+LOG S2NET steam: hosting: creating a public (steamdev) lobby for up to 2 players (one member)
+LOG S2NET steam: public lobby 109775240000000001 ready (up to 2 players), nola_dev=glue
+PASS Host co-op (x0_session 1) -> lobby for maxclients+1 = 2, public with nola_dev tag (steamdev=1), hosting note 1/2 steam hosting self=76561198000000001 lobby=109775240000000001 peer=0() members=0 max=2 multi=0 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=3
+LOG S2NET steam: invite dialog opened for lobby 109775240000000001
+PASS steaminvite=1 -> invite dialog opened once on hosting 
+PASS relay host on netpeer while no Steam member (LAN co-op unchanged) net on listen=57582 peer=127.0.0.9:7778 bound=1 files=0 sent=0 recv=0 in=0 stale=0 apps=0 npcs=0 rx_age=-1.0 bye_tx=0 bye_rx=0 nola=host
+LOG S2NET steam: FriendGal (76561198000000002) joined the lobby (2/2 players): co-op link up
+LOG S2NET route: the one co-op slot follows the Steam lobby member: relay restarted
+LOG S2NET relay in the DLL started: role=host listen=57582 peer=127.0.0.1:57583 files=0 loop=20 ms
+PASS Steam member joins a 1-slot host -> note member_in, relay peer rerouted to the Steam link net on listen=57582 peer=127.0.0.1:57583 bound=0 files=0 sent=0 recv=0 in=0 stale=0 apps=0 npcs=0 rx_age=-1.0 bye_tx=0 bye_rx=0 nola=host
+LOG relay v2 listen=57582 peer=127.0.0.1:57583 dir=D:\modding\cpp\wt\st1\tests\steam\out\glue\
+LOG S2NET steam: FriendGal (76561198000000002) left the lobby (1/2 players)
+LOG S2NET route: the one co-op slot follows the Steam lobby member: relay restarted
+LOG S2NET relay in the DLL started: role=host listen=57582 peer=127.0.0.9:7778 files=0 loop=20 ms
+PASS member leaves -> note member_out, relay back on netpeer net on listen=57582 peer=127.0.0.1:57583 bound=0 files=0 sent=0 recv=0 in=0 stale=0 apps=0 npcs=0 rx_age=-1.0 bye_tx=0 bye_rx=0 nola=host
+LOG relay v2 listen=57582 peer=127.0.0.9:7778 dir=D:\modding\cpp\wt\st1\tests\steam\out\glue\
+PASS Home key opens the invite dialog 
+PASS steam status command steam hosting self=76561198000000001 lobby=109775240000000001 peer=0() members=0 max=2 multi=0 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=69
+LOG S2NET relay hub: mc_tags.tsv missing from the DLL data: PEER datagrams carry no x1 tags
+LOG S2NET relay in the DLL started: role=host listen=57582 peer=127.0.0.9:7778 files=0 loop=20 ms
+LOG S2NET relay hub: this host takes up to 3 clients (maxclients), 0 relay tags; clients join on UDP 57582, netpeer is not used
+LOG S2NET relay hub: mc_tags.tsv missing from the DLL data: PEER datagrams carry no x1 tags
+LOG S2NET steam: invite dialog opened for lobby 109775240000000001
+LOG relay v2 listen=57582 peer=127.0.0.9:7778 dir=D:\modding\cpp\wt\st1\tests\steam\out\glue\
+LOG relay hub: host for up to 3 clients; relay tags (none); slot silent 5 s, freed 60 s
+PASS maxclients 3 while hosting -> same lobby, limit 4, relay becomes a hub, Steam link multi steam hosting self=76561198000000001 lobby=109775240000000001 peer=0() members=0 max=4 multi=1 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=70
+LOG S2NET relay in the DLL started: role=host listen=57582 peer=127.0.0.9:7778 files=0 loop=20 ms
+LOG S2NET steam: lobby 109775240000000001 player limit now 4 (one loopback socket per member)
+LOG S2NET NOLA: co-op host ended: BYE ok=true, relay stopped, solo game
+LOG relay v2 listen=57582 peer=127.0.0.9:7778 dir=D:\modding\cpp\wt\st1\tests\steam\out\glue\
+LOG S2NET steam: lobby 109775240000000001 player limit now 2 (one member)
+LOG S2NET steam: hosting closed, left lobby 109775240000000001: closed by the game
+PASS end co-op (x0_session 0) -> lobby closed, Steam back to ready, relay dormant steam ready self=76561198000000001 lobby=0 peer=0() members=0 max=0 multi=0 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=73
+LOG S2NET steam: joining lobby 109775240000000002 of HostPal (76561198000000099) (Steam invite or Join Game)
+LOG S2NET steam: joined the lobby of HostPal (76561198000000099): co-op link up (2/4 players, Steam invite or Join Game)
+LOG S2NET steam: Steam join ready: host HostPal (76561198000000099), lobby 109775240000000002, 2/4 players, relay 127.0.0.1:57583 <-> 127.0.0.1:57582
+PASS Join Game / invite (333) while at the menu -> note joined with the local link port for the menu steam joined self=76561198000000001 lobby=109775240000000002 peer=76561198000000099(HostPal) members=0 max=0 multi=0 socks=0 port=57583 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=76
+LOG S2NET NOLA: co-op join started to 127.0.0.1:57583
+LOG S2NET relay in the DLL started: role=client listen=57582 peer=127.0.0.1:57583 files=0 loop=20 ms
+PASS menu connects the relay to the Steam link -> relay joined via 127.0.0.1:<link>, Steam stays in the lobby net on listen=57582 peer=127.0.0.1:57583 bound=0 files=0 sent=0 recv=0 in=0 stale=0 apps=0 npcs=0 rx_age=-1.0 bye_tx=0 bye_rx=0 nola=join | 
+LOG S2NET NOLA: co-op join ended: BYE ok=true, relay stopped, solo game
+LOG relay v2 listen=57582 peer=127.0.0.1:57583 dir=D:\modding\cpp\wt\st1\tests\steam\out\glue\
+LOG S2NET steam: left lobby 109775240000000002: left by command
+PASS end co-op as a client -> leaves the Steam lobby steam joined self=76561198000000001 lobby=109775240000000002 peer=76561198000000099(HostPal) members=0 max=0 multi=0 socks=0 port=57583 relay=57582 sent=3 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=77
+LOG S2NET steam: find: 0 friend(s), 0 in this game, 0 lobby(s)
+LOG S2NET steam: find: lobby search s2coop=2 nola_dev=glue (worldwide)
+LOG S2NET steam: find: lobby 109775240000000002 of HostPal (1/4 players)
+LOG S2NET steam: find: lobby search returned 1 lobby(s)
+LOG S2NET steam: joining lobby 109775240000000002 (find)
+LOG S2NET steam: joined the lobby of HostPal (76561198000000099): co-op link up (2/4 players, find)
+LOG S2NET steam: Steam join ready: host HostPal (76561198000000099), lobby 109775240000000002, 2/4 players, relay 127.0.0.1:57583 <-> 127.0.0.1:57582
+PASS Join co-op with no invite -> steam_find searches the tagged lobbies and joins steam joined self=76561198000000001 lobby=109775240000000002 peer=76561198000000099(HostPal) members=0 max=0 multi=0 socks=0 port=57583 relay=57582 sent=3 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=80
+LOG S2NET steam: left lobby 109775240000000002: left by command
+LOG S2NET steam: find: 0 friend(s), 0 in this game, 0 lobby(s)
+LOG S2NET steam: find: lobby search s2coop=2 nola_dev=glue (worldwide)
+LOG S2NET steam: find: lobby search returned 0 lobby(s)
+PASS steam_find with no host anywhere -> note none (the menu falls back to the LAN scan) 
+PASS steamjoin=0 -> steam_find off (LAN scan only) 
+LOG S2NET steam: joining lobby 12345 (command)
+LOG S2NET steam: could not join lobby 12345: the lobby no longer exists (io=0 response=2)
+PASS steam join <id> command queues a join; a missing lobby -> join_fail note 
+LOG S2NET steam: Steam co-op service on (lobbies, invites, Join Game; LAN co-op stays on too)
+LOG S2NET steam: stopped
+LOG S2NET steam: started: role=client relay 127.0.0.1:57582 <-> 127.0.0.1:57584 <-> Steam P2P, waiting up to 1 s for Steam
+LOG S2NET steam: steam_api64.dll is loaded
+LOG S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+LOG S2NET steam: Steam user not ready within 1 s (Steam offline or not logged on; 64 pumps): Steam co-op is off this session (LAN co-op still works)
+PASS Steam never ready -> note unavailable after netsteamwait, status failed, Join co-op falls back to LAN steam failed self=0 lobby=0 peer=0() members=0 max=0 multi=0 socks=0 port=57584 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=65
+LOG S2NET steam: Steam co-op service on (lobbies, invites, Join Game; LAN co-op stays on too)
+LOG S2NET steam: stopped
+LOG S2NET steam: started: role=client relay 127.0.0.1:57582 <-> 127.0.0.1:57585 <-> Steam P2P, waiting up to 60 s for Steam
+LOG S2NET steam: steam_api64.dll is loaded
+LOG S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+LOG S2NET steam: ready: user HostGuy (76561198000000001), app 480, role client, overlay on
+PASS changing a Steam flag retries Steam steam waiting_for_steam self=0 lobby=0 peer=0() members=0 max=0 multi=0 socks=0 port=57585 relay=57582 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=0
+LOG S2NET steam: off (net=ip or cpp_net=0): LAN co-op only
+LOG S2NET steam: stopped
+PASS net=ip -> Steam service off steam off
+PASS x0_session(1) refused on a client install (role from the menu decides) 
+PASS nothing left registered in steam_api64, every call on the pump thread 0 0 0
+GLUE STEAM OK

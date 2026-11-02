@@ -1,0 +1,53 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA qshare: 0 marcas lidas de qshare_mine.txt (arquivo novo: as chaves que ja estao no livro agora contam como antigas)
+h LOG NOLA qshare: inventario base lido (1 itens de missao, leitura nativa)
+c1 LOG NOLA qshare: 0 marcas lidas de qshare_mine.txt (arquivo novo: as chaves que ja estao no livro agora contam como antigas)
+c1 LOG NOLA qshare: inventario base lido (0 itens de missao, leitura nativa)
+h LOG NOLA LOCK_REQ BP_AI_Human_C@520,30,1
+h LOG NOLA LOCK_GRANT BP_AI_Human_C@520,30,1
+h LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+c1 LOG NOLA LOCK_REQ BP_AI_Human_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_AI_Human_C@520,30,1
+c1 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+h LOG NOLA mc bau: BP_AI_Human_C@520,30,1 dado ao pid 0 (primeiro a pedir)
+c1 STUB close
+c1 LOG NOLA LOCK_DENY BP_AI_Human_C@520,30,1 (aberto ao mesmo tempo; o host deu a outro jogador) janela fechada
+h LOG NOLA qshare: item de missao pego aqui: EchoE01 x1 de wBP_AI_Human_C@520,30,1 (agora 1); no livro do host
+h LOG NOLA TAKEN +qg@wBP_AI_Human_C@520,30,1;EchoE01;1;1;h.1 (total 1)
+h LOG NOLA qshare: livro do host: EchoE01 x1 de wBP_AI_Human_C@520,30,1 pego por h (pid 0): os outros jogadores recebem pela criacao do jogo
+h LOG NOLA qshare: qg@wBP_AI_Human_C@520,30,1;EchoE01;1;1;h.1: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+c1 LOG NOLA qshare: item de missao pego aqui: EchoE01 x1 de wBP_AI_Human_C@520,30,1 (agora 1); pedido ao host
+h LOG NOLA qshare: pedido de c1 (pid 1) para EchoE01 x1 de wBP_AI_Human_C@520,30,1 recusado: qg@wBP_AI_Human_C@520,30,1;EchoE01;1;1;h.1 ja vale (o primeiro vence; a copia que ele pegou no proprio mundo fica com ele)
+c1 LOG NOLA TAKEN +qg@wBP_AI_Human_C@520,30,1;EchoE01;1;1;h.1 (total 1)
+c1 LOG NOLA qshare: qg@wBP_AI_Human_C@520,30,1;EchoE01;1;1;h.1: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+MARK t=both-took-echo
+c1 LOG NOLA qshare: item de missao pego aqui: ANCQ04_LokotPDA x1 de wBP_AI_Human_C@520,30,1 (agora 1); pedido ao host
+h LOG NOLA TAKEN +qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;1;1;c1.1 (total 2)
+h LOG NOLA qshare: livro do host: ANCQ04_LokotPDA x1 de wBP_AI_Human_C@520,30,1 pego por c1 (pid 1): os outros jogadores recebem pela criacao do jogo
+h LOG NOLA qshare: ANCQ04_LokotPDA x1 de wBP_AI_Human_C@520,30,1 pego por c1: eu tinha 1 -> ja tenho o bastante: nada criado
+h STUB nput ANCQ04_LokotPDA -1 BP_AI_Human_C_7
+h STUB refresh
+h LOG NOLA qshare: ANCQ04_LokotPDA x1 tirado da minha copia de wBP_AI_Human_C@520,30,1 (janela aberta; outro jogador ja pegou)
+c1 LOG NOLA TAKEN +qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;1;1;c1.1 (total 2)
+c1 LOG NOLA qshare: qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;1;1;c1.1: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+c1 LOG NOLA qshare: item de missao pego aqui: ANCQ04_LokotPDA x2 de wBP_AI_Human_C@520,30,1 (agora 3); pedido ao host
+h LOG NOLA TAKEN +qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;2;3;c1.2 (total 3)
+h LOG NOLA qshare: livro do host: ANCQ04_LokotPDA x2 de wBP_AI_Human_C@520,30,1 pego por c1 (pid 1): os outros jogadores recebem pela criacao do jogo
+h STUB create ANCQ04_LokotPDA 0 2
+h LOG NOLA qshare: ANCQ04_LokotPDA x2 de wBP_AI_Human_C@520,30,1 pego por c1: eu tinha 1 -> +2 pela criacao do jogo
+h STUB nput ANCQ04_LokotPDA -2 BP_AI_Human_C_7
+h STUB refresh
+h LOG NOLA qshare: ANCQ04_LokotPDA x2 tirado da minha copia de wBP_AI_Human_C@520,30,1 (janela aberta; outro jogador ja pegou)
+c1 LOG NOLA TAKEN +qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;2;3;c1.2 (total 3)
+c1 LOG NOLA qshare: qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;2;3;c1.2: eu mesmo peguei este item desta fonte: nada criado, nada tirado
+MARK t=c1-took-lokot-1-then-2
+h LOG NOLA LOCK_REL BP_AI_Human_C@520,30,1
+h LOG NOLA TAKEN +BP_AI_Human_C@520,30,1 (total 4)
+h LOG NOLA mc bau: BP_AI_Human_C@520,30,1 solto pelo pid 0 (3.7 s)
+c1 LOG NOLA TAKEN +BP_AI_Human_C@520,30,1 (total 4)
+MARK t=settled
+h MYQI ANCQ04_LokotPDA*3 EchoE01*1
+c1 MYQI ANCQ04_LokotPDA*3 EchoE01*1
+h INV BP_AI_Human_C_7 ANCQ01_VadaHvorostPDA*1
+c1 INV BP_AI_Human_C_7 ANCQ01_VadaHvorostPDA*1
+X1 h #K:#X:BP_AI_Human_C@520,30,1|qg@wBP_AI_Human_C@520,30,1;EchoE01;1;1;h.1|qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;1;1;c1.1|qg@wBP_AI_Human_C@520,30,1;ANCQ04_LokotPDA;2;3;c1.2#C:BP_AI_Human_C_7@5200,300,10

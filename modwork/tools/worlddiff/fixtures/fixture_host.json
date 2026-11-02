@@ -1,0 +1,18 @@
+{"census":1,"role":"host","pid":0,"views":1,"t":1234.5,"wall_ms":1700000000000,"radius":5000,"me":[0,0,0],"peers":[{"view":0,"x":10,"y":10}],"rows":{
+ "body":[
+  {"key":"puppet:0","kind":"puppet","view":0,"valid":true,"hidden":false}],
+ "lock":[
+  {"key":"100,200,30","locked":true}],
+ "npc":[
+  {"key":"u100","cls":"BP_AI_Human_C","uid":0,"alive":true,"hidden":false,"paired":false,"twin":false,"inert":false,"own":false,"vend":false,"hk":false,"player":false,"nola":false,"nolak":"-","natnpc":1,"dist":800,"x":100,"y":200,"z":0,"ai":"none","rendered":true,"coll":true,"hutab":true,"shared":true},
+  {"key":"u101","cls":"BP_AI_Human_C","uid":0,"alive":false,"hidden":false,"paired":false,"twin":false,"inert":false,"own":false,"vend":false,"hk":false,"player":false,"nola":false,"nolak":"-","natnpc":1,"dist":900,"x":100,"y":200,"z":0,"ai":"none","rendered":true,"coll":true,"hutab":true,"shared":true}],
+ "quest":[
+  {"key":"Q_Main_A","n":1},
+  {"key":"Q_Main_B","n":1}],
+ "taken":[
+  {"key":"ctake@79E147E1411AB60C018BB79CCC1BB2B1;h1;A556Dx40","kind":"ctake","cont":"79E147E1411AB60C018BB79CCC1BB2B1","items":"A556Dx40"}],
+ "window":[
+  {"key":"BP_Box_C@520,30,1","cls":"BP_Box_C","items":"EcoMedkitx2"}]},
+"digest":{"npc":"93c47215/2","quest":"214ce51c/2","taken":"9a165868/1","lock":"83c1d795/1","broken":"811c9dc5/0","qg":"811c9dc5/0"},
+"wh":"NOLA WH 1700000000000 role=host t=1234 npc=93c47215/2 quest=214ce51c/2 taken=9a165868/1 lock=83c1d795/1 broken=811c9dc5/0 qg=811c9dc5/0",
+"inv":[]}

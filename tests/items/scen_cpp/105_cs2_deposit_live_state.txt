@@ -1,0 +1,38 @@
+# CS2: deposit and take keys with state that arrive while the host has the box open: the put creates the exact instance, the take removes the exact instance (the host's own same-SID AK at 60% stays)
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag ptake 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag ground 0
+@all flag contall 1
+@h flag lockfirst 1
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@all ainv BP_Box_C_1 A012A 30
+@all flag cdeposit 1
+@all flag istate 1
+@all ast BP_Box_C_1 GunAK74_ST d3f19999a
+run 0.5
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-open
+@h insts BP_Box_C_1
+inject c1 #T:cput@60E63E8B813B51B0;c777;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1~r17.Ammo_545x39
+run 0.5
+inject c1 -
+run 0.5
+mark put-in
+@h insts BP_Box_C_1
+inject c1 #T:ctake@60E63E8B813B51B0;c778;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1~r17.Ammo_545x39
+run 0.5
+inject c1 -
+run 0.5
+mark take-in
+@h insts BP_Box_C_1
+@h vis 0
+@h open -
+run 1

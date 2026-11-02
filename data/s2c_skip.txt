@@ -1,0 +1,8 @@
+C_E01_MQ01_Intro_Cutscene_SetDialog_C_E01_MQ01_Intro
+E01_MQ01_FirstHelliFly
+E01_MQ01_PlayVideo
+E01_MQ01_SecondHelliFly
+E01_MQ01_SequenceStart
+E01_MQ01_SequenceStart_HeliFirst
+E01_MQ01_SequenceStart_HeliSecond
+E01_MQ01_SequenceStart_HeliThird

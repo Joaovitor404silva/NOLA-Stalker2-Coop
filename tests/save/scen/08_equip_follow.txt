@@ -1,0 +1,54 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 0
+flag n7eq 1
+flag qsync 1
+flag qrollback 1
+flag qitem 1
+flag joinport 0
+flag kit 0
+t 1
+pawn 1000
+money 100
+inv GunAK74_Korshunov_ST 1
+inv A545A 60
+inv A012A 5
+inv AArtifactWeirdBall 1
+qtab A012A
+peer up 1 1
+file B/s2u_equip.tsv GunAK74_Korshunov_ST\tweapon\tA545A\t30\nAArtifactWeirdBall\tartifact\t\t\nbad line\tx\nGunAK74_MagDefault\tmag\tA545A\t30\textra\n
+file B/s2u_basekit.txt GunAK74_Korshunov_ST\n  A545A\n
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n2\tJ,q1,n1,go,s1\n
+part B 5,2,c6ad219ea28b4,0,0,2,abc
+tick
+t 10
+part B 6,2,c6ad219ea28b4,1,0,2,abc
+tick
+t 11
+pawn 1001
+invclear
+inv A545A 10
+inv A012A 1
+inv AArtifactWeirdBall 2
+rbdone
+tick
+t 17
+tick
+t 18
+tick
+t 20
+tick
+t 21
+tick
+t 25
+tick
+t 26
+createok 0
+tick
+t 30
+part B 7,2,c6ad219ea28b4,2,0,2,abc
+loadok 0
+tick
+t 31
+tick

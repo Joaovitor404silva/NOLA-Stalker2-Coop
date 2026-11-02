@@ -1,0 +1,29 @@
+out D:\modding\proofs\20261030_v130a_green
+up -Reuse -Calm -Dll D:\modding\cpp\wt\v130a\cppbuild\Output\NolaNative\Game__Shipping__Win64\NolaNative.dll
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A natfd 1
+setflag B natfd 1
+setflag A natfar 1
+setflag B natfar 1
+setflag A natdeadpos 1
+setflag B natdeadpos 1
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+mark v130a_kill
+scene D:\modding\cpp\wt\v130a\tests\v130a_flesh.scene -On A
+run D:\modding\cpp\wt\v130a\tests\v130a_dead_spec.txt
+shot v130a_corpse on=A,B key=host:$f1 cam=2.5
+scene D:\modding\cpp\wt\v130a\tests\v130a_away.scene -On B
+wait 25
+scene D:\modding\cpp\wt\v130a\tests\v130a_back.scene -On B
+mark v130a_back
+run D:\modding\cpp\wt\v130a\tests\v130a_back_spec.txt
+shot v130a_back on=A,B key=host:$f1 cam=2.5

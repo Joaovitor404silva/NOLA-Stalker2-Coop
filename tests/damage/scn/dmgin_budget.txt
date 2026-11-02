@@ -1,0 +1,27 @@
+role client
+flag dmgin 1
+flag dmgcap 100
+flag dmgmax 80
+me 1000 1 0 0 0
+set me hp 1000
+t 0
+do dmgIn
+t 5
+x1 D 1,70.0|2,70.0
+do dmgIn
+t 5.1
+x1 D 3,70.0
+do dmgIn
+t 5.5
+x1 D 4,90.0|bad|5,x|6,1.2.3|7,20
+do dmgIn
+hp me
+t 6
+newpawn
+x1 D 8,10.0
+do dmgIn
+t 9.5
+x1 D 9,10.0
+do dmgIn
+t 15.6
+do dmgIn

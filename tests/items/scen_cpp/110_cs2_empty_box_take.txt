@@ -1,0 +1,57 @@
+# CS2: live repro 2026-10-21: the host opens an EMPTY box (no list registered), deposits a damaged, upgraded, scoped AK74 and closes; the client opens, sees it exact and takes it; the host reopens: the box must be empty (the client's take is not in the host's native box, so it must not be added back when the host registers the first list)
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag ptake 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag ground 0
+@all flag contall 1
+@h flag lockfirst 1
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@all flag cdeposit 1
+@all flag istate 1
+@h myst GunAK74_ST d3ed70a3d~uGunAK74_Upgrade_Barrel_1.GunAK74_Upgrade_Body_1~aAK74_DefaultMuz.GunAK74_MagDefault.RU_X4Scope_1~r0.t1c4~m3
+run 0.5
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-open-empty
+@h insts BP_Box_C_1
+@h puti BP_Box_C_1 GunAK74_ST d3ed70a3d~uGunAK74_Upgrade_Barrel_1.GunAK74_Upgrade_Body_1~aAK74_DefaultMuz.GunAK74_MagDefault.RU_X4Scope_1~r0.t1c4~m3
+run 0.5
+@h vis 0
+@h open -
+run 4
+mark host-put
+@h insts BP_Box_C_1
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-open
+@c1 insts BP_Box_C_1
+@c1 takei BP_Box_C_1 GunAK74_ST d3ed70a3d~uGunAK74_Upgrade_Barrel_1.GunAK74_Upgrade_Body_1~aAK74_DefaultMuz.GunAK74_MagDefault.RU_X4Scope_1~r0.t1c4~m3
+run 0.5
+@c1 vis 0
+@c1 open -
+run 4
+mark c1-took
+@c1 insts me
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-reopen
+@h insts BP_Box_C_1
+@h vis 0
+@h open -
+run 1
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-reopen
+@c1 insts BP_Box_C_1
+@c1 vis 0
+@c1 open -
+run 1

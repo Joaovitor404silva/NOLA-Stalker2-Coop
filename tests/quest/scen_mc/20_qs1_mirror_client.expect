@@ -1,0 +1,27 @@
+CMD role client
+CMD pawn 7
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD t 125
+CMD part QF 1;537be987:0
+CMD tick1k
+CMD t 151
+CMD part QF 1;537be987:26
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_Finish_PlaceScanner_1 [no do grafo atras: o outro lado chegou ha 26 s] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+STUB aa XEndQuestNodeBySID E01_MQ01_OnSignalReceived
+CMD s2q E E01_MQ01_OnSignalReceived
+LOG NOLA qev: tabela carregada (1612 nos de evento)
+LOG NOLA qev: E01_MQ01_OnSignalReceived fired by the catch-up (the host already ran this step): not a client step, no #QN sent
+CMD t 152
+CMD part QF 1;537be987:27
+CMD tick1k
+CMD s2q E E01_MQ01_OnSignalReceived_9
+LOG NOLA qev: o grafo do cliente disparou E01_MQ01_OnSignalReceived_9 (OnSignalReceived, missao E01_MQ01) -> #QN c seq=1
+CMD t 154
+CMD tick1k
+CMD out
+OUT #QN:c,1,E01_MQ01_OnSignalReceived_9#QD:c,-,0;E01_MQ01_OnSignalReceived_9:2
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=1 out=1 qdiv rn=0 rep=0 roll=0 qcatch ok=0 miss=0 defer=0 own=0 cur=E01_MQ01_Finish_PlaceScanner_1

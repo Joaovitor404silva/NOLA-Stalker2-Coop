@@ -1,0 +1,37 @@
+nodes 4
+@all flag locks 1
+@all flag contall 1
+@all flag ptake 1
+@all flag loot 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag taken 1
+@all flag takenown 1
+@all flag lockfirst 1
+@all flag mcitems 1
+@all flag cbusy 1
+@all flag ground 0
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@all ainv BP_Box_C_1 Bandage 2
+@all ainv BP_Box_C_1 Medkit 1
+run 0.3
+@c1 use BP_Box_C_1
+run 1
+mark c1-open
+@c2 open BP_Box_C_1
+@c2 use BP_Box_C_1
+run 0.3
+mark c2-blocked
+@c1 take BP_Box_C_1 Bandage 2
+run 0.5
+@c1 vis 0
+@c1 open -
+run 4
+mark c1-closed
+@c2 use BP_Box_C_1
+run 1
+mark c2-open
+@c2 inv BP_Box_C_1
+@h mcout
+@c2 status

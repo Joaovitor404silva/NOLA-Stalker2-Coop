@@ -1,0 +1,32 @@
+CMD role host
+CMD pawn 1
+CMD t 5
+CMD pos 0 0 0
+CMD views 3
+CMD vpeer 0 up 1
+CMD vpeer 1 up 1
+CMD vpeer 2 up 1
+CMD vpart 0 QN c,1,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist
+CMD run 1
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+LOG NOLA qdist: C_E02_MQ01_Bar_Cutscene_Technical_Pin_0: cliente (pid 1) a menos de 250 cm do ponto, condicao verdadeira no host (1 dentro)
+STUB aa XEndQuestNodeBySID C_E02_MQ01_Bar_Cutscene_Technical_Pin_0
+LOG NOLA qdist: C_E02_MQ01_Bar_Cutscene_Technical_Pin_0: XEndQuestNodeBySID ok=true 
+OUT #QD:h,-,0,-,0;
+CMD t 6
+CMD run 1
+OUT #QD:h,-,0,-,0;
+CMD t 8
+CMD vpart 0 QN c,1,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist|x,2,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist
+CMD run 1
+STUB aa XEndQuestNodeBySID C_E02_MQ01_Bar_Cutscene_Technical_Pin_0
+LOG NOLA qdist: C_E02_MQ01_Bar_Cutscene_Technical_Pin_0: cliente (pid 1) saiu do ponto, 0 dentro
+OUT #QD:h,-,0,-,0;
+CMD t 9
+CMD vpeer 1 down 0
+CMD run 1
+OUT #QD:h,-,0,-,0;
+CMD t 10
+CMD vpart 0 QN c,3,C_E02_MQ01_Bar_Cutscene_Technical_Pin_0_CondDist
+CMD run 1
+OUT #QD:h,-,0,-,0;

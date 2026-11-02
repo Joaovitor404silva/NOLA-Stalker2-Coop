@@ -1,0 +1,39 @@
+role host
+flag ien 1
+flag ienprompt 1
+flag ienhold 6
+flag iensec 1
+flag ienr 2500
+flag ientab 0
+pawn 0 0 0
+obj LV1 BP_Lever_Vertical_C InteractableObject inter 1000 0 0
+prop LV1 bEnabled 0
+prop LV1 bBroken 0
+comp C1 LV1 SingleClickLeverDown 1
+comp C2 LV1 SingleClickLeverUp 1
+obj LV2 BP_Lever_Horizontal_C InteractableObject inter 1500 100 0
+prop LV2 bEnabled 1
+obj LV3 BP_Lever_Horizontal_C InteractableObject inter 6000 0 0
+prop LV3 bEnabled 1
+obj LV4 BP_Thing_C InteractableObject inter 1200 0 0
+time 1
+tick
+time 2
+prop LV1 bEnabled 1
+prop C1 bIsInteractionActive 0
+tick
+time 3
+tick
+time 4
+prop LV2 bEnabled 0
+prop LV3 bEnabled 0
+tick
+time 5
+prop LV1 bBroken 1
+tick
+time 6
+tick
+time 12
+tick
+time 14
+tick

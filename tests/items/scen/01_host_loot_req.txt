@@ -1,0 +1,48 @@
+role host
+flag taken 1
+flag ground 0
+flag sstash 0
+t 0
+me 0 0 0
+npc 1 100 0 0 0
+npcinv 1 A012A 30
+npcinv 1 A045A 2
+npc 2 200 0 0 1
+npc 3 90000 0 0 0
+t 1
+tick
+out
+part Q 1;BP_AI_Human_C_1
+t 1.1
+tick
+out
+part Q 2;BP_AI_Human_C_1
+t 1.2
+tick
+part Q 3;BP_AI_Human_C_2
+t 1.3
+tick
+part Q 4;BP_AI_Human_C_9
+t 1.4
+tick
+part Q 4;BP_AI_Human_C_9
+t 1.5
+tick
+vis 1
+open BP_AI_Human_C_1
+t 1.6
+tick
+vis 0
+open -
+nopart Q
+t 2.5
+tick
+out
+part T corpse@5,5|corpse@1,0
+t 3
+tick
+out
+t 8
+out
+t 9
+out

@@ -1,0 +1,81 @@
+role host
+views 1 1 0 0
+flag lifeguard 1
+flag lifegod 1
+me 100 1 0 0 0
+set me uid 7
+npc tgt1 Target 100 0 0 120020 1
+npc pup1 Puppet 100 0 0 120020 1
+tgt tgt1
+pup pup1
+vpeer 0 up - c1 1
+vremote 0 100 0 0 0 1
+t 0
+do ff
+do ffStr
+ffcap 0 1 30 5 0.8 spine_02
+ffcap 0 1 12.5 2 0.6 head
+t 0.1
+vremote 0 100 0 0 0.1 1
+do ff
+do ffStr
+t 0.6
+vremote 0 100 0 0 0.6 1
+ffcap 0 1 7 1 0.5 hand_l 2 5
+ffcap 0 1 7 1 0.5 hand_l 2 5 p
+do ff
+do ffStr
+ffcap 0 1 4 1 0.5 foot_l 6 3 p
+t 1.15
+vremote 0 100 0 0 1.15 1
+do ff
+do ffStr
+t 1.7
+vremote 0 100 0 0 1.7 1
+do ff
+do ffStr
+t 5
+ffcap 0 1 30 5 0.8 spine_02
+do ff
+do ffStr
+vremote 0 100 0 0 5
+flag friendlyfire 0
+t 5.1
+ffcap 0 1 30 5 0.8 spine_02
+do ff
+do ffStr
+flag friendlyfire 1
+flag cine 1
+cine 1
+t 5.2
+do ff
+cine 0
+t 5.3
+do ff
+do statusStr
+t 10
+vremote 0 100 0 0 10 1
+do ff
+views 2 3 1 0
+vpeer 1 up - c2 1
+vremote 1 300 0 0 10 2
+npc tgt2 Target 300 0 0 120020 1
+npc pup2 Puppet 300 0 0 120020 1
+vtgt 1 tgt2
+vpup 1 pup2
+t 10.1
+ffcap 1 2 25 4 0.7 spine_03
+ffcap 0 1 9 1 0.4 thigh_r
+do ff
+do ffStr
+role client
+views 2 3 1 1
+vpeer 0 up - h 1
+vpeer 1 up - c2 1
+vremote 0 100 0 0 10.2
+vremote 1 300 0 0 10.2 2
+t 10.2
+do ff
+ffcap 1 2 18 3 0.6 head
+do ff
+do ffStr

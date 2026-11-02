@@ -1,0 +1,40 @@
+CMD role host
+CMD pawn 1
+CMD inv EchoE01 1
+CMD inv CPrologArtifactSlug 1
+CMD t 100
+CMD peer up 1
+CMD tick1k
+CMD t 125
+CMD part QF 2;fd62ac10:17|d417fc23:21
+CMD tick1k
+CMD t 130
+CMD part QF 2;fd62ac10:22|d417fc23:26
+CMD tick1k
+LOG NOLA qdiv 30s: diverged: E01_MQ01_FindArt_Finish [no do grafo atras: o outro lado chegou ha 22 s], E01_MQ01_FindDetector_Finish [no do grafo atras: o outro lado chegou ha 26 s] (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+STUB aa XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_EchoE01
+CMD s2q L E01_MQ01_FindDetector_Finish
+CMD t 131
+CMD part QF 2;fd62ac10:23|d417fc23:27
+CMD tick1k
+LOG NOLA qcatch: o grafo do host estava atras em E01_MQ01_FindDetector_Finish (missao E01_MQ01): o outro lado chegou ha 27 s; XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_EchoE01 em 1 rodada(s) -> alcancou
+CMD t 132
+CMD part QF 2;fd62ac10:24|d417fc23:28
+CMD tick1k
+CMD t 133
+CMD part QF 2;fd62ac10:25|d417fc23:29
+CMD tick1k
+STUB aa XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_CPrologArtifactSlug
+CMD s2q L E01_MQ01_FindArt_Finish
+CMD t 134
+CMD part QF 2;fd62ac10:26|d417fc23:30
+CMD tick1k
+LOG NOLA qcatch: o grafo do host estava atras em E01_MQ01_FindArt_Finish (missao E01_MQ01): o outro lado chegou ha 26 s; XEndQuestNodeBySID E01_MQ01_OnPlayerGetItemEvent_CPrologArtifactSlug em 1 rodada(s) -> alcancou
+CMD qf
+QF #QF:2;fd62ac10:1|d417fc23:4
+CMD t 300
+CMD part QF 2;fd62ac10:192|d417fc23:196
+CMD tick1k
+LOG NOLA qdiv 30s: in-sync (host repetiu 0, cliente voltou 0 no total); sem digest do outro lado
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qdiv rn=0 rep=0 roll=0 qcatch ok=2 miss=0 defer=0 own=2

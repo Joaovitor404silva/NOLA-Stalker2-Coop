@@ -1,0 +1,34 @@
+CMD role host
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD views 3
+CMD vpeer 1 up 1
+CMD vpeer 2 up 1
+CMD fire ANCQ03_If_Distance True fin
+RET fire 0 -
+CMD fire Not_A_Branch_Node True fin
+RET fire 0 -
+CMD fire ANCQ03_If_Distance Maybe fin
+RET fire 0 -
+CMD fire ANCQ03_If_Distance - fin
+RET fire 0 -
+CMD fire ancq03_if_distance false fin
+RET fire 0 -
+CMD t 103
+CMD fire BodyParts_Malahit_Random 3 fin
+RET fire 0 -
+CMD fire E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer E03_SQ01_Dialog_VetosInTrailer_4_44991 mid
+RET fire 0 -
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+RET answer true
+CMD answer E03_SQ01_Dialog_VetosInTrailer_WaitForReply
+RET answer true
+CMD t 105
+CMD qb
+QB #QB:0;1:c9132e63:1:1:5|2:c9132e63:0:1:5|3:f4a5fcdc:3:1:2|4:78f12c33:0:0:2;5:410d9ff6:2
+CMD t 1100
+CMD qb
+QB 
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qbranch nos=2897 respostas=1829 rec=4 ok=0 sub=0 hold=0 force=0 rel=0 ref=0 mir=0 err=0 defer=0 dup=0 held=0

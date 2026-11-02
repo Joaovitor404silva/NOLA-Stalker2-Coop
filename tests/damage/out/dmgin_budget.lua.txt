@@ -1,0 +1,14 @@
+CALL me RDS dmg=70.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=1 pedido=70.0 aplicado=70.0 hp 1000.0 -> 930.0 ok=true 
+CALL me RDS dmg=30.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=2 pedido=70.0 aplicado=30.0 hp 930.0 -> 900.0 ok=true 
+CALL me RDS dmg=10.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=3 pedido=70.0 aplicado=10.0 hp 900.0 -> 890.0 ok=true 
+CALL me RDS dmg=40.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=4 pedido=90.0 aplicado=40.0 hp 890.0 -> 850.0 ok=true 
+OUT me hp=850.0 alive=true
+CALL me RDS dmg=10.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=9 pedido=10.0 aplicado=10.0 hp 850.0 -> 840.0 ok=true 
+CALL me RDS dmg=10.00 ap=1.00 uid=- bone=None type=6 src=2
+LOG NOLA dmgin: seq=9 pedido=10.0 aplicado=10.0 hp 840.0 -> 830.0 ok=true 
+LOG NOLA dmgin 10s: aplicados=6 cortados_pelo_teto=4 ignorados morto=0 protecao=1 caido=0

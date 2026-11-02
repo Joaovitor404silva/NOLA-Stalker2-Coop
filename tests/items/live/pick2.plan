@@ -1,0 +1,4 @@
+assert peer
+aim 365905,594462,500 -Wait 2
+use interact
+wait 8

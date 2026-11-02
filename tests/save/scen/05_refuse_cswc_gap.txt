@@ -1,0 +1,60 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 0
+flag qsync 1
+flag qrollback 1
+flag joinport 0
+flag kit 0
+flag qgap 1
+flag qonce 1
+t 1
+pawn 500
+peer up 1 1
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tbbbb2222\n1\tJ,q1,n1,go,s1\n
+part B 5,1,c6ad219ea28b4,0,0,1,abc
+tick
+t 2
+part B 5,1,c6ad219ea28b4,0,1,1,abc
+tick
+t 30
+tick
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n1\tJ,q1,n1,go,s1\n
+pawn 501
+t 31
+tick
+part B 5,4,c6ad219ea28b4,0,2,1,abc
+t 32
+tick
+saveok 0
+t 52
+tick
+t 53
+tick
+saveok 1
+t 54
+tick
+t 60
+tick
+t 65
+tick
+t 66
+tick
+t 86
+tick
+stamp STEAM=9:9;NULL=-
+t 87
+tick
+t 93
+tick
+downed 1
+part B 5,4,c6ad219ea28b4,0,3,1,abc
+t 100
+tick
+t 120
+tick
+downed 0
+t 121
+tick
+t 122
+tick

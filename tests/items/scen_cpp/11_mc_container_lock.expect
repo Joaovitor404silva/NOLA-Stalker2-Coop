@@ -1,0 +1,28 @@
+c2 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c2 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c3 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c3 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 2 (primeiro a pedir)
+c3 STUB close
+c3 LOG NOLA LOCK_DENY BP_Box_C@520,30,1 (aberto ao mesmo tempo; o host deu a outro jogador) janela fechada
+MARK t=both-open
+h MCOUT #KH:2:BP_Box_C@520,30,1|||
+c3 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=1 grants=1 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=3 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c2 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=BP_Box_C@520,30,1 denies=0 grants=1 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=2 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+h STUB close
+h LOG NOLA LOCK_DENY BP_Box_C@520,30,1 (em uso pelo outro jogador) janela fechada ok=true 
+MARK t=host-denied
+h STATUS items role=host taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=1 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= mc: pid=0 views=3 kh=1 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c1 STUB close
+c1 LOG NOLA LOCK_DENY BP_Box_C@520,30,1 (em uso pelo outro jogador) janela fechada ok=true 
+MARK t=c1-denied
+LEAVE c2
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 2 (1.7 s)
+MARK t=c2-left
+h MCOUT |||
+c3 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c3 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 3 (primeiro a pedir)
+MARK t=c3-reopen
+h MCOUT #KH:3:BP_Box_C@520,30,1|||
+c3 STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=BP_Box_C@520,30,1 denies=1 grants=2 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- mc: pid=3 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0

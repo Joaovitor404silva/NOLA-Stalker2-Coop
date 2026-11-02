@@ -1,0 +1,92 @@
+role client
+views 3 4 1 2
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+me 100 1 0 0 0
+set me uid 2
+vpeer 0 up - h 1
+vpeer 1 up - c1 1
+vpeer 2 up - c3 1
+vremote 0 300 0 0 0
+vremote 1 400 0 0 0 1
+vremote 2 500 0 0 0 3
+vx1 0 L a,100,100
+vx1 1 L a,100,100
+vx1 2 L a,100,100
+vx1 0 RV 0,0,0
+vx1 1 RV 0,0,0
+vx1 2 RV 0,0,0
+vx1 0 GO 2,bleed,3
+t 0
+do lifeGuard
+vx1 2 RV 0,1,0
+vremote 0 300 0 0 1
+t 1
+do lifeGuard
+hp me
+vx1 0 GO 3,bleed,2
+t 2
+do lifeGuard
+hp me
+vx1 0 GO 4,bleed,0
+vremote 0 300 0 0 3
+t 3
+do lifeGuard
+hp me
+t 3.1
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+t 10
+do lifeGuard
+set me hp 10
+t 10.1
+do lifeGuard
+vx1 0 GO 5,alldown
+vremote 0 300 0 0 11
+t 11
+do lifeGuard
+hp me
+t 11.1
+do lifeGuard
+do rvStr
+newpawn
+set me alive 1
+set me hp 100
+vpeer 0 up - h 2
+vx1 0 GO 5,alldown
+vremote 0 300 0 0 20
+t 20
+do lifeGuard
+vx1 0 GO 6,bleed,1
+vremote 0 300 0 0 21
+t 21
+do lifeGuard
+hp me
+t 21.1
+do lifeGuard
+flag bothdie 0
+newpawn
+set me alive 1
+set me hp 100
+vx1 0 GO 7,bleed,3
+vremote 0 300 0 0 30
+t 30
+do lifeGuard
+hp me
+flag bothdie 1
+newpawn
+set me alive 1
+set me hp 100
+t 40
+do lifeGuard
+hit me 100
+t 40.1
+do lifeGuard
+do rvStr

@@ -1,0 +1,134 @@
+# Installing NOLA by hand (without install.bat)
+
+Version: {{VERSION}}. This does exactly what `install.bat` from `NOLA-Auto.zip` does, with Explorer and Notepad. You only copy folders. All PCs must use the same version of this package. NOLA takes up to five players: the host plus four friends. Every PC gets exactly the same files: who hosts and who joins is picked in the game's main menu (Host co-op / Join co-op), not at install time.
+
+Everything below is for ONE PC. Do it the same way on every PC.
+
+Short names used here:
+- `GAME` = the game folder, called `{{GAME_FOLDER}}`.
+- `WIN64` = `GAME\Stalker2\Binaries\Win64` (the folder that holds `{{EXE}}`).
+- `PKG` = the folder you unzipped this package into (the one that holds this file).
+
+## 0. Check the download (optional)
+In `PKG`, open PowerShell (Shift + right-click on an empty spot > Open PowerShell window here) and run:
+
+```
+Get-Content CHECKSUMS.txt | ForEach-Object { $h,$p = $_ -split '  ',2; if ((Get-FileHash -Algorithm MD5 -LiteralPath $p).Hash.ToLower() -ne $h) { "DAMAGED: $p" } }
+```
+
+It prints nothing when every file is intact. Each line of `CHECKSUMS.txt` is `md5  path`.
+
+## 1. Find the game folder
+1. Close the game.
+2. Steam > Library > right-click S.T.A.L.K.E.R. 2: Heart of Chornobyl > Manage > Browse local files.
+3. The Explorer window that opens is `GAME`. It contains the folders `Stalker2` and `Engine`. Check that `GAME\Stalker2\Binaries\Win64\{{EXE}}` exists. Keep this window open.
+
+## 2. Back up the files that get replaced
+Make a new folder OUTSIDE the game folder, for example `Desktop\NOLA-backup`, with three empty folders in it: `Win64`, `mods` and `bridge`. Then copy into it, keeping the sub-folder names exactly as shown. Skip anything that does not exist on your PC (a first install usually has none of the `ue4ss` items).
+
+From `WIN64` into `NOLA-backup\Win64` (same sub-folders):
+{{BACKUP_WIN64}}
+
+From `GAME\Stalker2\Content\Paks\~mods` into `NOLA-backup\mods`:
+- every file whose name starts with `zzzzzz_S2Coop` or `zzzzzz_Nola` (older paks of the mod; there can be several)
+
+From `{{BRIDGE}}` into `NOLA-backup\bridge`:
+- `role.txt` (only older installs have it)
+- `flags.txt`
+
+Keep this backup until you are sure you want to keep NOLA: step 9 (uninstall) needs it. Nothing else is overwritten or removed. Your saves are never touched.
+
+## 3. Remove the older files of the mod
+- Delete the folders `WIN64\ue4ss\Mods\S2CoopAlife`, `WIN64\ue4ss\Mods\S2CoopNative` and `WIN64\ue4ss\Mods\NolaAlife` if they exist (older versions of the mod).
+- Delete every file starting with `zzzzzz_S2Coop` or `zzzzzz_Nola` in `GAME\Stalker2\Content\Paks\~mods` if any. Paks of other mods stay.
+
+## 4. Copy the folders into the game
+Copy by dragging in Explorer. When Windows says a file already exists, choose **Replace the file in the destination**. Folders merge, so nothing else in the game folder is lost.
+
+1. Open `PKG\game`. Select everything inside it (the folder `Stalker2`) and copy it INTO `GAME`. This gives:
+{{COPY_LIST}}
+   The files are the same on every PC: solo play or co-op, host or client, is decided in the game's main menu, not by the files.
+2. Open `PKG\C`. Copy the folder `nola_bridge` inside it into the root of drive C: (so it becomes `{{BRIDGE}}`). If that folder exists, replace `flags.txt`.
+3. If `{{BRIDGE}}\role.txt` exists (older install), delete it.
+
+## 5. Two files that you may already have
+These two are NOT in `PKG\game`, on purpose, so that your own copies are not overwritten. They are in `PKG\if-missing\game`.
+
+**5a. `WIN64\ue4ss\UE4SS-settings.ini`**
+- If the file does not exist: copy `PKG\if-missing\game\Stalker2\Binaries\Win64\ue4ss\UE4SS-settings.ini` to `WIN64\ue4ss\`.
+- If it exists: keep it and open it in Notepad. Make sure the line `HookEngineTick` reads exactly `HookEngineTick = 1` (change it if it says 0; if there is no such line, leave the file alone, 1 is the default). If the line `ModsFolderPath` has anything after the `=`, delete what is after the `=` so the line reads `ModsFolderPath =`. Find the section `[EngineVersionOverride]` and make its two lines read exactly `MajorVersion = 5` and `MinorVersion = 5` (they are empty in the stock file; empty makes UE4SS crash about 10 seconds after the game starts). If the section or a line is missing, add it. Save.
+
+**5b. `WIN64\ue4ss\Mods\mods.txt`**
+- If the file does not exist: copy `PKG\if-missing\game\Stalker2\Binaries\Win64\ue4ss\Mods\mods.txt` to `WIN64\ue4ss\Mods\` (it holds the single line `NolaNative : 1`).
+- If it exists: keep it and open it in Notepad. Delete any line that starts with `S2CoopAlife`, `S2CoopNative` or `NolaAlife`. Make sure there is exactly ONE line `NolaNative : 1` (if a line `NolaNative : 0` exists, change the 0 to 1; if there is none, add the line at the end). Leave the lines of your other mods as they are. Save.
+
+## 6. Choose the connection
+All PCs must use the same connection. Pick one:
+
+- **Steam friends (default).** Every player is a Steam friend of the host and runs the Steam copy of the game. Nobody types an IP, no VPN, no port forwarding, no firewall rule.
+- **IP address.** The PCs reach each other by IP: same LAN, or a VPN such as Radmin VPN.
+
+1. Open `{{BRIDGE}}\flags.txt` in Notepad and go to the end.
+2. Steam friends: add one new line `net=steam`. Save. Skip step 7.
+3. IP address: add two new lines, `net=ip` and then `netpeer=<IP addresses of the PCs that may host>`, separated by commas. Example: `netpeer=192.168.0.10,192.168.0.11,26.1.2.3`. Every player can write the same list, their own address included: Host co-op ignores it, Join co-op tries every address until a host answers. Use the LAN address, or the VPN address (for example the 26.x.x.x shown by Radmin VPN). Save. Then do step 7.
+4. If a `net=` or `netpeer=` line already exists, change it instead of adding a second one (the package file has neither). Write no spaces, no quotes. With Steam friends there is no `netpeer=` line.
+With IP address, the game listens on UDP {{HOST_PORT}} while it hosts and on UDP {{CLIENT_PORT}} while it joins; the menu choice picks the port, you do not set it.
+
+## 7. Allow the game through the Windows firewall (IP address only)
+Skip this step if you chose Steam friends in step 6: Steam carries the traffic and no rule is needed.
+
+Do this once per PC. The rule allows inbound UDP on the two co-op ports ({{HOST_PORT}} for hosting, {{CLIENT_PORT}} for joining) for the game program only, on the Private network profile. Your network must be set to Private in Windows (Settings > Network and Internet), or the rule does not apply.
+
+**Command (recommended).** Open the Start menu, type `cmd`, right-click Command Prompt > Run as administrator, and run these lines. Replace `<GAME>` by the full path of `GAME`, for example `C:\Program Files (x86)\Steam\steamapps\common\{{GAME_FOLDER}}`.
+
+```
+netsh advfirewall firewall delete rule name="S2Coop relay"
+netsh advfirewall firewall delete rule name="S2Coop host UDP {{HOST_PORT}}"
+netsh advfirewall firewall delete rule name="S2Coop client UDP {{CLIENT_PORT}}"
+netsh advfirewall firewall delete rule name="S2Coop co-op UDP {{HOST_PORT}},{{CLIENT_PORT}}"
+netsh advfirewall firewall delete rule name="NOLA co-op UDP {{HOST_PORT}},{{CLIENT_PORT}}"
+netsh advfirewall firewall add rule name="NOLA co-op UDP {{HOST_PORT}},{{CLIENT_PORT}}" dir=in action=allow protocol=UDP localport={{HOST_PORT}},{{CLIENT_PORT}} program="<GAME>\Stalker2\Binaries\Win64\{{EXE}}" profile=private enable=yes
+```
+
+The `delete` lines only remove an older rule of the same name; "No rules match" is fine. `netsh` must print `Ok.` for the `add` line.
+
+**Windows Defender Firewall window (instead of the command).**
+1. Start menu > type `Windows Defender Firewall with Advanced Security` > open it.
+2. Inbound Rules > New Rule (right side).
+3. Rule Type: **Program** > Next. This program path: `GAME\Stalker2\Binaries\Win64\{{EXE}}` > Next.
+4. Action: **Allow the connection** > Next.
+5. Profile: tick **Private** only (untick Domain and Public) > Next.
+6. Name: `NOLA co-op UDP {{HOST_PORT}},{{CLIENT_PORT}}` > Finish.
+7. To limit it like the command does: double-click the new rule > Protocols and Ports tab > Protocol type: **UDP**, Local port: **Specific Ports**, type {{HOST_PORT}},{{CLIENT_PORT}} > OK.
+
+## 8. Before you play, and how to check it works
+1. Start the game. The main menu shows Host co-op and Join co-op on every PC. The host picks Host co-op, then loads a world (Continue, Load or New Game). The other players pick Join co-op: each one finds the host on the LAN and the host's world follows. Pick neither for a normal solo game.
+2. Check that the mod loaded. After the game reached the main menu, open `WIN64\ue4ss\UE4SS.log` in Notepad and search for this line:
+   `[NolaNative] loaded`
+   If it is there, the UE4SS loader found `NolaNative` and started it. If the file does not exist, UE4SS did not start: re-check that `WIN64\dwmapi.dll` and the `WIN64\ue4ss` folder are there. If the file exists but the line is missing, re-check `ue4ss\Mods\mods.txt` (line `NolaNative : 1`) and `ue4ss\Mods\NolaNative\dlls\main.dll`.
+3. Check the connection route. In the same `UE4SS.log`, search for `S2NET route:`.
+   - Steam friends: the line reads `S2NET route: steam`. If it reads `S2NET route: ip` instead, the Steam route was not available (Steam not running or offline, or not the Steam copy of the game); the line before it says why.
+   - IP address: the line reads `S2NET route: ip`, followed by the other PC's address.
+4. Steam friends, connecting: every player starts the game as in item 1. Once in the world, the host presses **Home**: the Steam overlay opens the invite window; invite your friends. Each friend accepts the invite in Steam, or right-clicks the host in the Steam friends list and chooses **Join Game**. Nothing else to type.
+5. Once in the world, `WIN64\ue4ss\UE4SS.log` on every PC should contain a `NOLA PEER UP` line. If a game does not connect: with Steam friends, check that every player is logged in to Steam, is a friend of the host, and that the Steam overlay is enabled (Steam > Settings > In Game); with IP address, try `ping <other PC IP>` from each PC first, and check the firewall rule (step 7).
+
+## 9. Uninstall by hand
+With the game closed, and your backup folder from step 2 in hand:
+1. Delete these files and folders that NOLA installed:
+{{DELETE_LIST}}
+2. Copy back everything that is inside `NOLA-backup`: `Win64` into `WIN64`, `mods` into `GAME\Stalker2\Content\Paks\~mods`, `bridge` into `{{BRIDGE}}`. Replace when asked.
+3. If a file from the list in step 1 has no copy in `NOLA-backup`, it did not exist before you installed: leave it deleted. This also applies to `UE4SS-settings.ini` and `mods.txt` (if they were not in the backup, delete them).
+4. Delete these folders only if they did not exist before your install and they are now empty: `WIN64\ue4ss\UE4SS_Signatures`, `WIN64\ue4ss\Mods\NolaNative\dlls`, `WIN64\ue4ss\Mods\NolaNative`, `WIN64\ue4ss\Mods`, `WIN64\ue4ss`, `GAME\Stalker2\Content\Paks\~mods`, `{{BRIDGE}}`. (`{{BRIDGE}}` will not be empty if the game ran with the mod: it keeps the files the mod wrote, such as the quest log; delete it yourself if you do not want them.)
+5. Remove the firewall rule (IP address only; with Steam friends there is no rule to remove, skip this). Command prompt as administrator:
+   - `netsh advfirewall firewall delete rule name="NOLA co-op UDP {{HOST_PORT}},{{CLIENT_PORT}}"`
+
+   Or in Windows Defender Firewall with Advanced Security > Inbound Rules, right-click the rule > Delete.
+
+## What install.bat does that you do not
+- It keeps its backup in a journal under `WIN64\nola_backup`; by hand you keep the backup folder from step 2.
+- It writes `flags.txt` itself (and deletes an old `role.txt`); by hand they come from the package and you add the `net=steam` line, or the `net=ip` and `netpeer` lines.
+- It adds the firewall rule only for IP address; by hand you run step 7 only for IP address.
+- It edits `UE4SS-settings.ini` and `mods.txt` itself; by hand you edit them (step 5). If `UE4SS-settings.ini` has no `HookEngineTick` or `ModsFolderPath` line, it adds `HookEngineTick = 1` and `ModsFolderPath =`; by hand you can leave them out, those are the defaults. It also forces `MajorVersion = 5` and `MinorVersion = 5` under `[EngineVersionOverride]`; by hand you must set those two (step 5a).
+- It asks Windows for administrator rights only when needed (a protected game folder, or the firewall rule for IP address); by hand you need them only for step 7.
+- `uninstall.bat` undoes it all from that journal; by hand you follow step 9.
+- Line endings: `install.bat` writes Windows (CRLF) line endings. Notepad on Windows 10 and 11 keeps the endings of the file you open.

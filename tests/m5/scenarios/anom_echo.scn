@@ -1,0 +1,20 @@
+role host
+flag anomsync 1
+flag anomcd 3
+pawn 100 0 0
+obj AN1 BP_ElectroAnomaly_C Anomaly anom 0 0 0
+time 1
+tick
+time 2
+tick
+remote AN 1;BP_ElectroAnomaly_C;0,0,0
+time 3
+tick
+loopback 1
+remote AN 2;BP_ElectroAnomaly_C;0,0,0
+time 4
+tick
+loopback 0
+time 40
+remote AN 3;BP_ElectroAnomaly_C;0,0,0
+tick

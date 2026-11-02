@@ -1,0 +1,5 @@
+suite	case	reason	since
+quest	05_trig_client	C++ condition triggers (qcondtrig) log the trigger entry; frozen Lua 2026-10-18 predates qcondtrig	2026-10-31
+quest	06_trig_host	C++ enters quest triggers through the TriggerManager (qtrigin) instead of XEndQuestNodeBySID; frozen Lua predates qtrigin	2026-10-31
+quest	09_rollback_client	C++ restarts the client H listeners from the host active set on a new world (qhrestart); frozen Lua predates it	2026-10-31
+quest	11_qdiv	C++ qh restart line comes before the QD output (qhrestart); frozen Lua predates it	2026-10-31

@@ -1,0 +1,15 @@
+# Emission follow (client flag emsync=1, core b32 or later: the client never calls XStartEmission).
+# The fake host's weather is type 7 while its emission is on (the weather sync gives it to the client, and type 7 starts a real one).
+# Expect in the client log: "host em emissao; a minha inativa", within about a minute "WEATHER: XSwitchToWeather(7)" and a real
+# emission (lead-in 35-50 s). NO line "XStartEmission". After "emission off": "host sem emissao", and if the client's emission is
+# still active 10 s later ONE line "clima do host 0 ok=true, XStopEmission ok=true (parada 1 de 3)"; the emission ends; no other stop
+# for 60 s; saves work again ("jogo do cliente salvo"). After the script ends, stay 3 minutes: no emission may start with no host.
+20 emission on
+150 say the client's emission should be running now, with NO XStartEmission line in its log
+1 emission off
+90 say it should be over: one stop line at most, and a mod save should have been written
+30 emission on
+60 silence 12
+14 say host back and still in an emission
+60 emission off
+90 end

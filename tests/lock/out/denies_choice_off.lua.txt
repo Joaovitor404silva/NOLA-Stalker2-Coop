@@ -1,0 +1,10 @@
+> role host
+> pawn 1000 442207.0 470552.0 0
+> npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+> ph 0061764645D2215D4A0E9B852B301CC8 n1
+> shot n1
+R shot 0
+> trig ANCQ02_OnTriggerEnterEvent_Roof 7
+R trig 0
+> usedeny u1 11,22,33
+R use 0

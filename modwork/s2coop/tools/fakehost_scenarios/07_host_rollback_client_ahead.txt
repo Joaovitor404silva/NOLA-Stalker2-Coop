@@ -1,0 +1,11 @@
+# The host loads an older save while the client is ahead (core b32 or later, qrollback=1, csave=1).
+# Expect: after "rollback 29" the client log says "rollback: o host voltou no tempo (geracao 1, 29 eventos)" and then
+# "o cliente esta 1 eventos adiante; nada reaplicado"; NO step is applied again; when the host redoes the step:
+# "pulado: ja estava aplicado antes de o host voltar no tempo". The next step (Bunker) is applied normally.
+0 log sample_quest_log.txt 29
+45 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+75 say the client should have saved with that step
+1 rollback 29
+30 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+10 quest J,E01_MQ01,E01_MQ01_Bunker,Start,E01_MQ01_Bunker_Start
+20 end

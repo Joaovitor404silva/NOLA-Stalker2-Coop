@@ -1,0 +1,37 @@
+# client graph behind the host: catch-up waits while a dialog is open, then gives up after qcatchtry rounds when nothing is active, and never loops
+role client
+pawn 7
+t 100
+peer up 1
+tick1k
+busy dialogo
+t 125
+part QF 1;f3c1fd2f:0
+tick1k
+t 150
+part QF 1;f3c1fd2f:25
+tick1k
+t 160
+part QF 1;f3c1fd2f:35
+tick1k
+status
+busy -
+t 161
+part QF 1;f3c1fd2f:36
+tick1k
+t 166
+part QF 1;f3c1fd2f:41
+tick1k
+t 171
+part QF 1;f3c1fd2f:46
+tick1k
+t 176
+part QF 1;f3c1fd2f:51
+tick1k
+t 400
+part QF 1;f3c1fd2f:275
+tick1k
+t 401
+part QF 1;f3c1fd2f:276
+tick1k
+status

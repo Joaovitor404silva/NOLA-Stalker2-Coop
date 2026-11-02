@@ -1,0 +1,216 @@
+PASS CbBase vtable: [0]=Run(p,io,h) [1]=Run(p) [2]=size, flags@8 id@12 (matches steam_api64 dispatch) of=8 oi=12
+PASS parse_connect_lobby (+/-connect_lobby, =, quotes, rejects junk) 
+PASS parse_net steam|ip 
+PASS find_import_slot finds a normal import (kernel32 GetCurrentThreadId) 
+PASS find_import_slot finds the delay import SteamAPI_RunCallbacks 
+PASS find_import_slot: unknown name -> null 
+PASS menu texts: hosting (with/without lobby id), member in/out, fail reasons by code, pt-BR, silent kinds 
+  [absent] S2NET steam: started: role=host relay 127.0.0.1:40001 <-> 127.0.0.1:57551 <-> Steam P2P, waiting up to 1 s for Steam
+  [absent] S2NET steam: the game did not load steam_api64.dll within 1 s (not the Steam version of the game, or Steam not running?): Steam co-op is off this session (LAN co-op still works)
+PASS steam_api64 never loaded -> waits netsteamwait, then fails (LAN co-op stays) 
+  [absent] S2NET steam: stopped
+  [A] S2NET steam: started: role=host relay 127.0.0.1:57552 <-> 127.0.0.1:57554 <-> Steam P2P, waiting up to 10 s for Steam
+PASS host link starts before the game loads steam_api64 
+  [A] S2NET steam: steam_api64.dll is loaded
+  [A] S2NET steam: waiting for the game's first SteamAPI_RunCallbacks (import slot holds 00007FF659C7E45B, not 00007FFB1AC75EB0)
+PASS two fake steam_api64 instances loaded 
+PASS dll loaded but import not bound yet -> link waits, slot untouched 
+  [A] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+PASS the game's first call binds the slot, then the link hooks it 
+  [A] S2NET steam: ready: user HostGuy (76561198000000001), app 1643320, role host, overlay on
+  [A] S2NET steam: hosting: creating a friends-only lobby for up to 2 players (one member)
+  [A] S2NET steam: friends-only lobby 109775240000000001 ready (up to 2 players)
+  [B] S2NET steam: started: role=client relay 127.0.0.1:57553 <-> 127.0.0.1:57555 <-> Steam P2P, waiting up to 10 s for Steam
+PASS client link starts (injected slot, second instance) 
+  [B] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+PASS client slot hooked 
+PASS host: ready -> friends-only lobby created -> hosting hosting
+  [B] S2NET steam: ready: user FriendGal (76561198000000002), app 1643320, role client, overlay on
+PASS lobby is friends-only, max 2, s2coop=2, host/max/name data, no dev tag 
+PASS hosting event names the host, 1/2 players 
+PASS client: ready, not hosting (role-agnostic link) 
+PASS ready log names the Steam user 
+  [B] S2NET steam: invite: this game is not hosting a co-op session (pick Host co-op first)
+PASS invite on a game that is not hosting -> told to pick Host co-op 
+  [A] S2NET steam: invite dialog opened for lobby 109775240000000001
+PASS host invite key -> overlay invite dialog for the lobby 
+  [B] S2NET steam: joining lobby 109775240000000001 of HostGuy (76561198000000001) (Steam invite or Join Game)
+  [A] S2NET steam: FriendGal (76561198000000002) joined the lobby (2/2 players): co-op link up
+  [B] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (2/2 players, Steam invite or Join Game)
+PASS friend accepts invite (GameLobbyJoinRequested 333) -> joined, both peers set steam joined self=76561198000000002 lobby=109775240000000001 peer=76561198000000001(HostGuy) members=0 max=0 multi=0 socks=0 port=57555 relay=57553 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=6 | steam hosting self=76561198000000001 lobby=109775240000000001 peer=76561198000000002(FriendGal) members=1 max=2 multi=0 socks=0 port=57554 relay=57552 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=6
+PASS join logs name the peer 
+PASS events: client joined (host, 2/2, via invite), host member_in (FriendGal 2/2) 
+  [B] S2NET steam: session with 76561198000000001 accepted
+PASS host->client: every datagram arrives byte-identical and in order 1379/1379 (1220 real relay_v2 datagrams) 
+PASS client game socket sees datagrams from 127.0.0.1:<client shim port> 
+PASS Steam message payloads == UDP datagrams (no framing added) 1379 sends
+PASS client->host: byte-identical 460
+PASS client accepted the host's session (SteamNetworkingMessagesSessionRequest 1251) B sess_ok=1 A sess_ok=0
+  [B] S2NET steam: session request from 76561198000000099 not accepted: not the lobby host
+PASS stranger session request rejected, nothing reaches the game socket 
+PASS loopback datagram from a foreign local port is dropped 
+PASS relay Net pairs start (UDP direct and via Steam shim) 
+  [uh] relay v2 listen=57557 peer=127.0.0.1:57558 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\uh\
+  [uc] relay v2 listen=57558 peer=127.0.0.1:57557 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\uc\
+  [sh] relay v2 listen=57552 peer=127.0.0.1:57554 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\sh\
+  [sc] relay v2 listen=57553 peer=127.0.0.1:57555 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\sc\
+PASS relay_v2 end to end: Steam route in.json == direct UDP in.json (settled 20 fps) settled 20 fps: host->client 7797 B, 60 npcs; client->host 513 B
+PASS relay_v2 end to end: Steam route in.json == direct UDP in.json (fast stream) fast stream: host->client 7797 B, 60 npcs; client->host 513 B
+PASS Steam shim stats clean during relay A sent=16019 bytes=6496638 B recv=16019
+  [A] S2NET steam: join request for lobby 109775240000000001 ignored: this game is hosting a co-op session
+PASS hosting game ignores a join request (333) 
+  [A] S2NET steam: invite: the Steam overlay is off for this game; friends can still use Join Game in the Steam friends list
+  [A] S2NET steam: invite dialog opened for lobby 109775240000000001
+PASS overlay off -> invite still called, user told about Join Game 
+  [B] S2NET steam: left lobby 109775240000000001: left by command
+  [A] S2NET steam: FriendGal (76561198000000002) left the lobby (1/2 players)
+PASS client leave -> idle, host sees the peer leave 
+  [B] S2NET steam: stopped
+  [B] S2NET steam: started: role=client relay 127.0.0.1:57553 <-> 127.0.0.1:57559 <-> Steam P2P, waiting up to 10 s for Steam
+PASS client restart with +connect_lobby 
+  [B] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [B] S2NET steam: ready: user FriendGal (76561198000000002), app 1643320, role client, overlay on
+  [B] S2NET steam: launched by Steam to join lobby 109775240000000001 (+connect_lobby)
+  [B] S2NET steam: joining lobby 109775240000000001 (+connect_lobby)
+  [B] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (2/2 players, +connect_lobby)
+  [A] S2NET steam: FriendGal (76561198000000002) joined the lobby (2/2 players): co-op link up
+PASS +connect_lobby on the command line -> joins the lobby 
+  [B] S2NET steam: left lobby 109775240000000001: switching lobby
+  [B] S2NET steam: joining lobby 109775240000000002 (command)
+  [B] S2NET steam: lobby 109775240000000002 is not an S2Coop lobby (s2coop=): left it
+PASS non-S2Coop lobby -> left, back to ready 
+  [B] S2NET steam: joining lobby 109775240000000002 (command)
+  [B] S2NET steam: lobby 109775240000000002 has no host: left it
+PASS lobby without another owner -> left 
+  [A] S2NET steam: FriendGal (76561198000000002) left the lobby (1/2 players)
+  [B] S2NET steam: joining lobby 109775240000000001 (command)
+  [B] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (2/2 players, command)
+  [A] S2NET steam: FriendGal (76561198000000002) joined the lobby (2/2 players): co-op link up
+PASS rejoin by command 
+  [B] S2NET steam: left lobby 109775240000000001: left by command
+PASS multi: B leaves the 1-slot lobby 
+PASS multi: hub relay (maxclients 3, loopback only) starts 
+  [hub] relay v2 listen=57560 peer=127.0.0.1:57561 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\mh\
+  [hub] relay hub: host for up to 3 clients; relay tags (none); slot silent 5 s, freed 60 s
+  [A] S2NET steam: hosting: creating a public (steamdev) lobby for up to 4 players (one loopback socket per member)
+  [A] S2NET steam: public lobby 109775240000000003 ready (up to 4 players), nola_dev=nola-test
+PASS multi: host reopens as a public dev lobby for 4 players (maxclients 3 + host), data s2coop/host/max/name/nola_dev steam hosting self=76561198000000001 lobby=109775240000000003 peer=0() members=0 max=4 multi=1 socks=0 port=57554 relay=57560 sent=16019 recv=1420 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=2383
+  [C] S2NET steam: started: role=client relay 127.0.0.1:57562 <-> 127.0.0.1:57563 <-> Steam P2P, waiting up to 10 s for Steam
+  [C] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [C] S2NET steam: ready: user CeeCee (76561198000000003), app 480, role client, overlay on
+  [D] S2NET steam: started: role=client relay 127.0.0.1:57564 <-> 127.0.0.1:57565 <-> Steam P2P, waiting up to 10 s for Steam
+  [D] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [D] S2NET steam: ready: user DeeDee (76561198000000004), app 480, role client, overlay on
+  [E] S2NET steam: started: role=client relay 127.0.0.1:57566 <-> 127.0.0.1:57567 <-> Steam P2P, waiting up to 10 s for Steam
+  [E] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [E] S2NET steam: ready: user LateEe (76561198000000005), app 480, role client, overlay on
+PASS multi: three more Steam games (fake_c/d/e, hooks 2-4) ready 
+PASS multi: client relays start on their Steam links 
+  [nc] relay v2 listen=57562 peer=127.0.0.1:57563 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\mc\
+  [nd] relay v2 listen=57564 peer=127.0.0.1:57565 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\md\
+  [nb] relay v2 listen=57553 peer=127.0.0.1:57559 dir=D:\modding\cpp\wt\st1\tests\steam\out\e2e\mb\
+  [B] S2NET steam: find: lobby search s2coop=2 nola_dev=nola-test (worldwide)
+  [B] S2NET steam: find: lobby 109775240000000003 of HostGuy (1/4 players)
+  [B] S2NET steam: find: lobby 109775240000000005 of FullGuy is full (1/1): skipped
+  [B] S2NET steam: find: lobby search returned 2 lobby(s)
+  [B] S2NET steam: joining lobby 109775240000000003 (find)
+  [B] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (2/4 players, find)
+PASS multi: B joins by lobby search on 480 (s2coop=2 + nola_dev tag), no friend invite steam joined self=76561198000000002 lobby=109775240000000003 peer=76561198000000001(HostGuy) members=0 max=0 multi=0 socks=0 port=57559 relay=57553 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=25
+PASS multi: search skips the full lobby, never lists another tag 
+  [A] S2NET steam: FriendGal (76561198000000002) joined the lobby (2/4 players): co-op link up
+  [A] S2NET steam: member 76561198000000002: loopback 127.0.0.1:57568 <-> relay 127.0.0.1:57560
+  [C] S2NET steam: friend HostGuy (76561198000000001) is in lobby 109775240000000003
+  [C] S2NET steam: find: 2 friend(s), 1 in this game, 1 lobby(s)
+  [C] S2NET steam: joining lobby 109775240000000003 (find)
+  [C] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (3/4 players, find)
+PASS multi: C joins through a friend playing the same appid (lobby from GetFriendGamePlayed) steam joined self=76561198000000003 lobby=109775240000000003 peer=76561198000000001(HostGuy) members=0 max=0 multi=0 socks=0 port=57563 relay=57562 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=11
+  [D] S2NET steam: joining lobby 109775240000000003 (command)
+  [D] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (4/4 players, command)
+PASS multi: D joins by lobby id (the id the host shows) 
+  [A] S2NET steam: CeeCee (76561198000000003) joined the lobby (3/4 players): co-op link up
+  [A] S2NET steam: DeeDee (76561198000000004) joined the lobby (4/4 players): co-op link up
+  [A] S2NET steam: member 76561198000000003: loopback 127.0.0.1:57569 <-> relay 127.0.0.1:57560
+  [A] S2NET steam: member 76561198000000004: loopback 127.0.0.1:57570 <-> relay 127.0.0.1:57560
+PASS multi: host opens one loopback socket per Steam member (3 distinct ports) steam hosting self=76561198000000001 lobby=109775240000000003 peer=0() members=3 max=4 multi=1 socks=3 port=57554 relay=57560 sent=16019 recv=1420 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=2400
+PASS multi: member_in events count up 2/4, 3/4, 4/4 
+  [A] S2NET steam: session with 76561198000000002 accepted
+  [A] S2NET steam: session with 76561198000000003 accepted
+  [A] S2NET steam: session with 76561198000000004 accepted
+  [hub] relay hub: pid 1 admitted from 127.0.0.1:57568 (sid=mc-B); players 1 of 3
+  [hub] relay hub: pid 2 admitted from 127.0.0.1:57569 (sid=mc-C); players 2 of 3
+  [hub] relay hub: pid 3 admitted from 127.0.0.1:57570 (sid=mc-D); players 3 of 3
+  [nd] relay: the host admitted this game as pid 3 of 3
+  [nc] relay: the host admitted this game as pid 2 of 3
+  [nb] relay: the host admitted this game as pid 1 of 3
+  [nd] relay: player pid 1 (sid=mc-B) now in view 1
+  [nd] relay: player pid 2 (sid=mc-C) now in view 2
+  [nb] relay: player pid 2 (sid=mc-C) now in view 1
+  [nc] relay: player pid 1 (sid=mc-B) now in view 1
+  [nb] relay: player pid 3 (sid=mc-D) now in view 2
+  [nc] relay: player pid 3 (sid=mc-D) now in view 2
+PASS multi: hub admits 3 Steam clients as 3 distinct pids from 3 distinct loopback addresses 1=mc-B@127.0.0.1:57568 2=mc-C@127.0.0.1:57569 3=mc-D@127.0.0.1:57570 
+PASS multi: host frames reach every Steam client 
+  [E] S2NET steam: joining lobby 109775240000000003 (command)
+  [E] S2NET steam: could not join lobby 109775240000000003: this Steam account is limited and cannot join lobbies (io=0 response=7)
+PASS multi: limited Steam account -> join_fail code 7 (k_EChatRoomEnterResponseLimited) steam ready self=76561198000000005 lobby=0 peer=0() members=0 max=0 multi=0 socks=0 port=57567 relay=57566 sent=0 recv=0 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=0 sess_rej=0 pumps=131
+  [E] S2NET steam: joining lobby 109775240000000003 (command)
+  [E] S2NET steam: could not join lobby 109775240000000003: the lobby is full (io=0 response=4)
+PASS multi: 4th client refused, lobby full (code 4), nobody else disturbed 
+  [E] S2NET steam: find: lobby search s2coop=2 nola_dev=nola-test (worldwide)
+  [E] S2NET steam: find: lobby 109775240000000003 of HostGuy is full (4/4): skipped
+  [E] S2NET steam: find: lobby 109775240000000005 of FullGuy is full (1/1): skipped
+  [E] S2NET steam: find: lobby search returned 2 lobby(s)
+PASS multi: search when every tagged host is full -> found 0 (2 full), join_fail code 4 from find found n=0 code=2
+  [A] S2NET steam: lobby 109775240000000003 player limit now 5 (one loopback socket per member)
+PASS multi: maxclients change -> SetLobbyMemberLimit + lobby data max 
+  [A] S2NET steam: lobby 109775240000000003 player limit now 4 (one loopback socket per member)
+  [D] S2NET steam: left lobby 109775240000000003: left by command
+  [D] S2NET steam: session request from 76561198000000001 not accepted: not the lobby host
+  [A] S2NET steam: DeeDee (76561198000000004) left the lobby (3/4 players)
+  [A] S2NET steam: member 76561198000000004: loopback 127.0.0.1:57570 closed
+PASS multi: one member leaves -> only its loopback socket closes, others keep their ports steam hosting self=76561198000000001 lobby=109775240000000003 peer=0() members=2 max=4 multi=1 socks=2 port=57554 relay=57560 sent=16604 recv=1690 foreign=0 nopeer=0 send_err=0 last_err=0 sess_ok=3 sess_rej=0 pumps=2551
+PASS multi: remaining client still gets host frames after a member left 
+  [C] S2NET steam: stopped
+  [A] S2NET steam: CeeCee (76561198000000003) left the lobby (2/4 players)
+  [D] S2NET steam: stopped
+  [E] S2NET steam: stopped
+PASS multi: C/D/E stop clean (slots restored, nothing registered, every call on their pump) 0/0/0 0/0/0 0/0/0 
+  [B] S2NET steam: left lobby 109775240000000003: left by command
+  [B] S2NET steam: joining lobby 109775240000000003 (command)
+  [B] S2NET steam: joined the lobby of HostGuy (76561198000000001): co-op link up (2/4 players, command)
+PASS B back in the host lobby before the host quits 
+  [B] S2NET steam: left lobby 109775240000000003: the host left the lobby
+  [A] S2NET steam: stopped
+PASS host stop restores the exe import slot 
+PASS host leaves -> client back to ready, host_left event 
+  [B] S2NET steam: stopped
+PASS client stop restores its slot 
+PASS after stop no callbacks or call results stay registered 0/0/0/0
+PASS call results: size and id matched the dll (no io_failure) A run=2 B run=8
+PASS every matchmaking/friends/callback call ran on the game's pump thread A calls=2048 off=0 B calls=2084 off=0
+PASS relay access initialised once per start 
+PASS no failure callbacks in the happy path 
+  [F1] S2NET steam: started: role=client relay 127.0.0.1:57571 <-> 127.0.0.1:57572 <-> Steam P2P, waiting up to 1 s for Steam
+  [F1] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [F1] S2NET steam: Steam user not ready within 1 s (Steam offline or not logged on; 64 pumps): Steam co-op is off this session (LAN co-op still works)
+PASS Steam user never ready (hsu=0) -> failed after netsteamwait, on_fail once 
+  [F1] S2NET steam: stopped
+PASS failed link stop restores slot 
+  [F2] S2NET steam: started: role=client relay 127.0.0.1:57573 <-> 127.0.0.1:57574 <-> Steam P2P, waiting up to 1 s for Steam
+  [F2] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [F2] S2NET steam: the game did not pump Steam callbacks within 1 s: Steam co-op is off this session (LAN co-op still works)
+PASS game never pumps -> failed with the no-pump reason 
+  [F2] S2NET steam: stopped
+PASS no-pump stop: slot restored, no inert-callback warning (nothing registered) 
+  [F3] S2NET steam: steam_api64.dll lacks SteamAPI_GetHSteamUser,SteamAPI_RunCallbacks,SteamAPI_RegisterCallback,SteamAPI_UnregisterCallback,SteamAPI_RegisterCallResult,SteamAPI_UnregisterCallResult,SteamAPI_SteamUser_v021,SteamAPI_ISteamUser_BLoggedOn,SteamAPI_ISteamUser_GetSteamID,SteamAPI_SteamFriends_v017,SteamAPI_ISteamFriends_ActivateGameOverlayInviteDialog,SteamAPI_ISteamFriends_GetPersonaName,SteamAPI_ISteamFriends_GetFriendPersonaName,SteamAPI_ISteamFriends_GetFriendCount,SteamAPI_ISteamFriends_GetFriendByIndex,SteamAPI_ISteamFriends_GetFriendGamePlayed,SteamAPI_SteamMatchmaking_v009,SteamAPI_ISteamMatchmaking_SetLobbyMemberLimit,SteamAPI_ISteamMatchmaking_GetLobbyMemberLimit,SteamAPI_ISteamMatchmaking_RequestLobbyList,SteamAPI_ISteamMatchmaking_AddRequestLobbyListStringFilter,SteamAPI_ISteamMatchmaking_AddRequestLobbyListDistanceFilter,SteamAPI_ISteamMatchmaking_GetLobbyByIndex,SteamAPI_ISteamMatchmaking_CreateLobby,SteamAPI_ISteamMatchmaking_JoinLobby,SteamAPI_ISteamMatchmaking_LeaveLobby,SteamAPI_ISteamMatchmaking_GetNumLobbyMembers,SteamAPI_ISteamMatchmaking_GetLobbyMemberByIndex,SteamAPI_ISteamMatchmaking_SetLobbyData,SteamAPI_ISteamMatchmaking_GetLobbyData,SteamAPI_ISteamMatchmaking_GetLobbyOwner,SteamAPI_SteamUtils_v010,SteamAPI_ISteamUtils_GetAppID,SteamAPI_ISteamUtils_IsOverlayEnabled,SteamAPI_SteamNetworkingMessages_SteamAPI_v002,SteamAPI_ISteamNetworkingMessages_SendMessageToUser,SteamAPI_ISteamNetworkingMessages_ReceiveMessagesOnChannel,SteamAPI_ISteamNetworkingMessages_AcceptSessionWithUser,SteamAPI_ISteamNetworkingMessages_CloseSessionWithUser,SteamAPI_SteamNetworkingMessage_t_Release,SteamAPI_SteamNetworkingIdentity_SetSteamID64,SteamAPI_SteamNetworkingIdentity_GetSteamID64,SteamAPI_SteamNetworkingIdentity_Clear,SteamAPI_SteamNetworkingUtils_SteamAPI_v004,SteamAPI_ISteamNetworkingUtils_InitRelayNetworkAccess
+PASS module without the Steam exports -> start fails, names the missing ones 
+  [F4] S2NET steam: not started: bad relay port 0
+PASS bad relay port -> start fails 
+  [F5] S2NET steam: started: role=client relay 127.0.0.1:57576 <-> 127.0.0.1:57577 <-> Steam P2P, waiting up to 10 s for Steam
+  [F5] S2NET steam: hooked the game's SteamAPI_RunCallbacks: Steam calls run on the game's Steam thread
+  [F5] S2NET steam: ready: user FriendGal (76561198000000002), app 1643320, role client, overlay on
+  [F5] S2NET steam: the game did not pump Steam callbacks while stopping: callback objects kept registered and inert
+  [F5] S2NET steam: stopped
+PASS pump stops while stopping -> callbacks left registered but inert, no crash on later pumps 2
+PASS inert callbacks dispatched safely 
+STEAM TEST OK: 80 passed, 0 failed

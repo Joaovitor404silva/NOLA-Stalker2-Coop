@@ -1,0 +1,23 @@
+# client never reached the host's dialog exit: after qbwait the final pin is forced when the node is active here (silent retries every qbretry while not active), then the host's mid pins of that node, once
+role client
+pawn 1
+t 100
+peer up 1
+tick
+t 115
+part QB #QB:0;5:78f12c33:0:0:3|6:78f12c33:1:1:2;
+tick
+t 120
+tick
+t 123
+tick
+t 125
+tick
+t 128
+tick
+qbact E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer
+t 130
+tick
+t 140
+tick
+status

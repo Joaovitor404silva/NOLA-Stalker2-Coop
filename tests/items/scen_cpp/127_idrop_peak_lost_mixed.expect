@@ -1,0 +1,34 @@
+h LOG NOLA idrop: 318 meshes, 586 items in the drop table
+h LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c1 LOG NOLA idrop: inventory widget state 2 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c2 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c2 LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c3 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c3 LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: drop seen Medkit x1 mesh SM_cns_healthbox_03 at 5100,100,0
+c1 LOG NOLA idrop: local drop #1 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 sent to the host
+h LOG NOLA idrop: registry +1.0.1 owner=1 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 (total 1)
+h STUB spawnitem Medkit 5100 100 30
+h LOG NOLA idrop: mirror of 1.0.1 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_healthbox_03) 0 cm from the spot
+c1 LOG NOLA idrop: local drop #1 is 1.0.1 in the registry
+c2 STUB spawnitem Medkit 5100 100 30
+c2 LOG NOLA idrop: mirror of 1.0.1 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_healthbox_03) 0 cm from the spot
+c3 STUB spawnitem Medkit 5100 100 30
+c3 LOG NOLA idrop: mirror of 1.0.1 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_healthbox_03) 0 cm from the spot
+MARK t=dropped
+c3 LOG NOLA idrop: 1.0.1 picked up here, asking the host (claim 1)
+h LOG NOLA idrop: 1.0.1 taken by pid 3 (first to ask wins)
+h STUB hide BP_StaticItemContainer_C_s1 1
+h LOG NOLA idrop: 1.0.1 is gone from the registry, local copy hidden
+c2 LOG NOLA idrop: 1.0.1 picked up here, asking the host (claim 1)
+h LOG NOLA idrop: pid 2 asked for 1.0.1 too late, pid 3 got it
+c1 STUB hide drop1 1
+c1 LOG NOLA idrop: 1.0.1 is gone from the registry, local copy hidden
+c2 LOG NOLA idrop: 1.0.1 verdict from the host: lost
+c3 LOG NOLA idrop: 1.0.1 verdict from the host: mine
+c3 LOG NOLA idrop: 1.0.1 got exactly 1
+c2 LOG NOLA idrop: 1.0.1 lost the race, nothing to take back
+MARK t=race
+c2 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=0 loc=0 claims=1 pre=0 registered=0 spawned=1 took=0 lost=1 fixed=0 mc: pid=2 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+c3 DSTAT items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- idrop: reg=0 loc=0 claims=1 pre=0 registered=0 spawned=1 took=1 lost=0 fixed=0 mc: pid=3 views=3 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0

@@ -1,0 +1,18 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+c1 LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+c1 LOG NOLA LOCK_REL BP_Box_C@520,30,1
+c1 LOG NOLA TAKEN +BP_Box_C@520,30,1 (total 1)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 1 (1.5 s)
+h LOG NOLA TAKEN +BP_Box_C@520,30,1 (total 1)
+MARK t=c1-took-all-ammo
+h LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+h STUB close
+h LOG NOLA TAKEN_DENY BP_Box_C@520,30,1 (ja levado) janela fechada ok=true
+MARK t=host-open
+h INV BP_Box_C_1 A012A*30 Bandage*2

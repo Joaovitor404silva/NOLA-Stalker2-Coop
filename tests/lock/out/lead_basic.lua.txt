@@ -1,0 +1,36 @@
+> role host
+> flag lead 1
+> pawn 1000 442207.0 470552.0 0
+> npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+> run 300
+> view on
+> interact 442057.0 470452.0 832.0
+> run 500
+L 400 NOLA lead: trava #1 tomada (dlg em 442057,470452,832): este lado lidera, o outro segue
+O 400 #LK:h,1,1700000000,dlg,442057,470452,832
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 11
+> peer c,3,1700000005,dlg,442057.0,470452.0,832.0
+> run 300
+L 900 NOLA lead: empate com a trava #3 do cliente (dlg): o host vence (trava #1 dlg)
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 11
+> peer -
+> run 300
+> view off
+> run 500
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 11
+> run 1200
+L 2500 NOLA lead: trava #1 (dlg) solta: dialogo fechou (2.1 s)
+O 2500 -
+> state
+S mine=0 peer=0 owner=
+> leaddlg
+R leaddlg 00

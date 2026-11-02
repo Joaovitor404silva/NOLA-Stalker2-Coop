@@ -1,0 +1,52 @@
+role host
+flag doors 1
+flag doorfix 1
+flag ien 1
+flag ienecho 10
+sessions 1
+pawn 0 0 0
+obj PL1 BP_Padlock_Prototype_01_C InteractableObject inter 1000 0 0
+prop PL1 bEnabled 1
+prop PL1 bBroken 0
+obj D1 BP_DoorView_C DoorView door 1000 50 0
+yaw D1 10
+prop D1 bLocked 1
+time 1
+tick
+expect_none OUT #O
+time 2
+prop PL1 bBroken 1
+prop D1 bLocked 0
+tick
+expect_new LOG NOLA doorlock: 100,5,0 DESTRANCADA
+expect_new OUT #O:100,5,0;u
+expect_new OUT #P:100,0,0;b
+time 9
+tick
+expect_none OUT #O
+expect_none OUT #P
+time 10
+remote O 100,5,0;l
+tick
+expect_new LOG NOLA doorlock: 100,5,0 trancada no outro PC e destrancada aqui: reenvio destrancada
+expect_new OUT #O:100,5,0;u
+expect_none CALL D1.LockDoor
+time 11
+tick
+expect_none reenvio destrancada
+time 17
+remote O -
+tick
+expect_none OUT #O
+sessions 2
+time 18
+tick
+expect_new LOG NOLA doorlock: sessao #2 do outro lado: 1 tranca(s) reenviadas
+expect_new LOG NOLA ien: sessao #2 do outro lado: 1 quebrado(s) reenviados
+expect_new OUT #O:100,5,0;u
+expect_new OUT #P:100,0,0;b
+time 19
+prop D1 bLocked 1
+tick
+expect_new LOG NOLA doorlock: 100,5,0 TRANCADA
+expect_new OUT #O:100,5,0;l

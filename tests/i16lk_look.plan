@@ -1,0 +1,26 @@
+out D:\modding\proofs\20261030_1100_i16lk_look2
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A natlooksec 1
+setflag B natlooksec 1
+setflag A natmutlook 1
+setflag B natmutlook 1
+setflag A natgenmk 1
+setflag B natgenmk 1
+setflag A natlookre 0
+setflag B natlookre 0
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+mark i16lk_counters
+run D:\modding\cpp\wt\i16lk\tests\i16lk_look_spec.txt
+mark i16lk_shots
+shot hum_u3036 key=host:u3036 on=A,B cam=2.5
+?shot coat_u2354 key=host:u2354 on=A,B cam=2.5
+?shot hood_u2203 key=host:u2203 on=A,B cam=2.5

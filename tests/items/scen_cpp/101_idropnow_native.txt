@@ -1,0 +1,8 @@
+nodes 1
+@all flag ground 0
+@all me 5000 100 0
+@h myinv Medkit 1
+run 0.5
+@h idropnow Medkit 1
+@h idropnow Medkit 1
+run 0.5

@@ -1,0 +1,11 @@
+# Container lock and taken keys. Open any container on the client: the fake host prints "client #K: <id>".
+# Expect: "hold client" while it is open -> the client's window closes (LOCK_DENY ... conflito: o host fica);
+# open it again -> LOCK_DENY (em uso pelo outro jogador); after "hold off" it opens; after "taken client" -> TAKEN_DENY for good.
+5 key open a container on the client and leave it open; press Enter
+0 hold client
+5 key the window should have closed; open the same container again (it should close again); press Enter
+0 hold off
+5 key open it again (it should stay open), close it; press Enter
+0 taken client
+5 key open it once more: TAKEN_DENY expected; press Enter
+2 end

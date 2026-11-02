@@ -1,0 +1,7 @@
+spec i16gr_gore
+note i16gr gore sync (w/i16gr, flag natmidsc 1). Before this spec the plan moves B 80 m away, spawns and kills a frozen Blinddog next to A (scene i16gr_gore), then brings B back, so the copy of the corpse is made after the death. B must show no MID scalar difference against the host (mid_dif=0, mid_falhou=0) and keep it for 30 s. Supervisor A/B 2026-10-30 12:22: a copy MID Damage_Intensity zeroed by hand stayed 0 for 25 s with natmidsc 0 and was set back to 1 within 10 s with natmidsc 1 (mid_dif=2 then mid_set=4); the same window found a real host 1 / client 0 difference on uid3215.
+mark
+expect B NOLA natlook 10 s \(cliente\): i16lk .* \| natmidsc=1 mid_set=\d+ mid_dif=0 mid_falhou=0 mid_do_host=[1-9]\d* within 40
+mark
+expect_not B NOLA natlook 10 s \(cliente\).*\| natmidsc=1 mid_set=\d+ mid_dif=[1-9]\d* during 30
+expect_not B NOLA natlook 10 s \(cliente\).*mid_falhou=[1-9]\d* during 30

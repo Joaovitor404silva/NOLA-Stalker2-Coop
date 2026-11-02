@@ -1,0 +1,25 @@
+role client
+flag csave 1
+flag n7 1
+flag n7sv 1
+flag qsync 1
+flag qrollback 1
+flag joinport 0
+flag kit 0
+t 1
+pawn 700
+peer up 1 1
+file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n9\tJ,q1,n1,go,s1\n
+part B 5,9,c6ad219ea28b4,0,0,4,TAGSELF
+tick
+t 2
+part B 5,9,c6ad219ea28b4,0,1,4,TAGSELF
+tick
+t 30
+tick
+t 31
+part B 6,9,c6ad219ea28b4,1,1,4,TAGSELF
+tick
+t 40
+part B 7,9,dddd4444,1,1,4,TAGSELF
+tick

@@ -1,0 +1,538 @@
+name	file:line	kind	old	new	how found	verified
+lit_6d90e	s2x_tut.cpp:64	code	0x6d90e	0x9b351a	agree: fmap:changed+align + refs 22/22	fmap and refs agree; insn window compared
+lit_7ea60	s2m_items_x0.cpp:149	code	0x7ea60	0xec4464	refs: refs 22/22	caller refs vote; prologue/body compared
+lit_7f520	s2x_tut.cpp:65	code	0x7f520	0xc07da0	agree: fmap:changed+align + refs 29/29	fmap and refs agree; insn window compared
+lit_9f12e	s2x_istate_nat.cpp:109	code	0x9f12e	0xf73f18	refs: refs 15/15	caller refs vote; prologue/body compared
+lit_9f12e	s2x_istate_nat.cpp:198	code	0x9f12e	0xf73f18	refs: refs 15/15	caller refs vote; prologue/body compared
+lit_d0958	s2m_bodies.cpp:1535	code	0xd0958	0x96a08	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_d0958	s2m_bodies.cpp:1562	code	0xd0958	0x96a08	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_d0958	s2m_bodies.cpp:1571	code	0xd0958	0x96a08	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_d0958	s2m_bodies.cpp:1574	code	0xd0958	0x96a08	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_18a719	s2m_items_x0.cpp:148	code	0x18a719	0x4b7315	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_18a8ee	s2m_items_x0.cpp:148	code	0x18a8ee	0x4b74ea	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_199b76	s2m_cgcmc_x0.cpp:121	code	0x199b76	0x221f272	UP3 found: same offline decision (mgr,unit); old FUN_140199f42 inlined at +0xdf; calls getter d1fc4, reads count at +0x334, calls d2352(unit, mgr+0x68, count); 9ede734 (old 9ef0600) passed to 221f7d8 (old 19a174, fmap changed)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_199b76	s2m_cgcmc_x0.cpp:124	code	0x199b76	0x221f272	UP3 found: same offline decision (mgr,unit); old FUN_140199f42 inlined at +0xdf; calls getter d1fc4, reads count at +0x334, calls d2352(unit, mgr+0x68, count); 9ede734 (old 9ef0600) passed to 221f7d8 (old 19a174, fmap changed)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_199b76	s2m_cgcmc_x0.cpp:136	code	0x199b76	0x221f272	UP3 found: same offline decision (mgr,unit); old FUN_140199f42 inlined at +0xdf; calls getter d1fc4, reads count at +0x334, calls d2352(unit, mgr+0x68, count); 9ede734 (old 9ef0600) passed to 221f7d8 (old 19a174, fmap changed)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_199fe8	s2m_cgcmc_x0.cpp:122	code	0x199fe8	0xd1fc4	UP3 found: the getter called by 221f272 and 703e02 (and by 7033de, old 9b8db8, which reads radius b10e258); magic-static with ctor 2dba784 (fmap: old ctor 2eba426 -> 2dba784); fmap twin 136e46 is another singleton; count field moved 0x330 -> 0x334 (both callers read +0x334)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_199fe8	s2m_cgcmc_x0.cpp:71	code	0x199fe8	0xd1fc4	UP3 found: the getter called by 221f272 and 703e02 (and by 7033de, old 9b8db8, which reads radius b10e258); magic-static with ctor 2dba784 (fmap: old ctor 2eba426 -> 2dba784); fmap twin 136e46 is another singleton; count field moved 0x330 -> 0x334 (both callers read +0x334)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_19a42c	s2m_cgc_x0.cpp:78	code	0x19a42c	0xd2352	UP3 found: new FUN_1400d2352 is the same corpse online test (same args unit,pos,count; same GUObjectArray +0x50/+0x54 lookup, same cvar pairs b10c1ac/b10c1b0 b10c1b4..b10c1c8 mapped from b11ca8c..b11caa8, low-memory pick inlined via 233804b); callers 221f272 (old 199b76) and 703e02 (old 9b94d2), 2 callers like the old one	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_19a42c	s2m_cgc_x0.cpp:81	code	0x19a42c	0xd2352	UP3 found: new FUN_1400d2352 is the same corpse online test (same args unit,pos,count; same GUObjectArray +0x50/+0x54 lookup, same cvar pairs b10c1ac/b10c1b0 b10c1b4..b10c1c8 mapped from b11ca8c..b11caa8, low-memory pick inlined via 233804b); callers 221f272 (old 199b76) and 703e02 (old 9b94d2), 2 callers like the old one	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_19a42c	s2m_cgc_x0.cpp:93	code	0x19a42c	0xd2352	UP3 found: new FUN_1400d2352 is the same corpse online test (same args unit,pos,count; same GUObjectArray +0x50/+0x54 lookup, same cvar pairs b10c1ac/b10c1b0 b10c1b4..b10c1c8 mapped from b11ca8c..b11caa8, low-memory pick inlined via 233804b); callers 221f272 (old 199b76) and 703e02 (old 9b94d2), 2 callers like the old one	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_19a42c	s2m_cgcmc_x0.cpp:122	code	0x19a42c	0xd2352	UP3 found: new FUN_1400d2352 is the same corpse online test (same args unit,pos,count; same GUObjectArray +0x50/+0x54 lookup, same cvar pairs b10c1ac/b10c1b0 b10c1b4..b10c1c8 mapped from b11ca8c..b11caa8, low-memory pick inlined via 233804b); callers 221f272 (old 199b76) and 703e02 (old 9b94d2), 2 callers like the old one	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_19a42c	s2m_cgcmc_x0.cpp:81	code	0x19a42c	0xd2352	UP3 found: new FUN_1400d2352 is the same corpse online test (same args unit,pos,count; same GUObjectArray +0x50/+0x54 lookup, same cvar pairs b10c1ac/b10c1b0 b10c1b4..b10c1c8 mapped from b11ca8c..b11caa8, low-memory pick inlined via 233804b); callers 221f272 (old 199b76) and 703e02 (old 9b94d2), 2 callers like the old one	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_1ff652	s2m_solo.cpp:253	code	0x1ff652	0x2ed23ea	refs: refs 3/3	caller refs vote; prologue/body compared
+lit_20241a	s2x_tut.cpp:62	code	0x20241a	0x42e250	agree: fmap:moved + refs 21/21	fmap and refs agree; insn window compared
+lit_2556e6	s2x_istate_nat.cpp:105	code	0x2556e6	0x650894	agree: fmap:moved + refs 17/17	fmap and refs agree; insn window compared
+lit_2556e6	s2x_istate_nat.cpp:199	code	0x2556e6	0x650894	agree: fmap:moved + refs 17/17	fmap and refs agree; insn window compared
+lit_2556e6	s2x_istate_nat.cpp:328	code	0x2556e6	0x650894	agree: fmap:moved + refs 17/17	fmap and refs agree; insn window compared
+lit_255774	s2x_istate_nat.cpp:106	code	0x255774	0x650922	agree: fmap:moved + refs 16/16	fmap and refs agree; insn window compared
+lit_255774	s2x_istate_nat.cpp:201	code	0x255774	0x650922	agree: fmap:moved + refs 16/16	fmap and refs agree; insn window compared
+lit_255774	s2x_istate_nat.cpp:332	code	0x255774	0x650922	agree: fmap:moved + refs 16/16	fmap and refs agree; insn window compared
+lit_26475a	s2x_istate_nat.cpp:132	code	0x26475a	0x35e314	manual: vtable slots of 6 vtables + aob48, window 24/24	manual disasm
+lit_28bffe	s2m_items_x0.cpp:234	code	0x28bffe	0xa6cd26	agree: fmap:moved + refs 19/19	fmap and refs agree; insn window compared
+lit_28bffe	s2x_istate_nat.cpp:130	code	0x28bffe	0xa6cd26	agree: fmap:moved + refs 19/19	fmap and refs agree; insn window compared
+lit_28bffe	s2x_istate_nat.cpp:427	code	0x28bffe	0xa6cd26	agree: fmap:moved + refs 19/19	fmap and refs agree; insn window compared
+lit_2cbb02	s2m_qbranch.cpp:36	code	0x2cbb02	0x7a8b56	agree: fmap:changed+align + refs 20/20	fmap and refs agree; insn window compared
+lit_2cc313	s2m_qbranch.cpp:47	code	0x2cc313	0x7a9520	fmap:changed+align: aligned block len 1; window 1/24; ratio 0.73	capstone window compare
+lit_2cdf4c	s2m_qbranch.cpp:37	code	0x2cdf4c	0x7aa720	agree: fmap:changed+align + refs 4/4	fmap and refs agree; insn window compared
+lit_327736	s2n_nat.cpp:4047	code	0x327736	0x1e8b48	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_43628c	s2n_nat.cpp:3985	code	0x43628c	0x21c78c	refs + manual: writer now inlines the second fn at +0x40; kTh new 32 bytes, kThCall = cmp byte [rsi+0x1af],0 at +0x40	disasm
+lit_43a7dc	s2m_csave.cpp:38	code	0x43a7dc	0x21c034	refs: refs 21/21	caller refs vote; prologue/body compared
+lit_43f3c2	s2n_nat.cpp:4061	code	0x43f3c2	0x21df6a	agree: aob48 + refs 1/1	fmap and refs agree; insn window compared
+lit_441b08	s2n_nat.cpp:4056	code	0x441b08	0x222e62	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_584dfc	s2x_tut.cpp:63	code	0x584dfc	0x42b2ba	agree: fmap:moved + refs 22/23	fmap and refs agree; insn window compared
+lit_5feb9a	s2x_istate_nat.cpp:115	code	0x5feb9a	0x52e700	agree: fmap:moved + refs 18/22	fmap and refs agree; insn window compared
+lit_5feb9a	s2x_istate_nat.cpp:345	code	0x5feb9a	0x52e700	agree: fmap:moved + refs 18/22	fmap and refs agree; insn window compared
+lit_5feb9a	s2x_istate_nat.cpp:355	code	0x5feb9a	0x52e700	agree: fmap:moved + refs 18/22	fmap and refs agree; insn window compared
+lit_60ef92	s2n_nat.cpp:4029	code	0x60ef92	0x4d1476	agree: fmap:moved + refs 19/19	fmap and refs agree; insn window compared
+lit_617986	s2x_istate_nat.cpp:111	code	0x617986	0x4da52e	agree: aob48 + refs 20/21	fmap and refs agree; insn window compared
+lit_617986	s2x_istate_nat.cpp:221	code	0x617986	0x4da52e	agree: aob48 + refs 20/21	fmap and refs agree; insn window compared
+lit_617986	s2x_istate_nat.cpp:386	code	0x617986	0x4da52e	agree: aob48 + refs 20/21	fmap and refs agree; insn window compared
+lit_650bee	s2n_nat.cpp:3630	code	0x650bee	0xc4c814	agree: fmap:changed+align + refs 19/19	fmap and refs agree; insn window compared
+lit_6b73a6	s2n_nat.cpp:3197	code	0x6b73a6	0x7613b2	agree: fmap:changed+align + refs 22/22	fmap and refs agree; insn window compared
+lit_80d4e4	s2n_nat.cpp:3986	code	0x80d4e4	0x49482e	manual: manual: fmap moved, identical body; writer now inlines it at +0x40	manual disasm
+lit_80d4e4	s2n_nat.cpp:3988	code	0x80d4e4	0x49482e	manual: manual: fmap moved, identical body; writer now inlines it at +0x40	manual disasm
+lit_8c0610	s2n_join.cpp:542	code	0x8c0610	0x84a8d8	agree: fmap:moved + refs 10/10	fmap and refs agree; insn window compared
+lit_8c0610	s2n_join.cpp:624	code	0x8c0610	0x84a8d8	agree: fmap:moved + refs 10/10	fmap and refs agree; insn window compared
+lit_8c906a	s2n_nat.cpp:4011	code	0x8c906a	0x854bbe	refs: refs single 1/1	caller refs vote; prologue/body compared
+lit_8c906a	s2n_nat.cpp:4018	code	0x8c906a	0x854bbe	refs: refs single 1/1	caller refs vote; prologue/body compared
+lit_93da82	s2n_nat.cpp:4012	code	0x93da82	0x989d88	agree: fmap:moved + refs 25/25	fmap and refs agree; insn window compared
+lit_93da82	s2n_nat.cpp:4015	code	0x93da82	0x989d88	agree: fmap:moved + refs 25/25	fmap and refs agree; insn window compared
+lit_acf932	s2n_nat.cpp:3194	code	0xacf932	0xb30cd0	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_acfd68	s2n_nat.cpp:3196	code	0xacfd68	0xb31106	agree: fmap:changed+align + refs 2/2	fmap and refs agree; insn window compared
+lit_ad6130	s2n_nat.cpp:3198	code	0xad6130	0xb375f0	agree: fmap:changed+align + refs 4/4	fmap and refs agree; insn window compared
+lit_b84000	s2n_nat.cpp:2346	code	0xb84000	0xaee000	manual: manual: page of the new scorer sites	manual disasm
+lit_b84ef9	s2n_nat.cpp:2309	code	0xb84ef9	0xaeea43	manual: manual: scorer site A, cmp eax,[player]	manual disasm
+lit_b84ef9	s2n_nat.cpp:2348	code	0xb84ef9	0xaeea43	manual: manual: scorer site A, cmp eax,[player]	manual disasm
+lit_b84f05	s2n_ag.inc:42	code	0xb84f05	0xaeea4f	manual: manual: scorer site A fallthrough	manual disasm
+lit_b850cc	s2n_nat.cpp:2309	code	0xb850cc	0xaeec03	manual: manual: scorer site B, mov r12d,[player]	manual disasm
+lit_b850cc	s2n_nat.cpp:2348	code	0xb850cc	0xaeec03	manual: manual: scorer site B, mov r12d,[player]	manual disasm
+lit_b850e0	s2n_ag.inc:47	code	0xb850e0	0xaeec19	manual: manual: scorer site B end	manual disasm
+lit_b850e0	s2n_ag.inc:56	code	0xb850e0	0xaeec19	manual: manual: scorer site B end	manual disasm
+lit_b850e0	s2n_ag.inc:59	code	0xb850e0	0xaeec19	manual: manual: scorer site B end	manual disasm
+lit_b851b7	s2n_nat.cpp:2309	code	0xb851b7	0xaeece9	manual: manual: scorer site C	manual disasm
+lit_b851b7	s2n_nat.cpp:2348	code	0xb851b7	0xaeece9	manual: manual: scorer site C	manual disasm
+lit_b851c9	s2n_ag.inc:83	code	0xb851c9	0xaeecfc	manual: manual: scorer site C end	manual disasm
+lit_b852e8	s2n_ag.inc:33	code	0xb852e8	0xaeefbe	manual: manual: scorer site A je target	manual disasm
+lit_b852e8	s2n_ag.inc:39	code	0xb852e8	0xaeefbe	manual: manual: scorer site A je target	manual disasm
+lit_c15f50	s2x_istate_nat.cpp:107	code	0xc15f50	0xc5a3a4	agree: fmap:moved + refs 17/17	fmap and refs agree; insn window compared
+lit_c15f50	s2x_istate_nat.cpp:207	code	0xc15f50	0xc5a3a4	agree: fmap:moved + refs 17/17	fmap and refs agree; insn window compared
+lit_c15f50	s2x_istate_nat.cpp:335	code	0xc15f50	0xc5a3a4	agree: fmap:moved + refs 17/17	fmap and refs agree; insn window compared
+lit_c177de	s2m_items_x0.cpp:233	code	0xc177de	0x84bb22	agree: fmap:moved + refs 27/27	fmap and refs agree; insn window compared
+lit_c177de	s2x_istate_nat.cpp:129	code	0xc177de	0x84bb22	agree: fmap:moved + refs 27/27	fmap and refs agree; insn window compared
+lit_c177de	s2x_istate_nat.cpp:426	code	0xc177de	0x84bb22	agree: fmap:moved + refs 27/27	fmap and refs agree; insn window compared
+lit_c18810	s2x_istate_nat.cpp:124	code	0xc18810	0xc5bd5e	agree: fmap:changed+align + refs 15/16	fmap and refs agree; insn window compared
+lit_c18810	s2x_istate_nat.cpp:446	code	0xc18810	0xc5bd5e	agree: fmap:changed+align + refs 15/16	fmap and refs agree; insn window compared
+lit_d3111a	s2n_nat.cpp:3996	code	0xd3111a	0xc6055a	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_d5c37e	s2m_pcompass.cpp:17	code	0xd5c37e	0xd01d10	agree: fmap:moved + refs 3/3	fmap and refs agree; insn window compared
+lit_d5c880	s2m_pcompass.cpp:16	code	0xd5c880	0xd05340	agree: fmap:moved + refs 23/23	fmap and refs agree; insn window compared
+lit_e0a2b4	s2x_istate_nat.cpp:131	code	0xe0a2b4	0xec446e	refs: refs 15/16	caller refs vote; prologue/body compared
+lit_e87bb8	s2n_nat.cpp:3195	code	0xe87bb8	0xe6c1c8	agree: fmap:moved + refs 1/1	fmap and refs agree; insn window compared
+lit_e87d68	s2n_nat.cpp:3193	code	0xe87d68	0xe6c378	agree: fmap:changed+align + refs 2/2	fmap and refs agree; insn window compared
+lit_e88d2a	s2n_nat.cpp:3199	code	0xe88d2a	0xe6d378	agree: fmap:changed+align + refs 3/3	fmap and refs agree; insn window compared
+lit_f87e00	s2m_save_x0.cpp:144	code	0xf87e00	0xff1646	refs: refs 20/21	caller refs vote; prologue/body compared
+lit_fb0fd0	s2m_solo.cpp:245	code	0xfb0fd0	0xe44e3c	agree: fmap:changed+align + refs 21/21	fmap and refs agree; insn window compared
+lit_1038ad2	s2n_nat.cpp:4038	code	0x1038ad2	0xf31c40	agree: fmap:changed+align + refs 6/6	fmap and refs agree; insn window compared
+lit_1073dc0	s2m_ixtap_x0.cpp:79	code	0x1073dc0	0xf8bce6	manual: vtable slot 93 of mapped vtable	manual disasm
+lit_1073dc0	s2m_ixtap_x0.cpp:82	code	0x1073dc0	0xf8bce6	manual: vtable slot 93 of mapped vtable	manual disasm
+lit_1073dc0	s2m_ixtap_x0.cpp:94	code	0x1073dc0	0xf8bce6	manual: vtable slot 93 of mapped vtable	manual disasm
+lit_108a334	s2m_loadscreen.cpp:40	code	0x108a334	0xff7408	refs: refs 26/27	caller refs vote; prologue/body compared
+lit_10e31a6	s2x_istate_nat.cpp:113	code	0x10e31a6	0x1170dc4	refs: refs 2/3	caller refs vote; prologue/body compared
+lit_10e31a6	s2x_istate_nat.cpp:220	code	0x10e31a6	0x1170dc4	refs: refs 2/3	caller refs vote; prologue/body compared
+lit_10fe04c	s2m_items_x0.cpp:111	code	0x10fe04c	0x35f488c	agree: fmap:changed+align + refs 10/10	fmap and refs agree; insn window compared
+lit_10fe04c	s2m_items_x0.cpp:240	code	0x10fe04c	0x35f488c	agree: fmap:changed+align + refs 10/10	fmap and refs agree; insn window compared
+lit_10fe04c	s2m_items_x0.cpp:87	code	0x10fe04c	0x35f488c	agree: fmap:changed+align + refs 10/10	fmap and refs agree; insn window compared
+lit_10fe1ce	s2x_istate_nat.cpp:126	code	0x10fe1ce	0x35f49d7	fmap:changed+align: aligned block len 3; window 1/24; ratio 0.42	capstone window compare
+lit_112ae10	s2m_qbranch.cpp:48	code	0x112ae10	0x106184a	fmap:changed+align: aligned block len 267; window 24/24; ratio 0.99	capstone window compare
+lit_112b410	s2m_qbranch.cpp:49	code	0x112b410	0x1061e53	fmap:changed+align: aligned block len 6; window 2/2; ratio 0.99	capstone window compare
+lit_126d4d0	s2x_istate_nat.cpp:121	code	0x126d4d0	0x1190294	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_126d4d0	s2x_istate_nat.cpp:390	code	0x126d4d0	0x1190294	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_20908c0	s2m_items_x0.cpp:148	code	0x20908c0	0x1fb59ea	UP3 found: same bytes 8a 41 40 24 01 c3 at 1fb59ea, followed by the 0x11 twin at 1fb59f0 (old 20908c6 is the 0x11 twin of 20908c0); 1fb59ea is passed by 5926b4 (old 887ec) to the walker 24efe78	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_2095d30	s2m_lshold.cpp:394	code	0x2095d30	-	lambda type gone; replaced by an own delegate free (del_free: vslot0(data,0) + FMemory::Free 0x1fedb86), same steps as the old dtor body	disasm of old body
+lit_2095d30	s2m_lshold.cpp:42	code	0x2095d30	-	lambda type gone; replaced by an own delegate free (del_free: vslot0(data,0) + FMemory::Free 0x1fedb86), same steps as the old dtor body	disasm of old body
+lit_20a9614	s2x_istate_nat.cpp:120	code	0x20a9614	0x1fd523e	agree: aob24 + refs 2/2	fmap and refs agree; insn window compared
+lit_20a9614	s2x_istate_nat.cpp:389	code	0x20a9614	0x1fd523e	agree: aob24 + refs 2/2	fmap and refs agree; insn window compared
+lit_20a9624	s2x_istate_nat.cpp:122	code	0x20a9624	0x1fd524e	refs: refs 6/6	caller refs vote; prologue/body compared
+lit_20a9624	s2x_istate_nat.cpp:391	code	0x20a9624	0x1fd524e	refs: refs 6/6	caller refs vote; prologue/body compared
+lit_20c40ba	s2m_lshold.cpp:44	code	0x20c40ba	0x1fedb86	agree: fmap:changed+align + refs 27/27	fmap and refs agree; insn window compared
+lit_20d153a	s2m_items_x0.cpp:112	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d153a	s2m_items_x0.cpp:241	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d153a	s2m_items_x0.cpp:87	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d153a	s2m_qbranch.cpp:41	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d153a	s2m_solo.cpp:44	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d153a	s2x_istate_nat.cpp:135	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d153a	s2x_istate_nat.cpp:301	code	0x20d153a	0x1ffefc6	agree: fmap:changed+align + refs 13/15	fmap and refs agree; insn window compared
+lit_20d705c	s2m_lshold.cpp:43	code	0x20d705c	0x23cfda2	agree: fmap:changed+align + refs 27/27	fmap and refs agree; insn window compared
+lit_2166e10	s2m_oodle.cpp:13	code	0x2166e10	0x20b8c87	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_21ae6b0	s2n_nat.cpp:3629	code	0x21ae6b0	0x25fcefa	agree: fmap:moved + refs 20/20	fmap and refs agree; insn window compared
+lit_21ae6b0	s2n_nat.cpp:3631	code	0x21ae6b0	0x25fcefa	agree: fmap:moved + refs 20/20	fmap and refs agree; insn window compared
+lit_21de7a0	s2x_istate_nat.cpp:108	code	0x21de7a0	0x22cc2f2	agree: fmap:moved + refs 19/20	fmap and refs agree; insn window compared
+lit_21de7a0	s2x_istate_nat.cpp:214	code	0x21de7a0	0x22cc2f2	agree: fmap:moved + refs 19/20	fmap and refs agree; insn window compared
+lit_21de7a0	s2x_istate_nat.cpp:361	code	0x21de7a0	0x22cc2f2	agree: fmap:moved + refs 19/20	fmap and refs agree; insn window compared
+lit_22d0c32	s2m_qbranch.cpp:40	code	0x22d0c32	0x235663c	agree: fmap:changed+align + refs 17/17	fmap and refs agree; insn window compared
+lit_235b93c	s2m_items_x0.cpp:147	code	0x235b93c	0x24efea0	UP3 found: walker 235b914 -> 24efe78 (fmap changed, predicate inlined); +0x28 movsxd [rcx+0x118], [rcx+0x110], shl 4 (registers differ)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_235b99c	s2m_items_x0.cpp:147	code	0x235b99c	0x24eff06	UP3 found: walker 24efe78+0x8e lea r15,[a74b120] (the pool already ported for ctListSeh); cmp esi,0x1000	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_235b9e7	s2m_items_x0.cpp:147	code	0x235b9e7	0x24eff56	UP3 found: walker 24efe78+0xde shl rcx,7; lea rax,[rcx+rax*8] (record 0x88)	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_235bada	s2m_items_x0.cpp:148	code	0x235bada	0x68f5304	UP3 found: predicate 235bac4 -> 68f52ee (same body), +0x16 mov r14d,[rdx+0x38] same bytes; also inlined at 24efe78+0xfd	new exe bytes compared by vchk.py; disassembly of old and new function read side by side
+lit_248e722	s2x_istate_nat.cpp:125	code	0x248e722	0x2222242	agree: fmap:changed+align + refs 16/17	fmap and refs agree; insn window compared
+lit_248e722	s2x_istate_nat.cpp:453	code	0x248e722	0x2222242	agree: fmap:changed+align + refs 16/17	fmap and refs agree; insn window compared
+lit_2560e08	s2m_menu.cpp:73	code	0x2560e08	0x20afdf6	refs: refs 16/16	caller refs vote; prologue/body compared
+lit_2636a70	s2m_items_x0.cpp:110	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a70	s2m_items_x0.cpp:239	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a70	s2m_items_x0.cpp:88	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a70	s2m_save_x0.cpp:145	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a70	s2m_save_x0.cpp:167	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a70	s2x_istate_nat.cpp:134	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a70	s2x_istate_nat.cpp:308	code	0x2636a70	0x259c49c	agree: fmap:moved + refs 24/24	fmap and refs agree; insn window compared
+lit_2636a90	s2m_items_x0.cpp:149	code	0x2636a90	0x259c4bc	fmap:moved: window 18/18 ins equal, bad targets 0	capstone window compare
+lit_2638d06	s2m_items_x0.cpp:107	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_2638d06	s2m_items_x0.cpp:223	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_2638d06	s2m_items_x0.cpp:87	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_2638d06	s2m_save_x0.cpp:145	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_2638d06	s2m_save_x0.cpp:164	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_2638d06	s2x_istate_nat.cpp:133	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_2638d06	s2x_istate_nat.cpp:291	code	0x2638d06	0x25a231a	refs: refs 16/17	caller refs vote; prologue/body compared
+lit_26a935a	s2n_nat.cpp:4012	code	0x26a935a	0x25db0e4	agree: fmap:changed+align + refs 17/17	fmap and refs agree; insn window compared
+lit_26a935a	s2n_nat.cpp:4014	code	0x26a935a	0x25db0e4	agree: fmap:changed+align + refs 17/17	fmap and refs agree; insn window compared
+lit_26a935a	s2n_wpn.inc:45	code	0x26a935a	0x25db0e4	agree: fmap:changed+align + refs 17/17	fmap and refs agree; insn window compared
+lit_26a935a	s2n_wpn.inc:53	code	0x26a935a	0x25db0e4	agree: fmap:changed+align + refs 17/17	fmap and refs agree; insn window compared
+lit_26a935a	s2n_wpn.inc:58	code	0x26a935a	0x25db0e4	agree: fmap:changed+align + refs 17/17	fmap and refs agree; insn window compared
+lit_26b1d7a	s2m_life_x0.cpp:282	code	0x26b1d7a	0x2602220	agree: aob48 + refs 12/20	fmap and refs agree; insn window compared
+lit_26b1d7a	s2m_life_x0.cpp:290	code	0x26b1d7a	0x2602220	agree: aob48 + refs 12/20	fmap and refs agree; insn window compared
+lit_26c7258	s2x_istate_nat.cpp:114	code	0x26c7258	0x25fac38	agree: fmap:moved + refs 21/22	fmap and refs agree; insn window compared
+lit_26c7258	s2x_istate_nat.cpp:376	code	0x26c7258	0x25fac38	agree: fmap:moved + refs 21/22	fmap and refs agree; insn window compared
+lit_26d74b2	s2n_join.cpp:542	code	0x26d74b2	0x25f9944	agree: fmap:moved + refs 11/12	fmap and refs agree; insn window compared
+lit_26d74b2	s2n_join.cpp:568	code	0x26d74b2	0x25f9944	agree: fmap:moved + refs 11/12	fmap and refs agree; insn window compared
+lit_26d74b2	s2n_wpn.inc:45	code	0x26d74b2	0x25f9944	agree: fmap:moved + refs 11/12	fmap and refs agree; insn window compared
+lit_26d74b2	s2n_wpn.inc:55	code	0x26d74b2	0x25f9944	agree: fmap:moved + refs 11/12	fmap and refs agree; insn window compared
+lit_26d74b2	s2n_wpn.inc:58	code	0x26d74b2	0x25f9944	agree: fmap:moved + refs 11/12	fmap and refs agree; insn window compared
+lit_2760ea0	s2m_oodle.cpp:16	code	0x2760ea0	0x2689f00	agree: aob48 + refs 16/16	fmap and refs agree; insn window compared
+lit_2ed648e	s2x_istate_nat.cpp:123	code	0x2ed648e	0x2dfbe74	refs: refs 4/4	caller refs vote; prologue/body compared
+lit_2ed648e	s2x_istate_nat.cpp:392	code	0x2ed648e	0x2dfbe74	refs: refs 4/4	caller refs vote; prologue/body compared
+lit_2f538c2	s2x_istate_nat.cpp:110	code	0x2f538c2	0x3491a6a	agree: aob48 + refs 4/4	fmap and refs agree; insn window compared
+lit_2f538c2	s2x_istate_nat.cpp:327	code	0x2f538c2	0x3491a6a	agree: aob48 + refs 4/4	fmap and refs agree; insn window compared
+lit_2f579a6	s2x_istate_nat.cpp:112	code	0x2f579a6	0x2ead6c6	refs: refs 2/2	caller refs vote; prologue/body compared
+lit_2f579a6	s2x_istate_nat.cpp:228	code	0x2f579a6	0x2ead6c6	refs: refs 2/2	caller refs vote; prologue/body compared
+lit_3009000	s2m_items_x0.cpp:232	code	0x3009000	0x2f35584	agree: fmap:moved + refs 23/23	fmap and refs agree; insn window compared
+lit_30c6292	s2m_qbranch.cpp:39	code	0x30c6292	0x2f98a44	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_324d448	s2x_istate_nat.cpp:127	code	0x324d448	0x2edf150	agree: fmap:moved + refs 20/20	fmap and refs agree; insn window compared
+lit_324d448	s2x_istate_nat.cpp:472	code	0x324d448	0x2edf150	agree: fmap:moved + refs 20/20	fmap and refs agree; insn window compared
+lit_32cc3ef	s2m_oodle.cpp:14	code	0x32cc3ef	0x31be684	agree: fmap:moved + refs 6/6	fmap and refs agree; insn window compared
+lit_32cc456	s2m_oodle.cpp:15	code	0x32cc456	0x31be6ec	agree: fmap:changed+align + refs 3/4	fmap and refs agree; insn window compared
+lit_32fb5a2	s2m_menu.cpp:94	code	0x32fb5a2	0x33308e2	agree: fmap:moved + refs 16/16	fmap and refs agree; insn window compared
+lit_32fb5a2	s2m_menu.cpp:960	code	0x32fb5a2	0x33308e2	agree: fmap:moved + refs 16/16	fmap and refs agree; insn window compared
+lit_32fb7bc	s2m_life_x0.cpp:202	code	0x32fb7bc	0x3330b02	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_32fb7bc	s2m_life_x0.cpp:205	code	0x32fb7bc	0x3330b02	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_32fb7bc	s2m_life_x0.cpp:217	code	0x32fb7bc	0x3330b02	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_32fc50a	s2m_menu.cpp:1371	code	0x32fc50a	0x33319a4	agree: fmap:changed+align + refs 2/2	fmap and refs agree; insn window compared
+lit_32fc50a	s2m_menu.cpp:72	code	0x32fc50a	0x33319a4	agree: fmap:changed+align + refs 2/2	fmap and refs agree; insn window compared
+lit_32fc886	s2m_menu.cpp:74	code	0x32fc886	0x3331cf4	agree: fmap:moved + refs 3/3	fmap and refs agree; insn window compared
+lit_336cbbc	s2m_qbranch.cpp:38	code	0x336cbbc	0x2ef4ad6	agree: fmap:moved + refs 6/6	fmap and refs agree; insn window compared
+lit_336dcbd	s2m_items_x0.cpp:150	code	0x336dcbd	0x2ef5135	fmap:moved: window 24/24 ins equal, bad targets 1	capstone window compare
+lit_336dd2a	s2m_items_x0.cpp:150	code	0x336dd2a	0x2ef51a2	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_3375634	s2x_istate_nat.cpp:117	code	0x3375634	0x2fbefca	agree: fmap:changed+align + refs 8/8	fmap and refs agree; insn window compared
+lit_3375634	s2x_istate_nat.cpp:357	code	0x3375634	0x2fbefca	agree: fmap:changed+align + refs 8/8	fmap and refs agree; insn window compared
+lit_33759b8	s2x_istate_nat.cpp:116	code	0x33759b8	0x2fbf2e2	agree: fmap:changed+align + refs 2/3	fmap and refs agree; insn window compared
+lit_33759b8	s2x_istate_nat.cpp:347	code	0x33759b8	0x2fbf2e2	agree: fmap:changed+align + refs 2/3	fmap and refs agree; insn window compared
+lit_33ce56a	s2m_csave.cpp:40	code	0x33ce56a	0x33ab358	agree: fmap:changed+align + refs 3/4	fmap and refs agree; insn window compared
+lit_34f84f2	s2n_join.cpp:542	code	0x34f84f2	0x340692a	agree: fmap:changed+align + refs 14/14	fmap and refs agree; insn window compared
+lit_34f84f2	s2n_join.cpp:636	code	0x34f84f2	0x340692a	agree: fmap:changed+align + refs 14/14	fmap and refs agree; insn window compared
+lit_35e46c6	s2m_menu.cpp:1346	code	0x35e46c6	0x346b32e	agree: fmap:moved + refs 14/14	fmap and refs agree; insn window compared
+lit_35e46c6	s2m_menu.cpp:89	code	0x35e46c6	0x346b32e	agree: fmap:moved + refs 14/14	fmap and refs agree; insn window compared
+lit_35fa938	s2m_loadscreen.cpp:162	code	0x35fa938	0x3551ba6	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_35fa938	s2m_loadscreen.cpp:351	code	0x35fa938	0x3551ba6	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_35fa938	s2m_loadscreen.cpp:383	code	0x35fa938	0x3551ba6	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_35fa938	s2m_loadscreen.cpp:384	code	0x35fa938	0x3551ba6	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_35fa938	s2m_loadscreen.cpp:39	code	0x35fa938	0x3551ba6	agree: fmap:moved + refs 4/4	fmap and refs agree; insn window compared
+lit_35ff090	s2m_solo.cpp:251	code	0x35ff090	0x3554b0a	agree: fmap:moved + refs 1/1	fmap and refs agree; insn window compared
+lit_3679302	s2m_solo.cpp:247	code	0x3679302	0x361bea0	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_36f27be	s2m_loadscreen.cpp:38	code	0x36f27be	0x3679f5c	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_36f27be	s2m_loadscreen.cpp:383	code	0x36f27be	0x3679f5c	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_371400c	s2m_csave.cpp:39	code	0x371400c	0x31ea550	agree: fmap:moved + refs 3/3	fmap and refs agree; insn window compared
+lit_37a3fd2	s2m_life_x0.cpp:43	code	0x37a3fd2	0x372f080	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_37a3fd2	s2m_life_x0.cpp:53	code	0x37a3fd2	0x372f080	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_37c476f	s2n_wpn.inc:45	code	0x37c476f	0x3740bb1	agree: fmap:changed+align + refs 1/1	fmap and refs agree; insn window compared
+lit_37c476f	s2n_wpn.inc:54	code	0x37c476f	0x3740bb1	agree: fmap:changed+align + refs 1/1	fmap and refs agree; insn window compared
+lit_37c476f	s2n_wpn.inc:58	code	0x37c476f	0x3740bb1	agree: fmap:changed+align + refs 1/1	fmap and refs agree; insn window compared
+lit_37cb9d4	s2m_life_x0.cpp:84	code	0x37cb9d4	0x38ae099	agree: fmap:moved + refs 21/21	fmap and refs agree; insn window compared
+lit_37cb9d4	s2m_life_x0.cpp:87	code	0x37cb9d4	0x38ae099	agree: fmap:moved + refs 21/21	fmap and refs agree; insn window compared
+lit_37cb9d4	s2m_life_x0.cpp:99	code	0x37cb9d4	0x38ae099	agree: fmap:moved + refs 21/21	fmap and refs agree; insn window compared
+lit_37cc210	s2m_life_x0.cpp:249	code	0x37cc210	0x38ae8bc	agree: fmap:moved + refs 7/7	fmap and refs agree; insn window compared
+lit_37cc210	s2m_life_x0.cpp:252	code	0x37cc210	0x38ae8bc	agree: fmap:moved + refs 7/7	fmap and refs agree; insn window compared
+lit_37cc210	s2m_life_x0.cpp:264	code	0x37cc210	0x38ae8bc	agree: fmap:moved + refs 7/7	fmap and refs agree; insn window compared
+lit_3aea9dc	s2x_istate_nat.cpp:118	code	0x3aea9dc	0x347d2b4	agree: fmap:moved + refs 8/8	fmap and refs agree; insn window compared
+lit_3aea9dc	s2x_istate_nat.cpp:372	code	0x3aea9dc	0x347d2b4	agree: fmap:moved + refs 8/8	fmap and refs agree; insn window compared
+lit_3b36404	s2m_lshold.cpp:394	code	0x3b36404	0x389e3b8	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_3b36404	s2m_lshold.cpp:403	code	0x3b36404	0x389e3b8	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_3b36404	s2m_lshold.cpp:406	code	0x3b36404	0x389e3b8	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_3b36404	s2m_lshold.cpp:41	code	0x3b36404	0x389e3b8	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_571f49c	s2r_x0.cpp:77	code	0x571f49c	0x56cca96	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_6837d70	s2m_life_x0.cpp:282	code	0x6837d70	0x3307254	agree: aob24 + refs 2/2	fmap and refs agree; insn window compared
+lit_6837d70	s2m_life_x0.cpp:283	code	0x6837d70	0x3307254	agree: aob24 + refs 2/2	fmap and refs agree; insn window compared
+lit_6837d70	s2m_life_x0.cpp:305	code	0x6837d70	0x3307254	agree: aob24 + refs 2/2	fmap and refs agree; insn window compared
+lit_69017da	s2n_nat.cpp:4011	code	0x69017da	0x6898afe	agree: fmap:moved + refs 8/8	fmap and refs agree; insn window compared
+lit_69017da	s2n_nat.cpp:4016	code	0x69017da	0x6898afe	agree: fmap:moved + refs 8/8	fmap and refs agree; insn window compared
+lit_6950ae0	s2x_istate_nat.cpp:119	code	0x6950ae0	0x68e2a64	agree: aob48 + refs 2/2	fmap and refs agree; insn window compared
+lit_6950ae8	s2x_istate_nat.cpp:382	code	0x6950ae8	0x68e2a6c	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6952be8	s2m_save_x0.cpp:145	code	0x6952be8	0x68eb5ae	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6952be8	s2m_save_x0.cpp:168	code	0x6952be8	0x68eb5ae	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6b6e730	s2n_nat.cpp:3806	code	0x6b6e730	0x6b07ee0	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6b6e74f	s2m_save_x0.cpp:144	code	0x6b6e74f	0x6b07eff	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_6b6e76a	s2m_save_x0.cpp:144	code	0x6b6e76a	0x6b07f1a	fmap:moved: window 22/22 ins equal, bad targets 0	capstone window compare
+lit_6ba852c	s2x_istate_nat.cpp:128	code	0x6ba852c	0x6b46058	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6ba852c	s2x_istate_nat.cpp:415	code	0x6ba852c	0x6b46058	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6bb1b3a	s2n_rel_core.inc:41	code	0x6bb1b3a	0x6b4fa86	fmap + manual kSet rebuild	disasm
+lit_6bb396a	s2n_rel_core.inc:41	code	0x6bb396a	0x6bbac9a	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6bb3aca	s2n_ai.cpp:38	code	0x6bb3aca	0x6bbadfa	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6c25abc	s2m_items_x0.cpp:149	code	0x6c25abc	0x6bc4908	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_6c25b06	s2m_items_x0.cpp:149	code	0x6c25b06	0x6bc4952	fmap:moved: window 24/24 ins equal, bad targets 0	capstone window compare
+lit_6c41ba4	s2m_solo.cpp:249	code	0x6c41ba4	0x6be8e5c	agree: fmap:moved + refs 2/2	fmap and refs agree; insn window compared
+lit_6c9d66c	s2n_nat.cpp:3629	code	0x6c9d66c	0x6c4e86e	agree: fmap:changed+align + refs 5/5	fmap and refs agree; insn window compared
+lit_6c9d66c	s2n_nat.cpp:3631	code	0x6c9d66c	0x6c4e86e	agree: fmap:changed+align + refs 5/5	fmap and refs agree; insn window compared
+lit_6cf08a8	s2m_save_x0.cpp:584	code	0x6cf08a8	0x6cad650	manual: vtable slot 89 of mapped vtable	manual disasm
+lit_6cf0f78	s2m_save_x0.cpp:585	code	0x6cf0f78	0x6cadd26	manual: vtable slot 89 of mapped vtable	manual disasm
+lit_8cb3f70	s2x_istate_nat.cpp:19	data:.rdata	0x8cb3f70	0x8c95f90	xref: votes {'8c95f90': 11}; 28f9ea->d3252(fmap:moved),739cd6->5ad796(fmap:moved),8c055a->84a822(fmap:moved),aaa2a2->ad8b02(fmap:moved)	capstone window compare
+lit_8ed1860	s2m_lshold.cpp:45	data:.rdata	0x8ed1860	0x8eb3030	manual: delegate ctor 2fb2814 and copy fn use 8eb3030 / 8eba5c0, slots 1+ identical; both accepted	disasm
+lit_9ee1dc0	s2m_qbranch.cpp:44	data:.data	0x9ee1dc0	0x9ecfdc0	xref: votes {'9ecfdc0': 10}; 680ee->589dd9(fmap:moved),18703a->ac6b56(fmap:changed+align),20132e->42cfb2(fmap:moved),2c66ba->1c7580(aob48)	capstone window compare
+lit_9eec140	s2n_ag.inc:26	data:.data	0x9eec140	0x9eda140	xref: votes {'9eda140': 7}; 67fc2->589cad(fmap:moved),6f1a2->9b3964(fmap:changed+align),116cca->d61634(fmap:changed+align),116db2->d6171c(fmap:changed+align)	capstone window compare
+lit_9eec140	s2n_nat.cpp:2363	data:.data	0x9eec140	0x9eda140	xref: votes {'9eda140': 7}; 67fc2->589cad(fmap:moved),6f1a2->9b3964(fmap:changed+align),116cca->d61634(fmap:changed+align),116db2->d6171c(fmap:changed+align)	capstone window compare
+lit_9eec140	s2n_nat.cpp:3291	data:.data	0x9eec140	0x9eda140	xref: votes {'9eda140': 7}; 67fc2->589cad(fmap:moved),6f1a2->9b3964(fmap:changed+align),116cca->d61634(fmap:changed+align),116db2->d6171c(fmap:changed+align)	capstone window compare
+lit_9eec140	s2n_nat.cpp:3316	data:.data	0x9eec140	0x9eda140	xref: votes {'9eda140': 7}; 67fc2->589cad(fmap:moved),6f1a2->9b3964(fmap:changed+align),116cca->d61634(fmap:changed+align),116db2->d6171c(fmap:changed+align)	capstone window compare
+lit_9ef0600	s2m_cgcmc_x0.cpp:63	data:.data	0x9ef0600	0x9ede734	xref: votes {'9ede734': 6, '9ed31cc': 2}; 4d7d6a->48f96a(fmap:moved),9d0bb2->a32d8a(fmap:changed+align),a1c022->b76b87(fmap:changed+align),d8d94e->a32d8a(aob48)	capstone window compare
+lit_9ef0600	s2m_cgcmc_x0.cpp:197	data:.data	0x9ef0600	0x9ede734	xref: votes {'9ede734': 6, '9ed31cc': 2}; 4d7d6a->48f96a(fmap:moved),9d0bb2->a32d8a(fmap:changed+align),a1c022->b76b87(fmap:changed+align),d8d94e->a32d8a(aob48)	capstone window compare
+lit_9fa47e8	s2m_oodle.cpp:17	data:.data	0x9fa47e8	0x9f928f8	xref: votes {'9f928f8': 6}; 4161d5a->41078d4(fmap:moved),2166f57->20b8dce(fmap:moved),26fd3d7->261b2cb(aob48),26fd63f->261b533(aob48)	capstone window compare
+lit_9fb71f0	s2x_istate_nat.cpp:20	data:.data	0x9fb71f0	0x9fa52c0	xref: votes {'9fa52c0': 9, '9fa52f0': 1}; 7db92->57fa21(fmap:changed+align),7dc0a->57fadd(fmap:changed+align),ed362->20afd52(aob48),1bb64e->60a1c3a(aob16)	capstone window compare
+lit_a0e68d0	s2m_cgc_x0.cpp:46	data:.data	0xa0e68d0	0xa0d4990	xref: votes {'a0d4990': 12}; 9ad2->9780(fmap:moved),d6ca->d21e(fmap:moved),d91a->d46e(fmap:moved),eab2->e606(fmap:changed+align)	capstone window compare
+lit_a0e68d0	s2n_nat.cpp:3872	data:.data	0xa0e68d0	0xa0d4990	xref: votes {'a0d4990': 12}; 9ad2->9780(fmap:moved),d6ca->d21e(fmap:moved),d91a->d46e(fmap:moved),eab2->e606(fmap:changed+align)	capstone window compare
+lit_a0e68e4	s2m_cgc_x0.cpp:44	data:.data	0xa0e68e4	0xa0d49a4	xref: votes {'a0d49a4': 10}; 9ac2->9770(fmap:moved),d90e->d462(fmap:moved),d94e->d4a2(fmap:moved),eaa2->e5f6(fmap:changed+align)	capstone window compare
+lit_a0e68e4	s2n_nat.cpp:3871	data:.data	0xa0e68e4	0xa0d49a4	xref: votes {'a0d49a4': 10}; 9ac2->9770(fmap:moved),d90e->d462(fmap:moved),d94e->d4a2(fmap:moved),eaa2->e5f6(fmap:changed+align)	capstone window compare
+lit_a2da460	s2m_ixtap_x0.cpp:42	data:.data	0xa2da460	0xa2c85a8	xref: votes {'a2c85a8': 11}; 79d8a->58dfe2(aob48),188f12->1160c10(fmap:moved),290712->341766(aob48),2915c6->34186a(aob48)	capstone window compare
+lit_a2da460	s2n_nat.cpp:3200	data:.data	0xa2da460	0xa2c85a8	xref: votes {'a2c85a8': 11}; 79d8a->58dfe2(aob48),188f12->1160c10(fmap:moved),290712->341766(aob48),2915c6->34186a(aob48)	capstone window compare
+lit_a2da480	s2m_qbranch.cpp:43	data:.data	0xa2da480	0xa2c85c8	xref: votes {'a2c85c8': 10}; 1bc9b6->11078a(fmap:changed+align),4f571e->16d3cc(fmap:changed+align),662f22->21a54e0(fmap:changed+align),8da7fa->3d32f8(aob48)	capstone window compare
+lit_a2da490	s2x_istate_nat.cpp:18	data:.data	0xa2da490	0xa2c85d8	xref: votes {'a2c85d8': 11}; 51f24e->69bb8e(fmap:moved),66593a->a4c0b3(fmap:changed+align),665996->a4c110(fmap:changed+align),8c052e->84a7f6(fmap:moved)	capstone window compare
+lit_a2da4b0	s2m_items_x0.cpp:227	data:.data	0xa2da4b0	0xa2c85f8	xref: votes {'a2c85f8': 8}; 7b37e->58ff72(fmap:moved),7b8da->590418(fmap:moved),8f2e6->3c387b(aob16),8fb76->59ffdc(aob48)	capstone window compare
+lit_a2da4b0	s2n_join.cpp:634	data:.data	0xa2da4b0	0xa2c85f8	xref: votes {'a2c85f8': 8}; 7b37e->58ff72(fmap:moved),7b8da->590418(fmap:moved),8f2e6->3c387b(aob16),8fb76->59ffdc(aob48)	capstone window compare
+lit_a2da4b0	s2x_istate_nat.cpp:17	data:.data	0xa2da4b0	0xa2c85f8	xref: votes {'a2c85f8': 8}; 7b37e->58ff72(fmap:moved),7b8da->590418(fmap:moved),8f2e6->3c387b(aob16),8fb76->59ffdc(aob48)	capstone window compare
+lit_a2da4c8	s2m_qbranch.cpp:42	data:.data	0xa2da4c8	0xa2c8610	xref: votes {'a2c8610': 7}; 18a312->4b6f0e(fmap:moved),2ce442->7aab99(fmap:changed+align),b5a7de->a09fe6(fmap:changed+align),d9e706->e064cc(fmap:moved)	capstone window compare
+lit_a2da508	s2m_pcompass.cpp:18	data:.data	0xa2da508	0xa2c8650	xref: votes {'a2c8650': 10}; 28bf42->344244(fmap:moved),739c9e->5ad75e(fmap:moved),898abe->5a24aa(aob48),d5feee->d050fc(fmap:moved)	capstone window compare
+lit_a2da548	s2m_csave.cpp:30	data:.data	0xa2da548	0xa2c8690	xref: votes {'a2c8690': 12}; 29215e->342472(aob48),6543c6->c4fe76(aob48),8be222->846d72(fmap:changed+align),8c5f8e->851c7a(fmap:changed+align)	capstone window compare
+lit_a2da550	s2m_csave.cpp:31	data:.data	0xa2da550	0xa2c8698	xref: votes {'a2c8698': 10}; c3843a->b576c6(fmap:moved),f896de->30e4cb6(fmap:changed+align),2fa7f82->2e5f530(fmap:moved),2fc3b1e->2f1e770(fmap:moved)	capstone window compare
+lit_a2da550	s2m_solo.cpp:38	data:.data	0xa2da550	0xa2c8698	xref: votes {'a2c8698': 10}; c3843a->b576c6(fmap:moved),f896de->30e4cb6(fmap:changed+align),2fa7f82->2e5f530(fmap:moved),2fc3b1e->2f1e770(fmap:moved)	capstone window compare
+lit_a2da558	s2m_solo.cpp:39	data:.data	0xa2da558	0xa2c86a0	xref: votes {'a2c86a0': 8, 'a2c86a8': 1}; 36e2e2e->3663fb8(fmap:changed+align),6b9301a->6b30a60(fmap:changed+align),6b922fe->6b2fcf1(fmap:changed+align),35fd2c7->3552fc1(fmap:changed+align)	capstone window compare
+lit_a7859a0	s2m_items_x0.cpp:186	data:.data	0xa7859a0	0xa74b120	xref: votes {'a74b120': 9}; 8af6e->595dd1(aob32),328bba->1ea8ae(fmap:moved),438a8a->2390bd0(fmap:changed+align),439572->2391a0e(fmap:changed+align)	capstone window compare
+lit_a7859a0	s2x_istate_nat.cpp:16	data:.data	0xa7859a0	0xa74b120	xref: votes {'a74b120': 9}; 8af6e->595dd1(aob32),328bba->1ea8ae(fmap:moved),438a8a->2390bd0(fmap:changed+align),439572->2391a0e(fmap:changed+align)	capstone window compare
+lit_ade37b0	s2x_istate_nat.cpp:21	data:.data	0xade37b0	0xadc5f08	xref: votes {'adc5f08': 10}; 6b496da->6ae1d90(fmap:moved),6b4984e->6ae1f04(fmap:moved),6bec852->6b8162a(fmap:moved),6beceae->6b81c86(fmap:moved)	capstone window compare
+lit_b107378	s2m_menu.cpp:90	data:.data	0xb107378	0xb0f6590	xref: votes {'b0f6590': 2}; 920095->83f25f(fmap:moved),32fb399->f2a0b0(aob16)	capstone window compare
+lit_b11e618	s2m_cgcmc_x0.cpp:63	data:.data	0xb11e618	0xb10e258	xref: votes {'b10e258': 2, 'b10e274': 1}; 2eb922->3a937f(fmap:changed+align),4d7d71->48f971(fmap:moved),d8d955->a32d91(aob48)	capstone window compare
+lit_b11e618	s2m_cgcmc_x0.cpp:196	data:.data	0xb11e618	0xb10e258	xref: votes {'b10e258': 2, 'b10e274': 1}; 2eb922->3a937f(fmap:changed+align),4d7d71->48f971(fmap:moved),d8d955->a32d91(aob48)	capstone window compare
+lit_b120760	s2m_items_x0.cpp:105	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2m_items_x0.cpp:180	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2m_items_x0.cpp:221	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2m_qbranch.cpp:45	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2m_save_x0.cpp:162	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2m_solo.cpp:42	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2n_join.cpp:572	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2n_nat.cpp:4017	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2n_wpn.inc:124	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2n_wpn.inc:86	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b120760	s2x_istate_nat.cpp:15	data:.data	0xb120760	0xb10f588	xref: votes {'b10f588': 12}; 1d936->15f1b(aob48),67aea->577558(fmap:moved),6f476->9b3c2f(fmap:changed+align),6f4ba->9b3c73(fmap:changed+align)	capstone window compare
+lit_b1407f0	s2m_qbranch.cpp:46	data:.data	0xb1407f0	0xb12f618	xref: votes {'b12f618': 8}; 73842->58a290(fmap:moved),74412->9b4d42(fmap:moved),8c1ae->596e41(fmap:changed+align),1af4da->19a766(fmap:moved)	capstone window compare
+lit_b1407f0	s2m_solo.cpp:43	data:.data	0xb1407f0	0xb12f618	xref: votes {'b12f618': 8}; 73842->58a290(fmap:moved),74412->9b4d42(fmap:moved),8c1ae->596e41(fmap:changed+align),1af4da->19a766(fmap:moved)	capstone window compare
+bytes_d0958	s2m_bodies.cpp:1536	expected-bytes	0xd0958	0x96a08	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_43a7dc	s2m_csave.cpp:41	expected-bytes	0x43a7dc	0x21c034	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_371400c	s2m_csave.cpp:42	expected-bytes	0x371400c	0x31ea550	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_33ce56a	s2m_csave.cpp:43	expected-bytes	0x33ce56a	0x33ab358	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_10fe04c	s2m_items_x0.cpp:83	expected-bytes	0x10fe04c	0x35f488c	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_20d153a	s2m_items_x0.cpp:84	expected-bytes	0x20d153a	0x1ffefc6	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2638d06	s2m_items_x0.cpp:85	expected-bytes	0x2638d06	0x25a231a	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_2636a70	s2m_items_x0.cpp:86	expected-bytes	0x2636a70	0x259c49c	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_18a8ee	s2m_items_x0.cpp:139	expected-bytes	0x18a8ee	0x4b74ea	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_18a719	s2m_items_x0.cpp:140	expected-bytes	0x18a719	0x4b7315	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_2636a90	s2m_items_x0.cpp:141	expected-bytes	0x2636a90	0x259c4bc	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6c25abc	s2m_items_x0.cpp:142	expected-bytes	0x6c25abc	0x6bc4908	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_6c25b06	s2m_items_x0.cpp:143	expected-bytes	0x6c25b06	0x6bc4952	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_7ea60	s2m_items_x0.cpp:144	expected-bytes	0x7ea60	0xec4464	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_336dcbd	s2m_items_x0.cpp:145	expected-bytes	0x336dcbd	0x2ef5135	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_336dd2a	s2m_items_x0.cpp:146	expected-bytes	0x336dd2a	0x2ef51a2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_37a3fd2	s2m_life_x0.cpp:33	expected-bytes	0x37a3fd2	0x372f080	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_37cb9d4	s2m_life_x0.cpp:83	expected-bytes	0x37cb9d4	0x38ae099	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_32fb7bc	s2m_life_x0.cpp:201	expected-bytes	0x32fb7bc	0x3330b02	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_37cc210	s2m_life_x0.cpp:247	expected-bytes	0x37cc210	0x38ae8bc	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_37cc226	s2m_life_x0.cpp:248	expected-bytes	0x37cc226	0x38ae8d2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6837d70	s2m_life_x0.cpp:271	expected-bytes	0x6837d70	0x3307254	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_26b1d7a	s2m_life_x0.cpp:272	expected-bytes	0x26b1d7a	0x2602220	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_36f27be	s2m_loadscreen.cpp:41	expected-bytes	0x36f27be	0x3679f5c	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_35fa938	s2m_loadscreen.cpp:43	expected-bytes	0x35fa938	0x3551ba6	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_108a334	s2m_loadscreen.cpp:45	expected-bytes	0x108a334	0xff7408	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_3b36404	s2m_lshold.cpp:46	expected-bytes	0x3b36404	0x389e3b8	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_3b36413	s2m_lshold.cpp:47	expected-bytes	0x3b36413	0x389e3c7	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_20d705c	s2m_lshold.cpp:49	expected-bytes	0x20d705c	0x23cfda2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_20c40ba	s2m_lshold.cpp:50	expected-bytes	0x20c40ba	0x1fedb86	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_32fc50a	s2m_menu.cpp:75	expected-bytes	0x32fc50a	0x33319a4	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2560e08	s2m_menu.cpp:77	expected-bytes	0x2560e08	0x20afdf6	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_32fc886	s2m_menu.cpp:78	expected-bytes	0x32fc886	0x3331cf4	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_35e46c6	s2m_menu.cpp:91	expected-bytes	0x35e46c6	0x346b32e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_32fb5a2	s2m_menu.cpp:95	expected-bytes	0x32fb5a2	0x33308e2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2166e10	s2m_oodle.cpp:32	expected-bytes	0x2166e10	0x20b8c87	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_32cc456	s2m_oodle.cpp:36	expected-bytes	0x32cc456	0x31be6ec	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_2760ea0	s2m_oodle.cpp:38	expected-bytes	0x2760ea0	0x2689f00	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2cbb02	s2m_qbranch.cpp:264	expected-bytes	0x2cbb02	0x7a8b56	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_2cdf4c	s2m_qbranch.cpp:266	expected-bytes	0x2cdf4c	0x7aa720	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_336cbbc	s2m_qbranch.cpp:268	expected-bytes	0x336cbbc	0x2ef4ad6	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_30c6292	s2m_qbranch.cpp:270	expected-bytes	0x30c6292	0x2f98a44	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_22d0c32	s2m_qbranch.cpp:273	expected-bytes	0x22d0c32	0x235663c	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_20d153a	s2m_qbranch.cpp:274	expected-bytes	0x20d153a	0x1ffefc6	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6b6e74f	s2m_save_x0.cpp:138	expected-bytes	0x6b6e74f	0x6b07eff	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6b6e76a	s2m_save_x0.cpp:139	expected-bytes	0x6b6e76a	0x6b07f1a	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_f87e00	s2m_save_x0.cpp:140	expected-bytes	0xf87e00	0xff1646	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2638d06	s2m_save_x0.cpp:141	expected-bytes	0x2638d06	0x25a231a	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_2636a70	s2m_save_x0.cpp:142	expected-bytes	0x2636a70	0x259c49c	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6952be8	s2m_save_x0.cpp:143	expected-bytes	0x6952be8	0x68eb5ae	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6cf08a8	s2m_save_x0.cpp:586	expected-bytes	0x6cf08a8	0x6cad650	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_fb0fd0	s2m_solo.cpp:245	expected-bytes	0xfb0fd0	0xe44e3c	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_3679302	s2m_solo.cpp:247	expected-bytes	0x3679302	0x361bea0	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_6c41ba4	s2m_solo.cpp:249	expected-bytes	0x6c41ba4	0x6be8e5c	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_35ff090	s2m_solo.cpp:251	expected-bytes	0x35ff090	0x3554b0a	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_1ff652	s2m_solo.cpp:253	expected-bytes	0x1ff652	0x2ed23ea	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_20d153a	s2m_solo.cpp:256	expected-bytes	0x20d153a	0x1ffefc6	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3aca	s2n_ai.cpp:17	expected-bytes	0x6bb3aca	0x6bbadfa	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3ad8	s2n_ai.cpp:18	expected-bytes	0x6bb3ad8	0x6bbae08	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3ae7	s2n_ai.cpp:19	expected-bytes	0x6bb3ae7	0x6bbae17	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3af2	s2n_ai.cpp:20	expected-bytes	0x6bb3af2	0x6bbae22	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3b81	s2n_ai.cpp:22	expected-bytes	0x6bb3b81	0x6bbaeb1	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3b90	s2n_ai.cpp:23	expected-bytes	0x6bb3b90	0x6bbaec0	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3bfb	s2n_ai.cpp:25	expected-bytes	0x6bb3bfb	0x6bbaf2b	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3c24	s2n_ai.cpp:28	expected-bytes	0x6bb3c24	0x6bbaf54	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3c33	s2n_ai.cpp:30	expected-bytes	0x6bb3c33	0x6bbaf63	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3c3a	s2n_ai.cpp:31	expected-bytes	0x6bb3c3a	0x6bbaf6a	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3c79	s2n_ai.cpp:35	expected-bytes	0x6bb3c79	0x6bbafa9	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3c87	s2n_ai.cpp:36	expected-bytes	0x6bb3c87	0x6bbafb7	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_8c0610	s2n_join.cpp:538	expected-bytes	0x8c0610	0x84a8d8	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_34f84f2	s2n_join.cpp:539	expected-bytes	0x34f84f2	0x340692a	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_26d74b2	s2n_join.cpp:540	expected-bytes	0x26d74b2	0x25f9944	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_e87bb8	s2n_nat.cpp:3185	expected-bytes	0xe87bb8	0xe6c1c8	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_e87d68	s2n_nat.cpp:3187	expected-bytes	0xe87d68	0xe6c378	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_acfd68	s2n_nat.cpp:3188	expected-bytes	0xacfd68	0xb31106	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6b73a6	s2n_nat.cpp:3189	expected-bytes	0x6b73a6	0x7613b2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_ad6130	s2n_nat.cpp:3190	expected-bytes	0xad6130	0xb375f0	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_e88d2a	s2n_nat.cpp:3191	expected-bytes	0xe88d2a	0xe6d378	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_650bee	s2n_nat.cpp:3626	expected-bytes	0x650bee	0xc4c814	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_6c9d66c	s2n_nat.cpp:3627	expected-bytes	0x6c9d66c	0x6c4e86e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_21ae6b0	s2n_nat.cpp:3628	expected-bytes	0x21ae6b0	0x25fcefa	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6b6e730	s2n_nat.cpp:3803	expected-bytes	0x6b6e730	0x6b07ee0	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6b6e748	s2n_nat.cpp:3804	expected-bytes	0x6b6e748	0x6b07ef8	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_d3111a	s2n_nat.cpp:3993	expected-bytes	0xd3111a	0xc6055a	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_8c906a	s2n_nat.cpp:4007	expected-bytes	0x8c906a	0x854bbe	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_69017da	s2n_nat.cpp:4008	expected-bytes	0x69017da	0x6898afe	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_26a935a	s2n_nat.cpp:4009	expected-bytes	0x26a935a	0x25db0e4	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_93da82	s2n_nat.cpp:4010	expected-bytes	0x93da82	0x989d88	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_60ef92	s2n_nat.cpp:4027	expected-bytes	0x60ef92	0x4d1476	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_60f07b	s2n_nat.cpp:4028	expected-bytes	0x60f07b	0x4d155f	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_1038ad2	s2n_nat.cpp:4036	expected-bytes	0x1038ad2	0xf31c40	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_327736	s2n_nat.cpp:4045	expected-bytes	0x327736	0x1e8b48	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_441b08	s2n_nat.cpp:4054	expected-bytes	0x441b08	0x222e62	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_43f3c2	s2n_nat.cpp:4059	expected-bytes	0x43f3c2	0x21df6a	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb396a	s2n_rel_core.inc:27	expected-bytes	0x6bb396a	0x6bbac9a	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3980	s2n_rel_core.inc:28	expected-bytes	0x6bb3980	0x6bbacb0	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb39b1	s2n_rel_core.inc:29	expected-bytes	0x6bb39b1	0x6bbace1	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb39bc	s2n_rel_core.inc:29	expected-bytes	0x6bb39bc	0x6bbacec	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb39b1	s2n_rel_core.inc:30	expected-bytes	0x6bb39b1	0x6bbace1	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb3a02	s2n_rel_core.inc:32	expected-bytes	0x6bb3a02	0x6bbad32	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb1b3a	s2n_rel_core.inc:35	expected-bytes	0x6bb1b3a	0x6b4fa86	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb1bc5	s2n_rel_core.inc:38	expected-bytes	0x6bb1bc5	0x6b4fb10	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6bb1bd3	s2n_rel_core.inc:38	expected-bytes	0x6bb1bd3	0x6b4fb1e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_26a935a	s2n_wpn.inc:41	expected-bytes	0x26a935a	0x25db0e4	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_37c476f	s2n_wpn.inc:42	expected-bytes	0x37c476f	0x3740bb1	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_26d74b2	s2n_wpn.inc:43	expected-bytes	0x26d74b2	0x25f9944	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_571f49c	s2r_x0.cpp:75	expected-bytes	0x571f49c	0x56cca96	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2556e6	s2x_istate_nat.cpp:105	expected-bytes	0x2556e6	0x650894	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_255774	s2x_istate_nat.cpp:106	expected-bytes	0x255774	0x650922	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_c15f50	s2x_istate_nat.cpp:107	expected-bytes	0xc15f50	0xc5a3a4	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_21de7a0	s2x_istate_nat.cpp:108	expected-bytes	0x21de7a0	0x22cc2f2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_9f12e	s2x_istate_nat.cpp:109	expected-bytes	0x9f12e	0xf73f18	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2f538c2	s2x_istate_nat.cpp:110	expected-bytes	0x2f538c2	0x3491a6a	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_617986	s2x_istate_nat.cpp:111	expected-bytes	0x617986	0x4da52e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2f579a6	s2x_istate_nat.cpp:112	expected-bytes	0x2f579a6	0x2ead6c6	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_10e31a6	s2x_istate_nat.cpp:113	expected-bytes	0x10e31a6	0x1170dc4	array at mapped site: relonly applied	new bytes read from the 26123434 exe
+bytes_26c7258	s2x_istate_nat.cpp:114	expected-bytes	0x26c7258	0x25fac38	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_5feb9a	s2x_istate_nat.cpp:115	expected-bytes	0x5feb9a	0x52e700	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_33759b8	s2x_istate_nat.cpp:116	expected-bytes	0x33759b8	0x2fbf2e2	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_3375634	s2x_istate_nat.cpp:117	expected-bytes	0x3375634	0x2fbefca	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_248e722	s2x_istate_nat.cpp:118	expected-bytes	0x248e722	0x2222242	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6950ae0	s2x_istate_nat.cpp:119	expected-bytes	0x6950ae0	0x68e2a64	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_20a9614	s2x_istate_nat.cpp:120	expected-bytes	0x20a9614	0x1fd523e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_126d4d0	s2x_istate_nat.cpp:121	expected-bytes	0x126d4d0	0x1190294	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_20a9624	s2x_istate_nat.cpp:122	expected-bytes	0x20a9624	0x1fd524e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2ed648e	s2x_istate_nat.cpp:123	expected-bytes	0x2ed648e	0x2dfbe74	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_c18810	s2x_istate_nat.cpp:124	expected-bytes	0xc18810	0xc5bd5e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_248e722	s2x_istate_nat.cpp:125	expected-bytes	0x248e722	0x2222242	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_10fe1ce	s2x_istate_nat.cpp:126	expected-bytes	0x10fe1ce	0x35f49d7	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_248e722	s2x_istate_nat.cpp:127	expected-bytes	0x248e722	0x2222242	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_6ba852c	s2x_istate_nat.cpp:128	expected-bytes	0x6ba852c	0x6b46058	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_c177de	s2x_istate_nat.cpp:129	expected-bytes	0xc177de	0x84bb22	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_28bffe	s2x_istate_nat.cpp:130	expected-bytes	0x28bffe	0xa6cd26	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_e0a2b4	s2x_istate_nat.cpp:131	expected-bytes	0xe0a2b4	0xec446e	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_26475a	s2x_istate_nat.cpp:132	expected-bytes	0x26475a	0x35e314	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_2638d06	s2x_istate_nat.cpp:133	expected-bytes	0x2638d06	0x25a231a	array at mapped site: SEMDIFF applied	new bytes read from the 26123434 exe
+bytes_2636a70	s2x_istate_nat.cpp:134	expected-bytes	0x2636a70	0x259c49c	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_20d153a	s2x_istate_nat.cpp:135	expected-bytes	0x20d153a	0x1ffefc6	array at mapped site: same	new bytes read from the 26123434 exe
+bytes_ag_A/B/C	s2n_nat.cpp:2310	expected-bytes	0xb84ef9/0xb850cc/0xb851b7	0xaeea43/0xaeec03/0xaeece9	manual: scorer sites; B now mov r12d,[pid]/cmp edi,r12d (0x16 B), C cmp edi,r12d (0x13 B); stubs updated	disasm + bytes read from new exe
+bytes_quitgame	s2m_save_x0.cpp:587	expected-bytes	0x6cf0f78	0x6cadd26	vtable slot 89; new prologue pushes rbp, frame 0x80	disasm
+bytes_tut_hidewidget	s2x_tut.cpp:65	aob	-	0xc07da0	mov esi,r8d became mov [rsp+0x27],r8b; pattern updated, unique	aob search 1 hit
+bytes_ixtap	s2m_ixtap_x0.cpp:78	expected-bytes	0x1073dc0	0xf8bce6	vtable slot 93; prologue same; [rcx+0x40] time field same	disasm
+bytes_235b93c	s2m_items_x0.cpp:134	expected-bytes	0x235b93c	0x24efea0	array at mapped site: registers and jump disp changed (r14/r15 -> rbp/r13), same fields 0x118/0x110 stride 16	new bytes read from the 26123434 exe
+bytes_235b99c	s2m_items_x0.cpp:135	expected-bytes	0x235b99c	0x24eff06	array at mapped site: lea r13 -> lea r15, rip disp to pool a74b120	new bytes read from the 26123434 exe
+bytes_235b9e7	s2m_items_x0.cpp:136	expected-bytes	0x235b9e7	0x24eff56	array at mapped site: rdx -> rcx, same stride 0x88	new bytes read from the 26123434 exe
+bytes_19a42c	s2m_cgc_x0.cpp:77	expected-bytes	0x19a42c	0xd2352	prologue of d2352 (frame 0xd8, xmm6/xmm7 saves, mov esi,r8d)	new bytes read from the 26123434 exe
+bytes_199b76	s2m_cgcmc_x0.cpp:118	expected-bytes	0x199b76	0x221f272	prologue of 221f272 (8 pushes, frame 0xc8, mov rsi,rdx; mov rdi,rcx)	new bytes read from the 26123434 exe
+bytes_19a42c_r	s2m_cgcmc_x0.cpp:119	expected-bytes	0x19a42c	0xd2352	first 15 prologue bytes of d2352	new bytes read from the 26123434 exe
+off_cgcmc_count	s2m_cgcmc_x0.cpp:73	struct-offset	0x330	0x334	corpse manager count read by 221f272+0x19c and 703e02+0x6d (old 199b76+0x11e and 9b94d2+0x6f read +0x330)	disassembly of both callers
+hooks.tsv:lshold.gate	data/hooks.tsv	manifest	-	-	detour 3b36404->389e3b8 (map) at -->- (map) insn 12/12	aob regenerated from new exe
+hooks.tsv:lshold.dtor	data/hooks.tsv	manifest	-	-	DROPPED (lost)	aob regenerated from new exe
+hooks.tsv:lshold.malloc	data/hooks.tsv	manifest	-	-	call 20d705c->23cfda2 (map) at -->- (map) insn 12/12	aob regenerated from new exe
+hooks.tsv:lshold.free	data/hooks.tsv	manifest	-	-	call 20c40ba->1fedb86 (map) at 20c48d6->1fee3ae (fmap:moved) insn 48/48	aob regenerated from new exe
+hooks.tsv:ls.vf154	data/hooks.tsv	manifest	-	-	detour 36f27be->3679f5c (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:ls.press	data/hooks.tsv	manifest	-	-	call 35fa938->3551ba6 (map) at -->- (map) insn 11/11	aob regenerated from new exe
+hooks.tsv:ls.flow	data/hooks.tsv	manifest	-	-	call 108a334->ff7408 (map) at -->- (map) insn 5/7	aob regenerated from new exe
+hooks.tsv:menu.build	data/hooks.tsv	manifest	-	-	detour 32fc50a->33319a4 (map) at -->- (map) insn 12/12	aob regenerated from new exe
+hooks.tsv:menu.weakget	data/hooks.tsv	manifest	-	-	call 2560e08->20afdf6 (map) at -->- (map) insn 26/30	aob regenerated from new exe
+hooks.tsv:menu.setname	data/hooks.tsv	manifest	-	-	call 32fc886->3331cf4 (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:menu.flow	data/hooks.tsv	manifest	-	-	detour 35e46c6->346b32e (map) at -->- (map) insn 7/7	aob regenerated from new exe
+hooks.tsv:solo.cansave	data/hooks.tsv	manifest	-	-	detour fb0fd0->e44e3c (map) at -->- (map) insn 3/13	aob regenerated from new exe
+hooks.tsv:solo.savetypes1	data/hooks.tsv	manifest	-	-	detour 3679302->361bea0 (map) at -->- (map) insn 11/11	aob regenerated from new exe
+hooks.tsv:solo.savetypes2	data/hooks.tsv	manifest	-	-	detour 6c41ba4->6be8e5c (map) at -->- (map) insn 7/7	aob regenerated from new exe
+hooks.tsv:solo.autosave	data/hooks.tsv	manifest	-	-	detour 35ff090->3554b0a (map) at -->- (map) insn 11/11	aob regenerated from new exe
+hooks.tsv:solo.startnode	data/hooks.tsv	manifest	-	-	detour 1ff652->2ed23ea (map) at -->- (map) insn 0/12	aob regenerated from new exe
+hooks.tsv:sid.release	data/hooks.tsv	manifest	-	-	call 20d153a->1ffefc6 (map) at -->- (map) insn 13/13	aob regenerated from new exe
+hooks.tsv:csave.assign	data/hooks.tsv	manifest	-	-	call 43a7dc->21c034 (map) at -->- (map) insn 10/10	aob regenerated from new exe
+hooks.tsv:csave.reread	data/hooks.tsv	manifest	-	-	call 371400c->31ea550 (map) at -->- (map) insn 15/15	aob regenerated from new exe
+hooks.tsv:life.godoff	data/hooks.tsv	manifest	-	-	detour 37a3fd2->372f080 (map) at -->- (map) insn 25/25	aob regenerated from new exe
+hooks.tsv:life.loadui	data/hooks.tsv	manifest	-	-	detour 37cb9d4->38ae099 (map) at -->- (map) insn 10/10	aob regenerated from new exe
+hooks.tsv:life.buttons	data/hooks.tsv	manifest	-	-	detour 32fb7bc->3330b02 (map) at -->- (map) insn 9/9	aob regenerated from new exe
+hooks.tsv:life.loadbegin	data/hooks.tsv	manifest	-	-	detour 37cc210->38ae8bc (map) at -->- (map) insn 12/12	aob regenerated from new exe
+hooks.tsv:life.knock	data/hooks.tsv	manifest	-	-	call 6837d70->3307254 (map) at -->- (map) insn 7/8	aob regenerated from new exe
+hooks.tsv:life.weakobj	data/hooks.tsv	manifest	-	-	call 26b1d7a->2602220 (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:cgc.keep	data/hooks.tsv	manifest	-	-	detour 19a42c->d2352 (UP3: same function, see lit_19a42c) insn 0/0 prologue changed	aob regenerated from new exe
+hooks.tsv:items.remove	data/hooks.tsv	manifest	-	-	call 10fe04c->35f488c (map) at -->- (map) insn 10/11	aob regenerated from new exe
+hooks.tsv:sid.handle	data/hooks.tsv	manifest	-	-	call 2638d06->25a231a (map) at -->- (map) insn 0/11	aob regenerated from new exe
+hooks.tsv:sid.ref	data/hooks.tsv	manifest	-	-	call 2636a70->259c49c (map) at -->- (map) insn 10/10	aob regenerated from new exe
+hooks.tsv:inv.count	data/hooks.tsv	manifest	-	-	detour 6b6e730->6b07ee0 (map) at -->- (map) insn 17/17	aob regenerated from new exe
+hooks.tsv:save.sum	data/hooks.tsv	manifest	-	-	call 6952be8->68eb5ae (map) at -->- (map) insn 15/15	aob regenerated from new exe
+hooks.tsv:sid.fromstr	data/hooks.tsv	manifest	-	-	call 26a935a->25db0e4 (map) at -->- (map) insn 8/14	aob regenerated from new exe
+hooks.tsv:wpn.equip	data/hooks.tsv	manifest	-	-	call 37c476f->3740bb1 (map) at -->- (map) insn 6/12	aob regenerated from new exe
+hooks.tsv:wpn.rec	data/hooks.tsv	manifest	-	-	call 26d74b2->25f9944 (map) at -->- (map) insn 9/9	aob regenerated from new exe
+hooks.tsv:peer.preexit	data/hooks.tsv	manifest	-	-	detour 571f49c->56cca96 (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:ag.cmp1	data/hooks.tsv	manifest	-	-	detour b84ef9->aeea43 (map) at -->- (map) insn 4/6	aob regenerated from new exe
+hooks.tsv:ag.cmp2	data/hooks.tsv	manifest	-	-	detour b850cc->aeec03 (map) at -->- (map) insn 3/6	aob regenerated from new exe
+hooks.tsv:ag.cmp3	data/hooks.tsv	manifest	-	-	detour b851b7->aeece9 (map) at -->- (map) insn 6/8	aob regenerated from new exe
+hooks.tsv:ag.t1	data/hooks.tsv	manifest	-	-	call b852e8->aeefbe (map) at -->- (map) insn 0/4	aob regenerated from new exe
+hooks.tsv:ag.t2	data/hooks.tsv	manifest	-	-	call b84f05->aeea4f (map) at -->- (map) insn 4/6	aob regenerated from new exe
+hooks.tsv:ag.t3	data/hooks.tsv	manifest	-	-	call b850e0->aeec19 (map) at -->- (map) insn 0/6	aob regenerated from new exe
+hooks.tsv:ag.t4	data/hooks.tsv	manifest	-	-	call b851c9->aeecfc (map) at -->- (map) insn 4/5	aob regenerated from new exe
+hooks.tsv:bul.e87	data/hooks.tsv	manifest	-	-	call e87d68->e6c378 (map) at -->- (map) insn 18/18	aob regenerated from new exe
+hooks.tsv:bul.v	data/hooks.tsv	manifest	-	-	detour e87bb8->e6c1c8 (map) at -->- (map) insn 10/10	aob regenerated from new exe
+hooks.tsv:bul.p	data/hooks.tsv	manifest	-	-	detour acfd68->b31106 (map) at -->- (map) insn 14/14	aob regenerated from new exe
+hooks.tsv:bul.pcall	data/hooks.tsv	manifest	-	-	call acf932->b30cd0 (map) at -->- (map) insn 6/6	aob regenerated from new exe
+hooks.tsv:bul.h	data/hooks.tsv	manifest	-	-	detour 6b73a6->7613b2 (map) at -->- (map) insn 15/15	aob regenerated from new exe
+hooks.tsv:bul.i	data/hooks.tsv	manifest	-	-	detour ad6130->b375f0 (map) at -->- (map) insn 11/11	aob regenerated from new exe
+hooks.tsv:bul.s	data/hooks.tsv	manifest	-	-	detour e88d2a->e6d378 (map) at -->- (map) insn 8/12	aob regenerated from new exe
+hooks.tsv:dmg.entry	data/hooks.tsv	manifest	-	-	detour 650bee->c4c814 (map) at -->- (map) insn 8/10	aob regenerated from new exe
+hooks.tsv:dmg.build	data/hooks.tsv	manifest	-	-	call 6c9d66c->6c4e86e (map) at -->- (map) insn 9/9	aob regenerated from new exe
+hooks.tsv:dmg.dtor	data/hooks.tsv	manifest	-	-	call 21ae6b0->25fcefa (map) at -->- (map) insn 7/7	aob regenerated from new exe
+hooks.tsv:thr.writer	data/hooks.tsv	manifest	-	-	detour 43628c->21c78c (map) at -->- (map) insn 1/18	aob regenerated from new exe
+hooks.tsv:thr.second	data/hooks.tsv	manifest	-	-	call 80d4e4->49482e (map) at -->- (map) insn 6/6	aob regenerated from new exe
+hooks.tsv:thr.holster	data/hooks.tsv	manifest	-	-	detour d3111a->c6055a (map) at -->- (map) insn 14/14	aob regenerated from new exe
+hooks.tsv:gen.pick	data/hooks.tsv	manifest	-	-	detour 8c906a->854bbe (map) at -->- (map) insn 12/12	aob regenerated from new exe
+hooks.tsv:gen.redress	data/hooks.tsv	manifest	-	-	call 69017da->6898afe (map) at -->- (map) insn 12/12	aob regenerated from new exe
+hooks.tsv:gen.resize	data/hooks.tsv	manifest	-	-	call 93da82->989d88 (map) at -->- (at dropped: old body fn removed, check the entry) insn 11/11	aob regenerated from new exe
+hooks.tsv:mont.play	data/hooks.tsv	manifest	-	-	detour 60ef92->4d1476 (map) at -->- (map) insn 53/53	aob regenerated from new exe
+hooks.tsv:mont.attack	data/hooks.tsv	manifest	-	-	detour 1038ad2->f31c40 (map) at -->- (map) insn 11/11	aob regenerated from new exe
+hooks.tsv:mont.stance	data/hooks.tsv	manifest	-	-	detour 327736->1e8b48 (map) at -->- (map) insn 16/16	aob regenerated from new exe
+hooks.tsv:mont.look	data/hooks.tsv	manifest	-	-	call 441b08->222e62 (map) at -->- (map) insn 15/15	aob regenerated from new exe
+hooks.tsv:oodle.dec	data/hooks.tsv	manifest	-	-	call 2166e10->20b8c87 (map) at -->- (map) insn 14/14	aob regenerated from new exe
+hooks.tsv:oodle.init	data/hooks.tsv	manifest	-	-	call 32cc3ef->31be684 (map) at -->- (map) insn 20/21	aob regenerated from new exe
+hooks.tsv:oodle.enc	data/hooks.tsv	manifest	-	-	call 32cc456->31be6ec (map) at -->- (map) insn 9/12	aob regenerated from new exe
+hooks.tsv:oodle.bound	data/hooks.tsv	manifest	-	-	call 2760ea0->2689f00 (map) at -->- (map) insn 7/7	aob regenerated from new exe
+hooks.tsv:tut.getwidget	data/hooks.tsv	manifest	-	-	call 20241a->42e250 (map) at -->- (map) insn 9/9	aob regenerated from new exe
+hooks.tsv:tut.iswidgetvisible	data/hooks.tsv	manifest	-	-	call 584dfc->42b2ba (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:tut.requestview	data/hooks.tsv	manifest	-	-	call 6d90e->9b351a (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:tut.hidewidget	data/hooks.tsv	manifest	-	-	call 7f520->c07da0 (map) at -->- (map) insn 11/12	aob regenerated from new exe
+hooks.tsv:rel.get	data/hooks.tsv	manifest	-	-	call 6bb396a->6bbac9a (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:rel.set	data/hooks.tsv	manifest	-	-	call 6bb1b3a->6b4fa86 (map) at -->- (map) insn 10/10	aob regenerated from new exe
+hooks.tsv:ai.addmoveto	data/hooks.tsv	manifest	-	-	call 6bb3aca->6bbadfa (map) at -->- (map) insn 8/8	aob regenerated from new exe
+hooks.tsv:ai.feat	data/hooks.tsv	manifest	-	-	call 6bb3d6a->6bbb77c (aob48) at -->- (aob48) insn 7/7	aob regenerated from new exe
+hooks.tsv:sid.pool	data/hooks.tsv	manifest	-	-	read b120760->b10f588 (data) at 6b6e76a->6b07f1a (map) insn 8/8	rip ok
+hooks.tsv:sid.pool.neg	data/hooks.tsv	manifest	-	-	read b1407f0->b12f618 (data) at 67ee5->f89f3 (scan: any insn referencing the new target) insn 5/18	rip ok
+hooks.tsv:solo.slm	data/hooks.tsv	manifest	-	-	read a2da550->a2c8698 (data) at 584c87->42b145 (fmap:moved) insn 3/3	rip ok
+hooks.tsv:solo.asm	data/hooks.tsv	manifest	-	-	read a2da558->a2c86a0 (data) at f5631b->2f1e609 (scan: any insn referencing the new target) insn 0/3	rip ok
+hooks.tsv:csave.cm	data/hooks.tsv	manifest	-	-	read a2da548->a2c8690 (data) at 290642->341684 (aob48) insn 4/4	rip ok
+hooks.tsv:player.id	data/hooks.tsv	manifest	-	-	read 9eec140->9eda140 (data) at b84ef9->aeea43 (map) insn 3/4	rip ok
+hooks.tsv:bul.time	data/hooks.tsv	manifest	-	-	read a2da460->a2c85a8 (data) at 67bc2->110efc (scan: any insn referencing the new target) insn 1/3	rip ok
+hooks.tsv:guobj.num	data/hooks.tsv	manifest	-	-	read a0e68e4->a0d49a4 (data) at 9ac2->9770 (fmap:moved) insn 15/15	rip ok
+hooks.tsv:guobj.chunks	data/hooks.tsv	manifest	-	-	read a0e68d0->a0d4990 (data) at 9ad1->977f (fmap:moved) insn 12/12	rip ok
+hooks.tsv:oodle.pool	data/hooks.tsv	manifest	-	-	read 9fa47e8->9f928f8 (data) at 209587b->31be6c3 (scan: any insn referencing the new target) insn 1/4	rip ok
+hooks.tsv:menu.flowstate	data/hooks.tsv	manifest	-	-	read b107378->b0f6590 (data) at 7ea3ac->5be558 (fmap:changed+align) insn 5/5	rip ok
+hooks.tsv:lshold.loaddelegate	data/hooks.tsv	manifest	-	-	read 8ed1860->8eb3030 (data) at 30e4e1e->2fb28be (scan: any insn referencing the new target) insn 4/4	rip ok
+hooks.tsv:inv.off.comp	data/hooks.tsv	manifest	-	-	offset 6b6e74f->6b07eff (map) at -->- (map) insn 4/4	val ok
+hooks.tsv:inv.off.items	data/hooks.tsv	manifest	-	-	offset 6b6e756->6b07f06 (align-in-mapped) at -->- (align-in-mapped) insn 4/4	val ok
+hooks.tsv:inv.off.ctr	data/hooks.tsv	manifest	-	-	offset f87e00->ff1646 (map) at -->- (map) insn 2/7	val ok

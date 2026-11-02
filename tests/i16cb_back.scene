@@ -1,0 +1,4 @@
+scene i16cb_back
+note i16cb relist: this player returns to the host start spot next to the corpses
+tp 365788,594276,620
+wait 2

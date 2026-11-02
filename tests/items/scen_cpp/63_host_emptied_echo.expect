@@ -1,0 +1,6 @@
+LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+LOG NOLA cloot: corpo BP_AI_Human_C_7 listado para o cliente (uid=0) lista=A012A*30
+MARK t=full
+LOG NOLA cloot: corpo BP_AI_Human_C_7 recontado no host (periodico): ver=2 lista=-
+MARK t=emptied
+STATUS items role=host taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= cl: K=1 R=0 B=0 T=0 pend=-

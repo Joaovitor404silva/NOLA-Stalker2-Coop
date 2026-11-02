@@ -1,0 +1,26 @@
+role host
+flag doors 1
+flag doorfix 1
+flag ien 1
+views 2
+vsessions 0 1
+vsessions 1 1
+pawn 0 0 0
+obj D1 BP_DoorView_C DoorView door 1000 50 0
+yaw D1 10
+prop D1 bLocked 1
+time 1
+tick
+time 2
+vremote 0 O 100,5,0;u
+vremote 1 O 100,5,0;l
+tick
+expect_new CALL D1.UnlockDoor()
+expect_none CALL D1.LockDoor
+time 3
+tick
+expect_none DESTRANCADA
+time 9
+tick
+expect_new LOG NOLA doorlock: 100,5,0 trancada no outro PC e destrancada aqui: reenvio destrancada
+expect_new OUT #O:100,5,0;u

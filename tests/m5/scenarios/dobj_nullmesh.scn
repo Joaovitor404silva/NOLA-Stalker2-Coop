@@ -1,0 +1,27 @@
+role host
+flag dobj 1
+flag dobjgen 1
+flag dobjfast 0
+flag dobjsec 1
+flag dobjmiss 3
+flag dobjfx 0
+flag meshsafe 1
+flag dobjstat 1
+level LvlA
+gate k1 1
+pawn 0 0 0
+obj P1 BP_DestructibleObject_C DestructibleObject destr 300 0 0
+mesh P1 null
+obj P2 BP_DestructibleObject_C DestructibleObject destr 400 0 0
+mesh P2 none
+obj P3 BP_DestructibleObject_C DestructibleObject destr 500 0 0
+mesh P3 SM_gen_explosive_barrel_01_a
+time 1
+tick
+time 2
+tick
+mesh P3 null
+time 3
+tick
+time 4
+tick

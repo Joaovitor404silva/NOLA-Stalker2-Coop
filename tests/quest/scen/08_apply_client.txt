@@ -1,0 +1,31 @@
+role client
+flag qsync 1
+apply J,ANCQ01,-,Start,ANCQ01_A
+apply J,ANCQ01,St1,Start,ANCQ01_B
+apply J,ANCQ01,-,Finish,ANCQ01_C
+apply J,ANCQ01,St1,Fail,ANCQ01_D
+apply J,ANCQ01,St1,Cancel
+apply J,ANCQ01,St1,Weird,ANCQ01_E
+apply G,VarA,Set,true,G_1
+apply G,VarA,Set,False,G_2
+apply G,VarA,Add,1,G_3
+apply N,ANCQ01_Dialog_Node
+apply N,ANCQ01_Plain
+apply W,W_Node
+apply X,X_Node
+apply N,E01_MQ01_FirstHelliFly
+dk 0
+apply J,ANCQ01,-,Start,ANCQ01_F
+rk 0
+apply G,VarA,Set,true,G_4
+flag qnode 1
+apply N,ANCQ01_Plain
+apply J,ANCQ01,-,Start,-
+aa 0
+apply N,ANCQ01_Plain
+aa 1
+aafail 1
+apply N,ANCQ01_Plain
+flag b164off 1
+flag qitem 1
+apply J,a,b,c,ANCQ01_ItemAdd_VadaHvorostPDA

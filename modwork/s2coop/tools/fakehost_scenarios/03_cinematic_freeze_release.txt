@@ -1,0 +1,12 @@
+# Host cinematic: the client is frozen and protected, then released; the host goes silent in the middle; a story teleport.
+# Expect: "NOLA cine: congelado" within 1 s; PEER SILENT after 5 s of silence and the freeze released at once;
+# when the host is back and still in the cinematic the client is frozen again; released at "cine off"; after "teleport" the client
+# is brought next to the host (the fake host jumps 80 m away first).
+20 cine on
+10 silence 12
+14 say the host is back, still in the cinematic: the client should be frozen again
+8 cine off
+10 pos near 8000
+1 teleport
+15 pos near 300
+5 end

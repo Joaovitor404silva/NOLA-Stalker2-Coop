@@ -1,0 +1,60 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5
+not applied
+
+s2core.lua:1508
+-local function lootTick(ST)
++local function lootTick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:3005
+-local function groundTick(ST)
++local function groundTick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:4013
+-local function itIn(ST)
++local function itIn(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:4034
+-local function itRun(ST)
++local function itRun(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:4078
+-local function catchupIn(ST)
++local function catchupIn(ST)
++    if S2L.cpp("items") and S2L.cpp("save") and S2L.cpp("quest") then return end
+
+s2core.lua:5583
+-local function ptakeTick(ST)
++local function ptakeTick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:5786
+-function M.LS.tick(ST)
++function M.LS.tick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:6469
+-local function ssTick(ST)
++local function ssTick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:6780
+-local function artTick(ST)
++local function artTick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:7279
+-local function lockTick(ST)
++local function lockTick(ST)
++    if S2L.cpp("items") then return end
+
+s2core.lua:13611
+-function S2L.clTick(ST)
++function S2L.clTick(ST)
++    if S2L.cpp("items") then return end
+
+tags K, X, C, R, Q, T, G, U, Y, YL, AL, CL, CO, CLT: no Lua edit (X0 strips the Lua copy of an owned tag while the module is ported)
+S2.mod.itemRemove / itemSend (luacmd API) stay in Lua for dev use; the C++ s2m_items::itemRemove/itemSend are the ported entry points

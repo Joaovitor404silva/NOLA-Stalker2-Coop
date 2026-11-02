@@ -1,0 +1,6 @@
+scene i16cl_dog
+note i16cl: one frozen blind dog 6 m from the host, killed after 3 s; the client next to the host gets one copy that is killed at the host corpse
+spawn sid=Blinddog at=player+6 freeze=1 as=d
+wait 3
+kill $d
+wait 3

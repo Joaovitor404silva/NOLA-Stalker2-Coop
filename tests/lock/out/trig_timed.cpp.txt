@@ -1,0 +1,34 @@
+> role host
+> flag lead 1
+> flag ldtrig 2
+> pawn 1000 442207.0 470552.0 0
+> trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+L 0 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 0 NOLA lead: trava #1 tomada (trig em 442057,470452,832): este lado lidera, o outro segue
+> run 300
+O 100 #LK:h,1,1700000000,trig,442057,470452,832
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 00
+> trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+> run 1500
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 00
+> run 400
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 00
+> trigenter ANCQ01_OnTriggerEnterEvent_BlindDogs 442057.0 470452.0 832.0
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 00
+> trigenter NOT_A_TRIGGER 1 2 3
+> state
+S mine=1 peer=0 owner=host
+> leaddlg
+R leaddlg 00

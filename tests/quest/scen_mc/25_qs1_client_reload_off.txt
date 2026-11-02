@@ -1,0 +1,41 @@
+# QS1 client with qdroll1=0 trigjoin=0: old behaviour, steps survive the rollback and the load, triggers fire at the stale save position
+role client
+flag qcondre 999
+flag qdmir 1
+flag qdroll1 0
+flag trigjoin 0
+flag lead 1
+pawn 100
+peer up 1 0
+t 1
+pos 0 0 0
+run 2
+pos 430490 520620 1570
+run 2
+s2q E E01_MQ01_OnSignalReceived_9
+run 2
+part QD h,-,0,-,0;
+run 2
+out
+part QD h,-,1,E01_MQ01_OnSignalReceived_9,0;
+run 2
+out
+t 60
+pos 0 0 0
+run 2
+pos 430490 520620 1570
+run 2
+s2q E E01_MQ01_OnSignalReceived_1
+run 2
+out
+pawn 101
+joinp 1
+pos 430610 520910 1210
+t 120
+run 4
+out
+pos 410400 516600 602
+joinp 0
+run 2
+out
+status

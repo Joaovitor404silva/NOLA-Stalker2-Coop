@@ -1,0 +1,8 @@
+out D:\modding\proofs\20261101_v131q_failover
+up -Reuse -Calm -Dll D:\modding\cpp\wt\v131b\cppbuild\Output\NolaNative\Game__Shipping__Win64\NolaNative.dll -Set netpeer=127.0.0.1,10.9.9.9
+setflag A devcmd 1
+setflag B devcmd 1
+assert alive A
+assert alive B
+assert peer
+run D:\modding\cpp\wt\v131b\tests\multiip\m3_failover_spec.txt

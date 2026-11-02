@@ -1,0 +1,36 @@
+role client
+views 1 1 0 1
+me 100 1 0 0 0
+set me uid 5
+npc tgt1 Target 100 0 0 5000 1
+npc pup1 Puppet 100 0 0 100000 1
+tgt tgt1
+pup pup1
+vpeer 0 up - h 1
+vremote 0 100 0 0 0 0
+t 0
+do ff
+ffcap 0 0 30 5 0.8 spine_02 6 2
+ffcap 0 0 45 0 1 head 6 11
+ffcap 0 0 120 10 1 spine_01 6 4
+t 0.1
+vremote 0 100 0 0 0.1 0
+do ff
+do ffStr
+flag friendlyfire 0
+t 0.6
+vremote 0 100 0 0 0.6 0
+ffcap 0 0 30 5 0.8 spine_02 6 2
+ffcap 0 0 45 0 1 head 6 11
+ffcap 0 0 120 10 1 spine_01 6 4
+do ff
+do ffStr
+flag friendlyfire 1
+t 1.2
+vremote 0 100 0 0 1.2 0
+ffcap 0 0 30 5 0.8 spine_02 6 2
+do ff
+do ffStr
+t 10
+do ff
+do statusStr

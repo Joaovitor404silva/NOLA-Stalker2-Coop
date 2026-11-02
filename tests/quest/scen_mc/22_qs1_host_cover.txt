@@ -1,0 +1,26 @@
+# QS1 host: its own graph fire of a one-shot event covers the client step at any age (qdmir); while a rollback order is not acknowledged by the client (digest rnDone) no other order goes to that view, the reload undoes those steps (qdroll1)
+role host
+flag qdmir 1
+flag qdroll1 1
+flag trigjoin 1
+flag lead 1
+flag qsync 1
+pawn 1
+peer up 1 0
+t 100
+s2q E E01_MQ01_OnSignalReceived
+run 2
+t 160
+part QD c,-,0;E01_MQ01_OnSignalReceived:21
+run 3
+t 200
+part QD c,-,0;S2QDIVTEST_C1:25|S2QDIVTEST_C2:24|S2QDIVTEST_C3:1
+run 3
+t 222
+part QD c,-,0;S2QDIVTEST_C1:47|S2QDIVTEST_C2:46|S2QDIVTEST_C3:23
+run 3
+t 230
+part QD c,-,1;S2QDIVTEST_C4:22
+run 3
+out
+status

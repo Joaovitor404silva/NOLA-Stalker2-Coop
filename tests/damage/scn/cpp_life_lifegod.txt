@@ -1,0 +1,160 @@
+role client
+flag revwait 0
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+flag lifegod 1
+flag bothdown 1
+flag dieload 1
+flag downsecs 30
+me 100 1 0 0 0
+set me uid 0
+x1 RV 0,0
+x1 L a,100,100
+remote 100 0 0 0
+t 0
+do lifeGuard
+godq
+hit me 100
+hp me
+t 0.1
+do lifeGuard
+hp me
+godq
+do lifeStr
+remote 100 0 0 5
+hit me 90
+t 5
+do lifeGuard
+hp me
+remote 100 0 0 15
+hit me 200
+hit me 50
+t 15
+do lifeGuard
+hp me
+remote 100 0 0 29
+hit me 1000
+t 29
+do lifeGuard
+hp me
+godq
+remote 100 0 0 30
+t 30
+do lifeGuard
+hp me
+godq
+t 30.1
+do lifeGuard
+do rvStr
+do lifeStr
+loadtry
+t 30.2
+do lifeGuard
+deathscreen
+loadtry
+t 30.25
+do lifeGuard
+t 30.3
+do lifeGuard
+newpawn
+set me alive 1
+set me hp 100
+t 31
+do lifeGuard
+do lifeStr
+godq
+loadtry
+hit me 100
+t 31.1
+do lifeGuard
+hp me
+remote 100 0 0 33
+x1 RV 1,0
+t 33
+do lifeGuard
+hp me
+godq
+do lifeStr
+hit me 100
+t 33.1
+do lifeGuard
+hp me
+remote 100 0 0 34
+t 34
+do lifeGuard
+x1 L w,15,100
+remote 100 0 0 35
+t 35
+do lifeGuard
+hp me
+do rvStr
+t 35.1
+do lifeGuard
+do lifeStr
+newpawn
+set me alive 1
+set me hp 100
+x1 L d,0,100
+t 36
+do lifeGuard
+do revive
+do lifeStr
+x1 L w,15,100
+remote 100 0 0 40
+t 40
+do revive
+newpawn
+set me alive 1
+set me hp 100
+x1 L a,100,100
+role host
+remote 100 0 0 50
+t 50
+do lifeGuard
+hit me 100
+t 50.1
+do lifeGuard
+remote 100 0 0 80.2
+t 80.2
+do lifeGuard
+t 80.3
+do lifeGuard
+loadtry
+newpawn
+set me alive 1
+set me hp 100
+role client
+flag dieload 0
+flag lifegod 0
+t 90
+do lifeGuard
+godq
+hit me 100
+t 90.1
+do lifeGuard
+deathscreen
+loadtry
+newpawn
+set me alive 1
+set me hp 100
+flag lifegod 1
+flag bothdown 0
+t 100
+do lifeGuard
+set me hp 10
+t 100.1
+do lifeGuard
+x1 L w,15,100
+remote 100 0 0 101
+t 101
+do lifeGuard
+hp me
+godq
+flag lifegod 0
+t 102
+do lifeGuard
+godq

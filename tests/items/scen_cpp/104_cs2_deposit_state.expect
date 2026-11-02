@@ -1,0 +1,78 @@
+h LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+h LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+c1 LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+h LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+h LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+h LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 0 (primeiro a pedir)
+h LOG NOLA TAKEN +lsc@60E63E8B813B51B0;A012Ax30 (total 1)
+h LOG NOLA lootshare: lista comum do corpo 60E63E8B813B51B0: A012Ax30 (minha copia ja e igual)
+h LOG NOLA lscont: primeiro a abrir o recipiente 60E63E8B813B51B0 (host): lista lida sem tirar nada: A012Ax30
+h LOG NOLA lscont: 60E63E8B813B51B0 igualado a lista comum na janela aberta (0 tiradas contadas; nada tirado do jogador, janela aberta): +[] -[]
+c1 LOG NOLA TAKEN +lsc@60E63E8B813B51B0;A012Ax30 (total 1)
+c1 LOG NOLA lootshare: lista comum do corpo 60E63E8B813B51B0: A012Ax30 (minha copia sera igualada)
+h LOG NOLA LOCK_REL BP_Box_C@520,30,1
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 fechado sem tirar nada
+h LOG NOLA istate: put in 60E63E8B813B51B0 with state: {GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39} {GunAK74_ST dur=0.9000}
+h LOG NOLA TAKEN +cput@60E63E8B813B51B0;h1001;GunAK74_STx2;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aGunAK74_MagExt.Scope_PSO~r17.Ammo_545x39,GunAK74_ST=d3f666666 (total 2)
+h LOG NOLA cdeposit: posto no recipiente 60E63E8B813B51B0: GunAK74_STx2
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 0 (1.5 s)
+c1 LOG NOLA TAKEN +cput@60E63E8B813B51B0;h1001;GunAK74_STx2;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aGunAK74_MagExt.Scope_PSO~r17.Ammo_545x39,GunAK74_ST=d3f666666 (total 2)
+MARK t=host-put
+h INSTS BP_Box_C_1 | A012A x30 | GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39 | GunAK74_ST dur=0.9000
+c1 INSTS BP_Box_C_1 | A012A x30
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+c1 LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+c1 LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+c1 STUB iput GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39 x1 BP_Box_C_1
+c1 STUB iput GunAK74_ST dur=0.9000 x1 BP_Box_C_1
+c1 LOG NOLA istate: 60E63E8B813B51B0: items with state set in the open window: [+{GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39} +{GunAK74_ST dur=0.9000}]
+c1 STUB refresh
+c1 LOG NOLA lscont: 60E63E8B813B51B0 igualado a lista comum na janela aberta (1 tiradas contadas; nada tirado do jogador, janela aberta): +[GunAK74_STx2] -[]
+MARK t=c1-open
+c1 INSTS BP_Box_C_1 | A012A x30 | GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39 | GunAK74_ST dur=0.9000
+c1 LOG NOLA LOCK_REL BP_Box_C@520,30,1
+c1 LOG NOLA istate: taken from 60E63E8B813B51B0 with state: {GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39}
+c1 LOG NOLA TAKEN +ctake@60E63E8B813B51B0;c1001;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aGunAK74_MagExt.Scope_PSO~r17.Ammo_545x39 (total 3)
+c1 LOG NOLA ptake: tirado do recipiente 60E63E8B813B51B0: GunAK74_STx1
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 1 (1.5 s)
+h LOG NOLA TAKEN +ctake@60E63E8B813B51B0;c1001;GunAK74_STx1;is=GunAK74_ST=d3eb33333~uUpg_AK74_Barrel1.Upg_AK74_Stock2~aGunAK74_MagExt.Scope_PSO~r17.Ammo_545x39 (total 3)
+MARK t=c1-took
+c1 INSTS me | GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39
+h LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+h LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+h LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 0 (primeiro a pedir)
+h STUB irm GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39 BP_Box_C_1
+h LOG NOLA istate: 60E63E8B813B51B0: items with state set in the open window: [-{GunAK74_ST dur=0.3500 upg=Upg_AK74_Barrel1.Upg_AK74_Stock2 att=GunAK74_MagExt.Scope_PSO ammo=17xAmmo_545x39}x1]
+h STUB refresh
+h LOG NOLA lscont: 60E63E8B813B51B0 igualado a lista comum na janela aberta (2 tiradas contadas; nada tirado do jogador, janela aberta): +[] -[GunAK74_STx1]
+MARK t=host-reopen
+h INSTS BP_Box_C_1 | A012A x30 | GunAK74_ST dur=0.9000
+h LOG NOLA LOCK_REL BP_Box_C@520,30,1
+h LOG NOLA istate: taken from 60E63E8B813B51B0 with state: {GunAK74_ST dur=0.9000}
+h LOG NOLA TAKEN +ctake@60E63E8B813B51B0;h1002;GunAK74_STx1;is=GunAK74_ST=d3f666666 (total 4)
+h LOG NOLA ptake: tirado do recipiente 60E63E8B813B51B0: GunAK74_STx1
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 0 (1.5 s)
+c1 LOG NOLA TAKEN +ctake@60E63E8B813B51B0;h1002;GunAK74_STx1;is=GunAK74_ST=d3f666666 (total 4)
+MARK t=host-took
+h INSTS me | GunAK74_ST dur=0.9000
+c1 LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+c1 LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+c1 LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+h LOG NOLA mc bau: BP_Box_C@520,30,1 dado ao pid 1 (primeiro a pedir)
+c1 STUB nput GunAK74_ST -1 BP_Box_C_1
+c1 STUB refresh
+c1 LOG NOLA lscont: 60E63E8B813B51B0 igualado a lista comum na janela aberta (3 tiradas contadas; nada tirado do jogador, janela aberta): +[] -[GunAK74_STx1]
+MARK t=c1-reopen
+c1 INSTS BP_Box_C_1 | A012A x30
+h MINE GunAK74_ST*1
+c1 MINE GunAK74_ST*1
+c1 LOG NOLA LOCK_REL BP_Box_C@520,30,1
+c1 LOG NOLA ptake: recipiente 60E63E8B813B51B0 fechado sem tirar nada
+h LOG NOLA mc bau: BP_Box_C@520,30,1 solto pelo pid 1 (1.0 s)

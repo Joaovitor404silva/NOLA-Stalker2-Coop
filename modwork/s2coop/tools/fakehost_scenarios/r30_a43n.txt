@@ -1,0 +1,5 @@
+# r30 A43 exact (net, real client): offer of 29 events, a live step 2 s into the session (it lands before the client's own mod save), then the test loads the client's last save at +25..45 s while the first offer is still open.
+# Expect: `jogo do cliente salvo ... 30 eventos`, then after the load `catch-up antigo` or `0 eventos aplicados, 30 ja aplicados antes`, NO `eventos adiante`, NO second `cliente seq=` for the step.
+0 log sample_quest_log.txt 29
+2 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+90 end

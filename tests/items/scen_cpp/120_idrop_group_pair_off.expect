@@ -1,0 +1,35 @@
+h LOG NOLA idrop: 318 meshes, 586 items in the drop table
+h LOG NOLA idrop: inventory widget state 1 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: 318 meshes, 586 items in the drop table
+c1 LOG NOLA idrop: inventory widget state 2 (0 none, 1 hidden, 2 visible, 3 unreadable)
+c1 LOG NOLA idrop: drop seen Medkit x1 mesh SM_cns_healthbox_03 at 5100,100,0
+c1 LOG NOLA idrop: drop seen Medkit x1 mesh SM_cns_healthbox_03 at 5100,100,0
+c1 LOG NOLA idrop: local drop #1 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 sent to the host
+c1 LOG NOLA idrop: local drop #2 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 sent to the host
+h LOG NOLA idrop: registry +1.0.1 owner=1 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 (total 1)
+h LOG NOLA idrop: registry +1.0.2 owner=1 Medkit x1 at 5100,100,0 SM_cns_healthbox_03 (total 2)
+h STUB spawnitem Medkit 5100 100 30
+h LOG NOLA idrop: mirror of 1.0.2 bound to BP_StaticItemContainer_C_s1 (mesh SM_cns_healthbox_03) 0 cm from the spot
+h STUB spawnitem Medkit 5100 100 30
+h LOG NOLA idrop: mirror of 1.0.1 bound to BP_StaticItemContainer_C_s2 (mesh SM_cns_healthbox_03) 0 cm from the spot
+c1 LOG NOLA idrop: local drop #1 is 1.0.1 in the registry
+c1 LOG NOLA idrop: local drop #2 is 1.0.2 in the registry
+MARK t=dropped
+h DSTAT items role=host taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= idrop: reg=2 loc=2 claims=0 pre=0 registered=2 spawned=2 took=0 lost=0 fixed=0 mc: pid=0 views=1 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+h LOG NOLA idrop: 1.0.2 taken by the host
+c1 STUB hide drop1 1
+c1 LOG NOLA idrop: 1.0.2 is gone from the registry, local copy hidden
+h LOG NOLA idrop: 1.0.1 taken by the host
+c1 STUB hide drop2 1
+c1 LOG NOLA idrop: 1.0.1 is gone from the registry, local copy hidden
+h LOG NOLA itake: local P Medkit 1 nil -> true (1 nos na fila)
+h LOG NOLA idrop: 1.0.2 got 2 of 1, removed 1
+h STUB node S2U_P_Medkit_1
+h LOG NOLA itake: fila vazia
+h LOG NOLA idrop: 1.0.1 got exactly 1
+MARK t=group
+h DSTAT items role=host taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid= idrop: reg=0 loc=0 claims=2 pre=0 registered=2 spawned=2 took=2 lost=0 fixed=1 mc: pid=0 views=1 kh=0 gh=0 co=0 clh=0 goff=0 gdup=0 uIn=0 yIn=0 grIn=0 ur=0 yr=0 gr=0
+h HIDDEN BP_StaticItemContainer_C_s1 0
+h HIDDEN BP_StaticItemContainer_C_s2 0
+c1 HIDDEN drop1 1
+c1 HIDDEN drop2 1

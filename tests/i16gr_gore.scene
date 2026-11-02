@@ -1,0 +1,9 @@
+scene gore_dog
+note i16gr: a frozen blind dog 6 m from the player, killed, then 20 s so the corpse settles
+god 1
+time 12:00
+closeui
+spawn sid=Blinddog at=player+6 freeze=1 as=d
+wait 3
+kill $d
+wait 20

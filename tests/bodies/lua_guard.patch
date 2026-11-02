@@ -1,0 +1,51 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5
+not applied
+
+M.tick100, line 9817 (dupGuard inside the core-22/23 table loop)
+-    for name, f in pairs({rewardTick = rewardTick, ptakeTick = ptakeTick, cineWatch = cineWatch, dupGuard = dupGuard}) do
++    for name, f in pairs({rewardTick = rewardTick, ptakeTick = ptakeTick, cineWatch = cineWatch, dupGuard = (not S2L.cpp("bodies")) and dupGuard or nil}) do
+
+M.tick100, line 9804 (bodyGate: the C++ gate is the one that opens; Lua still reads ST.wg for 2439 and the cloot code, see PORT_LOG M1 coupling)
+-    local okW, gateOk = pcall(S2L.bodyGate, ST)
++    local okW, gateOk = true, true
++    if not S2L.cpp("bodies") then okW, gateOk = pcall(S2L.bodyGate, ST) end
+
+M.tick100, lines 9854-9861
+-    if M.ownsAvatar(ST) and FL.coretarget == 1 and gateOk then tgtTick(ST) end
+-    if M.ownsAvatar(ST) then if gateOk then S2L.pupTick(ST) end
+-    elseif gateOk and ST.pup and ST.pup.state and S2L.bodyHeld(ST.pup) then
++    if S2L.cpp("bodies") then
++    elseif M.ownsAvatar(ST) and FL.coretarget == 1 and gateOk then tgtTick(ST) end
++    if S2L.cpp("bodies") then
++    elseif M.ownsAvatar(ST) then if gateOk then S2L.pupTick(ST) end
++    elseif gateOk and ST.pup and ST.pup.state and S2L.bodyHeld(ST.pup) then
+         ST.pup.state = nil
+         log("NOLA puppet: modo desligado (b112: sem SetAnimationMode)")
+     end
+-    local okNs, eNs = pcall(S2L.nsTick, ST)
++    local okNs, eNs = true, nil
++    if not S2L.cpp("bodies") then okNs, eNs = pcall(S2L.nsTick, ST) end
+
+M.tick1000, lines 11212-11226
+-    pcall(S2L.noInteract, ST)    -- b78fix D4
++    if not S2L.cpp("bodies") then pcall(S2L.noInteract, ST) end
+-    pcall(S2L.abpGuard, ST)      -- b85crash
+-    pcall(S2L.pupCtl, ST)        -- b86pupctl
+-    pcall(S2L.pupAi, ST)         -- b134pupai (pupai)
++    if not S2L.cpp("bodies") then pcall(S2L.abpGuard, ST); pcall(S2L.pupCtl, ST); pcall(S2L.pupAi, ST) end
+-    pcall(S2L.animFix, ST)       -- b83anim
++    if not S2L.cpp("bodies") then pcall(S2L.animFix, ST) end
+-    pcall(S2L.offTick, ST)       -- b116motion (offtick)
++    if not S2L.cpp("bodies") then pcall(S2L.offTick, ST) end
+
+M.snapExtra, line 7265 (the leading weapon part; C++ owns the "@W" pseudo-tag)
+-    local okW, ws = pcall(weaponStr, ST, pawn)
++    local okW, ws = false, nil
++    if not S2L.cpp("bodies") then okW, ws = pcall(weaponStr, ST, pawn) end
+
+S2L.pmWrap, lines 7386-7387 (C++ owns "#MV" and "#FH")
+-        if (FL.pupmove or 0) > 0 then local ok, e = pcall(S2L.pmOut, ST, pawn); if ok and e then s = (s or "") .. e end end
+-        if (FL.pupfeet or 0) == 1 then local ok, e = pcall(S2L.pfOut, pawn); if ok and e then s = (s or "") .. e end end
++        if S2L.cpp("bodies") then return s end
++        if (FL.pupmove or 0) > 0 then local ok, e = pcall(S2L.pmOut, ST, pawn); if ok and e then s = (s or "") .. e end end
++        if (FL.pupfeet or 0) == 1 then local ok, e = pcall(S2L.pfOut, pawn); if ok and e then s = (s or "") .. e end end

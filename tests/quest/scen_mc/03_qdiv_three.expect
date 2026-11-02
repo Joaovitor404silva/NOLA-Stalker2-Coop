@@ -1,0 +1,49 @@
+CMD role host
+CMD pawn 1
+CMD t 100
+CMD views 3
+CMD vpeer 0 up 1
+CMD vpeer 1 up 1
+CMD vpeer 2 up 1
+CMD s2q J SQA - Start SQA_Node1
+LOG NOLA quest: host 1,J,SQA,-,Start,SQA_Node1
+CMD run 2
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+LOG NOLA qitem: 564 itens de missao, 465 nos ItemAdd pulados no cliente, 178 recipientes/corpos com item de missao
+OUT #J:1,J,SQA,-,Start,SQA_Node1#QD:h,-,0,-,0;
+OUT #J:1,J,SQA,-,Start,SQA_Node1#QD:h,-,0,-,0;
+CMD vpart 0 QD c,-,0;S2QDIVTEST_R1:40|S2QDIVTEST_C2:40
+CMD vpart 1 QD c,-,0;
+CMD vpart 2 QD c,-,0;S2QDIVTEST_C2:41
+CMD vrun 2
+LOG NOLA qev: tabela carregada (1612 nos de evento)
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou S2QDIVTEST_R1 (missao S2QDIVTEST) ha 40 s e o host nao (pid 1)
+LOG NOLA qdiv: divergencia: o grafo do cliente rodou S2QDIVTEST_C2 (missao S2QDIVTEST) ha 40 s e o host nao (pid 1)
+LOG NOLA qdiv: reparado: o host repetiu o passo do cliente S2QDIVTEST_R1 (missao S2QDIVTEST, 40 s atras) -> XEndQuestNodeBySID ok teste S1: XEndQuestNodeBySID NAO chamado
+LOG NOLA qdiv: o host vence (N14) em S2QDIVTEST_C2 (missao S2QDIVTEST; teste S1): volta ao estado do host so quem rodou (pid 1 #1, pid 3 #1)
+OUT 
+VOUT 0 QD=#QD:h,-,0,-,0; S=
+LOG NOLA quest: sessao nova do cliente (pid 2): catch-up de 0 eventos aberto por 60 s
+VOUT 1 QD=#QD:h,-,0,-,0; S=
+LOG NOLA quest: sessao nova do cliente (pid 3): catch-up de 0 eventos aberto por 60 s
+VOUT 2 QD=#QD:h,-,0,-,0; S=
+OUT 
+VOUT 0 QD=#QD:h,-,1,S2QDIVTEST_C2,1; S=
+VOUT 1 QD=#QD:h,-,0,-,1; S=
+VOUT 2 QD=#QD:h,-,1,S2QDIVTEST_C2,1; S=
+CMD vpart 1 QD c,-,0;S2QDIVTEST_C2:45
+CMD vrun 1
+LOG NOLA lead: inventario base lido (564 itens de missao); a partir de agora cada item pego vai em copia ao outro
+LOG NOLA qdiv: o host vence (N14) em S2QDIVTEST_C2 (missao S2QDIVTEST; o host ja venceu nesse passo): volta ao estado do host so quem rodou (pid 2 #1)
+OUT 
+VOUT 0 QD=#QD:h,-,1,S2QDIVTEST_C2,1; S=
+VOUT 1 QD=#QD:h,-,0,-,1; S=
+VOUT 2 QD=#QD:h,-,1,S2QDIVTEST_C2,1; S=
+CMD vnopart 0 QD
+CMD vnopart 1 QD
+CMD vnopart 2 QD
+CMD vrun 1
+OUT 
+VOUT 0 QD=#QD:h,-,1,S2QDIVTEST_C2,1; S=
+VOUT 1 QD=#QD:h,-,0,-,1; S=
+VOUT 2 QD=#QD:h,-,1,S2QDIVTEST_C2,1; S=

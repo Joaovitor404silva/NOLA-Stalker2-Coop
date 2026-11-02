@@ -1,0 +1,28 @@
+role host
+flag ien 1
+flag lockbrk 0
+flag ientoggle 1
+flag ienecho 10
+pawn 0 0 0
+obj PL1 BP_Padlock_Prototype_01_C InteractableObject inter 1000 0 0
+prop PL1 bEnabled 1
+prop PL1 bBroken 0
+obj PL2 BP_Padlock_Prototype_01_C InteractableObject inter 1100 0 0
+prop PL2 bEnabled 1
+prop PL2 bBroken 1
+obj LV1 BP_Lever_Vertical_C InteractableObject inter 1200 0 0
+prop LV1 bEnabled 0
+deny LV1
+time 1
+tick
+time 2
+remote P 100,0,0;b|110,0,0;b|120,0,0;1|130,0,0;b
+tick
+time 3
+tick
+time 4
+remote P 100,0,0;b|120,0,0;1
+tick
+time 20
+remote P 120,0,0;1
+tick

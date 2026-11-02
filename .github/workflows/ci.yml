@@ -1,0 +1,80 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repo-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No game files, binaries, saves or big files
+        run: |
+          bad=$(git ls-files | grep -iE '\.(pak|utoc|ucas|uasset|uexp|umap|ubulk|sav|dll|exe|lib|pdb|zip|7z|rar|bin)$' || true)
+          big=$(git ls-files -z | xargs -0 -I{} sh -c 'test $(stat -c %s "{}") -gt 5242880 && echo "{}"' || true)
+          if [ -n "$bad$big" ]; then
+            echo "These files are not allowed (see CONTRIBUTING.md):"
+            printf '%s\n' $bad $big
+            exit 1
+          fi
+          echo "repo rules ok: $(git ls-files | wc -l) files"
+
+  offline-tests:
+    runs-on: windows-2022
+    timeout-minutes: 60
+    env:
+      UV_PYTHON: "3.12"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: MSVC at the BuildTools path the test scripts call
+        shell: pwsh
+        run: |
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          if (-not $vs) { throw 'no Visual Studio with the C++ tools on this runner' }
+          $real = Join-Path $vs 'VC\Auxiliary\Build\vcvars64.bat'
+          $dir = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build"
+          if (-not (Test-Path "$dir\vcvars64.bat")) {
+            New-Item -ItemType Directory -Force $dir | Out-Null
+            Set-Content "$dir\vcvars64.bat" "@call `"$real`" %*" -Encoding ascii
+          }
+          Write-Host "vcvars64 -> $real"
+
+      - name: Dev-machine paths the tests read
+        shell: pwsh
+        run: |
+          $game = "${env:ProgramFiles(x86)}\Steam\steamapps\common\S.T.A.L.K.E.R. 2 Heart of Chornobyl"
+          New-Item -ItemType Directory -Force $game, 'D:\modding\cpp' | Out-Null
+          New-Item -ItemType Junction -Path "$game\ModWork" -Target "$PWD\modwork" | Out-Null
+          New-Item -ItemType Junction -Path 'D:\modding\cpp\S2CoopPort' -Target "$PWD" | Out-Null
+          Get-Item "$game\ModWork\s2coop\Mods\S2CoopAlife\Scripts\s2core.lua", 'D:\modding\cpp\S2CoopPort\data\s2u_vendor.tsv' | ForEach-Object FullName
+
+      - name: Offline suites vs tests/baseline.tsv
+        shell: pwsh
+        run: |
+          & .\tools\run_tests.ps1 --all --jobs 4 2>&1 | Tee-Object -FilePath tests.log
+          exit $LASTEXITCODE
+
+      - name: Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs
+          path: |
+            tests.log
+            tests/.run/
+          retention-days: 14
+          include-hidden-files: true

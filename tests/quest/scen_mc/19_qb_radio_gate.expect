@@ -1,0 +1,29 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD peer up 1
+CMD tick
+LOG NOLA trig: 4002 gatilhos de missao em s2u_triggers.tsv
+CMD dlg E01_MQ01_Dialog_Pripoy_in_Bunker_skif_interested_43517 E01_MQ01_Dialog_Pripoy_in_Bunker_skif_knows_36652
+CMD answer E01_MQ01_Dialog_Pripoy_in_Bunker_skif_knows_36652
+SCREEN s2m_session_qb 6 Only the host can choose this answer
+LOG NOLA qbranch: resposta E01_MQ01_Dialog_Pripoy_in_Bunker_skif_knows_36652 (dialogo E01_MQ01_SetDialog_Pripoy_in_Bunker) recusada no cliente: so o host escolhe o caminho da missao
+RET answer false
+CMD part QB 0;;4:1253a2db:2
+CMD tick
+STUB dlgPick E01_MQ01_Dialog_Pripoy_in_Bunker_skif_interested_43517 aceita
+LOG NOLA qbranch: o host escolheu E01_MQ01_Dialog_Pripoy_in_Bunker_skif_interested_43517 (dialogo E01_MQ01_SetDialog_Pripoy_in_Bunker): a mesma resposta no dialogo deste cliente
+CMD dlg -
+CMD fire E01_MQ01_SetDialog_Pripoy_in_Bunker E01_MQ01_Dialog_Pripoy_in_Bunker_skif_interested_36657 fin
+RET fire 0 -
+CMD fire E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector E01_MQ01_Dialog_Herman_ArtOrDetector_E01_MQ01_Dialog_Herman_ArtOrDetector_yesDetector_65671_2 fin
+LOG NOLA qbranch: dialogo E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector (missao E01_MQ01): saida E01_MQ01_Dialog_Herman_ArtOrDetector_E01_MQ01_Dialog_Herman_ArtOrDetector_yesDetector_65671_2 do cliente segurada: so o host decide este ramo
+RET fire 2 -
+CMD qbact E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector
+CMD t 110
+CMD part QB 0;5:b64f8131:3:1:4;4:1253a2db:12
+CMD tick
+STUB qbForce E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector E01_MQ01_Dialog_Herman_ArtOrDetector_yesArt_65666 fin
+LOG NOLA qbranch: dialogo E01_MQ01_SetDialog_E01_MQ01_Dialog_Herman_ArtOrDetector (missao E01_MQ01): o host saiu por E01_MQ01_Dialog_Herman_ArtOrDetector_yesArt_65666; a saida E01_MQ01_Dialog_Herman_ArtOrDetector_E01_MQ01_Dialog_Herman_ArtOrDetector_yesDetector_65671_2 do cliente virou a do host
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 trig.qn=0 out=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=1 force=1 rel=0 ref=1 mir=1 err=0 defer=0 dup=0 held=0

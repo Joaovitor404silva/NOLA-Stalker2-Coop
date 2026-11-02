@@ -1,0 +1,72 @@
+> ismain E01_MQ01_Foo
+R ismain 1
+> ismain C_E02_MQ10_Bar
+R ismain 1
+> ismain E03_Boss1
+R ismain 1
+> ismain C_E03_BossFinal
+R ismain 1
+> ismain E04_Flashback_A
+R ismain 1
+> ismain Arch_Bossfight_One
+R ismain 1
+> ismain Arch_E01_Scene
+R ismain 1
+> ismain E05_Duga
+R ismain 1
+> ismain SQ02_X
+R ismain 0
+> ismain E01_SQ_Foo
+R ismain 0
+> ismain Arch_Other
+R ismain 0
+> ismain
+R ismain 0
+> mqflag 0 0 1
+R mqflag 0
+> time 1000
+> mqseen SQ02_X
+> mqflag 1 0 1
+R mqflag 0
+> mqseen E01_MQ03
+> time 2000
+> mqflag 1 0 1
+L 2000 NOLA mq: dialogo do host e de MISSAO PRINCIPAL (E01_MQ03 ha 1.0 s)
+R mqflag 1
+> mqflag 1 0 1
+R mqflag 1
+> mqflag 0 0 0
+R mqflag 0
+> time 100000
+> mqflag 1 1 0
+L 100000 NOLA mq: cinematica do host e de MISSAO PRINCIPAL (dormindo)
+R mqflag 1
+> mqflag 1 0 0
+R mqflag 1
+> mqflag 0 0 0
+R mqflag 0
+> time 200000
+> mqflag 1 0 0
+R mqflag 0
+> mqok 0
+R mqok 1
+> mqok 1
+R mqok 1
+> mqsid SQ02_X
+R mqsid 1
+> mqsid E01_MQ01
+R mqsid 1
+> flag mqpull 1
+> mqok 0
+R mqok 0
+> mqok 1
+R mqok 1
+> mqsid SQ02_X
+R mqsid 0
+> mqsid E01_MQ01
+R mqsid 1
+> time 300000
+> mqseen E01_MQ99
+> mqflag 1 0 0
+L 300000 NOLA mq: cinematica do host e de MISSAO PRINCIPAL (E01_MQ99 ha 0.0 s)
+R mqflag 1

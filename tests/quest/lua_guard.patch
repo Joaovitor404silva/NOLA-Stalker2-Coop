@@ -1,0 +1,42 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5
+not applied
+
+s2core.lua:516
+-            if m and m.questCmd then pcall(m.questCmd, S2.state, full, params) end
++            if m and m.questCmd and not S2L.cpp("quest") then pcall(m.questCmd, S2.state, full, params) end
+
+s2core.lua:9806
+-    for _, nf in ipairs({{"peerTick", peerTick}, {"cineTick", cineTick}, {"joinTick", joinTick}, {"wxTick", wxTick}, {"ndTick", ndTick}, {"lifeGuard", lifeGuard}, {"rbTick", rbTick}, {"slTick", slTick},
++    for _, nf in ipairs({{"peerTick", peerTick}, {"cineTick", cineTick}, {"joinTick", joinTick}, {"wxTick", wxTick}, {"ndTick", ndTick}, {"lifeGuard", lifeGuard}, {"rbTick", S2L.cpp("quest") and function() end or rbTick}, {"slTick", slTick},
+
+s2core.lua:9817
+-    for name, f in pairs({rewardTick = rewardTick, ptakeTick = ptakeTick, cineWatch = cineWatch, dupGuard = dupGuard}) do
++    for name, f in pairs({rewardTick = (not S2L.cpp("quest")) and rewardTick or nil, ptakeTick = ptakeTick, cineWatch = cineWatch, dupGuard = dupGuard}) do
+
+s2core.lua:9823
+-    pcall(trigTick, ST)
++    if not S2L.cpp("quest") then pcall(trigTick, ST) end
+
+s2core.lua:9831
+-    pcall(S2L.qpTick, ST)
++    if not S2L.cpp("quest") then pcall(S2L.qpTick, ST) end
+
+s2core.lua:9846
+-    pcall(S2L.qiTick, ST)
++    if not S2L.cpp("quest") then pcall(S2L.qiTick, ST) end
+
+s2core.lua:9847
+-    pcall(S2L.qdrTick, ST)
++    if not S2L.cpp("quest") then pcall(S2L.qdrTick, ST) end
+
+s2core.lua:11209
+-    if beat % 5 == 0 then pcall(questRollback, ST) end
++    if beat % 5 == 0 and not S2L.cpp("quest") then pcall(questRollback, ST) end
+
+s2core.lua:11210
+-    pcall(M.qlogFlush, ST)
++    if not S2L.cpp("quest") then pcall(M.qlogFlush, ST) end
+
+s2core.lua:11215
+-    pcall(S2L.qdTick, ST)
++    if not S2L.cpp("quest") then pcall(S2L.qdTick, ST) end

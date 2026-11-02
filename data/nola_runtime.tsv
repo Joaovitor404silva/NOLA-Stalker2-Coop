@@ -1,0 +1,109 @@
+kind	name	class	where	rows	marker	note
+file	nola_runtime.tsv	a	s2x_flags.cpp release_lock			this list; release builds read the class c flag rows from the embedded copy
+file	flags_s2core.tsv	a	s2x_flags.cpp load_default_tables			flag defaults; without it every Lua-era flag reads its code default
+file	flags_s2core_tail.tsv	a	s2x_flags.cpp load_default_tables			flag defaults (tail of the old core)
+file	flags_main.tsv	a	s2x_flags.cpp load_default_tables			flag defaults (main.lua)
+file	flags_main_extra.tsv	a	s2x_flags.cpp load_default_tables			flag defaults (main.lua extra)
+file	flags_x0.tsv	a	s2x_flags.cpp load_default_tables			C++ flag defaults; without it every new fix flag is off
+file	flags_role_host.tsv	a	s2x_flags.cpp role_defs_load			host role defaults
+file	flags_role_client.tsv	a	s2x_flags.cpp role_defs_load			client role defaults
+file	flags_dups.tsv	a	s2x_flags.cpp load_default_tables			duplicate-default audit log only
+file	weapons_main.tsv	a	s2m_damage.cpp data_tsv			weapon damage parity table; remote hits use the fallback damage
+file	diff_weapon_mult_main.tsv	a	s2m_damage.cpp data_tsv			difficulty weapon multipliers
+file	revive_items.tsv	a	s2m_damage.cpp data_tsv			items that revive a downed player
+file	revive_heal.tsv	a	s2m_damage.cpp data_tsv			heal amount per revive item
+file	s2u_choice.tsv	a	s2m_lock.cpp data_tsv			dialog choice lock table; story choices are not host-locked
+file	s2u_qitems.tsv	a	s2m_items.cpp dataText, s2m_quest.cpp data			quest items given to both players
+file	s2u_qshare.tsv	a	s2m_items.cpp dataText			shared quest item list
+file	loot_sids.tsv	a	s2m_items.cpp dataText			placed loot SIDs for the shared loot list
+file	s2u_drop.tsv	a	s2m_items_drop.inc dataText			item drop mirroring
+file	s2u_cont.tsv	a	s2m_items.cpp tabText			container positions; without it the stash window auto-closes for the next player (ST3)
+file	s2u_contk.tsv	a	s2m_items.cpp tabText			container keys of the shared container list (ST3)
+file	s2u_artspawn.tsv	a	s2m_items.cpp readText			artifact spawner positions; without it artifacts picked by one player stay in the other world (artsync)
+file	s2u_equip.tsv	a	s2m_items.cpp readText, s2m_save.cpp readText			equipment kinds and ammo; without it the save mirror and loot share treat weapons and armor as plain items
+file	s2u_basekit.txt	a	s2m_items.cpp readText, s2m_save.cpp readText			start gear kept out of the shared loot and save mirror (Skif gun, Jemmy armor)
+file	s2u_kit.tsv	a	s2m_save.cpp readText			client post-tutorial start kit; without it the client gets nothing ("s2u_kit.tsv ausente; nada dado")
+file	s2u_trade.tsv	a	s2m_pop.cpp readFile			trader places; without it the A-Life keep zones around traders are empty and traders can despawn
+file	s2u_questitems.txt	a	s2n_join.cpp quest_set			quest item SIDs carried in the join snapshot; without it the join hands no quest items
+file	s2u_vendor.tsv	a	s2m_pop.cpp readFile			vendor table (per-player vendors)
+file	nat_classes.tsv	a	s2x_nat.cpp data_tsv			natnpc class table; without it only the natcls class is synced
+file	mc_tags.tsv	a	s2r_x0.cpp data			relay hub x1 tags for 3+ players
+file	qmute_client.txt	a	s2m_solo.cpp data			client quest mute list
+file	s2u_cine.tsv	a	s2m_travel_x0.cpp data			cinematic table
+file	s2u_actions.tsv	a	s2m_world.cpp read_data			interactable action table (doors, switches)
+file	s2u_qobj.tsv	a	s2m_qobj.cpp table			mission objective actors by quest guid (qhostonly, qobjsync)
+file	s2u_anomaly.tsv	a	s2m_world.cpp read_data			anomaly sync table
+file	s2u_destruct.tsv	a	s2m_world.cpp read_data			destructible object table
+file	s2u_lockbrk.tsv	a	s2m_world.cpp read_data			lock break table
+file	s2u_wshot.tsv	a	s2m_wshot.cpp data_tsv			world shot table
+file	s2u_triggers.tsv	a	s2m_quest.cpp data			quest trigger table
+file	s2u_qevent.tsv	a	s2m_quest.cpp data			quest event table
+file	s2u_qcatch.tsv	a	s2m_quest.cpp data			quest catch-up table
+file	s2u_qbranch.tsv	a	s2m_quest.cpp data			quest branch table
+file	s2u_qpick.tsv	a	s2m_quest.cpp data			quest pickup table
+file	s2u_qdrop.tsv	a	s2m_quest.cpp data			quest drop table
+file	s2c_skip.txt	a	s2m_quest.cpp data			client quest skip list
+file	s2u_dlg_header.tsv	a	-			embedded since D1, no DLL reader
+file	flags.txt	b	s2x_flags.cpp flags_poll			written by the installer and by the player
+file	taken.txt	b	s2m_items.cpp			shared taken list
+file	taken_mine.txt	b	s2m_items.cpp			own taken list
+file	art_taken.txt	b	s2m_items.cpp			artifacts taken
+file	qshare_mine.txt	b	s2m_items_qg.inc			own shared quest items
+file	ss_box.txt	b	s2m_items.cpp			shared stash box
+file	stash_ledger.txt	b	s2m_items.cpp			host stash ledger
+file	client_applied.txt	b	s2m_save.cpp, s2m_lshold.cpp, s2n_join.cpp			client applied snapshot
+file	kit_done.txt	b	s2m_save.cpp			start kit given marker
+file	n7sv_pares.txt	b	s2m_save.cpp			save pairs
+file	n7sv_backup.txt	b	s2m_save.cpp			save pair backup
+file	n7ap_*.txt	b	s2m_save.cpp			applied save per campaign
+file	quest_log.txt	b	s2m_quest.cpp, s2n_join.cpp			quest log
+file	quest_log.id	b	s2m_quest.cpp, s2n_join.cpp			quest log campaign id
+file	s2_blk_ledger.txt	b	s2m_lock.cpp			blocked object ledger
+file	farlook.txt	b	s2m_bodies.cpp			far body look captured from the live puppet
+file	nola_lasthost.txt	b	s2m_menu.cpp			last host for the join menu
+file	nola_player.txt	b	s2m_pid.cpp			player id
+file	campaign.txt	b	s2m_pid.cpp			campaign id
+file	wp_host.txt	b	s2m_wpkg.cpp			world package info
+file	wp_host.sav	b	s2m_wpkg.cpp			world package
+file	last.txt	b	s2m_wpkg.cpp			world package inbox marker
+file	sx_req.txt	b	s2n_join.cpp, s2r_net.cpp			join request
+file	sx_snap.txt	b	s2n_join.cpp			join snapshot
+file	sx_want.txt	b	s2n_join.cpp, s2r_net.cpp			join want
+file	sx_backup.txt	b	s2n_join.cpp			join backup
+file	sx_in.part	b	s2r_net.cpp			join transfer
+file	wsp_backup.txt	b	s2n_join.cpp			world splice backup
+file	wsp_backup.sav	b	s2n_join.cpp			world splice backup save
+file	*.sav	b	s2n_join.cpp, s2n_save.cpp			game saves
+file	in.json	b	s2x_bridge.cpp, s2r_net.cpp, s2n_nat.cpp			relay to game state (file transport)
+file	out.json	b	s2x_bridge.cpp, s2r_net.cpp			game to relay state (file transport)
+file	in_v*.json	b	s2x_bridge.cpp, s2r_net.cpp			per-view relay state
+file	roster.json	b	s2r_net.cpp			relay roster
+file	role.txt	c	s2x_io.cpp role_init		w:role.txt	dev role override; release takes the role from the menu
+file	state.json	c	s2x_ue.cpp		w:state.json	dev telemetry for the harness
+file	s2cmd.txt	c	s2x_sched.cpp cmd_poll		w:s2cmd.txt,a:NOLA x0 devcmd	dev command channel
+file	s2cmd_out.txt	c	s2x_sched.cpp cmd_poll		w:s2cmd_out.txt	dev command output
+file	relay_record.txt	c	s2r_x0.cpp		w:relay_record.txt	packet recorder (telemetry)
+file	s2x_data\*	c	s2x_io.cpp data		w:s2x_data\	loose dev override of the embedded tables
+file	census.*	c	s2m_census.cpp census			dev world census output (devcmd census); the release census check (build_release_cpp.py CENSUS_NEEDLES) is the marker
+file	invariant*.tsv	c	s2m_census.cpp load_inv			dev invariant rules, loose override of the built-in s2m_census_inv.inc; the release census check is the marker
+flag	luacmd	c				dev Lua command channel
+flag	playergod	c				dev god mode
+flag	godtest	c				dev
+flag	debugkeys	c				dev keys
+flag	autowalk	c				dev
+flag	autocontinue	c				dev
+flag	cfollow	c				dev
+flag	pupmvlog	c				dev log
+flag	cinetest	c				dev
+flag	cptest	c				dev
+flag	ndtest	c				dev
+flag	emtest	c				dev
+flag	iprobe	c				dev
+flag	cinelog	c				dev log
+flag	autoload	c				dev
+flag	emreset	c				dev
+flag	dmgtest	c				dev
+flag	tgtdiag	c				dev
+flag	pupmvcr	c				dev
+flag	devcmd	c			a:NOLA x0 devcmd	dev command channel
+flag	netrecord	c				packet recorder

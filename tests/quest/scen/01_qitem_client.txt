@@ -1,0 +1,16 @@
+role client
+flag b164off 1
+flag qitem 1
+pawn 100
+t 10
+inv ANCQ01_VadaHvorostPDA 1
+inv E07_MQ01_SachokPDA 2
+run 6
+inv E07_MQ01_SachokPDA 0
+run 3
+inv ANCQ04_LokotPDA 1
+aafail 1
+run 5
+t 60
+run 2
+apply J,ANCQ01,-,Start,ANCQ01_ItemAdd_VadaHvorostPDA

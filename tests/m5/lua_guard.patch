@@ -1,0 +1,20 @@
+target=ModWork/s2coop/Mods/S2CoopAlife/Scripts/s2core.lua md5=0b56e1b5 (B73.tick line 7255, M.tick100 lines 9822-9826)
+not applied
+
+-    pcall(doorTick, ST)   -- batch 53
++    if not S2L.cpp("world") then pcall(doorTick, ST) end
+
+-    local okBj, eBj = pcall(dobjTick, ST)   -- batch 58
++    local okBj, eBj = true; if not S2L.cpp("world") then okBj, eBj = pcall(dobjTick, ST) end
+
+-    local okIe, eIe = pcall(ienTick, ST)    -- batch 59
++    local okIe, eIe = true; if not S2L.cpp("world") then okIe, eIe = pcall(ienTick, ST) end
+
+-    local okA, eA = pcall(B73.anomTick, ST)
++    local okA, eA = true; if not S2L.cpp("world") then okA, eA = pcall(B73.anomTick, ST) end
+
+(the tags #O #Z #P #AN: X0 own_tag(world, ...) strips the Lua doorOut / dobjOut / ienOut / B73.anomOut part of s2core.lua 7268 while cpp_world=1, no edit here)
+(B73.dropTick / dropOut stay Lua until M4 ships; they share B73.tick and B73.out with anomalies, only the anom half is guarded)
+(Lua gate functions that stay Lua: chUseDeny 2783 is consumed by ienTick only, so with the guard it is dead; s2m_lock::use_deny replaces it)
+(cj68.lua cjoin half stays Lua until M10; the actApply half is replaced by the s2u_actions.tsv table in this module)
+(S2L.cpp(name) is the helper the other module patches use; it must exist in s2core.lua before this patch is applied (not verified that it exists yet))

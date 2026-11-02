@@ -1,0 +1,4 @@
+scene v130a_away
+note v130a: the client player goes 150 m from the host (peer+15000, works on any save), beyond R*1.06 (10070 cm), so its game destroys the dead copy
+tp peer+15000
+wait 2

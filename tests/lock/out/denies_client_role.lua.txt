@@ -1,0 +1,19 @@
+> role client
+> flag choice 1
+> pawn 1000 442207.0 470552.0 0
+> npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+> ph 0061764645D2215D4A0E9B852B301CC8 n1
+> usable u1 01C54CD64D96F4CEE43A00B763ECC498 442057.0 470452.0 0 A:1,B:1
+> shot n1
+R shot 0
+> usedeny u1 11,22,33
+R use 0
+> trig ANCQ02_OnTriggerEnterEvent_Roof 7
+L 0 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 0 NOLA choice: gatilho do cliente ANCQ02_OnTriggerEnterEvent_Roof seq=7 NAO disparado no host: escolha de historia (N3, nivel 1); o host decide ao entrar [1]
+R trig 1
+> run 2100
+A use u1 A active 0
+A use u1 B active 0
+L 1000 NOLA choice: 44206,47045,0 (guid 01C54CD64D96F4CEE43A00B763ECC498) bloqueado no cliente: 2 prompts desligados, so o host usa (N3) [1]
+> run 2100

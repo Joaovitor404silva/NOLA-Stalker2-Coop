@@ -1,0 +1,9 @@
+spec i16cl_far_away
+note i16cl phase 2 (after scene i16cl_away on B: B is 80 m south, the corpse is beyond the stock 50 m corpse ring of B's own game). a corpse copy the game destroys beyond the radius is logged fora_do_raio (the game may also keep it; perdas_longe is cumulative), perdas stays 0 (not counted toward natlostmax), no desiste, and the copy is not made again while B is far (no second loss, no CRIADA loop). The host keeps listing the corpse row while its actor exists (natfar=1, the mc drop rule no longer applies natdead): corpo_mais_velho reaches 40 s or more and B never logs fica como corpo (host parou de mandar). Old DLL: the host dropped the row 30 s after death (mc drop lambda with natdead) and B logged fica como corpo; or perdas=1 without fora_do_raio, then CRIADA + perdas=2, perdas=3 -> desiste desta uid (natlostmax).
+mark
+expect B perdas_longe=[1-9]\d* refeitas_ao_voltar=\d+ within 20
+expect A i16cl natfar=1 corpos_listados=[1-9]\d* corpo_mais_velho=(4\d|[5-9]\d|\d{3,}) s within 60
+expect_not B desiste desta uid during 30
+expect_not B fica como corpo \(host parou de mandar during 30
+expect_not B corpo da copia perdido host uid=\d+ \(_\d+\) how=2 .* perdas=[1-9] during 30
+expect_not B copia de host uid=\d+ \(_\d+\) CRIADA \(spawn\): BP_AI_Blinddog_C_ during 30

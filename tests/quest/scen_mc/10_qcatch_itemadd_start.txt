@@ -1,0 +1,54 @@
+# QI1 (a): an ItemAdd-to-player milestone the other graph ran: with no event to end it is STARTED at once; with events it is started only after the rounds did not reach it; the own L node confirms; qcatchadd 0 keeps the old miss
+role client
+pawn 7
+t 100
+peer up 1
+tick1k
+t 125
+part QF 1;b79db1c3:0
+tick1k
+t 151
+part QF 1;b79db1c3:26
+tick1k
+s2q L ANCQ103_P_ItemAdd_DocPDA_SQ103
+t 156
+part QF 1;b79db1c3:31
+tick1k
+status
+t 200
+part QF 2;b79db1c3:75|0f583b19:0
+tick1k
+t 226
+part QF 2;b79db1c3:101|0f583b19:26
+tick1k
+t 231
+part QF 2;b79db1c3:106|0f583b19:31
+tick1k
+t 236
+part QF 2;b79db1c3:111|0f583b19:36
+tick1k
+t 241
+part QF 2;b79db1c3:116|0f583b19:41
+tick1k
+s2q L E01_MQ01_ItemAdd_Scanner_1
+t 246
+part QF 2;b79db1c3:121|0f583b19:46
+tick1k
+status
+flag qcatchadd 0
+t 300
+part QF 1;f3c1fd2f:0
+tick1k
+t 326
+part QF 1;f3c1fd2f:26
+tick1k
+t 331
+part QF 1;f3c1fd2f:31
+tick1k
+t 336
+part QF 1;f3c1fd2f:36
+tick1k
+t 341
+part QF 1;f3c1fd2f:41
+tick1k
+status

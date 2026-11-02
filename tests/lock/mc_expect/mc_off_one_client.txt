@@ -1,0 +1,15 @@
+> role host
+> flag lead 1
+> flag mclock 1
+> mc 1 1 0
+> pawn 1000 442207.0 470552.0 0
+> npc n1 5001 442057.0 470452.0 832.0 1 1 1 0 0
+> run 300
+> peer c,3,1700000005,dlg,442057.0,470452.0,832.0
+> run 300
+> out
+O 
+> ownerpid
+R ownerpid 1
+> state
+S mine=0 peer=1 owner=client

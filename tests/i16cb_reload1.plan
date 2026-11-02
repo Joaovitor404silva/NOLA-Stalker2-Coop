@@ -1,0 +1,26 @@
+out D:\modding\proofs\20261030_1700_i16cb_reload
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A natfar 1
+setflag B natfar 1
+setflag A natfd 1
+setflag B natfd 1
+setflag A natdeadall 1
+setflag B nathotkeep 1
+setflag B natdeadkeep 1
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+mark i16cb_reload_setup
+scene D:\modding\cpp\wt\i16cb\tests\i16cl_back.scene -On B
+scene D:\modding\cpp\wt\i16cb\tests\i16cb_dogs8.scene -On A
+mark i16cb_reload_before
+run D:\modding\cpp\wt\i16cb\tests\i16cb_reload1_spec.txt
+wait 3
+shot i16cb_reload_before on=A,B cam=2.5

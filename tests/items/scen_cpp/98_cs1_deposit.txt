@@ -1,0 +1,48 @@
+# CS1: the host puts 2 medkits in a box; the client sees them when it opens the box, takes them, and the host's reopen shows them gone (only the client has them)
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag ptake 1
+@all flag lootshare 1
+@all flag lscont 1
+@all flag ground 0
+@all flag contall 1
+@h flag lockfirst 1
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@all ainv BP_Box_C_1 A012A 30
+@all flag cdeposit 1
+@h myinv Medkit 2
+run 0.5
+@h open BP_Box_C_1
+@h vis 1
+run 1
+@h put BP_Box_C_1 Medkit 2
+run 0.5
+@h vis 0
+@h open -
+run 4
+mark host-put
+@h inv BP_Box_C_1
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 1
+mark c1-open
+@c1 inv BP_Box_C_1
+@c1 take BP_Box_C_1 Medkit 2
+run 0.5
+@c1 vis 0
+@c1 open -
+run 4
+mark c1-took
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-reopen
+@h inv BP_Box_C_1
+@h mine
+@c1 mine
+@h vis 0
+@h open -
+run 1

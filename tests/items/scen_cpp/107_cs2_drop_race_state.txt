@@ -1,0 +1,26 @@
+# CS2: c1 drops a damaged AK74 (state from the inventory diff, the ground item gives none); c2 and c3 both pick up their mirror, c3 loses: exactly the picked-up instance is taken back and c3's own 60% AK74 stays
+nodes 4
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all flag istate 1
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myst GunAK74_ST d3eb33333~uUpg_AK74_Barrel1~r5.Ammo_545x39
+@c3 myst GunAK74_ST d3f19999a
+@c1 vis 1
+run 1
+@c1 dropitem dropv GunAK74_ST 1 5100 100 0
+run 3.5
+mark dropped
+@h dstat
+@c2 insts BP_StaticItemContainer_C_s1
+@c2 pickupi BP_StaticItemContainer_C_s1
+@c3 pickupi BP_StaticItemContainer_C_s1
+run 4
+mark race
+@c2 insts me
+@c3 insts me
+@h dstat

@@ -1,0 +1,42 @@
+CMD role client
+CMD pawn 1
+CMD t 100
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+RET answer true
+CMD peer up 1
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+SCREEN s2m_session_qb 6 Only the host can choose this answer
+LOG NOLA qbranch: resposta E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289 (dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer) recusada no cliente: so o host escolhe o caminho da missao
+RET answer false
+CMD t 102
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+RET answer false
+CMD answer e03_sq01_dialog_vetosintrailer_easier_44985
+LOG NOLA qbranch: resposta E03_SQ01_Dialog_VetosInTrailer_Easier_44985 (dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer) recusada no cliente: so o host escolhe o caminho da missao
+RET answer false
+CMD answer E03_SQ01_Dialog_VetosInTrailer_WaitForReply
+RET answer true
+CMD t 111
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+SCREEN s2m_session_qb 6 Only the host can choose this answer
+LOG NOLA qbranch: resposta E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289 (dialogo E03_SQ01_C1_SetDialog_E03_SQ01_Dialog_VetosInTrailer) recusada no cliente: so o host escolhe o caminho da missao
+RET answer false
+CMD lang pt
+CMD t 116
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+SCREEN s2m_session_qb 6 Só o host pode escolher esta resposta
+RET answer false
+CMD lang es
+CMD t 120
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+SCREEN s2m_session_qb 6 Solo el anfitrión puede elegir esta respuesta
+RET answer false
+CMD lang en
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+RET answer true
+CMD answer E03_SQ01_Dialog_VetosInTrailer_KickBandit_70289
+RET answer true
+CMD fire ANCQ03_If_Distance True fin
+RET fire 0 -
+CMD status
+STATUS quest: seq=0 got=0 sent=0 log=0 qi.seq=0 qi.out=0 qbranch nos=2897 respostas=1829 rec=0 ok=0 sub=0 hold=0 force=0 rel=0 ref=6 mir=0 err=0 defer=0 dup=0 held=0

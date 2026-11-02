@@ -1,0 +1,45 @@
+role client
+flag doors 1
+flag doorfix 1
+flag doorre 1
+flag ien 1
+flag ienecho 10
+pawn 0 0 0
+pawnid 7
+obj PL1 BP_Padlock_Prototype_01_C InteractableObject inter 1000 0 0
+prop PL1 bEnabled 1
+prop PL1 bBroken 0
+obj D1 BP_DoorView_C DoorView door 1000 50 0
+yaw D1 10
+prop D1 bLocked 1
+time 1
+tick
+expect_new LOG NOLA doorlock: 100,5,0 trancada aqui: pergunto ao host
+expect_new OUT #O:100,5,0;l
+time 2
+remote O 100,5,0;u
+remote P 100,0,0;b
+tick
+expect_new CALL D1.UnlockDoor()
+expect_new LOG NOLA doorlock: 100,5,0 -> UnlockDoor ok=true locked=false
+expect_new CALL PL1.BndEvt__BP_Padlock_Prototype_01_DamageInteractable_K2Node_ComponentBoundEvent_0_OnDamageAccumulated__DelegateSignature()
+expect_new LOG NOLA ien: 100,0,0 -> quebra replay BP_Padlock_Prototype_01_C ok=true broken=true
+expect_none CALL PL1.SetBroken
+time 3
+tick
+expect_none DESTRANCADA
+expect_none CALL D1.UnlockDoor
+expect_none ;b
+time 9
+remote O -
+remote P -
+tick
+expect_none OUT #O
+expect_none OUT #P
+expect_status door.lock=1 door.lpend=0 ien.bpend=0
+time 10
+pawnid 8
+tick
+time 11
+tick
+expect_none OUT #O

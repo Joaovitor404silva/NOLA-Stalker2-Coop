@@ -1,0 +1,9 @@
+role host
+pawn 1
+t 1
+run 1
+role client
+run 1
+flag b164off 1
+flag qitem 1
+run 1

@@ -1,0 +1,53 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 2 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=2 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT me hp=15.0 alive=true
+CALL me ForceSetHP 15
+LOG NOLA LIFE: itens de reanimar (Item.WoundedHeal): 3
+LOG NOLA LIFE: cura dos itens de reanimar lida da tabela: 3 itens
+CALL me ForceSetHP 16
+CALL rk XApplyEffectOnPlayer EcoMedkitHealing4
+CALL rk XApplyEffectOnPlayer EcoMedkitBleeding2
+CALL rk XApplyEffectOnPlayer EcoMedkitAntirad3
+CALL rk XApplyEffectOnPlayer MedkitPostProcess
+LOG NOLA LIFE: reviveheal: EcoMedkit aplicou os efeitos do item EcoMedkitHealing4,EcoMedkitBleeding2,EcoMedkitAntirad3,MedkitPostProcess (hp 15.0 -> base 16.0, cura de estoque +100.0)
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 2 false
+LOG NOLA LIFE: Unkillable uid=2 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado por PLAYER 3 com F + medkit, pedido #1 a 150 cm) depois de 10.0 s, com a cura do item
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=16.0 alive=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 2 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=2 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #2 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL me ForceSetHP 16
+CALL rk XApplyEffectOnPlayer ArmyMedkitHealing4
+CALL rk XApplyEffectOnPlayer ArmyMedkitBleeding3
+CALL rk XApplyEffectOnPlayer MedkitPostProcess
+LOG NOLA LIFE: reviveheal: ArmyMedkit aplicou os efeitos do item ArmyMedkitHealing4,ArmyMedkitBleeding3,MedkitPostProcess (hp 15.0 -> base 16.0, cura de estoque +85.0)
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 2 false
+LOG NOLA LIFE: Unkillable uid=2 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado por PLAYER 1 com F + medkit, pedido #2 a 200 cm) depois de 1.0 s, com a cura do item
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+OUT me hp=16.0 alive=true

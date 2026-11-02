@@ -1,0 +1,25 @@
+nodes 2
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myinv Vodka 3
+@c1 vis 1
+run 1
+@c1 dropitem drop1 Vodka 1 5100 100 0
+run 3
+mark dropped
+@h dstat
+@c1 dstat
+@h pickup BP_StaticItemContainer_C_s1 Vodka 1
+run 3
+mark host-took
+@c1 hidden drop1
+@h dstat
+@c1 dstat
+run 2
+mark idle
+@c1 hidden drop1

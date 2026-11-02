@@ -1,0 +1,3129 @@
+k1	k2	t	v
+sSM_Lab_dishes_1_10	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_10	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_10	sk	s	destroy
+sSM_Lab_dishes_1_10	snm	s	
+sSM_Lab_dishes_1_10	sp	i	1
+sSM_Lab_dishes_1_10	sq	i	0
+sSM_Lab_dishes_1_10	ss	s	D_GlassEmptyJar_11_LabStuff
+sSM_Lab_dishes_1_10	sx	s	
+sSM_Lab_dishes_1_11	sau	s	
+sSM_Lab_dishes_1_11	sfx	s	
+sSM_Lab_dishes_1_11	sk	s	movable
+sSM_Lab_dishes_1_11	snm	s	
+sSM_Lab_dishes_1_11	sp	i	1
+sSM_Lab_dishes_1_11	sq	i	0
+sSM_Lab_dishes_1_11	ss	s	M_PlasticLabPillJar_01
+sSM_Lab_dishes_1_11	sx	s	
+sSM_Lab_dishes_1_12	sau	s	
+sSM_Lab_dishes_1_12	sfx	s	
+sSM_Lab_dishes_1_12	sk	s	movable
+sSM_Lab_dishes_1_12	snm	s	
+sSM_Lab_dishes_1_12	sp	i	1
+sSM_Lab_dishes_1_12	sq	i	0
+sSM_Lab_dishes_1_12	ss	s	M_PlasticLabPillJar_02
+sSM_Lab_dishes_1_12	sx	s	
+sSM_Lab_dishes_1_13	sau	s	
+sSM_Lab_dishes_1_13	sfx	s	
+sSM_Lab_dishes_1_13	sk	s	movable
+sSM_Lab_dishes_1_13	snm	s	
+sSM_Lab_dishes_1_13	sp	i	1
+sSM_Lab_dishes_1_13	sq	i	0
+sSM_Lab_dishes_1_13	ss	s	M_PlasticLabPillJar_03
+sSM_Lab_dishes_1_13	sx	s	
+sSM_Lab_dishes_1_14	sau	s	
+sSM_Lab_dishes_1_14	sfx	s	
+sSM_Lab_dishes_1_14	sk	s	movable
+sSM_Lab_dishes_1_14	snm	s	
+sSM_Lab_dishes_1_14	sp	i	1
+sSM_Lab_dishes_1_14	sq	i	0
+sSM_Lab_dishes_1_14	ss	s	M_PlasticLabPillJar_04
+sSM_Lab_dishes_1_14	sx	s	
+sSM_Lab_dishes_1_15	sau	s	
+sSM_Lab_dishes_1_15	sfx	s	
+sSM_Lab_dishes_1_15	sk	s	movable
+sSM_Lab_dishes_1_15	snm	s	
+sSM_Lab_dishes_1_15	sp	i	1
+sSM_Lab_dishes_1_15	sq	i	0
+sSM_Lab_dishes_1_15	ss	s	M_PlasticLabPillJar_05
+sSM_Lab_dishes_1_15	sx	s	
+sSM_Lab_dishes_1_16	sau	s	
+sSM_Lab_dishes_1_16	sfx	s	
+sSM_Lab_dishes_1_16	sk	s	movable
+sSM_Lab_dishes_1_16	snm	s	
+sSM_Lab_dishes_1_16	sp	i	1
+sSM_Lab_dishes_1_16	sq	i	0
+sSM_Lab_dishes_1_16	ss	s	M_PlasticLabPillJar_06
+sSM_Lab_dishes_1_16	sx	s	
+sSM_Lab_dishes_1_17	sau	s	
+sSM_Lab_dishes_1_17	sfx	s	
+sSM_Lab_dishes_1_17	sk	s	movable
+sSM_Lab_dishes_1_17	snm	s	
+sSM_Lab_dishes_1_17	sp	i	1
+sSM_Lab_dishes_1_17	sq	i	0
+sSM_Lab_dishes_1_17	ss	s	M_PlasticLabPillJar_07
+sSM_Lab_dishes_1_17	sx	s	
+sSM_Lab_dishes_1_18	sau	s	
+sSM_Lab_dishes_1_18	sfx	s	
+sSM_Lab_dishes_1_18	sk	s	movable
+sSM_Lab_dishes_1_18	snm	s	
+sSM_Lab_dishes_1_18	sp	i	1
+sSM_Lab_dishes_1_18	sq	i	0
+sSM_Lab_dishes_1_18	ss	s	M_PlasticLabPillJar_08
+sSM_Lab_dishes_1_18	sx	s	
+sSM_Lab_dishes_1_19	sau	s	
+sSM_Lab_dishes_1_19	sfx	s	
+sSM_Lab_dishes_1_19	sk	s	movable
+sSM_Lab_dishes_1_19	snm	s	
+sSM_Lab_dishes_1_19	sp	i	1
+sSM_Lab_dishes_1_19	sq	i	0
+sSM_Lab_dishes_1_19	ss	s	M_PlasticLabPillJar_09
+sSM_Lab_dishes_1_19	sx	s	
+sSM_Lab_dishes_1_2	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_2	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_2	sk	s	destroy
+sSM_Lab_dishes_1_2	snm	s	
+sSM_Lab_dishes_1_2	sp	i	1
+sSM_Lab_dishes_1_2	sq	i	0
+sSM_Lab_dishes_1_2	ss	s	D_GlassEmptyJar_04_LabStuff
+sSM_Lab_dishes_1_2	sx	s	
+sSM_Lab_dishes_1_20	sau	s	
+sSM_Lab_dishes_1_20	sfx	s	
+sSM_Lab_dishes_1_20	sk	s	movable
+sSM_Lab_dishes_1_20	snm	s	
+sSM_Lab_dishes_1_20	sp	i	1
+sSM_Lab_dishes_1_20	sq	i	0
+sSM_Lab_dishes_1_20	ss	s	M_PlasticLabPillJar_10
+sSM_Lab_dishes_1_20	sx	s	
+sSM_Lab_dishes_1_21	sau	s	
+sSM_Lab_dishes_1_21	sfx	s	
+sSM_Lab_dishes_1_21	sk	s	movable
+sSM_Lab_dishes_1_21	snm	s	
+sSM_Lab_dishes_1_21	sp	i	1
+sSM_Lab_dishes_1_21	sq	i	0
+sSM_Lab_dishes_1_21	ss	s	M_PlasticLabPillJar_11
+sSM_Lab_dishes_1_21	sx	s	
+sSM_Lab_dishes_1_22	sau	s	
+sSM_Lab_dishes_1_22	sfx	s	
+sSM_Lab_dishes_1_22	sk	s	movable
+sSM_Lab_dishes_1_22	snm	s	
+sSM_Lab_dishes_1_22	sp	i	1
+sSM_Lab_dishes_1_22	sq	i	0
+sSM_Lab_dishes_1_22	ss	s	M_PlasticLabPillJar_12
+sSM_Lab_dishes_1_22	sx	s	
+sSM_Lab_dishes_1_23	sau	s	
+sSM_Lab_dishes_1_23	sfx	s	
+sSM_Lab_dishes_1_23	sk	s	movable
+sSM_Lab_dishes_1_23	snm	s	
+sSM_Lab_dishes_1_23	sp	i	1
+sSM_Lab_dishes_1_23	sq	i	0
+sSM_Lab_dishes_1_23	ss	s	M_PlasticLabPillJar_13
+sSM_Lab_dishes_1_23	sx	s	
+sSM_Lab_dishes_1_24	sau	s	
+sSM_Lab_dishes_1_24	sfx	s	
+sSM_Lab_dishes_1_24	sk	s	movable
+sSM_Lab_dishes_1_24	snm	s	
+sSM_Lab_dishes_1_24	sp	i	1
+sSM_Lab_dishes_1_24	sq	i	0
+sSM_Lab_dishes_1_24	ss	s	M_PlasticLabPillJar_14
+sSM_Lab_dishes_1_24	sx	s	
+sSM_Lab_dishes_1_3	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_3	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_3	sk	s	destroy
+sSM_Lab_dishes_1_3	snm	s	
+sSM_Lab_dishes_1_3	sp	i	1
+sSM_Lab_dishes_1_3	sq	i	0
+sSM_Lab_dishes_1_3	ss	s	D_GlassEmptyJar_05_LabStuff
+sSM_Lab_dishes_1_3	sx	s	
+sSM_Lab_dishes_1_4	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_4	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_4	sk	s	destroy
+sSM_Lab_dishes_1_4	snm	s	
+sSM_Lab_dishes_1_4	sp	i	1
+sSM_Lab_dishes_1_4	sq	i	0
+sSM_Lab_dishes_1_4	ss	s	D_GlassEmptyJar_06_LabStuff
+sSM_Lab_dishes_1_4	sx	s	
+sSM_Lab_dishes_1_5_1	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_5_1	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka02.NS_Destruct_GlassMenzurka02
+sSM_Lab_dishes_1_5_1	sk	s	destroy
+sSM_Lab_dishes_1_5_1	snm	s	
+sSM_Lab_dishes_1_5_1	sp	i	1
+sSM_Lab_dishes_1_5_1	sq	i	0
+sSM_Lab_dishes_1_5_1	ss	s	D_GlassEmptyJar_12_LabStuff
+sSM_Lab_dishes_1_5_1	sx	s	
+sSM_Lab_dishes_1_5_2	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_5_2	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka02.NS_Destruct_GlassMenzurka02
+sSM_Lab_dishes_1_5_2	sk	s	destroy
+sSM_Lab_dishes_1_5_2	snm	s	
+sSM_Lab_dishes_1_5_2	sp	i	1
+sSM_Lab_dishes_1_5_2	sq	i	0
+sSM_Lab_dishes_1_5_2	ss	s	D_GlassEmptyJar_13_LabStuff
+sSM_Lab_dishes_1_5_2	sx	s	
+sSM_Lab_dishes_1_7	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_7	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_7	sk	s	destroy
+sSM_Lab_dishes_1_7	snm	s	
+sSM_Lab_dishes_1_7	sp	i	1
+sSM_Lab_dishes_1_7	sq	i	0
+sSM_Lab_dishes_1_7	ss	s	D_GlassEmptyJar_08_LabStuff
+sSM_Lab_dishes_1_7	sx	s	
+sSM_Lab_dishes_1_8	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_8	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_8	sk	s	destroy
+sSM_Lab_dishes_1_8	snm	s	
+sSM_Lab_dishes_1_8	sp	i	1
+sSM_Lab_dishes_1_8	sq	i	0
+sSM_Lab_dishes_1_8	ss	s	D_GlassEmptyJar_09_LabStuff
+sSM_Lab_dishes_1_8	sx	s	
+sSM_Lab_dishes_1_9	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_Lab_dishes_1_9	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassMenzurka01.NS_Destruct_GlassMenzurka01
+sSM_Lab_dishes_1_9	sk	s	destroy
+sSM_Lab_dishes_1_9	snm	s	
+sSM_Lab_dishes_1_9	sp	i	1
+sSM_Lab_dishes_1_9	sq	i	0
+sSM_Lab_dishes_1_9	ss	s	D_GlassEmptyJar_10_LabStuff
+sSM_Lab_dishes_1_9	sx	s	
+sSM_air_mi24_wheelB_01	sau	s	
+sSM_air_mi24_wheelB_01	sfx	s	
+sSM_air_mi24_wheelB_01	sk	s	movable
+sSM_air_mi24_wheelB_01	snm	s	
+sSM_air_mi24_wheelB_01	sp	i	1
+sSM_air_mi24_wheelB_01	sq	i	0
+sSM_air_mi24_wheelB_01	ss	s	M_RubberWheels_05_FromPlane
+sSM_air_mi24_wheelB_01	sx	s	
+sSM_air_mi_6_wheel_front_02	sau	s	
+sSM_air_mi_6_wheel_front_02	sfx	s	
+sSM_air_mi_6_wheel_front_02	sk	s	movable
+sSM_air_mi_6_wheel_front_02	snm	s	
+sSM_air_mi_6_wheel_front_02	sp	i	1
+sSM_air_mi_6_wheel_front_02	sq	i	0
+sSM_air_mi_6_wheel_front_02	ss	s	M_RubberWheels_02_Small
+sSM_air_mi_6_wheel_front_02	sx	s	
+sSM_air_mi_6_wheel_rear_03	sau	s	
+sSM_air_mi_6_wheel_rear_03	sfx	s	
+sSM_air_mi_6_wheel_rear_03	sk	s	movable
+sSM_air_mi_6_wheel_rear_03	snm	s	
+sSM_air_mi_6_wheel_rear_03	sp	i	1
+sSM_air_mi_6_wheel_rear_03	sq	i	0
+sSM_air_mi_6_wheel_rear_03	ss	s	M_RubberWheels_03_Big
+sSM_air_mi_6_wheel_rear_03	sx	s	
+sSM_cit_canister_02_a	sau	s	
+sSM_cit_canister_02_a	sfx	s	
+sSM_cit_canister_02_a	sk	s	movable
+sSM_cit_canister_02_a	snm	s	
+sSM_cit_canister_02_a	sp	i	1
+sSM_cit_canister_02_a	sq	i	0
+sSM_cit_canister_02_a	ss	s	M_MetallEmptyCanister_01_Blue
+sSM_cit_canister_02_a	sx	s	
+sSM_cit_canister_02_b	sau	s	
+sSM_cit_canister_02_b	sfx	s	
+sSM_cit_canister_02_b	sk	s	movable
+sSM_cit_canister_02_b	snm	s	
+sSM_cit_canister_02_b	sp	i	1
+sSM_cit_canister_02_b	sq	i	0
+sSM_cit_canister_02_b	ss	s	M_MetallEmptyCanister_02_Gray
+sSM_cit_canister_02_b	sx	s	
+sSM_cit_chairs_01_a	sau	s	
+sSM_cit_chairs_01_a	sfx	s	
+sSM_cit_chairs_01_a	sk	s	movable
+sSM_cit_chairs_01_a	snm	s	
+sSM_cit_chairs_01_a	sp	i	1
+sSM_cit_chairs_01_a	sq	i	0
+sSM_cit_chairs_01_a	ss	s	M_WodenMovableChair_13
+sSM_cit_chairs_01_a	sx	s	
+sSM_cit_chairs_01_b	sau	s	
+sSM_cit_chairs_01_b	sfx	s	
+sSM_cit_chairs_01_b	sk	s	movable
+sSM_cit_chairs_01_b	snm	s	
+sSM_cit_chairs_01_b	sp	i	1
+sSM_cit_chairs_01_b	sq	i	0
+sSM_cit_chairs_01_b	ss	s	M_WodenMovableChair_14
+sSM_cit_chairs_01_b	sx	s	
+sSM_cit_chairs_01_c	sau	s	
+sSM_cit_chairs_01_c	sfx	s	
+sSM_cit_chairs_01_c	sk	s	movable
+sSM_cit_chairs_01_c	snm	s	
+sSM_cit_chairs_01_c	sp	i	1
+sSM_cit_chairs_01_c	sq	i	0
+sSM_cit_chairs_01_c	ss	s	M_WodenMovableChair_15
+sSM_cit_chairs_01_c	sx	s	
+sSM_cit_chairs_01_d	sau	s	
+sSM_cit_chairs_01_d	sfx	s	
+sSM_cit_chairs_01_d	sk	s	movable
+sSM_cit_chairs_01_d	snm	s	
+sSM_cit_chairs_01_d	sp	i	1
+sSM_cit_chairs_01_d	sq	i	0
+sSM_cit_chairs_01_d	ss	s	M_WodenMovableChair_16
+sSM_cit_chairs_01_d	sx	s	
+sSM_cit_flower_pot_02_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_cit_flower_pot_02_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotFlower5.NS_Destruct_PotFlower5
+sSM_cit_flower_pot_02_a	sk	s	destroy
+sSM_cit_flower_pot_02_a	snm	s	
+sSM_cit_flower_pot_02_a	sp	i	1
+sSM_cit_flower_pot_02_a	sq	i	0
+sSM_cit_flower_pot_02_a	ss	s	D_ClayVase_01
+sSM_cit_flower_pot_02_a	sx	s	
+sSM_cit_flower_pot_02_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_cit_flower_pot_02_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotFlower4.NS_Destruct_PotFlower4
+sSM_cit_flower_pot_02_b	sk	s	destroy
+sSM_cit_flower_pot_02_b	snm	s	
+sSM_cit_flower_pot_02_b	sp	i	1
+sSM_cit_flower_pot_02_b	sq	i	0
+sSM_cit_flower_pot_02_b	ss	s	D_ClayVase_02
+sSM_cit_flower_pot_02_b	sx	s	
+sSM_cit_flower_pot_02_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_cit_flower_pot_02_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotFlower3.NS_Destruct_PotFlower3
+sSM_cit_flower_pot_02_c	sk	s	destroy
+sSM_cit_flower_pot_02_c	snm	s	
+sSM_cit_flower_pot_02_c	sp	i	1
+sSM_cit_flower_pot_02_c	sq	i	0
+sSM_cit_flower_pot_02_c	ss	s	D_ClayVase_03
+sSM_cit_flower_pot_02_c	sx	s	
+sSM_cit_flower_pot_02_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_cit_flower_pot_02_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotFlower2.NS_Destruct_PotFlower2
+sSM_cit_flower_pot_02_d	sk	s	destroy
+sSM_cit_flower_pot_02_d	snm	s	
+sSM_cit_flower_pot_02_d	sp	i	1
+sSM_cit_flower_pot_02_d	sq	i	0
+sSM_cit_flower_pot_02_d	ss	s	D_ClayVase_04
+sSM_cit_flower_pot_02_d	sx	s	
+sSM_cit_flower_pot_02_e	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_cit_flower_pot_02_e	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotFlower1.NS_Destruct_PotFlower1
+sSM_cit_flower_pot_02_e	sk	s	destroy
+sSM_cit_flower_pot_02_e	snm	s	
+sSM_cit_flower_pot_02_e	sp	i	1
+sSM_cit_flower_pot_02_e	sq	i	0
+sSM_cit_flower_pot_02_e	ss	s	D_ClayVase_05
+sSM_cit_flower_pot_02_e	sx	s	
+sSM_cit_flower_pot_02_f	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_cit_flower_pot_02_f	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotFlower1.NS_Destruct_PotFlower1
+sSM_cit_flower_pot_02_f	sk	s	destroy
+sSM_cit_flower_pot_02_f	snm	s	
+sSM_cit_flower_pot_02_f	sp	i	1
+sSM_cit_flower_pot_02_f	sq	i	0
+sSM_cit_flower_pot_02_f	ss	s	D_ClayVase_06
+sSM_cit_flower_pot_02_f	sx	s	
+sSM_cit_houseware_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_cit_houseware_01_b	sfx	s	
+sSM_cit_houseware_01_b	sk	s	movable
+sSM_cit_houseware_01_b	snm	s	
+sSM_cit_houseware_01_b	sp	i	1
+sSM_cit_houseware_01_b	sq	i	0
+sSM_cit_houseware_01_b	ss	s	M_MetallHouseware_01_Cleaner
+sSM_cit_houseware_01_b	sx	s	
+sSM_cit_houseware_01_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_cit_houseware_01_d	sfx	s	
+sSM_cit_houseware_01_d	sk	s	movable
+sSM_cit_houseware_01_d	snm	s	
+sSM_cit_houseware_01_d	sp	i	1
+sSM_cit_houseware_01_d	sq	i	0
+sSM_cit_houseware_01_d	ss	s	M_MetallHouseware_02_Iron
+sSM_cit_houseware_01_d	sx	s	
+sSM_cit_houseware_01_f	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_cit_houseware_01_f	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_cit_houseware_01_f	sk	s	destroy
+sSM_cit_houseware_01_f	snm	s	
+sSM_cit_houseware_01_f	sp	i	1
+sSM_cit_houseware_01_f	sq	i	0
+sSM_cit_houseware_01_f	ss	s	D_PlasticTelephone_01
+sSM_cit_houseware_01_f	sx	s	
+sSM_cit_lamp_interior_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_cit_lamp_interior_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_Destruct_LampInterior.NS_Destruct_LampInterior
+sSM_cit_lamp_interior_01	sk	s	mesh
+sSM_cit_lamp_interior_01	snm	s	/Game/_Stalker_2/props/city/interior/SM_cit_lamp_interior_01_a.SM_cit_lamp_interior_01_a
+sSM_cit_lamp_interior_01	sp	i	1
+sSM_cit_lamp_interior_01	sq	i	0
+sSM_cit_lamp_interior_01	ss	s	D_BrokenLamp_07
+sSM_cit_lamp_interior_01	sx	s	
+sSM_cit_plastic_barrel_01	sau	s	
+sSM_cit_plastic_barrel_01	sfx	s	
+sSM_cit_plastic_barrel_01	sk	s	movable
+sSM_cit_plastic_barrel_01	snm	s	
+sSM_cit_plastic_barrel_01	sp	i	1
+sSM_cit_plastic_barrel_01	sq	i	0
+sSM_cit_plastic_barrel_01	ss	s	M_PlasticBarrel_01
+sSM_cit_plastic_barrel_01	sx	s	
+sSM_cit_stroller_01_a	sau	s	
+sSM_cit_stroller_01_a	sfx	s	
+sSM_cit_stroller_01_a	sk	s	movable
+sSM_cit_stroller_01_a	snm	s	
+sSM_cit_stroller_01_a	sp	i	1
+sSM_cit_stroller_01_a	sq	i	0
+sSM_cit_stroller_01_a	ss	s	M_MetallStroller_01
+sSM_cit_stroller_01_a	sx	s	
+sSM_cit_stroller_01_b	sau	s	
+sSM_cit_stroller_01_b	sfx	s	
+sSM_cit_stroller_01_b	sk	s	movable
+sSM_cit_stroller_01_b	snm	s	
+sSM_cit_stroller_01_b	sp	i	1
+sSM_cit_stroller_01_b	sq	i	0
+sSM_cit_stroller_01_b	ss	s	M_MetallStroller_02
+sSM_cit_stroller_01_b	sx	s	
+sSM_cit_weghing_machine_01	sau	s	
+sSM_cit_weghing_machine_01	sfx	s	
+sSM_cit_weghing_machine_01	sk	s	movable
+sSM_cit_weghing_machine_01	snm	s	
+sSM_cit_weghing_machine_01	sp	i	1
+sSM_cit_weghing_machine_01	sq	i	0
+sSM_cit_weghing_machine_01	ss	s	M_MetallHouseware_23_WeghingMachine
+sSM_cit_weghing_machine_01	sx	s	
+sSM_cit_window_glass_01	sau	s	
+sSM_cit_window_glass_01	sfx	s	
+sSM_cit_window_glass_01	sk	s	destroy
+sSM_cit_window_glass_01	snm	s	
+sSM_cit_window_glass_01	sp	i	1
+sSM_cit_window_glass_01	sq	i	0
+sSM_cit_window_glass_01	ss	s	D_GlassWindow_01
+sSM_cit_window_glass_01	sx	s	
+sSM_cit_window_glass_01_a	sau	s	
+sSM_cit_window_glass_01_a	sfx	s	
+sSM_cit_window_glass_01_a	sk	s	destroy
+sSM_cit_window_glass_01_a	snm	s	
+sSM_cit_window_glass_01_a	sp	i	1
+sSM_cit_window_glass_01_a	sq	i	0
+sSM_cit_window_glass_01_a	ss	s	D_GlassWindow_02
+sSM_cit_window_glass_01_a	sx	s	
+sSM_cit_window_glass_01_b	sau	s	
+sSM_cit_window_glass_01_b	sfx	s	
+sSM_cit_window_glass_01_b	sk	s	destroy
+sSM_cit_window_glass_01_b	snm	s	
+sSM_cit_window_glass_01_b	sp	i	1
+sSM_cit_window_glass_01_b	sq	i	0
+sSM_cit_window_glass_01_b	ss	s	D_GlassWindow_03
+sSM_cit_window_glass_01_b	sx	s	
+sSM_cit_window_glass_01_c	sau	s	
+sSM_cit_window_glass_01_c	sfx	s	
+sSM_cit_window_glass_01_c	sk	s	destroy
+sSM_cit_window_glass_01_c	snm	s	
+sSM_cit_window_glass_01_c	sp	i	1
+sSM_cit_window_glass_01_c	sq	i	0
+sSM_cit_window_glass_01_c	ss	s	D_GlassWindow_04
+sSM_cit_window_glass_01_c	sx	s	
+sSM_cit_window_glass_01_d	sau	s	
+sSM_cit_window_glass_01_d	sfx	s	
+sSM_cit_window_glass_01_d	sk	s	destroy
+sSM_cit_window_glass_01_d	snm	s	
+sSM_cit_window_glass_01_d	sp	i	1
+sSM_cit_window_glass_01_d	sq	i	0
+sSM_cit_window_glass_01_d	ss	s	D_GlassWindow_05
+sSM_cit_window_glass_01_d	sx	s	
+sSM_cns_beer_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_cns_beer_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBottle.NS_Destruct_GlassBottle
+sSM_cns_beer_a	sk	s	destroy
+sSM_cns_beer_a	snm	s	
+sSM_cns_beer_a	sp	i	1
+sSM_cns_beer_a	sq	i	0
+sSM_cns_beer_a	ss	s	D_GlassEmptyBottle_03_Beer
+sSM_cns_beer_a	sx	s	
+sSM_cns_canned_meat_01_c	sau	s	
+sSM_cns_canned_meat_01_c	sfx	s	
+sSM_cns_canned_meat_01_c	sk	s	movable
+sSM_cns_canned_meat_01_c	snm	s	
+sSM_cns_canned_meat_01_c	sp	i	1
+sSM_cns_canned_meat_01_c	sq	i	0
+sSM_cns_canned_meat_01_c	ss	s	M_MetallUtensils_56_Tin
+sSM_cns_canned_meat_01_c	sx	s	
+sSM_cns_cossacks_vodka_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_cns_cossacks_vodka_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBottle.NS_Destruct_GlassBottle
+sSM_cns_cossacks_vodka_01_a	sk	s	destroy
+sSM_cns_cossacks_vodka_01_a	snm	s	
+sSM_cns_cossacks_vodka_01_a	sp	i	1
+sSM_cns_cossacks_vodka_01_a	sq	i	0
+sSM_cns_cossacks_vodka_01_a	ss	s	D_GlassEmptyBottle_04_Vodka
+sSM_cns_cossacks_vodka_01_a	sx	s	
+sSM_cns_water_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_cns_water_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBottle.NS_Destruct_GlassBottle
+sSM_cns_water_a	sk	s	destroy
+sSM_cns_water_a	snm	s	
+sSM_cns_water_a	sp	i	1
+sSM_cns_water_a	sq	i	0
+sSM_cns_water_a	ss	s	D_GlassEmptyBottle_05_Water
+sSM_cns_water_a	sx	s	
+sSM_dch_ske_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_dch_ske_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Others/Niagara/NS_Destruct_Skull.NS_Destruct_Skull
+sSM_dch_ske_01_a	sk	s	destroy
+sSM_dch_ske_01_a	snm	s	
+sSM_dch_ske_01_a	sp	i	1
+sSM_dch_ske_01_a	sq	i	0
+sSM_dch_ske_01_a	ss	s	D_Scull_01
+sSM_dch_ske_01_a	sx	s	
+sSM_dch_ske_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_dch_ske_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Others/Niagara/NS_Destruct_Skull.NS_Destruct_Skull
+sSM_dch_ske_01_b	sk	s	destroy
+sSM_dch_ske_01_b	snm	s	
+sSM_dch_ske_01_b	sp	i	1
+sSM_dch_ske_01_b	sq	i	0
+sSM_dch_ske_01_b	ss	s	D_Scull_02
+sSM_dch_ske_01_b	sx	s	
+sSM_dis_beer_glass_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_dis_beer_glass_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBeer.NS_Destruct_GlassBeer
+sSM_dis_beer_glass_01	sk	s	destroy
+sSM_dis_beer_glass_01	snm	s	
+sSM_dis_beer_glass_01	sp	i	1
+sSM_dis_beer_glass_01	sq	i	0
+sSM_dis_beer_glass_01	ss	s	D_GlassEmptyCup_03
+sSM_dis_beer_glass_01	sx	s	
+sSM_dis_boiling_pan_01	sau	s	
+sSM_dis_boiling_pan_01	sfx	s	
+sSM_dis_boiling_pan_01	sk	s	movable
+sSM_dis_boiling_pan_01	snm	s	
+sSM_dis_boiling_pan_01	sp	i	1
+sSM_dis_boiling_pan_01	sq	i	0
+sSM_dis_boiling_pan_01	ss	s	M_MetallUtensils_01_Pot
+sSM_dis_boiling_pan_01	sx	s	
+sSM_dis_coffee_maker_01_a	sau	s	
+sSM_dis_coffee_maker_01_a	sfx	s	
+sSM_dis_coffee_maker_01_a	sk	s	movable
+sSM_dis_coffee_maker_01_a	snm	s	
+sSM_dis_coffee_maker_01_a	sp	i	1
+sSM_dis_coffee_maker_01_a	sq	i	0
+sSM_dis_coffee_maker_01_a	ss	s	M_MetallUtensils_02_CoffeeMaker
+sSM_dis_coffee_maker_01_a	sx	s	
+sSM_dis_coffee_maker_01_b	sau	s	
+sSM_dis_coffee_maker_01_b	sfx	s	
+sSM_dis_coffee_maker_01_b	sk	s	movable
+sSM_dis_coffee_maker_01_b	snm	s	
+sSM_dis_coffee_maker_01_b	sp	i	1
+sSM_dis_coffee_maker_01_b	sq	i	0
+sSM_dis_coffee_maker_01_b	ss	s	M_MetallUtensils_03_CoffeeMakerOpen
+sSM_dis_coffee_maker_01_b	sx	s	
+sSM_dis_cup_holder_01_a	sau	s	
+sSM_dis_cup_holder_01_a	sfx	s	
+sSM_dis_cup_holder_01_a	sk	s	movable
+sSM_dis_cup_holder_01_a	snm	s	
+sSM_dis_cup_holder_01_a	sp	i	1
+sSM_dis_cup_holder_01_a	sq	i	0
+sSM_dis_cup_holder_01_a	ss	s	M_MetallUtensils_04_CupHolder
+sSM_dis_cup_holder_01_a	sx	s	
+sSM_dis_cup_holder_01_b	sau	s	
+sSM_dis_cup_holder_01_b	sfx	s	
+sSM_dis_cup_holder_01_b	sk	s	movable
+sSM_dis_cup_holder_01_b	snm	s	
+sSM_dis_cup_holder_01_b	sp	i	1
+sSM_dis_cup_holder_01_b	sq	i	0
+sSM_dis_cup_holder_01_b	ss	s	M_MetallUtensils_05_CupHolder
+sSM_dis_cup_holder_01_b	sx	s	
+sSM_dis_faceted_glass_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_dis_faceted_glass_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassStakan.NS_Destruct_GlassStakan
+sSM_dis_faceted_glass_01_a	sk	s	destroy
+sSM_dis_faceted_glass_01_a	snm	s	
+sSM_dis_faceted_glass_01_a	sp	i	1
+sSM_dis_faceted_glass_01_a	sq	i	0
+sSM_dis_faceted_glass_01_a	ss	s	D_GlassEmptyCup_01
+sSM_dis_faceted_glass_01_a	sx	s	
+sSM_dis_kitchen_item_02_01	sau	s	
+sSM_dis_kitchen_item_02_01	sfx	s	
+sSM_dis_kitchen_item_02_01	sk	s	movable
+sSM_dis_kitchen_item_02_01	snm	s	
+sSM_dis_kitchen_item_02_01	sp	i	1
+sSM_dis_kitchen_item_02_01	sq	i	0
+sSM_dis_kitchen_item_02_01	ss	s	M_MetallUtensils_44_Pot
+sSM_dis_kitchen_item_02_01	sx	s	
+sSM_dis_kitchen_item_02_02	sau	s	
+sSM_dis_kitchen_item_02_02	sfx	s	
+sSM_dis_kitchen_item_02_02	sk	s	movable
+sSM_dis_kitchen_item_02_02	snm	s	
+sSM_dis_kitchen_item_02_02	sp	i	1
+sSM_dis_kitchen_item_02_02	sq	i	0
+sSM_dis_kitchen_item_02_02	ss	s	M_MetallUtensils_46_Pot
+sSM_dis_kitchen_item_02_02	sx	s	
+sSM_dis_kitchen_item_02_03	sau	s	
+sSM_dis_kitchen_item_02_03	sfx	s	
+sSM_dis_kitchen_item_02_03	sk	s	movable
+sSM_dis_kitchen_item_02_03	snm	s	
+sSM_dis_kitchen_item_02_03	sp	i	1
+sSM_dis_kitchen_item_02_03	sq	i	0
+sSM_dis_kitchen_item_02_03	ss	s	M_MetallUtensils_47_Pot
+sSM_dis_kitchen_item_02_03	sx	s	
+sSM_dis_kitchen_item_02_04	sau	s	
+sSM_dis_kitchen_item_02_04	sfx	s	
+sSM_dis_kitchen_item_02_04	sk	s	movable
+sSM_dis_kitchen_item_02_04	snm	s	
+sSM_dis_kitchen_item_02_04	sp	i	1
+sSM_dis_kitchen_item_02_04	sq	i	0
+sSM_dis_kitchen_item_02_04	ss	s	M_MetallUtensils_45_Pot
+sSM_dis_kitchen_item_02_04	sx	s	
+sSM_dis_kitchen_item_02_15	sau	s	
+sSM_dis_kitchen_item_02_15	sfx	s	
+sSM_dis_kitchen_item_02_15	sk	s	movable
+sSM_dis_kitchen_item_02_15	snm	s	
+sSM_dis_kitchen_item_02_15	sp	i	1
+sSM_dis_kitchen_item_02_15	sq	i	0
+sSM_dis_kitchen_item_02_15	ss	s	M_MetallUtensils_43_Pot
+sSM_dis_kitchen_item_02_15	sx	s	
+sSM_dis_kitchen_item_02_16	sau	s	
+sSM_dis_kitchen_item_02_16	sfx	s	
+sSM_dis_kitchen_item_02_16	sk	s	movable
+sSM_dis_kitchen_item_02_16	snm	s	
+sSM_dis_kitchen_item_02_16	sp	i	1
+sSM_dis_kitchen_item_02_16	sq	i	0
+sSM_dis_kitchen_item_02_16	ss	s	M_MetallUtensils_42_Pot
+sSM_dis_kitchen_item_02_16	sx	s	
+sSM_dis_kitchen_item_02_17	sau	s	
+sSM_dis_kitchen_item_02_17	sfx	s	
+sSM_dis_kitchen_item_02_17	sk	s	movable
+sSM_dis_kitchen_item_02_17	snm	s	
+sSM_dis_kitchen_item_02_17	sp	i	1
+sSM_dis_kitchen_item_02_17	sq	i	0
+sSM_dis_kitchen_item_02_17	ss	s	M_MetallUtensils_41_Pot
+sSM_dis_kitchen_item_02_17	sx	s	
+sSM_dis_metal_cup_01	sau	s	
+sSM_dis_metal_cup_01	sfx	s	
+sSM_dis_metal_cup_01	sk	s	movable
+sSM_dis_metal_cup_01	snm	s	
+sSM_dis_metal_cup_01	sp	i	1
+sSM_dis_metal_cup_01	sq	i	0
+sSM_dis_metal_cup_01	ss	s	M_MetallUtensils_06_Cup
+sSM_dis_metal_cup_01	sx	s	
+sSM_dis_metal_lplate_01	sau	s	
+sSM_dis_metal_lplate_01	sfx	s	
+sSM_dis_metal_lplate_01	sk	s	movable
+sSM_dis_metal_lplate_01	snm	s	
+sSM_dis_metal_lplate_01	sp	i	1
+sSM_dis_metal_lplate_01	sq	i	0
+sSM_dis_metal_lplate_01	ss	s	M_MetallUtensils_07_Plate
+sSM_dis_metal_lplate_01	sx	s	
+sSM_dis_pan_01_a	sau	s	
+sSM_dis_pan_01_a	sfx	s	
+sSM_dis_pan_01_a	sk	s	movable
+sSM_dis_pan_01_a	snm	s	
+sSM_dis_pan_01_a	sp	i	1
+sSM_dis_pan_01_a	sq	i	0
+sSM_dis_pan_01_a	ss	s	M_MetallUtensils_34_Pot
+sSM_dis_pan_01_a	sx	s	
+sSM_dis_pan_01_b	sau	s	
+sSM_dis_pan_01_b	sfx	s	
+sSM_dis_pan_01_b	sk	s	movable
+sSM_dis_pan_01_b	snm	s	
+sSM_dis_pan_01_b	sp	i	1
+sSM_dis_pan_01_b	sq	i	0
+sSM_dis_pan_01_b	ss	s	M_MetallUtensils_33_Pot
+sSM_dis_pan_01_b	sx	s	
+sSM_dis_pan_02_a	sau	s	
+sSM_dis_pan_02_a	sfx	s	
+sSM_dis_pan_02_a	sk	s	movable
+sSM_dis_pan_02_a	snm	s	
+sSM_dis_pan_02_a	sp	i	1
+sSM_dis_pan_02_a	sq	i	0
+sSM_dis_pan_02_a	ss	s	M_MetallUtensils_08_BigPotGarnir
+sSM_dis_pan_02_a	sx	s	
+sSM_dis_pan_02_b	sau	s	
+sSM_dis_pan_02_b	sfx	s	
+sSM_dis_pan_02_b	sk	s	movable
+sSM_dis_pan_02_b	snm	s	
+sSM_dis_pan_02_b	sp	i	1
+sSM_dis_pan_02_b	sq	i	0
+sSM_dis_pan_02_b	ss	s	M_MetallUtensils_22_LidBig
+sSM_dis_pan_02_b	sx	s	
+sSM_dis_pan_02_c	sau	s	
+sSM_dis_pan_02_c	sfx	s	
+sSM_dis_pan_02_c	sk	s	movable
+sSM_dis_pan_02_c	snm	s	
+sSM_dis_pan_02_c	sp	i	1
+sSM_dis_pan_02_c	sq	i	0
+sSM_dis_pan_02_c	ss	s	M_MetallUtensils_09_PotSouse
+sSM_dis_pan_02_c	sx	s	
+sSM_dis_pan_02_d	sau	s	
+sSM_dis_pan_02_d	sfx	s	
+sSM_dis_pan_02_d	sk	s	movable
+sSM_dis_pan_02_d	snm	s	
+sSM_dis_pan_02_d	sp	i	1
+sSM_dis_pan_02_d	sq	i	0
+sSM_dis_pan_02_d	ss	s	M_MetallUtensils_23_Lid
+sSM_dis_pan_02_d	sx	s	
+sSM_dis_pan_02_e	sau	s	
+sSM_dis_pan_02_e	sfx	s	
+sSM_dis_pan_02_e	sk	s	movable
+sSM_dis_pan_02_e	snm	s	
+sSM_dis_pan_02_e	sp	i	1
+sSM_dis_pan_02_e	sq	i	0
+sSM_dis_pan_02_e	ss	s	M_MetallUtensils_18_ladle
+sSM_dis_pan_02_e	sx	s	
+sSM_dis_pan_02_f	sau	s	
+sSM_dis_pan_02_f	sfx	s	
+sSM_dis_pan_02_f	sk	s	movable
+sSM_dis_pan_02_f	snm	s	
+sSM_dis_pan_02_f	sp	i	1
+sSM_dis_pan_02_f	sq	i	0
+sSM_dis_pan_02_f	ss	s	M_MetallUtensils_19_ladle
+sSM_dis_pan_02_f	sx	s	
+sSM_dis_pan_02_g	sau	s	
+sSM_dis_pan_02_g	sfx	s	
+sSM_dis_pan_02_g	sk	s	movable
+sSM_dis_pan_02_g	snm	s	
+sSM_dis_pan_02_g	sp	i	1
+sSM_dis_pan_02_g	sq	i	0
+sSM_dis_pan_02_g	ss	s	M_MetallUtensils_20_ladle
+sSM_dis_pan_02_g	sx	s	
+sSM_dis_pan_02_h	sau	s	
+sSM_dis_pan_02_h	sfx	s	
+sSM_dis_pan_02_h	sk	s	movable
+sSM_dis_pan_02_h	snm	s	
+sSM_dis_pan_02_h	sp	i	1
+sSM_dis_pan_02_h	sq	i	0
+sSM_dis_pan_02_h	ss	s	M_MetallUtensils_21_Lid
+sSM_dis_pan_02_h	sx	s	
+sSM_dis_pan_02_o	sau	s	
+sSM_dis_pan_02_o	sfx	s	
+sSM_dis_pan_02_o	sk	s	movable
+sSM_dis_pan_02_o	snm	s	
+sSM_dis_pan_02_o	sp	i	1
+sSM_dis_pan_02_o	sq	i	0
+sSM_dis_pan_02_o	ss	s	M_MetallUtensils_10_BigPotKompot
+sSM_dis_pan_02_o	sx	s	
+sSM_dis_pan_02_p	sau	s	
+sSM_dis_pan_02_p	sfx	s	
+sSM_dis_pan_02_p	sk	s	movable
+sSM_dis_pan_02_p	snm	s	
+sSM_dis_pan_02_p	sp	i	1
+sSM_dis_pan_02_p	sq	i	0
+sSM_dis_pan_02_p	ss	s	M_MetallUtensils_11_BigPotSecondDish
+sSM_dis_pan_02_p	sx	s	
+sSM_dis_pan_02_q	sau	s	
+sSM_dis_pan_02_q	sfx	s	
+sSM_dis_pan_02_q	sk	s	movable
+sSM_dis_pan_02_q	snm	s	
+sSM_dis_pan_02_q	sp	i	1
+sSM_dis_pan_02_q	sq	i	0
+sSM_dis_pan_02_q	ss	s	M_MetallUtensils_12_PotTea
+sSM_dis_pan_02_q	sx	s	
+sSM_dis_pan_02_r	sau	s	
+sSM_dis_pan_02_r	sfx	s	
+sSM_dis_pan_02_r	sk	s	movable
+sSM_dis_pan_02_r	snm	s	
+sSM_dis_pan_02_r	sp	i	1
+sSM_dis_pan_02_r	sq	i	0
+sSM_dis_pan_02_r	ss	s	M_MetallUtensils_13_PotBorshch
+sSM_dis_pan_02_r	sx	s	
+sSM_dis_pan_02_s	sau	s	
+sSM_dis_pan_02_s	sfx	s	
+sSM_dis_pan_02_s	sk	s	movable
+sSM_dis_pan_02_s	snm	s	
+sSM_dis_pan_02_s	sp	i	1
+sSM_dis_pan_02_s	sq	i	0
+sSM_dis_pan_02_s	ss	s	M_MetallUtensils_14_BigPot
+sSM_dis_pan_02_s	sx	s	
+sSM_dis_pan_02_t	sau	s	
+sSM_dis_pan_02_t	sfx	s	
+sSM_dis_pan_02_t	sk	s	movable
+sSM_dis_pan_02_t	snm	s	
+sSM_dis_pan_02_t	sp	i	1
+sSM_dis_pan_02_t	sq	i	0
+sSM_dis_pan_02_t	ss	s	M_MetallUtensils_15_Pot
+sSM_dis_pan_02_t	sx	s	
+sSM_dis_vodka_glass_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_dis_vodka_glass_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassStakan.NS_Destruct_GlassStakan
+sSM_dis_vodka_glass_01_a	sk	s	destroy
+sSM_dis_vodka_glass_01_a	snm	s	
+sSM_dis_vodka_glass_01_a	sp	i	1
+sSM_dis_vodka_glass_01_a	sq	i	0
+sSM_dis_vodka_glass_01_a	ss	s	D_GlassEmptyCup_02
+sSM_dis_vodka_glass_01_a	sx	s	
+sSM_ele_ceiling_lamp_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_ele_ceiling_lamp_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_Destruct_LampCeiling.NS_Destruct_LampCeiling
+sSM_ele_ceiling_lamp_01	sk	s	mesh
+sSM_ele_ceiling_lamp_01	snm	s	/Game/_Stalker_2/props/electric/SM_ele_ceiling_lamp_01_a.SM_ele_ceiling_lamp_01_a
+sSM_ele_ceiling_lamp_01	sp	i	1
+sSM_ele_ceiling_lamp_01	sq	i	0
+sSM_ele_ceiling_lamp_01	ss	s	D_BrokenLamp_05
+sSM_ele_ceiling_lamp_01	sx	s	
+sSM_ele_disc_phone_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_ele_disc_phone_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_ele_disc_phone_01	sk	s	destroy
+sSM_ele_disc_phone_01	snm	s	
+sSM_ele_disc_phone_01	sp	i	1
+sSM_ele_disc_phone_01	sq	i	0
+sSM_ele_disc_phone_01	ss	s	D_PlasticTelephone_02
+sSM_ele_disc_phone_01	sx	s	
+sSM_ele_lamp_06	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_ele_lamp_06	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_Destruct_Lamp.NS_Destruct_Lamp
+sSM_ele_lamp_06	sk	s	mesh
+sSM_ele_lamp_06	snm	s	/Game/_Stalker_2/props/electric/SM_ele_lamp_06_a.SM_ele_lamp_06_a
+sSM_ele_lamp_06	sp	i	1
+sSM_ele_lamp_06	sq	i	0
+sSM_ele_lamp_06	ss	s	D_BrokenLamp_01
+sSM_ele_lamp_06	sx	s	
+sSM_ele_phone_02_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_ele_phone_02_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_ele_phone_02_a	sk	s	destroy
+sSM_ele_phone_02_a	snm	s	
+sSM_ele_phone_02_a	sp	i	1
+sSM_ele_phone_02_a	sq	i	0
+sSM_ele_phone_02_a	ss	s	D_PlasticTelephone_07
+sSM_ele_phone_02_a	sx	s	
+sSM_ele_phone_03_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_ele_phone_03_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_ele_phone_03_a	sk	s	destroy
+sSM_ele_phone_03_a	snm	s	
+sSM_ele_phone_03_a	sp	i	1
+sSM_ele_phone_03_a	sq	i	0
+sSM_ele_phone_03_a	ss	s	D_PlasticTelephone_03
+sSM_ele_phone_03_a	sx	s	
+sSM_ele_phone_03_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_ele_phone_03_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_ele_phone_03_b	sk	s	destroy
+sSM_ele_phone_03_b	snm	s	
+sSM_ele_phone_03_b	sp	i	1
+sSM_ele_phone_03_b	sq	i	0
+sSM_ele_phone_03_b	ss	s	D_PlasticTelephone_04
+sSM_ele_phone_03_b	sx	s	
+sSM_ele_phone_03_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_ele_phone_03_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_ele_phone_03_c	sk	s	destroy
+sSM_ele_phone_03_c	snm	s	
+sSM_ele_phone_03_c	sp	i	1
+sSM_ele_phone_03_c	sq	i	0
+sSM_ele_phone_03_c	ss	s	D_PlasticTelephone_05
+sSM_ele_phone_03_c	sx	s	
+sSM_ele_phone_03_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_ele_phone_03_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Phone/Niagara/NS_Destructible_Plastic_Phone.NS_Destructible_Plastic_Phone
+sSM_ele_phone_03_d	sk	s	destroy
+sSM_ele_phone_03_d	snm	s	
+sSM_ele_phone_03_d	sp	i	1
+sSM_ele_phone_03_d	sq	i	0
+sSM_ele_phone_03_d	ss	s	D_PlasticTelephone_06
+sSM_ele_phone_03_d	sx	s	
+sSM_ele_radio_1	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_ele_radio_1	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Electronics/Niagara/NS_Destruct_Radio.NS_Destruct_Radio
+sSM_ele_radio_1	sk	s	destroy
+sSM_ele_radio_1	snm	s	
+sSM_ele_radio_1	sp	i	1
+sSM_ele_radio_1	sq	i	0
+sSM_ele_radio_1	ss	s	D_PlasticElectronic_01
+sSM_ele_radio_1	sx	s	
+sSM_ele_tube_radio_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_ele_tube_radio_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Electronics/Niagara/NS_Destruct_RadioTube01.NS_Destruct_RadioTube01
+sSM_ele_tube_radio_01	sk	s	destroy
+sSM_ele_tube_radio_01	snm	s	
+sSM_ele_tube_radio_01	sp	i	1
+sSM_ele_tube_radio_01	sq	i	0
+sSM_ele_tube_radio_01	ss	s	D_PlasticElectronic_02
+sSM_ele_tube_radio_01	sx	s	
+sSM_ele_tube_radio_02	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_ele_tube_radio_02	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Electronics/Niagara/NS_Destruct_RadioTube02.NS_Destruct_RadioTube02
+sSM_ele_tube_radio_02	sk	s	destroy
+sSM_ele_tube_radio_02	snm	s	
+sSM_ele_tube_radio_02	sp	i	1
+sSM_ele_tube_radio_02	sq	i	0
+sSM_ele_tube_radio_02	ss	s	D_PlasticElectronic_03
+sSM_ele_tube_radio_02	sx	s	
+sSM_ele_wall_lamp_02	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_ele_wall_lamp_02	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_Destruct_LampWall.NS_Destruct_LampWall
+sSM_ele_wall_lamp_02	sk	s	destroy
+sSM_ele_wall_lamp_02	snm	s	
+sSM_ele_wall_lamp_02	sp	i	1
+sSM_ele_wall_lamp_02	sq	i	0
+sSM_ele_wall_lamp_02	ss	s	D_BrokenLamp_04
+sSM_ele_wall_lamp_02	sx	s	
+sSM_ele_wall_lamp_02_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_ele_wall_lamp_02_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_Destruct_LampWall.NS_Destruct_LampWall
+sSM_ele_wall_lamp_02_a	sk	s	destroy
+sSM_ele_wall_lamp_02_a	snm	s	
+sSM_ele_wall_lamp_02_a	sp	i	1
+sSM_ele_wall_lamp_02_a	sq	i	0
+sSM_ele_wall_lamp_02_a	ss	s	D_BrokenLamp_02
+sSM_ele_wall_lamp_02_a	sx	s	
+sSM_ele_wall_lamp_02_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_ele_wall_lamp_02_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_Destruct_LampWall.NS_Destruct_LampWall
+sSM_ele_wall_lamp_02_b	sk	s	destroy
+sSM_ele_wall_lamp_02_b	snm	s	
+sSM_ele_wall_lamp_02_b	sp	i	1
+sSM_ele_wall_lamp_02_b	sq	i	0
+sSM_ele_wall_lamp_02_b	ss	s	D_BrokenLamp_03
+sSM_ele_wall_lamp_02_b	sx	s	
+sSM_ele_wall_lamp_02_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_ele_wall_lamp_02_c	sfx	s	
+sSM_ele_wall_lamp_02_c	sk	s	physics
+sSM_ele_wall_lamp_02_c	snm	s	
+sSM_ele_wall_lamp_02_c	sp	i	1
+sSM_ele_wall_lamp_02_c	sq	i	0
+sSM_ele_wall_lamp_02_c	ss	s	D_BrokenLamp_06
+sSM_ele_wall_lamp_02_c	sx	s	
+sSM_elm_Reactor_02_b_1	sau	s	
+sSM_elm_Reactor_02_b_1	sfx	s	
+sSM_elm_Reactor_02_b_1	sk	s	movable
+sSM_elm_Reactor_02_b_1	snm	s	
+sSM_elm_Reactor_02_b_1	sp	i	1
+sSM_elm_Reactor_02_b_1	sq	i	0
+sSM_elm_Reactor_02_b_1	ss	s	M_MetalReactorCovers_1
+sSM_elm_Reactor_02_b_1	sx	s	
+sSM_elm_Reactor_02_c_1	sau	s	
+sSM_elm_Reactor_02_c_1	sfx	s	
+sSM_elm_Reactor_02_c_1	sk	s	movable
+sSM_elm_Reactor_02_c_1	snm	s	
+sSM_elm_Reactor_02_c_1	sp	i	1
+sSM_elm_Reactor_02_c_1	sq	i	0
+sSM_elm_Reactor_02_c_1	ss	s	M_MetalReactorCovers_2
+sSM_elm_Reactor_02_c_1	sx	s	
+sSM_elm_Reactor_02_d_1	sau	s	
+sSM_elm_Reactor_02_d_1	sfx	s	
+sSM_elm_Reactor_02_d_1	sk	s	movable
+sSM_elm_Reactor_02_d_1	snm	s	
+sSM_elm_Reactor_02_d_1	sp	i	1
+sSM_elm_Reactor_02_d_1	sq	i	0
+sSM_elm_Reactor_02_d_1	ss	s	M_MetalReactorCovers_3
+sSM_elm_Reactor_02_d_1	sx	s	
+sSM_foo_apple_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_apple_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_apple.NS_apple
+sSM_foo_apple_01_a	sk	s	destroy
+sSM_foo_apple_01_a	snm	s	
+sSM_foo_apple_01_a	sp	i	1
+sSM_foo_apple_01_a	sq	i	0
+sSM_foo_apple_01_a	ss	s	D_Vegetables_01_Apple
+sSM_foo_apple_01_a	sx	s	
+sSM_foo_baked_potato_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_baked_potato_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_baked_potato.NS_baked_potato
+sSM_foo_baked_potato_01_a	sk	s	destroy
+sSM_foo_baked_potato_01_a	snm	s	
+sSM_foo_baked_potato_01_a	sp	i	1
+sSM_foo_baked_potato_01_a	sq	i	0
+sSM_foo_baked_potato_01_a	ss	s	D_Vegetables_02_Potato
+sSM_foo_baked_potato_01_a	sx	s	
+sSM_foo_beetle_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_beetle_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_beetle.NS_beetle
+sSM_foo_beetle_01_a	sk	s	destroy
+sSM_foo_beetle_01_a	snm	s	
+sSM_foo_beetle_01_a	sp	i	1
+sSM_foo_beetle_01_a	sq	i	0
+sSM_foo_beetle_01_a	ss	s	D_Vegetables_03_Beetle
+sSM_foo_beetle_01_a	sx	s	
+sSM_foo_beetle_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_beetle_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_beetle.NS_beetle
+sSM_foo_beetle_01_b	sk	s	destroy
+sSM_foo_beetle_01_b	snm	s	
+sSM_foo_beetle_01_b	sp	i	1
+sSM_foo_beetle_01_b	sq	i	0
+sSM_foo_beetle_01_b	ss	s	D_Vegetables_18_Beetle
+sSM_foo_beetle_01_b	sx	s	
+sSM_foo_box_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_foo_box_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Food/Niagara/NS_Destruct_FoodBox.NS_Destruct_FoodBox
+sSM_foo_box_01	sk	s	destroy
+sSM_foo_box_01	snm	s	
+sSM_foo_box_01	sp	i	1
+sSM_foo_box_01	sq	i	0
+sSM_foo_box_01	ss	s	D_Vegetables_23_Box
+sSM_foo_box_01	sx	s	
+sSM_foo_bread_01_i	sau	s	
+sSM_foo_bread_01_i	sfx	s	
+sSM_foo_bread_01_i	sk	s	movable
+sSM_foo_bread_01_i	snm	s	
+sSM_foo_bread_01_i	sp	i	1
+sSM_foo_bread_01_i	sq	i	0
+sSM_foo_bread_01_i	ss	s	M_FoodParts_03
+sSM_foo_bread_01_i	sx	s	
+sSM_foo_carrot_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_carrot_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_carrot.NS_carrot
+sSM_foo_carrot_01_a	sk	s	destroy
+sSM_foo_carrot_01_a	snm	s	
+sSM_foo_carrot_01_a	sp	i	1
+sSM_foo_carrot_01_a	sq	i	0
+sSM_foo_carrot_01_a	ss	s	D_Vegetables_04_Carrot
+sSM_foo_carrot_01_a	sx	s	
+sSM_foo_carrot_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_carrot_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_carrot.NS_carrot
+sSM_foo_carrot_01_b	sk	s	destroy
+sSM_foo_carrot_01_b	snm	s	
+sSM_foo_carrot_01_b	sp	i	1
+sSM_foo_carrot_01_b	sq	i	0
+sSM_foo_carrot_01_b	ss	s	D_Vegetables_21_Carrot
+sSM_foo_carrot_01_b	sx	s	
+sSM_foo_carrot_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_carrot_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_carrot.NS_carrot
+sSM_foo_carrot_01_c	sk	s	destroy
+sSM_foo_carrot_01_c	snm	s	
+sSM_foo_carrot_01_c	sp	i	1
+sSM_foo_carrot_01_c	sq	i	0
+sSM_foo_carrot_01_c	ss	s	D_Vegetables_22_Carrot
+sSM_foo_carrot_01_c	sx	s	
+sSM_foo_cookies_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_cookies_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Food/Niagara/NS_Destruct_Cookies_a.NS_Destruct_Cookies_a
+sSM_foo_cookies_01_a	sk	s	destroy
+sSM_foo_cookies_01_a	snm	s	
+sSM_foo_cookies_01_a	sp	i	1
+sSM_foo_cookies_01_a	sq	i	0
+sSM_foo_cookies_01_a	ss	s	D_Vegetables_17_Cookies
+sSM_foo_cookies_01_a	sx	s	
+sSM_foo_cookies_01_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_cookies_01_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Food/Niagara/NS_Destruct_Cookies_d.NS_Destruct_Cookies_d
+sSM_foo_cookies_01_d	sk	s	destroy
+sSM_foo_cookies_01_d	snm	s	
+sSM_foo_cookies_01_d	sp	i	1
+sSM_foo_cookies_01_d	sq	i	0
+sSM_foo_cookies_01_d	ss	s	D_Vegetables_16_Cookies
+sSM_foo_cookies_01_d	sx	s	
+sSM_foo_cookies_01_g	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_cookies_01_g	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Food/Niagara/NS_Destruct_Cookies_g.NS_Destruct_Cookies_g
+sSM_foo_cookies_01_g	sk	s	destroy
+sSM_foo_cookies_01_g	snm	s	
+sSM_foo_cookies_01_g	sp	i	1
+sSM_foo_cookies_01_g	sq	i	0
+sSM_foo_cookies_01_g	ss	s	D_Vegetables_19_Cookies
+sSM_foo_cookies_01_g	sx	s	
+sSM_foo_cookies_01_j	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_cookies_01_j	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Food/Niagara/NS_Destruct_Cookies_j.NS_Destruct_Cookies_j
+sSM_foo_cookies_01_j	sk	s	destroy
+sSM_foo_cookies_01_j	snm	s	
+sSM_foo_cookies_01_j	sp	i	1
+sSM_foo_cookies_01_j	sq	i	0
+sSM_foo_cookies_01_j	ss	s	D_Vegetables_20_Cookies
+sSM_foo_cookies_01_j	sx	s	
+sSM_foo_cucumber_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_cucumber_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_cucumber.NS_cucumber
+sSM_foo_cucumber_01_a	sk	s	destroy
+sSM_foo_cucumber_01_a	snm	s	
+sSM_foo_cucumber_01_a	sp	i	1
+sSM_foo_cucumber_01_a	sq	i	0
+sSM_foo_cucumber_01_a	ss	s	D_Vegetables_05_Cucumber
+sSM_foo_cucumber_01_a	sx	s	
+sSM_foo_garlic_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_garlic_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_garlic.NS_garlic
+sSM_foo_garlic_01_a	sk	s	destroy
+sSM_foo_garlic_01_a	snm	s	
+sSM_foo_garlic_01_a	sp	i	1
+sSM_foo_garlic_01_a	sq	i	0
+sSM_foo_garlic_01_a	ss	s	D_Vegetables_06_Garlic
+sSM_foo_garlic_01_a	sx	s	
+sSM_foo_mandarin_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_mandarin_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_mandarin.NS_mandarin
+sSM_foo_mandarin_01_a	sk	s	destroy
+sSM_foo_mandarin_01_a	snm	s	
+sSM_foo_mandarin_01_a	sp	i	1
+sSM_foo_mandarin_01_a	sq	i	0
+sSM_foo_mandarin_01_a	ss	s	D_Vegetables_07_Mandarin
+sSM_foo_mandarin_01_a	sx	s	
+sSM_foo_nut_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_nut_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_nut.NS_nut
+sSM_foo_nut_01_a	sk	s	destroy
+sSM_foo_nut_01_a	snm	s	
+sSM_foo_nut_01_a	sp	i	1
+sSM_foo_nut_01_a	sq	i	0
+sSM_foo_nut_01_a	ss	s	D_Vegetables_08_Nut
+sSM_foo_nut_01_a	sx	s	
+sSM_foo_onion_peel_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_onion_peel_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_onion.NS_onion
+sSM_foo_onion_peel_01_a	sk	s	destroy
+sSM_foo_onion_peel_01_a	snm	s	
+sSM_foo_onion_peel_01_a	sp	i	1
+sSM_foo_onion_peel_01_a	sq	i	0
+sSM_foo_onion_peel_01_a	ss	s	D_Vegetables_09_Onion
+sSM_foo_onion_peel_01_a	sx	s	
+sSM_foo_onion_sack_01_closed	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_onion_sack_01_closed	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_onion_sack.NS_onion_sack
+sSM_foo_onion_sack_01_closed	sk	s	destroy
+sSM_foo_onion_sack_01_closed	snm	s	
+sSM_foo_onion_sack_01_closed	sp	i	1
+sSM_foo_onion_sack_01_closed	sq	i	0
+sSM_foo_onion_sack_01_closed	ss	s	D_Vegetables_10_OnionSack
+sSM_foo_onion_sack_01_closed	sx	s	
+sSM_foo_potato_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_potato_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_potato.NS_potato
+sSM_foo_potato_01_b	sk	s	destroy
+sSM_foo_potato_01_b	snm	s	
+sSM_foo_potato_01_b	sp	i	1
+sSM_foo_potato_01_b	sq	i	0
+sSM_foo_potato_01_b	ss	s	D_Vegetables_14_Potato
+sSM_foo_potato_01_b	sx	s	
+sSM_foo_potato_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_potato_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_potato.NS_potato
+sSM_foo_potato_01_c	sk	s	destroy
+sSM_foo_potato_01_c	snm	s	
+sSM_foo_potato_01_c	sp	i	1
+sSM_foo_potato_01_c	sq	i	0
+sSM_foo_potato_01_c	ss	s	D_Vegetables_15_Potato
+sSM_foo_potato_01_c	sx	s	
+sSM_foo_salted_cucumbers_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_salted_cucumbers_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Food/Niagara/NS_Destruct_SaltedCucumbers.NS_Destruct_SaltedCucumbers
+sSM_foo_salted_cucumbers_c	sk	s	destroy
+sSM_foo_salted_cucumbers_c	snm	s	
+sSM_foo_salted_cucumbers_c	sp	i	1
+sSM_foo_salted_cucumbers_c	sq	i	0
+sSM_foo_salted_cucumbers_c	ss	s	D_Vegetables_13_SaltedCucumber
+sSM_foo_salted_cucumbers_c	sx	s	
+sSM_foo_sausage_01_e	sau	s	
+sSM_foo_sausage_01_e	sfx	s	
+sSM_foo_sausage_01_e	sk	s	movable
+sSM_foo_sausage_01_e	snm	s	
+sSM_foo_sausage_01_e	sp	i	1
+sSM_foo_sausage_01_e	sq	i	0
+sSM_foo_sausage_01_e	ss	s	M_FoodParts_01
+sSM_foo_sausage_01_e	sx	s	
+sSM_foo_sausage_01_f	sau	s	
+sSM_foo_sausage_01_f	sfx	s	
+sSM_foo_sausage_01_f	sk	s	movable
+sSM_foo_sausage_01_f	snm	s	
+sSM_foo_sausage_01_f	sp	i	1
+sSM_foo_sausage_01_f	sq	i	0
+sSM_foo_sausage_01_f	ss	s	M_FoodParts_02
+sSM_foo_sausage_01_f	sx	s	
+sSM_foo_squash_01_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_foo_squash_01_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Vegetables/Niagara/NS_squash.NS_squash
+sSM_foo_squash_01_01_a	sk	s	destroy
+sSM_foo_squash_01_01_a	snm	s	
+sSM_foo_squash_01_01_a	sp	i	1
+sSM_foo_squash_01_01_a	sq	i	0
+sSM_foo_squash_01_01_a	ss	s	D_Vegetables_12_Squash
+sSM_foo_squash_01_01_a	sx	s	
+sSM_fur_FoldingChair_01_a_1	sau	s	
+sSM_fur_FoldingChair_01_a_1	sfx	s	
+sSM_fur_FoldingChair_01_a_1	sk	s	movable
+sSM_fur_FoldingChair_01_a_1	snm	s	
+sSM_fur_FoldingChair_01_a_1	sp	i	1
+sSM_fur_FoldingChair_01_a_1	sq	i	0
+sSM_fur_FoldingChair_01_a_1	ss	s	M_WodenMovableChair_30
+sSM_fur_FoldingChair_01_a_1	sx	s	
+sSM_fur_FoldingChair_01_b_1	sau	s	
+sSM_fur_FoldingChair_01_b_1	sfx	s	
+sSM_fur_FoldingChair_01_b_1	sk	s	movable
+sSM_fur_FoldingChair_01_b_1	snm	s	
+sSM_fur_FoldingChair_01_b_1	sp	i	1
+sSM_fur_FoldingChair_01_b_1	sq	i	0
+sSM_fur_FoldingChair_01_b_1	ss	s	M_WodenMovableChair_31
+sSM_fur_FoldingChair_01_b_1	sx	s	
+sSM_fur_bar_chair_01_a	sau	s	
+sSM_fur_bar_chair_01_a	sfx	s	
+sSM_fur_bar_chair_01_a	sk	s	movable
+sSM_fur_bar_chair_01_a	snm	s	
+sSM_fur_bar_chair_01_a	sp	i	1
+sSM_fur_bar_chair_01_a	sq	i	0
+sSM_fur_bar_chair_01_a	ss	s	M_WodenMovableChair_17
+sSM_fur_bar_chair_01_a	sx	s	
+sSM_fur_bar_chair_01_b	sau	s	
+sSM_fur_bar_chair_01_b	sfx	s	
+sSM_fur_bar_chair_01_b	sk	s	movable
+sSM_fur_bar_chair_01_b	snm	s	
+sSM_fur_bar_chair_01_b	sp	i	1
+sSM_fur_bar_chair_01_b	sq	i	0
+sSM_fur_bar_chair_01_b	ss	s	M_WodenMovableChair_18
+sSM_fur_bar_chair_01_b	sx	s	
+sSM_fur_bar_chair_01_c	sau	s	
+sSM_fur_bar_chair_01_c	sfx	s	
+sSM_fur_bar_chair_01_c	sk	s	movable
+sSM_fur_bar_chair_01_c	snm	s	
+sSM_fur_bar_chair_01_c	sp	i	1
+sSM_fur_bar_chair_01_c	sq	i	0
+sSM_fur_bar_chair_01_c	ss	s	M_WodenMovableChair_19
+sSM_fur_bar_chair_01_c	sx	s	
+sSM_fur_fan_02	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_FoodSoft.SFX_PhysicsInteraction_Destruct_FoodSoft
+sSM_fur_fan_02	sfx	s	
+sSM_fur_fan_02	sk	s	movable
+sSM_fur_fan_02	snm	s	
+sSM_fur_fan_02	sp	i	1
+sSM_fur_fan_02	sq	i	0
+sSM_fur_fan_02	ss	s	M_MetallHouseware_03_Fan
+sSM_fur_fan_02	sx	s	
+sSM_fur_furniture_old_chair	sau	s	
+sSM_fur_furniture_old_chair	sfx	s	
+sSM_fur_furniture_old_chair	sk	s	movable
+sSM_fur_furniture_old_chair	snm	s	
+sSM_fur_furniture_old_chair	sp	i	1
+sSM_fur_furniture_old_chair	sq	i	0
+sSM_fur_furniture_old_chair	ss	s	M_WodenMovableChair_20
+sSM_fur_furniture_old_chair	sx	s	
+sSM_fur_furniture_pack_01_02_a	sau	s	
+sSM_fur_furniture_pack_01_02_a	sfx	s	
+sSM_fur_furniture_pack_01_02_a	sk	s	movable
+sSM_fur_furniture_pack_01_02_a	snm	s	
+sSM_fur_furniture_pack_01_02_a	sp	i	1
+sSM_fur_furniture_pack_01_02_a	sq	i	0
+sSM_fur_furniture_pack_01_02_a	ss	s	M_WodenMovableChair_11
+sSM_fur_furniture_pack_01_02_a	sx	s	
+sSM_fur_furniture_pack_01_02_b	sau	s	
+sSM_fur_furniture_pack_01_02_b	sfx	s	
+sSM_fur_furniture_pack_01_02_b	sk	s	movable
+sSM_fur_furniture_pack_01_02_b	snm	s	
+sSM_fur_furniture_pack_01_02_b	sp	i	1
+sSM_fur_furniture_pack_01_02_b	sq	i	0
+sSM_fur_furniture_pack_01_02_b	ss	s	M_WodenMovableChair_12
+sSM_fur_furniture_pack_01_02_b	sx	s	
+sSM_fur_furniture_pack_01_04_c	sau	s	
+sSM_fur_furniture_pack_01_04_c	sfx	s	
+sSM_fur_furniture_pack_01_04_c	sk	s	movable
+sSM_fur_furniture_pack_01_04_c	snm	s	
+sSM_fur_furniture_pack_01_04_c	sp	i	1
+sSM_fur_furniture_pack_01_04_c	sq	i	0
+sSM_fur_furniture_pack_01_04_c	ss	s	M_WodenMovableChair_10
+sSM_fur_furniture_pack_01_04_c	sx	s	
+sSM_fur_hospital_cart_01	sau	s	
+sSM_fur_hospital_cart_01	sfx	s	
+sSM_fur_hospital_cart_01	sk	s	movable
+sSM_fur_hospital_cart_01	snm	s	
+sSM_fur_hospital_cart_01	sp	i	1
+sSM_fur_hospital_cart_01	sq	i	0
+sSM_fur_hospital_cart_01	ss	s	M_MetallConstruction_2
+sSM_fur_hospital_cart_01	sx	s	
+sSM_fur_kinder_bed_03_c	sau	s	
+sSM_fur_kinder_bed_03_c	sfx	s	
+sSM_fur_kinder_bed_03_c	sk	s	movable
+sSM_fur_kinder_bed_03_c	snm	s	
+sSM_fur_kinder_bed_03_c	sp	i	1
+sSM_fur_kinder_bed_03_c	sq	i	0
+sSM_fur_kinder_bed_03_c	ss	s	M_MetallConstruction_1
+sSM_fur_kinder_bed_03_c	sx	s	
+sSM_fur_kinder_garden_01_d	sau	s	
+sSM_fur_kinder_garden_01_d	sfx	s	
+sSM_fur_kinder_garden_01_d	sk	s	movable
+sSM_fur_kinder_garden_01_d	snm	s	
+sSM_fur_kinder_garden_01_d	sp	i	1
+sSM_fur_kinder_garden_01_d	sq	i	0
+sSM_fur_kinder_garden_01_d	ss	s	M_WodenMovableChair_29
+sSM_fur_kinder_garden_01_d	sx	s	
+sSM_fur_kinder_garden_01_e	sau	s	
+sSM_fur_kinder_garden_01_e	sfx	s	
+sSM_fur_kinder_garden_01_e	sk	s	movable
+sSM_fur_kinder_garden_01_e	snm	s	
+sSM_fur_kinder_garden_01_e	sp	i	1
+sSM_fur_kinder_garden_01_e	sq	i	0
+sSM_fur_kinder_garden_01_e	ss	s	M_WodenMovableChair_28
+sSM_fur_kinder_garden_01_e	sx	s	
+sSM_fur_kitchen_furniture_01_a	sau	s	
+sSM_fur_kitchen_furniture_01_a	sfx	s	
+sSM_fur_kitchen_furniture_01_a	sk	s	movable
+sSM_fur_kitchen_furniture_01_a	snm	s	
+sSM_fur_kitchen_furniture_01_a	sp	i	1
+sSM_fur_kitchen_furniture_01_a	sq	i	0
+sSM_fur_kitchen_furniture_01_a	ss	s	M_WodenMovableChair_01
+sSM_fur_kitchen_furniture_01_a	sx	s	
+sSM_fur_kitchen_furniture_01_b	sau	s	
+sSM_fur_kitchen_furniture_01_b	sfx	s	
+sSM_fur_kitchen_furniture_01_b	sk	s	movable
+sSM_fur_kitchen_furniture_01_b	snm	s	
+sSM_fur_kitchen_furniture_01_b	sp	i	1
+sSM_fur_kitchen_furniture_01_b	sq	i	0
+sSM_fur_kitchen_furniture_01_b	ss	s	M_WodenMovableChair_02
+sSM_fur_kitchen_furniture_01_b	sx	s	
+sSM_fur_school_chairs_01_a	sau	s	
+sSM_fur_school_chairs_01_a	sfx	s	
+sSM_fur_school_chairs_01_a	sk	s	movable
+sSM_fur_school_chairs_01_a	snm	s	
+sSM_fur_school_chairs_01_a	sp	i	1
+sSM_fur_school_chairs_01_a	sq	i	0
+sSM_fur_school_chairs_01_a	ss	s	M_WodenMovableChair_06
+sSM_fur_school_chairs_01_a	sx	s	
+sSM_fur_school_chairs_01_b	sau	s	
+sSM_fur_school_chairs_01_b	sfx	s	
+sSM_fur_school_chairs_01_b	sk	s	movable
+sSM_fur_school_chairs_01_b	snm	s	
+sSM_fur_school_chairs_01_b	sp	i	1
+sSM_fur_school_chairs_01_b	sq	i	0
+sSM_fur_school_chairs_01_b	ss	s	M_WodenMovableChair_07
+sSM_fur_school_chairs_01_b	sx	s	
+sSM_fur_school_chairs_01_c	sau	s	
+sSM_fur_school_chairs_01_c	sfx	s	
+sSM_fur_school_chairs_01_c	sk	s	movable
+sSM_fur_school_chairs_01_c	snm	s	
+sSM_fur_school_chairs_01_c	sp	i	1
+sSM_fur_school_chairs_01_c	sq	i	0
+sSM_fur_school_chairs_01_c	ss	s	M_WodenMovableChair_08
+sSM_fur_school_chairs_01_c	sx	s	
+sSM_fur_school_chairs_01_d	sau	s	
+sSM_fur_school_chairs_01_d	sfx	s	
+sSM_fur_school_chairs_01_d	sk	s	movable
+sSM_fur_school_chairs_01_d	snm	s	
+sSM_fur_school_chairs_01_d	sp	i	1
+sSM_fur_school_chairs_01_d	sq	i	0
+sSM_fur_school_chairs_01_d	ss	s	M_WodenMovableChair_09
+sSM_fur_school_chairs_01_d	sx	s	
+sSM_fur_screw_chair_01_a	sau	s	
+sSM_fur_screw_chair_01_a	sfx	s	
+sSM_fur_screw_chair_01_a	sk	s	movable
+sSM_fur_screw_chair_01_a	snm	s	
+sSM_fur_screw_chair_01_a	sp	i	1
+sSM_fur_screw_chair_01_a	sq	i	0
+sSM_fur_screw_chair_01_a	ss	s	M_WodenMovableChair_04
+sSM_fur_screw_chair_01_a	sx	s	
+sSM_fur_screw_chair_01_b	sau	s	
+sSM_fur_screw_chair_01_b	sfx	s	
+sSM_fur_screw_chair_01_b	sk	s	movable
+sSM_fur_screw_chair_01_b	snm	s	
+sSM_fur_screw_chair_01_b	sp	i	1
+sSM_fur_screw_chair_01_b	sq	i	0
+sSM_fur_screw_chair_01_b	ss	s	M_WodenMovableChair_05
+sSM_fur_screw_chair_01_b	sx	s	
+sSM_fur_table_09_stool_01	sau	s	
+sSM_fur_table_09_stool_01	sfx	s	
+sSM_fur_table_09_stool_01	sk	s	movable
+sSM_fur_table_09_stool_01	snm	s	
+sSM_fur_table_09_stool_01	sp	i	1
+sSM_fur_table_09_stool_01	sq	i	0
+sSM_fur_table_09_stool_01	ss	s	M_WodenMovableChair_03
+sSM_fur_table_09_stool_01	sx	s	
+sSM_gar_ban_clothes_01_o	sau	s	
+sSM_gar_ban_clothes_01_o	sfx	s	
+sSM_gar_ban_clothes_01_o	sk	s	movable
+sSM_gar_ban_clothes_01_o	snm	s	
+sSM_gar_ban_clothes_01_o	sp	i	1
+sSM_gar_ban_clothes_01_o	sq	i	0
+sSM_gar_ban_clothes_01_o	ss	s	M_Resin_Cap_01
+sSM_gar_ban_clothes_01_o	sx	s	
+sSM_gar_ban_clothes_01_q	sau	s	
+sSM_gar_ban_clothes_01_q	sfx	s	
+sSM_gar_ban_clothes_01_q	sk	s	movable
+sSM_gar_ban_clothes_01_q	snm	s	
+sSM_gar_ban_clothes_01_q	sp	i	1
+sSM_gar_ban_clothes_01_q	sq	i	0
+sSM_gar_ban_clothes_01_q	ss	s	M_Resin_Shoos_04
+sSM_gar_ban_clothes_01_q	sx	s	
+sSM_gar_bottle_03	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gar_bottle_03	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBottle.NS_Destruct_GlassBottle
+sSM_gar_bottle_03	sk	s	destroy
+sSM_gar_bottle_03	snm	s	
+sSM_gar_bottle_03	sp	i	1
+sSM_gar_bottle_03	sq	i	0
+sSM_gar_bottle_03	ss	s	D_GlassEmptyBottle_01_Small
+sSM_gar_bottle_03	sx	s	
+sSM_gar_bottle_04	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gar_bottle_04	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBigBottle_Wood.NS_Destruct_GlassBigBottle_Wood
+sSM_gar_bottle_04	sk	s	destroy
+sSM_gar_bottle_04	snm	s	
+sSM_gar_bottle_04	sp	i	1
+sSM_gar_bottle_04	sq	i	0
+sSM_gar_bottle_04	ss	s	D_GlassEmptyBottle_02_BigWeaving
+sSM_gar_bottle_04	sx	s	
+sSM_gar_burned_barrel_01_b	sau	s	
+sSM_gar_burned_barrel_01_b	sfx	s	
+sSM_gar_burned_barrel_01_b	sk	s	movable
+sSM_gar_burned_barrel_01_b	snm	s	
+sSM_gar_burned_barrel_01_b	sp	i	1
+sSM_gar_burned_barrel_01_b	sq	i	0
+sSM_gar_burned_barrel_01_b	ss	s	M_MetallEmptyBarrel_03
+sSM_gar_burned_barrel_01_b	sx	s	
+sSM_gar_cloth_02_l	sau	s	
+sSM_gar_cloth_02_l	sfx	s	
+sSM_gar_cloth_02_l	sk	s	movable
+sSM_gar_cloth_02_l	snm	s	
+sSM_gar_cloth_02_l	sp	i	1
+sSM_gar_cloth_02_l	sq	i	0
+sSM_gar_cloth_02_l	ss	s	M_Resin_Shoos_01
+sSM_gar_cloth_02_l	sx	s	
+sSM_gar_cloth_02_m	sau	s	
+sSM_gar_cloth_02_m	sfx	s	
+sSM_gar_cloth_02_m	sk	s	movable
+sSM_gar_cloth_02_m	snm	s	
+sSM_gar_cloth_02_m	sp	i	1
+sSM_gar_cloth_02_m	sq	i	0
+sSM_gar_cloth_02_m	ss	s	M_Resin_Shoos_02
+sSM_gar_cloth_02_m	sx	s	
+sSM_gar_cloth_02_n	sau	s	
+sSM_gar_cloth_02_n	sfx	s	
+sSM_gar_cloth_02_n	sk	s	movable
+sSM_gar_cloth_02_n	snm	s	
+sSM_gar_cloth_02_n	sp	i	1
+sSM_gar_cloth_02_n	sq	i	0
+sSM_gar_cloth_02_n	ss	s	M_Resin_Shoos_03
+sSM_gar_cloth_02_n	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	ss	s	M_WoodenToys_03
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_1	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	ss	s	M_WoodenToys_04
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_arch_2	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	ss	s	M_WoodenToys_05
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_1	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	ss	s	M_WoodenToys_06
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_brick_4	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	ss	s	M_WoodenToys_07
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_1	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	ss	s	M_WoodenToys_08
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cone_4	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	ss	s	M_WoodenToys_09
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_1	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	ss	s	M_WoodenToys_10
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_cube_2	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	ss	s	M_WoodenToys_11
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_2	sx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	sau	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	sfx	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	sk	s	movable
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	snm	s	
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	sp	i	1
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	sq	i	0
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	ss	s	M_WoodenToys_12
+sSM_gar_kindergarden_cubes_01_kindergarden_cubes_01_triangle_3	sx	s	
+sSM_gar_metall_01_01_01	sau	s	
+sSM_gar_metall_01_01_01	sfx	s	
+sSM_gar_metall_01_01_01	sk	s	movable
+sSM_gar_metall_01_01_01	snm	s	
+sSM_gar_metall_01_01_01	sp	i	1
+sSM_gar_metall_01_01_01	sq	i	0
+sSM_gar_metall_01_01_01	ss	s	M_RubberWheels_01_MetallDisk
+sSM_gar_metall_01_01_01	sx	s	
+sSM_gar_metall_01_03_10	sau	s	
+sSM_gar_metall_01_03_10	sfx	s	
+sSM_gar_metall_01_03_10	sk	s	movable
+sSM_gar_metall_01_03_10	snm	s	
+sSM_gar_metall_01_03_10	sp	i	1
+sSM_gar_metall_01_03_10	sq	i	0
+sSM_gar_metall_01_03_10	ss	s	M_MetallHouseware_09_Cylinder
+sSM_gar_metall_01_03_10	sx	s	
+sSM_gar_metall_01_03_11	sau	s	
+sSM_gar_metall_01_03_11	sfx	s	
+sSM_gar_metall_01_03_11	sk	s	movable
+sSM_gar_metall_01_03_11	snm	s	
+sSM_gar_metall_01_03_11	sp	i	1
+sSM_gar_metall_01_03_11	sq	i	0
+sSM_gar_metall_01_03_11	ss	s	M_MetallHouseware_10_Cylinder
+sSM_gar_metall_01_03_11	sx	s	
+sSM_gar_toy_bear_01_a	sau	s	
+sSM_gar_toy_bear_01_a	sfx	s	
+sSM_gar_toy_bear_01_a	sk	s	movable
+sSM_gar_toy_bear_01_a	snm	s	
+sSM_gar_toy_bear_01_a	sp	i	1
+sSM_gar_toy_bear_01_a	sq	i	0
+sSM_gar_toy_bear_01_a	ss	s	M_WoodenToys_01
+sSM_gar_toy_bear_01_a	sx	s	
+sSM_gar_toy_bear_01_b	sau	s	
+sSM_gar_toy_bear_01_b	sfx	s	
+sSM_gar_toy_bear_01_b	sk	s	movable
+sSM_gar_toy_bear_01_b	snm	s	
+sSM_gar_toy_bear_01_b	sp	i	1
+sSM_gar_toy_bear_01_b	sq	i	0
+sSM_gar_toy_bear_01_b	ss	s	M_WoodenToys_02
+sSM_gar_toy_bear_01_b	sx	s	
+sSM_gen_abacus_01	sau	s	
+sSM_gen_abacus_01	sfx	s	
+sSM_gen_abacus_01	sk	s	movable
+sSM_gen_abacus_01	snm	s	
+sSM_gen_abacus_01	sp	i	1
+sSM_gen_abacus_01	sq	i	0
+sSM_gen_abacus_01	ss	s	M_MetallHouseware_24_Abacus
+sSM_gen_abacus_01	sx	s	
+sSM_gen_ball_01	sau	s	
+sSM_gen_ball_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_BallRubber.NS_Destruct_BallRubber
+sSM_gen_ball_01	sk	s	destroy
+sSM_gen_ball_01	snm	s	
+sSM_gen_ball_01	sp	i	1
+sSM_gen_ball_01	sq	i	0
+sSM_gen_ball_01	ss	s	D_ResinBall_01
+sSM_gen_ball_01	sx	s	
+sSM_gen_ball_01_dm	sau	s	
+sSM_gen_ball_01_dm	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_BallRubber.NS_Destruct_BallRubber
+sSM_gen_ball_01_dm	sk	s	destroy
+sSM_gen_ball_01_dm	snm	s	
+sSM_gen_ball_01_dm	sp	i	1
+sSM_gen_ball_01_dm	sq	i	0
+sSM_gen_ball_01_dm	ss	s	D_ResinBall_02_Broken
+sSM_gen_ball_01_dm	sx	s	
+sSM_gen_bicycle_01_c	sau	s	
+sSM_gen_bicycle_01_c	sfx	s	
+sSM_gen_bicycle_01_c	sk	s	movable
+sSM_gen_bicycle_01_c	snm	s	
+sSM_gen_bicycle_01_c	sp	i	1
+sSM_gen_bicycle_01_c	sq	i	0
+sSM_gen_bicycle_01_c	ss	s	M_MetallHouseware_06_BicucleWheel
+sSM_gen_bicycle_01_c	sx	s	
+sSM_gen_bicycle_01_d	sau	s	
+sSM_gen_bicycle_01_d	sfx	s	
+sSM_gen_bicycle_01_d	sk	s	movable
+sSM_gen_bicycle_01_d	snm	s	
+sSM_gen_bicycle_01_d	sp	i	1
+sSM_gen_bicycle_01_d	sq	i	0
+sSM_gen_bicycle_01_d	ss	s	M_MetallHouseware_05_BicucleWheel
+sSM_gen_bicycle_01_d	sx	s	
+sSM_gen_bicycle_01_f	sau	s	
+sSM_gen_bicycle_01_f	sfx	s	
+sSM_gen_bicycle_01_f	sk	s	movable
+sSM_gen_bicycle_01_f	snm	s	
+sSM_gen_bicycle_01_f	sp	i	1
+sSM_gen_bicycle_01_f	sq	i	0
+sSM_gen_bicycle_01_f	ss	s	M_MetallHouseware_08_BicuclePart
+sSM_gen_bicycle_01_f	sx	s	
+sSM_gen_bicycle_01_g	sau	s	
+sSM_gen_bicycle_01_g	sfx	s	
+sSM_gen_bicycle_01_g	sk	s	movable
+sSM_gen_bicycle_01_g	snm	s	
+sSM_gen_bicycle_01_g	sp	i	1
+sSM_gen_bicycle_01_g	sq	i	0
+sSM_gen_bicycle_01_g	ss	s	M_MetallHouseware_07_BicuclePart
+sSM_gen_bicycle_01_g	sx	s	
+sSM_gen_bicycle_wheel_01	sau	s	
+sSM_gen_bicycle_wheel_01	sfx	s	
+sSM_gen_bicycle_wheel_01	sk	s	movable
+sSM_gen_bicycle_wheel_01	snm	s	
+sSM_gen_bicycle_wheel_01	sp	i	1
+sSM_gen_bicycle_wheel_01	sq	i	0
+sSM_gen_bicycle_wheel_01	ss	s	M_MetallHouseware_04_BicucleWheel
+sSM_gen_bicycle_wheel_01	sx	s	
+sSM_gen_big_bottle_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_big_bottle_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBigBottle.NS_Destruct_GlassBigBottle
+sSM_gen_big_bottle_01_a	sk	s	destroy
+sSM_gen_big_bottle_01_a	snm	s	
+sSM_gen_big_bottle_01_a	sp	i	1
+sSM_gen_big_bottle_01_a	sq	i	0
+sSM_gen_big_bottle_01_a	ss	s	D_GlassEmptyBottle_03_Big
+sSM_gen_big_bottle_01_a	sx	s	
+sSM_gen_books_01_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_01	sk	s	destroy
+sSM_gen_books_01_01	snm	s	
+sSM_gen_books_01_01	sp	i	1
+sSM_gen_books_01_01	sq	i	0
+sSM_gen_books_01_01	ss	s	D_CartonBook_01
+sSM_gen_books_01_01	sx	s	
+sSM_gen_books_01_02	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_02	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_02	sk	s	destroy
+sSM_gen_books_01_02	snm	s	
+sSM_gen_books_01_02	sp	i	1
+sSM_gen_books_01_02	sq	i	0
+sSM_gen_books_01_02	ss	s	D_CartonBook_02
+sSM_gen_books_01_02	sx	s	
+sSM_gen_books_01_03	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_03	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_03	sk	s	destroy
+sSM_gen_books_01_03	snm	s	
+sSM_gen_books_01_03	sp	i	1
+sSM_gen_books_01_03	sq	i	0
+sSM_gen_books_01_03	ss	s	D_CartonBook_03
+sSM_gen_books_01_03	sx	s	
+sSM_gen_books_01_04	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_04	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_04	sk	s	destroy
+sSM_gen_books_01_04	snm	s	
+sSM_gen_books_01_04	sp	i	1
+sSM_gen_books_01_04	sq	i	0
+sSM_gen_books_01_04	ss	s	D_CartonBook_04
+sSM_gen_books_01_04	sx	s	
+sSM_gen_books_01_05	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_05	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_05	sk	s	destroy
+sSM_gen_books_01_05	snm	s	
+sSM_gen_books_01_05	sp	i	1
+sSM_gen_books_01_05	sq	i	0
+sSM_gen_books_01_05	ss	s	D_CartonBook_05
+sSM_gen_books_01_05	sx	s	
+sSM_gen_books_01_06	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_06	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_06	sk	s	destroy
+sSM_gen_books_01_06	snm	s	
+sSM_gen_books_01_06	sp	i	1
+sSM_gen_books_01_06	sq	i	0
+sSM_gen_books_01_06	ss	s	D_CartonBook_06
+sSM_gen_books_01_06	sx	s	
+sSM_gen_books_01_07	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_07	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_07	sk	s	destroy
+sSM_gen_books_01_07	snm	s	
+sSM_gen_books_01_07	sp	i	1
+sSM_gen_books_01_07	sq	i	0
+sSM_gen_books_01_07	ss	s	D_CartonBook_07
+sSM_gen_books_01_07	sx	s	
+sSM_gen_books_01_08	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_08	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_08	sk	s	destroy
+sSM_gen_books_01_08	snm	s	
+sSM_gen_books_01_08	sp	i	1
+sSM_gen_books_01_08	sq	i	0
+sSM_gen_books_01_08	ss	s	D_CartonBook_08
+sSM_gen_books_01_08	sx	s	
+sSM_gen_books_01_09	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_books_01_09	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Papers/Niagara/NS_NothingLeft_Book_Desctructible.NS_NothingLeft_Book_Desctructible
+sSM_gen_books_01_09	sk	s	destroy
+sSM_gen_books_01_09	snm	s	
+sSM_gen_books_01_09	sp	i	1
+sSM_gen_books_01_09	sq	i	0
+sSM_gen_books_01_09	ss	s	D_CartonBook_09
+sSM_gen_books_01_09	sx	s	
+sSM_gen_bottle_crate_01	sau	s	
+sSM_gen_bottle_crate_01	sfx	s	
+sSM_gen_bottle_crate_01	sk	s	movable
+sSM_gen_bottle_crate_01	snm	s	
+sSM_gen_bottle_crate_01	sp	i	1
+sSM_gen_bottle_crate_01	sq	i	0
+sSM_gen_bottle_crate_01	ss	s	M_PlasticHouseware_13_BottleBox
+sSM_gen_bottle_crate_01	sx	s	
+sSM_gen_bowels_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_bowels_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBowels.NS_Destruct_GlassBowels
+sSM_gen_bowels_01	sk	s	destroy
+sSM_gen_bowels_01	snm	s	
+sSM_gen_bowels_01	sp	i	1
+sSM_gen_bowels_01	sq	i	0
+sSM_gen_bowels_01	ss	s	D_GlassEmptyJar_12_BigWithCorn
+sSM_gen_bowels_01	sx	s	
+sSM_gen_bowels_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_bowels_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBowels.NS_Destruct_GlassBowels
+sSM_gen_bowels_01_a	sk	s	destroy
+sSM_gen_bowels_01_a	snm	s	
+sSM_gen_bowels_01_a	sp	i	1
+sSM_gen_bowels_01_a	sq	i	0
+sSM_gen_bowels_01_a	ss	s	D_GlassEmptyJar_01_Big
+sSM_gen_bowels_01_a	sx	s	
+sSM_gen_bowels_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_bowels_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_GlassBowels.NS_Destruct_GlassBowels
+sSM_gen_bowels_01_b	sk	s	destroy
+sSM_gen_bowels_01_b	snm	s	
+sSM_gen_bowels_01_b	sp	i	1
+sSM_gen_bowels_01_b	sq	i	0
+sSM_gen_bowels_01_b	ss	s	D_GlassEmptyJar_02_Small
+sSM_gen_bowels_01_b	sx	s	
+sSM_gen_bowler_hat_01_a	sau	s	
+sSM_gen_bowler_hat_01_a	sfx	s	
+sSM_gen_bowler_hat_01_a	sk	s	movable
+sSM_gen_bowler_hat_01_a	snm	s	
+sSM_gen_bowler_hat_01_a	sp	i	1
+sSM_gen_bowler_hat_01_a	sq	i	0
+sSM_gen_bowler_hat_01_a	ss	s	M_MetallEmptyBucket_05_Pot
+sSM_gen_bowler_hat_01_a	sx	s	
+sSM_gen_buckets_1_1	sau	s	
+sSM_gen_buckets_1_1	sfx	s	
+sSM_gen_buckets_1_1	sk	s	movable
+sSM_gen_buckets_1_1	snm	s	
+sSM_gen_buckets_1_1	sp	i	1
+sSM_gen_buckets_1_1	sq	i	0
+sSM_gen_buckets_1_1	ss	s	M_MetallEmptyBucket_01
+sSM_gen_buckets_1_1	sx	s	
+sSM_gen_buckets_1_2	sau	s	
+sSM_gen_buckets_1_2	sfx	s	
+sSM_gen_buckets_1_2	sk	s	movable
+sSM_gen_buckets_1_2	snm	s	
+sSM_gen_buckets_1_2	sp	i	1
+sSM_gen_buckets_1_2	sq	i	0
+sSM_gen_buckets_1_2	ss	s	M_MetallEmptyBucket_02_Rust
+sSM_gen_buckets_1_2	sx	s	
+sSM_gen_buckets_1_3	sau	s	
+sSM_gen_buckets_1_3	sfx	s	
+sSM_gen_buckets_1_3	sk	s	movable
+sSM_gen_buckets_1_3	snm	s	
+sSM_gen_buckets_1_3	sp	i	1
+sSM_gen_buckets_1_3	sq	i	0
+sSM_gen_buckets_1_3	ss	s	M_MetallEmptyBucket_03_Blue
+sSM_gen_buckets_1_3	sx	s	
+sSM_gen_buckets_1_4	sau	s	
+sSM_gen_buckets_1_4	sfx	s	
+sSM_gen_buckets_1_4	sk	s	movable
+sSM_gen_buckets_1_4	snm	s	
+sSM_gen_buckets_1_4	sp	i	1
+sSM_gen_buckets_1_4	sq	i	0
+sSM_gen_buckets_1_4	ss	s	M_MetallEmptyBucket_04_Green
+sSM_gen_buckets_1_4	sx	s	
+sSM_gen_can_1_base	sau	s	
+sSM_gen_can_1_base	sfx	s	
+sSM_gen_can_1_base	sk	s	movable
+sSM_gen_can_1_base	snm	s	
+sSM_gen_can_1_base	sp	i	1
+sSM_gen_can_1_base	sq	i	0
+sSM_gen_can_1_base	ss	s	M_MetallUtensils_24_Can
+sSM_gen_can_1_base	sx	s	
+sSM_gen_can_1_cap	sau	s	
+sSM_gen_can_1_cap	sfx	s	
+sSM_gen_can_1_cap	sk	s	movable
+sSM_gen_can_1_cap	snm	s	
+sSM_gen_can_1_cap	sp	i	1
+sSM_gen_can_1_cap	sq	i	0
+sSM_gen_can_1_cap	ss	s	M_MetallUtensils_25_CanLid
+sSM_gen_can_1_cap	sx	s	
+sSM_gen_cardboard_box_01	sau	s	
+sSM_gen_cardboard_box_01	sfx	s	
+sSM_gen_cardboard_box_01	sk	s	movable
+sSM_gen_cardboard_box_01	snm	s	
+sSM_gen_cardboard_box_01	sp	i	1
+sSM_gen_cardboard_box_01	sq	i	0
+sSM_gen_cardboard_box_01	ss	s	M_CartonCrate_03
+sSM_gen_cardboard_box_01	sx	s	
+sSM_gen_cardboard_box_02	sau	s	
+sSM_gen_cardboard_box_02	sfx	s	
+sSM_gen_cardboard_box_02	sk	s	movable
+sSM_gen_cardboard_box_02	snm	s	
+sSM_gen_cardboard_box_02	sp	i	1
+sSM_gen_cardboard_box_02	sq	i	0
+sSM_gen_cardboard_box_02	ss	s	M_CartonCrate_04
+sSM_gen_cardboard_box_02	sx	s	
+sSM_gen_cardboard_box_03	sau	s	
+sSM_gen_cardboard_box_03	sfx	s	
+sSM_gen_cardboard_box_03	sk	s	movable
+sSM_gen_cardboard_box_03	snm	s	
+sSM_gen_cardboard_box_03	sp	i	1
+sSM_gen_cardboard_box_03	sq	i	0
+sSM_gen_cardboard_box_03	ss	s	M_CartonCrate_05
+sSM_gen_cardboard_box_03	sx	s	
+sSM_gen_cardboard_box_04	sau	s	
+sSM_gen_cardboard_box_04	sfx	s	
+sSM_gen_cardboard_box_04	sk	s	movable
+sSM_gen_cardboard_box_04	snm	s	
+sSM_gen_cardboard_box_04	sp	i	1
+sSM_gen_cardboard_box_04	sq	i	0
+sSM_gen_cardboard_box_04	ss	s	M_CartonCrate_01
+sSM_gen_cardboard_box_04	sx	s	
+sSM_gen_cardboard_box_05	sau	s	
+sSM_gen_cardboard_box_05	sfx	s	
+sSM_gen_cardboard_box_05	sk	s	movable
+sSM_gen_cardboard_box_05	snm	s	
+sSM_gen_cardboard_box_05	sp	i	1
+sSM_gen_cardboard_box_05	sq	i	0
+sSM_gen_cardboard_box_05	ss	s	M_CartonCrate_02
+sSM_gen_cardboard_box_05	sx	s	
+sSM_gen_cardboard_box_06	sau	s	
+sSM_gen_cardboard_box_06	sfx	s	
+sSM_gen_cardboard_box_06	sk	s	movable
+sSM_gen_cardboard_box_06	snm	s	
+sSM_gen_cardboard_box_06	sp	i	1
+sSM_gen_cardboard_box_06	sq	i	0
+sSM_gen_cardboard_box_06	ss	s	M_CartonCrate_06
+sSM_gen_cardboard_box_06	sx	s	
+sSM_gen_ceramic_cups_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_a.NS_cap_01_a
+sSM_gen_ceramic_cups_01_a	sk	s	destroy
+sSM_gen_ceramic_cups_01_a	snm	s	
+sSM_gen_ceramic_cups_01_a	sp	i	1
+sSM_gen_ceramic_cups_01_a	sq	i	0
+sSM_gen_ceramic_cups_01_a	ss	s	D_ClayDishes_01_RedCup
+sSM_gen_ceramic_cups_01_a	sx	s	
+sSM_gen_ceramic_cups_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_a.NS_cap_01_a
+sSM_gen_ceramic_cups_01_b	sk	s	destroy
+sSM_gen_ceramic_cups_01_b	snm	s	
+sSM_gen_ceramic_cups_01_b	sp	i	1
+sSM_gen_ceramic_cups_01_b	sq	i	0
+sSM_gen_ceramic_cups_01_b	ss	s	D_ClayDishes_10_BrokenRedCup
+sSM_gen_ceramic_cups_01_b	sx	s	
+sSM_gen_ceramic_cups_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_a.NS_cap_01_a
+sSM_gen_ceramic_cups_01_c	sk	s	destroy
+sSM_gen_ceramic_cups_01_c	snm	s	
+sSM_gen_ceramic_cups_01_c	sp	i	1
+sSM_gen_ceramic_cups_01_c	sq	i	0
+sSM_gen_ceramic_cups_01_c	ss	s	D_ClayDishes_11_BrokenRedCup
+sSM_gen_ceramic_cups_01_c	sx	s	
+sSM_gen_ceramic_cups_01_f	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_f	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_f.NS_cap_01_f
+sSM_gen_ceramic_cups_01_f	sk	s	destroy
+sSM_gen_ceramic_cups_01_f	snm	s	
+sSM_gen_ceramic_cups_01_f	sp	i	1
+sSM_gen_ceramic_cups_01_f	sq	i	0
+sSM_gen_ceramic_cups_01_f	ss	s	D_ClayDishes_02_WhiteCup
+sSM_gen_ceramic_cups_01_f	sx	s	
+sSM_gen_ceramic_cups_01_j	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_j	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_j.NS_cap_01_j
+sSM_gen_ceramic_cups_01_j	sk	s	destroy
+sSM_gen_ceramic_cups_01_j	snm	s	
+sSM_gen_ceramic_cups_01_j	sp	i	1
+sSM_gen_ceramic_cups_01_j	sq	i	0
+sSM_gen_ceramic_cups_01_j	ss	s	D_ClayDishes_03_SmallPlate
+sSM_gen_ceramic_cups_01_j	sx	s	
+sSM_gen_ceramic_cups_01_n	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_n	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_n.NS_cap_01_n
+sSM_gen_ceramic_cups_01_n	sk	s	destroy
+sSM_gen_ceramic_cups_01_n	snm	s	
+sSM_gen_ceramic_cups_01_n	sp	i	1
+sSM_gen_ceramic_cups_01_n	sq	i	0
+sSM_gen_ceramic_cups_01_n	ss	s	D_ClayDishes_04_WhiteCup
+sSM_gen_ceramic_cups_01_n	sx	s	
+sSM_gen_ceramic_cups_01_q	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_q	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_q.NS_cap_01_q
+sSM_gen_ceramic_cups_01_q	sk	s	destroy
+sSM_gen_ceramic_cups_01_q	snm	s	
+sSM_gen_ceramic_cups_01_q	sp	i	1
+sSM_gen_ceramic_cups_01_q	sq	i	0
+sSM_gen_ceramic_cups_01_q	ss	s	D_ClayDishes_05_BlueCup
+sSM_gen_ceramic_cups_01_q	sx	s	
+sSM_gen_ceramic_cups_01_r	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_r	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_q.NS_cap_01_q
+sSM_gen_ceramic_cups_01_r	sk	s	destroy
+sSM_gen_ceramic_cups_01_r	snm	s	
+sSM_gen_ceramic_cups_01_r	sp	i	1
+sSM_gen_ceramic_cups_01_r	sq	i	0
+sSM_gen_ceramic_cups_01_r	ss	s	D_ClayDishes_12_BrokenBlueCup
+sSM_gen_ceramic_cups_01_r	sx	s	
+sSM_gen_ceramic_cups_01_s	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_ceramic_cups_01_s	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_cap_01_q.NS_cap_01_q
+sSM_gen_ceramic_cups_01_s	sk	s	destroy
+sSM_gen_ceramic_cups_01_s	snm	s	
+sSM_gen_ceramic_cups_01_s	sp	i	1
+sSM_gen_ceramic_cups_01_s	sq	i	0
+sSM_gen_ceramic_cups_01_s	ss	s	D_ClayDishes_13_BrokenBlueCup
+sSM_gen_ceramic_cups_01_s	sx	s	
+sSM_gen_chair_dam_01_a	sau	s	
+sSM_gen_chair_dam_01_a	sfx	s	
+sSM_gen_chair_dam_01_a	sk	s	movable
+sSM_gen_chair_dam_01_a	snm	s	
+sSM_gen_chair_dam_01_a	sp	i	1
+sSM_gen_chair_dam_01_a	sq	i	0
+sSM_gen_chair_dam_01_a	ss	s	M_WodenMovableChair_24
+sSM_gen_chair_dam_01_a	sx	s	
+sSM_gen_chair_dam_01_b	sau	s	
+sSM_gen_chair_dam_01_b	sfx	s	
+sSM_gen_chair_dam_01_b	sk	s	movable
+sSM_gen_chair_dam_01_b	snm	s	
+sSM_gen_chair_dam_01_b	sp	i	1
+sSM_gen_chair_dam_01_b	sq	i	0
+sSM_gen_chair_dam_01_b	ss	s	M_WodenMovableChair_22
+sSM_gen_chair_dam_01_b	sx	s	
+sSM_gen_chair_dam_01_c	sau	s	
+sSM_gen_chair_dam_01_c	sfx	s	
+sSM_gen_chair_dam_01_c	sk	s	movable
+sSM_gen_chair_dam_01_c	snm	s	
+sSM_gen_chair_dam_01_c	sp	i	1
+sSM_gen_chair_dam_01_c	sq	i	0
+sSM_gen_chair_dam_01_c	ss	s	M_WodenMovableChair_21
+sSM_gen_chair_dam_01_c	sx	s	
+sSM_gen_chair_dam_01_d	sau	s	
+sSM_gen_chair_dam_01_d	sfx	s	
+sSM_gen_chair_dam_01_d	sk	s	movable
+sSM_gen_chair_dam_01_d	snm	s	
+sSM_gen_chair_dam_01_d	sp	i	1
+sSM_gen_chair_dam_01_d	sq	i	0
+sSM_gen_chair_dam_01_d	ss	s	M_WodenMovableChair_23
+sSM_gen_chair_dam_01_d	sx	s	
+sSM_gen_chair_dam_01_e	sau	s	
+sSM_gen_chair_dam_01_e	sfx	s	
+sSM_gen_chair_dam_01_e	sk	s	movable
+sSM_gen_chair_dam_01_e	snm	s	
+sSM_gen_chair_dam_01_e	sp	i	1
+sSM_gen_chair_dam_01_e	sq	i	0
+sSM_gen_chair_dam_01_e	ss	s	M_WodenMovableChair_25
+sSM_gen_chair_dam_01_e	sx	s	
+sSM_gen_child_toys_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_child_toys_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsRubber.NS_Destruct_DollsRubber
+sSM_gen_child_toys_01_a	sk	s	destroy
+sSM_gen_child_toys_01_a	snm	s	
+sSM_gen_child_toys_01_a	sp	i	1
+sSM_gen_child_toys_01_a	sq	i	0
+sSM_gen_child_toys_01_a	ss	s	D_PlasticToy_07_Tumbler
+sSM_gen_child_toys_01_a	sx	s	
+sSM_gen_child_toys_01_b	sau	s	
+sSM_gen_child_toys_01_b	sfx	s	
+sSM_gen_child_toys_01_b	sk	s	movable
+sSM_gen_child_toys_01_b	snm	s	
+sSM_gen_child_toys_01_b	sp	i	1
+sSM_gen_child_toys_01_b	sq	i	0
+sSM_gen_child_toys_01_b	ss	s	D_PlasticToy_08_Chick
+sSM_gen_child_toys_01_b	sx	s	
+sSM_gen_child_toys_02_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_child_toys_02_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsSoft.NS_Destruct_DollsSoft
+sSM_gen_child_toys_02_a	sk	s	destroy
+sSM_gen_child_toys_02_a	snm	s	
+sSM_gen_child_toys_02_a	sp	i	1
+sSM_gen_child_toys_02_a	sq	i	0
+sSM_gen_child_toys_02_a	ss	s	D_PlasticToy_09_Bear
+sSM_gen_child_toys_02_a	sx	s	
+sSM_gen_child_toys_02_b_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Phone.SFX_PhysicsInteraction_Destruct_Phone
+sSM_gen_child_toys_02_b_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_ToyPhone.NS_Destruct_ToyPhone
+sSM_gen_child_toys_02_b_01	sk	s	destroy
+sSM_gen_child_toys_02_b_01	snm	s	
+sSM_gen_child_toys_02_b_01	sp	i	1
+sSM_gen_child_toys_02_b_01	sq	i	0
+sSM_gen_child_toys_02_b_01	ss	s	D_PlasticToy_10_Phone
+sSM_gen_child_toys_02_b_01	sx	s	
+sSM_gen_child_toys_02_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_child_toys_02_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsConcrete.NS_Destruct_DollsConcrete
+sSM_gen_child_toys_02_c	sk	s	destroy
+sSM_gen_child_toys_02_c	snm	s	
+sSM_gen_child_toys_02_c	sp	i	1
+sSM_gen_child_toys_02_c	sq	i	0
+sSM_gen_child_toys_02_c	ss	s	D_GlassToy_11_Christmas
+sSM_gen_child_toys_02_c	sx	s	
+sSM_gen_chrismas_toys_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_chrismas_toys_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsChristmas.NS_Destruct_DollsChristmas
+sSM_gen_chrismas_toys_01_a	sk	s	destroy
+sSM_gen_chrismas_toys_01_a	snm	s	
+sSM_gen_chrismas_toys_01_a	sp	i	1
+sSM_gen_chrismas_toys_01_a	sq	i	0
+sSM_gen_chrismas_toys_01_a	ss	s	D_GlassToy_12_Christmas
+sSM_gen_chrismas_toys_01_a	sx	s	
+sSM_gen_chrismas_toys_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_chrismas_toys_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsChristmas.NS_Destruct_DollsChristmas
+sSM_gen_chrismas_toys_01_b	sk	s	destroy
+sSM_gen_chrismas_toys_01_b	snm	s	
+sSM_gen_chrismas_toys_01_b	sp	i	1
+sSM_gen_chrismas_toys_01_b	sq	i	0
+sSM_gen_chrismas_toys_01_b	ss	s	D_GlassToy_13_Christmas
+sSM_gen_chrismas_toys_01_b	sx	s	
+sSM_gen_chrismas_toys_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_chrismas_toys_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsChristmas.NS_Destruct_DollsChristmas
+sSM_gen_chrismas_toys_01_c	sk	s	destroy
+sSM_gen_chrismas_toys_01_c	snm	s	
+sSM_gen_chrismas_toys_01_c	sp	i	1
+sSM_gen_chrismas_toys_01_c	sq	i	0
+sSM_gen_chrismas_toys_01_c	ss	s	D_GlassToy_14_Christmas
+sSM_gen_chrismas_toys_01_c	sx	s	
+sSM_gen_chrismas_toys_01_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_chrismas_toys_01_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsChristmas.NS_Destruct_DollsChristmas
+sSM_gen_chrismas_toys_01_d	sk	s	destroy
+sSM_gen_chrismas_toys_01_d	snm	s	
+sSM_gen_chrismas_toys_01_d	sp	i	1
+sSM_gen_chrismas_toys_01_d	sq	i	0
+sSM_gen_chrismas_toys_01_d	ss	s	D_GlassToy_15_Christmas
+sSM_gen_chrismas_toys_01_d	sx	s	
+sSM_gen_chrismas_toys_01_e	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Bottle.SFX_PhysicsInteraction_Destruct_Bottle
+sSM_gen_chrismas_toys_01_e	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_DollsChristmas.NS_Destruct_DollsChristmas
+sSM_gen_chrismas_toys_01_e	sk	s	destroy
+sSM_gen_chrismas_toys_01_e	snm	s	
+sSM_gen_chrismas_toys_01_e	sp	i	1
+sSM_gen_chrismas_toys_01_e	sq	i	0
+sSM_gen_chrismas_toys_01_e	ss	s	D_GlassToy_16_Christmas
+sSM_gen_chrismas_toys_01_e	sx	s	
+sSM_gen_dolls_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_dolls_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_Dolls.NS_Destruct_Dolls
+sSM_gen_dolls_01_a	sk	s	destroy
+sSM_gen_dolls_01_a	snm	s	
+sSM_gen_dolls_01_a	sp	i	1
+sSM_gen_dolls_01_a	sq	i	0
+sSM_gen_dolls_01_a	ss	s	D_PlasticToy_01_Doll
+sSM_gen_dolls_01_a	sx	s	
+sSM_gen_dolls_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_dolls_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_Dolls.NS_Destruct_Dolls
+sSM_gen_dolls_01_b	sk	s	destroy
+sSM_gen_dolls_01_b	snm	s	
+sSM_gen_dolls_01_b	sp	i	1
+sSM_gen_dolls_01_b	sq	i	0
+sSM_gen_dolls_01_b	ss	s	D_PlasticToy_02_Doll
+sSM_gen_dolls_01_b	sx	s	
+sSM_gen_dolls_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_dolls_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_Dolls.NS_Destruct_Dolls
+sSM_gen_dolls_01_c	sk	s	destroy
+sSM_gen_dolls_01_c	snm	s	
+sSM_gen_dolls_01_c	sp	i	1
+sSM_gen_dolls_01_c	sq	i	0
+sSM_gen_dolls_01_c	ss	s	D_PlasticToy_03_Doll
+sSM_gen_dolls_01_c	sx	s	
+sSM_gen_dolls_01_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_dolls_01_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_Dolls.NS_Destruct_Dolls
+sSM_gen_dolls_01_d	sk	s	destroy
+sSM_gen_dolls_01_d	snm	s	
+sSM_gen_dolls_01_d	sp	i	1
+sSM_gen_dolls_01_d	sq	i	0
+sSM_gen_dolls_01_d	ss	s	D_PlasticToy_04_Doll
+sSM_gen_dolls_01_d	sx	s	
+sSM_gen_dolls_01_e	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_dolls_01_e	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_Dolls.NS_Destruct_Dolls
+sSM_gen_dolls_01_e	sk	s	destroy
+sSM_gen_dolls_01_e	snm	s	
+sSM_gen_dolls_01_e	sp	i	1
+sSM_gen_dolls_01_e	sq	i	0
+sSM_gen_dolls_01_e	ss	s	D_PlasticToy_05_Doll
+sSM_gen_dolls_01_e	sx	s	
+sSM_gen_dolls_01_f	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_PlasticBox.SFX_PhysicsInteraction_Destruct_PlasticBox
+sSM_gen_dolls_01_f	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Plastic/Toy/Niagara/NS_Destruct_Dolls.NS_Destruct_Dolls
+sSM_gen_dolls_01_f	sk	s	destroy
+sSM_gen_dolls_01_f	snm	s	
+sSM_gen_dolls_01_f	sp	i	1
+sSM_gen_dolls_01_f	sq	i	0
+sSM_gen_dolls_01_f	ss	s	D_PlasticToy_06_Doll
+sSM_gen_dolls_01_f	sx	s	
+sSM_gen_explosive_barrel_01_a	sau	s	
+sSM_gen_explosive_barrel_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_Barrel.NS_Destruct_Barrel
+sSM_gen_explosive_barrel_01_a	sk	s	explode
+sSM_gen_explosive_barrel_01_a	snm	s	/Game/_Stalker_2/props/general/barells/SM_gen_explosive_barrel_01_c.SM_gen_explosive_barrel_01_c
+sSM_gen_explosive_barrel_01_a	sp	i	1
+sSM_gen_explosive_barrel_01_a	sq	i	0
+sSM_gen_explosive_barrel_01_a	ss	s	Exp_MetallBarrel_01
+sSM_gen_explosive_barrel_01_a	sx	s	ExplosionGasolineBarrels
+sSM_gen_explosive_canister_01_a	sau	s	
+sSM_gen_explosive_canister_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_Canister.NS_Destruct_Canister
+sSM_gen_explosive_canister_01_a	sk	s	explode
+sSM_gen_explosive_canister_01_a	snm	s	/Game/_Stalker_2/props/general/barells/SM_gen_explosive_canister_01_b.SM_gen_explosive_canister_01_b
+sSM_gen_explosive_canister_01_a	sp	i	1
+sSM_gen_explosive_canister_01_a	sq	i	0
+sSM_gen_explosive_canister_01_a	ss	s	Exp_MetallKanistra_01
+sSM_gen_explosive_canister_01_a	sx	s	ExplosionGasolineBarrels_Small
+sSM_gen_fire_shield_01_b	sau	s	
+sSM_gen_fire_shield_01_b	sfx	s	
+sSM_gen_fire_shield_01_b	sk	s	movable
+sSM_gen_fire_shield_01_b	snm	s	
+sSM_gen_fire_shield_01_b	sp	i	1
+sSM_gen_fire_shield_01_b	sq	i	0
+sSM_gen_fire_shield_01_b	ss	s	M_MetallHouseware_12_FireExtinguisher
+sSM_gen_fire_shield_01_b	sx	s	
+sSM_gen_fire_shield_01_c	sau	s	
+sSM_gen_fire_shield_01_c	sfx	s	
+sSM_gen_fire_shield_01_c	sk	s	movable
+sSM_gen_fire_shield_01_c	snm	s	
+sSM_gen_fire_shield_01_c	sp	i	1
+sSM_gen_fire_shield_01_c	sq	i	0
+sSM_gen_fire_shield_01_c	ss	s	M_MetallHouseware_11_FireEmptyBucket
+sSM_gen_fire_shield_01_c	sx	s	
+sSM_gen_gas_cylinder_01_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/SFX_PhysicsInteraction_Destruct_Book.SFX_PhysicsInteraction_Destruct_Book
+sSM_gen_gas_cylinder_01_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_GasCylinder.NS_Destruct_GasCylinder
+sSM_gen_gas_cylinder_01_01	sk	s	explode
+sSM_gen_gas_cylinder_01_01	snm	s	/Game/_Stalker_2/props/general/gas/SM_gen_gas_cylinder_01_02_dm_02.SM_gen_gas_cylinder_01_02_dm_02
+sSM_gen_gas_cylinder_01_01	sp	i	1
+sSM_gen_gas_cylinder_01_01	sq	i	0
+sSM_gen_gas_cylinder_01_01	ss	s	Exp_MetallGasBalon_01
+sSM_gen_gas_cylinder_01_01	sx	s	ExplosionGasCylinder
+sSM_gen_gas_cylinder_01_02	sau	s	
+sSM_gen_gas_cylinder_01_02	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_GasCylinder.NS_Destruct_GasCylinder
+sSM_gen_gas_cylinder_01_02	sk	s	explode
+sSM_gen_gas_cylinder_01_02	snm	s	/Game/_Stalker_2/props/general/gas/SM_gen_gas_cylinder_01_02_dm_02.SM_gen_gas_cylinder_01_02_dm_02
+sSM_gen_gas_cylinder_01_02	sp	i	1
+sSM_gen_gas_cylinder_01_02	sq	i	0
+sSM_gen_gas_cylinder_01_02	ss	s	Exp_MetallGasBalon_02
+sSM_gen_gas_cylinder_01_02	sx	s	ExplosionGasCylinder
+sSM_gen_gas_cylinder_01_03	sau	s	
+sSM_gen_gas_cylinder_01_03	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_GasCylinder.NS_Destruct_GasCylinder
+sSM_gen_gas_cylinder_01_03	sk	s	explode
+sSM_gen_gas_cylinder_01_03	snm	s	/Game/_Stalker_2/props/general/gas/SM_gen_gas_cylinder_01_03_dm_02.SM_gen_gas_cylinder_01_03_dm_02
+sSM_gen_gas_cylinder_01_03	sp	i	1
+sSM_gen_gas_cylinder_01_03	sq	i	0
+sSM_gen_gas_cylinder_01_03	ss	s	Exp_MetallGasBalon_03
+sSM_gen_gas_cylinder_01_03	sx	s	ExplosionGasCylinder_Small
+sSM_gen_gas_cylinder_01_04	sau	s	
+sSM_gen_gas_cylinder_01_04	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_GasCylinder.NS_Destruct_GasCylinder
+sSM_gen_gas_cylinder_01_04	sk	s	explode
+sSM_gen_gas_cylinder_01_04	snm	s	/Game/_Stalker_2/props/general/gas/SM_gen_gas_cylinder_01_04_dm_02.SM_gen_gas_cylinder_01_04_dm_02
+sSM_gen_gas_cylinder_01_04	sp	i	1
+sSM_gen_gas_cylinder_01_04	sq	i	0
+sSM_gen_gas_cylinder_01_04	ss	s	Exp_MetallGasBalon_04
+sSM_gen_gas_cylinder_01_04	sx	s	ExplosionGasCylinder_Small
+sSM_gen_gas_cylinder_01_05	sau	s	
+sSM_gen_gas_cylinder_01_05	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_GasCylinder.NS_Destruct_GasCylinder
+sSM_gen_gas_cylinder_01_05	sk	s	explode
+sSM_gen_gas_cylinder_01_05	snm	s	/Game/_Stalker_2/props/general/gas/SM_gen_gas_cylinder_01_05_dm_01.SM_gen_gas_cylinder_01_05_dm_01
+sSM_gen_gas_cylinder_01_05	sp	i	1
+sSM_gen_gas_cylinder_01_05	sq	i	0
+sSM_gen_gas_cylinder_01_05	ss	s	Exp_MetallGasBalon_05
+sSM_gen_gas_cylinder_01_05	sx	s	ExplosionGasCylinder_Small
+sSM_gen_kinder_pot_01_a	sau	s	
+sSM_gen_kinder_pot_01_a	sfx	s	
+sSM_gen_kinder_pot_01_a	sk	s	movable
+sSM_gen_kinder_pot_01_a	snm	s	
+sSM_gen_kinder_pot_01_a	sp	i	1
+sSM_gen_kinder_pot_01_a	sq	i	0
+sSM_gen_kinder_pot_01_a	ss	s	M_MetallUtensils_35_Pot
+sSM_gen_kinder_pot_01_a	sx	s	
+sSM_gen_lamp_illich_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Lamp.SFX_PhysicsInteraction_Destruct_Lamp
+sSM_gen_lamp_illich_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Lamps/Niagara/NS_lamp_illich_01_a.NS_lamp_illich_01_a
+sSM_gen_lamp_illich_01_a	sk	s	destroy
+sSM_gen_lamp_illich_01_a	snm	s	
+sSM_gen_lamp_illich_01_a	sp	i	1
+sSM_gen_lamp_illich_01_a	sq	i	0
+sSM_gen_lamp_illich_01_a	ss	s	D_GlassLightbulb_01
+sSM_gen_lamp_illich_01_a	sx	s	
+sSM_gen_loot_metalcrate_dm	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_gen_loot_metalcrate_dm	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Metal/Niagara/NS_Destruct_MetalCrateTop.NS_Destruct_MetalCrateTop
+sSM_gen_loot_metalcrate_dm	sk	s	destroy
+sSM_gen_loot_metalcrate_dm	snm	s	/Game/_Stalker_2/items/loot/SM_loot_metalcrate_dm_a.SM_loot_metalcrate_dm_a
+sSM_gen_loot_metalcrate_dm	sp	i	2
+sSM_gen_loot_metalcrate_dm	sq	i	0
+sSM_gen_loot_metalcrate_dm	ss	s	D_MetallCrate_01
+sSM_gen_loot_metalcrate_dm	sx	s	
+sSM_gen_mugs_metal_1_1	sau	s	
+sSM_gen_mugs_metal_1_1	sfx	s	
+sSM_gen_mugs_metal_1_1	sk	s	movable
+sSM_gen_mugs_metal_1_1	snm	s	
+sSM_gen_mugs_metal_1_1	sp	i	1
+sSM_gen_mugs_metal_1_1	sq	i	0
+sSM_gen_mugs_metal_1_1	ss	s	M_MetallUtensils_37_Pot
+sSM_gen_mugs_metal_1_1	sx	s	
+sSM_gen_mugs_metal_1_2	sau	s	
+sSM_gen_mugs_metal_1_2	sfx	s	
+sSM_gen_mugs_metal_1_2	sk	s	movable
+sSM_gen_mugs_metal_1_2	snm	s	
+sSM_gen_mugs_metal_1_2	sp	i	1
+sSM_gen_mugs_metal_1_2	sq	i	0
+sSM_gen_mugs_metal_1_2	ss	s	M_MetallUtensils_38_Pot
+sSM_gen_mugs_metal_1_2	sx	s	
+sSM_gen_mugs_metal_1_3	sau	s	
+sSM_gen_mugs_metal_1_3	sfx	s	
+sSM_gen_mugs_metal_1_3	sk	s	movable
+sSM_gen_mugs_metal_1_3	snm	s	
+sSM_gen_mugs_metal_1_3	sp	i	1
+sSM_gen_mugs_metal_1_3	sq	i	0
+sSM_gen_mugs_metal_1_3	ss	s	M_MetallUtensils_39_Pot
+sSM_gen_mugs_metal_1_3	sx	s	
+sSM_gen_mugs_metal_1_4	sau	s	
+sSM_gen_mugs_metal_1_4	sfx	s	
+sSM_gen_mugs_metal_1_4	sk	s	movable
+sSM_gen_mugs_metal_1_4	snm	s	
+sSM_gen_mugs_metal_1_4	sp	i	1
+sSM_gen_mugs_metal_1_4	sq	i	0
+sSM_gen_mugs_metal_1_4	ss	s	M_MetallUtensils_40_Pot
+sSM_gen_mugs_metal_1_4	sx	s	
+sSM_gen_parcel_01_a_solid	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_gen_parcel_01_a_solid	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_ParcelBoxTop.NS_Destruct_ParcelBoxTop
+sSM_gen_parcel_01_a_solid	sk	s	destroy
+sSM_gen_parcel_01_a_solid	snm	s	/Game/_Stalker_2/props/general/SM_gen_parcel_01_a.SM_gen_parcel_01_a
+sSM_gen_parcel_01_a_solid	sp	i	2
+sSM_gen_parcel_01_a_solid	sq	i	0
+sSM_gen_parcel_01_a_solid	ss	s	D_WoodenDSPCrate_01
+sSM_gen_parcel_01_a_solid	sx	s	
+sSM_gen_parcel_01_b_solid	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_gen_parcel_01_b_solid	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_ParcelBoxTop.NS_Destruct_ParcelBoxTop
+sSM_gen_parcel_01_b_solid	sk	s	destroy
+sSM_gen_parcel_01_b_solid	snm	s	/Game/_Stalker_2/props/general/SM_gen_parcel_01_b.SM_gen_parcel_01_b
+sSM_gen_parcel_01_b_solid	sp	i	2
+sSM_gen_parcel_01_b_solid	sq	i	0
+sSM_gen_parcel_01_b_solid	ss	s	D_WoodenDSPCrate_02
+sSM_gen_parcel_01_b_solid	sx	s	
+sSM_gen_parcel_01_c_solid	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_gen_parcel_01_c_solid	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_ParcelBoxTop.NS_Destruct_ParcelBoxTop
+sSM_gen_parcel_01_c_solid	sk	s	destroy
+sSM_gen_parcel_01_c_solid	snm	s	/Game/_Stalker_2/props/general/SM_gen_parcel_01_c.SM_gen_parcel_01_c
+sSM_gen_parcel_01_c_solid	sp	i	2
+sSM_gen_parcel_01_c_solid	sq	i	0
+sSM_gen_parcel_01_c_solid	ss	s	D_WoodenDSPCrate_03
+sSM_gen_parcel_01_c_solid	sx	s	
+sSM_gen_plant_pot_02_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plant_pot_02_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotPlant.NS_Destruct_PotPlant
+sSM_gen_plant_pot_02_a	sk	s	destroy
+sSM_gen_plant_pot_02_a	snm	s	
+sSM_gen_plant_pot_02_a	sp	i	1
+sSM_gen_plant_pot_02_a	sq	i	0
+sSM_gen_plant_pot_02_a	ss	s	D_ClayVase_07
+sSM_gen_plant_pot_02_a	sx	s	
+sSM_gen_plant_pot_02_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plant_pot_02_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotPlant.NS_Destruct_PotPlant
+sSM_gen_plant_pot_02_c	sk	s	destroy
+sSM_gen_plant_pot_02_c	snm	s	
+sSM_gen_plant_pot_02_c	sp	i	1
+sSM_gen_plant_pot_02_c	sq	i	0
+sSM_gen_plant_pot_02_c	ss	s	D_ClayVase_08
+sSM_gen_plant_pot_02_c	sx	s	
+sSM_gen_plant_pot_02_e	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plant_pot_02_e	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_PotPlant.NS_Destruct_PotPlant
+sSM_gen_plant_pot_02_e	sk	s	destroy
+sSM_gen_plant_pot_02_e	snm	s	
+sSM_gen_plant_pot_02_e	sp	i	1
+sSM_gen_plant_pot_02_e	sq	i	0
+sSM_gen_plant_pot_02_e	ss	s	D_ClayVase_09
+sSM_gen_plant_pot_02_e	sx	s	
+sSM_gen_plastic_barrel_01	sau	s	
+sSM_gen_plastic_barrel_01	sfx	s	
+sSM_gen_plastic_barrel_01	sk	s	movable
+sSM_gen_plastic_barrel_01	snm	s	
+sSM_gen_plastic_barrel_01	sp	i	1
+sSM_gen_plastic_barrel_01	sq	i	0
+sSM_gen_plastic_barrel_01	ss	s	M_PlasticBarrel_02
+sSM_gen_plastic_barrel_01	sx	s	
+sSM_gen_plates_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plates_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_Plate.NS_Destruct_Plate
+sSM_gen_plates_01_a	sk	s	destroy
+sSM_gen_plates_01_a	snm	s	
+sSM_gen_plates_01_a	sp	i	1
+sSM_gen_plates_01_a	sq	i	0
+sSM_gen_plates_01_a	ss	s	D_ClayDishes_06_Plate
+sSM_gen_plates_01_a	sx	s	
+sSM_gen_plates_01_e	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plates_01_e	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_Plate.NS_Destruct_Plate
+sSM_gen_plates_01_e	sk	s	destroy
+sSM_gen_plates_01_e	snm	s	
+sSM_gen_plates_01_e	sp	i	1
+sSM_gen_plates_01_e	sq	i	0
+sSM_gen_plates_01_e	ss	s	D_ClayDishes_07_Plate
+sSM_gen_plates_01_e	sx	s	
+sSM_gen_plates_01_f	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plates_01_f	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_Plate.NS_Destruct_Plate
+sSM_gen_plates_01_f	sk	s	destroy
+sSM_gen_plates_01_f	snm	s	
+sSM_gen_plates_01_f	sp	i	1
+sSM_gen_plates_01_f	sq	i	0
+sSM_gen_plates_01_f	ss	s	D_ClayDishes_08_Plate
+sSM_gen_plates_01_f	sx	s	
+sSM_gen_plates_01_l	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plates_01_l	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_Plate.NS_Destruct_Plate
+sSM_gen_plates_01_l	sk	s	destroy
+sSM_gen_plates_01_l	snm	s	
+sSM_gen_plates_01_l	sp	i	1
+sSM_gen_plates_01_l	sq	i	0
+sSM_gen_plates_01_l	ss	s	D_ClayDishes_09_Plate
+sSM_gen_plates_01_l	sx	s	
+sSM_gen_plates_01_n	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plates_01_n	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_Plate.NS_Destruct_Plate
+sSM_gen_plates_01_n	sk	s	destroy
+sSM_gen_plates_01_n	snm	s	
+sSM_gen_plates_01_n	sp	i	1
+sSM_gen_plates_01_n	sq	i	0
+sSM_gen_plates_01_n	ss	s	D_ClayDishes_14_BrokenPlate
+sSM_gen_plates_01_n	sx	s	
+sSM_gen_plates_01_o	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destuct_ClayDish.SFX_PhysicsInteraction_Destuct_ClayDish
+sSM_gen_plates_01_o	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Dishes_bottle/Niagara/NS_Destruct_Plate.NS_Destruct_Plate
+sSM_gen_plates_01_o	sk	s	destroy
+sSM_gen_plates_01_o	snm	s	
+sSM_gen_plates_01_o	sp	i	1
+sSM_gen_plates_01_o	sq	i	0
+sSM_gen_plates_01_o	ss	s	D_ClayDishes_15_BrokenPlate
+sSM_gen_plates_01_o	sx	s	
+sSM_gen_rusty_barrel_01_b	sau	s	
+sSM_gen_rusty_barrel_01_b	sfx	s	
+sSM_gen_rusty_barrel_01_b	sk	s	movable
+sSM_gen_rusty_barrel_01_b	snm	s	
+sSM_gen_rusty_barrel_01_b	sp	i	1
+sSM_gen_rusty_barrel_01_b	sq	i	0
+sSM_gen_rusty_barrel_01_b	ss	s	M_MetallEmptyBarrel_01
+sSM_gen_rusty_barrel_01_b	sx	s	
+sSM_gen_rusty_barrel_01_f	sau	s	
+sSM_gen_rusty_barrel_01_f	sfx	s	
+sSM_gen_rusty_barrel_01_f	sk	s	movable
+sSM_gen_rusty_barrel_01_f	snm	s	
+sSM_gen_rusty_barrel_01_f	sp	i	1
+sSM_gen_rusty_barrel_01_f	sq	i	0
+sSM_gen_rusty_barrel_01_f	ss	s	M_MetallEmptyBarrel_02
+sSM_gen_rusty_barrel_01_f	sx	s	
+sSM_gen_teapots_01_a_1	sau	s	
+sSM_gen_teapots_01_a_1	sfx	s	
+sSM_gen_teapots_01_a_1	sk	s	movable
+sSM_gen_teapots_01_a_1	snm	s	
+sSM_gen_teapots_01_a_1	sp	i	1
+sSM_gen_teapots_01_a_1	sq	i	0
+sSM_gen_teapots_01_a_1	ss	s	M_MetallUtensils_28_TeaPot
+sSM_gen_teapots_01_a_1	sx	s	
+sSM_gen_teapots_01_b_1	sau	s	
+sSM_gen_teapots_01_b_1	sfx	s	
+sSM_gen_teapots_01_b_1	sk	s	movable
+sSM_gen_teapots_01_b_1	snm	s	
+sSM_gen_teapots_01_b_1	sp	i	1
+sSM_gen_teapots_01_b_1	sq	i	0
+sSM_gen_teapots_01_b_1	ss	s	M_MetallUtensils_29_TeaPot
+sSM_gen_teapots_01_b_1	sx	s	
+sSM_gen_teapots_01_c_1	sau	s	
+sSM_gen_teapots_01_c_1	sfx	s	
+sSM_gen_teapots_01_c_1	sk	s	movable
+sSM_gen_teapots_01_c_1	snm	s	
+sSM_gen_teapots_01_c_1	sp	i	1
+sSM_gen_teapots_01_c_1	sq	i	0
+sSM_gen_teapots_01_c_1	ss	s	M_MetallUtensils_30_TeaPot
+sSM_gen_teapots_01_c_1	sx	s	
+sSM_gen_teapots_01_d_1	sau	s	
+sSM_gen_teapots_01_d_1	sfx	s	
+sSM_gen_teapots_01_d_1	sk	s	movable
+sSM_gen_teapots_01_d_1	snm	s	
+sSM_gen_teapots_01_d_1	sp	i	1
+sSM_gen_teapots_01_d_1	sq	i	0
+sSM_gen_teapots_01_d_1	ss	s	M_MetallUtensils_31_TeaPot
+sSM_gen_teapots_01_d_1	sx	s	
+sSM_gen_toolbox_01	sau	s	
+sSM_gen_toolbox_01	sfx	s	
+sSM_gen_toolbox_01	sk	s	movable
+sSM_gen_toolbox_01	snm	s	
+sSM_gen_toolbox_01	sp	i	1
+sSM_gen_toolbox_01	sq	i	0
+sSM_gen_toolbox_01	ss	s	M_MetallEmptyBucket_17_ToolBox
+sSM_gen_toolbox_01	sx	s	
+sSM_gen_wheelbarrow_01_wheel	sau	s	
+sSM_gen_wheelbarrow_01_wheel	sfx	s	
+sSM_gen_wheelbarrow_01_wheel	sk	s	movable
+sSM_gen_wheelbarrow_01_wheel	snm	s	
+sSM_gen_wheelbarrow_01_wheel	sp	i	1
+sSM_gen_wheelbarrow_01_wheel	sq	i	0
+sSM_gen_wheelbarrow_01_wheel	ss	s	M_RubberWheels_06_FromMotorcycle
+sSM_gen_wheelbarrow_01_wheel	sx	s	
+sSM_int_metal_sheet_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_int_metal_sheet_01_a	sfx	s	
+sSM_int_metal_sheet_01_a	sk	s	physics
+sSM_int_metal_sheet_01_a	snm	s	
+sSM_int_metal_sheet_01_a	sp	i	1
+sSM_int_metal_sheet_01_a	sq	i	0
+sSM_int_metal_sheet_01_a	ss	s	D_MetallShield_01
+sSM_int_metal_sheet_01_a	sx	s	
+sSM_int_metal_sheet_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_Houseware.SFX_PhysicsInteraction_Destruct_Houseware
+sSM_int_metal_sheet_01_b	sfx	s	
+sSM_int_metal_sheet_01_b	sk	s	physics
+sSM_int_metal_sheet_01_b	snm	s	
+sSM_int_metal_sheet_01_b	sp	i	1
+sSM_int_metal_sheet_01_b	sq	i	0
+sSM_int_metal_sheet_01_b	ss	s	D_MetallShield_02
+sSM_int_metal_sheet_01_b	sx	s	
+sSM_int_woodbox_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_woodbox_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenBox.NS_Destruct_WoodenBox
+sSM_int_woodbox_01_a	sk	s	destroy
+sSM_int_woodbox_01_a	snm	s	
+sSM_int_woodbox_01_a	sp	i	1
+sSM_int_woodbox_01_a	sq	i	0
+sSM_int_woodbox_01_a	ss	s	D_WoodenBox_01
+sSM_int_woodbox_01_a	sx	s	
+sSM_int_woodbox_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_woodbox_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenBox.NS_Destruct_WoodenBox
+sSM_int_woodbox_01_b	sk	s	destroy
+sSM_int_woodbox_01_b	snm	s	
+sSM_int_woodbox_01_b	sp	i	1
+sSM_int_woodbox_01_b	sq	i	0
+sSM_int_woodbox_01_b	ss	s	D_WoodenBox_02
+sSM_int_woodbox_01_b	sx	s	
+sSM_int_woodbox_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_woodbox_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenBox.NS_Destruct_WoodenBox
+sSM_int_woodbox_01_c	sk	s	destroy
+sSM_int_woodbox_01_c	snm	s	
+sSM_int_woodbox_01_c	sp	i	1
+sSM_int_woodbox_01_c	sq	i	0
+sSM_int_woodbox_01_c	ss	s	D_WoodenBox_03
+sSM_int_woodbox_01_c	sx	s	
+sSM_int_woodbox_01_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_woodbox_01_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenBox.NS_Destruct_WoodenBox
+sSM_int_woodbox_01_d	sk	s	destroy
+sSM_int_woodbox_01_d	snm	s	
+sSM_int_woodbox_01_d	sp	i	1
+sSM_int_woodbox_01_d	sq	i	0
+sSM_int_woodbox_01_d	ss	s	D_WoodenBox_04
+sSM_int_woodbox_01_d	sx	s	
+sSM_int_wooden_planks_01_a	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_wooden_planks_01_a	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenPlanks.NS_Destruct_WoodenPlanks
+sSM_int_wooden_planks_01_a	sk	s	destroy
+sSM_int_wooden_planks_01_a	snm	s	
+sSM_int_wooden_planks_01_a	sp	i	1
+sSM_int_wooden_planks_01_a	sq	i	0
+sSM_int_wooden_planks_01_a	ss	s	D_WoodenPlank_01
+sSM_int_wooden_planks_01_a	sx	s	
+sSM_int_wooden_planks_01_b	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_wooden_planks_01_b	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenPlanks.NS_Destruct_WoodenPlanks
+sSM_int_wooden_planks_01_b	sk	s	destroy
+sSM_int_wooden_planks_01_b	snm	s	
+sSM_int_wooden_planks_01_b	sp	i	1
+sSM_int_wooden_planks_01_b	sq	i	0
+sSM_int_wooden_planks_01_b	ss	s	D_WoodenPlank_02
+sSM_int_wooden_planks_01_b	sx	s	
+sSM_int_wooden_planks_01_c	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_wooden_planks_01_c	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenPlanks.NS_Destruct_WoodenPlanks
+sSM_int_wooden_planks_01_c	sk	s	destroy
+sSM_int_wooden_planks_01_c	snm	s	
+sSM_int_wooden_planks_01_c	sp	i	1
+sSM_int_wooden_planks_01_c	sq	i	0
+sSM_int_wooden_planks_01_c	ss	s	D_WoodenPlank_03
+sSM_int_wooden_planks_01_c	sx	s	
+sSM_int_wooden_planks_01_d	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_wooden_planks_01_d	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenPlanks.NS_Destruct_WoodenPlanks
+sSM_int_wooden_planks_01_d	sk	s	destroy
+sSM_int_wooden_planks_01_d	snm	s	
+sSM_int_wooden_planks_01_d	sp	i	1
+sSM_int_wooden_planks_01_d	sq	i	0
+sSM_int_wooden_planks_01_d	ss	s	D_WoodenPlank_04
+sSM_int_wooden_planks_01_d	sx	s	
+sSM_int_wooden_planks_01_e	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_wooden_planks_01_e	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenPlanks.NS_Destruct_WoodenPlanks
+sSM_int_wooden_planks_01_e	sk	s	destroy
+sSM_int_wooden_planks_01_e	snm	s	
+sSM_int_wooden_planks_01_e	sp	i	1
+sSM_int_wooden_planks_01_e	sq	i	0
+sSM_int_wooden_planks_01_e	ss	s	D_WoodenPlank_05
+sSM_int_wooden_planks_01_e	sx	s	
+sSM_int_wooden_planks_01_f	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_BigBox.SFX_PhysicsInteraction_Destruct_BigBox
+sSM_int_wooden_planks_01_f	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_WoodenPlanks.NS_Destruct_WoodenPlanks
+sSM_int_wooden_planks_01_f	sk	s	destroy
+sSM_int_wooden_planks_01_f	snm	s	
+sSM_int_wooden_planks_01_f	sp	i	1
+sSM_int_wooden_planks_01_f	sq	i	0
+sSM_int_wooden_planks_01_f	ss	s	D_WoodenPlank_06
+sSM_int_wooden_planks_01_f	sx	s	
+sSM_lab_Medical_equipment_10	sau	s	
+sSM_lab_Medical_equipment_10	sfx	s	
+sSM_lab_Medical_equipment_10	sk	s	movable
+sSM_lab_Medical_equipment_10	snm	s	
+sSM_lab_Medical_equipment_10	sp	i	1
+sSM_lab_Medical_equipment_10	sq	i	0
+sSM_lab_Medical_equipment_10	ss	s	M_MedicalEquipment_01
+sSM_lab_Medical_equipment_10	sx	s	
+sSM_lab_Medical_equipment_12	sau	s	
+sSM_lab_Medical_equipment_12	sfx	s	
+sSM_lab_Medical_equipment_12	sk	s	movable
+sSM_lab_Medical_equipment_12	snm	s	
+sSM_lab_Medical_equipment_12	sp	i	1
+sSM_lab_Medical_equipment_12	sq	i	0
+sSM_lab_Medical_equipment_12	ss	s	M_MedicalEquipment_02
+sSM_lab_Medical_equipment_12	sx	s	
+sSM_lab_Medical_equipment_3	sau	s	
+sSM_lab_Medical_equipment_3	sfx	s	
+sSM_lab_Medical_equipment_3	sk	s	movable
+sSM_lab_Medical_equipment_3	snm	s	
+sSM_lab_Medical_equipment_3	sp	i	1
+sSM_lab_Medical_equipment_3	sq	i	0
+sSM_lab_Medical_equipment_3	ss	s	M_MedicalEquipment_03
+sSM_lab_Medical_equipment_3	sx	s	
+sSM_lab_Medical_equipment_4	sau	s	
+sSM_lab_Medical_equipment_4	sfx	s	
+sSM_lab_Medical_equipment_4	sk	s	movable
+sSM_lab_Medical_equipment_4	snm	s	
+sSM_lab_Medical_equipment_4	sp	i	1
+sSM_lab_Medical_equipment_4	sq	i	0
+sSM_lab_Medical_equipment_4	ss	s	M_MedicalEquipment_04
+sSM_lab_Medical_equipment_4	sx	s	
+sSM_lab_Medical_equipment_5	sau	s	
+sSM_lab_Medical_equipment_5	sfx	s	
+sSM_lab_Medical_equipment_5	sk	s	movable
+sSM_lab_Medical_equipment_5	snm	s	
+sSM_lab_Medical_equipment_5	sp	i	1
+sSM_lab_Medical_equipment_5	sq	i	0
+sSM_lab_Medical_equipment_5	ss	s	M_MedicalEquipment_05
+sSM_lab_Medical_equipment_5	sx	s	
+sSM_lab_enema_01_b	sau	s	
+sSM_lab_enema_01_b	sfx	s	
+sSM_lab_enema_01_b	sk	s	movable
+sSM_lab_enema_01_b	snm	s	
+sSM_lab_enema_01_b	sp	i	1
+sSM_lab_enema_01_b	sq	i	0
+sSM_lab_enema_01_b	ss	s	M_MedicalEquipment_06
+sSM_lab_enema_01_b	sx	s	
+sSM_lab_med_box_01_a	sau	s	
+sSM_lab_med_box_01_a	sfx	s	
+sSM_lab_med_box_01_a	sk	s	movable
+sSM_lab_med_box_01_a	snm	s	
+sSM_lab_med_box_01_a	sp	i	1
+sSM_lab_med_box_01_a	sq	i	0
+sSM_lab_med_box_01_a	ss	s	M_MetallUtensils_48_MedBox
+sSM_lab_med_box_01_a	sx	s	
+sSM_lab_med_box_01_b	sau	s	
+sSM_lab_med_box_01_b	sfx	s	
+sSM_lab_med_box_01_b	sk	s	movable
+sSM_lab_med_box_01_b	snm	s	
+sSM_lab_med_box_01_b	sp	i	1
+sSM_lab_med_box_01_b	sq	i	0
+sSM_lab_med_box_01_b	ss	s	M_MetallUtensils_49_MedBox
+sSM_lab_med_box_01_b	sx	s	
+sSM_lab_med_plate_01_a	sau	s	
+sSM_lab_med_plate_01_a	sfx	s	
+sSM_lab_med_plate_01_a	sk	s	movable
+sSM_lab_med_plate_01_a	snm	s	
+sSM_lab_med_plate_01_a	sp	i	1
+sSM_lab_med_plate_01_a	sq	i	0
+sSM_lab_med_plate_01_a	ss	s	M_MetallUtensils_50_MedPlate
+sSM_lab_med_plate_01_a	sx	s	
+sSM_lab_med_plate_01_b	sau	s	
+sSM_lab_med_plate_01_b	sfx	s	
+sSM_lab_med_plate_01_b	sk	s	movable
+sSM_lab_med_plate_01_b	snm	s	
+sSM_lab_med_plate_01_b	sp	i	1
+sSM_lab_med_plate_01_b	sq	i	0
+sSM_lab_med_plate_01_b	ss	s	M_MetallUtensils_51_MedPlate
+sSM_lab_med_plate_01_b	sx	s	
+sSM_lab_med_sterilizer_01_a	sau	s	
+sSM_lab_med_sterilizer_01_a	sfx	s	
+sSM_lab_med_sterilizer_01_a	sk	s	movable
+sSM_lab_med_sterilizer_01_a	snm	s	
+sSM_lab_med_sterilizer_01_a	sp	i	1
+sSM_lab_med_sterilizer_01_a	sq	i	0
+sSM_lab_med_sterilizer_01_a	ss	s	M_MetallUtensils_52_MedSterilizer
+sSM_lab_med_sterilizer_01_a	sx	s	
+sSM_lab_med_sterilizer_01_b	sau	s	
+sSM_lab_med_sterilizer_01_b	sfx	s	
+sSM_lab_med_sterilizer_01_b	sk	s	movable
+sSM_lab_med_sterilizer_01_b	snm	s	
+sSM_lab_med_sterilizer_01_b	sp	i	1
+sSM_lab_med_sterilizer_01_b	sq	i	0
+sSM_lab_med_sterilizer_01_b	ss	s	M_MetallUtensils_53_MedSterilizer
+sSM_lab_med_sterilizer_01_b	sx	s	
+sSM_lab_med_sterilizer_01_c	sau	s	
+sSM_lab_med_sterilizer_01_c	sfx	s	
+sSM_lab_med_sterilizer_01_c	sk	s	movable
+sSM_lab_med_sterilizer_01_c	snm	s	
+sSM_lab_med_sterilizer_01_c	sp	i	1
+sSM_lab_med_sterilizer_01_c	sq	i	0
+sSM_lab_med_sterilizer_01_c	ss	s	M_MetallUtensils_54_MedSterilizer
+sSM_lab_med_sterilizer_01_c	sx	s	
+sSM_mil_ammo_box_01	sau	s	/Game/_STALKER2/Audio/WwiseAudio/Events/PhysicsInteraction/Destruct/SFX_PhysicsInteraction_Destruct_AmmoBox.SFX_PhysicsInteraction_Destruct_AmmoBox
+sSM_mil_ammo_box_01	sfx	s	/Game/_Stalker_2/VFX/Environment/Destruction/Wood_1/Niagara/NS_Destruct_AmmoBoxTop.NS_Destruct_AmmoBoxTop
+sSM_mil_ammo_box_01	sk	s	destroy
+sSM_mil_ammo_box_01	snm	s	/Game/_Stalker_2/props/military/SM_mil_ammo_box_01_a.SM_mil_ammo_box_01_a
+sSM_mil_ammo_box_01	sp	i	2
+sSM_mil_ammo_box_01	sq	i	0
+sSM_mil_ammo_box_01	ss	s	D_WoodenAmmoCrate_01
+sSM_mil_ammo_box_01	sx	s	
+sSM_mod_con_des_01_07_ForMovable	sau	s	
+sSM_mod_con_des_01_07_ForMovable	sfx	s	
+sSM_mod_con_des_01_07_ForMovable	sk	s	movable
+sSM_mod_con_des_01_07_ForMovable	snm	s	
+sSM_mod_con_des_01_07_ForMovable	sp	i	1
+sSM_mod_con_des_01_07_ForMovable	sq	i	0
+sSM_mod_con_des_01_07_ForMovable	ss	s	M_BetonPart_01_NoGravity
+sSM_mod_con_des_01_07_ForMovable	sx	s	
+sSM_mod_con_des_01_08_ForMovable	sau	s	
+sSM_mod_con_des_01_08_ForMovable	sfx	s	
+sSM_mod_con_des_01_08_ForMovable	sk	s	movable
+sSM_mod_con_des_01_08_ForMovable	snm	s	
+sSM_mod_con_des_01_08_ForMovable	sp	i	1
+sSM_mod_con_des_01_08_ForMovable	sq	i	0
+sSM_mod_con_des_01_08_ForMovable	ss	s	M_BetonPart_02_NoGravity
+sSM_mod_con_des_01_08_ForMovable	sx	s	
+sSM_mod_con_des_03_22_1_ForMovable	sau	s	
+sSM_mod_con_des_03_22_1_ForMovable	sfx	s	
+sSM_mod_con_des_03_22_1_ForMovable	sk	s	movable
+sSM_mod_con_des_03_22_1_ForMovable	snm	s	
+sSM_mod_con_des_03_22_1_ForMovable	sp	i	1
+sSM_mod_con_des_03_22_1_ForMovable	sq	i	0
+sSM_mod_con_des_03_22_1_ForMovable	ss	s	M_BetonPart_03_NoGravity
+sSM_mod_con_des_03_22_1_ForMovable	sx	s	
+sSM_too_gaswrench_1	sau	s	
+sSM_too_gaswrench_1	sfx	s	
+sSM_too_gaswrench_1	sk	s	movable
+sSM_too_gaswrench_1	snm	s	
+sSM_too_gaswrench_1	sp	i	1
+sSM_too_gaswrench_1	sq	i	0
+sSM_too_gaswrench_1	ss	s	M_MetallHouseware_14_Gaswrench
+sSM_too_gaswrench_1	sx	s	
+sSM_too_screwdriver_01_a	sau	s	
+sSM_too_screwdriver_01_a	sfx	s	
+sSM_too_screwdriver_01_a	sk	s	movable
+sSM_too_screwdriver_01_a	snm	s	
+sSM_too_screwdriver_01_a	sp	i	1
+sSM_too_screwdriver_01_a	sq	i	0
+sSM_too_screwdriver_01_a	ss	s	M_MetallHouseware_15_Screwdriver
+sSM_too_screwdriver_01_a	sx	s	
+sSM_too_screwdriver_01_b	sau	s	
+sSM_too_screwdriver_01_b	sfx	s	
+sSM_too_screwdriver_01_b	sk	s	movable
+sSM_too_screwdriver_01_b	snm	s	
+sSM_too_screwdriver_01_b	sp	i	1
+sSM_too_screwdriver_01_b	sq	i	0
+sSM_too_screwdriver_01_b	ss	s	M_MetallHouseware_16_Screwdriver
+sSM_too_screwdriver_01_b	sx	s	
+sSM_too_tools_01_c	sau	s	
+sSM_too_tools_01_c	sfx	s	
+sSM_too_tools_01_c	sk	s	movable
+sSM_too_tools_01_c	snm	s	
+sSM_too_tools_01_c	sp	i	1
+sSM_too_tools_01_c	sq	i	0
+sSM_too_tools_01_c	ss	s	M_MetallHouseware_17_Tool
+sSM_too_tools_01_c	sx	s	
+sSM_too_tools_01_d	sau	s	
+sSM_too_tools_01_d	sfx	s	
+sSM_too_tools_01_d	sk	s	movable
+sSM_too_tools_01_d	snm	s	
+sSM_too_tools_01_d	sp	i	1
+sSM_too_tools_01_d	sq	i	0
+sSM_too_tools_01_d	ss	s	M_MetallHouseware_18_Tool
+sSM_too_tools_01_d	sx	s	
+sSM_too_tools_01_e	sau	s	
+sSM_too_tools_01_e	sfx	s	
+sSM_too_tools_01_e	sk	s	movable
+sSM_too_tools_01_e	snm	s	
+sSM_too_tools_01_e	sp	i	1
+sSM_too_tools_01_e	sq	i	0
+sSM_too_tools_01_e	ss	s	M_MetallHouseware_19_Tool
+sSM_too_tools_01_e	sx	s	
+sSM_too_tools_01_f	sau	s	
+sSM_too_tools_01_f	sfx	s	
+sSM_too_tools_01_f	sk	s	movable
+sSM_too_tools_01_f	snm	s	
+sSM_too_tools_01_f	sp	i	1
+sSM_too_tools_01_f	sq	i	0
+sSM_too_tools_01_f	ss	s	M_MetallHouseware_20_Tool
+sSM_too_tools_01_f	sx	s	
+sSM_too_tools_01_h	sau	s	
+sSM_too_tools_01_h	sfx	s	
+sSM_too_tools_01_h	sk	s	movable
+sSM_too_tools_01_h	snm	s	
+sSM_too_tools_01_h	sp	i	1
+sSM_too_tools_01_h	sq	i	0
+sSM_too_tools_01_h	ss	s	M_MetallHouseware_21_Tool
+sSM_too_tools_01_h	sx	s	
+sSM_too_tools_01_i	sau	s	
+sSM_too_tools_01_i	sfx	s	
+sSM_too_tools_01_i	sk	s	movable
+sSM_too_tools_01_i	snm	s	
+sSM_too_tools_01_i	sp	i	1
+sSM_too_tools_01_i	sq	i	0
+sSM_too_tools_01_i	ss	s	M_MetallHouseware_22_Tool
+sSM_too_tools_01_i	sx	s	
+sSM_too_tools_01_k	sau	s	
+sSM_too_tools_01_k	sfx	s	
+sSM_too_tools_01_k	sk	s	movable
+sSM_too_tools_01_k	snm	s	
+sSM_too_tools_01_k	sp	i	1
+sSM_too_tools_01_k	sq	i	0
+sSM_too_tools_01_k	ss	s	M_WoodenEmptyBucket_12_ToolBox
+sSM_too_tools_01_k	sx	s	
+sSM_too_tools_01_l	sau	s	
+sSM_too_tools_01_l	sfx	s	
+sSM_too_tools_01_l	sk	s	movable
+sSM_too_tools_01_l	snm	s	
+sSM_too_tools_01_l	sp	i	1
+sSM_too_tools_01_l	sq	i	0
+sSM_too_tools_01_l	ss	s	M_WoodenEmptyBucket_13_ToolBox
+sSM_too_tools_01_l	sx	s	
+sSM_uni_bun_props_01_c	sau	s	
+sSM_uni_bun_props_01_c	sfx	s	
+sSM_uni_bun_props_01_c	sk	s	movable
+sSM_uni_bun_props_01_c	snm	s	
+sSM_uni_bun_props_01_c	sp	i	1
+sSM_uni_bun_props_01_c	sq	i	0
+sSM_uni_bun_props_01_c	ss	s	M_MetallUtensils_55_Can
+sSM_uni_bun_props_01_c	sx	s	
+sSM_uni_nii_box_01_a	sau	s	
+sSM_uni_nii_box_01_a	sfx	s	
+sSM_uni_nii_box_01_a	sk	s	movable
+sSM_uni_nii_box_01_a	snm	s	
+sSM_uni_nii_box_01_a	sp	i	1
+sSM_uni_nii_box_01_a	sq	i	0
+sSM_uni_nii_box_01_a	ss	s	M_PlasticBox_1
+sSM_uni_nii_box_01_a	sx	s	
+sSM_uni_nii_box_01_b	sau	s	
+sSM_uni_nii_box_01_b	sfx	s	
+sSM_uni_nii_box_01_b	sk	s	movable
+sSM_uni_nii_box_01_b	snm	s	
+sSM_uni_nii_box_01_b	sp	i	1
+sSM_uni_nii_box_01_b	sq	i	0
+sSM_uni_nii_box_01_b	ss	s	M_PlasticBox_2
+sSM_uni_nii_box_01_b	sx	s	
+sSM_uni_nii_chair_02	sau	s	
+sSM_uni_nii_chair_02	sfx	s	
+sSM_uni_nii_chair_02	sk	s	movable
+sSM_uni_nii_chair_02	snm	s	
+sSM_uni_nii_chair_02	sp	i	1
+sSM_uni_nii_chair_02	sq	i	0
+sSM_uni_nii_chair_02	ss	s	M_MetallChair_1
+sSM_uni_nii_chair_02	sx	s	
+sSM_uni_nii_dishes_e	sau	s	
+sSM_uni_nii_dishes_e	sfx	s	
+sSM_uni_nii_dishes_e	sk	s	movable
+sSM_uni_nii_dishes_e	snm	s	
+sSM_uni_nii_dishes_e	sp	i	1
+sSM_uni_nii_dishes_e	sq	i	0
+sSM_uni_nii_dishes_e	ss	s	M_PlasticDishes_1
+sSM_uni_nii_dishes_e	sx	s	
+sSM_uni_nii_monitor_01_a	sau	s	
+sSM_uni_nii_monitor_01_a	sfx	s	
+sSM_uni_nii_monitor_01_a	sk	s	movable
+sSM_uni_nii_monitor_01_a	snm	s	
+sSM_uni_nii_monitor_01_a	sp	i	1
+sSM_uni_nii_monitor_01_a	sq	i	0
+sSM_uni_nii_monitor_01_a	ss	s	M_MetallMonitor_01
+sSM_uni_nii_monitor_01_a	sx	s	
+sSM_uni_nii_monitor_01_b	sau	s	
+sSM_uni_nii_monitor_01_b	sfx	s	
+sSM_uni_nii_monitor_01_b	sk	s	movable
+sSM_uni_nii_monitor_01_b	snm	s	
+sSM_uni_nii_monitor_01_b	sp	i	1
+sSM_uni_nii_monitor_01_b	sq	i	0
+sSM_uni_nii_monitor_01_b	ss	s	M_MetallMonitor_02
+sSM_uni_nii_monitor_01_b	sx	s	
+sSM_uni_nii_server_c	sau	s	
+sSM_uni_nii_server_c	sfx	s	
+sSM_uni_nii_server_c	sk	s	movable
+sSM_uni_nii_server_c	snm	s	
+sSM_uni_nii_server_c	sp	i	1
+sSM_uni_nii_server_c	sq	i	0
+sSM_uni_nii_server_c	ss	s	M_MetallServer_01
+sSM_uni_nii_server_c	sx	s	
+sSM_uni_nii_server_d	sau	s	
+sSM_uni_nii_server_d	sfx	s	
+sSM_uni_nii_server_d	sk	s	movable
+sSM_uni_nii_server_d	snm	s	
+sSM_uni_nii_server_d	sp	i	1
+sSM_uni_nii_server_d	sq	i	0
+sSM_uni_nii_server_d	ss	s	M_MetallServer_02
+sSM_uni_nii_server_d	sx	s	
+sSM_uni_nii_sign_03_a	sau	s	
+sSM_uni_nii_sign_03_a	sfx	s	
+sSM_uni_nii_sign_03_a	sk	s	movable
+sSM_uni_nii_sign_03_a	snm	s	
+sSM_uni_nii_sign_03_a	sp	i	1
+sSM_uni_nii_sign_03_a	sq	i	0
+sSM_uni_nii_sign_03_a	ss	s	M_PlasticSign_1
+sSM_uni_nii_sign_03_a	sx	s	
+sSM_uni_nii_sign_03_b	sau	s	
+sSM_uni_nii_sign_03_b	sfx	s	
+sSM_uni_nii_sign_03_b	sk	s	movable
+sSM_uni_nii_sign_03_b	snm	s	
+sSM_uni_nii_sign_03_b	sp	i	1
+sSM_uni_nii_sign_03_b	sq	i	0
+sSM_uni_nii_sign_03_b	ss	s	M_PlasticSign_2
+sSM_uni_nii_sign_03_b	sx	s	
+sSM_uni_nii_sign_03_c	sau	s	
+sSM_uni_nii_sign_03_c	sfx	s	
+sSM_uni_nii_sign_03_c	sk	s	movable
+sSM_uni_nii_sign_03_c	snm	s	
+sSM_uni_nii_sign_03_c	sp	i	1
+sSM_uni_nii_sign_03_c	sq	i	0
+sSM_uni_nii_sign_03_c	ss	s	M_PlasticSign_3
+sSM_uni_nii_sign_03_c	sx	s	
+sSM_uni_nii_table_stuff_03_a	sau	s	
+sSM_uni_nii_table_stuff_03_a	sfx	s	
+sSM_uni_nii_table_stuff_03_a	sk	s	movable
+sSM_uni_nii_table_stuff_03_a	snm	s	
+sSM_uni_nii_table_stuff_03_a	sp	i	1
+sSM_uni_nii_table_stuff_03_a	sq	i	0
+sSM_uni_nii_table_stuff_03_a	ss	s	M_PlasticTableStaff_1
+sSM_uni_nii_table_stuff_03_a	sx	s	
+sSM_uni_nii_table_stuff_03_b	sau	s	
+sSM_uni_nii_table_stuff_03_b	sfx	s	
+sSM_uni_nii_table_stuff_03_b	sk	s	movable
+sSM_uni_nii_table_stuff_03_b	snm	s	
+sSM_uni_nii_table_stuff_03_b	sp	i	1
+sSM_uni_nii_table_stuff_03_b	sq	i	0
+sSM_uni_nii_table_stuff_03_b	ss	s	M_PlasticTableStaff_2
+sSM_uni_nii_table_stuff_03_b	sx	s	
+sSM_uni_nii_table_stuff_03_c	sau	s	
+sSM_uni_nii_table_stuff_03_c	sfx	s	
+sSM_uni_nii_table_stuff_03_c	sk	s	movable
+sSM_uni_nii_table_stuff_03_c	snm	s	
+sSM_uni_nii_table_stuff_03_c	sp	i	1
+sSM_uni_nii_table_stuff_03_c	sq	i	0
+sSM_uni_nii_table_stuff_03_c	ss	s	M_PlasticTableStaff_6
+sSM_uni_nii_table_stuff_03_c	sx	s	
+sSM_uni_nii_table_stuff_03_e	sau	s	
+sSM_uni_nii_table_stuff_03_e	sfx	s	
+sSM_uni_nii_table_stuff_03_e	sk	s	movable
+sSM_uni_nii_table_stuff_03_e	snm	s	
+sSM_uni_nii_table_stuff_03_e	sp	i	1
+sSM_uni_nii_table_stuff_03_e	sq	i	0
+sSM_uni_nii_table_stuff_03_e	ss	s	M_PlasticTableStaff_3
+sSM_uni_nii_table_stuff_03_e	sx	s	
+sSM_uni_nii_table_stuff_03_f	sau	s	
+sSM_uni_nii_table_stuff_03_f	sfx	s	
+sSM_uni_nii_table_stuff_03_f	sk	s	movable
+sSM_uni_nii_table_stuff_03_f	snm	s	
+sSM_uni_nii_table_stuff_03_f	sp	i	1
+sSM_uni_nii_table_stuff_03_f	sq	i	0
+sSM_uni_nii_table_stuff_03_f	ss	s	M_PlasticTableStaff_4
+sSM_uni_nii_table_stuff_03_f	sx	s	
+sSM_uni_nii_table_stuff_03_g	sau	s	
+sSM_uni_nii_table_stuff_03_g	sfx	s	
+sSM_uni_nii_table_stuff_03_g	sk	s	movable
+sSM_uni_nii_table_stuff_03_g	snm	s	
+sSM_uni_nii_table_stuff_03_g	sp	i	1
+sSM_uni_nii_table_stuff_03_g	sq	i	0
+sSM_uni_nii_table_stuff_03_g	ss	s	M_PlasticTableStaff_5
+sSM_uni_nii_table_stuff_03_g	sx	s	
+sSM_uni_nii_trashcan_02	sau	s	
+sSM_uni_nii_trashcan_02	sfx	s	
+sSM_uni_nii_trashcan_02	sk	s	movable
+sSM_uni_nii_trashcan_02	snm	s	
+sSM_uni_nii_trashcan_02	sp	i	1
+sSM_uni_nii_trashcan_02	sq	i	0
+sSM_uni_nii_trashcan_02	ss	s	M_MetallTrashcan_01
+sSM_uni_nii_trashcan_02	sx	s	
+sSM_uni_nii_working_chair_01_a	sau	s	
+sSM_uni_nii_working_chair_01_a	sfx	s	
+sSM_uni_nii_working_chair_01_a	sk	s	movable
+sSM_uni_nii_working_chair_01_a	snm	s	
+sSM_uni_nii_working_chair_01_a	sp	i	1
+sSM_uni_nii_working_chair_01_a	sq	i	0
+sSM_uni_nii_working_chair_01_a	ss	s	M_MetallWorkingChair_03_Part
+sSM_uni_nii_working_chair_01_a	sx	s	
+sSM_uni_nii_working_chair_01_b	sau	s	
+sSM_uni_nii_working_chair_01_b	sfx	s	
+sSM_uni_nii_working_chair_01_b	sk	s	movable
+sSM_uni_nii_working_chair_01_b	snm	s	
+sSM_uni_nii_working_chair_01_b	sp	i	1
+sSM_uni_nii_working_chair_01_b	sq	i	0
+sSM_uni_nii_working_chair_01_b	ss	s	M_MetallWorkingChair_04_Part
+sSM_uni_nii_working_chair_01_b	sx	s	
+sSM_uni_nii_working_chair_01_c	sau	s	
+sSM_uni_nii_working_chair_01_c	sfx	s	
+sSM_uni_nii_working_chair_01_c	sk	s	movable
+sSM_uni_nii_working_chair_01_c	snm	s	
+sSM_uni_nii_working_chair_01_c	sp	i	1
+sSM_uni_nii_working_chair_01_c	sq	i	0
+sSM_uni_nii_working_chair_01_c	ss	s	M_MetallWorkingChair_05_Part
+sSM_uni_nii_working_chair_01_c	sx	s	
+sSM_uni_nii_working_chair_01_d	sau	s	
+sSM_uni_nii_working_chair_01_d	sfx	s	
+sSM_uni_nii_working_chair_01_d	sk	s	movable
+sSM_uni_nii_working_chair_01_d	snm	s	
+sSM_uni_nii_working_chair_01_d	sp	i	1
+sSM_uni_nii_working_chair_01_d	sq	i	0
+sSM_uni_nii_working_chair_01_d	ss	s	M_MetallWorkingChair_01
+sSM_uni_nii_working_chair_01_d	sx	s	
+sSM_uni_nii_working_chair_01_e	sau	s	
+sSM_uni_nii_working_chair_01_e	sfx	s	
+sSM_uni_nii_working_chair_01_e	sk	s	movable
+sSM_uni_nii_working_chair_01_e	snm	s	
+sSM_uni_nii_working_chair_01_e	sp	i	1
+sSM_uni_nii_working_chair_01_e	sq	i	0
+sSM_uni_nii_working_chair_01_e	ss	s	M_MetallWorkingChair_02
+sSM_uni_nii_working_chair_01_e	sx	s	
+sSM_veh_btr70_wheel_tire	sau	s	
+sSM_veh_btr70_wheel_tire	sfx	s	
+sSM_veh_btr70_wheel_tire	sk	s	movable
+sSM_veh_btr70_wheel_tire	snm	s	
+sSM_veh_btr70_wheel_tire	sp	i	1
+sSM_veh_btr70_wheel_tire	sq	i	0
+sSM_veh_btr70_wheel_tire	ss	s	M_RubberWheels_04_BigOffroad
+sSM_veh_btr70_wheel_tire	sx	s	
+sSM_veh_generator_tire_01	sau	s	
+sSM_veh_generator_tire_01	sfx	s	
+sSM_veh_generator_tire_01	sk	s	movable
+sSM_veh_generator_tire_01	snm	s	
+sSM_veh_generator_tire_01	sp	i	1
+sSM_veh_generator_tire_01	sq	i	0
+sSM_veh_generator_tire_01	ss	s	M_RubberWheels_09_BigOffroad
+sSM_veh_generator_tire_01	sx	s	
+sSM_veh_hvytruck01_tire	sau	s	
+sSM_veh_hvytruck01_tire	sfx	s	
+sSM_veh_hvytruck01_tire	sk	s	movable
+sSM_veh_hvytruck01_tire	snm	s	
+sSM_veh_hvytruck01_tire	sp	i	1
+sSM_veh_hvytruck01_tire	sq	i	0
+sSM_veh_hvytruck01_tire	ss	s	M_RubberWheels_08_BigOffroad
+sSM_veh_hvytruck01_tire	sx	s	
+sSM_veh_offrv_001_tire	sau	s	
+sSM_veh_offrv_001_tire	sfx	s	
+sSM_veh_offrv_001_tire	sk	s	movable
+sSM_veh_offrv_001_tire	snm	s	
+sSM_veh_offrv_001_tire	sp	i	1
+sSM_veh_offrv_001_tire	sq	i	0
+sSM_veh_offrv_001_tire	ss	s	M_RubberWheels_10_Offroad
+sSM_veh_offrv_001_tire	sx	s	
+sSM_vil_basket_01_a	sau	s	
+sSM_vil_basket_01_a	sfx	s	
+sSM_vil_basket_01_a	sk	s	movable
+sSM_vil_basket_01_a	snm	s	
+sSM_vil_basket_01_a	sp	i	1
+sSM_vil_basket_01_a	sq	i	0
+sSM_vil_basket_01_a	ss	s	M_WoodenEmptyBucket_08_Basket
+sSM_vil_basket_01_a	sx	s	
+sSM_vil_basket_01_b	sau	s	
+sSM_vil_basket_01_b	sfx	s	
+sSM_vil_basket_01_b	sk	s	movable
+sSM_vil_basket_01_b	snm	s	
+sSM_vil_basket_01_b	sp	i	1
+sSM_vil_basket_01_b	sq	i	0
+sSM_vil_basket_01_b	ss	s	M_WoodenEmptyBucket_09_Basket
+sSM_vil_basket_01_b	sx	s	
+sSM_vil_basket_01_c	sau	s	
+sSM_vil_basket_01_c	sfx	s	
+sSM_vil_basket_01_c	sk	s	movable
+sSM_vil_basket_01_c	snm	s	
+sSM_vil_basket_01_c	sp	i	1
+sSM_vil_basket_01_c	sq	i	0
+sSM_vil_basket_01_c	ss	s	M_WoodenEmptyBucket_10_Basket
+sSM_vil_basket_01_c	sx	s	
+sSM_vil_basket_01_d	sau	s	
+sSM_vil_basket_01_d	sfx	s	
+sSM_vil_basket_01_d	sk	s	movable
+sSM_vil_basket_01_d	snm	s	
+sSM_vil_basket_01_d	sp	i	1
+sSM_vil_basket_01_d	sq	i	0
+sSM_vil_basket_01_d	ss	s	M_WoodenEmptyBucket_11_Basket
+sSM_vil_basket_01_d	sx	s	
+sSM_vil_bidon_1	sau	s	
+sSM_vil_bidon_1	sfx	s	
+sSM_vil_bidon_1	sk	s	movable
+sSM_vil_bidon_1	snm	s	
+sSM_vil_bidon_1	sp	i	1
+sSM_vil_bidon_1	sq	i	0
+sSM_vil_bidon_1	ss	s	M_MetallEmptyBucket_16_Bidon
+sSM_vil_bidon_1	sx	s	
+sSM_vil_cans_01_01	sau	s	
+sSM_vil_cans_01_01	sfx	s	
+sSM_vil_cans_01_01	sk	s	movable
+sSM_vil_cans_01_01	snm	s	
+sSM_vil_cans_01_01	sp	i	1
+sSM_vil_cans_01_01	sq	i	0
+sSM_vil_cans_01_01	ss	s	M_MetallTin_01
+sSM_vil_cans_01_01	sx	s	
+sSM_vil_cans_01_03	sau	s	
+sSM_vil_cans_01_03	sfx	s	
+sSM_vil_cans_01_03	sk	s	movable
+sSM_vil_cans_01_03	snm	s	
+sSM_vil_cans_01_03	sp	i	1
+sSM_vil_cans_01_03	sq	i	0
+sSM_vil_cans_01_03	ss	s	M_MetallTin_03
+sSM_vil_cans_01_03	sx	s	
+sSM_vil_cans_01_04	sau	s	
+sSM_vil_cans_01_04	sfx	s	
+sSM_vil_cans_01_04	sk	s	movable
+sSM_vil_cans_01_04	snm	s	
+sSM_vil_cans_01_04	sp	i	1
+sSM_vil_cans_01_04	sq	i	0
+sSM_vil_cans_01_04	ss	s	M_MetallTin_04
+sSM_vil_cans_01_04	sx	s	
+sSM_vil_cans_01_06	sau	s	
+sSM_vil_cans_01_06	sfx	s	
+sSM_vil_cans_01_06	sk	s	movable
+sSM_vil_cans_01_06	snm	s	
+sSM_vil_cans_01_06	sp	i	1
+sSM_vil_cans_01_06	sq	i	0
+sSM_vil_cans_01_06	ss	s	M_MetallTin_06
+sSM_vil_cans_01_06	sx	s	
+sSM_vil_cans_01_07	sau	s	
+sSM_vil_cans_01_07	sfx	s	
+sSM_vil_cans_01_07	sk	s	movable
+sSM_vil_cans_01_07	snm	s	
+sSM_vil_cans_01_07	sp	i	1
+sSM_vil_cans_01_07	sq	i	0
+sSM_vil_cans_01_07	ss	s	M_MetallTin_07
+sSM_vil_cans_01_07	sx	s	
+sSM_vil_cans_01_08	sau	s	
+sSM_vil_cans_01_08	sfx	s	
+sSM_vil_cans_01_08	sk	s	movable
+sSM_vil_cans_01_08	snm	s	
+sSM_vil_cans_01_08	sp	i	1
+sSM_vil_cans_01_08	sq	i	0
+sSM_vil_cans_01_08	ss	s	M_MetallTin_08
+sSM_vil_cans_01_08	sx	s	
+sSM_vil_cans_01_10	sau	s	
+sSM_vil_cans_01_10	sfx	s	
+sSM_vil_cans_01_10	sk	s	movable
+sSM_vil_cans_01_10	snm	s	
+sSM_vil_cans_01_10	sp	i	1
+sSM_vil_cans_01_10	sq	i	0
+sSM_vil_cans_01_10	ss	s	M_MetallTin_10
+sSM_vil_cans_01_10	sx	s	
+sSM_vil_cans_01_11	sau	s	
+sSM_vil_cans_01_11	sfx	s	
+sSM_vil_cans_01_11	sk	s	movable
+sSM_vil_cans_01_11	snm	s	
+sSM_vil_cans_01_11	sp	i	1
+sSM_vil_cans_01_11	sq	i	0
+sSM_vil_cans_01_11	ss	s	M_MetallTin_11
+sSM_vil_cans_01_11	sx	s	
+sSM_vil_cans_01_13	sau	s	
+sSM_vil_cans_01_13	sfx	s	
+sSM_vil_cans_01_13	sk	s	movable
+sSM_vil_cans_01_13	snm	s	
+sSM_vil_cans_01_13	sp	i	1
+sSM_vil_cans_01_13	sq	i	0
+sSM_vil_cans_01_13	ss	s	M_MetallTin_13
+sSM_vil_cans_01_13	sx	s	
+sSM_vil_cans_01_14	sau	s	
+sSM_vil_cans_01_14	sfx	s	
+sSM_vil_cans_01_14	sk	s	movable
+sSM_vil_cans_01_14	snm	s	
+sSM_vil_cans_01_14	sp	i	1
+sSM_vil_cans_01_14	sq	i	0
+sSM_vil_cans_01_14	ss	s	M_MetallTin_14
+sSM_vil_cans_01_14	sx	s	
+sSM_vil_cans_01_16	sau	s	
+sSM_vil_cans_01_16	sfx	s	
+sSM_vil_cans_01_16	sk	s	movable
+sSM_vil_cans_01_16	snm	s	
+sSM_vil_cans_01_16	sp	i	1
+sSM_vil_cans_01_16	sq	i	0
+sSM_vil_cans_01_16	ss	s	M_MetallTin_16
+sSM_vil_cans_01_16	sx	s	
+sSM_vil_cans_01_18	sau	s	
+sSM_vil_cans_01_18	sfx	s	
+sSM_vil_cans_01_18	sk	s	movable
+sSM_vil_cans_01_18	snm	s	
+sSM_vil_cans_01_18	sp	i	1
+sSM_vil_cans_01_18	sq	i	0
+sSM_vil_cans_01_18	ss	s	M_MetallTin_18
+sSM_vil_cans_01_18	sx	s	
+sSM_vil_cans_01_19	sau	s	
+sSM_vil_cans_01_19	sfx	s	
+sSM_vil_cans_01_19	sk	s	movable
+sSM_vil_cans_01_19	snm	s	
+sSM_vil_cans_01_19	sp	i	1
+sSM_vil_cans_01_19	sq	i	0
+sSM_vil_cans_01_19	ss	s	M_MetallTin_19
+sSM_vil_cans_01_19	sx	s	
+sSM_vil_cans_01_20	sau	s	
+sSM_vil_cans_01_20	sfx	s	
+sSM_vil_cans_01_20	sk	s	movable
+sSM_vil_cans_01_20	snm	s	
+sSM_vil_cans_01_20	sp	i	1
+sSM_vil_cans_01_20	sq	i	0
+sSM_vil_cans_01_20	ss	s	M_MetallTin_20
+sSM_vil_cans_01_20	sx	s	
+sSM_vil_cans_01_22	sau	s	
+sSM_vil_cans_01_22	sfx	s	
+sSM_vil_cans_01_22	sk	s	movable
+sSM_vil_cans_01_22	snm	s	
+sSM_vil_cans_01_22	sp	i	1
+sSM_vil_cans_01_22	sq	i	0
+sSM_vil_cans_01_22	ss	s	M_MetallTin_22
+sSM_vil_cans_01_22	sx	s	
+sSM_vil_cans_01_23	sau	s	
+sSM_vil_cans_01_23	sfx	s	
+sSM_vil_cans_01_23	sk	s	movable
+sSM_vil_cans_01_23	snm	s	
+sSM_vil_cans_01_23	sp	i	1
+sSM_vil_cans_01_23	sq	i	0
+sSM_vil_cans_01_23	ss	s	M_MetallTin_23
+sSM_vil_cans_01_23	sx	s	
+sSM_vil_cans_01_24	sau	s	
+sSM_vil_cans_01_24	sfx	s	
+sSM_vil_cans_01_24	sk	s	movable
+sSM_vil_cans_01_24	snm	s	
+sSM_vil_cans_01_24	sp	i	1
+sSM_vil_cans_01_24	sq	i	0
+sSM_vil_cans_01_24	ss	s	M_MetallTin_24
+sSM_vil_cans_01_24	sx	s	
+sSM_vil_cans_01_25	sau	s	
+sSM_vil_cans_01_25	sfx	s	
+sSM_vil_cans_01_25	sk	s	movable
+sSM_vil_cans_01_25	snm	s	
+sSM_vil_cans_01_25	sp	i	1
+sSM_vil_cans_01_25	sq	i	0
+sSM_vil_cans_01_25	ss	s	M_MetallTin_25
+sSM_vil_cans_01_25	sx	s	
+sSM_vil_cans_01_26	sau	s	
+sSM_vil_cans_01_26	sfx	s	
+sSM_vil_cans_01_26	sk	s	movable
+sSM_vil_cans_01_26	snm	s	
+sSM_vil_cans_01_26	sp	i	1
+sSM_vil_cans_01_26	sq	i	0
+sSM_vil_cans_01_26	ss	s	M_MetallTin_26
+sSM_vil_cans_01_26	sx	s	
+sSM_vil_cans_01_27	sau	s	
+sSM_vil_cans_01_27	sfx	s	
+sSM_vil_cans_01_27	sk	s	movable
+sSM_vil_cans_01_27	snm	s	
+sSM_vil_cans_01_27	sp	i	1
+sSM_vil_cans_01_27	sq	i	0
+sSM_vil_cans_01_27	ss	s	M_MetallTin_27
+sSM_vil_cans_01_27	sx	s	
+sSM_vil_cart_wooden_01_b	sau	s	
+sSM_vil_cart_wooden_01_b	sfx	s	
+sSM_vil_cart_wooden_01_b	sk	s	movable
+sSM_vil_cart_wooden_01_b	snm	s	
+sSM_vil_cart_wooden_01_b	sp	i	1
+sSM_vil_cart_wooden_01_b	sq	i	0
+sSM_vil_cart_wooden_01_b	ss	s	M_RubberWheels_11_OnDisk
+sSM_vil_cart_wooden_01_b	sx	s	
+sSM_vil_kazan_01	sau	s	
+sSM_vil_kazan_01	sfx	s	
+sSM_vil_kazan_01	sk	s	movable
+sSM_vil_kazan_01	snm	s	
+sSM_vil_kazan_01	sp	i	1
+sSM_vil_kazan_01	sq	i	0
+sSM_vil_kazan_01	ss	s	M_MetallEmptyBucket_06_Kazan
+sSM_vil_kazan_01	sx	s	
+sSM_vil_kazan_cup_01	sau	s	
+sSM_vil_kazan_cup_01	sfx	s	
+sSM_vil_kazan_cup_01	sk	s	movable
+sSM_vil_kazan_cup_01	snm	s	
+sSM_vil_kazan_cup_01	sp	i	1
+sSM_vil_kazan_cup_01	sq	i	0
+sSM_vil_kazan_cup_01	ss	s	M_MetallEmptyBucket_07_KazanCup
+sSM_vil_kazan_cup_01	sx	s	
+sSM_vil_table_03	sau	s	
+sSM_vil_table_03	sfx	s	
+sSM_vil_table_03	sk	s	movable
+sSM_vil_table_03	snm	s	
+sSM_vil_table_03	sp	i	1
+sSM_vil_table_03	sq	i	0
+sSM_vil_table_03	ss	s	M_WodenMovableChair_27
+sSM_vil_table_03	sx	s	
+sSM_vil_tools_axe_1_grip	sau	s	
+sSM_vil_tools_axe_1_grip	sfx	s	
+sSM_vil_tools_axe_1_grip	sk	s	movable
+sSM_vil_tools_axe_1_grip	snm	s	
+sSM_vil_tools_axe_1_grip	sp	i	1
+sSM_vil_tools_axe_1_grip	sq	i	0
+sSM_vil_tools_axe_1_grip	ss	s	M_WoodenInstruments_05
+sSM_vil_tools_axe_1_grip	sx	s	
+sSM_vil_tools_axe_2_grip	sau	s	
+sSM_vil_tools_axe_2_grip	sfx	s	
+sSM_vil_tools_axe_2_grip	sk	s	movable
+sSM_vil_tools_axe_2_grip	snm	s	
+sSM_vil_tools_axe_2_grip	sp	i	1
+sSM_vil_tools_axe_2_grip	sq	i	0
+sSM_vil_tools_axe_2_grip	ss	s	M_WoodenInstruments_06
+sSM_vil_tools_axe_2_grip	sx	s	
+sSM_vil_tools_hammer_1_grip	sau	s	
+sSM_vil_tools_hammer_1_grip	sfx	s	
+sSM_vil_tools_hammer_1_grip	sk	s	movable
+sSM_vil_tools_hammer_1_grip	snm	s	
+sSM_vil_tools_hammer_1_grip	sp	i	1
+sSM_vil_tools_hammer_1_grip	sq	i	0
+sSM_vil_tools_hammer_1_grip	ss	s	M_WoodenInstruments_07
+sSM_vil_tools_hammer_1_grip	sx	s	
+sSM_vil_tools_hammer_2_grip	sau	s	
+sSM_vil_tools_hammer_2_grip	sfx	s	
+sSM_vil_tools_hammer_2_grip	sk	s	movable
+sSM_vil_tools_hammer_2_grip	snm	s	
+sSM_vil_tools_hammer_2_grip	sp	i	1
+sSM_vil_tools_hammer_2_grip	sq	i	0
+sSM_vil_tools_hammer_2_grip	ss	s	M_WoodenInstruments_08
+sSM_vil_tools_hammer_2_grip	sx	s	
+sSM_vil_utensil_pack_01_a	sau	s	
+sSM_vil_utensil_pack_01_a	sfx	s	
+sSM_vil_utensil_pack_01_a	sk	s	movable
+sSM_vil_utensil_pack_01_a	snm	s	
+sSM_vil_utensil_pack_01_a	sp	i	1
+sSM_vil_utensil_pack_01_a	sq	i	0
+sSM_vil_utensil_pack_01_a	ss	s	M_MetallUtensils_32_Pot
+sSM_vil_utensil_pack_01_a	sx	s	
+sSM_vil_utensil_pack_01_c	sau	s	
+sSM_vil_utensil_pack_01_c	sfx	s	
+sSM_vil_utensil_pack_01_c	sk	s	movable
+sSM_vil_utensil_pack_01_c	snm	s	
+sSM_vil_utensil_pack_01_c	sp	i	1
+sSM_vil_utensil_pack_01_c	sq	i	0
+sSM_vil_utensil_pack_01_c	ss	s	M_MetallUtensils_27_Pot
+sSM_vil_utensil_pack_01_c	sx	s	
+sSM_vil_utensil_pack_01_d	sau	s	
+sSM_vil_utensil_pack_01_d	sfx	s	
+sSM_vil_utensil_pack_01_d	sk	s	movable
+sSM_vil_utensil_pack_01_d	snm	s	
+sSM_vil_utensil_pack_01_d	sp	i	1
+sSM_vil_utensil_pack_01_d	sq	i	0
+sSM_vil_utensil_pack_01_d	ss	s	M_MetallUtensils_26_Pot
+sSM_vil_utensil_pack_01_d	sx	s	
+sSM_vil_village_tools_hoe	sau	s	
+sSM_vil_village_tools_hoe	sfx	s	
+sSM_vil_village_tools_hoe	sk	s	movable
+sSM_vil_village_tools_hoe	snm	s	
+sSM_vil_village_tools_hoe	sp	i	1
+sSM_vil_village_tools_hoe	sq	i	0
+sSM_vil_village_tools_hoe	ss	s	M_WoodenInstruments_01
+sSM_vil_village_tools_hoe	sx	s	
+sSM_vil_village_tools_pitchfork	sau	s	
+sSM_vil_village_tools_pitchfork	sfx	s	
+sSM_vil_village_tools_pitchfork	sk	s	movable
+sSM_vil_village_tools_pitchfork	snm	s	
+sSM_vil_village_tools_pitchfork	sp	i	1
+sSM_vil_village_tools_pitchfork	sq	i	0
+sSM_vil_village_tools_pitchfork	ss	s	M_WoodenInstruments_02
+sSM_vil_village_tools_pitchfork	sx	s	
+sSM_vil_village_tools_scythe	sau	s	
+sSM_vil_village_tools_scythe	sfx	s	
+sSM_vil_village_tools_scythe	sk	s	movable
+sSM_vil_village_tools_scythe	snm	s	
+sSM_vil_village_tools_scythe	sp	i	1
+sSM_vil_village_tools_scythe	sq	i	0
+sSM_vil_village_tools_scythe	ss	s	M_WoodenInstruments_03
+sSM_vil_village_tools_scythe	sx	s	
+sSM_vil_village_tools_shovel	sau	s	
+sSM_vil_village_tools_shovel	sfx	s	
+sSM_vil_village_tools_shovel	sk	s	movable
+sSM_vil_village_tools_shovel	snm	s	
+sSM_vil_village_tools_shovel	sp	i	1
+sSM_vil_village_tools_shovel	sq	i	0
+sSM_vil_village_tools_shovel	ss	s	M_WoodenInstruments_04
+sSM_vil_village_tools_shovel	sx	s	
+sSM_vil_zinc_basin_01_a	sau	s	
+sSM_vil_zinc_basin_01_a	sfx	s	
+sSM_vil_zinc_basin_01_a	sk	s	movable
+sSM_vil_zinc_basin_01_a	snm	s	
+sSM_vil_zinc_basin_01_a	sp	i	1
+sSM_vil_zinc_basin_01_a	sq	i	0
+sSM_vil_zinc_basin_01_a	ss	s	M_MetallEmptyBucket_14_ZincBasin
+sSM_vil_zinc_basin_01_a	sx	s	
+sSM_vil_zinc_basin_01_b	sau	s	
+sSM_vil_zinc_basin_01_b	sfx	s	
+sSM_vil_zinc_basin_01_b	sk	s	movable
+sSM_vil_zinc_basin_01_b	snm	s	
+sSM_vil_zinc_basin_01_b	sp	i	1
+sSM_vil_zinc_basin_01_b	sq	i	0
+sSM_vil_zinc_basin_01_b	ss	s	M_MetallEmptyBucket_15_ZincBasin
+sSM_vil_zinc_basin_01_b	sx	s	

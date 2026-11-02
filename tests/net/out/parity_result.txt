@@ -1,0 +1,20 @@
+PASS json dumps parity 8571 docs, 0 mismatches []
+INFO json repr(v) mismatches (only used in the v= warn text): 354
+PASS zlib cross (C++ deflate -> zlib.decompress, zlib.compress -> C++ inflate) 51 blobs
+INFO deflate size vs zlib-6 on 40 blobs >=500 B: zlib 126149 B, C++ 126971 B (100.65%)
+INFO sample 21112 B: zlib-6 7587 B, C++ 7584 B
+INFO sample 21294 B: zlib-6 7596 B, C++ 7590 B
+PASS zlib error cases agree (ok/fail, trailing data ignored) 
+PASS sender parity seed=1 3411 records, 0 mismatches None
+PASS assembler+render parity seed=1 loss=0.00 reorder=False dx=0.0 (py datagrams into C++) 7280 records (1573 renders, final stale=0), 0 mismatches None
+PASS C++ datagrams into the Python assembler give the same in.json seed=1 0 mismatches
+PASS sender parity seed=2 3369 records, 0 mismatches None
+PASS assembler+render parity seed=2 loss=0.20 reorder=True dx=0.0 (py datagrams into C++) 6283 records (1221 renders, final stale=219), 0 mismatches None
+PASS C++ datagrams into the Python assembler give the same in.json seed=2 0 mismatches
+PASS sender parity seed=3 3406 records, 0 mismatches None
+PASS assembler+render parity seed=3 loss=0.50 reorder=True dx=250.0 (py datagrams into C++) 4991 records (801 renders, final stale=98), 0 mismatches None
+PASS C++ datagrams into the Python assembler give the same in.json seed=3 0 mismatches
+PASS sender parity seed=4 3373 records, 0 mismatches None
+PASS assembler+render parity seed=4 loss=0.05 reorder=True dx=0.0 (py datagrams into C++) 6938 records (1471 renders, final stale=274), 0 mismatches None
+PASS C++ datagrams into the Python assembler give the same in.json seed=4 0 mismatches
+RESULT PASS (0 fail)

@@ -1,0 +1,23 @@
+role client
+flag ien 1
+flag qobjsync 1
+flag keyfix 1
+pawn 0 0 0
+obj SC BP_TopazScanner_Prologue_C InteractableObject inter 1500 100 0
+prop SC bEnabled 0
+remote QO 150,10,0;0,1,0,-
+time 1
+tick
+expect_new CALL SC.SetEnabled(true)
+time 2
+tick
+expect_none CALL SC.SetEnabled
+expect_none objstate
+prop SC bEnabled 0
+time 3
+tick
+expect_new CALL SC.SetEnabled(true)
+time 4
+tick
+expect_none CALL SC.SetEnabled
+expect_none objstate

@@ -1,0 +1,31 @@
+# same as 124 with idroppeak 0: the old check reads the current +1 of 2 and adds one back
+nodes 2
+@all flag idrop 1
+@all flag ground 1
+@all flag taken 1
+@all flag itake 1
+@all flag mcitems 1
+@all flag idroppeak 0
+@all nodeapply 1
+@all me 5000 100 0
+@c1 myinv Medkit 2
+@c1 vis 1
+run 1
+@c1 dropitem drop1 Medkit 1 5100 100 0
+run 0.4
+@c1 dropitem drop2 Medkit 1 5100 100 0
+run 3.5
+mark dropped
+@h dstat
+@h pickup BP_StaticItemContainer_C_s1 Medkit 1
+run 0.4
+@h pickup BP_StaticItemContainer_C_s2 Medkit 1
+run 0.3
+@h myinv Medkit 1
+run 4
+mark group
+@h dstat
+@h hidden BP_StaticItemContainer_C_s1
+@h hidden BP_StaticItemContainer_C_s2
+@c1 hidden drop1
+@c1 hidden drop2

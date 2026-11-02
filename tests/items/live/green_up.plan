@@ -1,0 +1,5 @@
+out D:\modding\proofs\20261101_pr3_loot_green
+up -Reuse -Calm -Dll D:\modding\cpp\wt\pr3\cppbuild\OutFast\NolaNative\NolaNative.dll
+assert alive A
+assert alive B
+assert peer

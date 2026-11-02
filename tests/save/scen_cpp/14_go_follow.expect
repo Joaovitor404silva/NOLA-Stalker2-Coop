@@ -1,0 +1,123 @@
+CMD role client
+CMD flag csave 1
+CMD flag n7 1
+CMD flag n7sv 1
+CMD flag n7eq 0
+CMD flag qsync 1
+CMD flag qrollback 1
+CMD flag joinport 0
+CMD flag kit 0
+CMD flag leashown 1
+CMD t 1
+CMD pawn 1000
+CMD money 500
+CMD inv A012A 30
+CMD inv A545A 2
+CMD peer up 1 1
+CMD file B/client_applied.txt #S2CA 1 c6ad219ea28b4\nW\tc6ad219ea28b4\n3\tJ,q1,n1,go,s1\n
+CMD file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav AAAAAAAAAAAAAAAAAAAAAAAA-one
+CMD file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav BBBBBBBBBBBBBBBBBBBBBBBB-two
+CMD part B 5,3,c6ad219ea28b4,0,0,3,abc
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA csave: save do cliente carregado; 3 eventos do host ja estao nele (client_applied.txt)
+LOG NOLA n7: host na sessao 1: cargas=0 saves=0 kh=3 geracao=5 pasta_de_saves=propria
+LOG NOLA n7boot: o save carregado do cliente casa com o do host (campanha c6ad219ea28b4, 3 passos, host 3)
+CMD t 3
+CMD part B 5,3,c6ad219ea28b4,0,1,3,abc
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA csave1: host salvou (#1, kh=3, campanha c6ad219ea28b4): o cliente salva agora
+CMD t 22
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+STUB forcedAutoSave
+LOG NOLA csave: XTriggerForcedAutoSave ok=true 
+CMD stamp STEAM=2:2;NULL=-
+CMD file saved/STEAM/SaveGames/Data/11111111111111111111111111111111.sav DDDDDDDDDDDDDDDDDDDDDDDDDDDD-one-saved
+CMD t 24
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+CMD t 30
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA csave: jogo do cliente salvo (arquivo de saves mudou); 3 eventos do host registrados como contidos nele
+LOG NOLA csave1: save do cliente = par do save #1 do host (kh=3, campanha c6ad219ea28b4); o cliente tinha 3 passos aplicados
+LOG NOLA n7sv: save do cliente 11111111 guarda 3 passos do host (par #1, 1 guardados) em 0,0,0
+CMD t 31
+CMD part J 4,J,q2,n2,go,s2|5,N,sid5
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+STUB quest J q2 n2 go s2 true
+LOG NOLA quest: cliente seq=4 J q2 n2 go s2 -> true 
+STUB quest N nil nil nil sid5 true
+LOG NOLA quest: cliente seq=5 N nil nil nil sid5 -> true 
+CMD nopart J
+CMD t 33
+CMD part B 5,5,c6ad219ea28b4,0,2,5,abc
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA csave1: host salvou (#2, kh=5, campanha c6ad219ea28b4): o cliente salva agora
+CMD t 34
+CMD part J 6,J,q3,n3,go,s3
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+STUB quest J q3 n3 go s3 true
+LOG NOLA quest: cliente seq=6 J q3 n3 go s3 -> true 
+STUB forcedAutoSave
+LOG NOLA csave: XTriggerForcedAutoSave ok=true 
+CMD nopart J
+CMD stamp STEAM=3:3;NULL=-
+CMD file saved/STEAM/SaveGames/Data/22222222222222222222222222222222.sav EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-two-saved
+CMD t 35
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+CMD t 41
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA csave: jogo do cliente salvo (arquivo de saves mudou); 6 eventos do host registrados como contidos nele
+LOG NOLA csave1: save do cliente = par do save #2 do host (kh=5, campanha c6ad219ea28b4); o cliente tinha 6 passos aplicados (diferente do host: o catch-up da proxima carga acerta)
+LOG NOLA n7sv: save do cliente 22222222 guarda 5 passos do host (par #2, 2 guardados) em 0,0,0
+CMD t 42
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+CMD t 45
+CMD t 51
+CMD part B 5,5,c6ad219ea28b4,1,2,5,abc
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA n7: host carregou um save (#1) sem perder passos (geracao 5): nada a seguir
+CMD t 52
+CMD go 1,alldown
+LOG NOLA n7: #GO 1 (alldown): o grupo morreu; a proxima carga do host leva este cliente ao save pareado do host
+LOG NOLA n7: morte dos dois jogadores: a proxima carga do host leva o cliente ao save pareado do host
+CMD go 1,alldown
+CMD go 1,alldown
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+CMD t 60
+CMD part B 5,5,c6ad219ea28b4,2,2,5,abc
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA n7: host carregou um save (#2) depois da morte dos dois jogadores: o cliente segue o host
+LOG NOLA n7sv: host voltou ao save com 5 passos: o save mais novo do cliente 22222222 (5 passos) ja e o pareado
+STUB loadLastSave
+LOG NOLA n7: host voltou no tempo -> retrato do cliente: 32 itens, dinheiro 500; XLoadLastSave ok=true 
+CMD t 61
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+CMD t 70
+CMD part B 5,5,c6ad219ea28b4,3,2,5,abc
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+LOG NOLA n7: host carregou um save (#3) sem perder passos (geracao 5): nada a seguir
+CMD t 80
+CMD go 2,bleed,3
+LOG NOLA n7: #GO 2 (bleed, pid 3): o grupo morreu; a proxima carga do host leva este cliente ao save pareado do host
+LOG NOLA n7: morte dos dois jogadores: a proxima carga do host leva o cliente ao save pareado do host
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado
+CMD flag n7go 0
+CMD go 3,alldown
+CMD tick
+STUB lrDrop join_park parceiro de volta / descongelado

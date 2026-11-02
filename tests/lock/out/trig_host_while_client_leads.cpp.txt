@@ -1,0 +1,16 @@
+> role host
+> flag lead 1
+> pawn 1000 442207.0 470552.0 0
+> peer c,2,1700000001,dlg,442057.0,470452.0,832.0
+> trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+L 0 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 0 NOLA lead: trig aqui SEGURADO: o outro lado lidera (dlg #2)
+L 0 NOLA lead: o host entrou no gatilho de historia ANCQ02_OnTriggerEnterEvent_Roof com o cliente liderando (o jogo do host dispara sozinho: nao bloqueavel)
+> run 100
+> role client
+> trigenter ANCQ02_OnTriggerEnterEvent_Roof 442057.0 470452.0 832.0
+> run 100
+> state
+S mine=0 peer=1 owner=host
+> leaddlg
+R leaddlg 00

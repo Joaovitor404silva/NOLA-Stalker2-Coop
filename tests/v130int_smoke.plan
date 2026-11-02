@@ -1,0 +1,13 @@
+﻿out D:\modding\proofs\20261031_v130int_smoke
+up -Reuse -Dll D:\modding\cpp\wt\v130int\cppbuild\OutFast\NolaNative\NolaNative.dll -Save C:\modding\s2harness\testsave\scanner_20261030_host
+setflag A downsecs 99999
+setflag B downsecs 99999
+setflag A bothdie 0
+setflag B bothdie 0
+setflag A bothdown 0
+setflag B bothdown 0
+assert alive A
+assert alive B
+assert peer
+wait 5
+shot v130int_scanner on=A,B cam=2.5

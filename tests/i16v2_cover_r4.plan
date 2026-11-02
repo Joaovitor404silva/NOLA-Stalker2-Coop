@@ -1,0 +1,25 @@
+# i16v2 cover r4: natmre, host resends the active montage entry to copies that missed the natmwin window. Run C:\modding\s2harness\batch2\cov5.js 60 all with FACE=300 VIS=1 inside each window; every window ends with assert alive A because a dead host pauses its world and freezes every host NPC.
+up -Reuse -Dll D:\modding\cpp\wt\i16v2\cppbuild\OutFast\NolaNative\NolaNative.dll
+run C:\modding\s2harness\batch2\cvb_spec.txt
+setflag A natmre 1
+setflag B natmre 1
+setflag A natmsec 1
+setflag B natmsec 1
+mark re1_ms1_run_cov5_60_all
+wait 70
+assert alive A
+setflag A natmsec 0
+setflag B natmsec 0
+mark re1_ms0_run_cov5_60_all
+wait 70
+assert alive A
+setflag A natmsec 1
+setflag B natmsec 1
+setflag A natmre 0
+setflag B natmre 0
+mark re0_ms1_run_cov5_60_all
+wait 70
+assert alive A
+setflag A natmre 1
+setflag B natmre 1
+mark restored

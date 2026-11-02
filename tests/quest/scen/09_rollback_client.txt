@@ -1,0 +1,30 @@
+role client
+flag qsync 1
+flag qrollback 1
+flag qrbmode 1
+pawn 100
+t 1
+part B 0,5,cabc
+run 1
+part B 1,5,cabc
+run 1
+run 3
+pawn 101
+run 14
+part B 2,0,cabc
+run 1
+pawn 102
+run 14
+loadok 0
+part B 3,4,cabc
+run 1
+loadok 1
+part B 4,4,cabc
+run 35
+part B 5,4,cabc
+run 1
+pawn 0
+run 250
+flag csave 1
+part B 6,4,cdef
+run 1

@@ -1,0 +1,27 @@
+role host
+flag dobj 1
+flag doors 0
+flag dobjgen 1
+flag dobjfast 1
+flag dobjfsec 0.15
+flag dobjfmiss 1
+flag dobjsec 1
+flag dobjfx 0
+flag meshsafe 1
+flag dobjstat 1
+level LvlA
+gate k1 1
+pawn 0 0 0
+obj P1 BP_DestructibleObject_C DestructibleObject destr 300 0 0
+mesh P1 SM_foo_potato_01_c
+time 1
+tick
+time 1.2
+tick
+remote Z 30,0,0
+time 1.4
+tick
+expect_new dobjgen: 30,0,0 -> fx=0
+time 1.8
+tick
+expect_none nao encontrado

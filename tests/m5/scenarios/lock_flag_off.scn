@@ -1,0 +1,30 @@
+role client
+flag lockbrk 0
+flag doors 1
+flag doorfix 1
+flag ien 1
+flag ienecho 10
+pawn 0 0 0
+obj PL1 BP_Padlock_Prototype_01_C InteractableObject inter 1000 0 0
+prop PL1 bEnabled 1
+prop PL1 bBroken 0
+obj D1 BP_DoorView_C DoorView door 1000 50 0
+yaw D1 10
+prop D1 bLocked 1
+time 1
+tick
+expect_none doorlock
+expect_none OUT #O
+time 2
+remote O 100,5,0;u
+remote P 100,0,0;b
+tick
+expect_none CALL D1.UnlockDoor
+expect_none OnDamageAccumulated
+expect_new CALL PL1.SetBroken(true)
+expect_new LOG NOLA ien: 100,0,0 -> SetBroken(true) ok=true broken=true
+time 3
+remote P 120,0,0;b
+tick
+expect_new LOG NOLA ien: quebrado 120,0,0 nao encontrado neste PC
+expect_status door.lock=0 door.lpend=0 ien.bpend=0

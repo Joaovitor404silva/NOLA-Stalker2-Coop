@@ -1,0 +1,15 @@
+# The host game is closed and started again on an OLDER save: a new session whose log is shorter than what the client holds
+# (core b32 or later: campaign id). Then a host of ANOTHER campaign.
+# Expect after "relaunch 29": PEER SESSION #2, then "o cliente esta 1 eventos adiante; nada reaplicado" and NO "outra campanha" line;
+# the redone step is "pulado". client_applied.txt starts with "#S2CA 1 <id>".
+# Expect after "campaign new" + "session": "client_applied.txt e da campanha <old> e o host esta na <new>: registro descartado" and
+# the whole log applied once (use this last part only on a throw-away client save: it doubles the journal steps).
+0 log sample_quest_log.txt 29
+45 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+75 say the client should have saved with that step
+1 relaunch 29
+30 quest J,E01_MQ01,E01_MQ01_PassSever,Finish,E01_MQ01_PassSever_Finish
+30 key press Enter to go on with ANOTHER campaign id (throw-away client save only), or Ctrl+C to stop here
+0 campaign new
+1 session
+60 end

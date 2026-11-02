@@ -1,0 +1,5 @@
+spec v130a_dead_back
+note B went 130 m away (beyond R*1.06 = 10070 cm) and came back. New DLL: the copy body lost far away is re-made at the host corpse (com_corpo>=1, refeitas_ao_voltar or a new copia morta). Old DLL: client.log:3384 "MORTO fica nativo ... sem copia criada" and com_corpo=0.
+mark
+expect_not B MORTO fica nativo com o loot dele .* sem copia criada during 30
+expect B NOLA natdead 10 s \(cliente\): .* com_corpo=([1-9]|\d\d+) within 40

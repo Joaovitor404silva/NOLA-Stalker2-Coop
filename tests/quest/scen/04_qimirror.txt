@@ -1,0 +1,24 @@
+role client
+flag lead 1
+flag qimirror 1
+flag qmrmhost 1
+pawn 100
+t 1
+inv ANCQ01_VadaHvorostPDA 2
+inv E07_MQ01_SachokPDA 1
+run 6
+inv ANCQ01_VadaHvorostPDA 3
+run 1
+inv ANCQ01_VadaHvorostPDA 2
+run 5
+inv ANCQ04_LokotPDA 1
+run 6
+part QI 1,ANCQ01_VadaHvorostPDA,1|2,E07_MQ01_SachokPDA,0|3,ANCQ06_VadyaPDA,2|4,NOPE,2
+run 4
+pawn 200
+inv ANCQ01_VadaHvorostPDA 0
+run 14
+role host
+flag qmrmhost 0
+part QI 9,ANCQ06_VadyaPDA,0
+run 3

@@ -1,0 +1,11 @@
+R"NOLAINV(id	role	fam	where	per	max	grace	detail
+one_puppet_per_peer	all	npc	nolak=puppet,alive=1,hidden=0	-	views	10	key,view,x,y,maxhp
+one_target_per_peer	all	npc	nolak=target,alive=1	-	views	10	key,view,hidden,maxhp
+target_visible	all	npc	nolak=target,alive=1,hidden=0	-	0	5	key,view,x,y,maxhp
+orphan_nola_body	all	npc	nola=1,tracked=0,hidden=0	-	0	10	key,nolak,cls,pid,x,y,maxhp
+far_visible_off	all	body	kind=far,valid=1,on=0,hidden=0	-	0	5	key,x,y
+unpaired_visible_npc	client	npc	natnpc=1,player=0,nola=0,alive=1,hidden=0,paired=0,twin=0,inert=0,own=0,vend=0,hk=0,dist<5000	-	0	15	key,cls,uid,x,y,dist,ai,rendered,coll,hutab
+dup_visible_npc	all	npc	dupkey=1,hidden=0,alive=1	-	0	5	key,cls,uid,x,y
+dup_visible_corpse	all	npc	dupkey=1,hidden=0,alive=0	-	0	10	key,cls,uid,x,y,loot
+loot_autoclose	all	ev	ev=lootclose,why=taken_deny	-	0	0	k,why,age
+)NOLAINV"

@@ -1,0 +1,8 @@
+# r30 A41 (core b33): the host is 500 m away (4 snapshots at 500 m) and goes silent; it comes back 3 m from the client.
+# Expect: PEER SILENT after 5 s, "join: parceiro ausente: coleira parada", NO "COLEIRA FORA", client position unchanged; host back: "coleira em 350 m", no teleport.
+0 pos near 300
+10 say host near and up
+0 pos near 50000
+0.4 silence 40
+0 pos near 300
+25 end

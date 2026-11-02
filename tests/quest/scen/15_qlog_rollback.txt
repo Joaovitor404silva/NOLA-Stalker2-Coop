@@ -1,0 +1,26 @@
+role host
+flag qsync 1
+flag qrollback 1
+pawn 1
+t 1
+file quest_log.txt 10.0\tJ,A,-,Start,-\n500.0\tJ,B,-,Start,-\n900.5\tG,V,Set,true,N1\nbad line\n1000.0\tN,X\n
+file quest_log.id cabc12\n
+file quest_log.gen 7\n
+gs 100
+run 4
+peer up 1 0
+run 1
+gs 101
+run 4
+gs 102
+run 6
+gs 103
+run 5
+gs 104
+run 5
+gs 105
+run 5
+s2q J C - Start CN
+pawn 2
+gs 50
+run 14

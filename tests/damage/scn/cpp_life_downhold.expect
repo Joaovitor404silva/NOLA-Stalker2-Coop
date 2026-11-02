@@ -1,0 +1,316 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 30.5 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (de pe) r=1
+LOG NOLA LIFE: levantando (de pe): animacao de levantar do jogo (KnockDown Out)
+CALL knock 0
+LOG NOLA LIFE: camera de volta (de pe): estado KnockDown desligado r=1
+LOG NOLA LIFE: levantou: animacao do jogo terminou depois de 1.1 s (resto 0.03 s)
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #2 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 31.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (de pe) r=1
+LOG NOLA LIFE: levantando (de pe): animacao de levantar do jogo (KnockDown Out)
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #3 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 0
+LOG NOLA LIFE: camera de volta (caiu de novo): estado KnockDown desligado r=1
+LOG NOLA LIFE: levantou: animacao do jogo terminou depois de 0.2 s (resto -1.00 s)
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 30.8 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (de pe) r=1
+LOG NOLA LIFE: levantando (de pe): animacao de levantar do jogo (KnockDown Out)
+CALL knock 0
+LOG NOLA LIFE: camera de volta (de pe): estado KnockDown desligado r=1
+LOG NOLA LIFE: levantou: animacao do jogo terminou depois de 4.5 s (resto -1.00 s)
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #4 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+LOG NOLA LIFE: MORRI (morreu caido, hp 15.0): morte #1 mandada ao outro jogador; ele morre junto e os dois recomecam do ultimo save do host
+CALL die_follow
+LOG NOLA LIFE: MORREU ENQUANTO CAIDO (hp=15.0 alive=false, caido ha 1.0 s, ultimo sangramento=0.0)
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (morte) ok=true
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (morte): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (morte) r=1
+CALL knock 0
+LOG NOLA LIFE: camera de volta (morte): estado KnockDown desligado r=1
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #5 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (sem pawn) ok=true
+LOG NOLA LIFE: armas liberadas (sem pawn, carga): efeito Nola_DownedBlock sai com o pawn, sem chamar o console (o proximo pawn o retira por garantia)
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (sem pawn) r=1
+LOG NOLA LIFE: camera de volta (sem pawn): estado KnockDown desligado r=0
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #6 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (sem o outro jogador na sessao): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (sem o outro jogador na sessao) r=1
+CALL knock 0
+LOG NOLA LIFE: camera de volta (sem o outro jogador na sessao): estado KnockDown desligado r=1
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me ForceSetHP 15
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (flag downhold desligada) r=1
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 35.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL knock 0
+LOG NOLA LIFE: camera de volta (de pe): estado KnockDown desligado r=1
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #7 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (flag desligada) r=1
+CALL knock 0
+LOG NOLA LIFE: camera de volta (flag desligada): estado KnockDown desligado r=1
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 32.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #8 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me.cm SetMovementMode 1 0
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (lifeguard desligado) ok=true
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (lifeguard desligado): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (lifeguard desligado) r=1
+CALL knock 0
+LOG NOLA LIFE: camera de volta (lifeguard desligado): estado KnockDown desligado r=1
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #9 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: nao
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 31.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL knock 0
+LOG NOLA LIFE: camera de volta (de pe): estado KnockDown desligado r=1
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #10 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (DLL descarregada) r=1
+CALL knock 0
+LOG NOLA LIFE: camera de volta (DLL descarregada): estado KnockDown desligado r=1
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (DLL descarregada): efeito Nola_DownedBlock retirado ok=true
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me ForceSetHP 30
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (tempo) depois de 32.0 s, hp=30
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (de pe) r=1
+LOG NOLA LIFE: levantando (de pe): animacao de levantar do jogo (KnockDown Out)
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #11 (hp 10.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 0
+LOG NOLA LIFE: camera de volta (caiu de novo): estado KnockDown desligado r=1
+LOG NOLA LIFE: levantou: animacao do jogo terminou depois de 1.0 s (resto -1.00 s)
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (DLL descarregada) r=1
+LOG NOLA LIFE: DLL descarregada fora da thread do jogo: regra de levantar restaurada, camera, maos e efeito de vida baixa ficam ate o proximo pawn
+LOG NOLA LIFE: DLL descarregada fora da thread do jogo: os efeitos de bloqueio ficam ate a DLL carregar de novo (retirados por garantia no primeiro tick)
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+CALL knock 1
+CALL kdhold 1
+LOG NOLA LIFE: caido: camera no chao (estado KnockDown do jogo ligado, sem a acao de 10 s); fica deitado ate levantar: sim
+CALL me ForceSetHP 15
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (tempo esgotado) ok=true
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: ninguem veio em 33.0 s: SANGROU ATE MORRER (ReceiveDamageStruct ok=true hp 15.0 -> 0.0 alive=false, tentativa 1)
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (morte): efeito Nola_DownedBlock retirado ok=true
+CALL kdhold 0
+LOG NOLA LIFE: regra de levantar do jogo de volta (morte) r=1
+CALL knock 0
+LOG NOLA LIFE: camera de volta (morte): estado KnockDown desligado r=1
+LOG NOLA LIFE: MORRI (sangrou ate morrer, hp 0.0): morte #2 mandada ao outro jogador; ele morre junto e os dois recomecam do ultimo save do host
+CALL die_follow
+LOG NOLA LIFE: MORREU ENQUANTO CAIDO (hp=0.0 alive=false, caido ha 34.0 s, ultimo sangramento=0.0)
+OUT me hp=0.0 alive=false

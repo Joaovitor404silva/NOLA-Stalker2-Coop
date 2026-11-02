@@ -1,0 +1,34 @@
+nodes 4
+@all flag ground 1
+@all flag taken 1
+@all flag locks 1
+@all flag loot 1
+@all flag itake 1
+@all flag mcitems 1
+@all flag mcgclaim 1
+@all me 5000 100 0
+@all item it1 BP_ItemContainer_C 5200 300 10
+@all item it2 BP_ItemContainer_C 7000 300 10
+run 0.5
+@c2 open it1
+@c1 open it1
+run 0.5
+mark claim
+@all mcout
+@c1 pick it1
+@c1 open -
+run 1
+mark c1-took
+@all hidden it1
+@c2 pick it1
+@c2 open -
+run 1
+mark c2-dup
+@h status
+@c2 open it2
+run 0.5
+@h mcout
+@c2 open -
+run 3
+@h mcout
+@c3 hidden it2

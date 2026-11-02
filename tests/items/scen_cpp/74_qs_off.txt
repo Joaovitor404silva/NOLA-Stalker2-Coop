@@ -1,0 +1,65 @@
+# qshare=0: nothing is claimed or created
+nodes 2
+@all flag locks 1
+@all flag taken 1
+@all flag loot 1
+@all flag qshare 0
+@all flag ground 0
+@all flag ptake 1
+@all flag takenown 1
+@all flag lootshare 1
+@all flag lscont 1
+@all file s2u_cont.tsv AB12\tx\tx\t5200\t300\t10
+@all file s2u_contk.tsv AB12\t5200\t300\t10\tx\tA012A,Bandage
+@all me 5000 100 0
+@all cont BP_Box_C 1 5200 300 10
+@all ainv BP_Box_C_1 EchoE01 1
+@all ainv BP_Box_C_1 ANCQ01_VadaHvorostPDA 2
+@all ainv BP_Box_C_1 A012A 5
+run 1
+@c1 open BP_Box_C_1
+@c1 vis 1
+run 0.5
+@c1 take BP_Box_C_1 ANCQ01_VadaHvorostPDA 2
+@c1 take BP_Box_C_1 EchoE01 1
+@c1 take BP_Box_C_1 A012A 3
+run 1
+mark c1-took
+@c1 vis 0
+@c1 open -
+run 3
+mark granted
+@h myqi
+@c1 myqi
+@h inv BP_Box_C_1
+@h open BP_Box_C_1
+@h vis 1
+run 1
+mark host-opens-source
+@h inv BP_Box_C_1
+@h myqi
+@h vis 0
+@h open -
+run 2
+mark c1-rejoin
+restart c1
+run 15
+@c1 myqi
+@h myqi
+mark host-reload
+restart h
+run 15
+@h myqi
+@c1 myqi
+mark quest-used-it
+@h myinv EchoE01 0
+run 2
+restart h
+run 15
+@h myqi
+mark c1-level-change
+@c1 newpawn
+run 12
+@c1 myqi
+@h myqi
+x1 h

@@ -1,0 +1,22 @@
+# divergence reported by two of three clients: only those roll back
+role host
+flag lead 1
+flag qsync 1
+pawn 1
+t 100
+views 3
+vpeer 0 up 1
+vpeer 1 up 1
+vpeer 2 up 1
+s2q J SQA - Start SQA_Node1
+run 2
+vpart 0 QD c,-,0;S2QDIVTEST_R1:40|S2QDIVTEST_C2:40
+vpart 1 QD c,-,0;
+vpart 2 QD c,-,0;S2QDIVTEST_C2:41
+vrun 2
+vpart 1 QD c,-,0;S2QDIVTEST_C2:45
+vrun 1
+vnopart 0 QD
+vnopart 1 QD
+vnopart 2 QD
+vrun 1

@@ -1,0 +1,27 @@
+role host
+pawn 1
+t 5
+pos 0 0 0
+part QN c,1,ANCQ01_OnTriggerEnterEvent_Roof|h,2,ANCQ02_X|c,3,ANCQ02_OnTriggerEnterEvent_Trigger1|junk
+run 2
+part QN c,4,ANCQ01_OnTriggerEnterEvent_Roof
+run 1
+aa 0
+part QN c,5,SQ_FOO_1
+run 1
+aa 1
+deny 1
+part QN c,6,SQ_FOO_2
+run 1
+deny 0
+flag lead 1
+pos 430490 520620 1570
+run 2
+part QN c,7,ANCQ01_OnTriggerEnterEvent_Roof
+run 1
+t 100
+part QN c,8,ANCQ02_OnTriggerEnterEvent_Roof2
+run 1
+pos 410400 516600 602
+part QN c,9,ANCQ02_OnTriggerEnterEvent_Trigger1
+run 2

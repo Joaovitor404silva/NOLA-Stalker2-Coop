@@ -1,0 +1,172 @@
+role client
+flag revwait 0
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 1
+flag bothdie 1
+me 100 1 0 0 0
+set me uid 0
+x1 RV 0,0
+x1 L a,100,100
+remote 200 0 0 0
+t 0
+do lifeGuard
+do revive
+keyf
+do revive
+x1 L w,15,100
+t 1
+do lifeGuard
+do revive
+remote 200 0 0 2
+t 2
+keyf
+do lifeGuard
+do revive
+do rvStr
+inv Medkit 2
+remote 500 0 0 3
+t 3
+keyf
+do revive
+do rvStr
+remote 200 0 0 4
+t 4
+keyf
+do revive
+do rvStr
+invq Medkit
+remote 200 0 0 4.5
+t 4.5
+keydown 1
+do revive
+keydown 0
+do rvStr
+invq Medkit
+x1 L a,100,100
+t 6
+do revive
+inv Medkit 0
+inv EcoMedkit 1
+x1 L w,15,100
+remote 150 0 0 20
+t 20
+keydown 1
+do revive
+keydown 0
+do rvStr
+invq EcoMedkit
+inv ArmyMedkit 1
+takeok 0
+remote 150 0 0 30
+t 30
+keyf
+do revive
+do rvStr
+takeok 1
+x1 L a,100,100
+t 31
+do revive
+role host
+x1 RV 0,0
+set me hp 10
+remote 100 0 0 40
+t 40
+do lifeGuard
+do revive
+keyf
+do revive
+x1 RV 1,0
+remote 100 0 0 41
+t 41
+do lifeGuard
+hp me
+godq
+x1 RV 1,0
+set me hp 10
+t 50
+do lifeGuard
+x1 RV 2,0
+remote 2000 0 0 51
+t 51
+do lifeGuard
+hp me
+godq
+x1 RV 3,0
+remote 250 0 0 52
+t 52
+do lifeGuard
+hp me
+godq
+x1 RV 4,0
+t 60
+do lifeGuard
+hp me
+role client
+flag lifeguard 1
+set me hp 100
+x1 L w,15,100
+x1 RV 4,0
+t 70
+do lifeGuard
+x1 RV 4,1
+t 71
+do lifeGuard
+hp me
+t 71.1
+do lifeGuard
+hp me
+newpawn
+set me alive 1
+set me hp 100
+x1 RV 4,1
+t 80
+do lifeGuard
+othergod 1
+x1 RV 4,2
+t 81
+do lifeGuard
+t 82
+do lifeGuard
+hp me
+othergod 0
+t 83
+do lifeGuard
+t 83.1
+do lifeGuard
+hp me
+newpawn
+set me alive 1
+set me hp 10
+x1 RV 4,2
+t 90
+do lifeGuard
+godq
+x1 RV 4,3
+t 91
+do lifeGuard
+t 91.1
+do lifeGuard
+hp me
+godq
+newpawn
+set me alive 1
+set me hp 100
+flag bothdie 0
+x1 RV 4,3
+t 100
+do lifeGuard
+x1 RV 4,4
+t 101
+do lifeGuard
+hp me
+x1 RV 0,0
+t 102
+do lifeGuard
+x1 RV 1,1
+flag bothdie 1
+t 103
+do lifeGuard
+hp me

@@ -1,0 +1,17 @@
+# qimirror and qpick from client 2 on a hub: per-pid seen key, forwarded to the others
+role host
+flag qimirror 1
+flag lead 1
+flag qpick 1
+pawn 1
+t 5
+views 2
+vpeer 0 up 1
+vpeer 1 up 1
+run 3
+vpart 0 QI 1,ANCQ01_VadaHvorostPDA,1
+vpart 1 QI 1,ANCQ01_VadaHvorostPDA,1
+run 2
+vpart 0 QP 1,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt,1
+vpart 1 QP 1,ANCQ03_SetDialog_ANCQ03_Comment_AboutMoneyAlt,1
+run 2

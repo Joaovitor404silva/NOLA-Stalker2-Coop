@@ -1,0 +1,16 @@
+# a host-only mission (muted on the client) is not a graph divergence: qdiv stays in-sync and says so once
+role client
+pawn 7
+t 100
+peer up 1
+tick1k
+muted E01_MQ01
+t 125
+part QF 1;93c3b084:0
+tick1k
+t 150
+part QF 1;93c3b084:25
+tick1k
+t 180
+part QF 1;93c3b084:55
+tick1k

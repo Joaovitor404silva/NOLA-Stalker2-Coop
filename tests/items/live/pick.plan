@@ -1,0 +1,6 @@
+assert peer
+s2dev B call pawn K2_TeleportTo 365850,594356,596 0,0,0
+wait 2
+aim 365903,594356,507 -Wait 2
+use interact
+wait 14

@@ -1,0 +1,17 @@
+out D:\modding\proofs\20261030_v130f_village
+setflag A downsecs 99999
+setflag A bothdie 0
+setflag A bothdown 0
+setflag B downsecs 99999
+setflag B bothdie 0
+setflag B bothdown 0
+setflag A corpsemc 1
+setflag A alifemc 1
+assert alive A
+assert alive B
+assert peer
+settime A 12
+settime B 12
+mark v130f_apart
+run D:\modding\cpp\wt\v130f\tests\v130f_village_spec.txt
+shot v130f_village on=A,B cam=2.5

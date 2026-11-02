@@ -1,0 +1,40 @@
+role host
+views 2 3 1 0
+me 100 1 0 0 0
+set me uid 1001
+vpeer 0 up - c1 1
+vpeer 1 up - c2 1
+vremote 0 0 0 0 0 1
+vremote 1 0 0 0 0 2
+npc a Human 1000 0 0 100 1
+npc t0 Human 400 0 0 5000 1
+npc t1 Human 600 0 0 5000 1
+npc p1 Human 800 0 0 5000 1
+set a uid 2001
+set t0 uid 3001
+set t1 uid 3002
+tgt t0
+vtgt 1 t1
+vpup 1 p1
+t 0
+vshot 0 1;0;0;0;1;0;0;25.00;0.50;2000;3000;0.400;1.00
+vshot 1 1;0;0;0;1;0;0;25.00;0.50;2000;3000;0.400;1.00
+vshot 1 1;0;0;0;1;0;0;25.00;0.50;2000;3000;0.400;1.00
+hp a
+hp t1
+hp p1
+vpeer 1 up - c2 2
+vshot 1 1;0;0;0;1;0;0;25.00;0.50;2000;3000;0.400;1.00
+hp a
+dev 1 10 0
+vdev 1 1 7.5 0
+vdev 1 2 2.5 0
+do dmgStr
+do dvStr 0
+do dvStr 1
+do statusStr
+do remoteDownV 1
+vx1 1 L w,15,100
+do remoteDownV 1
+do ndSendV 1
+do ndSendV 0

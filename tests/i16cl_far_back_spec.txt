@@ -1,0 +1,11 @@
+spec i16cl_far_back
+note i16cl phase 3 (plan i16cl_far2, run right after i16cl_far1 on the same pair with the dog corpse still there). The spec itself brings B back next to the host (tp B near A 450, inside natfardead 4500), so the anchor sits before the trigger. Within 30 s the client makes the dog copy again (CRIADA), kills it at the host corpse (morreu no host -> copia morta), refeitas_ao_voltar goes to 1, the host still lists the corpse row with corpo_mais_velho >= 40 s, no desiste, no new loss while B stays near. Old DLL: no CRIADA (the host dropped the row 30 s after death through the mc drop rule, B logged fica como corpo and erased the pairing; or the dead row had a body once and natfd refused).
+mark
+tp B near A 450
+expect B NOLA natnpc: copia de host uid=\d+ \(_\d+\) CRIADA \(spawn\): BP_AI_Blinddog_C_\d+ uid_local=\d+ within 30
+expect B NOLA natnpc: host uid=\d+ \(_\d+\) morreu no host -> copia morta within 40
+expect B natfar=1 raio_morto=4500 fora_do_raio=\d+ perdas_longe=[1-9]\d* refeitas_ao_voltar=[1-9]\d* within 20
+expect A i16cl natfar=1 corpos_listados=[1-9]\d* corpo_mais_velho=(4\d|[5-9]\d|\d{3,}) s within 20
+expect_not B desiste desta uid during 30
+expect_not B fica como corpo \(host parou de mandar during 30
+expect_not B corpo da copia perdido during 30

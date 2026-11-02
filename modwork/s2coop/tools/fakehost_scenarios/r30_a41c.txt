@@ -1,0 +1,9 @@
+# r30 A41 (core b33), the real case: the client is frozen by a host cinematic (so the leash cannot fire), the host is 500 m away, then goes silent.
+# Expect: cine freeze, PEER SILENT after 5 s (freeze released), "join: parceiro ausente: coleira parada", NO "COLEIRA FORA", client position unchanged for the 40 s; host back 3 m away: "coleira em 350 m", no teleport.
+0 pos near 300
+8 cine on
+1 pos near 50000
+3 silence 40
+0 pos near 300
+0 cine off
+15 end

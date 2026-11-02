@@ -1,0 +1,4 @@
+0 campaign fhcfix01
+0 pos 404157 547905 615
+0 log sample_quest_log.txt
+100 end

@@ -1,0 +1,46 @@
+INTER BP_AI_Human_C_8 DeadBody=0 NPCComponent=1 DeadBodyHoldComponent=1
+STUB inter BP_AI_Human_C_8 0
+STUB natown BP_AI_Human_C_8 1
+LOG NOLA persist: 0 itens de slot em s2u_equip.tsv, kit base vestido: 0
+LOG NOLA cloot: s2u_equip.tsv ausente ou vazio: pentes das armas nao previstos (clammo so acerta a municao solta)
+LOG NOLA cloot: BP_AI_Human_C_7: o corpo nativo BP_AI_Human_C_8 (uid=801) vira o corpo de saque, sem corpo extra (clnat): tirados=0 criados=0 lista=EcoMedkit*1
+STUB inter BP_AI_Human_C_8 0
+STUB inter BP_AI_Human_C_8 0
+LOG NOLA cloot: corpo nativo de BP_AI_Human_C_7 pronto (BP_AI_Human_C_8) lista=EcoMedkit*1
+STUB inter BP_AI_Human_C_8 1
+STUB inter BP_AI_Human_C_8 1
+STUB inter BP_AI_Human_C_8 1
+MARK t=live
+INTER BP_AI_Human_C_8 DeadBody=0 NPCComponent=1 DeadBodyHoldComponent=1
+PRESS BP_AI_Human_C_8 search
+STUB inter BP_AI_Human_C_8 0
+STUB create NegodaPDA 801 1
+LOG NOLA cloot: corpo nativo de BP_AI_Human_C_7 acompanha a lista nova do host: tirados=0 criados=1 lista=EcoMedkit*1.NegodaPDA*1
+STUB inter BP_AI_Human_C_8 0
+STUB inter BP_AI_Human_C_8 0
+LOG NOLA cloot: corpo nativo de BP_AI_Human_C_7 pronto (BP_AI_Human_C_8) lista=EcoMedkit*1.NegodaPDA*1
+STUB inter BP_AI_Human_C_8 1
+STUB inter BP_AI_Human_C_8 1
+LOG NOLA cloot 10 s (client): entradas=1 corpos=1 pedidos=0 prontos=2 largados=0 falhas=0 retiradas=0 aceitas=0 recusadas=0 recontagens=0 negados=0 copias=0 inertes=0 ms=0.0 nativos=1 tirados=0 tirados_host=0 sumidos=0 guardados=1 removidos_host=0 gc=2 keep=1
+MARK t=quest-item-listed
+INV BP_AI_Human_C_8 EcoMedkit*1 NegodaPDA*1
+INTER BP_AI_Human_C_8 DeadBody=0 NPCComponent=1 DeadBodyHoldComponent=1
+PRESS BP_AI_Human_C_8 search
+STUB inter BP_AI_Human_C_8 1
+MARK t=dragging
+INTER BP_AI_Human_C_8 DeadBody=1 NPCComponent=1 DeadBodyHoldComponent=1
+PRESS BP_AI_Human_C_8 drag
+STUB inter BP_AI_Human_C_8 1
+MARK t=dropped
+INTER BP_AI_Human_C_8 DeadBody=0 NPCComponent=1 DeadBodyHoldComponent=1
+PRESS BP_AI_Human_C_8 search
+STUB inter BP_AI_Human_C_8 0
+STUB remove EcoMedkit BP_AI_Human_C_8 1
+STUB remove NegodaPDA BP_AI_Human_C_8 1
+LOG NOLA cloot: corpo nativo de BP_AI_Human_C_7 esvaziado como no host: fica no mundo sem interacao
+STUB inter BP_AI_Human_C_8 0
+STUB inter BP_AI_Human_C_8 0
+MARK t=emptied
+INTER BP_AI_Human_C_8 DeadBody=0 NPCComponent=0 DeadBodyHoldComponent=0
+PRESS BP_AI_Human_C_8 none
+STATUS items role=client taken=0 mine=0 run=0 itSent=0 itApplied=0 lock=- denies=0 grants=0 ledger=0 canon=0 cb=0 art2=0 invGuard=0 qitem_eff=0 clammo_eff=0 tkcid=- cl: K=0 R=1 B=1 T=0 pend=-

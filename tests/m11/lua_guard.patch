@@ -1,0 +1,33 @@
+FILE s2core.lua (md5 0b56e1b5), each anchor occurs once, keep CRLF
+
+1. S2L.noPause first line
+-    if (FL.nopause or 0) ~= 1 then return end
++    if (FL.nopause or 0) ~= 1 or (rawget(_G, "s2n_port") and s2n_port("session")) then return end
+
+2. peerTick, wxTick, slTick, emTick: the tick100 list entry
+-{"peerTick", peerTick}, {"cineTick", cineTick}, {"joinTick", joinTick}, {"wxTick", wxTick},
++{"peerTick", peerTick}, {"cineTick", cineTick}, {"joinTick", joinTick}, {"wxTick", wxTick},
+(no change in the list: each function starts with the guard below)
+   local function wxTick(ST)       first line add: if rawget(_G, "s2n_port") and s2n_port("session") then return end
+   local function slTick(ST)       first line add: same
+   local function emTick(ST)       first line add: same
+   local function peerTick(ST)     first line add: same
+
+3. S2L.slStep first line, S2L.hcTick first line
+   first line add: if rawget(_G, "s2n_port") and s2n_port("session") then return end
+
+4. x1 producers (the C++ side owns the tags H, E, SL, SB, HC while ported)
+   helloStr(ST)   first line add: if rawget(_G, "s2n_port") and s2n_port("session") then return "" end
+   S2L.emOut(ST)  first line add: same with return ""
+   S2L.slOut(ST)  first line add: same with return ""
+   S2L.hcOut(ST)  first line add: same with return ""
+
+FILE main.lua (md5 76717baf)
+
+5. snapshot sync block (synctime and syncweather), the line
+-                    if FL.synctime == 1 and (ROLE == "client" or FL.synctimetest == 1) then fastTime() end
++                    if rawget(_G, "s2n_port") and s2n_port("session") then FL_sync_skip = true end
+   and both conditions "if FL.synctime == 1 and" / "if FL.syncweather == 1 and" get "not FL_sync_skip and" in front
+   (FL_sync_skip is a plain global: main.lua is at the local limit)
+
+6. writeState: the "pcall(readGameTime)" line and the settime block stay (S2_gtod S2_wtod S2_wx feed out.json until X0 owns the head fields)

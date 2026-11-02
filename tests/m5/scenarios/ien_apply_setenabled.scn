@@ -1,0 +1,18 @@
+role client
+flag ien 1
+flag ientoggle 0
+flag keyfix 1
+pawn 0 0 0
+obj LV2 BP_Lever_Horizontal_C InteractableObject inter 1500 100 0
+prop LV2 bEnabled 0
+obj LV5 BP_Thing_C InteractableObject inter 2000 0 0
+time 1
+tick
+time 2
+remote P 150,10,1;1|200,0,0;1
+tick
+time 3
+tick
+time 4
+remote P 150,10,1;0
+tick

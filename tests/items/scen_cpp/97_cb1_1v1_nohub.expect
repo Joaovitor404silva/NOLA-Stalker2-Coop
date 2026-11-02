@@ -1,0 +1,16 @@
+LOG NOLA cbusy: class BP_Box_C is a container
+STUB inter BP_Box_C_1 0
+LOG NOLA cbusy: BP_Box_C@520,30,1 in use by pid -1: BP_Box_C_1 interaction off here (1 components)
+LOG NOLA TAKEN: 0 chaves lidas de taken.txt
+LOG NOLA lootshare: 0 corpos (DeadBody) em s2u_cont.tsv
+STUB no prompt on BP_Box_C_1: cannot open
+MARK t=client-holds
+STUB inter BP_Box_C_1 1
+LOG NOLA cbusy: BP_Box_C@520,30,1 free again (released by the host): interaction back on 1 components
+STUB window open BP_Box_C_1
+LOG NOLA LOCK_REQ BP_Box_C@520,30,1
+LOG NOLA LOCK_GRANT BP_Box_C@520,30,1
+LOG NOLA itake: 0 recipientes em s2u_cont.tsv
+LOG NOLA ptake: recipiente 60E63E8B813B51B0 aberto; inventario anotado
+LOG NOLA lscont: 0 recipientes em s2u_contk.tsv (arquivo ausente ou vazio: tento de novo em 30 s)
+MARK t=host-opens
