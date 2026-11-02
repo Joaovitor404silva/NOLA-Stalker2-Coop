@@ -11,7 +11,7 @@
 1. Close the game. Run the NOLA installer on every PC (it asks for administrator rights). Choose Steam friends or IP address.
 2. Start the game. The main menu now has **Host co-op** and **Join co-op**.
 3. The host picks Host co-op and then loads a world (Continue, Load or New Game).
-4. The others pick Join co-op. With Steam, the host presses the Home key in the world to open the invite window. With IP, the joiner connects to the address chosen at install.
+4. The others pick Join co-op. With Steam, the host presses the Home key in the world to open the invite window. With IP, the joiner tries every host address typed at install until one answers.
 5. To play solo, ignore both entries.
 
 The installer keeps a backup of every file it replaces. Running it again lets you uninstall and puts everything back. It never touches your saves. The download contains full install notes.

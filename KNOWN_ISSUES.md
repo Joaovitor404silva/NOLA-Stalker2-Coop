@@ -2,7 +2,7 @@
 
 [← Back to the overview](README.md)
 
-- **Game patch:** v1.3.0 needs the STALKER 2 patch Update 2.1 (Steam build 26123434). On older game builds use v1.2.0; on newer builds the co-op entries may be missing until NOLA is updated.
+- **Game patch:** v1.3.1 needs the STALKER 2 patch Update 2.1 (Steam build 26123434). On older game builds use v1.2.0; on newer builds the co-op entries may be missing until NOLA is updated.
 
 - **Items a joiner picked up after the host's last save** come back as fresh items without their upgrades when the host reloads.
 - **Weapon upgrades** carry over when items are put into a box or dropped (v1.1). A joiner's money and items are kept on rejoin (v1.3.0), but upgrades have not been verified after a join or reload.
