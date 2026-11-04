@@ -6,6 +6,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 PORT = os.path.normpath(os.path.join(ROOT, ".."))
 OUT = os.path.join(PORT, "data", "s2u_lockbrk.tsv")
 HARMFUL = {"BP_Trap_Grenade_C", "BP_Trap_Shotgun_C"}
+WIRE_DEFUSE = "BndEvt__BP_trap_wire_SignalReceiver_Deactivation_K2Node_ComponentBoundEvent_4_SignalReceiverComponentReceiveSignature__DelegateSignature"
+FN_OVERRIDE = {"BP_Wire_C": WIRE_DEFUSE}
 
 
 def strip(s):
@@ -52,7 +54,7 @@ def rows(sup, bind):
         ch = chain(sup, c)
         if any(x in HARMFUL for x in ch):
             continue
-        fn = next((b.get("FunctionNameToBind", "") for k in ch for b in bind.get(k, []) if b.get("DelegatePropertyName") == "OnDamageAccumulated"), "")
+        fn = FN_OVERRIDE.get(c) or next((b.get("FunctionNameToBind", "") for k in ch for b in bind.get(k, []) if b.get("DelegatePropertyName") == "OnDamageAccumulated"), "")
         if fn:
             out.append((c, "brk", fn))
     return out

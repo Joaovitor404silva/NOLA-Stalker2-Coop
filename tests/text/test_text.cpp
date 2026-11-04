@@ -83,6 +83,20 @@ int main()
           "get: menu_host in the three languages");
     check(std::string(kRows[static_cast<size_t>(T::qb_host_only)].id) == "qb_host_only", "enum value indexes its own row");
 
+    {
+        struct RV { T id; const char* name; int holes; };
+        const RV rv[] = {{T::rev_down_item_die, "rev_down_item_die", 1}, {T::rev_down_item_up, "rev_down_item_up", 1}, {T::rev_down_prox_die, "rev_down_prox_die", 2},
+                         {T::rev_down_prox_up, "rev_down_prox_up", 2}, {T::rev_prompt, "rev_prompt", 1}, {T::rev_nomedkit, "rev_nomedkit", 1}, {T::rev_sent, "rev_sent", 1},
+                         {T::rev_done, "rev_done", 1}, {T::rev_partner, "rev_partner", 0}};
+        for (const RV& v : rv)
+        {
+            const Row& r = kRows[static_cast<size_t>(v.id)];
+            bool ok = std::string(r.id) == v.name;
+            for (int l = 0; l < 3; ++l) ok = ok && r.t[l][0] && (int)holes(r.t[l]).size() == v.holes;
+            check(ok, std::string("revive text ") + v.name + " in en/pt/es with " + std::to_string(v.holes) + " placeholder(s)");
+        }
+    }
+
     struct C { const char* l; Lang want; };
     const C cases[] = {{"pt-BR", Lang::pt}, {"pt-PT", Lang::pt}, {"pt", Lang::pt}, {"PT-br", Lang::pt}, {"en", Lang::en}, {"en-US", Lang::en}, {"en-GB", Lang::en}, {"ru", Lang::en},
                        {"de", Lang::en}, {"fr", Lang::en}, {"uk", Lang::en}, {"zh-Hans", Lang::en}, {"", Lang::en}, {"p", Lang::en}, {"e", Lang::en}, {"es", Lang::es}, {"es-ES", Lang::es},

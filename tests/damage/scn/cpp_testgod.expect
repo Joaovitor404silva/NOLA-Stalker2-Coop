@@ -1,0 +1,41 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me RD dmg=30.00 bone=None
+LOG NOLA dmgin: seq=1 pedido=30.0 aplicado=30.0 hp 100.0 -> 70.0 ok=true 
+OUT me hp=70.0 alive=true
+CALL build XSetEntityUnkillableByUID 7 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA testgod: LIGADO uid=7: Unkillable + hp de volta ao maximo a cada tick, dano roteado e queda ignorados
+CALL me ForceSetHP 100
+LOG NOLA testgod: hp 70.0 -> 100.0 (recarga #1)
+OUT me hp=100.0 alive=true
+OUT god_held=true bit=true
+CALL me ForceSetHP 100
+LOG NOLA testgod: hp 5.0 -> 100.0 (recarga #2)
+OUT me hp=100.0 alive=true
+OUT #L:a,100,100
+LOG NOLA testgod: dano roteado seq=2 (40.0) ignorado (#1)
+OUT me hp=100.0 alive=true
+CALL me ForceSetHP 100
+LOG NOLA testgod: hp 0.0 -> 100.0 (recarga #3)
+OUT me hp=100.0 alive=true
+CALL me ForceSetHP 100
+LOG NOLA testgod: hp 5.0 -> 100.0 (recarga #4)
+OUT me hp=100.0 alive=true
+OUT #L:a,100,100
+CALL build XSetEntityUnkillableByUID 7 false
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+LOG NOLA testgod: DESLIGADO uid=7 (testgod 0) ok=true; 4 recargas, 1 danos roteados ignorados
+OUT god_held=false bit=false
+OUT me hp=50.0 alive=true
+CALL me RD dmg=20.00 bone=None
+LOG NOLA dmgin: seq=3 pedido=20.0 aplicado=20.0 hp 50.0 -> 30.0 ok=true 
+OUT me hp=30.0 alive=true
+CALL me ForceSetHP 15
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 5.0 <= 15); levanta em 30 s ou com o outro jogador a 300 cm por 3 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT me hp=15.0 alive=true

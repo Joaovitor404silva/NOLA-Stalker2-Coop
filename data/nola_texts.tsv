@@ -69,3 +69,12 @@ ls_wait_join	Joining the host… (%.0f s)	Indo até o host… (%.0f s)	Reuniénd
 ls_gone	The host stopped answering: back to the main menu	O host parou de responder: voltando ao menu principal	El anfitrión dejó de responder: volviendo al menú principal
 say_leave_save	Saving your character before you leave…	Salvando seu personagem antes de sair…	Guardando tu personaje antes de salir…
 qhostonly_block	Only the host can do mission objectives	So o anfitriao pode fazer objetivos de missao	Solo el anfitrion puede hacer objetivos de mision
+rev_down_item_die	You are down! A partner can revive you with F + a medkit. You die in %.0f s	Você caiu! Um parceiro pode te reanimar com F + um medkit. Você morre em %.0f s	¡Has caído! Un compañero puede reanimarte con F + un botiquín. Mueres en %.0f s
+rev_down_item_up	You are down! A partner can revive you with F + a medkit. You get up in %.0f s	Você caiu! Um parceiro pode te reanimar com F + um medkit. Você se levanta em %.0f s	¡Has caído! Un compañero puede reanimarte con F + un botiquín. Te levantas en %.0f s
+rev_down_prox_die	You are down! A partner staying near you for %.0f s revives you. You die in %.0f s	Você caiu! Um parceiro ficando perto por %.0f s te reanima. Você morre em %.0f s	¡Has caído! Un compañero cerca de ti durante %.0f s te reanima. Mueres en %.0f s
+rev_down_prox_up	You are down! A partner staying near you for %.0f s revives you. You get up in %.0f s	Você caiu! Um parceiro ficando perto por %.0f s te reanima. Você se levanta em %.0f s	¡Has caído! Un compañero cerca de ti durante %.0f s te reanima. Te levantas en %.0f s
+rev_prompt	Press F to revive %s (uses a medkit)	Aperte F para reanimar %s (usa um medkit)	Pulsa F para reanimar a %s (usa un botiquín)
+rev_nomedkit	You need a medkit to revive %s	Você precisa de um medkit para reanimar %s	Necesitas un botiquín para reanimar a %s
+rev_sent	Reviving %s…	Reanimando %s…	Reanimando a %s…
+rev_done	Revived by %s!	Reanimado por %s!	¡Reanimado por %s!
+rev_partner	your partner	seu parceiro	tu compañero

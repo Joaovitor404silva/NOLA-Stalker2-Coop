@@ -1,0 +1,28 @@
+out D:\modding\proofs\20261103_rv20_revmsg
+up -Reuse -Calm -Dll D:\modding\cpp\wt\rv20\cppbuild\Output\NolaNative\Game__Shipping__Win64\NolaNative.dll -Save C:\modding\s2harness\testsave\scanner_20261030_host
+setflag A downsecs 60
+setflag B downsecs 60
+setflag A downdie 0
+setflag B downdie 0
+setflag A bothdie 0
+setflag B bothdie 0
+setflag A bothdown 0
+setflag B bothdown 0
+setflag A revmsg 1
+setflag B revmsg 1
+run calm
+setflag A downhp 15
+setflag B downhp 15
+assert alive A
+assert alive B
+assert peer
+s2dev A call pawn ForceSetHP 1
+burst 5 700
+wait 3
+shot rv20_down_A on=A,B cam=2.5
+wait 2
+hold F 300 -On B
+burst 10 700
+shot rv20_sent_B on=A,B cam=2.5
+wait 4
+shot rv20_revived_A on=A,B cam=2.5

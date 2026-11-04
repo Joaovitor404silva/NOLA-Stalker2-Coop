@@ -105,5 +105,7 @@ flag	emreset	c				dev
 flag	dmgtest	c				dev
 flag	tgtdiag	c				dev
 flag	pupmvcr	c				dev
+flag	testgod	c				dev test god
 flag	devcmd	c			a:NOLA x0 devcmd	dev command channel
 flag	netrecord	c				packet recorder
+file	s2u_lockbehind.tsv	a	s2m_lockbehind.cpp table			quest nodes that close a door behind the player, held until every connected player entered the trigger (lockbehind)

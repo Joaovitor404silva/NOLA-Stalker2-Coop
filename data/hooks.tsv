@@ -90,3 +90,4 @@ inv.off.comp	offset	6b07eff		48 8B 81 ?? ?? ?? ?? 48 8B 88 78 06 00 00 48 85 C9 
 inv.off.items	offset	6b07f06		48 8B 88 ?? ?? ?? ?? 48 85 C9 74 ?? E8 ?? ?? ?? ??		d32:3	0x678	CppMediator::GetItemsCountInInventory+0x26	s2m_items_x0.cpp:73,s2m_items_x0.cpp:85,s2m_save_x0.cpp:117	26123434	invnull,save,wpnsid
 inv.off.ctr	offset	ff1646		48 8B 81 ?? ?? ?? ?? C3 41 57 41 56 41 55 41 54		d32:3	0x1c0	FUN_140ff1646	s2m_items_x0.cpp:73,s2m_items_x0.cpp:86,s2m_save_x0.cpp:117	26123434	items,save
 ldmgr.cleanup	detour	361d26e		48 83 EC 28 48 39 15 ?? ?? ?? ?? 75 09 80 3D ?? ?? ?? ?? 00 75 05 48 83 C4 28 C3 E8 ?? ?? ?? ?? 90 48 83 C4 28 E9 ?? ?? ?? ??	48 83 EC 28 48 39 15 ?? ?? ?? ??			FUN_14361d26e	s2m_ldmgr.cpp:23,s2m_ldmgr.cpp:97	26123434	ldmgr
+pcompass.move	call	d2296		48 8B 02 48 89 41 10 8B 42 08 89 41 18 F3 0F 10 41 10 F3 0F 10 49 14 F3 0F 10 15 2B 40 D9 08 F3	48 8B 02 48 89 41 10 8B 42 08 89 41 18			FUN_1400d2296	s2m_pcompass.cpp:182	26123434	pcompass

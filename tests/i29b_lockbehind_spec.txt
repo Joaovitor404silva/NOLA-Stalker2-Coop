@@ -1,0 +1,45 @@
+spec i29b_lockbehind
+note Measured red (pair 2, 2026-11-04 09:28-09:29, DLL 334f448): host keypad OnInputCodePassed -> BunkerDoor ReceiverOn mirrored to B (door open both); host walks past E03_MQ02_Trigger_ToLockDoor -> host SendSignal_CloseLabDoor -> CloseLabDoor_S2C on B while the guest is outside. Green: the host enters the trigger alone -> A `NOLA lockbehind: no E03_MQ02_SendSignal_CloseLabDoor segurado: 1 de 2 jogadores dentro ...`, no CloseLabDoor_S2C on B, door open in i29b_guest_door_open; the guest enters -> A `NOLA lockbehind: todos dentro de E03_MQ02_Trigger_ToLockDoor (2 de 2): no E03_MQ02_SendSignal_CloseLabDoor iniciado ok=1`, B applies CloseLabDoor_S2C, door shut in i29b_guest_door_shut (guest inside looking back) and i29b_host_door_shut_outside (host at the keypad spot, the 09:29 reference view).
+note Spots (standing actor z measured 2026-11-04 11:09 on games C/D): yard 424562,477462 stand z 202; keypad spot 424355,477365 stand z 202 (door in frame looking at 424516,477300,200); trigger centre 424008,476926 stand z 198 (box 50x50x100, margin 150). Hops land 2-3 cm above the standing z (no fall) and wait 3 s for streaming. Inner look-back spot 424150,477080 (inside box+margin) is NOT verified on camera (game D closed during the probe).
+note Shots (2026-11-04 11:45 reframe): all guest shots from the corridor spot 424470,477700 looking at 424460,477300,180 frame the whole door, the keypad and the doorway; for the shut shot the guest is taken back out after the close is logged.
+note Guest hp: 10:57 run took host-routed self damage (type 6, 14/13.3 hp) 1-2 s after each hop to the keypad spot at z 205; hp B 100 at start and expect_not on the dmgin/dmgsrc lines after every hop prove the hops are harmless.
+note R12: the host hop yard -> trigger is 7.7 m and B stands 6 m from the trigger, under cinejump (30 m), so the host teleport does not pull B; the expect_not lines prove it.
+mark
+hp B 100
+tp A 424562 477462 204
+wait 3
+tp B 424355 477365 204
+wait 3
+lookat B 424516 477300 200
+expect_not B NOLA (cine: host a|tpfloor: coleira|dmgin: seq=|clinert dmgsrc: golpe no jogador local) during 3
+s2dev A call BP_CodeLock_C_UAID_18C04D7E62A173DB01_1723105454 OnInputCodePassed
+expect B NOLA quest: cliente seq=\d+ W nil nil nil E03_MQ02_SendSignal_2_18_E03_MQ02_BP_BunkerDoor_Factory_01\.ReceiverOn -> true no E03_MQ02_SendSignal_2_18_E03_MQ02_BP_BunkerDoor_Factory_01\.ReceiverOn_S2C within 15
+wait 3
+tp B 424470 477700 260
+wait 4
+lookat B 424460 477300 180
+wait 1
+shot B i29b_guest_door_open_before
+mark
+tp A 424008 476926 200
+wait 3
+expect A NOLA lockbehind: no E03_MQ02_SendSignal_CloseLabDoor segurado: 1 de 2 jogadores dentro do gatilho E03_MQ02_Trigger_ToLockDoor within 15
+expect_not B NOLA (cine: host a|tpfloor: coleira|dmgin: seq=|clinert dmgsrc: golpe no jogador local) during 3
+expect_not B E03_MQ02_SendSignal_CloseLabDoor_S2C during 8
+expect_not A NOLA lockbehind: todos dentro during 1
+lookat B 424460 477300 180
+wait 1
+shot B i29b_guest_door_open
+mark
+tp B 424150 477080 200
+wait 3
+expect A NOLA lockbehind: todos dentro de E03_MQ02_Trigger_ToLockDoor \(2 de 2\): no E03_MQ02_SendSignal_CloseLabDoor iniciado ok=1 within 15
+expect B NOLA quest: cliente seq=\d+ W nil nil nil E03_MQ02_SendSignal_CloseLabDoor -> true no E03_MQ02_SendSignal_CloseLabDoor_S2C within 15
+expect_not B NOLA (dmgin: seq=|clinert dmgsrc: golpe no jogador local) during 3
+wait 3
+tp B 424470 477700 260
+wait 4
+lookat B 424460 477300 180
+wait 1
+shot B i29b_guest_door_shut
+expect_not B NOLA (cine: host a|tpfloor: coleira|dmgin: seq=|clinert dmgsrc: golpe no jogador local) during 3

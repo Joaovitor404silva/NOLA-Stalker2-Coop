@@ -57,7 +57,7 @@ def main():
     inc = open(os.path.join(REPO, "src", "s2x_buildchk_tab.inc"), encoding="ascii", newline="").read()
     check(g["tsv"] == tsv, "data/buildchk.tsv is up to date with the retail exe, data/hooks.tsv and src (rerun tools/gen_buildchk.py)")
     check(g["inc"] == inc, "src/s2x_buildchk_tab.inc is up to date (rerun tools/gen_buildchk.py)")
-    check(g["manifest"] == 90 and g["extra"] > 0, "table has the 90 hook manifest rows and %d source rows" % g["extra"])
+    check(g["manifest"] == 91 and g["extra"] > 0, "table has the 91 hook manifest rows and %d source rows" % g["extra"])
     with tempfile.TemporaryDirectory() as td:
         t1, t2 = os.path.join(td, "buildchk.tsv"), os.path.join(td, "tab.inc")
         r = subprocess.run([sys.executable, "-I", os.path.join(REPO, "tools", "gen_buildchk.py"), "--quiet", "--out-tsv", t1, "--out-inc", t2], capture_output=True, text=True)

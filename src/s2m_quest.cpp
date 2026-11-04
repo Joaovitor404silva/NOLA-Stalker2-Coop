@@ -5254,6 +5254,7 @@ namespace s2m_quest
 #include "s2m_travel.h"
 
 extern "C" bool s2m_solo_quest_muted(const char* quest);
+extern "C" void s2m_lockbehind_tick();
 
 extern "C" bool s2m_ls_before_load();
 
@@ -5618,6 +5619,7 @@ X0_MODULE(quest)
     x0::every(x0::Mod::quest, "questQp", x0::Rate::t100, [] { s2m_quest::tick100_qp(); }, x0::ord::t100_qpTick);
     x0::every(x0::Mod::quest, "questQi", x0::Rate::t100, [] { s2m_quest::tick100_qi(); }, x0::ord::t100_qiTick);
     x0::every(x0::Mod::quest, "questQb", x0::Rate::t100, [] { s2m_quest::tick100_qb(); });
+    x0::every(x0::Mod::quest, "lockbehind", x0::Rate::t100, [] { s2m_lockbehind_tick(); });
     x0::every(x0::Mod::quest, "quest1000", x0::Rate::t1000, [] { s2m_quest::tick1000(); });
     S2FR(x0::fr::track("QB"));
     x0::own_tag(x0::Mod::quest, "QN", [] { return s2m_quest::out_qn(); });

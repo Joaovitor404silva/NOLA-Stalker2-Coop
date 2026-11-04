@@ -36,6 +36,8 @@
 using namespace RC;
 using namespace RC::Unreal;
 
+extern "C" void s2m_lockbehind_world_exit();
+
 namespace
 {
     uint8_t* exe() { return reinterpret_cast<uint8_t*>(GetModuleHandleW(nullptr)); }
@@ -93,7 +95,8 @@ namespace
 
     const uintptr_t kRefresh = 0x33308e2;
     const uint8_t kRefreshSig[] = {0x56, 0x48, 0x83, 0xec, 0x20, 0x48, 0x8b, 0x81, 0xe0, 0x02, 0x00, 0x00, 0x48, 0x85, 0xc0, 0x74, 0x4a};
-    const int kSelect = 160;
+    const int kSelect = 158;
+    const uintptr_t kNewDefault = 0x3330a7a;
 
     const size_t kImageBrush = 0x170;
     const size_t kBrushImageSize = 0x34;
@@ -103,6 +106,8 @@ namespace
     using WeakGetFn = int64_t (*)(int64_t);
     using SetNameFn = void (*)(int64_t, const FStr*);
     using ExecFn = void (*)(int64_t);
+    using SelFn = void (*)(int64_t, int64_t);
+    using DefFn = int64_t (*)(int64_t);
 
     x0::Flag F_menu("joinmenu");
 
@@ -148,6 +153,7 @@ namespace
     std::atomic<nola::Mode> g_mode{nola::Mode::none};
     bool g_world = false;
     bool g_busy = false;
+    nola::Toggle g_toggle;
     bool g_relay = false;
     uint64_t g_full0 = 0;
     int g_fullN = 0;
@@ -180,12 +186,13 @@ namespace
         __except (EXCEPTION_EXECUTE_HANDLER) { return false; }
     }
 
-    bool refresh_seh(int64_t sv, ExecFn sel)
+    bool refresh_seh(int64_t sv, SelFn sel)
     {
         __try
         {
             reinterpret_cast<ExecFn>(exe() + kRefresh)(sv);
-            sel(sv);
+            int64_t def = reinterpret_cast<DefFn>(exe() + kNewDefault)(sv);
+            sel(sv, def);
             return true;
         }
         __except (EXCEPTION_EXECUTE_HANDLER) { return false; }
@@ -361,7 +368,7 @@ namespace
         x0::ui_session_end();
     }
 
-    void end_session(const char* why)
+    void end_session(const char* why, bool settleIt = true)
     {
         ui_end();
         bool had = g_mode != nola::Mode::none;
@@ -371,7 +378,7 @@ namespace
         g_joinAt = -1;
         g_peerSeen = false;
         x0::save_store_want(x0::SaveStore::normal);
-        if (!pawn()) settle(why, nullptr);
+        if (settleIt && !pawn()) settle(why, nullptr);
         if (!had && s2r::x0_session_mode() == 0) return;
         x0::logf("NOLA menu: co-op off (%s): back to a normal solo game", why);
         x0::post([] {
@@ -949,7 +956,7 @@ namespace
         if (g_builtStore == now && !g_builtSwitching) return;
         int64_t o = (int64_t)sv.address();
         void** vt = nullptr;
-        ExecFn sel = nullptr;
+        SelFn sel = nullptr;
         if (!rd_seh(reinterpret_cast<void*>(o), &vt, 8) || !vt || !rd_seh(vt + kSelect, &sel, 8) || !sel) return;
         x0::SaveStore was = g_builtStore;
         bool wasSwitching = g_builtSwitching;
@@ -961,6 +968,45 @@ namespace
                  store_name(was), wasSwitching ? " during a switch" : "", ok ? "true" : "false", b, g_builds, hs == 1 ? "shown" : hs == 0 ? "hidden (no save in this store)" : "unknown");
     }
 
+    bool menu_animating()
+    {
+        if (!g_sv.valid() || !g_holder) return false;
+        TArr h{};
+        if (!rd_seh(reinterpret_cast<void*>(g_holder), &h, sizeof h) || !h.d || h.n <= 0 || h.n > 64) return false;
+        for (int i = 0; i < h.n; ++i)
+        {
+            int64_t w = 0;
+            if (!rd_seh(h.d + size_t(i) * 8, &w, 8) || !w) continue;
+            x0::Call c(x0::Ref::addr((uint64_t)w), L"IsAnyAnimationPlaying");
+            if (c.ok() && c.run() && c.rb()) return true;
+        }
+        return false;
+    }
+
+    void settle_done(const char* why, std::function<void()> then)
+    {
+        if (!x0::save_store_ready()) x0::logf("NOLA menu: save store switch not finished after 10 s (%s): main menu kept as built", why);
+        else refresh_menu(why);
+        if (!then) return;
+        x0::after(x0::Mod::session, 0.1, [then] {
+            g_toggle.done();
+            then();
+        });
+    }
+
+    void settle_wait(const char* why, std::function<void()> then, nola::RefreshGate gate = {})
+    {
+        bool anim = x0::save_store_ready() && menu_animating();
+        if (gate.allow(anim))
+        {
+            if (anim) x0::logf("NOLA menu: main menu rebuilt while a button animation still runs after %.1f s (%s)", 0.1 * nola::RefreshGate::kMax, why);
+            settle_done(why, then);
+            return;
+        }
+        if (gate.waits == 1) x0::logf("NOLA menu: main menu rebuild waits for a pressed button animation to end (%s): a rebuild now would leave the stock hover lock exe+0xb1524fc set", why);
+        x0::after(x0::Mod::session, 0.1, [why, then, gate] { settle_wait(why, then, gate); });
+    }
+
     void settle(const char* why, std::function<void()> then, int tries)
     {
         x0::after(x0::Mod::session, 0.25, [why, then, tries] {
@@ -969,9 +1015,7 @@ namespace
                 settle(why, then, tries - 1);
                 return;
             }
-            if (!x0::save_store_ready()) x0::logf("NOLA menu: save store switch not finished after 10 s (%s): main menu kept as built", why);
-            else refresh_menu(why);
-            if (then) then();
+            settle_wait(why, then);
         });
     }
 
@@ -1188,20 +1232,28 @@ namespace
     {
         int n = ++g_clicks;
         x0::logf("NOLA menu: menu entry %s clicked (#%d, mode %s)", which == 1 ? "host" : "join", n, nola::mode_name(g_mode));
+        if (!x0::port(x0::Mod::session)) g_toggle.done();
+        if (!g_toggle.accept())
+        {
+            x0::logf("NOLA menu: menu entry %s click ignored: the co-op switch is still running", which == 1 ? "host" : "join");
+            return;
+        }
         if (nola::click(g_mode, which).end_first)
         {
-            end_session(which == 1 ? "Host co-op picked while joining" : "Join co-op picked while hosting");
+            end_session(which == 1 ? "Host co-op picked while joining" : "Join co-op picked while hosting", which == 2);
             relabel(which == 1 ? 2 : 1);
         }
         if (which == 1)
         {
             if (g_mode == nola::Mode::host)
             {
-                end_session("host entry clicked again");
+                g_toggle.begin();
+                end_session("host entry clicked again", false);
                 relabel(1);
                 settle("host entry clicked again", [] { popup(tx(nola_text::T::popup_title_host), tx(nola_text::T::popup_host_off)); });
                 return;
             }
+            g_toggle.begin();
             g_mode = nola::Mode::host;
             g_world = false;
             g_relay = false;
@@ -1219,7 +1271,8 @@ namespace
         }
         if (g_mode == nola::Mode::join)
         {
-            end_session("join entry clicked again");
+            g_toggle.begin();
+            end_session("join entry clicked again", false);
             relabel(2);
             settle("join entry clicked again", [] { popup(tx(nola_text::T::popup_title_join), tx(nola_text::T::popup_join_off)); });
             return;
@@ -1307,6 +1360,7 @@ namespace
         {
             leave = false;
         }
+        if (leave) s2m_lockbehind_world_exit();
         orig(gf, req);
         if (!leave) return;
         try

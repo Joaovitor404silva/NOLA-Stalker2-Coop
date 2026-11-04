@@ -2,6 +2,17 @@
 
 [← Back to the overview](README.md)
 
+## v1.3.2 (2026-11-04)
+
+Fixes five reported bugs. Same game build as v1.3.1 (Update 2.1, Steam build 26123434). Every player must install the same version.
+
+### Fixed
+- **Guest locked out behind code doors:** when the host entered a door code (for example 2605 in Nestor's quest) and walked through, the door closed behind the host and the guest could not open it. Doors and areas that close behind the player now stay open until every player is inside, for every such door in the game. ([issue #29](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/29))
+- **Guest dies after disarming the mill grenade trap:** disarming a tripwire grenade in the old mill set the grenade off on the host's side. Disarming now works the same for everyone. ([issue #37](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/37))
+- **Partner icon disappears from the compass:** the partner icon no longer vanishes and comes back, near or far. ([issue #22](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/22))
+- **Main menu stops responding after toggling co-op:** switching co-op on, off and on again quickly no longer freezes the menu. ([issue #21](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/21))
+- **No information when a partner is down:** a downed player sees a countdown, the partner sees "Press F to revive (uses a medkit)", and everyone sees who revived whom. ([issue #20](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/20))
+
 ## v1.3.1 (2026-11-01)
 
 Fixes [issue #18](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/18) and lost loot, and makes IP play easier for groups. Same game build as v1.3.0 (Update 2.1, Steam build 26123434). Every player must install the same version.

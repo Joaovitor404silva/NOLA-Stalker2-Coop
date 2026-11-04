@@ -1,0 +1,22 @@
+spec tgod_live
+note testgod=1 from the harness god default. Damage sources: guest hops to the keypad spot at z 205 (host-routed self damage type 6, 13.3 hp each, seen 2026-11-04 10:57 and 11:46) and the hostile Varta guards (guest hp 36.4 at 11:3x). Expect: testgod LIGADO on both, refill or routed-drop lines on B, both alive, no CAIDO/death.
+mark start
+expect A NOLA testgod: LIGADO within 5
+expect B NOLA testgod: LIGADO within 5
+mark
+tp B 424355 477365 205
+wait 4
+tp B 424562 477462 206
+wait 4
+tp B 424355 477365 205
+wait 4
+tp B 424562 477462 206
+wait 4
+tp B 424355 477365 205
+wait 20
+hp B 30
+expect B NOLA testgod: hp 30\.0 -> within 5
+expect_not B NOLA (LIFE: CAIDO|dmgin: seq=) during 3
+expect_not A NOLA LIFE: CAIDO during 1
+hp A 30
+expect A NOLA testgod: hp 30\.0 -> within 5

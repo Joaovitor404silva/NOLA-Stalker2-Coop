@@ -108,6 +108,26 @@ namespace nola
         return s;
     }
 
+    struct Toggle
+    {
+        bool pending = false;
+        bool accept() const { return !pending; }
+        void begin() { pending = true; }
+        void done() { pending = false; }
+    };
+
+    struct RefreshGate
+    {
+        int waits = 0;
+        static constexpr int kMax = 20;
+        bool allow(bool animating)
+        {
+            if (animating && ++waits < kMax) return false;
+            waits = 0;
+            return true;
+        }
+    };
+
     inline const char* role_of(Mode m) { return m == Mode::host ? "host" : m == Mode::join ? "client" : ""; }
 
     inline std::string fmt(const std::string& t, const std::string& name, int n, int max, const std::string& why = {})

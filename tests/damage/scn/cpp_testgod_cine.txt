@@ -1,0 +1,32 @@
+role host
+flag lifeguard 1
+flag downgod 1
+flag lifegod 0
+flag testgod 0
+me 100 1 0 0 0
+set me uid 7
+t 0
+do lifeGuard
+godq
+othergod 1
+flag testgod 1
+t 0.1
+do testGod
+do lifeGuard
+godq
+othergod 0
+t 0.2
+do testGod
+do lifeGuard
+godq
+hit me 100
+t 0.3
+do testGod
+do lifeGuard
+hp me
+godq
+flag testgod 0
+t 0.4
+do testGod
+do lifeGuard
+godq

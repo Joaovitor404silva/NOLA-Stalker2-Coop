@@ -42,3 +42,4 @@ nbot	par	10		bat nbot/build_test.bat
 buildchk	par	60	C:\Program Files (x86)\Steam\steamapps\common\S.T.A.L.K.E.R. 2 Heart of Chornobyl\Stalker2\Binaries\Win64\Stalker2-Win64-Shipping.exe	bat buildchk/build_test.bat ;; exe buildchk/out/test_buildchk.exe self ;; py buildchk/run.py	
 hot	par	10		bat hot/build_test.bat ;; py hot/coverage.py	src/*.cpp;src/*.h;src/*.inc;src/CMakeLists.txt
 worn	par	10		bat worn/build_test.bat	
+lockbehind	par	5		py lockbehind/test_gen_lockbehind.py	tools/gen_lockbehind.py;data/s2u_lockbehind.tsv;src/s2m_lockbehind*

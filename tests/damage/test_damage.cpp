@@ -271,6 +271,23 @@ namespace x0
     {
         if (LOGON) out("LOG " + std::string(text));
     }
+    std::vector<std::string> UIREC;
+    void ui_msg(std::string_view id, std::string_view text, double secs)
+    {
+        UIREC.push_back("MSG " + std::string(id) + " " + std::string(text) + " " + std::to_string((int)secs));
+    }
+    void screen_text_clear(std::string_view id)
+    {
+        UIREC.push_back("CLEAR " + std::string(id));
+    }
+    void ui_top(std::string_view id, std::string_view text, double secs)
+    {
+        UIREC.push_back("TOP " + std::string(id) + " " + std::string(text) + " " + std::to_string((int)secs));
+    }
+    void ui_top_clear(std::string_view id)
+    {
+        UIREC.push_back("TOPCLEAR " + std::string(id));
+    }
     void logf(const char* fmt, ...)
     {
         char b[4096];
@@ -684,6 +701,11 @@ int main(int argc, char** argv)
         if (cmd == "role") ROLE = a[0];
         else if (cmd == "flag") FL[a[0]] = parse_val(a[1]);
         else if (cmd == "t") NOW = D(0);
+        else if (cmd == "uidump")
+        {
+            for (auto& s : x0::UIREC) out("OUT ui " + s);
+            x0::UIREC.clear();
+        }
         else if (cmd == "me" || cmd == "newpawn")
         {
             Obj keep;

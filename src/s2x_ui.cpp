@@ -6,11 +6,13 @@
 #endif
 #include <Windows.h>
 #include "s2x_int.h"
+#include "s2x_ui.h"
 #include "s2x_tut_logic.h"
 #include "s2x_uiq.h"
 #include <cstdlib>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 #include <Unreal/FText.hpp>
 #include <Unreal/NameTypes.hpp>
@@ -79,7 +81,7 @@ namespace x0::in
             return UObjectGlobals::StaticConstructObject(P);
         }
 
-        bool create(Msg& m, const std::string& txt, std::string& why)
+        bool create(Msg& m, const std::string& txt, std::string& why, double y, bool top)
         {
             Ref pc = local_pc();
             if (!pc) { why = "sem PlayerController"; return false; }
@@ -101,10 +103,18 @@ namespace x0::in
             Call(rtb, L"SetShadowOffset").raw(L"InShadowOffset", so, (int)sizeof so).run();
             float sc[4] = {0, 0, 0, 1};
             Call(rtb, L"SetShadowColorAndOpacity").raw(L"InShadowColorAndOpacity", sc, (int)sizeof sc).run();
-            double rt[2] = {0, 160};
+            double rt[2] = {0, y};
             Call(rtb, L"SetRenderTranslation").raw(L"Translation", rt, (int)sizeof rt).run();
             if (!Call(rw, L"SetVisibility").i(L"InVisibility", 3).run()) { why = "SetVisibility falhou"; return false; }
             if (!Call(rw, L"AddToViewport").i(L"ZOrder", 1000).run()) { why = "AddToViewport falhou"; return false; }
+            if (top)
+            {
+                Call(rtb, L"SetAutoWrapText").b(L"InAutoTextWrap", true).run();
+                double an[4] = {0, 0, 1, 1};
+                Call(rw, L"SetAnchorsInViewport").raw(L"Anchors", an, (int)sizeof an).run();
+                double al[2] = {0, 0};
+                Call(rw, L"SetAlignmentInViewport").raw(L"Alignment", al, (int)sizeof al).run();
+            }
             m.w = rw;
             m.tb = rtb;
             m.world = world();
@@ -118,11 +128,11 @@ namespace x0::in
             return m.world && cur && m.world.same(cur);
         }
 
-        int w_create(const std::string& txt)
+        int w_create(const std::string& txt, double y = 160, bool top = false)
         {
             Msg m;
             std::string why;
-            if (!create(m, txt, why)) { ui_log(why); return 0; }
+            if (!create(m, txt, why, y, top)) { ui_log(why); return 0; }
             int h = ++g_nextH;
             widgets()[h] = m;
             return h;
@@ -150,6 +160,54 @@ namespace x0::in
         {
             auto it = widgets().find(h);
             return it != widgets().end() && it->second.w && it->second.tb && same_world(it->second);
+        }
+
+        struct Top
+        {
+            int h = 0;
+            std::string txt;
+            double until = 0;
+        };
+
+        std::unordered_map<std::string, Top>& tops()
+        {
+            static std::unordered_map<std::string, Top> m;
+            return m;
+        }
+
+        void top_drop(const std::string& id)
+        {
+            auto it = tops().find(id);
+            if (it == tops().end()) return;
+            int h = it->second.h;
+            tops().erase(it);
+            w_remove(h);
+        }
+
+        void top_show(const std::string& id, const std::string& txt, double secs)
+        {
+            double until = secs > 0 ? now() + secs : 0;
+            auto it = tops().find(id);
+            if (it != tops().end() && w_alive(it->second.h))
+            {
+                if (it->second.txt != txt && w_set(it->second.h, txt)) it->second.txt = txt;
+                it->second.until = until;
+                return;
+            }
+            top_drop(id);
+            int h = w_create(txt, 320, true);
+            if (!h) return;
+            tops()[id] = Top{h, txt, until};
+            log("NOLA x0 ui: top " + id + " shown (viewport widget, " + (secs > 0 ? std::to_string((int)secs) + " s" : std::string("until cleared")) + ")");
+        }
+
+        void top_tick()
+        {
+            std::vector<std::string> gone;
+            double t = now();
+            for (auto& [id, m] : tops())
+                if (!w_alive(m.h) || (m.until > 0 && t >= m.until)) gone.push_back(id);
+            for (const auto& id : gone) top_drop(id);
         }
 
         bool queue_on();
@@ -214,7 +272,7 @@ namespace x0::in
             for (auto& c : t)
                 if (c == '\n') c = '|';
             return tut::status() + " uitut=" + std::to_string(tut_on() ? 1 : 0) + " | ui uiq=" + std::to_string(queue_on() ? 1 : 0) + " active=" + std::to_string(board().lines()) + " shown=" + std::to_string(shown) + " waiting=" +
-                   std::to_string(waiting) + " widgets=" + std::to_string(widgets().size()) + " board=[" + t + "]";
+                   std::to_string(waiting) + " widgets=" + std::to_string(widgets().size()) + " top=" + std::to_string(tops().size()) + " board=[" + t + "]";
         }
 
         std::string ui_cmd(const std::vector<std::string>& a)
@@ -232,6 +290,7 @@ namespace x0::in
         void ui_tick()
         {
             tut::tick();
+            top_tick();
             sync_life();
             board().tick(now(), queue_on(), queue_max());
             if (board().lines() == 0) g_wait.reset();
@@ -295,6 +354,23 @@ namespace x0
         std::string i(id), t(text);
         if (!on_game_thread()) { post([i, t, secs] { ui_msg(i, t, secs); }); return; }
         try { in::show(i, t, secs); }
+        catch (...) { in::ui_log(i + ": exception"); }
+    }
+
+    void ui_top(std::string_view id, std::string_view text, double secs)
+    {
+        if (fi("uimsg", 1) != 1) return;
+        std::string i(id), t(text);
+        if (!on_game_thread()) { post([i, t, secs] { ui_top(i, t, secs); }); return; }
+        try { in::top_show(i, t, secs); }
+        catch (...) { in::ui_log(i + ": exception"); }
+    }
+
+    void ui_top_clear(std::string_view id)
+    {
+        std::string i(id);
+        if (!on_game_thread()) { post([i] { ui_top_clear(i); }); return; }
+        try { in::top_drop(i); }
         catch (...) { in::ui_log(i + ": exception"); }
     }
 

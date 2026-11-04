@@ -4,6 +4,8 @@
 #include "s2m_damage.h"
 #include "s2m_bodies.h"
 #include "s2m_lock.h"
+#include "s2m_text.h"
+#include "s2x_ui.h"
 #include "s2n_rel_core.inc"
 #include <algorithm>
 #include <cmath>
@@ -34,7 +36,7 @@ namespace s2m::damage
             F_revivesecs("revivesecs"), F_downgod("downgod"), F_downdie("downdie"), F_reviveitem("reviveitem"), F_reviveheal("reviveheal"), F_bothdie("bothdie"), F_lifegod("lifegod"), F_bothdown("bothdown"), F_dieload("dieload"), F_tgtsafe("tgtsafe"), F_tgtdiag("tgtdiag"), F_shotdetect("shotdetect"), F_shotdmg("shotdmg"),
             F_shotlag("shotlag"), F_shotpad("shotpad"), F_shotattr("shotattr"), F_repsync("repsync"), F_repfoe("repfoe"), F_repecho("repecho"),
             F_repechocd("repechocd"), F_relfoe("relfoe"), F_relmir("relmir"), F_relmirs("relmirs"), F_relmirr("relmirr"), F_relmirtol("relmirtol"), F_downnoweap("downnoweap"), F_revnobag("revnobag"), F_downcam("downcam"), F_downhands("downhands"), F_downhold("downhold"), F_downfx("downfx"),
-            F_friendlyfire("friendlyfire"), F_revwait("revwait"), F_ffscale("ffscale"), F_ffswallow("ffswallow"), F_meleesync("meleesync"), F_deathneutral("deathneutral");
+            F_friendlyfire("friendlyfire"), F_revwait("revwait"), F_ffscale("ffscale"), F_ffswallow("ffswallow"), F_meleesync("meleesync"), F_deathneutral("deathneutral"), F_testgod("testgod");
 
         std::string fmt(const char* f, ...)
         {
@@ -277,6 +279,15 @@ namespace s2m::damage
             int loadBuilds = 0;
         } LF;
 
+        struct TestGod
+        {
+            Ref pawn;
+            int64_t uid = 0;
+            bool god = false;
+            double seenMax = 100;
+            int refills = 0, skipped = 0;
+        } TG;
+
         double g_rvStart = -1;
         struct Revive
         {
@@ -286,6 +297,9 @@ namespace s2m::damage
             int64_t req = 0, reqWaitLog = 0;
             double reqAt = 0;
             bool press = false;
+            bool downTxt = false;
+            int downLeft = -1;
+            std::string done;
             double sentUntil = -1, noUntil = -1;
             bool pd = false, pdWait = false;
             double pdNext = 0;
@@ -632,6 +646,12 @@ namespace s2m::damage
                 bool first = DI.seen.find(seq) == DI.seen.end();
                 DI.seen[seq] = now;
                 if (!first) continue;
+                if (F_testgod.i() == 1)
+                {
+                    TG.skipped++;
+                    if (TG.skipped <= 5 || TG.skipped % 50 == 0) x0::logf("NOLA testgod: dano roteado seq=%lld (%.1f) ignorado (#%d)", (long long)seq, amt, TG.skipped);
+                    continue;
+                }
                 double hp = hp_of(pawn, 0);
                 bool alive = alive_of(pawn);
                 if (!alive || hp <= 0 || dead_held(pawn)) DI.n.dead++;
@@ -1119,6 +1139,7 @@ namespace s2m::damage
 
         void gm_keep(bool on)
         {
+            if (!on && TG.god) return;
             if (LF.gmKeep == on) return;
             LF.gmKeep = on;
             bool ok = s2m_life_gm_keep(on);
@@ -1158,8 +1179,64 @@ namespace s2m::damage
                 x0::logf("NOLA LIFE: Unkillable uid=%s fica (%s): cinematica/emissao tambem segura", uid.c_str(), why);
                 return;
             }
+            if (TG.god && std::to_string((long long)TG.uid) == uid)
+            {
+                x0::logf("NOLA LIFE: Unkillable uid=%s fica (%s): testgod tambem segura", uid.c_str(), why);
+                return;
+            }
             bool ok = god_set(std::strtoll(uid.c_str(), nullptr, 10), false);
             x0::logf("NOLA LIFE: Unkillable uid=%s desligado (%s) ok=%s", uid.c_str(), why, tf(ok));
+        }
+
+        void testgod_release(const char* why)
+        {
+            if (!TG.god) return;
+            TG.god = false;
+            bool held = LF.god == std::to_string((long long)TG.uid) || (g_links.god_other && g_links.god_other());
+            bool ok = held || god_set(TG.uid, false);
+            if (LF.god.empty()) gm_keep(false);
+            x0::logf("NOLA testgod: DESLIGADO uid=%lld (%s) ok=%s%s; %d recargas, %d danos roteados ignorados", (long long)TG.uid, why, tf(ok), held ? " (Unkillable fica: lifegod/cinematica segura)" : "", TG.refills, TG.skipped);
+            TG.refills = 0;
+            TG.skipped = 0;
+        }
+
+        void testgod_tick()
+        {
+            if (F_testgod.i() != 1)
+            {
+                testgod_release("testgod 0");
+                TG.pawn = Ref();
+                return;
+            }
+            Ref pw = local_pawn();
+            if (!pw)
+            {
+                testgod_release("sem pawn");
+                TG.pawn = Ref();
+                return;
+            }
+            if (!pw.same(TG.pawn))
+            {
+                testgod_release("pawn trocado");
+                TG.pawn = pw;
+                TG.seenMax = 100;
+                TG.uid = 0;
+            }
+            double hp = hp_of(pw, std::nan(""));
+            if (std::isnan(hp) || !alive_of(pw)) return;
+            if (hp > TG.seenMax) TG.seenMax = hp;
+            if (!TG.god && guid_of(pw, TG.uid) && god_set(TG.uid, true))
+            {
+                TG.god = true;
+                gm_keep(true);
+                x0::logf("NOLA testgod: LIGADO uid=%lld: Unkillable + hp de volta ao maximo a cada tick, dano roteado e queda ignorados", (long long)TG.uid);
+            }
+            double mx = x0::call_d(pw, L"GetMaxHP", -1);
+            if (mx <= 0) mx = TG.seenMax;
+            if (hp >= mx) return;
+            force_hp(pw, mx);
+            TG.refills++;
+            if (TG.refills <= 5 || TG.refills % 50 == 0) x0::logf("NOLA testgod: hp %.1f -> %.1f (recarga #%d)", hp, mx, TG.refills);
         }
 
         std::string rv_out()
@@ -1622,6 +1699,86 @@ namespace s2m::damage
             return true;
         }
 
+        std::string rv_partner(int view)
+        {
+            return view >= 0 ? pname(x0::view_pid(view)) : nola_text::tx(nola_text::T::rev_partner);
+        }
+
+        void rv_say(const char* id, nola_text::T t, const std::string& name, double secs)
+        {
+            if (x0::fi("revmsg", 1) != 1) return;
+            char b[256];
+            std::snprintf(b, sizeof b, nola_text::tx(t).c_str(), name.c_str());
+            x0::ui_msg(id, b, secs);
+        }
+
+        void rv_prompt(bool ctx, const std::string& name, double now)
+        {
+            static std::string lastName;
+            static double lastAt = -1e9;
+            static bool shown = false;
+            if (!ctx)
+            {
+                lastName.clear();
+                lastAt = -1e9;
+                if (shown) x0::screen_text_clear("revprompt");
+                shown = false;
+                return;
+            }
+            if (name == lastName && now - lastAt < 1.5) return;
+            lastName = name;
+            lastAt = now;
+            shown = true;
+            rv_say("revprompt", nola_text::T::rev_prompt, name, 2.5);
+        }
+
+        int rv_down_left()
+        {
+            double l = F_downsecs.d() - (x0::now() - LF.at);
+            return l > 0 ? (int)std::ceil(l) : 0;
+        }
+
+        void rv_down_say(bool fresh = true)
+        {
+            if (x0::fi("revmsg", 1) != 1) return;
+            using nola_text::T;
+            bool die = F_downdie.i() == 1;
+            int left = rv_down_left();
+            RV.downLeft = left;
+            char b[320];
+            if (F_reviveitem.i() == 1)
+                std::snprintf(b, sizeof b, nola_text::tx(die ? T::rev_down_item_die : T::rev_down_item_up).c_str(), (double)left);
+            else
+                std::snprintf(b, sizeof b, nola_text::tx(die ? T::rev_down_prox_die : T::rev_down_prox_up).c_str(), F_revivesecs.d(), (double)left);
+            if (fresh) RV.done.clear();
+            RV.downTxt = true;
+            x0::ui_top("revdown", b, 0);
+        }
+
+        void rv_down_clear()
+        {
+            if (!RV.downTxt) return;
+            RV.downTxt = false;
+            x0::ui_top_clear("revdown");
+        }
+
+        void rv_done_set(const std::string& name)
+        {
+            if (x0::fi("revmsg", 1) != 1) return;
+            char b[256];
+            std::snprintf(b, sizeof b, nola_text::tx(nola_text::T::rev_done).c_str(), name.c_str());
+            RV.done = b;
+        }
+
+        void rv_done_flush(bool camBusy, bool alive)
+        {
+            if (!LF.down) rv_down_clear();
+            else if (RV.downTxt && rv_down_left() != RV.downLeft) rv_down_say(false);
+            if (RV.done.empty() || camBusy) return;
+            if (alive && !LF.down) x0::ui_top("revdone", RV.done, 4);
+            RV.done.clear();
+        }
+
         void rv_tick_multi()
         {
             double now = x0::now();
@@ -1634,6 +1791,7 @@ namespace s2m::damage
             std::string who = best >= 0 ? pname(x0::view_pid(best)) : std::string();
             double dist = -1;
             RV.ctx = best >= 0 && remote_near(pw, now, F_reviveradius.d(), dist, best);
+            rv_prompt(RV.ctx && now >= RV.sentUntil, who, now);
             if (!press || !RV.ctx) return;
             if (now < RV.sentUntil || now < RV.noUntil) return;
             std::string got;
@@ -1647,6 +1805,7 @@ namespace s2m::damage
             {
                 RV.noUntil = now + 1;
                 x0::logf("NOLA LIFE: F perto de %s caido (%.0f cm) sem medkit (%d tipos procurados): nada feito", who.c_str(), dist, (int)rv_items().size());
+                rv_say("revneed", nola_text::T::rev_nomedkit, who, 3);
                 return;
             }
             bool ok = g_links.item_take && g_links.item_take(got);
@@ -1663,6 +1822,7 @@ namespace s2m::damage
             RV.sentUntil = now + 5;
             x0::logf("NOLA LIFE: REANIMAR: F perto de %s caido (%.0f cm): 1 %s consumido (tinha %d), pedido #%lld para pid %lld enviado", who.c_str(), dist, got.c_str(), have,
                      (long long)RV.rev, (long long)RV.tpid);
+            rv_say("revsent", nola_text::T::rev_sent, who, 3);
         }
 
         void rv_tick()
@@ -1679,6 +1839,8 @@ namespace s2m::damage
             bool partnerDown = on && parse_life(st, rh, rm) && st == 'w' && pw && !LF.down && alive_of(pw);
             double dist = -1;
             RV.ctx = partnerDown && remote_near(pw, now, F_reviveradius.d(), dist);
+            std::string who = rv_partner(-1);
+            rv_prompt(RV.ctx && now >= RV.sentUntil, who, now);
             if (!press || !RV.ctx) return;
             if (now < RV.sentUntil || now < RV.noUntil) return;
             std::string got;
@@ -1692,6 +1854,7 @@ namespace s2m::damage
             {
                 RV.noUntil = now + 1;
                 x0::logf("NOLA LIFE: F perto do outro jogador caido (%.0f cm) sem medkit (%d tipos procurados): nada feito", dist, (int)rv_items().size());
+                rv_say("revneed", nola_text::T::rev_nomedkit, who, 3);
                 return;
             }
             bool ok = g_links.item_take && g_links.item_take(got);
@@ -1706,6 +1869,7 @@ namespace s2m::damage
             RV.item = F_reviveheal.i() == 1 ? rv_item_index(got) : 0;
             RV.sentUntil = now + 5;
             x0::logf("NOLA LIFE: REANIMAR: F perto do outro jogador caido (%.0f cm): 1 %s consumido (tinha %d), pedido #%lld enviado", dist, got.c_str(), have, (long long)RV.rev);
+            rv_say("revsent", nola_text::T::rev_sent, who, 3);
         }
 
         void bleed_out(const Ref& pw, double now)
@@ -1723,6 +1887,7 @@ namespace s2m::damage
             if (now < LF.killAt) return;
             LF.killAt = now + 1;
             LF.dying = true;
+            rv_down_clear();
             god_drop(LF.both ? (multi() ? "fim de jogo" : "os dois caidos") : "tempo esgotado");
             double h0 = hp_of(pw, std::nan(""));
             bool ok = life_kill(pw);
@@ -1874,7 +2039,7 @@ namespace s2m::damage
                     x0::logf("NOLA LIFE: pedido de reanimacao #%lld ignorado: nao estou caido", (long long)RV.req);
                     RV.req = 0;
                 }
-                if (hp <= F_downhp.d() && peer_in())
+                if (hp <= F_downhp.d() && peer_in() && F_testgod.i() != 1)
                 {
                     LF.down = true;
                     LF.at = now;
@@ -1901,6 +2066,7 @@ namespace s2m::damage
                     else
                         x0::logf("NOLA LIFE: CAIDO #%d (hp %.1f <= %lld); %s em %lld s ou com o outro jogador a %lld cm por %lld s", LF.downs, hp, (long long)F_downhp.i(),
                                  F_downdie.i() == 1 ? "morre" : "levanta", (long long)F_downsecs.i(), (long long)F_reviveradius.i(), (long long)F_revivesecs.i());
+                    rv_down_say();
                 }
                 return;
             }
@@ -1928,6 +2094,8 @@ namespace s2m::damage
             double rr = F_reviveradius.d();
             int standItem = 0;
             bool byReq = false;
+            bool byNear = false;
+            std::string byName;
             if (F_reviveitem.i() == 1 && RV.req && now - RV.reqAt < F_revwait.d())
             {
                 if (RV.reqWaitLog != RV.req)
@@ -1954,6 +2122,7 @@ namespace s2m::damage
                         why = fmt("reanimado por %s com F + medkit, pedido #%lld a %.0f cm", who.c_str(), (long long)RV.req, dist);
                         standItem = RV.reqItem;
                         byReq = true;
+                        byName = who;
                     }
                     else x0::logf("NOLA LIFE: pedido de reanimacao #%lld de %s recusado: a %.0f cm (max %.0f), estado %c", (long long)RV.req, who.c_str(), dist, rr * 1.5, rl2 ? st2 : '?');
                     RV.req = 0;
@@ -1967,6 +2136,7 @@ namespace s2m::damage
                         why = fmt("reanimado pelo outro jogador com F + medkit, pedido #%lld a %.0f cm", (long long)RV.req, dist);
                         standItem = RV.reqItem;
                         byReq = true;
+                        byName = rv_partner(-1);
                     }
                     else x0::logf("NOLA LIFE: pedido de reanimacao #%lld recusado: outro jogador a %.0f cm (max %.0f), estado %c", (long long)RV.req, dist, rr * 1.5, rl ? st : '?');
                     RV.req = 0;
@@ -1977,14 +2147,24 @@ namespace s2m::damage
                 if (any_alive_near(pw, now, rr))
                 {
                     if (!LF.hasNear) { LF.hasNear = true; LF.nearAt = now; }
-                    if (now - LF.nearAt >= F_revivesecs.d()) why = "reanimado por outro jogador";
+                    if (now - LF.nearAt >= F_revivesecs.d())
+                    {
+                        why = "reanimado por outro jogador";
+                        byNear = true;
+                        byName = rv_partner(-1);
+                    }
                 }
                 else LF.hasNear = false;
             }
             else if (r.has_pos && loc_of(pw, lp) && rl && st == 'a' && (now - r.recv) < 2 && (r.x - lp.x) * (r.x - lp.x) + (r.y - lp.y) * (r.y - lp.y) <= rr * rr)
             {
                 if (!LF.hasNear) { LF.hasNear = true; LF.nearAt = now; }
-                if (now - LF.nearAt >= F_revivesecs.d()) why = "reanimado pelo outro jogador";
+                if (now - LF.nearAt >= F_revivesecs.d())
+                {
+                    why = "reanimado pelo outro jogador";
+                    byNear = true;
+                    byName = rv_partner(-1);
+                }
             }
             else LF.hasNear = false;
             if (why.empty() && now - LF.at >= F_downsecs.d())
@@ -2005,6 +2185,8 @@ namespace s2m::damage
                 else x0::logf("NOLA LIFE: DE PE (%s) depois de %.1f s, hp=%lld", why.c_str(), now - LF.at, (long long)F_revivehp.i());
                 LF.down = false;
                 LF.frozen = false;
+                rv_down_clear();
+                if (byReq || byNear) rv_done_set(byName);
             }
             else DI.downUntil = std::max(DI.downUntil, now + 1);
         }
@@ -2236,6 +2418,7 @@ namespace s2m::damage
             dv_getup_tick(pw, alive);
             dv_hands(pw, (want || DV.getup) && F_downhands.i() == 1, alive);
             dv_fx(pw, dv_want(pw, alive) && F_downfx.i() == 1, alive);
+            rv_done_flush(DV.cam || DV.getup, alive);
         }
 
         void downview_unload()
@@ -2921,7 +3104,7 @@ namespace s2m::damage
 
     bool local_downed() { return LF.down; }
     bool life_frozen_now() { return LF.frozen; }
-    bool life_god_now() { return !LF.god.empty(); }
+    bool life_god_now() { return !LF.god.empty() || TG.god; }
     double last_shot_heard() { return g_anyShotAt; }
     int shots_heard() { return g_anyShots; }
 
@@ -2975,6 +3158,7 @@ X0_MODULE(damage)
     x0::key(x0::Mod::damage, 'F', [] { RV.press = true; });
     x0::own_tag(x0::Mod::damage, "@shots", [] { return shots_field(); });
     x0::hook(x0::Mod::damage, L"/Script/Stalker2.ItemAppearanceComponent:OnShotSoundStart", false, [](const x0::Ref& self) { on_shot_sound(self); });
+    x0::every(x0::Mod::damage, "testGod", x0::Rate::t100, [] { testgod_tick(); });
     x0::every(x0::Mod::damage, "lifeGuard", x0::Rate::t100, [] { life_guard(); noweap_tick(); downview_tick(); });
     x0::every(x0::Mod::damage, "revive", x0::Rate::t100, [] { rv_tick(); nobag_tick(); });
     x0::every(x0::Mod::damage, "dmgIn", x0::Rate::t100, [] { dmg_in(); });

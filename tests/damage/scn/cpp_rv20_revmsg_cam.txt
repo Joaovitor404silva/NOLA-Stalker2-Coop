@@ -1,0 +1,49 @@
+role client
+flag revwait 0
+flag downcam 1
+flag downhold 1
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag reviveitem 0
+flag reviveheal 0
+flag bothdie 1
+flag revmsg 1
+me 100 1 0 0 0
+set me uid 0
+x1 RV 0,0
+x1 L a,100,100
+remote 100 0 0 0
+t 0
+do lifeGuard
+set me hp 10
+t 1
+do lifeGuard
+uidump
+remote 100 0 0 2
+t 2
+do lifeGuard
+remote 100 0 0 3
+t 3
+do lifeGuard
+remote 100 0 0 4
+t 4
+do lifeGuard
+remote 100 0 0 5
+t 5
+kdout 1.2
+do lifeGuard
+uidump
+t 6
+kdout 0.6
+do lifeGuard
+uidump
+t 6.6
+kdout 0.03
+do lifeGuard
+uidump
+t 7
+do lifeGuard
+uidump
+hp me
