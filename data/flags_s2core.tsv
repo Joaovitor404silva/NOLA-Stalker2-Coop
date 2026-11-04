@@ -516,6 +516,7 @@ ssxtries	i	3
 ssxwait	i	180
 staken	i	0
 stakenown	i	1
+stestgod	i	0
 stgtcalm	i	8
 stgtdiag	i	0
 stgtgod	i	0
@@ -682,4 +683,6 @@ sn7reboot	i	1
 salifemc	i	1
 sqhostonly	i	1
 sqhostonlygap	f	3
+srevmsg	i	1
 sqdivmute	i	1
+slockbehind	i	1

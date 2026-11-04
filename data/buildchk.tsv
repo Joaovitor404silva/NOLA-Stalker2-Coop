@@ -90,6 +90,7 @@ inv.off.comp	6b07eff	6b07eff	manifest:invnull,save,wpnsid,natdmg	48 8B 81 ?? ?? 
 inv.off.items	6b07f06	6b07f06	manifest:invnull,save,wpnsid	48 8B 88 ?? ?? ?? ?? 48 85 C9 74 ?? E8 ?? ?? ?? ??
 inv.off.ctr	ff1646	ff1646	manifest:items,save	48 8B 81 ?? ?? ?? ?? C3 41 57 41 56 41 55 41 54
 ldmgr.cleanup	361d26e	361d26e	manifest:ldmgr	48 83 EC 28 48 39 15 ?? ?? ?? ?? 75 09 80 3D ?? ?? ?? ?? 00 75 05 48 83 C4 28 C3 E8 ?? ?? ?? ?? 90 48 83 C4 28 E9 ?? ?? ?? ??
+pcompass.move	d2296	d2296	manifest:pcompass	48 8B 02 48 89 41 10 8B 42 08 89 41 18 F3 0F 10 41 10 F3 0F 10 49 14 F3 0F 10 15 2B 40 D9 08 F3
 s2m_cgcmc_x0	221f7d8	221f7d8	s2m_cgcmc_x0.cpp	56 57 53 48 83 EC 30 0F 29 74 24 20 0F 28 F1 48 89 CE 8B 05 C0 4F B3 08 8B 0D 86 6B CE 07 65 48
 s2m_cgcmc_x0	704a76	704a76	s2m_cgcmc_x0.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 68 0F 29 7C 24 50 0F 29 74 24 40 4C 89 CE 48 89 D7
 s2m_cgcmc_x0	8ff99d	8ff99d	s2m_cgcmc_x0.cpp	F3 0F 10 0D 8F ED 5D 09 E8 2E FE 91 01 84 C0 0F 85 A8 00 00 00 48 83 7F 20 00 74 43 48 8B 07 48
@@ -118,8 +119,10 @@ s2m_ixtap_x0	f8bce6	f8bce6	s2m_ixtap_x0.cpp	41 57 41 56 56 57 53 48 83 EC 40 48 
 s2m_ldmgr	6b306ea	6b306ea	s2m_ldmgr.cpp	48 83 EC 28 48 8B 0D 3B 5E 5C 04 E8 2A 0F 4C FA 48 89 C1 E8 74 80 F9 FE E8 B3 27 AD FB 48 89 C1
 s2m_ldmgr	6b30888	6b30888	s2m_ldmgr.cpp	56 57 53 48 83 EC 20 E8 62 29 A2 FC 48 85 C0 74 08 48 89 C1 E8 CB FD 0D 00 48 8B 0D F0 7C 79 03
 s2m_menu	33308e2	33308e2	s2m_menu.cpp	56 48 83 EC 20 48 8B 81 E0 02 00 00 48 85 C0 74 4A 8B 40 08 0F BA E0 1E 72 41 48 89 CE 48 8B 81
+s2m_menu	3330a7a	3330a7a	s2m_menu.cpp	8B 81 E8 02 00 00 85 C0 78 5F 44 8B 81 18 03 00 00 48 8B 91 10 03 00 00 41 39 C0 7E 5A 48 8B 04
 s2m_pcompass	d05340	d05340	s2m_pcompass.cpp	41 57 41 56 56 57 55 53 48 83 EC 38 4C 89 CE 49 89 CF 48 8B 05 67 47 18 09 48 31 E0 48 89 44 24
 s2m_pcompass	d01d10	d01d10	s2m_pcompass.cpp	41 57 41 56 56 57 53 48 83 EC 30 48 8B 05 9E 7D 18 09 48 31 E0 48 89 44 24 28 44 8B B1 88 01 00
+s2m_pcompass	9b51cc	9b51cc	s2m_pcompass.cpp	F2 0F 5A 42 10 F2 0F 5A 4A 08 F2 0F 5A 12 F3 0F 11 51 10 F3 0F 11 49 14 F3 0F 11 41 18 F2 0F 10
 s2m_qbranch	7a8b56	7a8b56	s2m_qbranch.cpp	41 57 41 56 41 54 56 57 55 53 48 83 EC 40 4C 89 C6 48 89 D7 48 89 CB 48 8B 05 4C 0F 6E 09 48 31
 s2m_qbranch	7aa720	7aa720	s2m_qbranch.cpp	41 57 41 56 41 55 41 54 56 57 55 53 48 83 EC 68 4C 89 4C 24 38 4C 89 C7 48 89 D3 48 89 CE 48 8B
 s2m_qbranch	2ef4ad6	2ef4ad6	s2m_qbranch.cpp	56 57 48 83 EC 38 48 89 D6 48 8B 05 DA 4F F9 06 48 31 E0 48 89 44 24 30 48 8B B9 50 03 00 00 48

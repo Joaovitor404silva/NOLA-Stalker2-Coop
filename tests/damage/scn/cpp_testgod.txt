@@ -1,0 +1,56 @@
+role client
+flag lifeguard 1
+flag dmgin 1
+flag dmgmode 2
+flag downgod 0
+flag testgod 0
+me 100 1 0 0 0
+set me uid 7
+t 0
+do testGod
+do lifeGuard
+do dmgIn
+t 4
+x1 D 1,30.0
+do dmgIn
+hp me
+flag testgod 1
+t 4.1
+do testGod
+hp me
+godq
+set me hp 5
+t 4.2
+do testGod
+do lifeGuard
+hp me
+do lifeStr
+x1 D 2,40.0
+do dmgIn
+hp me
+set me hp 0
+t 4.3
+do testGod
+do lifeGuard
+hp me
+set me hp 5
+t 4.4
+do lifeGuard
+do testGod
+hp me
+do lifeStr
+flag testgod 0
+t 5
+do testGod
+godq
+set me hp 50
+t 5.1
+do testGod
+hp me
+x1 D 3,20.0
+do dmgIn
+hp me
+set me hp 5
+t 5.2
+do lifeGuard
+hp me

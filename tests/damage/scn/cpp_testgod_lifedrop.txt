@@ -1,0 +1,32 @@
+role client
+flag lifeguard 1
+flag downgod 1
+flag lifegod 1
+flag testgod 0
+me 100 1 0 0 0
+set me uid 7
+x1 L a,100,100
+remote 100 0 0 0
+t 0
+do lifeGuard
+flag testgod 1
+t 0.1
+do testGod
+do lifeGuard
+godq
+flag lifegod 0
+t 0.2
+do lifeGuard
+do testGod
+godq
+hit me 100
+t 0.3
+do testGod
+do lifeGuard
+hp me
+godq
+flag testgod 0
+t 0.4
+do testGod
+do lifeGuard
+godq

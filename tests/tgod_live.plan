@@ -1,0 +1,10 @@
+﻿# tgod: harness god default testgod=1 keeps every player alive and at full hp under real damage (codelock save: guest hop self damage + hostile Varta guards; NPCs NOT cleared)
+out D:\modding\proofs\20261104_tgod_live
+up -Calm -Save C:\modding\s2harness\testsave\codelock2605_20261104_host -Dll D:\modding\cpp\wt\tgod\cppbuild\OutFast\NolaNative\NolaNative.dll
+assert alive A
+assert alive B
+assert peer
+run D:\modding\cpp\wt\tgod\tests\tgod_live_spec.txt
+assert alive A
+assert alive B
+shot tgod_end_B on=B

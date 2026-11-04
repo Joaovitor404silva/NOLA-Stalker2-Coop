@@ -221,5 +221,7 @@ sn7reboot	i	1
 salifemc	i	1
 sqhostonly	i	1
 sqhostonlygap	f	3
+srevmsg	i	1
 sqobjsync	i	1
 sqdivmute	i	1
+slockbehind	i	1

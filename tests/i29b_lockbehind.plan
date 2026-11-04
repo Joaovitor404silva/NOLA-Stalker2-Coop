@@ -1,0 +1,15 @@
+﻿# i29b #29 lock-behind door (E03_MQ02 code lock 2605): the host opens the door and walks past the lock trigger while the guest is still outside; the door must stay open until the guest also enters, then shut for both.
+# Check 1 (spec): after the host enters E03_MQ02_Trigger_ToLockDoor alone, A prints `NOLA lockbehind: no E03_MQ02_SendSignal_CloseLabDoor segurado: 1 de 2 jogadores dentro` and B prints no CloseLabDoor_S2C line for 8 s; shot i29b_guest_door_open on B shows the bunker door open. Check 2 (spec): after the guest enters the trigger, A prints `NOLA lockbehind: todos dentro de E03_MQ02_Trigger_ToLockDoor (2 de 2): no E03_MQ02_SendSignal_CloseLabDoor iniciado ok=1`, B applies E03_MQ02_SendSignal_CloseLabDoor_S2C and shot i29b_guest_door_shut on B shows the door shut.
+# Cold boot (no -Reuse): the quest state must be fresh (lock trigger still armed). Trigger box centre 424008,476926,206 (s2u_triggers.tsv, 50x50x100 + 150 margin). Yard spot 424562,477462,205 and the keypad spot 424355,477365,205 are grounded on game D (2026-11-04).
+out D:\modding\proofs\20261104_i29b_lockbehind
+up -Calm -Save C:\modding\s2harness\testsave\codelock2605_20261104_host -Dll D:\modding\cpp\wt\i29b\cppbuild\OutFast\NolaNative\NolaNative.dll
+setflag A lockbehind 1
+assert alive A
+assert alive B
+assert peer
+s2dev A call @cls:CustomConsoleManagerAA XKillNPCInRadius 6000
+wait 3
+mark i29b_start
+run D:\modding\cpp\wt\i29b\tests\i29b_lockbehind_spec.txt
+wait 2
+shot i29b_end on=B

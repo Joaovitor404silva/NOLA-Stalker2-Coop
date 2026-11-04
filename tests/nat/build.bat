@@ -13,4 +13,6 @@ build\test_nat_dsdrop.exe || exit /b 1
 cl /nologo /std:c++17 /EHsc /W3 /O1 /Fo:build\ /Fe:build\test_nat_look.exe test_nat_look.cpp || exit /b 1
 build\test_nat_look.exe || exit /b 1
 cl /nologo /std:c++17 /EHsc /W3 /O1 /Fo:build\ /Fe:build\test_nat_qobj.exe test_nat_qobj.cpp || exit /b 1
-build\test_nat_qobj.exe
+build\test_nat_qobj.exe || exit /b 1
+cl /nologo /std:c++17 /EHsc /W3 /O1 /Fo:build\ /Fe:build\test_nat_lockbehind.exe test_nat_lockbehind.cpp || exit /b 1
+build\test_nat_lockbehind.exe

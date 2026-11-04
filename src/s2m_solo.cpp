@@ -21,6 +21,10 @@
 
 extern "C" bool s2m_lock_dialog_shown();
 extern "C" unsigned long long s2m_lock_dialog_view();
+extern "C" void s2m_pcompass_before_save();
+extern "C" bool s2m_lockbehind_hold(const wchar_t* nodeLower);
+extern "C" bool s2m_lockbehind_on();
+extern "C" void s2m_lockbehind_before_save();
 bool s2m_travel_cine_on();
 
 namespace
@@ -167,6 +171,11 @@ namespace
         InterlockedIncrement(&g_csN);
         mask_apply(slm, false);
         bool r = reinterpret_cast<CanSaveFn>(g_csTr)(slm, type);
+        if (r)
+        {
+            s2m_pcompass_before_save();
+            s2m_lockbehind_before_save();
+        }
         if (!r && g_pol != polStock) InterlockedIncrement(&g_csNo);
         solo::count_pass(g_passCount, g_joinPass != 0, type, r);
         return r;
@@ -284,6 +293,16 @@ namespace
         }
         SnDepth sd(t_snDepth);
         InterlockedIncrement(&g_snSeen);
+        if (n && !g_mute && s2m_lockbehind_on())
+        {
+            std::wstring lb;
+            if (sid_str(*n, lb) && s2m_lockbehind_hold(lb.c_str()))
+            {
+                sid_release(q);
+                sid_release(n);
+                return;
+            }
+        }
         if ((g_mute || g_scHost) && n)
         {
             std::wstring s, qs;

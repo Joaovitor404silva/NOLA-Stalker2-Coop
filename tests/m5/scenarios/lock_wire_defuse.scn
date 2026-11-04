@@ -1,0 +1,19 @@
+role host
+flag ien 1
+flag lockbrk 1
+flag ientoggle 1
+flag ienecho 10
+obj PW BP_Pawn_Stub_C InteractableObject inter 0 0 0
+pawn 0 0 0
+obj W1 BP_Wire_C InteractableObject inter 1000 0 0
+prop W1 bEnabled 1
+prop W1 bBroken 0
+obj G1 BP_Trap_Grenade_C InteractableObject inter 1100 0 0
+prop G1 bEnabled 1
+prop G1 bBroken 0
+time 1
+tick
+remote P 100,0,0;b|110,0,0;b
+tick
+expect_new CALL W1.BndEvt__BP_trap_wire_SignalReceiver_Deactivation_K2Node_ComponentBoundEvent_4_SignalReceiverComponentReceiveSignature__DelegateSignature
+expect_none OnDamageAccumulated

@@ -1,0 +1,19 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT god_held=false bit=false
+CALL build XSetEntityUnkillableByUID 7 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA testgod: LIGADO uid=7: Unkillable + hp de volta ao maximo a cada tick, dano roteado e queda ignorados
+OUT god_held=true bit=true
+OUT god_held=true bit=true
+GAME hit me 100.0 -> hp=0.0 alive=true god=true
+CALL me ForceSetHP 100
+LOG NOLA testgod: hp 0.0 -> 100.0 (recarga #1)
+OUT me hp=100.0 alive=true
+OUT god_held=true bit=true
+CALL build XSetEntityUnkillableByUID 7 false
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+LOG NOLA testgod: DESLIGADO uid=7 (testgod 0) ok=true; 1 recargas, 0 danos roteados ignorados
+OUT god_held=false bit=false
