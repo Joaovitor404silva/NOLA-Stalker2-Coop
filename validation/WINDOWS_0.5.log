@@ -1,0 +1,12 @@
+PASS: decompression budgets, session replay rejection, NPC isolation, reconnect resend
+PASS: 4 downed-state cases; no timed death/stand-up, late revive; all-down team wipe
+PASS: HOME hold, nearest standing target, release cancellation, blocked destinations, stale/silent exclusion, downed state preserved, no repeat
+PASS: revive prompts, no-medkit feedback, held-key consumption guard, stale snapshot retry/expiry and session change cancellation
+PASS: persistent downed notice without death or auto-stand countdown
+PASS: remote down notice, no per-tick/stale-gap spam, new notice after second down
+PASS: verified debit, delayed debit, rejected revive refund once, accepted revive, wrong sender/sequence/session rejection, missing acknowledgement lock, failed refund no retry, competing rescuers
+PASS: two-player legacy topology also refunds exactly once
+Build finished. Preserve your installed DLL before replacing it. Use the same patched build on all players.
+PASS: Steam installation and existing mod preservation
+PASS: IP reinstall and original backup preservation
+PASS: uninstall restored every original file byte-for-byte; no extra files remain

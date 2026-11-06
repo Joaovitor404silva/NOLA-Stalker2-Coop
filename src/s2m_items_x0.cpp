@@ -921,7 +921,15 @@ X0_MODULE(items)
         if (on() && s2m_save::lootSids().empty() && !s2m_items::lootSids().empty()) s2m_save::setLootSids(s2m_items::lootSids());
     });
     x0::key(x0::Mod::items, 'G', [] { g_env.latch(); });
-    s2m::damage::links().item_take = [](const std::string& sid) { return on() && s2m_items::itemRemove("P", sid, "1", ""); };
+    s2m::damage::links().item_take = [](const std::string& sid) {
+        // A queued removal is not a completed debit. Do not leave a delayed
+        // removal in the generic queue after a revive has been cancelled.
+        std::string err;
+        return on() && g_env.startNode("S2U_P_" + sid + "_1", err);
+    };
+    s2m::damage::links().item_refund = [](const std::string& sid) {
+        return on() && g_env.createItem(sid, 0, 1);
+    };
     s2m_quest::hooks().campaign_rotated = [] { if (on()) s2m_items::campaignRotated(); };
     x0::on_role(x0::Mod::items, [](const std::string&, const std::string&) { if (on()) s2m_items::roleChanged(); });
     x0::own_tag(x0::Mod::items, "K", [] { return s2m_items::outK(); });

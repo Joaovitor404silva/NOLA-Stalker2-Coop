@@ -7,6 +7,8 @@
 #include <vector>
 #include "s2x.h"
 
+namespace s2m_pop { struct VendHit; }
+
 namespace s2m_lock
 {
     struct MqEpisode
@@ -45,6 +47,7 @@ namespace s2m_lock
             bool own = false;
             bool comp_ok = false;
             bool active = false;
+            bool vendor = false;
             x0::Vec3 pos;
         };
 
@@ -76,6 +79,7 @@ namespace s2m_lock
             virtual x0::Ref dialog_view() = 0;
             virtual x0::Ref vend_view() = 0;
             virtual bool interacted_actor(x0::Vec3* pos) = 0;
+            virtual bool interacted_vendor(s2m_pop::VendHit& out) = 0;
             virtual int answers_vis(const x0::Ref& view) = 0;
             virtual bool set_answers_vis(const x0::Ref& view, int vis) = 0;
             virtual bool close_dialog(const x0::Ref& view) = 0;

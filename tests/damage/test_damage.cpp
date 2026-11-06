@@ -48,8 +48,8 @@ namespace
     bool OTHERGOD = false;
     std::map<std::string, int> INV;
     std::function<void()> KEYF;
-    bool KEYDOWN = false;
-    bool TAKEOK = true;
+    bool KEYDOWN = false, HOME = false, TELEPORT_OK = true;
+    bool TAKEOK = true, TAKEDELAY = false, REFUNDOK = true;
     bool PARKED = false, CINE = false, CINEFZ = false;
     m01::Dmg DMG;
     std::map<std::string, std::function<void()>> ROWS;
@@ -126,6 +126,12 @@ namespace
         if (f == "IsWounded") { c.rbool = o.wounded; return true; }
         if (f == "IsFallingWounded") { c.rbool = false; return true; }
         if (f == "K2_GetActorLocation") { c.rvec = {o.x, o.y, o.z}; return true; }
+        if (f == "K2_TeleportTo") {
+            c.rbool = TELEPORT_OK;
+            if (TELEPORT_OK) { o.x=c.rvec.x; o.y=c.rvec.y; o.z=c.rvec.z; }
+            out(std::string("TELEPORT ")+(TELEPORT_OK ? "ok " : "blocked ")+f2("%.0f",c.rvec.x)+","+f2("%.0f",c.rvec.y)+","+f2("%.0f",c.rvec.z));
+            return true;
+        }
         if (f == "GetVelocity") { c.rvec = {o.vx, o.vy, o.vz}; return true; }
         if (f == "GetScaledCapsuleRadius") { c.rnum = W[o.pwn].capr; return true; }
         if (f == "GetScaledCapsuleHalfHeight") { c.rnum = W[o.pwn].caph; return true; }
@@ -274,14 +280,17 @@ namespace x0
     std::vector<std::string> UIREC;
     void ui_msg(std::string_view id, std::string_view text, double secs)
     {
+        out("UI " + std::string(text));
         UIREC.push_back("MSG " + std::string(id) + " " + std::string(text) + " " + std::to_string((int)secs));
     }
     void screen_text_clear(std::string_view id)
     {
+        out("UI_CLEAR " + std::string(id));
         UIREC.push_back("CLEAR " + std::string(id));
     }
     void ui_top(std::string_view id, std::string_view text, double secs)
     {
+        out("UI_TOP " + std::string(text));
         UIREC.push_back("TOP " + std::string(id) + " " + std::string(text) + " " + std::to_string((int)secs));
     }
     void ui_top_clear(std::string_view id)
@@ -402,6 +411,8 @@ namespace x0
     Call& Call::o(const wchar_t* p, const Ref& v) { static_cast<CD*>(fn_)->ob[ws2s(p)] = idx_of(v); return *this; }
     Call& Call::n(const wchar_t* p, const wchar_t* fname) { static_cast<CD*>(fn_)->nm[ws2s(p)] = ws2s(fname); return *this; }
     Call& Call::s(const wchar_t* p, const std::wstring& v) { static_cast<CD*>(fn_)->nm[ws2s(p)] = ws2s(v.c_str()); return *this; }
+    Call& Call::v(const wchar_t*, const Vec3& v) { static_cast<CD*>(fn_)->rvec=v; return *this; }
+    Call& Call::r(const wchar_t*, const Rot& v) { static_cast<CD*>(fn_)->rrot=v; return *this; }
     bool Call::run()
     {
         ran_ = dispatch(idx_of(self_), *static_cast<CD*>(fn_));
@@ -492,7 +503,7 @@ namespace x0
         if (vk == 'F') KEYF = std::move(on_press);
         return 1;
     }
-    bool key_down(int vk) { return vk == 'F' && KEYDOWN; }
+    bool key_down(int vk) { return (vk == 'F' && KEYDOWN) || (vk == 0x24 && HOME); }
     std::function<std::string()> STATUSF;
     void status(Mod, std::function<std::string()> f) { STATUSF = std::move(f); }
     Iface& iface() { return IF; }
@@ -500,13 +511,13 @@ namespace x0
     {
         if (name == "revive_items.tsv" || name == "revive_heal.tsv")
         {
-            std::ifstream f(data_dir + "\\" + std::string(name));
+            std::ifstream f(data_dir + "/" + std::string(name));
             std::string line;
             bool head = true;
             int kcols = 0;
             while (std::getline(f, line))
             {
-                if (!line.empty() && line.back() == '') line.pop_back();
+                if (!line.empty() && line.back() == '\r') line.pop_back();
                 std::vector<std::string> c;
                 size_t b = 0;
                 while (true)
@@ -616,8 +627,8 @@ int main(int argc, char** argv)
 {
     if (argc < 3) return 2;
     data_dir = argv[1];
-    load_flags(data_dir + "\\flags_s2core.tsv");
-    load_flags(data_dir + "\\flags_main.tsv");
+    load_flags(data_dir + "/flags_s2core.tsv");
+    load_flags(data_dir + "/flags_main.tsv");
     MED = add("med", "CppMediator /Script/Stalker2.Default__CppMediator", false);
     PC = add("pc", "PlayerController /Game:PersistentLevel.pc", false);
     BLD = add("build", "CustomConsoleManagerBuild /Game:PersistentLevel.build", false);
@@ -630,8 +641,13 @@ int main(int argc, char** argv)
     s2m::damage::links().nd_on = [] { return x0::fi("natdmg", 0) == 1; };
     s2m::damage::links().item_take = [](const std::string& sid) {
         out("CALL itemRemove P " + sid + " 1 -> " + (TAKEOK ? "true" : "false"));
-        if (TAKEOK && INV[sid] > 0) INV[sid]--;
+        if (TAKEOK && !TAKEDELAY && INV[sid] > 0) INV[sid]--;
         return TAKEOK;
+    };
+    s2m::damage::links().item_refund = [](const std::string& sid) {
+        out("CALL itemRefund " + sid);
+        if (REFUNDOK) INV[sid]++;
+        return REFUNDOK;
     };
     s2m::damage::links().shot_deny = [](const x0::Ref&) { return false; };
     s2m::damage::links().last_cause = [](double& age) { int c = LHC; LHC = 0; age = c ? NOW - LHAT : 1e9; return c; };
@@ -755,8 +771,12 @@ int main(int argc, char** argv)
         else if (cmd == "unload") s2m_downview_unload();
         else if (cmd == "inv") INV[a[0]] = (int)D(1);
         else if (cmd == "invq") out("OUT inv " + a[0] + "=" + std::to_string(INV[a[0]]));
+        else if (cmd == "takedelay") TAKEDELAY = a[0] == "1";
+        else if (cmd == "refundok") REFUNDOK = a[0] == "1";
         else if (cmd == "takeok") TAKEOK = a[0] == "1";
         else if (cmd == "keyf") { if (KEYF) KEYF(); }
+        else if (cmd == "home") HOME = a[0] == "1";
+        else if (cmd == "teleportok") TELEPORT_OK = a[0] == "1";
         else if (cmd == "keydown") KEYDOWN = a[0] == "1";
         else if (cmd == "loadtry")
         {
@@ -798,6 +818,12 @@ int main(int argc, char** argv)
             p.state = a[1] == "up" ? x0::Peer::up : a[1] == "none" ? x0::Peer::none : x0::Peer::silent;
             p.left = a.size() > 2 && a[2] == "left";
             if (a.size() > 3) { p.id = a[3]; p.sessions = (int)D(4); }
+        }
+        else if (cmd == "ack")
+        {
+            std::string token = TAGS["RT"]();
+            token = token.substr(token.find(',') + 1);
+            X1V[(int)D(0)]["RA"] = "1|" + a[1] + "," + a[2] + "," + a[3] + "," + token;
         }
         else if (cmd == "vx1")
         {
@@ -870,6 +896,7 @@ int main(int argc, char** argv)
             const std::string& n = a[0];
             if (n == "dmgStr") out("OUT " + TAGS["D"]());
             else if (n == "lifeStr") out("OUT " + TAGS["L"]());
+            else if (n == "raStr") out("OUT " + TAGS["RA"]());
             else if (n == "rvStr") out("OUT " + TAGS["RV"]());
             else if (n == "ffStr") out("OUT " + TAGS["FF"]());
             else if (n == "mdStr") out("OUT " + TAGS["MD"]());

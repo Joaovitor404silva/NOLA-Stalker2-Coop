@@ -9,6 +9,7 @@
 #include "s2n_rel_core.inc"
 #include <algorithm>
 #include <cmath>
+#include <chrono>
 #include <cstdarg>
 #include <cstdint>
 #include <cstdio>
@@ -294,11 +295,12 @@ namespace s2m::damage
             int64_t rev = 0, die = 0;
             bool seen = false;
             int64_t rRev = 0, rDie = 0;
-            int64_t req = 0, reqWaitLog = 0;
+            int64_t req = 0, reqWaitLog = 0, reqNonce = 0;
             double reqAt = 0;
             bool press = false;
+            bool keyHeld = false;
+            double hintAt = -1e9;
             bool downTxt = false;
-            int downLeft = -1;
             std::string done;
             double sentUntil = -1, noUntil = -1;
             bool pd = false, pdWait = false;
@@ -310,6 +312,8 @@ namespace s2m::damage
             bool dwAlive = false;
             int64_t tpid = 0;
             int reqView = 0;
+            std::string reqPeerId;
+            int reqPeerSession = -1;
             bool ctx = false;
             int item = 0;
             int reqItem = 0;
@@ -324,6 +328,27 @@ namespace s2m::damage
                 size_t next = 0;
             } tr;
         } RV;
+
+        // One local debit in flight. A missing acknowledgement is NOT rejection.
+        const int64_t reviveNonce = 1 + (uint64_t)std::chrono::high_resolution_clock::now().time_since_epoch().count() % 999999999999999998ULL;
+        struct RevivePayment
+        {
+            enum Phase { idle, debit, waiting, refund, uncertain } phase = idle;
+            Ref pawn;
+            std::string sid, peerId;
+            int view = 0, session = 0, before = 0;
+            int64_t seq = 0, pid = 0;
+            bool receipts = false, warned = false;
+            double at = 0;
+        } RPay;
+        struct ReviveReceipt
+        {
+            std::string peerId;
+            int session = 0, pid = 0;
+            int64_t seq = 0, nonce = 0;
+            bool accepted = false;
+        };
+        std::map<int, ReviveReceipt> RACK;
 
         struct VLife
         {
@@ -1268,6 +1293,143 @@ namespace s2m::damage
             return f.size() >= lo && f.size() <= hi;
         }
 
+        int64_t rv_request_nonce(int view, int64_t seq)
+        {
+            std::string raw;
+            std::vector<int64_t> f;
+            return x0::rpart("RT", raw, view) && rv_fields(raw, 2, 2, f) && f[0] == seq ? f[1] : 0;
+        }
+
+        void rv_receipt(int view, int64_t seq, bool accepted, int64_t nonce)
+        {
+            const auto& peer = x0::peer(view);
+            RACK[view] = {peer.id, peer.sessions, multi() ? x0::view_pid(view) + 1 : 0, seq, nonce, accepted};
+        }
+
+        void rv_finish_req(bool accepted)
+        {
+            if (!RV.req) return;
+            int view = multi() ? RV.reqView : 0;
+            const auto& peer = x0::peer(view);
+            if (peer.id == RV.reqPeerId && peer.sessions == RV.reqPeerSession)
+                rv_receipt(view, RV.req, accepted, RV.reqNonce);
+            RV.req = 0;
+        }
+
+        std::string rv_ack_out()
+        {
+            std::string out = "#RA:1";
+            for (const auto& kv : RACK)
+            {
+                const auto& a = kv.second;
+                const auto& peer = x0::peer(kv.first);
+                if (peer.id == a.peerId && peer.sessions == a.session)
+                    out += fmt("|%d,%lld,%d,%lld", a.pid, (long long)a.seq, a.accepted ? 1 : 0, (long long)a.nonce);
+            }
+            return out;
+        }
+
+        int rv_item_index(const std::string& sid);
+        int item_count(const Ref& pw, const std::string& sid);
+
+        void rv_payment_tick()
+        {
+            if (RPay.phase == RevivePayment::idle) return;
+            double now = x0::now();
+            Ref pw = local_pawn();
+            const auto& peer = x0::peer(RPay.view);
+            if (!pw || !pw.same(RPay.pawn) || peer.id != RPay.peerId || peer.sessions != RPay.session)
+                RPay.phase = RevivePayment::uncertain;
+            // Do not publish a long-delayed debit as a fresh revive attempt.
+            if (RPay.phase == RevivePayment::debit && now - RPay.at >= 10)
+                RPay.phase = RevivePayment::uncertain;
+            if (RPay.phase == RevivePayment::debit && item_count(pw, RPay.sid) == RPay.before - 1)
+            {
+                RV.rev++;
+                RPay.seq = RV.rev;
+                RV.tpid = RPay.pid;
+                RV.item = F_reviveheal.i() == 1 ? rv_item_index(RPay.sid) : 0;
+                g_rvStart = now;
+                RV.sentUntil = now + 5;
+                RPay.phase = RPay.receipts ? RevivePayment::waiting : RevivePayment::idle;
+                x0::ui_msg("s2m_revive", "Revive requested. Stay close; release F. Waiting for your teammate.", 5);
+            }
+            if (RPay.phase == RevivePayment::waiting)
+            {
+                std::string raw;
+                if (x0::rpart("RA", raw, RPay.view) && raw.rfind("1|", 0) == 0)
+                {
+                    size_t begin = 2;
+                    while (begin < raw.size())
+                    {
+                        size_t end = raw.find('|', begin);
+                        std::vector<int64_t> f;
+                        if (rv_fields(raw.substr(begin, end == std::string::npos ? end : end - begin), 4, 4, f)
+                            && f[0] == (multi() ? x0::my_pid() + 1 : 0) && f[1] == RPay.seq && f[2] <= 1 && f[3] == reviveNonce)
+                        {
+                            if (f[2] == 1)
+                            {
+                                RPay.phase = RevivePayment::idle;
+                                x0::ui_msg("s2m_revive", "Your teammate accepted the revive.", 3);
+                            }
+                            else
+                            {
+                                // Mark BEFORE invoking: never replay a possibly successful grant.
+                                RPay.phase = RevivePayment::refund;
+                                RPay.before = item_count(pw, RPay.sid);
+                                RPay.at = now;
+                                RPay.warned = false;
+                                if (RPay.before < 0 || !g_links.item_refund || !g_links.item_refund(RPay.sid))
+                                    RPay.phase = RevivePayment::uncertain;
+                            }
+                            break;
+                        }
+                        if (end == std::string::npos) break;
+                        begin = end + 1;
+                    }
+                }
+            }
+            if (RPay.phase == RevivePayment::refund && item_count(pw, RPay.sid) == RPay.before + 1)
+            {
+                RPay.phase = RevivePayment::idle;
+                x0::ui_msg("s2m_revive", "Revive rejected: your medkit was returned.", 4);
+            }
+            if (RPay.phase != RevivePayment::idle && !RPay.warned &&
+                (RPay.phase == RevivePayment::uncertain || now - RPay.at >= 10))
+            {
+                RPay.warned = true;
+                x0::ui_msg("s2m_revive", "Revive result unresolved. Further medkit use is blocked; no automatic retry or refund.", 8);
+                x0::logf("NOLA REVIVE: unresolved payment seq=%lld item=%s phase=%d", (long long)RPay.seq, RPay.sid.c_str(), (int)RPay.phase);
+            }
+        }
+
+        void rv_pay(const Ref& pw, const std::string& sid, int have, int view)
+        {
+            if (RPay.phase != RevivePayment::idle) return;
+            const auto& peer = x0::peer(view);
+            RPay = RevivePayment{};
+            RPay.phase = RevivePayment::debit;
+            RPay.pawn = pw;
+            RPay.sid = sid;
+            RPay.before = have;
+            RPay.view = view;
+            RPay.peerId = peer.id;
+            RPay.session = peer.sessions;
+            RPay.pid = multi() ? x0::view_pid(view) : 0;
+            RPay.at = x0::now();
+            std::string cap;
+            RPay.receipts = x0::rpart("RA", cap, view) && (cap == "1" || cap.rfind("1|", 0) == 0);
+            if (!g_links.item_take) { RPay.phase = RevivePayment::idle; return; }
+            bool called = g_links.item_take(sid);
+            // A failed native call can still have side effects. Inspect before retrying.
+            rv_payment_tick();
+            if (!called && RPay.phase == RevivePayment::debit)
+            {
+                RPay.phase = RevivePayment::uncertain;
+                rv_payment_tick();
+            }
+        }
+
         bool parse_rv(int64_t& rev, int64_t& die, int64_t& item)
         {
             std::string s;
@@ -1580,9 +1742,13 @@ namespace s2m::damage
                     L.rRev = a;
                     if (tp == x0::my_pid())
                     {
+                        if (RV.req) { rv_receipt(v, a, false, rv_request_nonce(v, a)); return; }
                         RV.req = a;
+                        RV.reqNonce = rv_request_nonce(v, a);
                         RV.reqAt = now;
                         RV.reqView = v;
+                        RV.reqPeerId = x0::peer(v).id;
+                        RV.reqPeerSession = x0::peer(v).sessions;
                         RV.reqItem = (int)it;
                     }
                 }
@@ -1625,6 +1791,79 @@ namespace s2m::damage
             return hit;
         }
 
+        // Local rescue only: never changes health, life state, or revive requests.
+        void rescue_tick()
+        {
+            static Ref owner;
+            static double began = -1, last = -1, next = 0;
+            static bool consumed = false;
+            static int shown = -1;
+            auto clear_progress = [&] { if (shown >= 0) x0::screen_text_clear("s2m_rescue"); shown = -1; };
+            const double now = x0::now();
+            Ref pw = local_pawn();
+            if (!pw.same(owner)) { clear_progress(); owner = pw; began = last = -1; next = 0; consumed = false; }
+            const bool held = x0::key_down(0x24); // VK_HOME
+            if (!held) { clear_progress(); began = last = -1; consumed = false; return; }
+            if (!pw || !LF.down || LF.dying || LF.both || GO.dying || !alive_of(pw) ||
+                !peer_in() || host_cine_now() || cine_frozen_now())
+            { clear_progress(); began = last = -1; consumed = true; return; }
+            if (consumed) return;
+            if (now < next)
+            {
+                x0::ui_msg("s2m_rescue", "Rescue is cooling down. Release HOME and try again shortly.", 3);
+                consumed = true; return;
+            }
+            // A stalled/paused scheduler must not count as a continuous hold.
+            if (began < 0 || now < last || now - last > 0.5) began = now;
+            last = now;
+            if (now - began < 5.0)
+            {
+                int remaining = (int)std::ceil(5.0 - (now - began));
+                if (remaining != shown)
+                {
+                    x0::ui_msg("s2m_rescue", fmt("Rescue in %d seconds - moving to the nearest standing player. Keep holding HOME; release to cancel.", remaining), 1.5);
+                    shown = remaining;
+                }
+                return;
+            }
+            clear_progress();
+            consumed = true; // Release HOME before another attempt, even on failure.
+            Vec3 lp;
+            if (!loc_of(pw, lp)) { x0::ui_msg("s2m_rescue", "Rescue unavailable: player position could not be read.", 4); return; }
+            int best = -1;
+            double distance = 0;
+            Vec3 dest;
+            double yaw = 0;
+            x0::each_view([&](int v, const x0::Snap& r, const x0::Peer&) {
+                char st = 0; double hp = 0, mx = 0;
+                if (!view_fresh(v, now) || r.recv > now || !parse_life(st, hp, mx, v) || st != 'a' || hp <= 0 ||
+                    !std::isfinite(r.x) || !std::isfinite(r.y) || !std::isfinite(r.z) || !std::isfinite(r.yaw)) return;
+                double d = (r.x-lp.x)*(r.x-lp.x)+(r.y-lp.y)*(r.y-lp.y)+(r.z-lp.z)*(r.z-lp.z);
+                if (!std::isfinite(d) || (best >= 0 && d >= distance)) return;
+                best = v; distance = d; dest = {r.x,r.y,r.z}; yaw = r.yaw;
+            });
+            if (best < 0) { x0::ui_msg("s2m_rescue", "Rescue unavailable: no standing player with a current position.", 4); x0::log("NOLA RESCUE: no standing teammate with a fresh position"); return; }
+            // Try beside the nearest player; TeleportTo checks encroachment and may
+            // adjust the destination. Never fall back to an unchecked SetLocation.
+            for (int i = 0; i < 8; ++i)
+            {
+                double angle = (yaw + 90 + i * 45) * 0.017453292519943295;
+                Call c(pw, L"K2_TeleportTo");
+                c.v(L"DestLocation", {dest.x + 120 * std::cos(angle), dest.y + 120 * std::sin(angle), dest.z});
+                c.r(L"DestRotation", {0, yaw, 0});
+                if (c.run() && c.rb())
+                {
+                    next = now + 10;
+                    x0::ui_msg("s2m_rescue", "Moved beside the nearest standing player. You still need to be revived.", 5);
+                    LF.hasNear = false;
+                    x0::logf("NOLA RESCUE: moved beside %s; still downed, awaiting revive", pname(x0::view_pid(best)).c_str());
+                    return;
+                }
+            }
+            x0::ui_msg("s2m_rescue", "Rescue blocked: no space beside the nearest player. Release HOME and try again.", 4);
+            x0::log("NOLA RESCUE: nearby positions blocked; release HOME and try again");
+        }
+
         void rv_watch(double now)
         {
             if (multi()) { rv_watch_multi(now); return; }
@@ -1640,8 +1879,12 @@ namespace s2m::damage
             if (a > RV.rRev)
             {
                 RV.rRev = a;
+                if (RV.req) { rv_receipt(0, a, false, rv_request_nonce(0, a)); return; }
                 RV.req = a;
+                RV.reqNonce = rv_request_nonce(0, a);
                 RV.reqAt = now;
+                RV.reqPeerId = x0::peer().id;
+                RV.reqPeerSession = x0::peer().sessions;
                 RV.reqItem = (int)it;
             }
             if (b > RV.rDie)
@@ -1699,6 +1942,15 @@ namespace s2m::damage
             return true;
         }
 
+        bool rv_pressed()
+        {
+            bool held = x0::key_down('F');
+            bool pressed = (RV.press || held) && !RV.keyHeld;
+            RV.keyHeld = held;
+            RV.press = false;
+            return pressed;
+        }
+
         std::string rv_partner(int view)
         {
             return view >= 0 ? pname(x0::view_pid(view)) : nola_text::tx(nola_text::T::rev_partner);
@@ -1732,27 +1984,12 @@ namespace s2m::damage
             rv_say("revprompt", nola_text::T::rev_prompt, name, 2.5);
         }
 
-        int rv_down_left()
-        {
-            double l = F_downsecs.d() - (x0::now() - LF.at);
-            return l > 0 ? (int)std::ceil(l) : 0;
-        }
-
         void rv_down_say(bool fresh = true)
         {
             if (x0::fi("revmsg", 1) != 1) return;
-            using nola_text::T;
-            bool die = F_downdie.i() == 1;
-            int left = rv_down_left();
-            RV.downLeft = left;
-            char b[320];
-            if (F_reviveitem.i() == 1)
-                std::snprintf(b, sizeof b, nola_text::tx(die ? T::rev_down_item_die : T::rev_down_item_up).c_str(), (double)left);
-            else
-                std::snprintf(b, sizeof b, nola_text::tx(die ? T::rev_down_prox_die : T::rev_down_prox_up).c_str(), F_revivesecs.d(), (double)left);
             if (fresh) RV.done.clear();
             RV.downTxt = true;
-            x0::ui_top("revdown", b, 0);
+            x0::ui_top("revdown", nola_text::tx(nola_text::T::rev_down_unlimited), 0);
         }
 
         void rv_down_clear()
@@ -1773,17 +2010,36 @@ namespace s2m::damage
         void rv_done_flush(bool camBusy, bool alive)
         {
             if (!LF.down) rv_down_clear();
-            else if (RV.downTxt && rv_down_left() != RV.downLeft) rv_down_say(false);
             if (RV.done.empty() || camBusy) return;
             if (alive && !LF.down) x0::ui_top("revdone", RV.done, 4);
             RV.done.clear();
         }
 
+        void rv_peer_notices(double now)
+        {
+            struct Seen { std::string id; int session = -1; bool down = false; };
+            static std::map<int, Seen> seen;
+            std::map<int, Seen> current;
+            x0::each_view([&](int v, const x0::Snap&, const x0::Peer& peer) {
+                Seen old = seen[v];
+                if (old.id != peer.id || old.session != peer.sessions) old = {peer.id, peer.sessions, false};
+                char state = 0; double hp = 0, mx = 0;
+                // Preserve state across brief packet gaps; do not repeat a down alert.
+                if (view_fresh(v, now) && parse_life(state, hp, mx, v))
+                {
+                    bool down = state == 'w';
+                    if (down && !old.down) rv_say(("revpeerdown" + std::to_string(v)).c_str(), nola_text::T::rev_peer_down, rv_partner(v), 5);
+                    old.down = down;
+                }
+                current[v] = old;
+            });
+            seen.swap(current);
+        }
+
         void rv_tick_multi()
         {
             double now = x0::now();
-            bool press = RV.press || x0::key_down('F');
-            RV.press = false;
+            bool press = rv_pressed();
             Ref pw = local_pawn();
             bool on = F_reviveitem.i() == 1 && F_lifeguard.i() == 1;
             bool meOk = on && pw && !LF.down && alive_of(pw);
@@ -1791,9 +2047,9 @@ namespace s2m::damage
             std::string who = best >= 0 ? pname(x0::view_pid(best)) : std::string();
             double dist = -1;
             RV.ctx = best >= 0 && remote_near(pw, now, F_reviveradius.d(), dist, best);
-            rv_prompt(RV.ctx && now >= RV.sentUntil, who, now);
+            rv_prompt(RV.ctx && RPay.phase == RevivePayment::idle && now >= RV.sentUntil && now >= RV.hintAt, who, now);
             if (!press || !RV.ctx) return;
-            if (now < RV.sentUntil || now < RV.noUntil) return;
+            if (now < RV.sentUntil || now < RV.noUntil || RPay.phase != RevivePayment::idle) return;
             std::string got;
             int have = 0;
             for (const std::string& sid : rv_items())
@@ -1804,34 +2060,22 @@ namespace s2m::damage
             if (got.empty())
             {
                 RV.noUntil = now + 1;
+                x0::ui_msg("s2m_revive", "Cannot revive: you need a medkit. Release F before trying again.", 3);
+                RV.hintAt = now + 3;
                 x0::logf("NOLA LIFE: F perto de %s caido (%.0f cm) sem medkit (%d tipos procurados): nada feito", who.c_str(), dist, (int)rv_items().size());
-                rv_say("revneed", nola_text::T::rev_nomedkit, who, 3);
                 return;
             }
-            bool ok = g_links.item_take && g_links.item_take(got);
-            if (!ok)
-            {
-                RV.noUntil = now + 1;
-                x0::logf("NOLA LIFE: F perto de %s caido: %s nao pode ser consumido (ItemRemove recusado): nada enviado", who.c_str(), got.c_str());
-                return;
-            }
-            RV.rev++;
-            g_rvStart = x0::now();
-            RV.item = F_reviveheal.i() == 1 ? rv_item_index(got) : 0;
-            RV.tpid = x0::view_pid(best);
-            RV.sentUntil = now + 5;
-            x0::logf("NOLA LIFE: REANIMAR: F perto de %s caido (%.0f cm): 1 %s consumido (tinha %d), pedido #%lld para pid %lld enviado", who.c_str(), dist, got.c_str(), have,
-                     (long long)RV.rev, (long long)RV.tpid);
-            rv_say("revsent", nola_text::T::rev_sent, who, 3);
+            rv_pay(pw, got, have, best);
         }
 
         void rv_tick()
         {
+            rv_payment_tick();
             heal_trace(x0::now());
+            rv_peer_notices(x0::now());
             if (multi()) { rv_tick_multi(); return; }
             double now = x0::now();
-            bool press = RV.press || x0::key_down('F');
-            RV.press = false;
+            bool press = rv_pressed();
             Ref pw = local_pawn();
             char st = 0;
             double rh, rm;
@@ -1840,9 +2084,9 @@ namespace s2m::damage
             double dist = -1;
             RV.ctx = partnerDown && remote_near(pw, now, F_reviveradius.d(), dist);
             std::string who = rv_partner(-1);
-            rv_prompt(RV.ctx && now >= RV.sentUntil, who, now);
+            rv_prompt(RV.ctx && RPay.phase == RevivePayment::idle && now >= RV.sentUntil && now >= RV.hintAt, who, now);
             if (!press || !RV.ctx) return;
-            if (now < RV.sentUntil || now < RV.noUntil) return;
+            if (now < RV.sentUntil || now < RV.noUntil || RPay.phase != RevivePayment::idle) return;
             std::string got;
             int have = 0;
             for (const std::string& sid : rv_items())
@@ -1853,23 +2097,12 @@ namespace s2m::damage
             if (got.empty())
             {
                 RV.noUntil = now + 1;
+                x0::ui_msg("s2m_revive", "Cannot revive: you need a medkit. Release F before trying again.", 3);
+                RV.hintAt = now + 3;
                 x0::logf("NOLA LIFE: F perto do outro jogador caido (%.0f cm) sem medkit (%d tipos procurados): nada feito", dist, (int)rv_items().size());
-                rv_say("revneed", nola_text::T::rev_nomedkit, who, 3);
                 return;
             }
-            bool ok = g_links.item_take && g_links.item_take(got);
-            if (!ok)
-            {
-                RV.noUntil = now + 1;
-                x0::logf("NOLA LIFE: F perto do outro jogador caido: %s nao pode ser consumido (ItemRemove recusado): nada enviado", got.c_str());
-                return;
-            }
-            RV.rev++;
-            g_rvStart = x0::now();
-            RV.item = F_reviveheal.i() == 1 ? rv_item_index(got) : 0;
-            RV.sentUntil = now + 5;
-            x0::logf("NOLA LIFE: REANIMAR: F perto do outro jogador caido (%.0f cm): 1 %s consumido (tinha %d), pedido #%lld enviado", dist, got.c_str(), have, (long long)RV.rev);
-            rv_say("revsent", nola_text::T::rev_sent, who, 3);
+            rv_pay(pw, got, have, 0);
         }
 
         void bleed_out(const Ref& pw, double now)
@@ -1880,7 +2113,7 @@ namespace s2m::damage
                 if (!LF.dieWait)
                 {
                     LF.dieWait = true;
-                    x0::logf("NOLA LIFE: tempo esgotado (%lld s) mas a cinematica/emissao segura o Unkillable: a morte espera", (long long)F_downsecs.i());
+                    x0::log("NOLA LIFE: fim de jogo espera a cinematica/emissao liberar Unkillable");
                 }
                 return;
             }
@@ -2006,10 +2239,11 @@ namespace s2m::damage
             if (multi()) go_watch(now);
             death_watch(pw);
             load_guard(pw);
-            if (g_links.nd_dead && g_links.nd_dead()) return;
-            if (pw && partner_death(pw, now)) return;
+            if (g_links.nd_dead && g_links.nd_dead()) { rv_finish_req(false); return; }
+            if (pw && partner_death(pw, now)) { rv_finish_req(false); return; }
             if (F_lifeguard.i() != 1 || !pw)
             {
+                rv_finish_req(false);
                 if (LF.down && pw && LF.frozen) move_back(pw);
                 god_drop(pw ? "lifeguard desligado" : "sem pawn");
                 LF.down = false;
@@ -2024,6 +2258,7 @@ namespace s2m::damage
                 if (LF.down)
                     x0::logf("NOLA LIFE: MORREU ENQUANTO CAIDO (hp=%s alive=%s, caido ha %.1f s, ultimo sangramento=%s)", std::isnan(hp) ? "nil" : lnum(hp).c_str(),
                              tf(alive), now - LF.at, LF.lastBleed.c_str());
+                rv_finish_req(false);
                 god_drop("morte");
                 if (LF.down || LF.dying) life_reset();
                 LF.down = false;
@@ -2037,7 +2272,7 @@ namespace s2m::damage
                 if (RV.req)
                 {
                     x0::logf("NOLA LIFE: pedido de reanimacao #%lld ignorado: nao estou caido", (long long)RV.req);
-                    RV.req = 0;
+                    rv_finish_req(false);
                 }
                 if (hp <= F_downhp.d() && peer_in() && F_testgod.i() != 1)
                 {
@@ -2045,7 +2280,7 @@ namespace s2m::damage
                     LF.at = now;
                     LF.hasNear = false;
                     LF.downs++;
-                    DI.downUntil = now + F_downsecs.d();
+                    DI.downUntil = now + 1; // Renewed while down; no bleed-out deadline.
                     LF.lethal = 0;
                     LF.dieWait = false;
                     LF.killAt = 0;
@@ -2060,12 +2295,7 @@ namespace s2m::damage
                     god_take(pw, false);
                     LF.lastBleed = lnum(bleed_clear(pw));
                     if (F_downfreeze.i() == 1) LF.frozen = move_off(pw);
-                    if (F_reviveitem.i() == 1)
-                        x0::logf("NOLA LIFE: CAIDO #%d (hp %.1f <= %lld); %s em %lld s ou com F + medkit do outro jogador a %lld cm", LF.downs, hp, (long long)F_downhp.i(),
-                                 F_downdie.i() == 1 ? "morre" : "levanta", (long long)F_downsecs.i(), (long long)F_reviveradius.i());
-                    else
-                        x0::logf("NOLA LIFE: CAIDO #%d (hp %.1f <= %lld); %s em %lld s ou com o outro jogador a %lld cm por %lld s", LF.downs, hp, (long long)F_downhp.i(),
-                                 F_downdie.i() == 1 ? "morre" : "levanta", (long long)F_downsecs.i(), (long long)F_reviveradius.i(), (long long)F_revivesecs.i());
+                    x0::logf("NOLA LIFE: CAIDO #%d (hp %.1f): sem limite de tempo; aguarda reanimacao ou todos caidos", LF.downs, hp);
                     rv_down_say();
                 }
                 return;
@@ -2090,10 +2320,21 @@ namespace s2m::damage
                 LF.both = true;
                 x0::logf("NOLA LIFE: OS DOIS CAIDOS (eu ha %.1f s, o outro tambem): ninguem pode reanimar, os dois morrem agora", now - LF.at);
             }
-            if (LF.both) { bleed_out(pw, now); return; }
+            if (LF.both) { rv_finish_req(false); bleed_out(pw, now); return; }
             double rr = F_reviveradius.d();
             int standItem = 0;
             bool byReq = false;
+            if (RV.req)
+            {
+                const auto& sender = x0::peer(multi() ? RV.reqView : 0);
+                if (sender.id != RV.reqPeerId || sender.sessions != RV.reqPeerSession)
+                {
+                    x0::log("NOLA LIFE: pending revive cancelled: rescuer session changed");
+                    x0::ui_msg("s2m_revive", "Revive cancelled: your rescuer reconnected. Ask them to try again.", 4);
+                    RV.req = 0;
+                }
+            }
+            if (F_reviveitem.i() != 1) rv_finish_req(false);
             bool byNear = false;
             std::string byName;
             if (F_reviveitem.i() == 1 && RV.req && now - RV.reqAt < F_revwait.d())
@@ -2116,6 +2357,16 @@ namespace s2m::damage
                     double rh2, rm2;
                     bool rl2 = parse_life(st2, rh2, rm2, rv);
                     bool inR = remote_near(pw, now, rr * 1.5, dist, rv);
+                    const auto& snap = x0::remote(rv);
+                    if ((!rl2 || !snap.has_pos || now - snap.recv >= 2) && now - RV.reqAt < std::max(0.0, F_revwait.d()) + 3)
+                    {
+                        if (RV.reqWaitLog != -RV.req)
+                        {
+                            RV.reqWaitLog = -RV.req;
+                            x0::ui_msg("s2m_revive", "Revive waiting for a fresh teammate update...", 3);
+                        }
+                        return;
+                    }
                     std::string who = pname(x0::view_pid(rv));
                     if (inR && rl2 && st2 == 'a')
                     {
@@ -2125,12 +2376,21 @@ namespace s2m::damage
                         byName = who;
                     }
                     else x0::logf("NOLA LIFE: pedido de reanimacao #%lld de %s recusado: a %.0f cm (max %.0f), estado %c", (long long)RV.req, who.c_str(), dist, rr * 1.5, rl2 ? st2 : '?');
-                    RV.req = 0;
+                    if (!byReq) rv_finish_req(false);
                 }
                 else if (RV.req)
                 {
                     double dist = -1;
                     bool inR = remote_near(pw, now, rr * 1.5, dist);
+                    if ((!rl || !r.has_pos || now - r.recv >= 2) && now - RV.reqAt < std::max(0.0, F_revwait.d()) + 3)
+                    {
+                        if (RV.reqWaitLog != -RV.req)
+                        {
+                            RV.reqWaitLog = -RV.req;
+                            x0::ui_msg("s2m_revive", "Revive waiting for a fresh teammate update...", 3);
+                        }
+                        return;
+                    }
                     if (inR && rl && st == 'a')
                     {
                         why = fmt("reanimado pelo outro jogador com F + medkit, pedido #%lld a %.0f cm", (long long)RV.req, dist);
@@ -2139,7 +2399,7 @@ namespace s2m::damage
                         byName = rv_partner(-1);
                     }
                     else x0::logf("NOLA LIFE: pedido de reanimacao #%lld recusado: outro jogador a %.0f cm (max %.0f), estado %c", (long long)RV.req, dist, rr * 1.5, rl ? st : '?');
-                    RV.req = 0;
+                    if (!byReq) rv_finish_req(false);
                 }
             }
             else if (multi())
@@ -2167,11 +2427,6 @@ namespace s2m::damage
                 }
             }
             else LF.hasNear = false;
-            if (why.empty() && now - LF.at >= F_downsecs.d())
-            {
-                if (F_downdie.i() == 1) { bleed_out(pw, now); return; }
-                why = "tempo";
-            }
             if (!why.empty())
             {
                 bool healed = F_reviveheal.i() == 1 && standItem > 0 && revive_heal(pw, standItem);
@@ -2186,6 +2441,7 @@ namespace s2m::damage
                 LF.down = false;
                 LF.frozen = false;
                 rv_down_clear();
+                if (byReq) rv_finish_req(true);
                 if (byReq || byNear) rv_done_set(byName);
             }
             else DI.downUntil = std::max(DI.downUntil, now + 1);
@@ -3153,13 +3409,15 @@ X0_MODULE(damage)
     x0::own_tag(x0::Mod::damage, "GO", [] { return go_out(); });
     x0::own_tag(x0::Mod::damage, "L", [] { return l_out(); });
     x0::own_tag(x0::Mod::damage, "RV", [] { return rv_out(); });
+    x0::own_tag(x0::Mod::damage, "RT", [] { return fmt("#RT:%lld,%lld", (long long)RV.rev, (long long)reviveNonce); });
+    x0::own_tag(x0::Mod::damage, "RA", [] { return rv_ack_out(); });
     x0::own_tag(x0::Mod::damage, "FF", [] { return ff_out(); });
     x0::own_tag(x0::Mod::damage, "MD", [] { return md_out(); });
     x0::key(x0::Mod::damage, 'F', [] { RV.press = true; });
     x0::own_tag(x0::Mod::damage, "@shots", [] { return shots_field(); });
     x0::hook(x0::Mod::damage, L"/Script/Stalker2.ItemAppearanceComponent:OnShotSoundStart", false, [](const x0::Ref& self) { on_shot_sound(self); });
     x0::every(x0::Mod::damage, "testGod", x0::Rate::t100, [] { testgod_tick(); });
-    x0::every(x0::Mod::damage, "lifeGuard", x0::Rate::t100, [] { life_guard(); noweap_tick(); downview_tick(); });
+    x0::every(x0::Mod::damage, "lifeGuard", x0::Rate::t100, [] { life_guard(); rescue_tick(); noweap_tick(); downview_tick(); });
     x0::every(x0::Mod::damage, "revive", x0::Rate::t100, [] { rv_tick(); nobag_tick(); });
     x0::every(x0::Mod::damage, "dmgIn", x0::Rate::t100, [] { dmg_in(); });
     x0::every(x0::Mod::damage, "ff", x0::Rate::t100, [] { ff_tick(); });

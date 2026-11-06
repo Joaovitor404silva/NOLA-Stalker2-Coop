@@ -154,6 +154,7 @@ namespace
     bool g_world = false;
     bool g_busy = false;
     nola::Toggle g_toggle;
+    uint64_t g_settleGeneration = 0;
     bool g_relay = false;
     uint64_t g_full0 = 0;
     int g_fullN = 0;
@@ -370,6 +371,7 @@ namespace
 
     void end_session(const char* why, bool settleIt = true)
     {
+        ++g_settleGeneration;
         ui_end();
         bool had = g_mode != nola::Mode::none;
         g_mode = nola::Mode::none;
@@ -983,40 +985,51 @@ namespace
         return false;
     }
 
-    void settle_done(const char* why, std::function<void()> then)
+    void settle_done(const char* why, std::function<void()> then, uint64_t generation)
     {
         if (!x0::save_store_ready()) x0::logf("NOLA menu: save store switch not finished after 10 s (%s): main menu kept as built", why);
         else refresh_menu(why);
-        if (!then) return;
-        x0::after(x0::Mod::session, 0.1, [then] {
+        if (!then) { g_toggle.done(); return; }
+        x0::after(x0::Mod::session, 0.1, [then, generation] {
+            if (generation != g_settleGeneration) return;
+            if (pawn() || !g_sv.valid()) { g_toggle.done(); return; }
             g_toggle.done();
             then();
         });
     }
 
-    void settle_wait(const char* why, std::function<void()> then, nola::RefreshGate gate = {})
+    void settle_wait(const char* why, std::function<void()> then, uint64_t generation, nola::RefreshGate gate = {})
     {
+        if (generation != g_settleGeneration) return;
+        if (pawn() || !g_sv.valid()) { g_toggle.done(); return; }
         bool anim = x0::save_store_ready() && menu_animating();
         if (gate.allow(anim))
         {
             if (anim) x0::logf("NOLA menu: main menu rebuilt while a button animation still runs after %.1f s (%s)", 0.1 * nola::RefreshGate::kMax, why);
-            settle_done(why, then);
+            settle_done(why, then, generation);
             return;
         }
         if (gate.waits == 1) x0::logf("NOLA menu: main menu rebuild waits for a pressed button animation to end (%s): a rebuild now would leave the stock hover lock exe+0xb1524fc set", why);
-        x0::after(x0::Mod::session, 0.1, [why, then, gate] { settle_wait(why, then, gate); });
+        x0::after(x0::Mod::session, 0.1, [why, then, generation, gate] { settle_wait(why, then, generation, gate); });
+    }
+
+    void settle_poll(const char* why, std::function<void()> then, int tries, uint64_t generation)
+    {
+        x0::after(x0::Mod::session, 0.25, [why, then, tries, generation] {
+            if (generation != g_settleGeneration) return;
+            if (pawn() || !g_sv.valid()) { g_toggle.done(); return; }
+            if (!x0::save_store_ready() && tries > 0)
+            {
+                settle_poll(why, then, tries - 1, generation);
+                return;
+            }
+            settle_wait(why, then, generation);
+        });
     }
 
     void settle(const char* why, std::function<void()> then, int tries)
     {
-        x0::after(x0::Mod::session, 0.25, [why, then, tries] {
-            if (!x0::save_store_ready() && tries > 0)
-            {
-                settle(why, then, tries - 1);
-                return;
-            }
-            settle_wait(why, then);
-        });
+        settle_poll(why, std::move(then), tries, ++g_settleGeneration);
     }
 
     std::wstring last_file() { return x0::bridge_file(L"nola_lasthost.txt"); }

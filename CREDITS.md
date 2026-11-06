@@ -2,6 +2,8 @@
 
 [← Back to the overview](README.md)
 
+**Custom stability 0.5 changes:** prepared for dreadnaughtgaming with assistance from OpenAI Codex. Original NOLA authorship remains with Jaumn and the contributors listed below. This is an unofficial modified build.
+
 - **Jaumn**: creator of NOLA. Design, programming, testing and many nights in the Zone. NOLA started with one simple wish: to walk the Zone with friends instead of alone.
 - **The UE4SS team**: the mod loader that lets mods like this run inside Unreal Engine games. NOLA would not exist without it. UE4SS (UE4SS-RE project) is released under the MIT licence, and the licence file is shipped with NOLA.
 - **GSC Game World**: for creating the Zone, keeping the spirit of the series alive, and the official modding tools that help the community understand the game.

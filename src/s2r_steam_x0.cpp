@@ -318,7 +318,12 @@ namespace s2r
                 std::lock_guard<std::mutex> g(g_smu);
                 if (g_link && g_link->running() && g_link->hosting()) g_link->host_limit(o.members, o.multi);
             });
-            x0::key(x0::Mod::x0, VK_HOME, [] { steam_invite(); });
+            x0::key(x0::Mod::x0, VK_HOME, [] {
+                // HOME is reserved for the hold-to-rescue action while downed.
+                const auto& downed = x0::iface().local_downed;
+                if (downed && downed()) return;
+                steam_invite();
+            });
             x0::cmd(x0::Mod::x0, "steam", &cmd);
             x0::status(x0::Mod::x0, [] { return steam_status(); });
             restart();
