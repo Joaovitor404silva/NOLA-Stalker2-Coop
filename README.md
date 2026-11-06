@@ -1,3 +1,13 @@
+# Unofficial NOLA stability 0.5
+
+This is a modified build based on [NOLA v1.3.2 by Joaovitor404silva (Jaumn)](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop). Original authorship, credits and GPL-3.0 licensing are retained. This build is not an official upstream release.
+
+See [stability 0.5 notes](NEXT_REVIVE.md) and [Windows validation](validation/WINDOWS_0.5.log). All players should use the same package. Windows compilation and automated tests passed; live multiplayer validation is still required. Money transfer is not included.
+
+The original project overview follows. Its download and support links point to the original author.
+
+---
+
 <p align="center"><img src="assets/nola_title.png" alt="NOLA - No One Left Alone" width="720"></p>
 
 <p align="center"><b>Co-op for S.T.A.L.K.E.R. 2: Heart of Chornobyl. Walk the Zone with friends, in the same world, each with your own character.</b></p>

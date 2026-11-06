@@ -51,7 +51,7 @@ namespace s2r
     namespace z
     {
         std::string compress(std::string_view data, int level = 6);
-        bool decompress(std::string_view data, std::string& out, std::string* err = nullptr);
+        bool decompress(std::string_view data, std::string& out, std::string* err = nullptr, size_t max_output = size_t{64} << 20);
         uint32_t crc32(std::string_view data, uint32_t crc = 0);
         uint32_t adler32(std::string_view data, uint32_t a = 1);
     }
@@ -62,6 +62,7 @@ namespace s2r
         constexpr uint8_t T_HDR = 1, T_NPC = 2, T_APP = 3, T_SXW = 4, T_SXI = 5, T_SXC = 6, T_BYE = 7, T_PEER = 8, T_ROSTER = 9, T_FULL = 10, T_DISC = 11, T_DISCR = 12;
         constexpr int MAXV = 4;
         constexpr size_t MTU_SAFE = 1200;
+        constexpr size_t MAX_PACKET_JSON = size_t{1} << 20;
         constexpr double KEEPALIVE = 1.0;
         constexpr double APP_MIN_GAP = 0.5;
         constexpr double NPC_STALE = 5.0;
@@ -129,6 +130,7 @@ namespace s2r
                 js::V n;
                 double at = 0;
             };
+            std::set<std::string> retired_sids_;
             bool has_hdr_ = false;
             js::V hdr_;
             std::unordered_map<std::string, Npc> npcs_;

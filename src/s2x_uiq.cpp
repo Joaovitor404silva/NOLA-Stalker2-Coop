@@ -12,6 +12,8 @@ namespace x0::in::uiq
             int prio;
         };
         constexpr PrioRow kPrio[] = {
+            {"s2m_rescue", 80},
+            {"s2m_revive", 75},
             {"s2m_session_role", 70},
             {"s2m_session_ver", 70},
             {"s2m_save_", 60},

@@ -257,7 +257,7 @@ namespace
         std::string id;
         uint64_t addr = 0;
         double x = 0, y = 0, z = 0;
-        bool alive = true, active = true, compok = true, own = false, local = false;
+        bool alive = true, active = true, compok = true, own = false, local = false, vendor = false;
         long long guid = 0;
         int idx = 0;
     };
@@ -285,6 +285,9 @@ namespace
         std::map<std::string, std::string> ph;
         int beds_total = 0, beds_off = 0;
         int next_idx = 10;
+        int fail_restore = 0;
+        std::string vendor_identity;
+        bool scene = false, trade_ok = true;
 
         Ref view_ref() { return mk(1, 0x1000); }
 
@@ -303,6 +306,13 @@ namespace
             if (pos) *pos = q;
             return true;
         }
+        bool scene_take() override { return scene; }
+        bool interacted_vendor(s2m_pop::VendHit& out) override
+        {
+            if (!has_q) return false;
+            if (!vendor_identity.empty()) { out = {vendor_identity, "identified_actor", 2000}; return true; }
+            return s2m_pop::vendorNear(q.x, q.y, q.z, 300, out);
+        }
         int answers_vis(const Ref&) override { return vis; }
         bool set_answers_vis(const Ref&, int v) override
         {
@@ -318,7 +328,7 @@ namespace
         bool open_trade(const Ref&, bool up) override
         {
             emit(std::string("A open ") + (up ? "Upgrade" : "Trade"));
-            return true;
+            return trade_ok;
         }
         int trade_hint_vis(const Ref&) override { return hint; }
         std::vector<NpcSnap> humans() override
@@ -336,6 +346,7 @@ namespace
                 s.own = n.own;
                 s.comp_ok = n.compok;
                 s.active = n.active;
+                s.vendor = n.vendor;
                 s.pos = Vec3{n.x, n.y, n.z};
                 out.push_back(s);
             }
@@ -357,6 +368,12 @@ namespace
         {
             if (FNpc* n = by_comp(comp))
             {
+                if (on && fail_restore > 0)
+                {
+                    --fail_restore;
+                    emit("A npc " + n->id + " restore failed");
+                    return false;
+                }
                 emit("A npc " + n->id + " active " + (on ? "1" : "0"));
                 n->active = on;
                 return true;
@@ -541,7 +558,7 @@ int main(int argc, char** argv)
         return 2;
     }
     std::string dd = argv[1];
-    if (!dd.empty() && dd.back() != '\\' && dd.back() != '/') dd += "\\";
+    if (!dd.empty() && dd.back() != '\\' && dd.back() != '/') dd += "/";
     g_data = std::wstring(dd.begin(), dd.end());
     PopEnv popEnv;
     s2m_pop::init(&popEnv);
@@ -577,6 +594,10 @@ int main(int argc, char** argv)
         const std::string& c = w[0];
         emit("> " + line);
         if (c == "role") g_host = w[1] == "host";
+        else if (c == "vendoridentity") world.vendor_identity = w[1] == "none" ? "" : w[1];
+        else if (c == "scene") world.scene = w[1] == "on";
+        else if (c == "tradefail") world.trade_ok = w[1] != "on";
+        else if (c == "failrestore") world.fail_restore = std::atoi(w[1].c_str());
         else if (c == "flag") g_flags[w[1]] = parse_val(w[2]);
         else if (c == "time") g_ms = std::atoll(w[1].c_str());
         else if (c == "run")
@@ -639,6 +660,7 @@ int main(int argc, char** argv)
             bool v = w[3] == "1";
             if (w[2] == "alive") n.alive = v;
             else if (w[2] == "active") n.active = v;
+            else if (w[2] == "vendor") n.vendor = v;
         }
         else if (c == "guid") world.npcs[w[1]].guid = std::atoll(w[2].c_str());
         else if (c == "ph") world.ph[w[1]] = w[2];

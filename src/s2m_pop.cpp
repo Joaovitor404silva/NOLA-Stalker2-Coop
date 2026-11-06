@@ -909,8 +909,20 @@ bool nearTrade(double x, double y)
 
 bool isHiddenLocal(Id p) { return A.hid.count(p) != 0; }
 
+bool vendorInfo(Id p, VendHit& out)
+{
+    if (!g_env || !g_env->valid(p)) return false;
+    V3 q;
+    if (!g_env->loc(p, q)) return false;
+    size_t row; double d;
+    if (!vendOf(p, q, row, d)) return false;
+    out = {g_rows[row].kind, g_rows[row].obj, d};
+    return true;
+}
+
 bool isVendor(Id p, double* distCm)
 {
+    if (!g_env || !g_env->valid(p)) return false;
     V3 q;
     if (!g_env->loc(p, q)) return false;
     size_t row; double d;

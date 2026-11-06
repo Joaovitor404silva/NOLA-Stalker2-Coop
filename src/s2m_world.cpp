@@ -453,7 +453,6 @@ void World::lock_receive(const std::string& k, char st, double now)
         {
             D.lpend.erase(k);
             if (ask) D.lans[k] = now;
-            else D.lapp[k] = st;
             env_.log("NOLA doorlock: porta " + k + " nunca apareceu aqui: desisto");
         }
         else D.lpend[k] = DoorPend{sts, now, n};
@@ -473,12 +472,28 @@ void World::lock_receive(const std::string& k, char st, double now)
         return;
     }
     bool want = st == 'l';
-    D.lapp[k] = st;
-    D.lapp[lk] = st;
-    if (cur == want) return;
+    if (cur == want)
+    {
+        D.lapp[k] = st;
+        D.lapp[lk] = st;
+        return;
+    }
     bool ok = env_.call(hit, want ? "LockDoor" : "UnlockDoor", {});
     bool nl = cur;
     bool have = env_.call_bool(hit, "IsLocked", nl);
+    if (have && nl == want)
+    {
+        D.lapp[k] = st;
+        D.lapp[lk] = st;
+    }
+    else
+    {
+        // A rejected native call is not an applied network state. Retry with
+        // the existing backoff; a fresh update can restart an expired request.
+        D.lapp.erase(k);
+        D.lapp.erase(lk);
+        if (pn.n < 200) D.lpend[k] = DoorPend{sts, now, pn.n + 1};
+    }
     env_.log(fmt("NOLA doorlock: %s -> %s ok=%s locked=%s %s", k.c_str(), want ? "LockDoor" : "UnlockDoor", tf(ok), have ? tf(nl) : "nil", ok ? "" : "erro"));
 }
 

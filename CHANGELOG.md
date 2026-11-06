@@ -2,6 +2,117 @@
 
 [← Back to the overview](README.md)
 
+## Unofficial stability 0.5 — cumulative fork changes (2026-11-06)
+
+This section describes **all cumulative custom changes in stability 0.5 compared with original NOLA v1.3.2**, not just changes since our previous installer. The upstream baseline is commit `9485e81a875e67981a8ecb92289c81eed47d3597`; the published custom build is commit `8694d062a32f2fd132f53792dc1108d357fccf52`, tagged `v1.3.2-stability.0.5`.
+
+NOLA was created by **Joaovitor404silva (Jaumn)** and its contributors. This unofficial fork retains their authorship, history and GPL-3.0 licensing. Custom changes were prepared for dreadnaughtgaming with assistance from OpenAI Codex.
+
+[Download the installer and matching source](https://github.com/dreadnaughtgaming/NOLA-Stalker2-Coop/releases/tag/v1.3.2-stability.0.5). All players should use the same patched build. **Windows compilation and automated tests passed; live co-op validation remains pending.**
+
+### Downed players and notifications
+
+- Removed native timed bleed-out and timed automatic stand-up. Downed players wait for revival or the existing all-players-down team wipe; normal revive range and medkit requirements remain.
+- Legacy `downsecs` / `downdie` configuration keys no longer control a native downed timer. This does not prevent exceptional engine instant-death paths or change actual-death propagation.
+- Replaced upstream's downed countdown with a persistent waiting-for-revival message and HOME rescue instructions.
+- Added fresh-transition teammate-down alerts, including at a distance, without repeating every tick or after brief stale-update gaps. Labels are `HOST` / `PLAYER n`, not Steam display names.
+- Retained upstream's nearby F/medkit prompt and revived-by message, displayed after the downed camera releases. Added or retained feedback for missing medkits, pending requests, stale teammate updates, confirmed refunds and unresolved transactions.
+
+### HOME rescue / unstuck action
+
+- While downed, hold HOME continuously for **five seconds** to move beside the nearest eligible standing teammate, selected by 3D distance.
+- An on-screen countdown explains that the player will be moved. Releasing early cancels the action and clears the countdown. This rescue countdown remains; the death countdown does not.
+- Excludes stale, disconnected and downed targets. Rescue is disabled while standing, during a team wipe and during blocked cinematics; the game window must have focus.
+- Tries eight collision-checked positions approximately 1.2 metres around the target at the reported height. If all fail, the player stays in place; there is no unchecked position-setting fallback.
+- Rescue preserves the downed state and does not heal, revive or spend a medkit. Release HOME to rearm; successful rescues have a ten-second cooldown. Result, blocked-target and cooldown messages explain the outcome.
+- Suppresses the Steam invitation HOME shortcut while downed; it remains available while standing. Rescue messages receive higher UI priority through the existing NOLA message system.
+- Collision checks do **not** guarantee an anomaly-free destination, safe floor or loaded destination area.
+
+### Revive requests and medkit handling
+
+- Holding F no longer spends another medkit every five seconds: a new key press requires release first.
+- Pending requests can briefly wait for a fresh teammate update, with a bounded extra wait of three seconds. A changed rescuer session invalidates the request.
+- Medkit removal is invoked directly rather than treating insertion into an item-removal queue as a successful debit. The inventory count must fall by exactly one before a revive is sent.
+- Delayed removal is observed without issuing a second removal. After ten seconds an unconfirmed debit becomes unresolved and cannot turn into a late revive request.
+- With receipt-capable peers, permits only one local medkit transaction at a time and blocks further F attempts until its result is resolved.
+- Adds request identity (`RT`) and receipt (`RA`) tags. Receipt handling checks the recipient view, peer identity/session, request counter, target player and process-lifetime nonce. Duplicate or mismatched replies cannot trigger another refund.
+- An **explicit rejection** can return one medkit of the original type; the inventory increase is checked. A possibly successful grant is never retried automatically.
+- Competing rescuers no longer replace the first active request or reset its application timer. Terminal receipts are retained per view for retransmission.
+- Sends rejection when the recipient is already standing, dead, without a pawn, has the life guard disabled, or is in the all-down wipe path.
+- Missing acknowledgements are **not** treated as rejection. Session/pawn changes and unconfirmed debits/refunds leave the transaction unresolved, show a message and block further medkit transactions for the current module lifetime.
+- Refunds require support on both sides. Older peers, or attempts before receipt capability metadata arrives, use the legacy path without refund acknowledgements. There is no durable journal or automatic recovery across disconnects, crashes, reloads or save rollback. Concurrent inventory changes can interfere with count-based verification.
+
+### Networking and player synchronization
+
+- Caps expanded network JSON at **1 MiB**. All decompressor output paths enforce the caller's budget, including literals and stored blocks; generic non-network decoding retains its previous 64 MiB default.
+- Direct/non-hub UDP rejects gameplay, control and save packets from endpoints other than the configured peer. Discovery and hub admission remain separate. This is endpoint validation, not cryptographic authentication.
+- Prevents retired session headers and NPC updates from replacing the accepted session; unknown NPC sessions cannot replace current NPC records. Retired-session history is bounded to 256 transitions and resets when the relay restarts.
+- Resets sender delta caches when the local session changes, allowing the new session to resend needed state.
+- Limits receive work to 256 packets or four milliseconds between packets per iteration. A single packet may take longer, so this is not a hard real-time deadline.
+- Fixes the receiver's shadowed assigned-player-ID variable that could reject forwarded teammate snapshots and hide a third player. Invalid roster slots remain rejected; forwarding, self-exclusion and slot reassignment have regression coverage.
+
+### Guest traders, technicians and dialogue locks
+
+These are fixes to existing guest interaction paths, **not a claim that guest trading was previously impossible**.
+
+- Failed NPC interaction restores remain pending for retry; failed disables are not recorded as successful.
+- Previously blocked traders are restored when recognised later. Population vendor identity also exempts recognised traders from the dialogue lock, and held dialogue checks are refreshed as actor data arrives.
+- Enables `vendtrade=1` by default for the guest role. An explicit existing `vendtrade=0` still overrides that default. Recognised traders use the existing native trade-opening path; technicians use upgrades. Host dialogue behaviour is preserved.
+- Uses the interacted actor's population vendor metadata instead of relying only on the narrower vendor-reference-position radius. Matching still depends on the vendor table and nearest-actor recognition.
+- Waits up to two seconds for late vendor identification; closing dialogue resets the wait.
+- Prevents host-controlled story scenes from triggering automatic guest trade opening, and restores hidden dialogue answers when the native trade call fails.
+- Does not broadly unlock story NPCs, give guests host quest authority, add shared merchant-stock transactions, or guarantee a fix when no interaction prompt/dialogue view appears.
+
+### Doors and menu stability
+
+- Failed native door lock/unlock operations remain pending with retry backoff. Only verified successful state is cached as applied. An unloaded/missing door is not marked applied when retries expire, allowing a later fresh update to retry.
+- Adds generation checks to asynchronous menu transitions. Older callbacks are cancelled after a newer toggle, session end, world entry or view destruction, including save waits, animation waits and delayed popups.
+- Combines those checks with upstream v1.3.2's toggle gate; cancelled current transitions and popup-free completions release the gate.
+
+### Upstream v1.3.2 fixes included — credit to the original project
+
+These are inherited baseline features, **not additional fixes authored by this fork**:
+
+- Close-behind doors/areas wait for the group (upstream issue #29).
+- Grenade-tripwire disarm uses deactivation instead of damage replay (#37).
+- Synthetic per-view compass marker IDs and visibility/fade fixes (#22).
+- Menu toggle gating and animation completion waits (#21).
+- Downed/revive UI and revived-by feedback (#20), adapted here to remove the death countdown.
+
+The upstream compass implementation replaced our earlier marker-removal-order fix. That earlier fix is not a separate feature in the current build. Our door-state retries and menu callback cancellation remain alongside upstream's fixes because they address different failure paths.
+
+### Build, packaging and validation
+
+- CMake accepts `UE4SS_ROOT` instead of requiring the original author's drive layout. `BUILD_PATCH.ps1` runs native network/damage tests and builds the release DLL against a supplied RE-UE4SS checkout.
+- Corrected a literal carriage return and Windows-only data paths in the damage test harness; added production-logic regression scenarios for the changes above, plus upstream merge checks.
+- Published a clearly labelled unofficial experimental installer and corresponding source. Retains the upstream v1.3.2 runtime/game-data payload and updates the patched DLL's installer checksum.
+- Windows DLL build and native regression tests passed on 2026-11-06. Steam install, IP reinstall and uninstall passed in an isolated test folder; original files were restored byte-for-byte. This was not an automatic installation into the actual game.
+- Portable tests cover network budgets/session handling, roster forwarding, downed state through ten minutes and late revival, all-down wipe, HOME rescue, revive receipts, vendor recovery, menu cancellation and door retries. AddressSanitizer/UndefinedBehaviorSanitizer were used where supported; game calls are mocked. Merge checks also cover close-behind logic, table/text consistency and trap-disarm replay. The optional real ZoneKit quest-file generator check was skipped because those external files were unavailable.
+- These tests do not establish live transport behaviour, every NPC interaction, collision/anomaly safety, or four/five-player and long-session stability. See [Windows validation](validation/WINDOWS_0.5.log).
+
+### Still unfinished / not claimed fixed
+
+- Player-to-player money transfer, including looking at a player and pressing INSERT for an amount/Send interface.
+- Durable revive transaction recovery after disconnect, crash, reload or save rollback.
+- Remaining guest dialogue failures without a prompt; join crash (#31); moving electrical/fire anomalies (#30 and anomaly-related #25); quest reports (#27); radiation-on-load reports (#23).
+- Proposed new fragmentation/reassembly and protocol negotiation, authenticated session handshakes, adaptive smoothing, general reliable-event acknowledgements, world reconciliation/late-join snapshots, further item/upgrade/save persistence repairs, NPC lifecycle redesign, traffic prioritisation and a new connection UI. These were discussed but were not added by this fork; this does not imply upstream lacks all related mechanisms.
+
+### Custom version history
+
+| Custom version | Main additions |
+| --- | --- |
+| 0.1 | Unlimited downed time, five-second HOME rescue, initial network hardening and portable build/test support, initially based on upstream v1.3.1. |
+| 0.2 | Third-player forwarding fix; interaction restore, menu and door retries; revive feedback, held-F protection and stale/session checks. |
+| 0.3 | Guest trader/technician default, metadata-based recognition, late recognition wait and failed trade-call recovery. |
+| 0.4 | Merged upstream v1.3.2 while keeping unlimited downed time and HOME rescue; adapted notifications and reconciled overlapping fixes. |
+| 0.5 | Verified revive medkit debit, explicit rejection receipts/refunds, duplicate protection and competing-rescuer handling; Windows installer/source release. |
+
+Earlier detailed documents ([0.1](PATCH_NOTES.md), [0.2](ISSUE_FIXES_0.2.md), [0.3](GUEST_TRADING_0.3.md), [0.4](MERGE_0.4.md), [0.5](NEXT_REVIVE.md)) describe their original checkpoints. Their historical “source only,” “not yet built,” or missing-refund statements are superseded by this cumulative entry and the 0.5 validation record.
+
+## Original upstream release history
+
+The entries below retain the original author's changelog. In particular, the upstream v1.3.2 countdown description does **not** describe this fork's unlimited-downed behaviour.
+
 ## v1.3.2 (2026-11-04)
 
 Fixes five reported bugs. Same game build as v1.3.1 (Update 2.1, Steam build 26123434). Every player must install the same version.

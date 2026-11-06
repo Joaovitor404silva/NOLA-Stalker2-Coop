@@ -77,3 +77,5 @@ X(rev_nomedkit, "You need a medkit to revive %s", "Voc\303\252 precisa de um med
 X(rev_sent, "Reviving %s\342\200\246", "Reanimando %s\342\200\246", "Reanimando a %s\342\200\246")
 X(rev_done, "Revived by %s!", "Reanimado por %s!", "\302\241Reanimado por %s!")
 X(rev_partner, "your partner", "seu parceiro", "tu compa\303\261ero")
+X(rev_down_unlimited, "You are down. Waiting for revival. Hold HOME for 5 seconds to move beside the nearest standing player.", "Voce caiu. Aguarde ser reanimado. Segure HOME por 5 segundos para ir ao parceiro de pe mais proximo.", "Has caido. Espera a que te reanimen. Manten HOME durante 5 segundos para ir al companero en pie mas cercano.")
+X(rev_peer_down, "%s is down!", "%s caiu!", "%s ha caido!")

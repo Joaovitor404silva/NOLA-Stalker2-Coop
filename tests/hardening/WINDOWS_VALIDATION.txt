@@ -1,0 +1,17 @@
+NOLA stability 0.1 - validation (2026-11-03)
+
+PASS: Windows x64 DLL compilation, MSVC 19.44.35229.
+PASS: Native network regression tests: decoder budgets, session replay, NPC isolation, reconnect resend.
+PASS: Native damage tests: no timed death/stand-up, late revival, all-down wipe.
+PASS: HOME rescue tests: 5-second hold/countdown, cancellation, nearest eligible target, blocked positions, stale/no targets, downed state preserved, no repeats.
+PASS: All 132 UE4SS imports exist in bundled upstream UE4SS.dll.
+PASS: Required mod exports start_mod and uninstall_mod are present.
+PASS: Installer in an isolated Windows test folder: Steam install, IP reinstall, unrelated mod preservation.
+PASS: Uninstall restored every original test file byte-for-byte, with no extra files left.
+PASS: Installer payload MD5 checks and ZIP integrity.
+
+Compiled DLL SHA256:
+2bf9466a3e0a8d552be20a9a1830d3888234bbbee97107223e63d69e736b0367
+
+No live game or multiplayer session was run. Native Unreal teleport calls are mocked in regression tests. Import checks cannot prove complete ABI compatibility. The Windows firewall was deliberately excluded from the isolated installer test; its upstream implementation is unchanged.
+

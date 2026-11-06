@@ -1,0 +1,11 @@
+role client
+flag lead 1
+flag ldblk 1
+flag vendtrade 1
+pawn 1000 666295 618840 287
+peer h,5,1700000002,dlg,442057,470452,832
+view on
+interact 666295 618840 287
+vendoridentity trader
+tradefail on
+run 1000

@@ -1,0 +1,10 @@
+role client
+flag lead 1
+flag ldblk 1
+pawn 1000 664295 618840 287
+peer h,5,1700000002,dlg,442057,470452,832
+view on
+interact none
+run 2500
+interact 664295 618840 287
+run 5000

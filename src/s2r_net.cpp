@@ -1391,7 +1391,7 @@ namespace s2r
             return -1;
         }
 
-        static bool inflate_codes(BitR& br, std::string& out, const Huff& lc, const Huff& dc, std::string* err)
+        static bool inflate_codes(BitR& br, std::string& out, const Huff& lc, const Huff& dc, std::string* err, size_t max_output)
         {
             while (true)
             {
@@ -1403,6 +1403,7 @@ namespace s2r
                 }
                 if (s < 256)
                 {
+                    if (out.size() >= max_output) { if (err) *err = "output too large"; return false; }
                     out.push_back((char)s);
                     continue;
                 }
@@ -1431,7 +1432,7 @@ namespace s2r
                     if (err) *err = "invalid distance too far back";
                     return false;
                 }
-                if (out.size() + l > ((size_t)64 << 20))
+                if (out.size() > max_output || l > max_output - out.size())
                 {
                     if (err) *err = "output too large";
                     return false;
@@ -1441,7 +1442,7 @@ namespace s2r
             }
         }
 
-        bool decompress(std::string_view data, std::string& out, std::string* err)
+        bool decompress(std::string_view data, std::string& out, std::string* err, size_t max_output)
         {
             out.clear();
             const uint8_t* p = reinterpret_cast<const uint8_t*>(data.data());
@@ -1487,6 +1488,8 @@ namespace s2r
                         if (err) *err = "incomplete or truncated stream";
                         return false;
                     }
+                    if (out.size() > max_output || len > max_output - out.size())
+                    { if (err) *err = "output too large"; return false; }
                     out.append(reinterpret_cast<const char*>(br.p + br.pos), len);
                     br.pos += len;
                 }
@@ -1503,7 +1506,7 @@ namespace s2r
                         return true;
                     }();
                     (void)ready;
-                    if (!inflate_codes(br, out, fl, fd, err)) return false;
+                    if (!inflate_codes(br, out, fl, fd, err, max_output)) return false;
                 }
                 else if (type == 2)
                 {
@@ -1573,7 +1576,7 @@ namespace s2r
                         if (err) *err = "invalid distances set";
                         return false;
                     }
-                    if (!inflate_codes(br, out, lc, dc, err)) return false;
+                    if (!inflate_codes(br, out, lc, dc, err, max_output)) return false;
                 }
                 else
                 {
@@ -1816,7 +1819,7 @@ namespace s2r
             }
             typ = (uint8_t)data[3];
             std::string raw, zerr;
-            if (!z::decompress(data.substr(4), raw, &zerr))
+            if (!z::decompress(data.substr(4), raw, &zerr, MAX_PACKET_JSON))
             {
                 err = "error('Error -3 while decompressing data: " + zerr + "')";
                 return Unpack::corrupt;
@@ -1943,7 +1946,9 @@ namespace s2r
                 akeys.push_back(std::move(k));
             }
             V sid = get_or_null(m, "sid");
-            sid_ = js::py_str(sid);
+            const std::string new_sid = js::py_str(sid);
+            if (new_sid != sid_) { npc_sent_.clear(); app_sent_.clear(); }
+            sid_ = new_sid;
             V f = get_or_null(m, "f");
             for (size_t hi = 0; hi < haves.size(); ++hi)
             {
@@ -2024,7 +2029,16 @@ namespace s2r
                         ++stale;
                         return Err::none;
                     }
-                    if (!same_sid) npcs_.clear();
+                    if (!same_sid)
+                    {
+                        // A previous session can still have datagrams in flight after reconnect.
+                        const std::string incoming = js::py_str(get_or_null(obj, "sid"));
+                        if (retired_sids_.count(incoming)) { ++stale; return Err::none; }
+                        // Fail closed instead of evicting history and accepting an old session.
+                        if (retired_sids_.size() >= 256) { msg = "session history full: reconnect relay"; return Err::corrupt; }
+                        retired_sids_.insert(js::py_str(get_or_null(hdr_, "sid")));
+                        npcs_.clear();
+                    }
                 }
                 hdr_ = std::move(obj);
                 has_hdr_ = true;
@@ -2045,7 +2059,10 @@ namespace s2r
                     msg = "KeyError('id')";
                     return Err::corrupt;
                 }
+                if (retired_sids_.count(js::py_str(get_or_null(obj, "sid")))) { ++stale; return Err::none; }
                 auto it = npcs_.find(k);
+                if (has_hdr_ && !js::py_eq(get_or_null(obj, "sid"), get_or_null(hdr_, "sid")))
+                { ++stale; return Err::none; }
                 if (it != npcs_.end() && js::py_eq(it->second.sid, get_or_null(obj, "sid")) && js::py_lt(get_or_zero(obj, "f"), it->second.f))
                 {
                     ++stale;
@@ -3275,14 +3292,20 @@ namespace s2r
                 if (typ == proto::T_ROSTER)
                 {
                     ++roster_rx;
-                    int64_t you = -1, mx = 1;
-                    if (const js::V* v = obj.get("you")) py_int(*v, you);
+                    int64_t assigned_pid = -1, mx = 1;
+                    if (const js::V* v = obj.get("you")) py_int(*v, assigned_pid);
                     if (const js::V* v = obj.get("max")) py_int(*v, mx);
                     if (mx < 1) mx = 1;
                     if (mx > proto::MAXV) mx = proto::MAXV;
+                    if (assigned_pid < 1 || assigned_pid > mx)
+                    {
+                        st.badpeer++;
+                        warn("roster", "invalid local player slot");
+                        return;
+                    }
                     Roster r;
                     r.hub = true;
-                    r.you = (int)you;
+                    r.you = (int)assigned_pid;
                     r.max = (int)mx;
                     if (const js::V* ps = obj.get("peers"))
                         if (ps->t == js::V::array)
@@ -3814,7 +3837,8 @@ namespace s2r
                 }
                 if (s != INVALID_SOCKET)
                 {
-                    while (true)
+                    const double receive_started = clock_s();
+                    for (size_t received = 0; received < 256 && clock_s() - receive_started < 0.004; ++received)
                     {
                         sockaddr_in from{};
                         int fl = sizeof(from);
@@ -3860,6 +3884,8 @@ namespace s2r
                             }
                             continue;
                         }
+                        if (!hub && (!peer_ok || from.sin_addr.s_addr != peer.sin_addr.s_addr || from.sin_port != peer.sin_port))
+                        { st.badpeer++; continue; }
                         last_rx = now;
                         if (hub)
                         {

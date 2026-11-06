@@ -645,7 +645,7 @@ namespace s2m_lock
                 if ((fint("vendtrade", 0) != 0 || fint("ldblk", 0) == 1) && got)
                 {
                     s2m_pop::VendHit vh;
-                    if (s2m_pop::vendorNear(q.x, q.y, q.z, fnum("vendtr", 1500), vh))
+                    if (W.interacted_vendor(vh))
                     {
                         d.mode = "vend";
                         x0::log("NOLA lead: dialogo com vendedor: livre, sem trava (vendtrade/ldblk)");
@@ -667,6 +667,16 @@ namespace s2m_lock
             }
             if (d.mode == "held")
             {
+                // Actor/streaming data may become available after the view opens.
+                Vec3 q;
+                s2m_pop::VendHit vh;
+                if ((fint("vendtrade", 0) != 0 || fint("ldblk", 0) == 1) &&
+                    W.interacted_actor(&q) && W.interacted_vendor(vh))
+                {
+                    ld_hide(vw, false, "vendor recognised after dialogue opened");
+                    d.mode = "vend";
+                    return;
+                }
                 LockView p;
                 if (!ld_peer(p))
                 {
@@ -755,16 +765,16 @@ namespace s2m_lock
         void ld_blk_free(const std::string& why)
         {
             int n = 0;
+            std::unordered_set<uint64_t> pending;
             for (auto& s : W.humans())
             {
                 if (!off.count(s.addr)) continue;
-                off.erase(s.addr);
-                if (s.comp_ok && !s.active) W.set_active(s.comp, true);
-                ++n;
+                if (s.comp_ok && (s.active || W.set_active(s.comp, true))) ++n;
+                else pending.insert(s.addr);
             }
-            int gone = (int)off.size();
-            off.clear();
-            x0::log(sf("NOLA lead: NPCs de historia liberados (%s): %d com interacao de volta, %d sumiram", why.c_str(), n, gone));
+            int gone = (int)off.size() - n - (int)pending.size();
+            off.swap(pending);
+            ld_log("restore", sf("NOLA lead: NPC interaction restore (%s): %d restored, %d gone, %d pending retry", why.c_str(), n, gone, (int)off.size()));
         }
 
         void ld_blk_tick()
@@ -790,11 +800,15 @@ namespace s2m_lock
                 if (!s.comp_ok) continue;
                 if (off.count(s.addr))
                 {
-                    if (!s.alive)
+                    s2m_pop::VendHit recognised;
+                    bool vendor = s.vendor || s2m_pop::vendorNear(s.pos.x, s.pos.y, s.pos.z, vr, recognised);
+                    if (!s.alive || vendor)
                     {
-                        W.set_active(s.comp, true);
-                        off.erase(s.addr);
-                        ++back;
+                        if (s.active || W.set_active(s.comp, true))
+                        {
+                            off.erase(s.addr);
+                            ++back;
+                        }
                     }
                     else if (s.active) W.set_active(s.comp, false);
                     continue;
@@ -803,9 +817,9 @@ namespace s2m_lock
                 double dx = s.pos.x - lp.x, dy = s.pos.y - lp.y;
                 if (dx * dx + dy * dy > r2) continue;
                 s2m_pop::VendHit vh;
-                if (s2m_pop::vendorNear(s.pos.x, s.pos.y, s.pos.z, vr, vh)) continue;
+                if (s.vendor || s2m_pop::vendorNear(s.pos.x, s.pos.y, s.pos.z, vr, vh)) continue;
                 if (!s.active) continue;
-                W.set_active(s.comp, false);
+                if (!W.set_active(s.comp, false)) continue;
                 off.insert(s.addr);
                 ++n;
                 lg_note('N', s.ref);
@@ -1178,10 +1192,11 @@ namespace s2m_lock
                 if (!has(vw))
                 {
                     vt.seen = false;
+                    vt.has_t0 = false;
                     return;
                 }
                 if (vt.has_av) vend_show(vw, "dialogo novo");
-                if (vt.seen) return;
+                if (vt.seen || W.scene_take()) return;
                 if (!vt.has_t0)
                 {
                     vt.has_t0 = true;
@@ -1190,8 +1205,9 @@ namespace s2m_lock
                 Vec3 q;
                 bool got = W.interacted_actor(&q);
                 s2m_pop::VendHit vh;
-                const s2m_pop::VendHit* row = got && s2m_pop::vendorNear(q.x, q.y, q.z, fnum("vendtr", 1500), vh) ? &vh : nullptr;
-                if (!got && now - vt.t0 < 2) return;
+                const s2m_pop::VendHit* row = got && W.interacted_vendor(vh) ? &vh : nullptr;
+                // The actor may exist before vendor identification is ready.
+                if (!row && now - vt.t0 < 2) return;
                 vt.seen = true;
                 vt.has_t0 = false;
                 if (!row) return;
@@ -1212,6 +1228,12 @@ namespace s2m_lock
                     W.set_answers_vis(vw, 1);
                 }
                 bool ok = W.open_trade(vw, tech);
+                if (!ok)
+                {
+                    vend_show(vw, "trade request failed");
+                    x0::log("NOLA vendtrade: trade request failed; dialogue answers restored");
+                    return;
+                }
                 vt.on = true;
                 vt.st = "open";
                 vt.t1 = now;
@@ -1495,6 +1517,14 @@ namespace s2m_lock
                 return true;
             }
 
+            bool interacted_vendor(s2m_pop::VendHit& out) override
+            {
+                Ref p = x0::first_of(L"BP_Stalker2Character_C");
+                if (!p) return false;
+                Ref a = x0::call_o(p, L"GetInteractedActor");
+                return a && s2m_pop::vendorInfo(a.address(), out);
+            }
+
             int answers_vis(const Ref& view) override
             {
                 Ref ac;
@@ -1541,6 +1571,9 @@ namespace s2m_lock
                     x0::call_v(r, L"K2_GetActorLocation", s.pos);
                     s.is_local = lp && lp.same(r);
                     s.own = x0::is_own_body(r);
+                    // Use the population module's selected vendor actor too;
+                    // a trader may move outside the narrower dialogue radius.
+                    s.vendor = s2m_pop::isVendor(s.addr);
                     Ref c;
                     if (x0::prop<Ref>(r, "NPCComponent", c) && c)
                     {

@@ -42,7 +42,9 @@ namespace s2m::damage
         std::function<bool()> nd_on;
         std::function<int(double&)> last_cause;
         std::function<bool()> god_other;
+        // Invoke once, synchronously; the caller verifies the inventory change.
         std::function<bool(const std::string& sid)> item_take;
+        std::function<bool(const std::string& sid)> item_refund;
         std::function<void()> die_follow;
         std::function<void(bool on, const std::vector<FfBody>& bodies)> ff_bodies;
         std::function<std::vector<FfHit>()> ff_take;
