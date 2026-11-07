@@ -1,4 +1,5 @@
 import difflib
+import glob
 import os
 import re
 import subprocess
@@ -889,7 +890,10 @@ def run_mc(sel, bless):
     exp = os.path.join(HERE, "mc_expect")
     os.makedirs(exp, exist_ok=True)
     bad = total = 0
-    for name, text in mc_scenarios().items():
+    files = {}
+    for fp in sorted(glob.glob(os.path.join(HERE, "cpp_scn", "*.txt"))):
+        files["cpp_" + os.path.splitext(os.path.basename(fp))[0]] = read(fp)
+    for name, text in list(mc_scenarios().items()) + list(files.items()):
         if sel and name not in sel:
             continue
         total += 1

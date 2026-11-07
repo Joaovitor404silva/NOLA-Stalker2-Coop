@@ -1,0 +1,4 @@
+UI PLAYER 1 is down!
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: pawn novo: efeito Nola_ReviveNoBag retirado por garantia ok=true
+UI PLAYER 1 is down!

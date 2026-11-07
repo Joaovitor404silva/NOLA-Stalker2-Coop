@@ -1,0 +1,15 @@
+> role client
+> flag lead 1
+> flag ldblk 1
+> flag vendtrade 1
+> pawn 1000 666295 618840 287
+> peer h,5,1700000002,dlg,442057,470452,832
+> view on
+> interact 666295 618840 287
+> vendoridentity trader
+> run 1000
+A vis 1
+A open Trade
+L 100 NOLA vendtrade: dialogo com trader identified_actor a 20 m (dica de troca visibilidade=0); respostas escondidas; UIDialogOpenTrade ok=true
+L 100 NOLA lead: dialogo com vendedor: livre, sem trava (vendtrade/ldblk)
+L 1000 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos

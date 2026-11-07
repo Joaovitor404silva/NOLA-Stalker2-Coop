@@ -1,0 +1,28 @@
+uiecho 1
+role host
+views 1 1 0 -1
+flag lifeguard 1
+flag reviveitem 1
+flag reviveradius 300
+me 100 1 0 0 0
+vpeer 0 up - c1 1
+vpeer 1 up - c2 1
+vremote 0 100 0 0 0 1
+vremote 1 200 0 0 0 2
+vx1 0 L w,15,100
+vx1 1 L a,100,100
+inv Medkit 3
+vx1 0 RA 1
+t 0
+do revive
+keydown 1
+do revive
+invq Medkit
+do rvStr
+ack 0 0 1 0
+t 1
+do revive
+invq Medkit
+t 2
+do revive
+invq Medkit

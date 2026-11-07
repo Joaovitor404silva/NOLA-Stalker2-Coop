@@ -1,4 +1,5 @@
 role client
+flag downsecs 30
 flag revwait 0
 views 3 3 0 2
 flag lifeguard 1

@@ -1,5 +1,6 @@
 # DV1: TR_32 hold restored on every exit path
 role client
+flag downsecs 30
 flag downcam 1
 flag downhands 1
 flag downhold 1

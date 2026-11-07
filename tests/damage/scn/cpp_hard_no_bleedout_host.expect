@@ -1,0 +1,28 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0): sem limite de tempo; aguarda reanimacao ou todos caidos
+UI_TOP You are down. Waiting for revival. Hold HOME for 5 seconds to move beside the nearest standing player.
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=true tiros_out=0
+OUT me hp=15.0 alive=true
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=true tiros_out=0
+OUT me hp=15.0 alive=true
+CALL me ForceSetHP 50
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (de pe) ok=true
+CALL me.cm SetMovementMode 1 0
+LOG NOLA LIFE: DE PE (reanimado pelo outro jogador com F + medkit, pedido #1 a 100 cm) depois de 600.9 s, hp=50
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (de pe): efeito Nola_DownedBlock retirado ok=true
+UI_TOP Revived by your partner!
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0
+OUT me hp=50.0 alive=true

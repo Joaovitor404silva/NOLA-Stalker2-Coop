@@ -124,6 +124,7 @@ size_t loadVendorRows(const std::string& tsv);
 size_t vendorRowCount();
 
 struct VendHit { std::string kind, obj; double dist = 0; };
+bool vendorInfo(Id p, VendHit& out);
 bool vendorNear(double x, double y, double z, double r, VendHit& out);
 
 }

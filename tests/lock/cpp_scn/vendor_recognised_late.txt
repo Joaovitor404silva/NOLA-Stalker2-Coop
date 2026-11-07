@@ -1,0 +1,11 @@
+role client
+flag lead 1
+flag ldblk 1
+pawn 1000 666295 618840 287
+npc trader 5001 666295 618840 287 1 1 1 0 0
+npc native_off 5002 666395 618840 287 1 0 1 0 0
+peer h,5,1700000002,dlg,442057,470452,832
+run 1100
+npcset trader vendor 1
+npcset native_off vendor 1
+run 2100

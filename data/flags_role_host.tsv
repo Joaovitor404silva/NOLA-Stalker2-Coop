@@ -152,7 +152,7 @@ sdownanimtype	i	2
 sdowndie	i	1
 sreviveitem	i	1
 sbothdie	i	1
-sdownsecs	i	30
+sdownsecs	i	0
 slifegod	i	1
 sbothdown	i	1
 sdieload	i	1

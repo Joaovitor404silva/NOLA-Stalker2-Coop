@@ -8,7 +8,7 @@ strip_be	par	60	D:\modding\offline\testsave\be_26123434,D:\modding\offline\tests
 wsplice	par	150	D:\modding\offline\s1\reA\dec	bat wsplice/build_test.bat	
 net	par	60	{repo}\cppbuild\Output\_deps\polyhook2-src	bat net/build_test.bat ;; bat net/build_sxreq.bat ;; py net/parity.py	
 x0	par	40		bat x0/build_test.bat ;; exe x0/out/test_x0.exe ;; exe x0/out/test_rel.exe ;; py x0/parity.py	src/s2x_*;data/flags_x0.tsv;data/nola_runtime.tsv;data/flags_role_*.tsv;tools/gen_x0_data.py;tools/gen_x0_order.py;tests/run_tests.py;tests/suites.tsv;tests/baseline.tsv;cppbuild/*
-lock	par	30		bat lock/build_test.bat ;; bat lock/build_prod_check.bat ;; py lock/run_parity.py	
+lock	par	30		bat lock/build_test.bat ;; bat lock/build_prod_check.bat ;; py lock/run_parity.py ;; py lock/run_parity.py --mc	
 damage	par	30		bat damage/build_test.bat ;; py damage/run_parity.py	data/revive_*.tsv;tools/gen_revive_heal.py;data/mc_tags.tsv;tools/gen_mc_tags.py
 items	par	30		bat items/build_test.bat ;; py items/parity.py ;; py items/run_scen_cpp.py	data/s2u_cont*.tsv;data/s2u_drop.tsv;data/loot_sids.tsv;tools/gen_drop_data.py
 istate	par	10		bat istate/build_test.bat	

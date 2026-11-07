@@ -1,0 +1,4 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=false tiros_out=0 eu=HOST fim_de_jogo=#0 | PLAYER 1 vida=a | PLAYER 2 vida=a
+OUT me hp=100.0 alive=true

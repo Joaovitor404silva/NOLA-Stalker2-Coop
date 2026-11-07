@@ -1,4 +1,5 @@
 role client
+flag downsecs 30
 flag downnoweap 0
 flag downgod 0
 flag downdie 0

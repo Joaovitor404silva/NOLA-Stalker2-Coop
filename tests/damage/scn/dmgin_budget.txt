@@ -1,4 +1,5 @@
 role client
+flag downsecs 30
 flag dmgin 1
 flag dmgcap 100
 flag dmgmax 80

@@ -149,7 +149,7 @@ sffswallow	i	1
 sdeathneutral	i	1
 sdownanim	i	1
 sdownanimtype	i	2
-sdownsecs	i	30
+sdownsecs	i	0
 semgrace	i	10
 semparkpup	i	0
 semprotect	i	120

@@ -1,0 +1,15 @@
+UI PLAYER 1 is down!
+UI Press F to revive PLAYER 1 (uses a medkit)
+CALL rk XApplyEffectOnPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: parceiro caido ao alcance: efeito Nola_ReviveNoBag aplicado (F reanima e nao abre o inventario) ok=true
+LOG NOLA LIFE: itens de reanimar (Item.WoundedHeal): 3
+CALL itemRemove P Medkit 1 -> true
+LOG NOLA LIFE: REANIMAR: F perto de PLAYER 1 caido (100 cm): 1 Medkit consumido (tinha 3), pedido #1 para pid 1 enviado
+UI Reviving PLAYER 1…
+OUT inv Medkit=2
+UI Press F to revive PLAYER 1 (uses a medkit)
+OUT inv Medkit=2
+CALL itemRemove P Medkit 1 -> true
+LOG NOLA LIFE: REANIMAR: F perto de PLAYER 1 caido (100 cm): 1 Medkit consumido (tinha 2), pedido #2 para pid 1 enviado
+UI Reviving PLAYER 1…
+OUT inv Medkit=1

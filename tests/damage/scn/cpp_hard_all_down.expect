@@ -1,0 +1,35 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+OUT 
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0): sem limite de tempo; aguarda reanimacao ou todos caidos
+UI_TOP You are down. Waiting for revival. Hold HOME for 5 seconds to move beside the nearest standing player.
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+OUT 
+UI PLAYER 1 is down!
+CALL mh XRemoveEffectFromPlayer Nola_ReviveNoBag
+LOG NOLA LIFE: pawn novo: efeito Nola_ReviveNoBag retirado por garantia ok=true
+LOG NOLA LIFE: FIM DE JOGO PARA TODOS #GO:1,alldown (todos caidos)
+LOG NOLA LIFE: FIM DE JOGO (todos os jogadores caidos): eu (HOST) estou caido -> morro agora
+CALL gm_keep 0
+LOG NOLA LIFE: GameManager god off volta a limpar o bit 0x2 do jogador (ok=true)
+CALL build XSetEntityUnkillableByUID 0 false
+LOG NOLA LIFE: Unkillable uid=0 desligado (fim de jogo) ok=true
+CALL me RDS dmg=100000.00 ap=1.00 uid=- bone=None type=0 src=0
+LOG NOLA LIFE: FIM DE JOGO para todos (eu caido ha 1.9 s): morro agora (ReceiveDamageStruct ok=true hp 15.0 -> 0.0 alive=false, tentativa 1)
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: armas liberadas (morte): efeito Nola_DownedBlock retirado ok=true
+OUT #GO:1,alldown
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=true tiros_out=0 eu=HOST fim_de_jogo=#1 (anunciado) | PLAYER 1 vida=w | PLAYER 2 vida=w
+LOG NOLA LIFE: MORRI pelo fim de jogo (#GO do host): nada mandado de volta
+LOG NOLA LIFE: MORREU ENQUANTO CAIDO (hp=0.0 alive=false, caido ha 2.0 s, ultimo sangramento=0.0)
+OUT me hp=0.0 alive=false
+OUT #RV:0,0,0
+OUT #GO:1,alldown
+OUT 

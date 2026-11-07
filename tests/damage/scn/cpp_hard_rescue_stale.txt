@@ -1,0 +1,107 @@
+uiecho 1
+role host
+views 2 3 1 0
+flag lifeguard 1
+flag downfreeze 1
+flag downgod 1
+flag downdie 1
+flag downsecs 30
+flag reviveitem 1
+flag revwait 0
+flag revivehp 50
+flag bothdie 1
+flag bothdown 1
+me 100 1 0 0 0
+set me uid 0
+vpeer 0 up - c1 1
+vpeer 1 up - c2 1
+vremote 0 1000 0 0 0 1
+vremote 1 3000 0 0 0 2
+vx1 0 L a,100,100
+vx1 1 L a,100,100
+vx1 0 RV 0,0,0
+vx1 1 RV 0,0,0
+t 0
+do lifeGuard
+set me hp 10
+t 0.1
+do lifeGuard
+home 1
+t 0.2
+do lifeGuard
+t 0.3
+do lifeGuard
+t 0.4
+do lifeGuard
+t 0.5
+do lifeGuard
+t 0.6
+do lifeGuard
+t 0.7
+do lifeGuard
+t 0.8
+do lifeGuard
+t 0.9
+do lifeGuard
+t 1.0
+do lifeGuard
+t 1.1
+do lifeGuard
+t 1.2
+do lifeGuard
+t 1.3
+do lifeGuard
+t 1.4
+do lifeGuard
+t 1.5
+do lifeGuard
+t 1.6
+do lifeGuard
+t 1.7
+do lifeGuard
+t 1.8
+do lifeGuard
+t 1.9
+do lifeGuard
+t 2.0
+do lifeGuard
+t 2.1
+do lifeGuard
+t 2.2
+do lifeGuard
+t 2.3
+do lifeGuard
+t 2.4
+do lifeGuard
+t 2.5
+do lifeGuard
+t 2.6
+do lifeGuard
+t 2.7
+do lifeGuard
+t 2.8
+do lifeGuard
+t 2.9
+do lifeGuard
+t 3.0
+do lifeGuard
+t 3.1
+do lifeGuard
+t 3.2
+do lifeGuard
+t 3.3
+do lifeGuard
+t 3.4
+do lifeGuard
+t 3.5
+do lifeGuard
+t 3.6
+do lifeGuard
+t 3.7
+do lifeGuard
+t 3.8
+do lifeGuard
+t 3.9
+do lifeGuard
+t 4.0
+do lifeGuard

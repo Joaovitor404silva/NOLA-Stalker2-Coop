@@ -78,3 +78,5 @@ rev_nomedkit	You need a medkit to revive %s	Você precisa de um medkit para rean
 rev_sent	Reviving %s…	Reanimando %s…	Reanimando a %s…
 rev_done	Revived by %s!	Reanimado por %s!	¡Reanimado por %s!
 rev_partner	your partner	seu parceiro	tu compañero
+rev_down_unlimited	You are down. Waiting for revival. Hold HOME for 5 seconds to move beside the nearest standing player.	Voce caiu. Aguarde ser reanimado. Segure HOME por 5 segundos para ir ao parceiro de pe mais proximo.	Has caido. Espera a que te reanimen. Manten HOME durante 5 segundos para ir al companero en pie mas cercano.
+rev_peer_down	%s is down!	%s caiu!	%s ha caido!

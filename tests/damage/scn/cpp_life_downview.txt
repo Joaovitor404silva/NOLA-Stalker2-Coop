@@ -1,4 +1,5 @@
 role client
+flag downsecs 30
 flag downcam 1
 flag downhands 1
 flag lifeguard 1

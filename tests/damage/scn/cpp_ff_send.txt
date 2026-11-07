@@ -1,4 +1,5 @@
 role host
+flag downsecs 30
 views 1 1 0 0
 flag lifeguard 1
 flag lifegod 1

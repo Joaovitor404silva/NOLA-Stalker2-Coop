@@ -45,6 +45,11 @@ namespace x0
     const std::string& role() { return stub::role; }
     bool is_host() { return stub::role == "host"; }
     bool is_client() { return stub::role == "client"; }
+    Iface& iface()
+    {
+        static Iface i;
+        return i;
+    }
     bool set_session_role(std::string_view r, std::string_view)
     {
         std::string w = r.empty() ? stub::boot : std::string(r);

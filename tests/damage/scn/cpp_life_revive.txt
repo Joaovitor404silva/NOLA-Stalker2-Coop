@@ -1,4 +1,5 @@
 role client
+flag downsecs 30
 flag revwait 0
 flag lifeguard 1
 flag downfreeze 1
@@ -56,6 +57,7 @@ t 20
 keydown 1
 do revive
 keydown 0
+do revive
 do rvStr
 invq EcoMedkit
 inv ArmyMedkit 1

@@ -191,6 +191,7 @@ class Sender:
     """out.json text -> datagrams."""
     def __init__(self):
         self.npc_sent, self.app_sent, self.local_need = {}, {}, set()
+        self.sid = ""
     def split(self, txt, now, have=()):
         m = json.loads(txt)
         if m.get("v") != PROTO:
@@ -201,6 +202,10 @@ class Sender:
         m["need"] = ",".join(h for h in need if h not in have)
         m["ids"] = [n["id"] for n in npcs]
         sid, f = m.get("sid"), m.get("f")
+        # A new session gets every NPC and appearance again, not deltas.
+        if str(sid) != self.sid:
+            self.npc_sent.clear(); self.app_sent.clear()
+        self.sid = str(sid)
         out = [pack(T_HDR, m)]
         for n in npcs:
             sig = (n.get("x"), n.get("y"), n.get("z"), n.get("yaw"), n.get("a"), n.get("s"), n.get("wp"))
@@ -223,16 +228,28 @@ class Assembler:
     def __init__(self):
         self.hdr, self.npcs, self.apps = None, {}, {}
         self.stale = 0
+        self.retired = set()
     def feed(self, data, now):
         typ, obj = unpack(data)
         if typ == T_HDR:
             if self.hdr is not None and self.hdr.get("sid") == obj.get("sid") and obj.get("f", 0) < self.hdr.get("f", 0):
                 self.stale += 1; return typ
             if self.hdr is not None and self.hdr.get("sid") != obj.get("sid"):
+                # Datagrams of a session that was replaced are dropped.
+                if str(obj.get("sid")) in self.retired:
+                    self.stale += 1; return typ
+                if len(self.retired) >= 256:
+                    raise ProtoError("session history full: reconnect relay")
+                self.retired.add(str(self.hdr.get("sid")))
                 self.npcs.clear()
             self.hdr = obj
         elif typ == T_NPC:
-            n = obj["n"]; cur = self.npcs.get(n["id"])
+            n = obj["n"]; nid = n["id"]
+            if str(obj.get("sid")) in self.retired:
+                self.stale += 1; return typ
+            if self.hdr is not None and self.hdr.get("sid") != obj.get("sid"):
+                self.stale += 1; return typ
+            cur = self.npcs.get(nid)
             if cur is not None and cur["sid"] == obj.get("sid") and obj.get("f", 0) < cur["f"]:
                 self.stale += 1; return typ
             self.npcs[n["id"]] = {"sid": obj.get("sid"), "f": obj.get("f", 0), "n": n, "at": now}

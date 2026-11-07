@@ -1,4 +1,5 @@
 role client
+flag downsecs 30
 flag lifeguard 1
 flag downfreeze 1
 flag downgod 1

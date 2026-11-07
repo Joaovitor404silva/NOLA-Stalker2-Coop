@@ -1,5 +1,6 @@
 # DV1: stock low-health screen effect while downed (downfx)
 role client
+flag downsecs 30
 flag downcam 0
 flag downhands 0
 flag downfx 1

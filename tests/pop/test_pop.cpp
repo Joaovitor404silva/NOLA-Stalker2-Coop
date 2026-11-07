@@ -329,6 +329,9 @@ int main(int argc, char** argv)
         check(f.ps[3].hidden, "second NPC near the same row hidden");
         check(f.ps[4].hidden, "other NPC hidden");
         check(isVendor(2) && !isVendor(3), "isVendor");
+        VendHit info;
+        check(vendorInfo(2, info) && info.kind == "bartender" && info.obj == "BanditPonuryj", "vendorInfo returns selected vendor metadata");
+        check(!vendorInfo(3, info) && !vendorInfo(999, info), "vendorInfo rejects unselected and invalid actors");
         f.host = true;
         check(vendSkip(2) && !vendSkip(4), "host vendSkip");
         check(has(f, "NOLA vend: NPC em 664295,618840,287 sem espelho: bartender BanditPonuryj a 0 m"), "vendSkip log");

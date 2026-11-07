@@ -1,0 +1,28 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+CALL build XSetEntityUnkillableByUID 0 true
+CALL gm_keep 1
+LOG NOLA LIFE: GameManager god off agora poupa o bit 0x2 do jogador (ok=true)
+LOG NOLA LIFE: caido protegido Unkillable uid=0 ok=true
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); morre em 30 s ou com F + medkit do outro jogador a 300 cm
+UI_TOP You are down! A partner can revive you with F + a medkit. You die in 30 s
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+UI Rescue in 5 seconds - moving to the nearest standing player. Keep holding HOME; release to cancel.
+UI_TOP You are down! A partner can revive you with F + a medkit. You die in 29 s
+UI Rescue in 4 seconds - moving to the nearest standing player. Keep holding HOME; release to cancel.
+UI_TOP You are down! A partner can revive you with F + a medkit. You die in 28 s
+UI Rescue in 3 seconds - moving to the nearest standing player. Keep holding HOME; release to cancel.
+UI_TOP You are down! A partner can revive you with F + a medkit. You die in 27 s
+UI Rescue in 2 seconds - moving to the nearest standing player. Keep holding HOME; release to cancel.
+UI_TOP You are down! A partner can revive you with F + a medkit. You die in 26 s
+UI Rescue in 1 seconds - moving to the nearest standing player. Keep holding HOME; release to cancel.
+UI_TOP You are down! A partner can revive you with F + a medkit. You die in 25 s
+UI_CLEAR s2m_rescue
+TELEPORT ok 3000,120,0
+UI Moved beside the nearest standing player. You still need to be revived.
+LOG NOLA RESCUE: moved beside PLAYER 2; still downed, awaiting revive
+OUT dmg rota=D alvo=nao seq_out=0 aplicados_total=0 caido=true tiros_out=0 eu=HOST fim_de_jogo=#0 | PLAYER 1 vida=w | PLAYER 2 vida=a
+OUT me hp=15.0 alive=true

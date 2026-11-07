@@ -1,0 +1,17 @@
+> role client
+> flag lead 1
+> flag ldblk 1
+> pawn 1000 666295 618840 287
+> npc trader 5001 666295 618840 287 1 1 1 0 0
+> npc native_off 5002 666395 618840 287 1 0 1 0 0
+> peer h,5,1700000002,dlg,442057,470452,832
+> run 1100
+L 1000 NOLA choice: tabela b91choice-1: 1281 NPCs de escolha (1007 resolviveis), 185 usaveis, 617 gatilhos
+L 1000 NOLA vend: 96 vendedores em s2u_vendor.lua
+A npc trader active 0
+L 1000 NOLA lead: 1 NPCs de historia sem interacao aqui (total 1): o outro lado lidera (dlg #5)
+> npcset trader vendor 1
+> npcset native_off vendor 1
+> run 2100
+A npc trader active 1
+L 2000 NOLA lead: 1 NPCs bloqueados morreram: interacao de volta (corpo saqueavel)

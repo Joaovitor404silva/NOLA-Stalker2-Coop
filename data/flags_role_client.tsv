@@ -50,6 +50,7 @@ stpfloor	i	1
 sldblk	i	1
 smqpull	i	1
 svendtr	i	300
+svendtrade	i	1
 spupfix	i	1
 ssleeppull	i	1
 stgtgod	i	1
@@ -155,7 +156,7 @@ sdownanimtype	i	2
 sdowndie	i	1
 sreviveitem	i	1
 sbothdie	i	1
-sdownsecs	i	30
+sdownsecs	i	0
 slifegod	i	1
 sbothdown	i	1
 sdieload	i	1
