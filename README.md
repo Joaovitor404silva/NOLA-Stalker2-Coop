@@ -11,7 +11,7 @@
 
 <p align="center"><a href="https://ko-fi.com/jaumn"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support NOLA on Ko-fi"></a></p>
 
-> Status: **v1.4.1** (see the [Changelog](CHANGELOG.md)). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
+> Status: **v1.4.2** (see the [Changelog](CHANGELOG.md)). It works and has been played a lot in testing, but it is not finished and it will have bugs. Please read [Known issues](KNOWN_ISSUES.md) before you start.
 
 ---
 
@@ -75,7 +75,7 @@ NOLA is made by one person, so every bit of help counts. You don't need to know 
 - **What happened**, and what you expected to happen.
 - **How to make it happen again**, step by step if you can.
 - **Who was hosting**, how many players were in, and whether you used **Steam** or **LAN / IP**.
-- Your **NOLA version** (for example v1.4.1) and your **game build** (Steam → right-click the game → Properties → Updates).
+- Your **NOLA version** (for example v1.4.2) and your **game build** (Steam → right-click the game → Properties → Updates).
 - The **UE4SS.log** from **every player**. It's in `Stalker2\Binaries\Win64\ue4ss\` inside the game folder. Drag the file into the issue.
 - A **screenshot or short video** if it's something you can see.
 

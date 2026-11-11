@@ -2,6 +2,19 @@
 
 [← Back to the overview](README.md)
 
+## v1.4.2 (2026-11-11)
+
+A fix update. Same game build as v1.4.1 (Update 2.1, Steam build 26123434). Every player must install the same version.
+
+### Fixed
+- **Steam join:** a guest who accepted a Steam invite (or used Join co-op) waited about 20 seconds on the loading screen and went back to the main menu. The guest now connects.
+- **Hamster in Zalissya:** guests can talk to him and buy from him again ([issue #32](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/32)). The same fix applies to other calm NPCs whose dialogue did not open for the guest.
+- **Guest crash** when a different campaign was loaded while already in the world.
+- **Faceless player copies after a teleport:** after a downed player moved beside a teammate (HOME) or any long teleport, one or two faceless copies of a player could stay standing at the destination. They are now removed, for the host and the guests.
+
+### Known issues
+- A vendor can stand a few metres from where the host sees them, and can be out of place after the guest reloads a save in the middle of a session.
+
 ## v1.4.1 (2026-11-11)
 
 Smoother NPCs for guests, a report key, and old co-op saves back after an update. Same game build as v1.3.2 (Update 2.1, Steam build 26123434). Every player must install the same version. Includes everything from the v1.4.0-beta.1 test build ([pull request #39](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/pull/39) by dreadnaughtgaming).
