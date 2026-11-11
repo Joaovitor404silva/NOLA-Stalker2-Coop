@@ -2,6 +2,30 @@
 
 [← Back to the overview](README.md)
 
+## v1.4.1 (2026-11-11)
+
+Smoother NPCs for guests, a report key, and old co-op saves back after an update. Same game build as v1.3.2 (Update 2.1, Steam build 26123434). Every player must install the same version. Includes everything from the v1.4.0-beta.1 test build ([pull request #39](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/pull/39) by dreadnaughtgaming).
+
+### Fixed
+- **NPCs freezing, sliding and teleporting for guests:** the host sent each world update as one large packet that some routers, VPNs and mobile connections drop. Updates now travel as small packets and a lost one is repaired without a resend, every received update is used, and the smoothing of NPC movement adapts to the connection. Tested at 120-200 ms with packet loss.
+- **NPCs invisible for a guest when the players are far apart:** far-away NPCs no longer block the ones near you from appearing.
+- **An NPC the guest's game could not move was teleported many times a second:** it is retried at longer intervals instead.
+- **Old co-op saves missing after an update:** since v1.3.1 co-op games are saved in their own folder (`SaveGamesNOLA`), so campaigns saved with older versions did not show in co-op. The first time you open co-op and its save folder is empty, NOLA copies your saves into it once. Your normal saves are not changed. `csaveseed=0` turns this off.
+- **Revive medkit:** it is taken only when the revive request goes out, holding F no longer uses a second one, and a rejected revive gives the medkit back.
+- **Trade screen for guests:** guests can open the trade screen at vendors and technicians in more cases, and a failed trade request brings the dialogue answers back (related to [issue #32](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/32)).
+- Story NPCs whose interaction was paused get it back even when the first try fails; a door lock the game refuses is retried; broken, oversized or old network packets are dropped safely; leftover main menu refreshes no longer run in the world.
+
+### New
+- **Report key Ctrl+F10:** when something goes wrong, press Ctrl+F10. NOLA writes one file to `C:\nola_bridge\reports\`, shows its name on screen, and adds what happens in the next 20 seconds. Send us that file.
+- **Session log:** NOLA keeps a log of each session in `C:\nola_bridge\logs\` (the last 5 sessions). After a crash, send the newest one before you start the game again.
+- **Privacy:** IP addresses, Steam IDs, your Windows user folder, PC names and player names are masked in both files. Nothing is sent anywhere by itself.
+- **No bleed-out timer:** a downed player stays down until a teammate revives them with F + a medkit. If every player is down, the team restarts from the host's last save. The host can bring back a timer with `downsecs` (for example `downsecs=30`).
+- **Hold HOME for 5 seconds while down** to move beside the nearest standing teammate (you still need a revive).
+- **"<name> is down!"** is shown to the other players.
+
+### Known issues
+- A vendor can stand a few metres from where the host sees them, and can be out of place after the guest reloads a save in the middle of a session.
+
 ## v1.3.2 (2026-11-04)
 
 Fixes five reported bugs. Same game build as v1.3.1 (Update 2.1, Steam build 26123434). Every player must install the same version.

@@ -86,6 +86,7 @@ For this to work, `hostcfg` must stay on (see "Don't change" below).
 | Setting | Default | What it does | What happens if you turn it off |
 |---|---|---|---|
 | `coopsaves` | `1` | ⚠️ Co-op games are saved in their own place, so your normal solo saves are not touched. | Co-op would use your normal save slots, so a co-op game can end up mixed with your solo saves. Please don't. |
+| `csaveseed` | `1` | The first time co-op opens an empty co-op save folder, NOLA copies your normal saves into it once, so campaigns from before v1.3.1 show in co-op. Your normal saves are not changed. | Old co-op campaigns saved before v1.3.1 stay only in the normal save folder and don't show in co-op. |
 | `csave`, `csmenu`, `csexit`, `cswc` | `1` | ⚠️ **Don't change.** Part of the co-op save system, and the fix for the false "corrupt save" popup. | Saving in co-op can go wrong, and the false "file is corrupted" popup can come back. |
 | `n7` 🔗 | `1` | ⚠️ **Don't change.** This is how a joiner keeps their own character (gear, health, quick slots) in the host's world. | Joiners may not keep their own character. |
 | `sxjoin`, `wsplice`, `wspair`, `wstrip`, `wspos`, `wpkg` | `1` | ⚠️ **Don't change.** These put the joiner's character into the host's world when they join. | Joining can fail or leave you with the wrong character. |
@@ -100,7 +101,7 @@ For this to work, `hostcfg` must stay on (see "Don't change" below).
 | `meleesync` | `1` | A joiner's knife and melee hits hurt the host's enemies. | A joiner's melee hits stop hurting enemies. |
 | `lifeguard` 🔗 | `1` | ⚠️ The "downed" system. At low health you drop to the ground instead of dying, and a teammate can pick you up. | There is no downed state, you die in the normal way. Friendly fire and the other downed settings below stop working. |
 | `downhp` 🔗 | `15` | The health level at which you go down. | Not a switch. A lower number means you have to be closer to death before you go down. |
-| `downsecs` 🔗 | `30` | How many seconds you can stay down (the bleed-out time). | Not a switch. A bigger number gives your friends more time. |
+| `downsecs` 🔗 | `0` | How many seconds you can stay down (the bleed-out time). `0` = no timer: you stay down until a teammate revives you. | Not a switch. Set a number (for example `30`) to bring back the bleed-out timer. |
 | `downdie` 🔗 | `1` | When `downsecs` runs out, you die. | With `0`, you stand up on your own after `downsecs` instead of dying. |
 | `reviveitem` 🔗 | `1` | A teammate stands close, holds **F** with a medkit, and you get up. | With `0`, a teammate only has to stand close to you for `revivesecs` seconds, with no medkit needed. |
 | `reviveradius` 🔗 | `300` | How close the helper must be, in centimetres. `300` is about 3 metres. | Not a switch. A bigger number lets the helper stand farther away. |
