@@ -43,3 +43,4 @@ buildchk	par	60	C:\Program Files (x86)\Steam\steamapps\common\S.T.A.L.K.E.R. 2 H
 hot	par	10		bat hot/build_test.bat ;; py hot/coverage.py	src/*.cpp;src/*.h;src/*.inc;src/CMakeLists.txt
 worn	par	10		bat worn/build_test.bat	
 lockbehind	par	5		py lockbehind/test_gen_lockbehind.py	tools/gen_lockbehind.py;data/s2u_lockbehind.tsv;src/s2m_lockbehind*
+net_crx	par	10		bat net/build_crx.bat	src/s2r_net.cpp;src/s2r_net.h;tests/net/test_crx.cpp;tests/net/build_crx.bat
