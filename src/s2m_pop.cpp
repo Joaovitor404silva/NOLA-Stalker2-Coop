@@ -498,7 +498,7 @@ void alifeTick()
             A.fails++;
             if (A.fails <= 3 || A.fails % 30 == 0)
                 g_env->log(std::string("NOLA alife: chamadas falharam (ok=") + tf(ok1) + "," + tf(ok2) + ") tentativa " + std::to_string(A.fails) + "; tento de novo");
-            if (want) retry = true; else A.off = want;
+            retry = true;
         }
         int back = 0;
         if (!want) {
