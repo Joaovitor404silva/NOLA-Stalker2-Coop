@@ -3275,14 +3275,14 @@ namespace s2r
                 if (typ == proto::T_ROSTER)
                 {
                     ++roster_rx;
-                    int64_t you = -1, mx = 1;
-                    if (const js::V* v = obj.get("you")) py_int(*v, you);
+                    int64_t assigned = -1, mx = 1;
+                    if (const js::V* v = obj.get("you")) py_int(*v, assigned);
                     if (const js::V* v = obj.get("max")) py_int(*v, mx);
                     if (mx < 1) mx = 1;
                     if (mx > proto::MAXV) mx = proto::MAXV;
                     Roster r;
                     r.hub = true;
-                    r.you = (int)you;
+                    r.you = (int)assigned;
                     r.max = (int)mx;
                     if (const js::V* ps = obj.get("peers"))
                         if (ps->t == js::V::array)
