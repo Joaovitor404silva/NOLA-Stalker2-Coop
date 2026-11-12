@@ -29,6 +29,7 @@ struct Fake : Env {
     bool hasLp = true;
     bool host = false;
     bool aiOk = true;
+    bool alifeOk = true;
     std::vector<std::string> calls;
     Body tg, pu;
     std::string wk = "w1";
@@ -73,7 +74,7 @@ struct Fake : Env {
     bool setInteractionOff(Id p) override { ps[p].inter = false; return true; }
     bool destroyActor(Id p) override { ps[p].destroyed = true; return true; }
     bool aiFeatures(bool off, long long m) override { calls.push_back(std::string(off ? "deact " : "act ") + std::to_string(m)); return aiOk; }
-    bool aLife(bool off) override { calls.push_back(off ? "alife off" : "alife on"); return aiOk; }
+    bool aLife(bool off) override { calls.push_back(off ? "alife off" : "alife on"); return alifeOk; }
     bool inThreat(Id p) override { return ps[p].threat; }
     bool focusIsLocal(Id p) override { return ps[p].focus; }
     bool guid(Id p, long long& u) override { u = ps[p].uid; return u != 0; }
@@ -114,6 +115,28 @@ bool has(const Fake& f, const std::string& sub)
 
 int main(int argc, char** argv)
 {
+    for (int failure = 1; failure <= 3; ++failure) {
+        Fake f;
+        f.flags["alifeoff"] = 1;
+        init(&f);
+        tick1000(); tick1000();
+        f.flags["alifeoff"] = 0;
+        f.aiOk = (failure & 1) == 0;
+        f.alifeOk = (failure & 2) == 0;
+        tick1000(); tick1000();
+        f.calls.clear();
+        tick1000(); tick1000();
+        check(f.calls.size() == 2 && f.calls[0] == "act 4194303" && f.calls[1] == "alife on",
+            "AI recovery retries while either activation call fails");
+        f.calls.clear();
+        f.aiOk = f.alifeOk = true;
+        tick1000(); tick1000();
+        check(f.calls.size() == 2 && f.calls[0] == "act 4194303" && f.calls[1] == "alife on",
+            "AI recovery retries successfully once activation becomes available");
+        f.calls.clear();
+        tick1000(); tick1000();
+        check(f.calls.empty(), "successful AI recovery stops retrying");
+    }
     std::string dir = argc > 1 ? argv[1] : "D:/modding/cpp/S2CoopPort/data";
     std::ifstream in(dir + "/s2u_vendor.tsv", std::ios::binary);
     std::stringstream ss;
@@ -304,7 +327,7 @@ int main(int argc, char** argv)
     {
         Fake f;
         f.flags["alifeoff"] = 1;
-        f.aiOk = false;
+        f.aiOk = f.alifeOk = false;
         f.ps[1] = P(); f.ps[1].name = "BP_Player";
         init(&f);
         for (int i = 0; i < 8; ++i) tick1000();
