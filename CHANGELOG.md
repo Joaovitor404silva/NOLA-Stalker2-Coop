@@ -2,6 +2,29 @@
 
 [← Back to the overview](README.md)
 
+## v1.5.0 (2026-11-14)
+
+A feature and fix update. Same game build as v1.4.2 (Update 2.1, Steam build 26123434). Every player must install the same version.
+
+### Fixed
+- **Guest crash** after travelling far across the map and back.
+- **Frozen AI:** AI could stay frozen when a player went back to their own game after playing as a guest, if turning the game's AI back on failed once. It now keeps trying until the AI is back (related to [issue #41](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/41); [pull request #45](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/pull/45) by dreadnaughtgaming).
+- **Story dialogues:** when the host is in a story dialogue, the guest's copy of it now shows the answers the host picks and closes when the host's closes. The guest's copy no longer takes over the dialogue or hides the host's answer menu.
+- **Mutant in human clothes:** guests could see a mutant wearing human clothes (or a human with a mutant's body) when the host's game reused an NPC slot.
+- **Dropped items:** an item dropped by the host could come back twice for a guest who walked away and returned, and a dropped item that disappeared next to a player (without being picked up) was lost for everyone. Both fixed.
+- **Dropped artefacts** now show up for the other players.
+- **PDA notes** added by host-only quest steps now reach the guests.
+
+### New
+- **Physics objects move on every PC:** props pushed, thrown or knocked over by a player, an explosion or a Poltergeist now land in the same place for everyone, and objects held by a Poltergeist float on every PC.
+
+### Tests
+- Regression test for the guest roster slot fix that shipped in v1.4.2 ([pull request #46](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/pull/46) by dreadnaughtgaming).
+
+### Known issues
+- A vendor can stand a few metres from where the host sees them, and can be out of place after the guest reloads a save in the middle of a session.
+- When the host talks to the bartender who calls you over in the first area, the guest does not see that dialogue ([issue #40](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/40)).
+
 ## v1.4.2 (2026-11-11)
 
 A fix update. Same game build as v1.4.1 (Update 2.1, Steam build 26123434). Every player must install the same version.
