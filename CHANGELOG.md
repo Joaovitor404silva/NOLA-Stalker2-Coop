@@ -2,6 +2,33 @@
 
 [← Back to the overview](README.md)
 
+## v1.5.1 (2026-11-17)
+
+A big fix update for reported issues. Same game build as v1.5.0 (Update 2.1, Steam build 26123434). Every player must install the same version.
+
+### Fixed
+- **Radiation after a load:** a guest no longer takes the host's radiation, hunger, thirst and sleep when the host loads a save; each player keeps their own ([issue #23](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/23)).
+- **Moving anomalies** such as fire balls are now in the same place for every player ([issue #25](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/25)).
+- **Guest look:** a guest wearing armour keeps the same suit after a long teleport or when far away, and changing armour shows the new suit to the others ([issue #36](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/36)).
+- **Personal stash:** items a guest takes out or puts in now leave or reach the host's stash too, with no ghost items ([issue #42](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/42)).
+- **Guest saves:** after an auto-reconnect the guest keeps their own inventory ([issue #48](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/48)); after a host quick-load the guest gets their own matching save ([issue #54](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/54)); loading an earlier save brings back the guest's inventory from that save ([issue #53](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/53)).
+- **Dropped items** no longer multiply after save and load, and an item dropped after a save is gone when that save is loaded ([issue #49](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/49)). Items the host drops near a guest are no longer dragged around.
+- **AI:** NPCs and mutants no longer freeze for a guest on a slow connection, and mutants attack a guest far from the host, up to the game's A-Life range of about 100 m ([issue #50](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/50)).
+- **Guest shots** now hit running mutants and NPCs ([issue #55](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/55)).
+- **NPC voices:** a guest no longer hears the same line twice, and a line the host skips also stops for the guest ([issue #51](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/51)).
+- **Blowouts** start and end together for host and guest, also after the guest reloads during one ([issue #52](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/52)).
+- **Picking up:** items on the ground stay still while a player takes them, and a sprinting guest no longer looks like they slide at high speed ([issue #56](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/56)).
+- **Loot X mark** on a corpse disappears for the guest once the host has emptied it ([issue #57](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/57)).
+- **Radiation revive:** a player downed by radiation no longer dies again right after being revived ([issue #59](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/59)).
+- **Story scenes:** when the host's cutscene dialogue ends (for example Richter on the crane at the Slag Heap), the guest's copy closes too ([issue #60](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/60)).
+
+### New
+- The session log records whether each anomaly a player walks into hurt them, to help with reports like [issue #58](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/58).
+
+### Known issues
+- When the host talks to the bartender who calls you over in the first area, the guest does not see that dialogue ([issue #40](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/40)).
+- Mutants farther than about 100 m from the host do not attack a guest: the game only runs AI that close to the host.
+
 ## v1.5.0 (2026-11-14)
 
 A feature and fix update. Same game build as v1.4.2 (Update 2.1, Steam build 26123434). Every player must install the same version.
