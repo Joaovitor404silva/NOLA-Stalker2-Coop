@@ -1,6 +1,7 @@
 #include "s2x.h"
 #include "s2m_bodies.h"
 #include "s2m_damage.h"
+#include "s2m_hitshield.h"
 #include "s2m_lock.h"
 #include <cmath>
 #include <cstdarg>
@@ -500,13 +501,13 @@ namespace x0
     {
         if (name == "revive_items.tsv" || name == "revive_heal.tsv")
         {
-            std::ifstream f(data_dir + "\\" + std::string(name));
+            std::ifstream f(data_dir + "/" + std::string(name));
             std::string line;
             bool head = true;
             int kcols = 0;
             while (std::getline(f, line))
             {
-                if (!line.empty() && line.back() == '') line.pop_back();
+                if (!line.empty() && line.back() == '\r') line.pop_back();
                 std::vector<std::string> c;
                 size_t b = 0;
                 while (true)
@@ -616,8 +617,8 @@ int main(int argc, char** argv)
 {
     if (argc < 3) return 2;
     data_dir = argv[1];
-    load_flags(data_dir + "\\flags_s2core.tsv");
-    load_flags(data_dir + "\\flags_main.tsv");
+    load_flags(data_dir + "/flags_s2core.tsv");
+    load_flags(data_dir + "/flags_main.tsv");
     MED = add("med", "CppMediator /Script/Stalker2.Default__CppMediator", false);
     PC = add("pc", "PlayerController /Game:PersistentLevel.pc", false);
     BLD = add("build", "CustomConsoleManagerBuild /Game:PersistentLevel.build", false);
@@ -888,6 +889,8 @@ int main(int argc, char** argv)
             ROWS["shotsIn"]();
             SNAP.shots.clear();
         }
+        else if (cmd == "shieldq")
+            out(std::string("OUT shield ") + a[0] + "=" + (s2m::hitshield::blocks(static_cast<uint32_t>(D(0)), s2m::hitshield::clock_ms()) ? "true" : "false"));
         else if (cmd == "hp") out("OUT " + a[0] + " hp=" + f2("%.1f", W[find(a[0])].hp) + " alive=" + (W[find(a[0])].alive ? "true" : "false"));
     }
     return 0;
