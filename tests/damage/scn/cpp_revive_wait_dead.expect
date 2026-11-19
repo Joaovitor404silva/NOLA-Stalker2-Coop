@@ -1,0 +1,11 @@
+CALL mh XRemoveEffectFromPlayer Nola_DownedBlock
+LOG NOLA LIFE: pawn novo de pe: efeito Nola_DownedBlock retirado por garantia (save feito caido) ok=true
+CALL me ForceSetHP 15
+LOG NOLA LIFE: caido protegido Unkillable uid=nil ok=false
+CALL me.cm DisableMovement
+LOG NOLA LIFE: CAIDO #1 (hp 10.0 <= 15); levanta em 300 s ou com F + medkit do outro jogador a 300 cm
+CALL rk XApplyEffectOnPlayer Nola_DownedBlock
+LOG NOLA LIFE: caido sem armas: efeito Nola_DownedBlock aplicado (atirar, mirar, recarregar, granada, faca, consumiveis, mochila bloqueados) ok=true
+LOG NOLA LIFE: pedido de reanimacao #1 recebido: fica caido 3.0 s enquanto o outro jogador aplica o medkit
+LOG NOLA LIFE: pedido de reanimacao #1 de HOST recusado: a 700 cm (max 450), estado w
+OUT #L:w,15,100
