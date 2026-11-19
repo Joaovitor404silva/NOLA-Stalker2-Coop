@@ -1,0 +1,41 @@
+role host
+flag lifeguard 1
+flag downgod 1
+flag downfreeze 1
+flag reviveitem 1
+flag bothdie 0
+flag downdie 0
+flag downsecs 300
+flag revwait 0
+flag dmgspawn 3
+me 100 1 0 0 0
+set me uid 42
+x1 RV 0,0
+x1 L a,100,100
+remote 100 0 0 0
+t 0
+do lifeGuard
+shieldq 42
+set me hp 10
+t 1
+remote 100 0 0 1
+do lifeGuard
+shieldq 42
+shieldq 43
+t 2
+remote 100 0 0 2
+x1 RV 1,0
+do lifeGuard
+shieldq 42
+t 5.1
+remote 100 0 0 5.1
+do lifeGuard
+shieldq 42
+set me hp 10
+t 6
+remote 100 0 0 6
+do lifeGuard
+shieldq 42
+flag lifeguard 0
+do lifeGuard
+shieldq 42

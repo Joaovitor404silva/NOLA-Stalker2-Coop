@@ -2,6 +2,7 @@
 #define NOMINMAX
 #endif
 #include "s2m_damage.h"
+#include "s2m_hitshield.h"
 #include "s2m_bodies.h"
 #include "s2m_lock.h"
 #include "s2m_text.h"
@@ -1661,6 +1662,8 @@ namespace s2m::damage
 
         bool life_kill(const Ref& pw)
         {
+            // Explicit wipe/bleed-out must bypass the local damage shield.
+            hitshield::clear();
             int c = LF.down ? LF.cause : 0;
             int nt = F_deathneutral.i() == 1 ? 0 : 1;
             int ty = c ? (c & 0xff) : 6 * nt, src = c ? ((c >> 8) & 0xff) : 2 * nt;
@@ -1998,8 +2001,24 @@ namespace s2m::damage
             if (x0::is_client() && g_links.die_follow) g_links.die_follow();
         }
 
+        struct HitShieldUpdate
+        {
+            ~HitShieldUpdate()
+            {
+                Ref pw = local_pawn();
+                int64_t uid = -1;
+                bool protect = F_lifeguard.i() == 1 && peer_in() && pw && alive_of(pw) &&
+                    !LF.dying && !LF.both && !RV.pd && !GO.dying &&
+                    (LF.down || x0::now() < DI.protectUntil);
+                if (protect && guid_of(pw, uid) && uid >= 0 && uid < 0x8000000)
+                    hitshield::renew(static_cast<uint32_t>(uid), hitshield::clock_ms());
+                else hitshield::clear();
+            }
+        };
+
         void life_guard()
         {
+            HitShieldUpdate shieldUpdate;
             double now = x0::now();
             Ref pw = local_pawn();
             rv_watch(now);

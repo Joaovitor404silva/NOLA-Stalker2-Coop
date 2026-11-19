@@ -7,6 +7,7 @@
 #include <Windows.h>
 #include <intrin.h>
 #include "s2n_dsdrop.h"
+#include "s2m_hitshield.h"
 #include "s2n_peframe.h"
 #include "s2n_nat_api.h"
 #include "s2n_gait.h"
@@ -5029,6 +5030,7 @@ namespace
             reinterpret_cast<DmgFn>(g_ddTramp)(ent, dd, p3);
             return;
         }
+        if (e && s2m::hitshield::blocks(dd_id_seh(e), s2m::hitshield::clock_ms())) return;
         if (e && g_dsOn && dd_id_seh(e) == pl_id())
         {
             ds_capture(reinterpret_cast<const uint8_t*>(dd));
@@ -5116,6 +5118,7 @@ namespace
         {
             uint8_t* ent = *reinterpret_cast<uint8_t**>(actor + 0x650);
             if (!ent) return 0;
+            if (s2m::hitshield::blocks(dd_id_seh(reinterpret_cast<uintptr_t>(ent)), s2m::hitshield::clock_ms())) return 0;
             alignas(16) uint8_t bp[0x30] = {};
             std::memcpy(bp, a->f, 20);
             *reinterpret_cast<uint32_t*>(bp + 0x14) = atk;
