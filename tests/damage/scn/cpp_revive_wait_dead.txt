@@ -1,0 +1,29 @@
+role client
+views 1 2 0 1
+flag lifeguard 1
+flag downgod 1
+flag reviveitem 1
+flag bothdie 0
+flag downdie 0
+flag downsecs 300
+flag revwait 3
+me 100 1 0 0 0
+vpeer 0 up - host 1
+vremote 0 200 0 0 0 0
+vx1 0 L a,100,100
+vx1 0 RV 0,0,1
+t 0
+do lifeGuard
+set me hp 10
+t 1
+vremote 0 200 0 0 1 0
+do lifeGuard
+t 2
+vremote 0 200 0 0 2 0
+vx1 0 RV 1,0,1
+do lifeGuard
+vx1 0 L w,15,100
+t 5.1
+vremote 0 700 0 0 5.1 0
+do lifeGuard
+do lifeStr

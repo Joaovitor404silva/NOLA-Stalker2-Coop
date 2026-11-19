@@ -310,6 +310,9 @@ namespace s2m::damage
             bool dwAlive = false;
             int64_t tpid = 0;
             int reqView = 0;
+            bool reqChecked = false, reqNear = false;
+            std::string reqPeer;
+            int reqSession = -1;
             bool ctx = false;
             int item = 0;
             int reqItem = 0;
@@ -1582,6 +1585,7 @@ namespace s2m::damage
                     {
                         RV.req = a;
                         RV.reqAt = now;
+                        RV.reqChecked = false;
                         RV.reqView = v;
                         RV.reqItem = (int)it;
                     }
@@ -1642,6 +1646,7 @@ namespace s2m::damage
                 RV.rRev = a;
                 RV.req = a;
                 RV.reqAt = now;
+                RV.reqChecked = false;
                 RV.reqItem = (int)it;
             }
             if (b > RV.rDie)
@@ -2096,6 +2101,21 @@ namespace s2m::damage
             bool byReq = false;
             bool byNear = false;
             std::string byName;
+            // The medkit has already been consumed. Check reach before the animation
+            // wait, rather than rejecting a paid revive when the rescuer moves away.
+            if (F_reviveitem.i() == 1 && RV.req && !RV.reqChecked)
+            {
+                int v = multi() ? RV.reqView : 0;
+                const x0::Peer& peer = x0::peer(v);
+                char state = 0;
+                double health, maximum, distance = -1;
+                RV.reqNear = view_fresh(v, now) &&
+                    parse_life(state, health, maximum, v) && state == 'a' &&
+                    remote_near(pw, now, rr * 1.5, distance, v);
+                RV.reqPeer = peer.id;
+                RV.reqSession = peer.sessions;
+                RV.reqChecked = true;
+            }
             if (F_reviveitem.i() == 1 && RV.req && now - RV.reqAt < F_revwait.d())
             {
                 if (RV.reqWaitLog != RV.req)
@@ -2115,7 +2135,9 @@ namespace s2m::damage
                     char st2 = 0;
                     double rh2, rm2;
                     bool rl2 = parse_life(st2, rh2, rm2, rv);
-                    bool inR = remote_near(pw, now, rr * 1.5, dist, rv);
+                    remote_near(pw, now, rr * 1.5, dist, rv);
+                    bool inR = RV.reqNear && view_fresh(rv, now) &&
+                        x0::peer(rv).id == RV.reqPeer && x0::peer(rv).sessions == RV.reqSession;
                     std::string who = pname(x0::view_pid(rv));
                     if (inR && rl2 && st2 == 'a')
                     {
@@ -2130,7 +2152,9 @@ namespace s2m::damage
                 else if (RV.req)
                 {
                     double dist = -1;
-                    bool inR = remote_near(pw, now, rr * 1.5, dist);
+                    remote_near(pw, now, rr * 1.5, dist);
+                    bool inR = RV.reqNear && view_fresh(0, now) &&
+                        x0::peer().id == RV.reqPeer && x0::peer().sessions == RV.reqSession;
                     if (inR && rl && st == 'a')
                     {
                         why = fmt("reanimado pelo outro jogador com F + medkit, pedido #%lld a %.0f cm", (long long)RV.req, dist);
