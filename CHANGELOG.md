@@ -2,6 +2,18 @@
 
 [← Back to the overview](README.md)
 
+## v1.5.2 (2026-11-21)
+
+Revive and sync fixes. Same game build as v1.5.1 (Update 2.1, Steam build 26123434). Every player must install the same version: v1.5.2 does not connect to older versions.
+
+### Fixed
+- **Revive medkit:** a medkit is no longer wasted when the rescuer moves after pressing F. If the rescuer was close enough when they started, the revive goes through even if they step away during the medkit animation ([issue #78](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/78)). Thanks to dreadnaughtgaming ([PR #79](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/pull/79)).
+- **Downed players** no longer take damage: while waiting for a revive, and for a moment after getting up, enemy hits, anomalies and hazards no longer hurt you or wear down your gear, so there is no death loop right after a revive ([issue #76](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/76)). Bleeding out, or everyone going down, still ends the game as before. Thanks to dreadnaughtgaming ([PR #80](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/pull/80)).
+- **NPCs in cover** now stand where the host sees them, instead of a few metres off for the guest ([issue #68](https://github.com/Joaovitor404silva/NOLA-Stalker2-Coop/issues/68)).
+
+### New
+- **Version check:** NOLA refuses to connect PCs running different NOLA versions and shows "Your radios are on different frequencies: install the same NOLA version on every PC!". Mixed versions caused many recent desync reports.
+
 ## v1.5.1 (2026-11-17)
 
 A big fix update for reported issues. Same game build as v1.5.0 (Update 2.1, Steam build 26123434). Every player must install the same version.
