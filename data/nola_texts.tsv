@@ -1,80 +1,80 @@
-id	en	pt	es
-menu_host	Host co-op	Hospedar co-op	Crear co-op
-menu_host_on	Host co-op (ON)	Hospedar co-op (LIGADO)	Crear co-op (ACTIVADO)
-menu_join	Join co-op	Entrar no co-op	Unirse al co-op
-menu_join_on	Join co-op (ON)	Entrar no co-op (LIGADO)	Unirse al co-op (ACTIVADO)
-menu_title	NOLA — No One Left Alone	NOLA — No One Left Alone	NOLA — No One Left Alone
-popup_title_host	Host co-op	Hospedar co-op	Crear co-op
-popup_title_join	Join co-op	Entrar no co-op	Unirse al co-op
-popup_ok	OK	OK	OK
-popup_host_armed	Radio on. Pick Continue, Load or New Game: your call for help goes out once your Zone is loaded.	Rádio ligado. Escolha Continuar, Carregar ou Novo Jogo: seu pedido de socorro sai assim que a sua Zona carregar.	Radio encendida. Elige Continuar, Cargar o Nueva partida: tu pedido de auxilio sale en cuanto tu Zona termine de cargar.
-popup_host_armed_new	Radio on. Pick Load or New Game: your call for help goes out once your Zone is loaded.	Rádio ligado. Escolha Carregar ou Novo Jogo: seu pedido de socorro sai assim que a sua Zona carregar.	Radio encendida. Elige Cargar o Nueva partida: tu pedido de auxilio sale en cuanto tu Zona termine de cargar.
-popup_host_off	No call for help goes out. You walk the Zone alone this time.	Nenhum pedido de socorro será enviado. Desta vez você anda pela Zona sozinho.	No se envía ningún pedido de auxilio. Esta vez recorrerás la Zona en solitario.
-popup_join_off	You stop listening for calls for help. You walk the Zone alone this time.	Você parou de ouvir pedidos de socorro. Desta vez você anda pela Zona sozinho.	Dejaste de escuchar pedidos de auxilio. Esta vez recorrerás la Zona en solitario.
-popup_no_host	Only static on the radio. Nobody is calling for help: on the host PC pick Host co-op and load a world, then try again.	Só chiado no rádio. Ninguém está pedindo socorro: no PC do host escolha Hospedar co-op e carregue um mundo, depois tente de novo.	Solo estática en la radio. Nadie pide auxilio: en la PC del anfitrión elige Crear co-op y carga un mundo, luego inténtalo de nuevo.
-popup_full	{name}'s channel is full ({n}/{max} stalkers). No room for one more.	O canal de {name} está cheio ({n}/{max} stalkers). Não cabe mais ninguém.	El canal de {name} está lleno ({n}/{max} stalkers). No cabe nadie más.
-popup_fail	The Zone jammed the signal. Co-op could not start.	A Zona embaralhou o sinal. O co-op não pôde começar.	La Zona interfirió la señal. El co-op no pudo iniciar.
-popup_joined_nosave	You answered {name}'s call ({n}/{max} stalkers). You have no save to continue: pick Load or New Game, and you'll wake up in {name}'s Zone.	Você atendeu ao chamado de {name} ({n}/{max} stalkers). Não há save para continuar: escolha Carregar ou Novo Jogo e você acorda na Zona de {name}.	Respondiste al llamado de {name} ({n}/{max} stalkers). No tienes partida guardada para continuar: elige Cargar o Nueva partida y despertarás en la Zona de {name}.
-say_searching	Scanning the radio for a call for help on LAN…	Procurando um pedido de socorro no rádio da rede local…	Buscando un pedido de auxilio en la radio de la red local…
-say_host_open	Calling for help on the radio, waiting for stalkers…	Pedindo socorro pelo rádio, esperando stalkers…	Pidiendo auxilio por la radio, esperando a otros stalkers…
-say_joining	Answering {name}'s call on the radio ({n}/{max} stalkers)…	Atendendo ao chamado de {name} pelo rádio ({n}/{max} stalkers)…	Respondiendo al llamado de {name} por la radio ({n}/{max} stalkers)…
-say_no_answer	Only static so far, still calling…	Só chiado por enquanto, continuo chamando…	Solo estática por ahora, sigo llamando…
-say_full	The channel is full! ({n}/{max} stalkers)	O canal está cheio! ({n}/{max} stalkers)	¡El canal está lleno! ({n}/{max} stalkers)
-say_fail	The signal died… {why}	O sinal morreu… {why}	La señal se perdió… {why}
-why_bad_mode	bad mode	modo inválido	modo no válido
-why_not_host	this install is not the host	esta instalação não é o host	esta instalación no es el anfitrión
-why_not_client	this install is not a client	esta instalação não é um cliente	esta instalación no es un cliente
-why_no_addr	no host address	sem endereço do host	sin dirección del anfitrión
-why_relay	relay not started (see the S2NET line)	relay não iniciado (veja a linha S2NET)	relay no iniciado (revisa la línea S2NET)
-steam_searching	Scanning the radio for a call for help on Steam…	Procurando um pedido de socorro no rádio pela Steam…	Buscando un pedido de auxilio en la radio por Steam…
-steam_hosting	Your call for help is on the air on Steam ({n}/{max}): press Home to invite a friend!	Seu pedido de socorro está no ar pela Steam ({n}/{max}): aperte Home para convidar um amigo!	Tu pedido de auxilio está al aire por Steam ({n}/{max}): ¡presiona Home para invitar a un amigo!
-steam_hosting_id	Your call for help is on the air on Steam ({n}/{max}): press Home to invite a friend! Lobby {id}	Seu pedido de socorro está no ar pela Steam ({n}/{max}): aperte Home para convidar um amigo! Lobby {id}	Tu pedido de auxilio está al aire por Steam ({n}/{max}): ¡presiona Home para invitar a un amigo! Lobby {id}
-steam_member_in	Stalker {name} entered the Zone!	O stalker {name} entrou na Zona!	¡El stalker {name} entró a la Zona!
-steam_member_out	Stalker {name} left the Zone! ({n}/{max} stalkers)	O stalker {name} saiu da Zona! ({n}/{max} stalkers)	¡El stalker {name} salió de la Zona! ({n}/{max} stalkers)
-steam_closed	Your radio is off on Steam!	Seu rádio está desligado na Steam!	¡Tu radio está apagada en Steam!
-steam_quit_to_join	To answer stalker {name}'s call, leave your Zone first!	Para atender ao chamado do stalker {name}, saia primeiro da sua Zona!	¡Para atender el llamado del stalker {name}, sal primero de tu Zona!
-steam_host_left	Stalker {name} stopped calling!	O stalker {name} parou de chamar!	¡El stalker {name} dejó de llamar!
-steam_fail	Couldn't reach that call on Steam: {why}	Não deu para alcançar esse chamado pela Steam: {why}	No se pudo alcanzar ese llamado por Steam: {why}
-steam_unavailable	Steam is silent right now. LAN co-op still works!	A Steam está muda agora. O co-op na rede local continua funcionando!	Steam no responde por ahora. ¡El co-op en red local sigue funcionando!
-steam_why_gone	the lobby no longer exists	o lobby não existe mais	el lobby ya no existe
-steam_why_denied	not allowed (friends-only lobby, or Steam privacy settings)	não permitido (lobby só para amigos, ou privacidade da Steam)	no permitido (lobby solo para amigos, o privacidad de Steam)
-steam_why_full	the host is full	o host está cheio	el anfitrión está lleno
-steam_why_error	Steam error	erro da Steam	error de Steam
-steam_why_limited	this Steam account is limited and cannot join lobbies	esta conta Steam é limitada e não pode entrar em lobbies	esta cuenta de Steam está limitada y no puede unirse a lobbies
-steam_why_banned	banned from the lobby	banido do lobby	expulsado del lobby
-steam_why_clan	clan disabled	clã desativado	clan desactivado
-steam_why_community	community ban	banimento da comunidade	bloqueo de la comunidad
-steam_why_blocked_you	a lobby member blocked you	um membro do lobby bloqueou você	un miembro del lobby te bloqueó
-steam_why_you_blocked	you blocked a lobby member	você bloqueou um membro do lobby	bloqueaste a un miembro del lobby
-steam_why_unknown	unknown Steam response	resposta desconhecida da Steam	respuesta desconocida de Steam
-steam_why_not_nola	not a NOLA co-op lobby	não é um lobby de co-op do NOLA	no es un lobby de co-op de NOLA
-steam_why_no_host	the host is not in the lobby	o host não está no lobby	el anfitrión no está en el lobby
-sess_peer_silent	The other stalker's signal is lost… waiting for them!	O sinal do outro stalker se perdeu… esperando por ele!	¡Se perdió la señal del otro stalker… esperándolo!
-sess_peer_back	The other stalker is back in the Zone!	O outro stalker voltou para a Zona!	¡El otro stalker volvió a la Zona!
-sess_view_silent	Stalker %d's signal is lost… waiting for them!	O sinal do stalker %d se perdeu… esperando por ele!	¡Se perdió la señal del stalker %d… esperándolo!
-sess_view_back	Stalker %d is back in the Zone!	O stalker %d voltou para a Zona!	¡El stalker %d volvió a la Zona!
-sess_left_n	Stalker %d left the Zone!	O stalker %d saiu da Zona!	¡El stalker %d salió de la Zona!
-sess_alone_one	You got left alone, the other player left the Zone!	Você ficou sozinho, o outro jogador saiu da Zona!	¡Te quedaste solo, el otro jugador salió de la Zona!
-sess_alone_many	You got left alone, the other players left the Zone!	Você ficou sozinho, os outros jogadores saíram da Zona!	¡Te quedaste solo, los demás jugadores salieron de la Zona!
-sess_role_both	Two stalkers calling, nobody answering: both games are set as %s!	Dois stalkers chamando, ninguém atendendo: os dois jogos estão como %s!	Dos stalkers llamando, nadie respondiendo: ¡ambos juegos están configurados como %s!
-sess_role_host_n	Stalker %d is calling for help too: only one game can be the host!	O stalker %d também está pedindo socorro: só um jogo pode ser o host!	El stalker %d también pide auxilio: ¡solo un juego puede ser el anfitrión!
-sess_version	Your radios are on different frequencies: install the same NOLA version on every PC!	Seus rádios estão em frequências diferentes: instale a mesma versão do NOLA em todos os PCs!	Sus radios están en frecuencias distintas: ¡instalen la misma versión de NOLA en todas las PC!
-save_following	Following the signal into the Zone… (%.0f s)	Seguindo o sinal para dentro da Zona… (%.0f s)	Siguiendo la señal hacia la Zona… (%.0f s)
-qb_host_only	Only the host can choose this answer	Só o host pode escolher esta resposta	Solo el anfitrión puede elegir esta respuesta
-ls_wait_peer	Waiting for the host's signal… (%.0f s)	Esperando o sinal do host… (%.0f s)	Esperando la señal del anfitrión… (%.0f s)
-ls_wait_host	Waiting for the host's Zone to load… (%.0f s)	Esperando a Zona do host carregar… (%.0f s)	Esperando a que cargue la Zona del anfitrión… (%.0f s)
-ls_wait_enter	Waiting for the host to enter the Zone… (%.0f s)	Esperando o host entrar na Zona… (%.0f s)	Esperando a que el anfitrión entre en la Zona… (%.0f s)
-ls_wait_sync	Receiving the host's Zone… (%.0f s)	Recebendo a Zona do host… (%.0f s)	Recibiendo la Zona del anfitrión… (%.0f s)
-ls_wait_join	Joining the host… (%.0f s)	Indo até o host… (%.0f s)	Reuniéndose con el anfitrión… (%.0f s)
-ls_gone	The host stopped answering: back to the main menu	O host parou de responder: voltando ao menu principal	El anfitrión dejó de responder: volviendo al menú principal
-say_leave_save	Saving your character before you leave…	Salvando seu personagem antes de sair…	Guardando tu personaje antes de salir…
-qhostonly_block	Only the host can do mission objectives	So o anfitriao pode fazer objetivos de missao	Solo el anfitrion puede hacer objetivos de mision
-rev_down_item_die	You are down! A partner can revive you with F + a medkit. You die in %.0f s	Você caiu! Um parceiro pode te reanimar com F + um medkit. Você morre em %.0f s	¡Has caído! Un compañero puede reanimarte con F + un botiquín. Mueres en %.0f s
-rev_down_item_up	You are down! A partner can revive you with F + a medkit. You get up in %.0f s	Você caiu! Um parceiro pode te reanimar com F + um medkit. Você se levanta em %.0f s	¡Has caído! Un compañero puede reanimarte con F + un botiquín. Te levantas en %.0f s
-rev_down_prox_die	You are down! A partner staying near you for %.0f s revives you. You die in %.0f s	Você caiu! Um parceiro ficando perto por %.0f s te reanima. Você morre em %.0f s	¡Has caído! Un compañero cerca de ti durante %.0f s te reanima. Mueres en %.0f s
-rev_down_prox_up	You are down! A partner staying near you for %.0f s revives you. You get up in %.0f s	Você caiu! Um parceiro ficando perto por %.0f s te reanima. Você se levanta em %.0f s	¡Has caído! Un compañero cerca de ti durante %.0f s te reanima. Te levantas en %.0f s
-rev_prompt	Press F to revive %s (uses a medkit)	Aperte F para reanimar %s (usa um medkit)	Pulsa F para reanimar a %s (usa un botiquín)
-rev_nomedkit	You need a medkit to revive %s	Você precisa de um medkit para reanimar %s	Necesitas un botiquín para reanimar a %s
-rev_sent	Reviving %s…	Reanimando %s…	Reanimando a %s…
-rev_done	Revived by %s!	Reanimado por %s!	¡Reanimado por %s!
-rev_partner	your partner	seu parceiro	tu compañero
+id	en	pt	es	fr
+menu_host	Host co-op	Hospedar co-op	Crear co-op	Héberger une partie co-op
+menu_host_on	Host co-op (ON)	Hospedar co-op (LIGADO)	Crear co-op (ACTIVADO)	Héberger une partie co-op (ACTIF)
+menu_join	Join co-op	Entrar no co-op	Unirse al co-op	Rejoindre une partie coop
+menu_join_on	Join co-op (ON)	Entrar no co-op (LIGADO)	Unirse al co-op (ACTIVADO)	Rejoindre une partie coop (ACTIF)
+menu_title	NOLA — No One Left Alone	NOLA — No One Left Alone	NOLA — No One Left Alone	NOLA — No One Left Alone 
+popup_title_host	Host co-op	Hospedar co-op	Crear co-op	Héberger une partie co-op
+popup_title_join	Join co-op	Entrar no co-op	Unirse al co-op	Rejoindre une partie coop
+popup_ok	OK	OK	OK	OK  
+popup_host_armed	Radio on. Pick Continue, Load or New Game: your call for help goes out once your Zone is loaded.	Rádio ligado. Escolha Continuar, Carregar ou Novo Jogo: seu pedido de socorro sai assim que a sua Zona carregar.	Radio encendida. Elige Continuar, Cargar o Nueva partida: tu pedido de auxilio sale en cuanto tu Zona termine de cargar.	Radio allumée. Choisissez Continuer, Charger ou Nouvelle Partie: votre appel à l'aide sera fait quand votre Zone sera chargée
+popup_host_armed_new	Radio on. Pick Load or New Game: your call for help goes out once your Zone is loaded.	Rádio ligado. Escolha Carregar ou Novo Jogo: seu pedido de socorro sai assim que a sua Zona carregar.	Radio encendida. Elige Cargar o Nueva partida: tu pedido de auxilio sale en cuanto tu Zona termine de cargar.	Radio allumée. Choisissez Charger ou Nouvelle Partie: votre appel à l'aide sera fait quand votre Zone sera chargée
+popup_host_off	No call for help goes out. You walk the Zone alone this time.	Nenhum pedido de socorro será enviado. Desta vez você anda pela Zona sozinho.	No se envía ningún pedido de auxilio. Esta vez recorrerás la Zona en solitario.	L'appel à l'aide n'est pas actif. Vous parcourez la Zone en solitaire.
+popup_join_off	You stop listening for calls for help. You walk the Zone alone this time.	Você parou de ouvir pedidos de socorro. Desta vez você anda pela Zona sozinho.	Dejaste de escuchar pedidos de auxilio. Esta vez recorrerás la Zona en solitario.	Vous arretez d'écouter les appels à l'aide. Vous parcourez la Zone en solitaire.
+popup_no_host	Only static on the radio. Nobody is calling for help: on the host PC pick Host co-op and load a world, then try again.	Só chiado no rádio. Ninguém está pedindo socorro: no PC do host escolha Hospedar co-op e carregue um mundo, depois tente de novo.	Solo estática en la radio. Nadie pide auxilio: en la PC del anfitrión elige Crear co-op y carga un mundo, luego inténtalo de nuevo.	Il n'y a que de la friture sur la radio. Personne n'appelle à l'aide: l'hébergeur dois sélectionner "Héberger une partie co-op" puis lancer une partie, ensuite vous pouvez réessayer.
+popup_full	{name}'s channel is full ({n}/{max} stalkers). No room for one more.	O canal de {name} está cheio ({n}/{max} stalkers). Não cabe mais ninguém.	El canal de {name} está lleno ({n}/{max} stalkers). No cabe nadie más.	Le canal de {name} est complet ({n}/{max} stalkers). Il n'y a pas la place pour un stalker supplémentaire.
+popup_fail	The Zone jammed the signal. Co-op could not start.	A Zona embaralhou o sinal. O co-op não pôde começar.	La Zona interfirió la señal. El co-op no pudo iniciar.	Une anomalie de la Zone a brouillé le signal. La Co-op n'a pas pu se lancer.
+popup_joined_nosave	You answered {name}'s call ({n}/{max} stalkers). You have no save to continue: pick Load or New Game, and you'll wake up in {name}'s Zone.	Você atendeu ao chamado de {name} ({n}/{max} stalkers). Não há save para continuar: escolha Carregar ou Novo Jogo e você acorda na Zona de {name}.	Respondiste al llamado de {name} ({n}/{max} stalkers). No tienes partida guardada para continuar: elige Cargar o Nueva partida y despertarás en la Zona de {name}.	Vous avez répondu à l'appel de {name} ({n}/{max} stalkers). Vous n'avez pas de sauvegarde a continuer: Chargez ou lancez une Nouvelle Partie et vous vous réveillerez dans la zone de {name}.
+say_searching	Scanning the radio for a call for help on LAN…	Procurando um pedido de socorro no rádio da rede local…	Buscando un pedido de auxilio en la radio de la red local…	Scan des fréquences radio pour capter un appel à l'aide en LAN…
+say_host_open	Calling for help on the radio, waiting for stalkers…	Pedindo socorro pelo rádio, esperando stalkers…	Pidiendo auxilio por la radio, esperando a otros stalkers…	Votre appel à l'aide est diffusé sur la radio, en attente de stalkers…
+say_joining	Answering {name}'s call on the radio ({n}/{max} stalkers)…	Atendendo ao chamado de {name} pelo rádio ({n}/{max} stalkers)…	Respondiendo al llamado de {name} por la radio ({n}/{max} stalkers)…	Réponse à l'appel radio de {name} ({n}/{max} stalkers)…
+say_no_answer	Only static so far, still calling…	Só chiado por enquanto, continuo chamando…	Solo estática por ahora, sigo llamando…	Que de la friture jusqu'à présent, toujours à l'écoute…
+say_full	The channel is full! ({n}/{max} stalkers)	O canal está cheio! ({n}/{max} stalkers)	¡El canal está lleno! ({n}/{max} stalkers)	La partie est complète ! ({n}/{max} stalkers)
+say_fail	The signal died… {why}	O sinal morreu… {why}	La señal se perdió… {why}	Perte du signal… {why}
+why_bad_mode	bad mode	modo inválido	modo no válido	mode invalide
+why_not_host	this install is not the host	esta instalação não é o host	esta instalación no es el anfitrión	cette installation n'est pas l'hôte
+why_not_client	this install is not a client	esta instalação não é um cliente	esta instalación no es un cliente	cette installation n'est pas le client
+why_no_addr	no host address	sem endereço do host	sin dirección del anfitrión	pas d'adresse d'hôte
+why_relay	relay not started (see the S2NET line)	relay não iniciado (veja a linha S2NET)	relay no iniciado (revisa la línea S2NET)	Relai non lancé (regardez la ligne S2NET)
+steam_searching	Scanning the radio for a call for help on Steam…	Procurando um pedido de socorro no rádio pela Steam…	Buscando un pedido de auxilio en la radio por Steam…	Scan des fréquences radio pour capter un appel à l'aide sur Steam…
+steam_hosting	Your call for help is on the air on Steam ({n}/{max}): press Home to invite a friend!	Seu pedido de socorro está no ar pela Steam ({n}/{max}): aperte Home para convidar um amigo!	Tu pedido de auxilio está al aire por Steam ({n}/{max}): ¡presiona Home para invitar a un amigo!	Votre appel à l'aide est diffusé sur Steam ({n}/{max}): Appuyez sur la touche de début pour inviter un ami!
+steam_hosting_id	Your call for help is on the air on Steam ({n}/{max}): press Home to invite a friend! Lobby {id}	Seu pedido de socorro está no ar pela Steam ({n}/{max}): aperte Home para convidar um amigo! Lobby {id}	Tu pedido de auxilio está al aire por Steam ({n}/{max}): ¡presiona Home para invitar a un amigo! Lobby {id}	Votre appel à l'aide est diffusé sur Steam ({n}/{max}): Appuyez sur la touche de début pour inviter un ami! Lobby {id}
+steam_member_in	Stalker {name} entered the Zone!	O stalker {name} entrou na Zona!	¡El stalker {name} entró a la Zona!	Le Stalker {name} a rejoint la Zone!
+steam_member_out	Stalker {name} left the Zone! ({n}/{max} stalkers)	O stalker {name} saiu da Zona! ({n}/{max} stalkers)	¡El stalker {name} salió de la Zona! ({n}/{max} stalkers)	Le Stalker {name} a quitté la Zone! ({n}/{max} stalkers)
+steam_closed	Your radio is off on Steam!	Seu rádio está desligado na Steam!	¡Tu radio está apagada en Steam!	Votre radio est éteinte sur Steam!
+steam_quit_to_join	To answer stalker {name}'s call, leave your Zone first!	Para atender ao chamado do stalker {name}, saia primeiro da sua Zona!	¡Para atender el llamado del stalker {name}, sal primero de tu Zona!	Pour répondre à l'appel du stalker {name}, quitez votre Zone d'abord!
+steam_host_left	Stalker {name} stopped calling!	O stalker {name} parou de chamar!	¡El stalker {name} dejó de llamar!	Stalker {name} a arreté son appel à l'aide!	
+steam_fail	Couldn't reach that call on Steam: {why}	Não deu para alcançar esse chamado pela Steam: {why}	No se pudo alcanzar ese llamado por Steam: {why}	L'appel sur Steam n'a pas pu être rejoint: {why}
+steam_unavailable	Steam is silent right now. LAN co-op still works!	A Steam está muda agora. O co-op na rede local continua funcionando!	Steam no responde por ahora. ¡El co-op en red local sigue funcionando!	Steam est actuellement silencieuse. La co-op LAN co-op fonctionne encore!
+steam_why_gone	the lobby no longer exists	o lobby não existe mais	el lobby ya no existe	le lobby n'existe plus
+steam_why_denied	not allowed (friends-only lobby, or Steam privacy settings)	não permitido (lobby só para amigos, ou privacidade da Steam)	no permitido (lobby solo para amigos, o privacidad de Steam)	non autorisé (lobby uniquement pour les amis, ou les paramètres privés de Steam)
+steam_why_full	the host is full	o host está cheio	el anfitrión está lleno	la partie de l'hôte est complet
+steam_why_error	Steam error	erro da Steam	error de Steam	erreur de Steam
+steam_why_limited	this Steam account is limited and cannot join lobbies	esta conta Steam é limitada e não pode entrar em lobbies	esta cuenta de Steam está limitada y no puede unirse a lobbies	ce compte Steam est limité et ne peux pas rejoindre des lobbies
+steam_why_banned	banned from the lobby	banido do lobby	expulsado del lobby	banni du lobby
+steam_why_clan	clan disabled	clã desativado	clan desactivado	clan désactuvé
+steam_why_community	community ban	banimento da comunidade	bloqueo de la comunidad	bannissement de la communauté
+steam_why_blocked_you	a lobby member blocked you	um membro do lobby bloqueou você	un miembro del lobby te bloqueó	un membre du lobby vous a bloqué
+steam_why_you_blocked	you blocked a lobby member	você bloqueou um membro do lobby	bloqueaste a un miembro del lobby	vous avez bloqué un membre du lobby
+steam_why_unknown	unknown Steam response	resposta desconhecida da Steam	respuesta desconocida de Steam	réponse de Steam inconnue
+steam_why_not_nola	not a NOLA co-op lobby	não é um lobby de co-op do NOLA	no es un lobby de co-op de NOLA	ce n'est pas un lobby co-op de NOLA
+steam_why_no_host	the host is not in the lobby	o host não está no lobby	el anfitrión no está en el lobby	l'hôte n'est pas dans un lobby
+sess_peer_silent	The other stalker's signal is lost… waiting for them!	O sinal do outro stalker se perdeu… esperando por ele!	¡Se perdió la señal del otro stalker… esperándolo!	Le signale de l'autre stalker s'est perdu… on l'attend!
+sess_peer_back	The other stalker is back in the Zone!	O outro stalker voltou para a Zona!	¡El otro stalker volvió a la Zona!	L'autre stalker est de retour dans la Zone!
+sess_view_silent	Stalker %d's signal is lost… waiting for them!	O sinal do stalker %d se perdeu… esperando por ele!	¡Se perdió la señal del stalker %d… esperándolo!	Le signal du Stalker %d s'est perdu… on l'attend!
+sess_view_back	Stalker %d is back in the Zone!	O stalker %d voltou para a Zona!	¡El stalker %d volvió a la Zona!	Le Stalker %d est de retour dans la Zone!
+sess_left_n	Stalker %d left the Zone!	O stalker %d saiu da Zona!	¡El stalker %d salió de la Zona!	Le Stalker %d a quitté la Zone!
+sess_alone_one	You got left alone, the other player left the Zone!	Você ficou sozinho, o outro jogador saiu da Zona!	¡Te quedaste solo, el otro jugador salió de la Zona!	Vous êtes laissé sur place, l'autre joueur a quitté la Zone!
+sess_alone_many	You got left alone, the other players left the Zone!	Você ficou sozinho, os outros jogadores saíram da Zona!	¡Te quedaste solo, los demás jugadores salieron de la Zona!	Vous êtes laissé sur place, les autres joueurs ont quitté la Zone!
+sess_role_both	Two stalkers calling, nobody answering: both games are set as %s!	Dois stalkers chamando, ninguém atendendo: os dois jogos estão como %s!	Dos stalkers llamando, nadie respondiendo: ¡ambos juegos están configurados como %s!	Deux stalkers appellent à l'aide, personne ne réponds: les deux jeux sont configurés comme %s!
+sess_role_host_n	Stalker %d is calling for help too: only one game can be the host!	O stalker %d também está pedindo socorro: só um jogo pode ser o host!	El stalker %d también pide auxilio: ¡solo un juego puede ser el anfitrión!	Le Stalker %d appelle aussi à l'aide: une seule partie peut être l'hôte!
+sess_version	Your radios are on different frequencies: install the same NOLA version on every PC!	Seus rádios estão em frequências diferentes: instale a mesma versão do NOLA em todos os PCs!	Sus radios están en frecuencias distintas: ¡instalen la misma versión de NOLA en todas las PC!	Vos radio sont sur deux fréquences différentes: Installez la même version de NOLA sur chaque PC!
+save_following	Following the signal into the Zone… (%.0f s)	Seguindo o sinal para dentro da Zona… (%.0f s)	Siguiendo la señal hacia la Zona… (%.0f s)	Suivant le signal dans la Zone… (%.0f s)
+qb_host_only	Only the host can choose this answer	Só o host pode escolher esta resposta	Solo el anfitrión puede elegir esta respuesta	L'hôte est le seul a pouvoir choisir cette reponse
+ls_wait_peer	Waiting for the host's signal… (%.0f s)	Esperando o sinal do host… (%.0f s)	Esperando la señal del anfitrión… (%.0f s)	En attente du signal de l'hôte… (%.0f s)
+ls_wait_host	Waiting for the host's Zone to load… (%.0f s)	Esperando a Zona do host carregar… (%.0f s)	Esperando a que cargue la Zona del anfitrión… (%.0f s)	En attente que l'hôte ai chargé la Zone… (%.0f s)
+ls_wait_enter	Waiting for the host to enter the Zone… (%.0f s)	Esperando o host entrar na Zona… (%.0f s)	Esperando a que el anfitrión entre en la Zona… (%.0f s)	En attente que l'hôte ai entré dans la Zone… (%.0f s)
+ls_wait_sync	Receiving the host's Zone… (%.0f s)	Recebendo a Zona do host… (%.0f s)	Recibiendo la Zona del anfitrión… (%.0f s)	Réception de la Zone de l'hôte… (%.0f s)
+ls_wait_join	Joining the host… (%.0f s)	Indo até o host… (%.0f s)	Reuniéndose con el anfitrión… (%.0f s)	Connexion à l'hôte… (%.0f s)
+ls_gone	The host stopped answering: back to the main menu	O host parou de responder: voltando ao menu principal	El anfitrión dejó de responder: volviendo al menú principal	L'hôte a cessé de répondre: retour au menu principal
+say_leave_save	Saving your character before you leave…	Salvando seu personagem antes de sair…	Guardando tu personaje antes de salir…	Sauvegarde de votre personnage avant que vous quittiez…
+qhostonly_block	Only the host can do mission objectives	So o anfitriao pode fazer objetivos de missao	Solo el anfitrion puede hacer objetivos de mision	L'hôte est le seul a pouvoir faire l'objectif de mission
+rev_down_item_die	You are down! A partner can revive you with F + a medkit. You die in %.0f s	Você caiu! Um parceiro pode te reanimar com F + um medkit. Você morre em %.0f s	¡Has caído! Un compañero puede reanimarte con F + un botiquín. Mueres en %.0f s	Vous êtes a terre! Un co-équipier dois vous réanimer avec la touche F + un kit de soin. Vous allez mourir dans %.0f s
+rev_down_item_up	You are down! A partner can revive you with F + a medkit. You get up in %.0f s	Você caiu! Um parceiro pode te reanimar com F + um medkit. Você se levanta em %.0f s	¡Has caído! Un compañero puede reanimarte con F + un botiquín. Te levantas en %.0f s	Vous êtes a terre! Un co-équipier dois vous réanimer avec la touche F + un kit de soin. Vous allez vous relever dans %.0f s
+rev_down_prox_die	You are down! A partner staying near you for %.0f s revives you. You die in %.0f s	Você caiu! Um parceiro ficando perto por %.0f s te reanima. Você morre em %.0f s	¡Has caído! Un compañero cerca de ti durante %.0f s te reanima. Mueres en %.0f s	Vous êtes a terre! Un co-équipir restant a proximité de vous pendant %.0f s va vous réanimer. Vous allez mourir dans %.0f s
+rev_down_prox_up	You are down! A partner staying near you for %.0f s revives you. You get up in %.0f s	Você caiu! Um parceiro ficando perto por %.0f s te reanima. Você se levanta em %.0f s	¡Has caído! Un compañero cerca de ti durante %.0f s te reanima. Te levantas en %.0f s	Vous êtes a terre! Un co-équipir restant a proximité de vous pendant %.0f s va vous réanimer. Vous allez vous relever dans %.0f s
+rev_prompt	Press F to revive %s (uses a medkit)	Aperte F para reanimar %s (usa um medkit)	Pulsa F para reanimar a %s (usa un botiquín)	Appuyez sur F pour réanimer %s (consomme un kit médical)
+rev_nomedkit	You need a medkit to revive %s	Você precisa de um medkit para reanimar %s	Necesitas un botiquín para reanimar a %s	Vous avez besoin d'un kit médical pour réanimer %s
+rev_sent	Reviving %s…	Reanimando %s…	Reanimando a %s…	Réanimation de %s…
+rev_done	Revived by %s!	Reanimado por %s!	¡Reanimado por %s!	Réanimé par %s!
+rev_partner	your partner	seu parceiro	tu compañero	Votre partenaire
